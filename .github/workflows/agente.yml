@@ -1,0 +1,47 @@
+name: Agente de casamento de produtos
+
+# Roda só quando alguém pede (Actions → este fluxo → Run workflow). Precisa do secret ANTHROPIC_API_KEY.
+# A saída não muda data/links.csv: ela vai para agente/saida/, para uma pessoa revisar.
+
+on:
+  workflow_dispatch:
+    inputs:
+      rede:
+        description: "Rede (tenda ou atacadao)"
+        default: "atacadao"
+      produtos:
+        description: "Só estes produtos (ex.: P001,P002). Vazio = os 100"
+        default: ""
+      medir:
+        description: "Medir o acerto contra data/links.csv (sim ou nao)"
+        default: "nao"
+
+permissions:
+  contents: write
+
+jobs:
+  casar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install anthropic pydantic
+      - name: Casar os produtos
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python agente/casar.py "${{ inputs.rede }}" --so "${{ inputs.produtos }}"
+      - name: Medir o acerto
+        if: inputs.medir == 'sim'
+        run: python agente/medir.py "${{ inputs.rede }}" && cat "agente/saida/${{ inputs.rede }}-acerto.md" >> "$GITHUB_STEP_SUMMARY"
+      - name: Guardar a saída no repositório
+        if: always()
+        run: |
+          git config user.name "agente"
+          git config user.email "agente@users.noreply.github.com"
+          git add agente/saida
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "Agente de casamento: ${{ inputs.rede }}"
+          for i in 1 2 3; do git pull --rebase origin "${{ github.ref_name }}" && git push origin "HEAD:${{ github.ref_name }}" && break || sleep 15; done
