@@ -1,69 +1,61 @@
 # Direção visual: O Preço do Dia a Dia
 
-Decidido em 16/11/2026. Clima escolhido pelo Theo: claro e editorial. Esta direção não foi baseada em sites de referência. Ela vem do assunto: o supermercado.
+Revista em 16/11/2026. A primeira versão (papel de cupom, serifa, mapa com cantos vivos) ficou realista e séria demais para o Theo. Ele pediu um visual arredondado, quase de desenho animado, mais brincalhão. Esta direção não foi baseada em sites de referência.
 
 ## A ideia
 
-O site toma emprestado três objetos do mercado: o papel do cupom fiscal, a etiqueta amarela de gôndola e a tinta azul da via carbonada. O resto é reportagem: serifa, texto alinhado à esquerda, um mapa.
+A cidade vira um brinquedo: os 96 distritos são peças macias numa bandeja, com nuvens de bolinha passeando em volta. O preço continua sendo o assunto. Tudo tem canto arredondado, e tudo que se mexe tem mola.
 
-Uma coisa só chama atenção: o mapa 3D da cidade, com os 96 distritos em relevo. Tudo em volta fica quieto.
+Uma coisa só chama atenção: o mapa 3D. O texto fica em balões brancos, quietos.
 
 ## Cor
 
 | Nome | Valor | Papel |
 |---|---|---|
-| papel | `#F1F2EE` | Fundo da página. Branco frio de papel térmico, não creme. |
-| papel-2 | `#E4E6E0` | Faixas e fundos de campo. |
-| tinta | `#1D1F2A` | Texto, linhas do mapa, botões. |
-| tinta-2 | `#5A5E6B` | Texto de apoio. Contraste 5,9:1 sobre papel. |
-| etiqueta | `#FFD60A` | Só para preço em destaque e para o que a pessoa selecionou. Texto em tinta por cima. |
-| caro | `#D4281C` | Mais caro no mapa. Linha do índice local no gráfico. |
-| oficial | `#2447C5` | Tudo que vem do IBGE (IPCA). Links. |
+| ceu | `#DDF0FF` | Fundo da página. |
+| ceu-2 | `#C4DFFA` | Borda de campo. |
+| sol | `#FFF1B5` | Fundo da seção da lista. |
+| tinta | `#1E2757` | Texto e botões. Azul-marinho, nunca preto. |
+| tinta-2 | `#55608F` | Texto de apoio. |
+| etiqueta | `#FFD23F` (sombra `#E7B100`) | Preço em destaque. |
+| barato | `#3DD9A0` | Lista e distrito mais baratos. |
+| caro | `#FF6B5C` | Mais caro. Linha do índice local. |
+| oficial | `#3D5AFE` | Tudo que vem do IBGE (IPCA). Links. |
+| ponto | `#7A5CFF` | Alfinetes dos pontos de coleta. |
+| base | `#9DB8F5` | Bandeja embaixo do mapa. |
 
-Escala do mapa: branco, etiqueta, caro. Baixo é branco, alto é vermelho.
-
-Sem modo escuro. Sem degradê decorativo.
+Escala do mapa, de barato a caro: `#3DD9A0`, `#A9E26F`, `#FFD23F`, `#FF9B4A`, `#FF6B5C`. Sem modo escuro.
 
 ## Tipografia
 
-Duas famílias, hospedadas no próprio site (`assets/fonts`).
+Duas famílias, hospedadas no site (`assets/fonts`, licença SIL OFL).
 
-- **Newsreader** (serifa, com tamanho óptico): títulos e texto corrido. Peso 400 a 500. Títulos com entrelinha 1,02 a 1,1.
-- **Archivo** (grotesca com eixo de largura): interface em largura normal, peso 500. Preços em largura 62%, peso 800, como numeral de etiqueta. Sempre com algarismos tabulares.
+- **Fredoka** (arredondada, peso 600 e 700): títulos, preços, botões.
+- **Nunito** (peso 500 a 800): texto corrido e interface.
 
-Escala: 13, 15, 18, 24, 34, 52 e título de abertura entre 44 e 104 px. Texto corrido em 18 a 20 px, com linhas de no máximo 34 em de largura.
+Algarismos tabulares nos preços. Caixa normal, sem rótulos em maiúsculas.
 
-Regras: caixa normal, sem rótulos em maiúsculas, sem palavra do título em outra cor.
+## Forma
 
-## Espaço e forma
-
-- Base de 8 px. Margem lateral: 24 px no celular, 6 vw no desktop.
-- Texto alinhado à esquerda. O mapa ocupa a direita e sangra para fora da tela.
-- Cantos: 0 no editorial, 4 px em campos e botões, 6 px na etiqueta.
-- Uma sombra só, de papel sobre mesa: usada no cupom e na etiqueta.
+- Cantos: 18 px em campos e botões, 26 px na etiqueta, 28 a 32 px nos balões, pílula (999 px) em navegação e selos.
+- Botões têm um "degrau" embaixo (sombra sólida de 5 px) e afundam ao clicar.
+- Uma sombra macia para balões: `0 8px 0` claro + `0 22px 36px` difusa.
+- A seção da lista e o rodapé começam com cantos de 48 a 56 px no topo.
+- O cupom termina em onda (meia-lua), não em serrilha.
 
 ## Movimento
 
-A animação é a parte mais importante do site, então segue regras.
-
-1. **Uma entrada.** Ao carregar, os distritos caem no lugar em onda, do centro para as bordas, e o título sobe linha por linha. Nada mais anima sozinho, fora uma rotação lenta do mapa.
-2. **O scroll comanda as cenas.** A posição da página controla câmera, altura e cor do mapa, os alfinetes e o traço do gráfico. Rolar para trás desfaz. Nada dispara e roda sozinho.
-3. **Resposta a ações.** CEP digitado: a câmera voa até o bairro. Item adicionado: uma linha sai do cupom e o total rola até o novo valor.
-4. Curva padrão `cubic-bezier(.2,.8,.2,1)`. Durações: 180 ms (resposta), 420 ms (painel), 900 ms (número).
-5. Com "reduzir movimento" ligado: sem queda, sem rotação, cenas trocam direto.
-
-## Componentes
-
-- **Botão principal:** fundo tinta, texto papel. Um por tela.
-- **Campo:** fundo branco, borda tinta de 1,5 px, foco com anel oficial de 3 px.
-- **Etiqueta:** fundo etiqueta, furo de gancho no canto, preço em Archivo estreita com centavos elevados.
-- **Cupom:** papel branco, borda inferior serrilhada, linhas pontilhadas entre item e preço.
-- **Faixa de exemplo:** fixa no topo, fundo tinta, enquanto `dados.exemplo` for verdadeiro.
+1. **Uma entrada.** As peças do mapa crescem do chão com pulo (passam do ponto e voltam), do centro para as bordas. Cada palavra do título entra pulando. As nuvens aparecem depois.
+2. **O scroll comanda as cenas.** Câmera, altura e cor do mapa, alfinetes e o traço do gráfico. Rolar para trás desfaz.
+3. **Molas.** Altura das peças e alfinetes seguem uma mola com amortecimento. Peça que sobe rápido afina, que desce engorda (estica e achata).
+4. **Resposta a ações.** CEP: a câmera voa até o bairro e o alfinete pula sem parar. Hover: a peça sobe e um balão abre com mola. Item adicionado: a linha entra crescendo. Preço novo: o número rola e dá um pulinho ao chegar.
+5. Curvas: mola `cubic-bezier(.34,1.56,.64,1)` e saída `cubic-bezier(.2,.8,.2,1)`.
+6. Com "reduzir movimento": sem pulo, sem mola, sem nuvem andando. As cenas trocam direto.
 
 ## Mapa
 
-Contorno real dos 96 distritos (Prefeitura de São Paulo, GeoSampa). Cada distrito usa o ponto de coleta mais próximo. Os alfinetes ficam no centro do distrito de cada ponto, o que é uma aproximação.
+Contorno real dos 96 distritos (Prefeitura de São Paulo, GeoSampa), encolhido e arredondado por `tools/arredondar_mapa.py`. O arredondamento muda a forma de cada distrito de leve. A bandeja é a silhueta da cidade inteira. Os alfinetes ficam no centro do distrito de cada ponto, o que é uma aproximação.
 
 ## Imagens e ícones
 
-Sem fotos e sem ícones decorativos. As formas do site são o mapa, a etiqueta e o cupom.
+Sem fotos e sem ícones decorativos. As formas do site são o mapa, a etiqueta, os balões e o cupom.

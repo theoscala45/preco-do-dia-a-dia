@@ -34,7 +34,7 @@ try {
   document.documentElement.classList.add('sem-3d');
 }
 
-const dica = $('dica'), tag = $('tagPonto');
+const dica = $('dica'), tag = $('tagPonto'), dicaTexto = $('dicaTexto'), tagTexto = $('tagTexto');
 let dicaDe = -2;
 mapa3d?.aoPassar((hover, sel) => {
   if (hover !== dicaDe) {
@@ -42,12 +42,12 @@ mapa3d?.aoPassar((hover, sel) => {
     dica.classList.toggle('on', hover >= 0);
     if (hover >= 0) {
       const p = mapa.pontos[hover], d = dados.pontos[hover];
-      dica.innerHTML = `<b>${p.bairro}</b>Cesta de ${n} itens: ${reais(d.cesta)}<br>Em 12 meses: ${d.var.toLocaleString('pt-BR', { minimumFractionDigits: 1, maximumFractionDigits: 1 })}%`;
+      dicaTexto.innerHTML = `<b>${p.bairro}</b>Cesta de ${n} itens: ${reais(d.cesta)}<br>Em 12 meses: ${d.var.toLocaleString('pt-BR', { minimumFractionDigits: 1, maximumFractionDigits: 1 })}%`;
     }
   }
-  if (hover >= 0) { const t = mapa3d.naTela(hover); dica.style.transform = `translate(${t.x + 14}px,${t.y - 20}px)`; }
+  if (hover >= 0) { const t = mapa3d.naTela(hover); dica.style.transform = `translate(${t.x + 16}px,calc(${t.y - 12}px - 100%))`; }
   tag.classList.toggle('on', sel >= 0);
-  if (sel >= 0) { const t = mapa3d.naTela(sel); tag.style.transform = `translate(calc(${t.x}px - 50%),calc(${t.y}px - 100% - 8px))`; }
+  if (sel >= 0) { const t = mapa3d.naTela(sel); tag.style.transform = `translate(calc(${t.x}px - 50%),calc(${t.y}px - 100% - 10px))`; }
 });
 
 // ---------- scroll comanda a cena
@@ -73,25 +73,29 @@ const X = i => L + (R - L) * i / (dados.datas.length - 1), Y = v => B - (B - T) 
 const caminho = s => s.map((v, i) => `${i ? 'L' : 'M'}${X(i).toFixed(1)} ${Y(v).toFixed(1)}`).join('');
 const mes = d => new Date(d + 'T12:00').toLocaleDateString('pt-BR', { month: 'short', year: '2-digit' }).replace('. de ', ' ').replace('.', '');
 let g = '';
-for (let v = Math.ceil(y0); v <= y1; v += 2) g += `<line x1="${L}" x2="${R}" y1="${Y(v)}" y2="${Y(v)}" stroke="rgba(29,31,42,.14)"/><text x="${R + 86}" y="${Y(v) + 4}" text-anchor="end">${v}</text>`;
+for (let v = Math.ceil(y0); v <= y1; v += 2) g += `<line x1="${L}" x2="${R}" y1="${Y(v)}" y2="${Y(v)}" stroke="rgba(30,39,87,.14)" stroke-width="2" stroke-dasharray="0 7" stroke-linecap="round"/><text x="${R + 86}" y="${Y(v) + 4}" text-anchor="end">${v}</text>`;
 g += `<text x="${L}" y="${B + 24}">${mes(dados.datas[0])}</text><text x="${R}" y="${B + 24}" text-anchor="end">${mes(dados.datas.at(-1))}</text>`;
-g += series.map(s => `<path class="tr fino" d="${caminho(s)}" fill="none" stroke="#D4281C" stroke-opacity=".22" stroke-width="1.2" pathLength="1"/>`).join('');
-g += `<path class="tr" id="trSel" d="${caminho(series[0])}" fill="none" stroke="#D4281C" stroke-width="3" stroke-linejoin="round" pathLength="1"/>`;
-g += `<path class="tr" d="${caminho(dados.ipca)}" fill="none" stroke="#2447C5" stroke-width="3" stroke-linejoin="round" pathLength="1"/>`;
-g += `<g class="fim"><text class="rot" id="rotSel" x="${R + 8}" style="fill:#D4281C"></text><text class="rot" x="${R + 8}" y="${Y(dados.ipca.at(-1)) + 4}" style="fill:#2447C5">IPCA</text></g>`;
+g += series.map(s => `<path class="tr fino" d="${caminho(s)}" fill="none" stroke="#FF6B5C" stroke-opacity=".26" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" pathLength="1"/>`).join('');
+g += `<path class="tr" id="trSel" d="${caminho(series[0])}" fill="none" stroke="#FF6B5C" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" pathLength="1"/>`;
+g += `<path class="tr" d="${caminho(dados.ipca)}" fill="none" stroke="#3D5AFE" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" pathLength="1"/>`;
+g += `<g class="fim"><circle id="bolaSel" cx="${R}" r="7" fill="#FF6B5C" stroke="#fff" stroke-width="3"/><circle cx="${R}" cy="${Y(dados.ipca.at(-1))}" r="7" fill="#3D5AFE" stroke="#fff" stroke-width="3"/><text class="rot" id="rotSel" x="${R + 14}" style="fill:#D8402F"></text><text class="rot" x="${R + 14}" y="${Y(dados.ipca.at(-1)) + 5}" style="fill:#3D5AFE">IPCA</text></g>`;
 svg.innerHTML += g;
 const tracos = [...svg.querySelectorAll('.tr')], fim = svg.querySelector('.fim');
-tracos.forEach(t => { t.style.strokeDasharray = 1; });
+tracos.forEach(t => { t.style.strokeDasharray = '1 2'; });
+fim.style.transformBox = 'fill-box'; fim.style.transformOrigin = '0% 50%';
 function tracar(v) {
   if (calmo) v = 1;
   tracos.forEach(t => { t.style.strokeDashoffset = 1 - v; });
-  fim.style.opacity = clamp((v - 0.9) * 10);
+  const f = clamp((v - 0.9) * 10);
+  fim.style.opacity = f;
+  fim.style.transform = `scale(${0.6 + 0.4 * f})`;
 }
 function destacar(i) {
   $('trSel').setAttribute('d', caminho(series[i]));
   const rot = $('rotSel'), yv = Y(series[i].at(-1)), yi = Y(dados.ipca.at(-1));
   rot.textContent = mapa.pontos[i].bairro.split(' (')[0];
-  rot.setAttribute('y', Math.abs(yv - yi) < 14 ? yi + (yv <= yi ? -12 : 20) : yv + 4);
+  rot.setAttribute('y', Math.abs(yv - yi) < 16 ? yi + (yv <= yi ? -13 : 23) : yv + 5);
+  $('bolaSel').setAttribute('cy', yv);
 }
 
 // ---------- CEP
@@ -109,7 +113,7 @@ function escolher(i, viaCep) {
   estado.ponto = i; estado.cepDado = true;
   const p = mapa.pontos[i];
   mapa3d?.selecionar(i);
-  tag.textContent = p.bairro;
+  tagTexto.textContent = p.bairro;
   $('etqRotulo').textContent = `Cesta de ${n} itens em ${p.bairro.split(' (')[0]}`;
   rolar($('etqInt'), $('etqCent'), dados.pontos[i].cesta);
   const dif = dados.pontos[i].cesta - media;
@@ -134,6 +138,12 @@ $('cepForm').addEventListener('submit', e => {
 });
 $('mapa').addEventListener('ponto', e => escolher(e.detail, false));
 
+// ---------- título: cada palavra entra pulando
+let palavra = 0;
+document.querySelectorAll('.titulo .linha > span').forEach(sp => {
+  sp.innerHTML = sp.textContent.trim().split(/\s+/).map(w => `<span class="pal" style="--i:${palavra++}">${w}</span>`).join(' ');
+});
+
 // ---------- partida
 const cesta = criarCesta(dados, mapa, estado);
 destacar(iMax);
@@ -141,5 +151,5 @@ medir(); cenaDoScroll();
 document.fonts.ready.then(() => { medir(); cenaDoScroll(); });
 requestAnimationFrame(() => {
   document.documentElement.classList.add('pronto');
-  setTimeout(() => rolar($('etqInt'), $('etqCent'), media), calmo ? 0 : 900);
+  setTimeout(() => rolar($('etqInt'), $('etqCent'), media), calmo ? 0 : 1100);
 });

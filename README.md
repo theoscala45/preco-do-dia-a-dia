@@ -30,9 +30,11 @@ python3 tools/montar_site.py exemplo  # recria assets/dados.json a partir de dat
 python3 tools/montar_site.py real     # quando o coletor estiver preenchendo data/precos.csv
 ```
 
+O mapa arredondado sai de `python3 tools/arredondar_mapa.py` (precisa de `pip install shapely`). Rode depois de `tools/preparar_mapa.py`.
+
 Com `real`, a faixa "Dados de exemplo" some do site sozinha.
 
 ## Fontes e licenças
 
 - Contorno dos distritos: Prefeitura de São Paulo (GeoSampa), via `codigourbano/distritos-sp`.
-- three.js (MIT), Newsreader e Archivo (SIL Open Font License). As licenças estão em `assets/vendor` e `assets/fonts`.
+- three.js (MIT), Fredoka e Nunito (SIL Open Font License). As licenças estão em `assets/vendor` e `assets/fonts`.

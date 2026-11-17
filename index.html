@@ -3,10 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#DDF0FF">
 <title>O Preço do Dia a Dia: quanto custa a mesma compra em cada bairro de São Paulo</title>
 <meta name="description" content="A mesma lista de 100 produtos, em 7 redes de supermercado e 25 pontos da capital. Compare a sua cesta e veja a inflação do seu bairro contra o IPCA.">
-<link rel="preload" href="assets/fonts/newsreader-latin-opsz-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="assets/fonts/archivo-latin-wdth-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/fredoka-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/nunito-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='3' y='3' width='26' height='26' rx='9' fill='%23FFD23F' transform='rotate(-10 16 16)'/%3E%3Ccircle cx='11' cy='11' r='3' fill='%231E2757'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="assets/css/estilo.css">
 </head>
 <body>
@@ -26,8 +28,8 @@
   <div class="cena" id="inicio">
     <div class="palco" aria-hidden="true">
       <canvas id="mapa"></canvas>
-      <div class="dica" id="dica"></div>
-      <div class="alfinete-tag" id="tagPonto"></div>
+      <div class="dica" id="dica"><div id="dicaTexto"></div></div>
+      <div class="alfinete-tag" id="tagPonto"><span id="tagTexto"></span></div>
     </div>
 
     <div class="trilho">
@@ -58,7 +60,7 @@
       <section class="cap" id="como" data-cap="1">
         <div class="cap-caixa">
           <h2>Uma lista, 25 preços</h2>
-          <p>Cada bloco é um distrito. A altura é o preço da cesta no ponto de coleta mais próximo. Quanto mais alto e mais vermelho, mais cara a compra. A escala é ampliada para a diferença aparecer.</p>
+          <p>Cada peça é um distrito. A altura é o preço da cesta no ponto de coleta mais próximo. Verde e baixa, a compra sai mais barata. Coral e alta, mais cara. A escala é ampliada para a diferença aparecer.</p>
           <dl class="extremos">
             <div><dt>Mais barata</dt><dd><span id="minNome"></span> <b id="minVal"></b></dd></div>
             <div><dt>Mais cara</dt><dd><span id="maxNome"></span> <b id="maxVal"></b></dd></div>
@@ -120,10 +122,10 @@
   </section>
 </main>
 
-<footer class="rodape">
+<footer class="rodape"><div>
   <p>Projeto estudantil independente, em construção. Os preços desta versão são inventados para testar o site.</p>
   <p>Contorno dos distritos: Prefeitura de São Paulo (GeoSampa). Código e tabelas abertos no <a href="https://github.com/theoscala45/preco-do-dia-a-dia">GitHub</a>.</p>
-</footer>
+</div></footer>
 
 <script type="module" src="assets/js/main.js"></script>
 </body>
