@@ -1,12 +1,16 @@
 name: Coleta noturna de preços
 
+# Cada zona da cidade (5 CEPs) é uma parte separada. No máximo 2 partes rodam ao mesmo tempo,
+# para o site da rede receber poucas visitas por vez. No fim, uma última parte junta tudo,
+# grava no repositório e abre a issue "Falha na coleta" se algo deu errado.
+
 on:
   schedule:
     - cron: "17 5 * * *"   # 02h17 em São Paulo
   workflow_dispatch:
     inputs:
-      ceps:
-        description: "Pontos de coleta (ex.: C06,C18). Vazio = os 25"
+      zonas:
+        description: "Zonas, separadas por vírgula (Centro,Oeste,Sul,Leste,Norte). Vazio = todas"
         default: ""
       limite:
         description: "Ler só os N primeiros produtos (0 = todos)"
@@ -23,35 +27,58 @@ concurrency:
 jobs:
   coletar:
     runs-on: ubuntu-latest
-    timeout-minutes: 355
+    timeout-minutes: 300
+    strategy:
+      fail-fast: false
+      max-parallel: 2
+      matrix:
+        zona: [Centro, Oeste, Sul, Leste, Norte]
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
       - name: Instalar o navegador automático
+        if: ${{ !inputs.zonas || contains(inputs.zonas, matrix.zona) }}
         run: |
           pip install playwright==1.49.1
           python -m playwright install --with-deps chromium
-      - name: Coletar
-        run: python coletor/coletar.py --ceps "${{ inputs.ceps }}" --limite "${{ inputs.limite || '0' }}" --diagnostico diagnostico
-      - name: Guardar as tabelas no repositório
+      - name: Coletar a zona ${{ matrix.zona }}
+        if: ${{ !inputs.zonas || contains(inputs.zonas, matrix.zona) }}
+        run: python coletor/coletar.py --zona "${{ matrix.zona }}" --limite "${{ inputs.limite || '0' }}" --saida "saida/${{ matrix.zona }}" --diagnostico "saida/${{ matrix.zona }}/diagnostico"
+      - name: Entregar o resultado da zona
         if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: zona-${{ matrix.zona }}
+          path: saida/${{ matrix.zona }}
+          if-no-files-found: ignore
+          retention-days: 7
+
+  juntar:
+    needs: coletar
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Receber o resultado das zonas
+        uses: actions/download-artifact@v4
+        with:
+          pattern: zona-*
+          path: zonas
+      - name: Guardar as tabelas no repositório
         run: |
+          mkdir -p zonas
+          python coletor/juntar.py zonas/*/
           git config user.name "coletor"
           git config user.email "coletor@users.noreply.github.com"
           git add data/precos data/execucoes.csv
           if git diff --cached --quiet; then echo "nada novo"; exit 0; fi
           git commit -m "Coleta de $(TZ=America/Sao_Paulo date +%F)"
           for i in 1 2 3; do git pull --rebase origin "${{ github.ref_name }}" && git push origin "HEAD:${{ github.ref_name }}" && break || sleep 15; done
-      - name: Guardar o diagnóstico das páginas que falharam
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: diagnostico
-          path: diagnostico
-          if-no-files-found: ignore
-          retention-days: 7
       - name: Avisar se algo falhou
         if: always()
         env:

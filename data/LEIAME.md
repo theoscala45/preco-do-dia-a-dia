@@ -27,7 +27,7 @@ A tabela de preços é a grande. Cada linha é um preço de um produto, numa red
 - `nao_achado`: o produto não apareceu no sitemap, nem na segunda busca.
 - `bloqueado_robots`: a página existe, mas o robots.txt bloqueia a leitura. Não ler.
 
-**precos/AAAA-MM.csv**. O coletor acrescenta linhas toda noite. Colunas: data, rede_id, produto_id, cep_id, preco_reais, unidade_de_venda, disponivel, nome_na_pagina, tamanho_na_pagina, lido_em. Produto sem preço no dia entra com `disponivel` igual a `nao`. Ele é dado, não erro. O preço guardado é o preço comum da página, não o do cartão da rede nem o de atacado.
+**precos/AAAA-MM.csv**. O coletor acrescenta linhas toda noite. Colunas: data, rede_id, produto_id, cep_id, preco_reais, unidade_de_venda, disponivel, nome_na_pagina, tamanho_na_pagina, lido_em. Produto sem preço no dia entra com `disponivel` igual a `nao`. Ele é dado, não erro. O preço guardado é o que a página cobra de qualquer pessoa: o preço comum ou, se o produto estiver em promoção, o preço da promoção. Não é o do cartão da rede nem o de atacado ("a partir de N unidades").
 
 **execucoes.csv**. Uma linha por rede e CEP a cada noite, com o resultado (`ok`, `parcial`, `falha` ou `bloqueado`) e o erro. É daqui que sai o aviso da manhã quando uma rede ou um CEP falha.
 
@@ -44,7 +44,7 @@ A tabela de preços é a grande. Cada linha é um preço de um produto, numa red
 5. Se uma rede ou um CEP falhar, registrar em `execucoes.csv`, pular e seguir com o resto.
 6. Se a rede bloquear o coletor (erro 403 ou 429, captcha), parar a rede na hora e registrar `bloqueado`. Nunca contornar.
 
-O coletor fica em `coletor/coletar.py` e roda toda noite pelo GitHub Actions (`.github/workflows/coleta.yml`). Quando algo falha, ele abre a issue "Falha na coleta".
+O coletor fica em `coletor/coletar.py` e roda toda noite pelo GitHub Actions (`.github/workflows/coleta.yml`). Cada zona da cidade é uma parte separada, no máximo duas ao mesmo tempo. No fim, `coletor/juntar.py` grava tudo nas tabelas e, se algo falhou, o fluxo abre a issue "Falha na coleta".
 
 ## Tabelas do mapa (OpenStreetMap)
 
