@@ -32,9 +32,20 @@ python3 tools/montar_site.py real     # quando o coletor estiver preenchendo dat
 
 O mapa arredondado sai de `python3 tools/arredondar_mapa.py` (precisa de `pip install shapely`). Rode depois de `tools/preparar_mapa.py`.
 
+Lojas, pontos e rotas do mapa real (precisa de internet, um pedido por segundo):
+
+```
+python3 tools/buscar_lojas_e_rotas.py lojas    # data/lojas.csv
+python3 tools/buscar_lojas_e_rotas.py pontos   # data/pontos_geo.csv
+python3 tools/buscar_lojas_e_rotas.py rotas    # assets/rotas.json
+python3 tools/preparar_geo.py                  # assets/geo.json
+```
+
 Com `real`, a faixa "Dados de exemplo" some do site sozinha.
 
 ## Fontes e licenças
 
 - Contorno dos distritos: Prefeitura de São Paulo (GeoSampa), via `codigourbano/distritos-sp`.
-- three.js (MIT), Fredoka e Nunito (SIL Open Font License). As licenças estão em `assets/vendor` e `assets/fonts`.
+- Mapa, lojas e ruas: © colaboradores do OpenStreetMap (licença ODbL). Busca pelo Nominatim, rotas pelo OSRM.
+- Imagem do mapa: blocos do OpenFreeMap, carregados dos servidores deles quando a página abre. O estilo `assets/mapa-estilo.json` é uma adaptação do estilo Dark do OpenFreeMap.
+- MapLibre GL JS (BSD de 3 cláusulas) e família Red Hat (SIL Open Font License). As licenças estão em `assets/vendor` e `assets/fonts`.

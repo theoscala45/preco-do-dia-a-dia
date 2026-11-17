@@ -16,9 +16,6 @@ export function rolar(elInt, elCent, alvo) {
     const [i, c] = partes(reg.valor);
     elInt.textContent = i; elCent.textContent = c;
     if (t < 1) reg.id = requestAnimationFrame(passo);
-    else if (!calmo && de !== alvo) elInt.parentElement.animate(   // o preço dá um pulinho ao chegar
-      [{ transform: 'scale(1)' }, { transform: 'scale(1.09,.93)' }, { transform: 'scale(.97,1.05)' }, { transform: 'scale(1)' }],
-      { duration: 420, easing: 'ease-out' });
   };
   passo(t0);
 }

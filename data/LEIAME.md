@@ -43,3 +43,16 @@ As observações de cada link ficam, por enquanto, na aba Links Tenda da planilh
 3. Guardar o nome e o tamanho que a página mostra, não os da URL. Em alguns produtos eles diferem.
 4. Guardar só fatos: preço, nome, tamanho. Nada de fotos nem descrições.
 5. Se uma rede ou um CEP falhar, registrar em `execucoes.csv`, pular e seguir com o resto.
+
+## Tabelas do mapa (OpenStreetMap)
+
+Geradas por `tools/buscar_lojas_e_rotas.py`. Dados © colaboradores do OpenStreetMap, licença ODbL.
+
+| Arquivo | Colunas | O que é |
+|---|---|---|
+| `lojas.csv` | rede_id, nome, lat, lon, endereco, osm | Lojas de cada rede na Grande São Paulo, achadas pela busca do OpenStreetMap (Nominatim). 212 lojas. |
+| `pontos_geo.csv` | cep_id, lat, lon, precisao, osm | Latitude e longitude da rua de cada um dos 25 pontos de coleta. |
+
+Limites: o cadastro do OpenStreetMap é feito por voluntários. Pode faltar loja, e pode haver loja fechada. O Tenda tem só 3 lojas cadastradas na área, então a "loja mais próxima" dele costuma ficar longe. A coordenada do ponto é a da rua, não a do número.
+
+As rotas (de carro, do ponto até a loja mais próxima de cada rede, calculadas pelo OSRM) ficam em `assets/rotas.json`. Os distritos e os pontos em latitude e longitude ficam em `assets/geo.json`, feito por `tools/preparar_geo.py`.

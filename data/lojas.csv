@@ -1,0 +1,213 @@
+rede_id,nome,lat,lon,endereco,osm
+tenda,Tenda Atacado,-23.681513,-46.597232,"Avenida Fábio Eduardo Ramos Esquível, 3000, Canhema, Diadema",way/206909193
+tenda,Tenda Atacado,-23.544908,-46.309505,"Rua Baruel, 315, Centro, Suzano",way/1049374913
+tenda,Tenda Atacado,-23.523950,-46.826307,"Avenida Desembargador Doutor Eduardo Cunha de Abreu, 495, Vila Municipal, Carapicuíba",way/708938763
+carrefour,Carrefour,-23.559557,-46.515927,"Avenida Rio das Pedras, 555, Vila Antonieta, São Paulo",relation/12421013
+carrefour,Carrefour,-23.522228,-46.599188,"Avenida Morvan Dias de Figueiredo (Local), 3351, Bairro da Coroa, São Paulo",way/164337987
+carrefour,Carrefour,-23.563727,-46.613759,"Praça Alberto Lion, Cambuci, São Paulo",way/441834744
+carrefour,Carrefour,-23.631250,-46.599684,"Rodovia Anchieta Marginal Direita, km 11, São João Climaco, São Paulo",way/1331828041
+carrefour,Carrefour,-23.439781,-46.541209,"Rua Pica Pau, Picanço, Guarulhos",way/34700909
+carrefour,Carrefour,-23.537336,-46.768383,"Avenida dos Autonomistas, Presidente Altino, Osasco",way/152906292
+carrefour,Carrefour,-23.610654,-46.565061,"Avenida Doutor Ramos de Azevedo, Fundação, São Caetano do Sul",way/166859403
+carrefour,Carrefour,-23.676317,-46.554686,"Avenida Senador Vergueiro, 2000, Anchieta, São Bernardo do Campo",way/253038339
+carrefour,Carrefour,-23.538217,-46.770887,"Avenida dos Autonomistas, 1768, Presidente Altino, Osasco",way/152926457
+carrefour,Carrefour Anália Franco,-23.560321,-46.560091,"Avenida Regente Feijó, 1759, Jardim Anália Franco, São Paulo",way/124518854
+carrefour,Carrefour,-23.642022,-46.734465,"Avenida Alberto Augusto Alves, 50, Comunidade Travinhas, São Paulo",way/250338833
+carrefour,Carrefour,-23.512512,-46.674849,"Rua Doverlândia, VIla Prado, São Paulo",way/230527353
+carrefour,Carrefour,-23.585347,-46.778861,"Rua Renato Portela, Raposo Tavares, São Paulo",way/146513787
+carrefour,Carrefour,-23.654670,-46.693066,"Rua Leme do Prado, Jardim Santo Amaro, São Paulo",way/448229192
+carrefour,Carrefour,-23.646245,-46.526597,"Rua Oratório, 2º Subdistrito, Santo André",way/180396868
+carrefour,Carrefour,-23.618132,-46.627017,"Rua Ribeiro Lacerda, Vila Santo Estéfano, São Paulo",way/39124578
+carrefour,Carrefour,-23.513285,-46.654963,"Rua Domingos Fasolari, Casa Verde, São Paulo",way/151617107
+carrefour,Carrefour,-23.655196,-46.595151,"Avenida do Taboão, 2000, Taboão, São Bernardo do Campo",way/179669882
+carrefour,Carrefour,-23.467652,-46.521103,"Travessa do Rosário, 30, Macedo, Guarulhos",way/47877707
+carrefour,Carrefour,-23.625821,-46.686479,"Avenida Santo Amaro, Brooklin Novo, São Paulo",way/112413223
+carrefour,Carrefour,-23.694497,-46.700696,"Avenida Interlagos, Interlagos, São Paulo",way/138557746
+carrefour,Carrefour,-23.569905,-46.632825,"Avenida da Aclimação, Aclimação, São Paulo",way/1170445566
+carrefour,Carrefour,-23.582069,-46.638711,"Rua Domingos de Morais, 604, Vila Mariana, São Paulo",way/1356045591
+carrefour,Carrefour,-23.583960,-46.725234,"Avenida Deputado Jacob Salvador Zveibil, Vila Sônia, São Paulo",node/1575974453
+carrefour,Carrefour,-23.629210,-46.711224,"Avenida das Nações Unidas, Chácara Santo Antônio, São Paulo",node/10267700050
+carrefour,Carrefour,-23.570355,-46.660934,"Rua Pamplona, Jardins, São Paulo",node/9936860093
+carrefour,Carrefour,-23.677393,-46.675057,"Rua do Shopping Interlagos, Vila Arriete, São Paulo",node/2302963979
+carrefour,Carrefour,-23.613665,-46.775565,"Rua Brigadeiro Faria Lima, 1835, Jardim Pedro Gonçalves, Taboão da Serra",node/1258229137
+carrefour,Carrefour,-23.569472,-46.445204,"Avenida Jacu-Pêssego, Itaquera, São Paulo",node/5885771513
+carrefour,Carrefour,-23.969462,-46.324683,"Rua Doutor Heitor de Moraes, Boqueirão, Santos",way/298580738
+carrefour,Carrefour,-23.978216,-46.308218,"Rua Professor Pirajá da Silva, Aparecida, Santos",node/1416789376
+carrefour,Carrefour,-23.727222,-46.552508,"Avenida Maria Servidei Demarchi, 398, Demarchi, São Bernardo do Campo",way/123773284
+carrefour,Carrefour,-23.712190,-46.542353,"Avenida Francisco Prestes Maia, Santa Terezinha, São Bernardo do Campo",way/169263236
+carrefour,Carrefour,-23.660363,-46.510167,"Avenida Pedro Américo, Novo Homero Thon, Santo André",way/741126702
+carrefour,Carrefour,-23.669623,-46.535838,"Acesso Avenida Pereira Barreto, Vila Gilda, Santo André",way/154074024
+carrefour,Carrefour,-23.503922,-46.835244,"Alameda Araguaia, Alphaville, Barueri",way/38000362
+carrefour,Carrefour,-23.501150,-46.835589,"Alameda Araguaia, Alphaville, Barueri",node/13895950479
+carrefour,Carrefour,-23.966968,-46.369091,"Complexo Viário Roberto Mário Santini, Boa Vista, São Vicente",way/48460437
+carrefour,Carrefour,-24.013129,-46.418354,"Rua Copacabana, Guilhermina, Praia Grande",relation/5177608
+carrefour,Carrefour,-23.469266,-46.871384,"Avenida Yojiro Takaoka, Centro de Apoio Alphaville 1, Santana de Parnaíba",way/768645588
+atacadao,Atacadão,-23.523239,-46.576258,"Rua Oscar Fernandes da Silva, Parque Novo Mundo, São Paulo",relation/17898563
+atacadao,Atacadão,-23.524500,-46.574304,"Avenida Morvan Dias de Figueiredo (Local), Parque Novo Mundo, São Paulo",relation/17898562
+atacadao,Atacadão,-23.521805,-46.657650,"Avenida Doutor Abraão Ribeiro, Campos Elísios, São Paulo",way/185797053
+atacadao,Atacadão,-23.551527,-46.794448,"Rua Dirceu Vaz, Jardim Santo Antônio, Osasco",way/1144391429
+atacadao,Atacadão,-23.607378,-46.759049,"Rua do Tesouro, 680, Jardim Bontempo, Taboão da Serra",way/146486555
+atacadao,Atacadão,-23.607781,-46.545789,"Avenida dos Estados, 5200, Vila Metalúrgica, Santo André",way/1232163607
+atacadao,Atacadão,-23.436770,-46.719578,"Avenida Raimundo Pereira de Magalhães, 11980, Jardim Pirituba, São Paulo",way/234814810
+atacadao,Atacadão,-23.767404,-46.718855,"Avenida Senador Teotônio Vilela, Jardim Iporã, São Paulo",way/252528167
+atacadao,Atacadão,-23.685098,-46.632296,"Avenida Presidente Kennedy, Centro, Diadema",way/137437983
+atacadao,Atacadão,-23.535980,-46.767324,"Avenida Hilário Pereira de Souza, 664, Presidente Altino, Osasco",way/152906287
+atacadao,Atacadão,-23.541055,-46.731135,"Avenida José César de Oliveira, 500, Vila Hamburguesa, São Paulo",way/520920041
+atacadao,Atacadão,-23.475121,-46.527155,"Rua José Bernardo Medeiros, 235, Centro, Guarulhos",way/701351782
+atacadao,Atacadão,-23.685653,-46.691718,"Rua Miguel Yunes, Vila Arriete, São Paulo",way/251041480
+atacadao,Atacadão,-23.691190,-46.574557,"Avenida Piraporinha, 837, Planalto, São Bernardo do Campo",way/249135944
+atacadao,Atacadão,-23.559832,-46.447157,"Rua Francisco Velho, Fazenda Nossa Senhora do Carmo, São Paulo",way/223139500
+atacadao,Atacadão,-23.681961,-46.605574,"Avenida Antônio Piranga, 2085, Canhema, Diadema",way/253737194
+atacadao,Atacadão,-23.494960,-46.456648,"Rua São Bertoldo, Jardim Pedro José Nunes, São Paulo",way/717221472
+atacadao,Atacadão,-23.656561,-46.522585,"Avenida Queirós dos Santos, 888, Centro, Santo André",way/770744376
+atacadao,Atacadão,-23.702650,-46.605298,"Rua Dona Ruyce Ferraz Alvim, 2250, Serraria, Diadema",way/1429250485
+atacadao,Atacadão,-23.629246,-46.644639,"Avenida Jabaquara, 2979, Mirandópolis, São Paulo",way/484066104
+atacadao,Atacadão,-23.522487,-46.521310,"Avenida Amador Bueno da Veiga, 2521, Vila Esperança, São Paulo",way/382941737
+atacadao,Atacadão,-23.668448,-46.736345,"Calçada Partilhada Avenida Luis Gushiken, 380, Jardim São Luís, São Paulo",way/249884988
+atacadao,Atacadão,-23.619001,-46.579529,"Avenida Guido Aliberti, 1285, Santo Antônio, São Caetano do Sul",way/1164967317
+atacadao,Atacadão,-23.467500,-46.670752,"Avenida Inajar de Souza, 5180, Brasilândia, São Paulo",way/939534219
+atacadao,Atacadão,-23.493461,-46.421068,"Rua Padre Diogo, Vila Curuçá, São Paulo",way/154059869
+atacadao,Atacadão,-23.581139,-46.600695,"Rua Manifesto, 931, Ipiranga, São Paulo",node/4622820119
+atacadao,Atacadão,-23.536586,-46.581465,"Avenida Salim Farah Maluf, Cidade Mãe do Céu, São Paulo",node/4579372701
+atacadao,Atacadão,-23.934171,-46.362683,"Avenida Nossa Senhora de Fátima, 298, Chico de Paula, Santos",way/1001581835
+atacadao,Atacadão,-23.722765,-46.546938,", 2785, Ferrazópolis, São Bernardo do Campo",way/825607395
+atacadao,Atacadão,-23.745543,-46.563762,"Avenida Maria Servidei Demarchi, 3000, Demarchi, São Bernardo do Campo",way/1289202435
+atacadao,Atacadão,-23.525485,-46.820100,"Avenida Antônio Faustino dos Santos, 310, Vila Municipal, Carapicuíba",way/708944666
+atacadao,Atacadão,-23.590415,-46.819684,"Rua Peloponeso, Jardim Rebelato, Cotia",way/1300236612
+atacadao,Atacadão Loja - Guarulhos Aeroporto,-23.438659,-46.506857,"Avenida Otávio Braga de Mesquita, 3116, Bela Vista, Guarulhos",relation/20009488
+atacadao,Atacadão,-23.433638,-46.406654,"Rua Eduardo Frôner, Bonsucesso, Guarulhos",way/1234505286
+atacadao,Atacadão,-23.438348,-46.437428,"Rodovia Presidente Dutra, Presidente Dutra, Guarulhos",way/194855938
+atacadao,Atacadão,-23.658295,-46.501156,"Avenida dos Estados, 8500, Várzea do Tamanduateí, Santo André",way/751187959
+atacadao,Atacadão,-23.496038,-46.831804,"Avenida Piracema, 1605, Jardim Mutinga, Barueri",way/256706758
+atacadao,Atacadão,-23.535918,-46.879212,"Avenida Batatais, Parque Viana, Barueri",way/1378913783
+atacadao,Atacadão,-23.982691,-46.264504,"Rodovia Cônego Domênico Rangoni, 191, Cachoeira, Guarujá",way/696785760
+atacadao,Atacadão,-23.951851,-46.388924,"Estacionamento, Boa Vista, São Vicente",way/966197785
+atacadao,Atacadão,-23.677701,-46.438018,"Avenida Itapark, 3633, Vila Independência, Mauá",way/226011197
+atacadao,Atacadão,-23.662690,-46.482445,"Avenida João Ramalho, Parque São Vicente, Mauá",way/1482368407
+atacadao,Atacadão,-23.530851,-46.305094,"Rua Vereador João Batista Fitipaldi, 380, Vila Maluf, Suzano",way/491968424
+atacadao,Atacadão,-23.517307,-46.333441,"Rodovia João Afonso de Souza Castellano, 1500, Vila Jaú, Poá",way/1452949530
+atacadao,Supermercado Atacadão,-23.526046,-46.382747,"Avenida Presidente Tancredo de Almeida Neves, 1000, Jardim Santa Rosa, Ferraz de Vasconcelos",way/696532271
+atacadao,Atacadão,-24.005941,-46.427435,"Avenida Presidente Kennedy, 1860, Guilhermina, Praia Grande",relation/5216206
+atacadao,Atacadão,-23.688942,-46.807122,"Rodovia Armando Salles, 5888, Recreio Campestre, Itapecerica da Serra",way/848979083
+atacadao,Atacadão,-23.704996,-46.398305,"Avenida Francisco Monteiro, 1701, Santana, Ribeirão Pires",way/779736157
+atacadao,Atacadão,-23.548174,-46.946592,"Rodovia Engenheiro Renê Benedito Silva, 965, Jardim Marina, Itapevi",way/478311324
+atacadao,Atacadão,-23.529801,-46.893336,"Avenida Alziro Soares, 400, Núcleo Micro Industrial Presidente Wilson, Jandira",way/556144693
+atacadao,Atacadão,-23.601978,-46.917056,"Avenida Professor José Barreto, 1217, Portão, Cotia",way/179454034
+atacadao,Atacadao,-23.514050,-46.606628,"Avenida Joaquina Ramalho, 340, Bairro da Coroa, São Paulo",way/255783865
+atacadao,Atacadão Pirituba,-23.485356,-46.738993,"Avenida Mutinga, Pirituba, São Paulo",way/75978326
+atacadao,Primos Atacadão,-23.536280,-46.416383,"Avenida Nordestina, 6893, Jardim Etelvina, São Paulo",way/1159915039
+atacadao,Econômico Atacadão,-23.446884,-46.463328,"Rua Sebastião Walter Fusco, 86, Jardim Presidente Dutra, Guarulhos",way/1164270376
+pao-de-acucar,Pão de Açúcar,-23.600157,-46.666641,"Avenida Lavandisca, 249, Indianópolis, São Paulo",way/1114583677
+pao-de-acucar,Pão de Açúcar,-23.627634,-46.717030,"Marginal Pinheiros (Expressa), Comunidade Travinhas, São Paulo",way/111789720
+pao-de-acucar,Pão de Açúcar,-23.645561,-46.641955,"Avenida Engenheiro Armando de Arruda Pereira, 2022, Cidade Vargas, São Paulo",way/1429626122
+pao-de-acucar,Pão de Açúcar,-23.644815,-46.674025,"Avenida Washington Luís, Chácara Monte Alegre, São Paulo",way/112655978
+pao-de-acucar,Pão de Açúcar,-23.647558,-46.532274,"Avenida Industrial, 900, Jardim, Santo André",way/160181310
+pao-de-acucar,Pão de Açúcar,-23.630147,-46.690947,"Avenida Santo Amaro, 5494, Jardim Petrópolis, São Paulo",way/111636312
+pao-de-acucar,Pão de Açúcar,-23.572778,-46.655111,"Rua Batataes, 67, Jardins, São Paulo",way/1222933159
+pao-de-acucar,Pão de Açúcar,-23.513771,-46.659443,"Rua Bernardino Fanganiello, 349, Casa Verde, São Paulo",way/1251098789
+pao-de-acucar,Pão de Açúcar,-23.588110,-46.620511,"Avenida Doutor Ricardo Jafet, Jardim da Glória, São Paulo",way/60723580
+pao-de-acucar,Pão de Açúcar,-23.535123,-46.666783,"Rua Cardoso de Almeida, 472, Perdizes, São Paulo",way/519791798
+pao-de-acucar,Pão de Açúcar,-23.586353,-46.721913,"Rua Dom Armando Lombardi, Cidade Jardim, São Paulo",way/439889144
+pao-de-acucar,Pão de Açúcar,-23.611558,-46.701408,"Avenida Boaventura José Rodrigues Neto, Morumbi, São Paulo",way/245886218
+pao-de-acucar,Pão de Açúcar,-23.617540,-46.636538,"Rua Carneiro da Cunha, 494, Saúde, São Paulo",way/439295280
+pao-de-acucar,Pão de Açúcar,-23.600267,-46.659846,"Avenida Ibirapuera, Indianópolis, São Paulo",way/432819969
+pao-de-acucar,Pão de Açúcar,-23.482098,-46.630985,"Avenida Engenheiro Caetano Alvares, 6200, Vila Aurora, São Paulo",way/618441509
+pao-de-acucar,Pão de Açúcar,-23.651950,-46.668650,"Avenida Vereador João de Luca, Jabaquara, São Paulo",way/481280563
+pao-de-acucar,Supemercado Pão de Açúcar,-23.602303,-46.639601,"Avenida Doutor Altino Arantes, 268, Mirandópolis, São Paulo",way/277075163
+pao-de-acucar,Pão de Açúcar,-23.602874,-46.650639,"Avenida José Maria Whitaker, Mirandópolis, São Paulo",way/439293474
+pao-de-acucar,Pão de Açúcar,-23.616458,-46.739658,"Rua Anatole de Baudot, 30, Paraisópolis, São Paulo",way/553187281
+pao-de-acucar,Pão de Açúcar,-23.501963,-46.637043,"Rua Doutor César, 1234, Santana, São Paulo",way/618152546
+pao-de-acucar,Pão de Açúcar,-23.544556,-46.568923,"Rua Serra de Japi, Vila Azevedo, São Paulo",way/38389005
+pao-de-acucar,Pão de Açúcar,-23.529291,-46.731583,"Avenida Imperatriz Leopoldina, 845A, Vila Leopoldina, São Paulo",way/1050028921
+pao-de-acucar,Pão de Açúcar,-23.534672,-46.712931,"Rua Cerro Corá, 1850, Vila Ipojuca, São Paulo",way/520692307
+pao-de-acucar,Pão de Açúcar,-23.582874,-46.670530,"Rua Joaquim Floriano, Vila Olímpia, São Paulo",way/380011085
+pao-de-acucar,Pão de Açúcar,-23.620755,-46.563929,"Rua Maranhão, Santa Paula, São Caetano do Sul",way/1163964326
+pao-de-acucar,Pão de Açúcar,-23.542319,-46.660089,"Rua Maranhão, 846, Higienópolis, São Paulo",way/379934372
+pao-de-acucar,Pão de Açúcar,-23.505251,-46.626738,"Rua Voluntários da Pátria, 1723, Santana, São Paulo",way/146577895
+pao-de-acucar,Pão de Açúcar,-23.562858,-46.641031,"Rua Pedroso, 215, Morro dos Ingleses, São Paulo",way/423244950
+pao-de-acucar,Pão de Açúcar,-23.528506,-46.698424,"Rua Tito, 671, Bairro Siciliano, São Paulo",way/1056302852
+pao-de-acucar,Pão de Açúcar,-23.655762,-46.691844,"Rua Sócrates, 120, Chácara Flora, São Paulo",relation/6796295
+pao-de-acucar,Pão de Açúcar,-23.549381,-46.682910,"Rua Heitor Penteado, 250, Sumaré, São Paulo",relation/15652483
+pao-de-acucar,Pão de Açúcar,-23.632190,-46.704689,"Rua Alexandre Dumas, 1401, Chácara Santo Antônio, São Paulo",way/1392244117
+pao-de-acucar,Pão de Açúcar,-23.454732,-46.528689,"Avenida Doutor Renato de Andrade Maia, 877, Maia, Guarulhos",way/1273416199
+pao-de-acucar,Pão de Açúcar,-23.618145,-46.554266,"Rua Alegre, Barcelona, São Caetano do Sul",way/546867203
+pao-de-acucar,Pão de Açúcar,-23.541091,-46.685894,"Rua Cayowaá, 1554, Sumaré, São Paulo",way/519797594
+pao-de-acucar,Pão de Açúcar,-23.647034,-46.669712,"Rua Praia do Castelo, Jabaquara, São Paulo",way/259293889
+pao-de-acucar,Pão de Açúcar,-23.619430,-46.678347,"Rua Edson, Brooklin Velho, São Paulo",way/1533627621
+pao-de-acucar,Pão de Açúcar,-23.595279,-46.668589,"Rua Afonso Braz, 480, Indianópolis, São Paulo",way/521405752
+pao-de-acucar,Pão de Açúcar,-23.622043,-46.638154,"Rua Biobedas, 273, Parque Imperial, São Paulo",way/1504376639
+pao-de-acucar,Pão de Açúcar,-23.540511,-46.682215,"Avenida Professor Alfonso Bovero, 566, Sumaré, São Paulo",way/1075173130
+pao-de-acucar,Pão de Açúcar,-23.611112,-46.733554,"Rua Correggio, Ferreira, São Paulo",way/1366005746
+pao-de-acucar,Pão de Açúcar,-23.559686,-46.660567,"Alameda Santos, 2071, Cerqueira César, São Paulo",way/1216925176
+pao-de-acucar,Pão de Açúcar,-23.545443,-46.651937,"Rua Maria Antônia, 422, Higienópolis, São Paulo",way/1217571762
+pao-de-acucar,Pão de Açúcar,-23.569952,-46.591446,"Rua Juventus, 337 L2, Parque da Mooca, São Paulo",way/1072837248
+pao-de-acucar,Pão de Açúcar,-23.546389,-46.668962,"Praça Wendell Wilkie, Pacaembu, São Paulo",node/11406431192
+pao-de-acucar,Pão de Açúcar Anália Franco,-23.560731,-46.563209,"Avenida Regente Feijó, 1343-1349, Jardim Anália Franco, São Paulo",node/6393719586
+pao-de-acucar,Pão de Açúcar,-23.537224,-46.678256,"Rua Apiacás, 747, Pompéia, São Paulo",node/918251543
+pao-de-acucar,Pão de Açúcar,-23.648629,-46.540246,"Rua das Figueiras, Jardim, Santo André",node/13877951001
+pao-de-acucar,Pão de Açúcar,-23.566092,-46.647242,"Avenida Brigadeiro Luís Antônio, 2013, Morro dos Ingleses, São Paulo",way/1222972366
+pao-de-acucar,Pão de Açúcar,-23.576170,-46.615961,"Travessa Lídio Gomes da Silva, Vila Monumento, São Paulo",way/1334240760
+pao-de-acucar,Pão de Açúcar Santo Amaro,-23.622304,-46.685286,"Avenida Santo Amaro, 4530, Brooklin Novo, São Paulo",way/163655389
+pao-de-acucar,Pão de Açúcar,-23.488132,-46.621704,"Avenida Nova Cantareira, 240, Jardim São Paulo, São Paulo",way/406949739
+pao-de-acucar,Pão de Açúcar,-23.547148,-46.658716,"Avenida Angélica, 1696, Consolação, São Paulo",way/1215670645
+pao-de-acucar,Pão de Açúcar,-23.566396,-46.664892,"Alameda Ministro Rocha Azevedo, 1136, Cerqueira César, São Paulo",way/1220661050
+pao-de-acucar,Supermercado Pão de Açúcar,-23.622827,-46.670366,"Rua Vieira de Morais, 1235, Brooklin Velho, São Paulo",way/867475172
+pao-de-acucar,Pão de Açúcar,-23.578550,-46.589299,"Praça Visconde de Sousa Fontes, 374, Parque da Mooca, São Paulo",way/570462999
+pao-de-acucar,Pão de Açúcar,-23.633837,-46.728895,"Rua José Ramon Urtiza, Comunidade Travinhas, São Paulo",node/3859188230
+pao-de-acucar,Pão de Açúcar,-23.574282,-46.645679,"Rua Abílio Soares, Paraíso, São Paulo",node/2916226350
+pao-de-acucar,Pão de Açúcar,-23.563923,-46.686835,"Rua Teodoro Sampaio, 1933, Pinheiros, São Paulo",way/241951851
+pao-de-acucar,Pão de Açúcar,-23.595799,-46.676830,"Rua Clodomiro Amazonas, 1308, Vila Olímpia, São Paulo",way/685540346
+pao-de-acucar,Pão de Açúcar,-23.592574,-46.677191,"Rua Clodomiro Amazonas, 955, Vila Olímpia, São Paulo",way/685310748
+pao-de-acucar,Pão de Açúcar,-23.552532,-46.708707,"Avenida Dona Elisa de Moraes Mendes, Vila Ida, São Paulo",way/381602137
+pao-de-acucar,Pão de Açúcar,-23.600903,-46.678690,"Avenida Doutor Cardoso de Melo, 482, Vila Olímpia, São Paulo",way/1051650749
+pao-de-acucar,Pão de Açúcar,-23.597229,-46.627488,"Rua Santa Cruz, 937, Jardim Aurélia, São Paulo",way/428900771
+pao-de-acucar,Pão de Açúcar,-23.554848,-46.688517,"Rua Harmonia, 373A, Vila Madalena, São Paulo",way/1355842931
+pao-de-acucar,Pão de Açúcar,-23.645132,-46.703275,"Avenida João Dias, Santo Amaro, São Paulo",node/9885929402
+pao-de-acucar,Pão de Açúcar,-23.630801,-46.735714,"Rua Itacaiúna, Comunidade Travinhas, São Paulo",node/3473271229
+pao-de-acucar,Pão de Açúcar,-23.612179,-46.684049,"Avenida Padre Antônio José dos Santos, 554, Brooklin Novo, São Paulo",node/5249406721
+pao-de-acucar,Pão de Açúcar,-23.616839,-46.649378,"Alameda dos Guatás, 1261, Planalto Paulista, São Paulo",node/3427473241
+pao-de-acucar,Pão de Açúcar,-23.594476,-46.684318,"Rua Fidêncio Ramos, 81, Vila Olímpia, São Paulo",node/7515641943
+pao-de-acucar,Pão de Açúcar,-23.554164,-46.710108,"Rua Umburanas, Vila Ida, São Paulo",node/5069705019
+pao-de-acucar,Pão de Açúcar,-23.610410,-46.686276,"Avenida Padre Antônio José dos Santos, Brooklin Novo, São Paulo",node/1793038132
+pao-de-acucar,Pão de Açúcar,-23.590263,-46.673993,"Rua Doutor Alceu de Campos Rodrigues, 174, Vila Olímpia, São Paulo",node/6856230986
+pao-de-acucar,Pão de Açúcar,-23.613501,-46.678030,"Avenida Santo Amaro, Brooklin Velho, São Paulo",node/1111669047
+pao-de-acucar,Pão de Açúcar,-23.561214,-46.674135,"Rua Alves Guimarães, 50, Vila Madalena, São Paulo",node/3418063380
+pao-de-acucar,Pão de Açúcar,-23.556424,-46.663699,"Rua da Consolação, 2581, Cerqueira César, São Paulo",node/3227217162
+pao-de-acucar,Pão de Açúcar,-23.627062,-46.675963,"Avenida Jornalista Roberto Marinho, 300, Brooklin Velho, São Paulo",node/12148169620
+pao-de-acucar,Pão de Açúcar,-23.958807,-46.323366,"Avenida Conselheiro Nébias, Boqueirão, Santos",way/700207960
+pao-de-acucar,Pão de Açúcar,-23.967710,-46.342759,"Avenida Presidente Wilson, 94, Pompéia, Santos",node/6580183138
+pao-de-acucar,Pão de Açúcar,-23.981297,-46.308468,"Avenida Doutor Epitácio Pessoa, Aparecida, Santos",node/2061335869
+pao-de-acucar,Pão de Açúcar,-23.989095,-46.301395,"Avenida Rei Alberto I, Ponta da Praia, Santos",node/6228418838
+pao-de-acucar,Pão de Açúcar,-23.705215,-46.550082,"Rua Santa Filomena, 677, Nova Petrópolis, São Bernardo do Campo",way/179466250
+pao-de-acucar,Pão de Açúcar,-23.995719,-46.255895,"Avenida Puglisi, 96, Pitangueiras, Guarujá",way/485543949
+pao-de-acucar,Pão de Açúcar,-23.970580,-46.370567,"Rua Pero Correa, Boa Vista, São Vicente",way/699662851
+pao-de-acucar,Pão de Açúcar,-23.592275,-46.836158,"Rua Ushima Kira, Granja Viana, Cotia",way/262798484
+pao-de-acucar,Pão de Açúcar,-23.585236,-46.835150,"Avenida São Camilo, Granja Viana, Cotia",node/6710438993
+pao-de-acucar,Pão de Açúcar,-23.461983,-46.875770,"Avenida Marte, Centro de Apoio Alphaville 1, Santana de Parnaíba",way/257237454
+pao-de-acucar,Pão de Açúcar,-23.466527,-46.846412,"Avenida Marcos Penteado de Ulhôa Rodrigues, Santana de Parnaíba",way/256696497
+pao-de-acucar,Pão de Açúcar,-23.975373,-46.318531,"Avenida Bartholomeu de Gusmão, Embaré, Santos",way/1293547753
+sonda,Sonda Supermercados,-23.506728,-46.600347,"Rua Maria Cândida, 1511, Vila Isolina Mazzei, São Paulo",way/253225802
+sonda,Sonda Supermercados,-23.546723,-46.563669,"Rua Apucarana, 1000, Vila Gomes Cardim, São Paulo",way/38043322
+sonda,Sonda Supermercados,-23.441551,-46.722092,"Avenida Raimundo Pereira de Magalhães, 11333, Jardim Pirituba, São Paulo",way/234814910
+sonda,Sonda Supermercados,-23.524963,-46.683279,"Rua Carlos Vicari, 155, Pompéia, São Paulo",way/171488423
+sonda,Sonda Supermercados,-23.676670,-46.789645,"Estrada de Itapecerica, Capão Redondo, São Paulo",way/1486723656
+sonda,Sonda Supermercados,-23.521509,-46.699800,"Rua Guaicurus, 1469, Água Branca, São Paulo",way/996315688
+sonda,Sonda Supermercados,-23.748707,-46.709851,"Avenida Senador Teotônio Vilela, 1433, Cidade Dutra, São Paulo",way/252528165
+sonda,Sonda Supermercados,-23.714017,-46.698476,"Rua Doutor Paulo de Barros Whitaker, Cidade Dutra, São Paulo",node/2295256076
+sonda,Sonda Supermercados,-23.639079,-46.526556,"Praça Chile, 2º Subdistrito, Santo André",node/5263520478
+sonda,Sonda Supermercados,-23.453289,-46.508022,"Avenida Otávio Braga de Mesquita, 1352, Fátima, Guarulhos",way/298347663
+sonda,Sonda Supermercados,-23.428836,-46.536878,"Avenida Roza Molina Pannocchia, Vila Rio, Guarulhos",node/5543482775
+sonda,Sonda Supermercados,-23.968433,-46.384364,"Rua Jacob Emerick, 249, Parque Bitaru, São Vicente",relation/5216227
+sonda,Sonda Supermercados,-23.408955,-46.858138,"Rua Jean Anastace Kovelis, 123, Jardim Adelaide, Cajamar",node/6313413918
+sonda,Sonda,-23.457759,-46.613613,"Rua Maria Amália Lopes Azevedo, 1251, Parque Palmas do Tremembé, São Paulo",way/1296204830
+sonda,Sonda,-23.620337,-46.549835,"Rua Capeberibe, Barcelona, São Caetano do Sul",way/380591541
+sonda,Sonda,-23.485892,-46.692885,"Rua Amaro Domingues, Parque Monteiro Soares, São Paulo",way/243093706
+sonda,Sonda,-23.485471,-46.380755,"Avenida Marechal Tito, 7579, Jardim das Oliveiras, São Paulo",way/622060228
+sonda,Sonda,-23.409616,-46.848766,"Avenida Tenente Marques, 2805, Jardim Adelaide, Cajamar",way/674332750
+santa-luzia,Casa Santa Luzia,-23.564300,-46.665644,"Alameda Lorena, 1471, Cerqueira César, São Paulo",way/414737501
+hirota,Hirota Food,-23.575041,-46.616296,"Rua Gaspar Fernandes, 452, Cambuci, São Paulo",way/1372648711
+hirota,Hirota Food,-23.548208,-46.594079,"Rua Taquari, 1058, Mooca, São Paulo",way/1091355132
+hirota,Hirota Food,-23.621240,-46.640232,"Avenida Jabaquara, 1930, Mirandópolis, São Paulo",way/439288050
+hirota,Hirota Food,-23.617224,-46.677732,"Rua Vieira de Morais, 265, Brooklin Velho, São Paulo",node/12581644639
+hirota,Hirota,-23.570989,-46.633490,"Avenida da Aclimação, 488, Liberdade, São Paulo",way/431463844
+hirota,HIROTA,-23.606690,-46.621405,"Rua Vigário Albernaz, 695, Vila Gumercindo, São Paulo",node/3727956800

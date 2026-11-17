@@ -99,16 +99,6 @@ export function criarCesta(dados, mapa, estado) {
   $('basica').addEventListener('click', () => BASICA.forEach((id, k) => setTimeout(() => adicionar(idx[id]), k * 90)));
   $('cupomData').textContent = new Date(dados.datas.at(-1) + 'T12:00').toLocaleDateString('pt-BR', { month: 'long', year: 'numeric' });
 
-  // o cupom inclina de leve com o ponteiro
-  const mesa = document.querySelector('.cupom-mesa'), cupom = $('cupom');
-  if (!estado.calmo) {
-    mesa.addEventListener('pointermove', e => {
-      const r = mesa.getBoundingClientRect();
-      cupom.style.setProperty('--ry', ((e.clientX - r.left) / r.width - 0.5) * 7 + 'deg');
-      cupom.style.setProperty('--rx', ((e.clientY - r.top) / r.height - 0.5) * -5 + 'deg');
-    });
-    mesa.addEventListener('pointerleave', () => { cupom.style.setProperty('--ry', '0deg'); cupom.style.setProperty('--rx', '0deg'); });
-  }
   desenhar();
   return { atualizar: desenhar };
 }

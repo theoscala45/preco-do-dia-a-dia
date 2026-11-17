@@ -1,64 +1,68 @@
 # Direção visual: O Preço do Dia a Dia
 
-Revista em 16/11/2026 e em 17/11/2026. A primeira versão (papel de cupom, serifa, mapa com cantos vivos) ficou realista e séria demais para o Theo. Ele pediu um visual arredondado, quase de desenho animado, mais brincalhão. Esta direção não foi baseada em sites de referência.
+Revista em 17/11/2026. As duas primeiras versões foram rejeitadas pelo Theo: a primeira (papel de cupom, serifa) ficou séria e dura demais, a segunda (peças de brinquedo, nuvens, lojinhas) ficou infantil. O pedido final: cara de site profissional, leve, com cantos arredondados, e um mapa de verdade com lojas e ruas de verdade.
 
 ## A ideia
 
-A cidade vira um brinquedo: os 96 distritos são peças macias numa bandeja, com nuvens de bolinha passeando em volta. O preço continua sendo o assunto. Tudo tem canto arredondado, e tudo que se mexe tem mola.
+Um produto de mapa, escuro, com uma cor só. O mapa real de São Paulo ocupa a tela inteira e o texto fica por cima, à esquerda. Com um CEP, a câmera desce até o ponto de coleta e desenha, rua por rua, o caminho de carro até a loja mais próxima de cada rede. O caminho da rede mais barata fica laranja.
 
-Uma coisa só chama atenção: o mapa 3D. Ele tem dois estados. Primeiro a cidade inteira, calma, em tons de azul. Com um CEP, a câmera mergulha no bairro, a cidade se recorta num prato redondo, as lojinhas das redes nascem em volta do alfinete e um caminho de luz corre até cada uma. O texto fica em balões brancos, quietos.
+Nada no site é desenho: ruas, lojas e rotas vêm do OpenStreetMap, e os contornos dos distritos vêm da Prefeitura.
 
 ## Cor
 
+Tema escuro, sem modo claro.
+
 | Nome | Valor | Papel |
 |---|---|---|
-| ceu | `#DDF0FF` | Fundo da página. |
-| ceu-2 | `#C4DFFA` | Borda de campo. |
-| sol | `#FFF1B5` | Fundo da seção da lista. |
-| tinta | `#1E2757` | Texto e botões. Azul-marinho, nunca preto. |
-| tinta-2 | `#55608F` | Texto de apoio. |
-| etiqueta | `#FFD23F` (sombra `#E7B100`) | Preço em destaque. |
-| barato | `#3DD9A0` | Lista e distrito mais baratos. |
-| caro | `#FF6B5C` | Mais caro. Linha do índice local. |
-| oficial | `#3D5AFE` | Tudo que vem do IBGE (IPCA). Links. |
-| ponto | `#7A5CFF` | Alfinetes dos pontos de coleta. |
-| base | `#9DB8F5` | Bandeja embaixo do mapa. |
+| fundo | `#0C0C0D` | Fundo da página e do mapa. |
+| sup, sup-2, sup-3 | `#151517`, `#1D1D20`, `#28282C` | Cartões, campos, barras. |
+| linha | branco a 9% e a 16% | Bordas de 1 px. |
+| texto | `#F3F1EC` | Texto principal (branco quente). |
+| texto-2, texto-3 | `#A9A6A0`, `#77746F` | Apoio e legendas. |
+| laranja | `#FF7A1A` (hover `#FF9547`) | A única cor de destaque: rede mais barata, botão principal, pontos de coleta, índice local. |
+| oficial | `#C9CCD3` | Linha do IPCA no gráfico. |
+| erro | `#FF8A75` | Mensagens de erro e item indisponível. |
 
-Mapa na visão geral: peças de `#F6F9FF` a `#CFDFFF`, um tom por distrito. Mapa no mergulho: peças de `#7490EE` a `#627DE3`, distritos do ponto em foco de `#A3B8FA` a `#93AAF5`, fundo do prato `#4860CC`, borda do prato `#FFFDF6`. Caminho aceso `#FFD84D`, caminho da rede mais barata `#4DEBB0`. Toldos das lojinhas em cores do site, não das marcas. Sem modo escuro.
+Não há verde nem vermelho para "barato" e "caro". O mais barato é laranja, o resto é neutro.
 
 ## Tipografia
 
-Duas famílias, hospedadas no site (`assets/fonts`, licença SIL OFL).
+Família Red Hat, hospedada no site (`assets/fonts`, licença SIL OFL).
 
-- **Fredoka** (arredondada, peso 600 e 700): títulos, preços, botões.
-- **Nunito** (peso 500 a 800): texto corrido e interface.
+- **Red Hat Display** (700): títulos e preços. Espaçamento apertado (-0,028em nos títulos).
+- **Red Hat Text** (400 a 700): texto corrido, botões, listas.
+- **Red Hat Mono** (500): rótulos pequenos de dado (distância, posição, legenda).
 
 Algarismos tabulares nos preços. Caixa normal, sem rótulos em maiúsculas.
 
 ## Forma
 
-- Cantos: 18 px em campos e botões, 26 px na etiqueta, 28 a 32 px nos balões, pílula (999 px) em navegação e selos.
-- Botões têm um "degrau" embaixo (sombra sólida de 5 px) e afundam ao clicar.
-- Uma sombra macia para balões: `0 8px 0` claro + `0 22px 36px` difusa.
-- A seção da lista e o rodapé começam com cantos de 48 a 56 px no topo.
-- O cupom termina em onda (meia-lua), não em serrilha.
+- Cantos: 14 px em campos e botões, 22 a 24 px em cartões, pílula (999 px) em navegação e botões secundários.
+- Cartões sobre o mapa: fundo `sup` a 90% com desfoque, borda de 1 px. Sem sombra pesada.
+- Botão principal laranja com texto escuro. Botão secundário só com borda.
+- Um véu escuro cobre o lado do texto e as bordas do mapa.
 
 ## Movimento
 
-1. **Uma entrada.** As peças do mapa crescem do chão com pulo (passam do ponto e voltam), do centro para as bordas. Cada palavra do título entra pulando. As nuvens aparecem depois.
-2. **O mergulho.** Com um CEP (ou um clique numa peça), a câmera desce girando até o ponto de coleta. A cidade se recorta em círculo e a borda do prato sobe. As lojinhas nascem uma a uma. A luz sai do alfinete e corre por cada caminho. O preço de cada rede aparece quando a luz chega. No fim, o caminho da mais barata fica verde, a lojinha dela quica e as outras apagam um pouco.
-3. **O scroll comanda as cenas.** Cidade inteira, alfinetes dos 25 pontos, mergulho de demonstração (Pinheiros, se não houver CEP) e de volta à cidade para o gráfico. Rolar para trás desfaz.
-4. **Molas.** Peças, alfinetes, lojinhas e prato seguem uma mola com amortecimento. Quem sobe rápido afina, quem desce engorda (estica e achata).
-5. **Resposta a ações.** Hover: a peça sobe, fica amarela e um balão abre com mola. Item adicionado: a linha entra crescendo. Preço novo: o número rola e dá um pulinho ao chegar.
-6. Curvas: mola `cubic-bezier(.34,1.56,.64,1)` e saída `cubic-bezier(.2,.8,.2,1)`.
-7. Com "reduzir movimento": sem pulo, sem mola, sem nuvem andando, sem pulsos de luz. As cenas trocam direto e os caminhos já aparecem acesos.
+Sem mola e sem pulo. Uma curva só: `cubic-bezier(.2,.8,.2,1)`.
+
+1. **Entrada.** As linhas do título sobem de trás de uma máscara, uma depois da outra. O mapa aparece em fade.
+2. **O mergulho.** Com um CEP (ou um clique num distrito), a câmera voa da cidade inteira até o bairro. As rotas se desenham uma por vez, da rede mais cara à mais barata, e a etiqueta de cada loja aparece quando a rota chega. No fim, a rota da mais barata fica laranja, as outras apagam, e a câmera se aproxima dela. Um ponto de luz corre pela rota laranja.
+3. **O scroll troca as cenas.** Cidade inteira, pontos de coleta em destaque, mergulho de demonstração (Pinheiros, se não houver CEP), distritos coloridos pela alta em 12 meses com o gráfico.
+4. **Resposta a ações.** Passar o ponteiro numa rede da lista destaca a rota dela no mapa. Preço novo: o número rola.
+5. Com "reduzir movimento": a câmera corta direto, as rotas já aparecem prontas, sem ponto de luz.
 
 ## Mapa
 
-Contorno real dos 96 distritos (Prefeitura de São Paulo, GeoSampa), encolhido e arredondado por `tools/arredondar_mapa.py`. O arredondamento muda a forma de cada distrito de leve. A bandeja é a silhueta da cidade inteira. Os alfinetes ficam no centro do distrito de cada ponto, o que é uma aproximação.
-
-As lojinhas e os caminhos são ilustrativos. O repositório não tem endereço de loja nem mapa de ruas, e o preço comparado é o que cada rede mostra na internet para o CEP. A posição das lojinhas é sorteada em volta do ponto (sempre a mesma para o mesmo ponto), e a página diz isso ao lado do mapa. O número de cada etiqueta é a soma dos itens do índice que todas as redes vendem naquele ponto.
+- Biblioteca: MapLibre GL JS 5 (`assets/vendor`, licença BSD).
+- Imagem do mapa: blocos vetoriais do OpenFreeMap (dados do OpenStreetMap), com o estilo `assets/mapa-estilo.json`, uma adaptação do estilo Dark do OpenFreeMap para a paleta do site.
+- Distritos: contorno da Prefeitura de São Paulo (GeoSampa), encolhido e arredondado, levantado em 3D na visão da cidade inteira. Some quando a câmera desce. O contorno é simplificado.
+- Lojas: busca do OpenStreetMap (Nominatim), em `data/lojas.csv`. O cadastro é feito por voluntários e pode faltar loja (o Tenda, por exemplo, tem poucas lojas cadastradas).
+- Pontos de coleta: a rua de cada CEP de `data/ceps.csv`, localizada pelo Nominatim (`data/pontos_geo.csv`).
+- Rotas: de carro, do ponto de coleta até a loja mais próxima de cada rede, calculadas pelo OSRM (`assets/rotas.json`).
+- O preço comparado é o do site de cada rede para o CEP, não o da prateleira da loja do mapa. A página diz isso.
+- O mapa não aproxima com a rolagem da página (precisa de Ctrl ou dois dedos), para não prender o scroll.
 
 ## Imagens e ícones
 
-Sem fotos e sem ícones decorativos. As formas do site são o mapa, as lojinhas, a etiqueta, os balões e o cupom.
+Sem fotos, sem ilustrações e sem ícones decorativos.
