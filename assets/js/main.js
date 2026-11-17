@@ -14,8 +14,7 @@ if (dados.exemplo) {
   document.documentElement.style.setProperty('--aviso-h', $('aviso').offsetHeight + 'px');
 }
 
-const cestas = dados.pontos.map(p => p.cesta), vars = dados.pontos.map(p => p.var);
-const normal = a => { const mn = Math.min(...a), mx = Math.max(...a); return a.map(v => (v - mn) / (mx - mn || 1)); };
+const cestas = dados.pontos.map(p => p.cesta);
 const media = cestas.reduce((s, v) => s + v, 0) / cestas.length;
 const n = dados.itens_na_cesta;
 
@@ -24,19 +23,54 @@ const iMin = cestas.indexOf(Math.min(...cestas)), iMax = cestas.indexOf(Math.max
 $('minNome').textContent = mapa.pontos[iMin].bairro; $('minVal').textContent = reais(cestas[iMin]);
 $('maxNome').textContent = mapa.pontos[iMax].bairro; $('maxVal').textContent = reais(cestas[iMax]);
 
+// ---------- as redes em cada ponto: soma dos itens do índice que todas as redes têm ali
+const precoEm = (r, i, prod) => { const t = dados.precos[r.id]; return r.por_cep ? t[i][prod] : t[prod]; };
+const doIndice = dados.produtos.map((p, k) => (p.indice ? k : -1)).filter(k => k >= 0);
+const redesNoPonto = dados.pontos.map((_, i) => {
+  const comuns = doIndice.filter(k => dados.redes.every(r => precoEm(r, i, k) != null));
+  const totais = dados.redes.map(r => comuns.reduce((s, k) => s + precoEm(r, i, k), 0));
+  const ordem = totais.map((_, k) => k).sort((a, b) => totais[a] - totais[b]);
+  return { n: comuns.length, totais, melhor: ordem[0], pior: ordem.at(-1) };
+});
+
 // ---------- mapa 3D
 let mapa3d = null;
 try {
   const { criarMapa } = await import('./mapa3d.js');
-  mapa3d = criarMapa($('mapa'), mapa, { preco: normal(cestas), var: normal(vars) }, { calmo });
+  mapa3d = criarMapa($('mapa'), mapa, { redes: dados.redes.length, melhor: i => redesNoPonto[i].melhor }, { calmo });
 } catch (erro) {
   console.warn('Mapa 3D indisponível neste navegador.', erro);
   document.documentElement.classList.add('sem-3d');
 }
 
 const dica = $('dica'), tag = $('tagPonto'), dicaTexto = $('dicaTexto'), tagTexto = $('tagTexto');
-let dicaDe = -2;
-mapa3d?.aoPassar((hover, sel) => {
+// uma etiqueta por lojinha: o nome aparece com a loja, o preço quando a luz chega
+const etiquetas = dados.redes.map(r => {
+  const el = document.createElement('div');
+  el.className = 'loja-tag';
+  el.innerHTML = `<span><b>${r.nome.replace(' Atacado', '')}</b><i></i></span>`;
+  $('palco').append(el);
+  return { el, preco: el.querySelector('i') };
+});
+let dicaDe = -2, focoDe = -1;
+mapa3d?.aoPassar((hover, sel, cenaMapa) => {
+  if (cenaMapa.foco !== focoDe) {
+    focoDe = cenaMapa.foco;
+    const r = redesNoPonto[focoDe];
+    etiquetas.forEach((e, k) => { e.preco.textContent = reais(r.totais[k]); });
+    $('palcoNota').textContent = `Soma dos ${r.n} itens que as ${dados.redes.length} redes vendem em ${mapa.pontos[focoDe].bairro.split(' (')[0]}. Lojinhas e caminhos são ilustrativos.`;
+  }
+  etiquetas.forEach((e, k) => {
+    const l = cenaMapa.lojas[k];
+    e.el.classList.toggle('on', l.s > 0.5);
+    e.el.classList.toggle('chegou', l.chegou);
+    e.el.classList.toggle('melhor', l.melhor);
+    e.el.classList.toggle('resto', cenaMapa.veredito && !l.melhor);
+    if (l.s > 0.01) e.el.style.transform = `translate(calc(${l.x.toFixed(1)}px - 50%),calc(${l.y.toFixed(1)}px - 100%))`;
+  });
+  $('palcoNota').classList.toggle('on', cenaMapa.dentro);
+  $('voltar').classList.toggle('on', cenaMapa.dentro && sel >= 0);
+  hover = cenaMapa.zoom > 0.5 ? -1 : hover;
   if (hover !== dicaDe) {
     dicaDe = hover;
     dica.classList.toggle('on', hover >= 0);
@@ -46,7 +80,8 @@ mapa3d?.aoPassar((hover, sel) => {
     }
   }
   if (hover >= 0) { const t = mapa3d.naTela(hover); dica.style.transform = `translate(${t.x + 16}px,calc(${t.y - 12}px - 100%))`; }
-  tag.classList.toggle('on', sel >= 0);
+  if (sel >= 0 && tagTexto.dataset.i !== String(sel)) { tagTexto.dataset.i = sel; tagTexto.textContent = mapa.pontos[sel].bairro; }
+  tag.classList.toggle('on', sel >= 0 && cenaMapa.zoom < 0.4);
   if (sel >= 0) { const t = mapa3d.naTela(sel); tag.style.transform = `translate(calc(${t.x}px - 50%),calc(${t.y}px - 100% - 10px))`; }
 });
 
@@ -113,15 +148,23 @@ function escolher(i, viaCep) {
   estado.ponto = i; estado.cepDado = true;
   const p = mapa.pontos[i];
   mapa3d?.selecionar(i);
-  tagTexto.textContent = p.bairro;
-  $('etqRotulo').textContent = `Cesta de ${n} itens em ${p.bairro.split(' (')[0]}`;
-  rolar($('etqInt'), $('etqCent'), dados.pontos[i].cesta);
-  const dif = dados.pontos[i].cesta - media;
+  const r = redesNoPonto[i], nome = k => dados.redes[k].nome, bairro = p.bairro.split(' (')[0];
+  $('etqRotulo').textContent = `${r.n} itens em ${bairro}, no ${nome(r.melhor)}`;
+  rolar($('etqInt'), $('etqCent'), r.totais[r.melhor]);
   $('cepMsg').className = 'cep-msg';
-  $('cepMsg').textContent = `Ponto de coleta ${viaCep ? 'mais próximo, pela faixa do CEP' : 'escolhido no mapa'}: ${p.bairro}. A cesta sai ${reais(Math.abs(dif))} ${dif >= 0 ? 'acima' : 'abaixo'} da média da cidade.`;
+  $('cepMsg').textContent = `Ponto de coleta ${viaCep ? 'mais próximo, pela faixa do CEP' : 'escolhido no mapa'}: ${p.bairro}. Os ${r.n} itens que as ${dados.redes.length} redes vendem ali saem por ${reais(r.totais[r.melhor])} no ${nome(r.melhor)} e por ${reais(r.totais[r.pior])} no ${nome(r.pior)}. No mapa, lojinhas e caminhos são ilustrativos.`;
   destacar(i);
   cesta.atualizar();
+  if (scrollY > innerHeight * 0.3) scrollTo({ top: 0, behavior: calmo ? 'auto' : 'smooth' });
 }
+$('voltar').addEventListener('click', () => {
+  mapa3d?.selecionar(-1);
+  estado.cepDado = false;
+  $('etqRotulo').textContent = `Cesta de ${n} itens, média da cidade`;
+  rolar($('etqInt'), $('etqCent'), media);
+  $('cepMsg').textContent = '';
+  cesta.atualizar();
+});
 const campo = $('cep');
 campo.addEventListener('input', () => {
   const d = campo.value.replace(/\D/g, '').slice(0, 8);
