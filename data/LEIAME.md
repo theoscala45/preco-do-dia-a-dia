@@ -29,7 +29,7 @@ A tabela de preços é a grande. Cada linha é um preço de um produto, numa red
 
 **precos/AAAA-MM.csv**. O coletor acrescenta linhas toda noite. Colunas: data, rede_id, produto_id, cep_id, preco_reais, unidade_de_venda, disponivel, nome_na_pagina, tamanho_na_pagina, lido_em. Produto sem preço no dia entra com `disponivel` igual a `nao`. Ele é dado, não erro. O preço guardado é o que a página cobra de qualquer pessoa: o preço comum ou, se o produto estiver em promoção, o preço da promoção. Não é o do cartão da rede nem o de atacado ("a partir de N unidades").
 
-**execucoes.csv**. Uma linha por rede e CEP a cada noite, com o resultado (`ok`, `parcial`, `falha` ou `bloqueado`), o erro e, nas redes em que o preço muda por loja (Atacadão), a loja usada. A loja é a primeira da lista que o próprio site mostra para o CEP, da mais perto para a mais longe. É daqui que sai o aviso da manhã quando uma rede ou um CEP falha.
+**execucoes.csv**. Uma linha por rede e CEP a cada noite, com o resultado (`ok`, `parcial`, `falha` ou `bloqueado`), o erro e, nas redes em que o preço muda por loja (Atacadão), a loja usada. A loja é a primeira da lista que o próprio site mostra para o CEP, da mais perto para a mais longe. Só algumas lojas do Atacadão fazem retirada pela internet, então a loja usada pode ficar longe do CEP (para Capão Redondo, a Villa Lobos, a 14 km). O Atacadão também não vende frutas e verduras pela internet. É daqui que sai o aviso da manhã quando uma rede ou um CEP falha.
 
 **ipca.csv**. IPCA mensal do Brasil (IBGE, SIDRA tabela 7060): índice geral, "Alimentação e bebidas" e "Higiene pessoal". Atualizar com `python3 tools/baixar_ibge.py`.
 

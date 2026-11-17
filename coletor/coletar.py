@@ -63,6 +63,11 @@ def reais(texto):
     return m.group(1).replace(".", "").replace(",", "."), m.group(2).strip().lower()
 
 
+def semacento(texto):
+    import unicodedata
+    return unicodedata.normalize("NFD", texto or "").encode("ascii", "ignore").decode().lower()
+
+
 def tamanho_do_nome(nome):
     achados = TAMANHO.findall(nome)
     return achados[-1].strip() if achados else ""
@@ -133,7 +138,8 @@ class Tenda:
 class Atacadao:
     """Atacadao. O preco muda por loja. Para cada CEP, o coletor abre a barra "para o CEP" da propria pagina,
     escolhe "Retirada na Loja", digita o CEP e fica com a primeira loja da lista, que o site ordena da mais perto
-    para a mais longe. A loja vale para as paginas seguintes. O site mostra dois precos: o de 1 unidade e o de
+    para a mais longe. So algumas lojas fazem retirada pela internet (em 11/2026: Aricanduva, Penha, Vila Maria,
+    Tatuape, Villa Lobos, Tambore), entao a loja usada pode ficar longe do CEP. O preco e o da loja de retirada. A loja vale para as paginas seguintes. O site mostra dois precos: o de 1 unidade e o de
     atacado ("a partir de N unidades"). O coletor guarda o de 1 unidade, que aparece no resumo da compra."""
     rede_id = "atacadao"
     site = "https://www.atacadao.com.br"
@@ -239,7 +245,7 @@ def coletar_rede(pw, rede, links, ceps, hoje, limite, diag, arq_precos, arq_exec
                         try:
                             resposta = pg.goto(link["url"], wait_until="domcontentloaded", timeout=60000)
                             conferir_bloqueio(resposta, pg)
-                            if resposta is not None and resposta.status == 404:
+                            if (resposta is not None and resposta.status == 404) or "nao encontrada" in semacento(pg.title()):
                                 raise RuntimeError("pagina nao existe mais (404)")
                             p, cep_dado = rede.ler_produto(pg, cep["cep"], cep_dado)
                             linhas.append({"data": hoje, "rede_id": rede.rede_id, "produto_id": link["produto_id"], "cep_id": cep["cep_id"],
