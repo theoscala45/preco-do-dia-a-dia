@@ -85,8 +85,13 @@ class Tenda:
             erro = (pg.locator(".error-cep").first.inner_text() if pg.locator(".error-cep").count() else "").strip()
             raise RuntimeError("a pagina nao aceitou o CEP" + (f": {erro}" if erro else ""))
 
-    def precisa_de_cep(self, pg):
-        return pg.locator(".CepDisclaimer").count() > 0 or pg.locator(".SimplePriceComponent.price-blur").count() > 0
+    def preco_visivel(self, pg, espera):
+        """Espera o preco sem borrao. Depois do primeiro CEP, a pagina lembra a regiao sozinha."""
+        try:
+            pg.locator(".SimplePriceComponent:not(.price-blur)").first.wait_for(state="visible", timeout=espera)
+            return True
+        except Exception:
+            return False
 
     def ler_produto(self, pg):
         """Devolve dict com nome, tamanho, preco, unidade e disponivel."""
@@ -159,7 +164,8 @@ def coletar_rede(pw, rede, links, ceps, hoje, limite, diag):
                             conferir_bloqueio(resposta, pg)
                             if resposta is not None and resposta.status == 404:
                                 raise RuntimeError("pagina nao existe mais (404)")
-                            if not cep_ok or rede.precisa_de_cep(pg):
+                            pg.locator("h1").first.wait_for(state="visible", timeout=25000)
+                            if not rede.preco_visivel(pg, 12000 if cep_ok else 4000):
                                 rede.informar_cep(pg, cep["cep"]); cep_ok = True
                             p = rede.ler_produto(pg)
                             linhas.append({"data": hoje, "rede_id": rede.rede_id, "produto_id": link["produto_id"], "cep_id": cep["cep_id"],
