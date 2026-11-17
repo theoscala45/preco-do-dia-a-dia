@@ -89,7 +89,8 @@ class Tenda:
         campo = pg.locator("#shipping-cep")
         if not campo.is_visible():
             aviso = pg.locator(".CepDisclaimer .open-modal")
-            if aviso.count(): aviso.first.click()
+            # a janela de fundo da propria pagina pode ficar por cima do aviso: o clique vai direto nele
+            if aviso.count(): aviso.first.click(force=True)
         campo.wait_for(state="visible", timeout=15000)
         campo.click()
         pg.keyboard.press("Home")
@@ -104,7 +105,15 @@ class Tenda:
         """Devolve (dict do produto, cep_dado). Produto sem preco na regiao volta com disponivel = False."""
         pg.locator("h1").first.wait_for(state="visible", timeout=25000)
         nome = pg.locator("h1").first.inner_text().strip()
-        estado = self.esperar_bloco(pg, 15000)
+        if cep_dado:
+            # a pagina desenha o preco borrado por um instante e so depois aplica a regiao que ja conhece
+            try:
+                pg.locator(self.BLOCO + ":not(.price-blur)").first.wait_for(state="visible", timeout=15000)
+                estado = "limpo"
+            except Exception:
+                estado = self.esperar_bloco(pg, 1000)
+        else:
+            estado = self.esperar_bloco(pg, 15000)
         if estado == "borrado" or (estado is None and not cep_dado and pg.locator(".CepDisclaimer").count()):
             self.informar_cep(pg, cep)
             cep_dado, estado = True, "limpo"
