@@ -1,2 +1,3 @@
 data,rede_id,cep_id,produtos_tentados,produtos_lidos,resultado,erro
 2026-11-17,tenda,C06,3,1,parcial,P003: Locator.wait_for: Timeout 20000ms exceeded.; P004: Locator.wait_for: Timeout 20000ms exceeded.
+2026-11-17,tenda,C18,6,6,ok,

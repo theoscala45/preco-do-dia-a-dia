@@ -1,2 +1,8 @@
 data,rede_id,produto_id,cep_id,preco_reais,unidade_de_venda,disponivel,nome_na_pagina,tamanho_na_pagina,lido_em
 2026-11-17,tenda,P001,C06,26.39,un,sim,Arroz Branco T1 Camil Seleções 5kg,5kg,2026-11-17T00:41:53-0300
+2026-11-17,tenda,P001,C18,26.39,un,sim,Arroz Branco T1 Camil Seleções 5kg,5kg,2026-11-17T09:17:59-0300
+2026-11-17,tenda,P003,C18,8.09,un,sim,Feijão Carioca Tipo 1 Camil 1kg,1kg,2026-11-17T09:18:04-0300
+2026-11-17,tenda,P004,C18,7.09,un,sim,Feijão Preto Camil 1kg,1kg,2026-11-17T09:18:09-0300
+2026-11-17,tenda,P006,C18,33.90,un,sim,Azeite de Oliva Extra Virgem Gallo Vidro 500ml,500ml,2026-11-17T09:18:13-0300
+2026-11-17,tenda,P007,C18,3.79,un,sim,Açúcar Refinado União 1kg,1kg,2026-11-17T09:18:17-0300
+2026-11-17,tenda,P008,C18,3.49,un,sim,Açúcar Cristal União 1kg,1kg,2026-11-17T09:18:27-0300
