@@ -1,101 +1,101 @@
-produto_id,rede_id,url,status
-P001,tenda,https://www.tendaatacado.com.br/produto/arroz-branco-t1-camil-selecoes-5kg,achado
-P002,tenda,,nao_achado
-P003,tenda,https://www.tendaatacado.com.br/produto/feijao-carioca-tipo-1-camil-1kg-481,achado
-P004,tenda,https://www.tendaatacado.com.br/produto/feijao-preto-camil-1kg-546,achado
-P005,tenda,,nao_achado
-P006,tenda,https://www.tendaatacado.com.br/produto/azeite-extra-virgem-gallo-500ml-317,achado
-P007,tenda,https://www.tendaatacado.com.br/produto/acucar-refinado-uniao-1kg-60,achado
-P008,tenda,https://www.tendaatacado.com.br/produto/acucar-cristal-uniao-1kg,achado
-P009,tenda,https://www.tendaatacado.com.br/produto/cafe-torrado-e-moido-extraforte-pilao-pacote-500g,achado
-P010,tenda,https://www.tendaatacado.com.br/produto/cafe-em-po-3-coracoes-tradicional-500g,achado
-P011,tenda,https://www.tendaatacado.com.br/produto/farinha-de-trigo-tradicional-dona-benta-1kg-156,achado
-P012,tenda,https://www.tendaatacado.com.br/produto/farinha-de-mandioca-tipo-1-fina-yoki-pacote-500g,achado
-P013,tenda,https://www.tendaatacado.com.br/produto/macarrao-ovos-espaguete-9-renata-500g-12256,achado
-P014,tenda,,nao_achado
-P015,tenda,,nao_achado
-P016,tenda,,nao_achado
-P017,tenda,https://www.tendaatacado.com.br/produto/sal-refinado-cisne-1kg-304,achado
-P018,tenda,https://www.tendaatacado.com.br/produto/fuba-de-milho-mimoso-yoki-pacote-1kg,achado
-P019,tenda,https://www.tendaatacado.com.br/produto/aveia-em-flocos-finos-quaker-450g,conferir
-P020,tenda,https://www.tendaatacado.com.br/produto/achocolatado-em-po-nescau-lata-350g,achado
-P021,tenda,https://www.tendaatacado.com.br/produto/biscoito-cream-cracker-amanteigado-tradicional-vitarella-350g,conferir
-P022,tenda,https://www.tendaatacado.com.br/produto/biscoito-recheado-sabor-chocolate-passatempo-130g-15419,achado
-P023,tenda,https://www.tendaatacado.com.br/produto/pao-de-forma-pullman-480g-149,achado
-P024,tenda,https://www.tendaatacado.com.br/produto/margarina-cremosa-com-sal-qualy-500g,achado
-P025,tenda,,nao_achado
-P026,tenda,https://www.tendaatacado.com.br/produto/catchup-tradicional-heinz-397gr-3577,achado
-P027,tenda,,nao_achado
-P028,tenda,https://www.tendaatacado.com.br/produto/atum-ralado-em-oleo-gomes-da-costa-170g-523,achado
-P029,tenda,https://www.tendaatacado.com.br/produto/milho-verde-quero-170g-30981,achado
-P030,tenda,https://www.tendaatacado.com.br/produto/ervilha-quero-170g-30987,achado
-P031,tenda,https://www.tendaatacado.com.br/produto/vinagre-de-alcool-castelo-750ml-4012,achado
-P032,tenda,,nao_achado
-P033,tenda,https://www.tendaatacado.com.br/produto/caldo-knorr-de-galinha-57g-1561,achado
-P034,tenda,https://www.tendaatacado.com.br/produto/leite-condensado-moca-395g-3226,achado
-P035,tenda,https://www.tendaatacado.com.br/produto/creme-de-leite-tradicional-nestle-200g-2762,achado
-P036,tenda,,nao_achado
-P037,tenda,https://www.tendaatacado.com.br/produto/agua-mineral-sem-gas-crystal-1-5l-crystal-724,achado
-P038,tenda,https://www.tendaatacado.com.br/produto/refrigerante-coca-cola-original-garrafa-2l,achado
-P039,tenda,,nao_achado
-P040,tenda,https://www.tendaatacado.com.br/produto/leite-integral-piracanjuba-1l-27748,achado
-P041,tenda,,nao_achado
-P042,tenda,https://www.tendaatacado.com.br/produto/leite-em-po-ninho-integral-lata-380g,achado
-P043,tenda,https://www.tendaatacado.com.br/produto/manteiga-aviacao-pote-com-sal-200g-1030,achado
-P044,tenda,,nao_achado
-P045,tenda,,nao_achado
-P046,tenda,https://www.tendaatacado.com.br/produto/requeijao-cremoso-vigor-200g-4689,achado
-P047,tenda,,nao_achado
-P048,tenda,,nao_achado
-P049,tenda,https://www.tendaatacado.com.br/produto/presunto-cozido-sadia-fat-180g,conferir
-P050,tenda,,nao_achado
-P051,tenda,https://www.tendaatacado.com.br/produto/ovos-grandes-branco-12-unidades-1395,achado
-P052,tenda,https://www.tendaatacado.com.br/produto/ovos-grandes-vermelhos-12-unidades-1583,achado
-P053,tenda,https://www.tendaatacado.com.br/produto/papel-higienico-neve-toque-de-seda-folha-dupla-leve-12-pague-11-30m,conferir
-P054,tenda,,nao_achado
-P055,tenda,https://www.tendaatacado.com.br/produto/sabonete-dove-cremoso-90g-283,achado
-P056,tenda,https://www.tendaatacado.com.br/produto/sabonete-em-barra-buque-de-jasmim-lux-85g-24436,conferir
-P057,tenda,https://www.tendaatacado.com.br/produto/creme-dental-colgate-total-original-mint-prevencao-ativa-90g,conferir
-P058,tenda,,nao_achado
-P059,tenda,,nao_achado
-P060,tenda,https://www.tendaatacado.com.br/produto/shampoo-seda-sos-ceramidas-325ml-14777,conferir
-P061,tenda,https://www.tendaatacado.com.br/produto/condicionador-seda-sos-ceramidas-325ml-14749,conferir
-P062,tenda,https://www.tendaatacado.com.br/produto/desodorante-aerossol-rexona-clinical-150ml,conferir
-P063,tenda,,nao_achado
-P064,tenda,https://www.tendaatacado.com.br/produto/absorvente-com-abas-super-protecao-suave-always-8un-27782,achado
-P065,tenda,https://www.tendaatacado.com.br/produto/fralda-huggies-supreme-care-m-66un,conferir
-P066,tenda,,nao_achado
-P067,tenda,https://www.tendaatacado.com.br/produto/detergente-liquido-omo-puro-cuidado-3l,achado
-P068,tenda,https://www.tendaatacado.com.br/produto/amaciante-concentrado-comfort-frescor-intenso-500ml,conferir
-P069,tenda,https://www.tendaatacado.com.br/produto/detergente-ype-neutro-500ml,achado
-P070,tenda,,nao_achado
-P071,tenda,https://www.tendaatacado.com.br/produto/desinfetante-pinho-sol-perfumado-lavanda-promo-leve-500ml-pague-450ml,conferir
-P072,tenda,https://www.tendaatacado.com.br/produto/limpador-multiuso-veja-perfumado-jojo-marcante-e-envolvente-500ml,conferir
-P073,tenda,,bloqueado_robots
-P074,tenda,,nao_achado
-P075,tenda,,nao_achado
-P076,tenda,,nao_achado
-P077,tenda,,nao_achado
-P078,tenda,https://www.tendaatacado.com.br/produto/inseticida-aerossol-acao-magnetica-sbp-360ml,conferir
-P079,tenda,https://www.tendaatacado.com.br/produto/file-de-peito-de-frabgo-congelado-sadia-zip-pct1kg-3842,conferir
-P080,tenda,https://www.tendaatacado.com.br/produto/sobrecoxa-seara-iqf-1kg,conferir
-P081,tenda,,nao_achado
-P082,tenda,,nao_achado
-P083,tenda,https://www.tendaatacado.com.br/produto/acem-bovino-resfriado-pedaco-1kg,achado
-P084,tenda,https://www.tendaatacado.com.br/produto/contra-file-bovino-bife-400g,achado
-P085,tenda,https://www.tendaatacado.com.br/produto/linguica-toscana-seara-600g,conferir
-P086,tenda,,nao_achado
-P087,tenda,https://www.tendaatacado.com.br/produto/file-de-tilapia-congelado-600g-peixe-cancaon,achado
-P088,tenda,,nao_achado
-P089,tenda,https://www.tendaatacado.com.br/produto/maca-gala-1kg-15833,achado
-P090,tenda,https://www.tendaatacado.com.br/produto/laranja-pera-a-granel-kg,achado
-P091,tenda,https://www.tendaatacado.com.br/produto/limao-tahiti-500gr-15812,achado
-P092,tenda,https://www.tendaatacado.com.br/produto/tomate-salada-1kg-15830,achado
-P093,tenda,https://www.tendaatacado.com.br/produto/cebola-roxa-select-1kg,conferir
-P094,tenda,https://www.tendaatacado.com.br/produto/alho-granel-100gr-15813,achado
-P095,tenda,https://www.tendaatacado.com.br/produto/batata-lavada-extra-bandeja-1kg-15829,achado
-P096,tenda,https://www.tendaatacado.com.br/produto/cenoura-1kg-15831,achado
-P097,tenda,https://www.tendaatacado.com.br/produto/alface-crespa-unidade-911,achado
-P098,tenda,https://www.tendaatacado.com.br/produto/mamao-formosa-kg,achado
-P099,tenda,https://www.tendaatacado.com.br/produto/abobrinha-italiana-kg,conferir
-P100,tenda,https://www.tendaatacado.com.br/produto/pimentao-verde-440g-23323,achado
+produto_id,rede_id,url,status,observacao
+P001,tenda,https://www.tendaatacado.com.br/produto/arroz-branco-t1-camil-selecoes-5kg,achado,"Camil T1 Seleções, 5 kg."
+P002,tenda,,nao_achado,Tio João 5 kg não apareceu no sitemap. Segunda busca no sitemap em 17/11/2026: não achado.
+P003,tenda,https://www.tendaatacado.com.br/produto/feijao-carioca-tipo-1-camil-1kg-481,achado,
+P004,tenda,https://www.tendaatacado.com.br/produto/feijao-preto-camil-1kg-546,achado,
+P005,tenda,https://www.tendaatacado.com.br/produto/oleo-de-soja-soya-pet-900ml-1291,achado,Achado na segunda busca no sitemap: Óleo de Soja Soya Pet 900ml.
+P006,tenda,https://www.tendaatacado.com.br/produto/azeite-extra-virgem-gallo-500ml-317,achado,
+P007,tenda,https://www.tendaatacado.com.br/produto/acucar-refinado-uniao-1kg-60,achado,
+P008,tenda,https://www.tendaatacado.com.br/produto/acucar-cristal-uniao-1kg,achado,
+P009,tenda,https://www.tendaatacado.com.br/produto/cafe-torrado-e-moido-extraforte-pilao-pacote-500g,achado,Existe também a versão a vácuo.
+P010,tenda,https://www.tendaatacado.com.br/produto/cafe-em-po-3-coracoes-tradicional-500g,achado,Existe também a versão a vácuo.
+P011,tenda,https://www.tendaatacado.com.br/produto/farinha-de-trigo-tradicional-dona-benta-1kg-156,achado,
+P012,tenda,https://www.tendaatacado.com.br/produto/farinha-de-mandioca-tipo-1-fina-yoki-pacote-500g,achado,"Tipo 1 fina, 500 g."
+P013,tenda,https://www.tendaatacado.com.br/produto/macarrao-ovos-espaguete-9-renata-500g-12256,achado,Espaguete nº 9. Existe também o nº 8 (macarrao-ovos-espaguete-8-renata-500g-10739). Escolher um.
+P014,tenda,,nao_achado,Barilla não apareceu. Segunda busca no sitemap em 17/11/2026: não achado.
+P015,tenda,,nao_achado,"Só apareceu molho Tarantella de 1,02 kg. Segunda busca no sitemap em 17/11/2026: não achado."
+P016,tenda,https://www.tendaatacado.com.br/produto/ext-tom-elefante-pt-300g,variante,Achado na segunda busca: Extrato de tomate Elefante pote 300g. Pote em vez de lata.
+P017,tenda,https://www.tendaatacado.com.br/produto/sal-refinado-cisne-1kg-304,achado,
+P018,tenda,https://www.tendaatacado.com.br/produto/fuba-de-milho-mimoso-yoki-pacote-1kg,achado,
+P019,tenda,https://www.tendaatacado.com.br/produto/aveia-em-flocos-finos-quaker-450g,variante,"Flocos finos, 450 g. A página não diz se é lata. Mesma marca e tamanho. Entra como variante."
+P020,tenda,https://www.tendaatacado.com.br/produto/achocolatado-em-po-nescau-lata-350g,achado,Existe também a lata leve 350 g pague 330 g.
+P021,tenda,https://www.tendaatacado.com.br/produto/biscoito-cream-cracker-amanteigado-tradicional-vitarella-350g,variante,"Versão amanteigada, 350 g. Entra como variante: mesma marca e tamanho."
+P022,tenda,https://www.tendaatacado.com.br/produto/biscoito-recheado-sabor-chocolate-passatempo-130g-15419,achado,
+P023,tenda,https://www.tendaatacado.com.br/produto/pao-de-forma-pullman-480g-149,achado,
+P024,tenda,https://www.tendaatacado.com.br/produto/margarina-cremosa-com-sal-qualy-500g,achado,
+P025,tenda,,nao_achado,Só apareceu a versão light. Segunda busca no sitemap em 17/11/2026: não achado.
+P026,tenda,https://www.tendaatacado.com.br/produto/catchup-tradicional-heinz-397gr-3577,achado,
+P027,tenda,https://www.tendaatacado.com.br/produto/sardinha-em-oleo-gomes-da-costa-125g-525,achado,Achado na segunda busca: Sardinha em Óleo Gomes da Costa 125g.
+P028,tenda,https://www.tendaatacado.com.br/produto/atum-ralado-em-oleo-gomes-da-costa-170g-523,achado,
+P029,tenda,https://www.tendaatacado.com.br/produto/milho-verde-quero-170g-30981,achado,
+P030,tenda,https://www.tendaatacado.com.br/produto/ervilha-quero-170g-30987,achado,
+P031,tenda,https://www.tendaatacado.com.br/produto/vinagre-de-alcool-castelo-750ml-4012,achado,
+P032,tenda,,nao_achado,"Só apareceram Sazón marrom e laranja, não o completo. Segunda busca no sitemap em 17/11/2026: não achado."
+P033,tenda,https://www.tendaatacado.com.br/produto/caldo-knorr-de-galinha-57g-1561,achado,
+P034,tenda,https://www.tendaatacado.com.br/produto/leite-condensado-moca-395g-3226,achado,
+P035,tenda,https://www.tendaatacado.com.br/produto/creme-de-leite-tradicional-nestle-200g-2762,achado,
+P036,tenda,https://www.tendaatacado.com.br/produto/mistura-para-bolo-sabor-chocolate-dona-benta-450g-17636,variante,"Achado na segunda busca. A cesta não fixa sabor: escolhido o de chocolate, 450 g."
+P037,tenda,https://www.tendaatacado.com.br/produto/agua-mineral-sem-gas-crystal-1-5l-crystal-724,achado,
+P038,tenda,https://www.tendaatacado.com.br/produto/refrigerante-coca-cola-original-garrafa-2l,achado,
+P039,tenda,,nao_achado,Só apareceram Italac desnatado e zero lactose. Segunda busca no sitemap em 17/11/2026: não achado.
+P040,tenda,https://www.tendaatacado.com.br/produto/leite-integral-piracanjuba-1l-27748,achado,
+P041,tenda,https://www.tendaatacado.com.br/produto/leite-longa-vida-desnatado-piracanjuba-1l-26358,achado,Achado na segunda busca: Leite Longa Vida Desnatado Piracanjuba 1L.
+P042,tenda,https://www.tendaatacado.com.br/produto/leite-em-po-ninho-integral-lata-380g,achado,Existe também a versão instantânea.
+P043,tenda,https://www.tendaatacado.com.br/produto/manteiga-aviacao-pote-com-sal-200g-1030,achado,
+P044,tenda,https://www.tendaatacado.com.br/produto/queijo-mussarela-tirolez-fat-200g,tamanho_diferente,Só existe o de 200 g (a cesta pede 150 g). Fica fora da coleta e do índice.
+P045,tenda,,nao_achado,Tirolez fatiado não apareceu. Segunda busca no sitemap em 17/11/2026: não achado.
+P046,tenda,https://www.tendaatacado.com.br/produto/requeijao-cremoso-vigor-200g-4689,achado,
+P047,tenda,https://www.tendaatacado.com.br/produto/nestle-iogurte-natural-170g-2919,achado,Achado na segunda busca: Iogurte Natural Nestlé 170g.
+P048,tenda,,nao_achado,Só apareceu o de 510 g. Segunda busca no sitemap em 17/11/2026: não achado.
+P049,tenda,https://www.tendaatacado.com.br/produto/presunto-cozido-sadia-fat-180g,tamanho_diferente,"Fatiado confirmado, mas 180 g em vez de 200 g. Tamanho diferente (180 g). Fica fora da coleta e do índice."
+P050,tenda,,nao_achado,Queijo minas frescal Tirolez não apareceu. Segunda busca no sitemap em 17/11/2026: não achado.
+P051,tenda,https://www.tendaatacado.com.br/produto/ovos-grandes-branco-12-unidades-1395,achado,
+P052,tenda,https://www.tendaatacado.com.br/produto/ovos-grandes-vermelhos-12-unidades-1583,achado,
+P053,tenda,https://www.tendaatacado.com.br/produto/papel-higienico-neve-toque-de-seda-folha-dupla-leve-12-pague-11-30m,variante,"12 rolos, folha dupla, leve 12 pague 11. Mesmo produto, em promoção leve 12 pague 11. Entra como variante."
+P054,tenda,,nao_achado,Personal não apareceu. Segunda busca no sitemap em 17/11/2026: não achado.
+P055,tenda,https://www.tendaatacado.com.br/produto/sabonete-dove-cremoso-90g-283,achado,
+P056,tenda,https://www.tendaatacado.com.br/produto/sabonete-em-barra-buque-de-jasmim-lux-85g-24436,variante,"Lux Botanicals Buquê de Jasmim, 85 g. A Lux tem várias fragrâncias. Entra como variante: mesma marca e tamanho."
+P057,tenda,https://www.tendaatacado.com.br/produto/creme-dental-colgate-total-original-mint-prevencao-ativa-90g,variante,"Colgate Total Original Mint Prevenção Ativa, 90 g. Confirmar se é o Total 12. O Colgate Total 12 passou a se chamar Colgate Total. Entra como variante."
+P058,tenda,https://www.tendaatacado.com.br/produto/creme-dental-maxima-protecao-anticaries-colgate-180g,tamanho_diferente,Só existem 180 g e o pacote com 4 de 90 g. Fica fora.
+P059,tenda,https://www.tendaatacado.com.br/produto/escova-de-dente-colgate-essencial-clean-macia-1-unidade,variante,"O modelo estava a definir. Escolhido: Colgate Essencial Clean macia, 1 unidade."
+P060,tenda,https://www.tendaatacado.com.br/produto/shampoo-seda-sos-ceramidas-325ml-14777,variante,"A página chama de Ceramidas Infusão Ativa Retinol e Colágeno, 325 ml. Entra como variante: mesma marca e tamanho."
+P061,tenda,https://www.tendaatacado.com.br/produto/condicionador-seda-sos-ceramidas-325ml-14749,variante,"Mesma linha do shampoo, 325 ml. Entra como variante: mesma marca e tamanho."
+P062,tenda,https://www.tendaatacado.com.br/produto/desodorante-aerossol-rexona-clinical-150ml,variante,"Rexona Clinical, 150 ml. Linha Clinical, mais cara que a comum. Entra como variante: mesma marca e tamanho."
+P063,tenda,,nao_achado,Fio dental Oral-B não apareceu. Segunda busca no sitemap em 17/11/2026: não achado.
+P064,tenda,https://www.tendaatacado.com.br/produto/absorvente-com-abas-super-protecao-suave-always-8un-27782,achado,
+P065,tenda,https://www.tendaatacado.com.br/produto/fralda-huggies-supreme-care-m-66un,variante,"A página chama de Huggies Max Proteção M, 66 unidades. A cesta não fixa a quantidade do pacote. Entra como variante."
+P066,tenda,,nao_achado,"Omo em pó 1,6 kg não apareceu. Segunda busca no sitemap em 17/11/2026: não achado."
+P067,tenda,https://www.tendaatacado.com.br/produto/detergente-liquido-omo-puro-cuidado-3l,achado,
+P068,tenda,https://www.tendaatacado.com.br/produto/amaciante-concentrado-comfort-frescor-intenso-500ml,variante,"A página chama de Comfort Cuidado Essencial, 500 ml. O nome difere da URL. Entra como variante: mesma marca e tamanho."
+P069,tenda,https://www.tendaatacado.com.br/produto/detergente-ype-neutro-500ml,achado,
+P070,tenda,,nao_achado,Qboa não apareceu. Segunda busca no sitemap em 17/11/2026: não achado.
+P071,tenda,https://www.tendaatacado.com.br/produto/desinfetante-pinho-sol-perfumado-lavanda-promo-leve-500ml-pague-450ml,variante,Promoção leve 500 ml pague 450 ml. O frasco tem 500 ml. Entra como variante: mesma marca e tamanho.
+P072,tenda,https://www.tendaatacado.com.br/produto/limpador-multiuso-veja-perfumado-jojo-marcante-e-envolvente-500ml,variante,"Veja Perfumado Jojo, 500 ml. Existe também o Veja Gold lavanda. Entra como variante: mesma marca e tamanho."
+P073,tenda,,bloqueado_robots,"A página está no sitemap (esponja-multiuso-scotch-brite-4un-3, pacote com 4), mas o robots.txt bloqueia a leitura. Não ler."
+P074,tenda,,nao_achado,Dover Roll não apareceu. Segunda busca no sitemap em 17/11/2026: não achado.
+P075,tenda,,nao_achado,Snob não apareceu. Segunda busca no sitemap em 17/11/2026: não achado.
+P076,tenda,,nao_achado,Só apareceu barra Ypê de 800 g. Segunda busca no sitemap em 17/11/2026: não achado.
+P077,tenda,,nao_achado,Álcool líquido 70% não apareceu. Segunda busca no sitemap em 17/11/2026: não achado.
+P078,tenda,https://www.tendaatacado.com.br/produto/inseticida-aerossol-acao-magnetica-sbp-360ml,tamanho_diferente,"SBP Ação Magnética, 360 ml, não 300 ml. Tamanho diferente (360 ml). Fica fora da coleta e do índice."
+P079,tenda,https://www.tendaatacado.com.br/produto/file-de-peito-de-frabgo-congelado-sadia-zip-pct1kg-3842,variante,"Filé de peito congelado Sadia, 1 kg. Comparar por kg. Fora do índice."
+P080,tenda,https://www.tendaatacado.com.br/produto/sobrecoxa-seara-iqf-1kg,variante,"Sobrecoxa Seara congelada (IQF), 1 kg. Comparar por kg. Fora do índice."
+P081,tenda,https://www.tendaatacado.com.br/produto/frango-inteiro-cong-kg,variante,"Frango inteiro congelado sem marca, vendido por peso (a cesta pede Sadia). Comparar por kg. Fora do índice."
+P082,tenda,https://www.tendaatacado.com.br/produto/patinho-bifes-bandeja-400g,variante,"Patinho em bifes, bandeja de 400 g (a cesta pede moído). Comparar por kg. Fora do índice."
+P083,tenda,https://www.tendaatacado.com.br/produto/acem-bovino-resfriado-pedaco-1kg,achado,
+P084,tenda,https://www.tendaatacado.com.br/produto/contra-file-bovino-bife-400g,achado,"Contrafilé em bifes resfriado, bandeja de 400 g. Comparar por kg."
+P085,tenda,https://www.tendaatacado.com.br/produto/linguica-toscana-seara-600g,variante,"Seara, 600 g. A página não diz se é congelada. Comparar por kg. Comparar por kg, então o tamanho não importa. Fora do índice."
+P086,tenda,https://www.tendaatacado.com.br/produto/salsicha-hot-dog-defumada-perdigao-500g,achado,Achado na segunda busca: Salsicha Defumada Perdigão 500g.
+P087,tenda,https://www.tendaatacado.com.br/produto/file-de-tilapia-congelado-600g-peixe-cancaon,achado,"Peixe Canção congelado, 600 g. Comparar por kg."
+P088,tenda,,nao_achado,Banana prata não apareceu. Segunda busca no sitemap em 17/11/2026: não achado.
+P089,tenda,https://www.tendaatacado.com.br/produto/maca-gala-1kg-15833,achado,
+P090,tenda,https://www.tendaatacado.com.br/produto/laranja-pera-a-granel-kg,achado,
+P091,tenda,https://www.tendaatacado.com.br/produto/limao-tahiti-500gr-15812,achado,Saco de 500 g. Comparar por kg.
+P092,tenda,https://www.tendaatacado.com.br/produto/tomate-salada-1kg-15830,achado,
+P093,tenda,https://www.tendaatacado.com.br/produto/cebola-roxa-select-1kg,variante,"Só a cebola roxa Select, 1 kg. Cebola roxa, em geral mais cara que a comum. Fora do índice."
+P094,tenda,https://www.tendaatacado.com.br/produto/alho-granel-100gr-15813,achado,Saco de 100 g. Comparar por kg.
+P095,tenda,https://www.tendaatacado.com.br/produto/batata-lavada-extra-bandeja-1kg-15829,achado,
+P096,tenda,https://www.tendaatacado.com.br/produto/cenoura-1kg-15831,achado,
+P097,tenda,https://www.tendaatacado.com.br/produto/alface-crespa-unidade-911,achado,
+P098,tenda,https://www.tendaatacado.com.br/produto/mamao-formosa-kg,achado,
+P099,tenda,https://www.tendaatacado.com.br/produto/abobrinha-italiana-kg,tamanho_diferente,"Vendida por unidade, não por kg. Vendida por unidade, e a cesta compara por kg. Fica fora."
+P100,tenda,https://www.tendaatacado.com.br/produto/pimentao-verde-440g-23323,achado,Saco de 440 g. Comparar por kg.

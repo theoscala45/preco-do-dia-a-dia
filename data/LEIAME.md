@@ -20,13 +20,12 @@ A tabela de preços é a grande. Cada linha é um preço de um produto, numa red
 
 **redes.csv** (9 linhas). `tipo_preco` diz se o preço muda por CEP, por loja, se é único ou se ainda falta confirmar. `situacao` resume o que a leitura das regras do site permitiu.
 
-**links.csv**. Uma linha por produto e rede. Hoje só tem o Tenda. `status` vale:
-- `achado`: a página confirma marca, tamanho e tipo.
-- `conferir`: o Tenda vende uma variante. Uma pessoa decide se serve.
-- `nao_achado`: o produto não apareceu no sitemap.
+**links.csv**. Uma linha por produto e rede. Hoje só tem o Tenda. A coluna `observacao` explica cada decisão. `status` vale:
+- `achado`: a página confirma marca, tamanho e tipo. O coletor lê.
+- `variante`: mesma marca e mesmo tamanho, muda só a linha, o sabor, a fragrância ou a embalagem (Lux jasmim, Seda Ceramidas). Para carnes e hortifruti, que se comparam por kg, o tamanho da bandeja não importa. O coletor lê.
+- `tamanho_diferente`: a rede só vende outro tamanho (presunto 180 g em vez de 200 g). Fica fora da coleta e do índice.
+- `nao_achado`: o produto não apareceu no sitemap, nem na segunda busca.
 - `bloqueado_robots`: a página existe, mas o robots.txt bloqueia a leitura. Não ler.
-
-As observações de cada link ficam, por enquanto, na aba Links Tenda da planilha.
 
 **precos/AAAA-MM.csv**. O coletor acrescenta linhas toda noite. Colunas: data, rede_id, produto_id, cep_id, preco_reais, unidade_de_venda, disponivel, nome_na_pagina, tamanho_na_pagina, lido_em. Produto sem preço no dia entra com `disponivel` igual a `nao`. Ele é dado, não erro. O preço guardado é o preço comum da página, não o do cartão da rede nem o de atacado.
 

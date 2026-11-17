@@ -3,8 +3,13 @@ import { $, gsap, ScrollTrigger, calmo, carregar, iniciar } from './base.js';
 
 const [dados, geo, rotas] = await carregar('dados', 'geo', 'rotas');
 // tabela CSV simples (sem vírgula dentro dos campos) -> lista de objetos
+const campos = linha => { const out = []; let c = '', aspas = false;
+  for (let i = 0; i < linha.length; i++) { const ch = linha[i];
+    if (aspas) { if (ch === '"' && linha[i + 1] === '"') { c += '"'; i++; } else if (ch === '"') aspas = false; else c += ch; }
+    else if (ch === '"') aspas = true; else if (ch === ',') { out.push(c); c = ''; } else c += ch; }
+  out.push(c); return out; };
 const csv = async caminho => {
-  const [cab, ...linhas] = (await (await fetch(caminho)).text()).trim().split(/\r?\n/).map(l => l.split(','));
+  const [cab, ...linhas] = (await (await fetch(caminho)).text()).trim().split(/\r?\n/).map(campos);
   return linhas.map(l => Object.fromEntries(cab.map((c, i) => [c, l[i] ?? ''])));
 };
 const [links, execucoes] = await Promise.all([csv('data/links.csv').catch(() => []), csv('data/execucoes.csv').catch(() => [])]);
@@ -32,7 +37,7 @@ $('estadoColeta').textContent = dados.exemplo
 if (links.length) {
   const n = s => links.filter(l => l.status === s).length;
   const tenda = links.filter(l => l.rede_id === 'tenda').length;
-  $('estadoLinks').textContent = `A primeira rede preparada é o Tenda. Dos ${tenda} produtos da cesta, ${n('achado')} têm página confirmada no site do Tenda, ${n('variante') ? n('variante') + ' entram com uma variação da mesma marca e do mesmo tamanho, ' : ''}${n('conferir') ? n('conferir') + ' ainda precisam de conferência, ' : ''}${n('tamanho_diferente') ? n('tamanho_diferente') + ' só existem em outro tamanho e ficam de fora, ' : ''}${n('nao_achado')} não foram achados e ${n('bloqueado_robots')} ${n('bloqueado_robots') === 1 ? 'está bloqueado' : 'estão bloqueados'} pelo robots.txt.`;
+  $('estadoLinks').textContent = `A primeira rede preparada é o Tenda. Dos ${tenda} produtos da cesta, ${n('achado')} têm página confirmada no site do Tenda, ${n('variante') ? n('variante') + ' entram com uma variação da mesma marca e do mesmo tamanho (outra fragrância, sabor ou linha), ' : ''}${n('conferir') ? n('conferir') + ' ainda precisam de conferência, ' : ''}${n('tamanho_diferente') ? n('tamanho_diferente') + ' só existem em outro tamanho e ficam de fora, ' : ''}${n('nao_achado')} não foram achados e ${n('bloqueado_robots')} ${n('bloqueado_robots') === 1 ? 'está bloqueado' : 'estão bloqueados'} pelo robots.txt.`;
 }
 
 iniciar(dados);
