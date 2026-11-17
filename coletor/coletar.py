@@ -144,6 +144,7 @@ class Atacadao:
     rede_id = "atacadao"
     site = "https://www.atacadao.com.br"
     hosts = ("atacadao.com.br", "cloud.carrefour.com.br", "vtexassets.com", "vteximg.com.br")
+    por_loja = True   # varios CEPs caem na mesma loja: cada loja e lida uma vez por noite
     loja = ""
     TITULO = "[data-test=product-details-title]"
 
@@ -228,6 +229,7 @@ def coletar_rede(pw, rede, links, ceps, hoje, limite, diag, arq_precos, arq_exec
     if os.environ.get("COLETOR_PROXY"): opcoes["proxy"] = {"server": os.environ["COLETOR_PROXY"]}
     navegador = pw.chromium.launch(**opcoes)
     hosts = rede.hosts
+    feitas = {}   # loja -> o que foi lido nela nesta noite (redes com preco por loja)
     try:
         for cep in ceps:
             if (rede.rede_id, cep["cep_id"]) in ja:
@@ -239,6 +241,7 @@ def coletar_rede(pw, rede, links, ceps, hoje, limite, diag, arq_precos, arq_exec
             pg.route("**/*", lambda rota: rota.abort() if rota.request.resource_type in ("image", "media", "font") or not any(h in rota.request.url.split("/")[2] for h in hosts) else rota.continue_())
             linhas, lidos, sem_preco, erros, cep_dado = [], 0, 0, [], False
             rede.loja = ""
+            copiado_de = ""
             try:
                 for n, link in enumerate(paginas):
                     for tentativa in (1, 2):
@@ -270,6 +273,12 @@ def coletar_rede(pw, rede, links, ceps, hoje, limite, diag, arq_precos, arq_exec
                                 time.sleep(5)
                     if n == 0 and not lidos:
                         raise RuntimeError("a primeira pagina falhou: " + (erros[-1] if erros else ""))
+                    if n == 0 and getattr(rede, "por_loja", False) and rede.loja in feitas:
+                        # a loja deste CEP ja foi lida esta noite: os precos sao os mesmos
+                        o = feitas[rede.loja]
+                        linhas = [{**l, "cep_id": cep["cep_id"]} for l in o["linhas"]]
+                        lidos, sem_preco, erros, copiado_de = o["lidos"], o["sem_preco"], list(o["erros"]), o["cep"]
+                        break
                     time.sleep(random.uniform(*PAUSA))
                 resultado = "ok" if lidos == len(paginas) else "parcial" if lidos else "falha"
             except Bloqueio as e:
@@ -281,7 +290,10 @@ def coletar_rede(pw, rede, links, ceps, hoje, limite, diag, arq_precos, arq_exec
                 resultado, erros = "falha", [str(e).splitlines()[0][:160]]
             ctx.close()
             acrescentar(arq_precos, COLUNAS, linhas)
+            if getattr(rede, "por_loja", False) and rede.loja and not copiado_de and resultado != "falha":
+                feitas[rede.loja] = {"linhas": linhas, "lidos": lidos, "sem_preco": sem_preco, "erros": erros, "cep": cep["cep_id"]}
             nota = "; ".join(erros[:6]) + (f"; e mais {len(erros) - 6}" if len(erros) > 6 else "")
+            if copiado_de: nota = f"mesma loja do {copiado_de}: precos repetidos" + (f"; {nota}" if nota else "")
             acrescentar(arq_exec, COLUNAS_EXEC, [{"data": hoje, "rede_id": rede.rede_id, "cep_id": cep["cep_id"], "produtos_tentados": len(paginas), "produtos_lidos": lidos, "resultado": resultado, "erro": limpar(nota), "loja": limpar(rede.loja)}])
             print(f"[{rede.rede_id} {cep['cep_id']}] {resultado}: {lidos}/{len(paginas)} lidos, {sem_preco} sem preco na regiao, {time.time() - inicio:.0f} s" + (f" | loja {rede.loja}" if rede.loja else "") + (f" | {nota}" if nota else ""), flush=True)
             falhas_seguidas = falhas_seguidas + 1 if resultado == "falha" else 0
