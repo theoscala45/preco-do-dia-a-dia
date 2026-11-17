@@ -20,7 +20,7 @@ Regras (ver data/LEIAME.md):
 Saida padrao: data/precos/AAAA-MM.csv (uma linha por produto, CEP e dia) e data/execucoes.csv (uma linha por rede, CEP e dia).
 As linhas de execucao sao gravadas a cada CEP, para nada se perder se o tempo acabar no meio.
 """
-import argparse, csv, datetime, os, random, re, time, urllib.request, urllib.robotparser
+import argparse, csv, datetime, html, os, random, re, time, urllib.parse, urllib.request, urllib.robotparser
 from zoneinfo import ZoneInfo
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -188,7 +188,69 @@ class Atacadao:
         return {"nome": nome, "tamanho": tamanho_do_nome(nome), "preco": m.group(1).replace(".", "").replace(",", "."), "unidade": "un", "disponivel": True}, cep_dado
 
 
-REDES = [Tenda(), Atacadao()]
+class Carrefour:
+    """Carrefour (mercado.carrefour.com.br). O site mostra uma tela de captcha para navegadores automaticos, e o
+    projeto nao contorna bloqueios. Por isso o coletor nao informa CEP: baixa so a pagina normal do produto, como
+    faz com o sitemap, e le o preco padrao que ela traz nos dados padronizados de produto (schema.org: nome, preco
+    e estoque). E um preco unico para a cidade, o que o site mostra antes de alguem informar o CEP.
+    Para ter preco por CEP, o caminho e pedir autorizacao ao Carrefour (docs/emails-para-as-redes.md)."""
+    rede_id = "carrefour"
+    site = "https://mercado.carrefour.com.br"
+    preco_unico = True
+    loja = ""
+
+    def ler_pagina(self, url):
+        req = urllib.request.Request(urllib.parse.quote(url, safe=":/%"), headers={"User-Agent": "Mozilla/5.0 (preco-do-dia-a-dia)"})
+        with urllib.request.urlopen(req, timeout=60) as r:
+            if r.status in (403, 429): raise Bloqueio(f"a rede respondeu {r.status}")
+            h = r.read().decode("utf-8", "replace")
+        if re.search(r"<title>\s*(captcha|just a moment|attention required)", h, re.I):
+            raise Bloqueio("pagina de bloqueio (captcha)")
+        nome = re.search(r'data-testid="pdp-product-name"[^>]*>([^<]+)', h)
+        if not nome:
+            raise RuntimeError("pagina sem nome de produto (pode nao existir mais)")
+        nome = html.unescape(nome.group(1)).strip()
+        oferta = re.search(r'"offers":\{[^}]*?"price":([\d.]+)[^}]*?"availability":"[^"]*/(\w+)"', h)
+        if not oferta or oferta.group(2) != "InStock":
+            return {"nome": nome, "tamanho": tamanho_do_nome(nome), "preco": None, "unidade": "", "disponivel": False}
+        return {"nome": nome, "tamanho": tamanho_do_nome(nome), "preco": f"{float(oferta.group(1)):.2f}", "unidade": "un", "disponivel": True}
+
+
+def coletar_unico(rede, links, hoje, limite, arq_precos, arq_exec):
+    """Redes de preco unico: uma leitura por noite, sem CEP (cep_id vazio), sem navegador."""
+    ja = any(e["rede_id"] == rede.rede_id and e["data"] == hoje and e["resultado"] == "ok" for e in ler(arq_exec) + ler(os.path.join(RAIZ, "data", "execucoes.csv")))
+    if ja:
+        print(f"[{rede.rede_id}] ja lido hoje, pulando", flush=True); return
+    rp = robots(rede)
+    paginas = [l for l in links if rp.can_fetch("*", l["url"])]
+    if limite: paginas = paginas[:limite]
+    linhas, erros, sem_preco, inicio, resultado = [], [], 0, time.time(), ""
+    try:
+        for link in paginas:
+            for tentativa in (1, 2):
+                try:
+                    p = rede.ler_pagina(link["url"])
+                    linhas.append({"data": hoje, "rede_id": rede.rede_id, "produto_id": link["produto_id"], "cep_id": "",
+                                   "preco_reais": p["preco"] or "", "unidade_de_venda": p["unidade"], "disponivel": "sim" if p["disponivel"] else "nao",
+                                   "nome_na_pagina": p["nome"], "tamanho_na_pagina": p["tamanho"], "lido_em": agora().strftime("%Y-%m-%dT%H:%M:%S%z")})
+                    sem_preco += 0 if p["disponivel"] else 1
+                    break
+                except Bloqueio:
+                    raise
+                except Exception as e:
+                    if tentativa == 2: erros.append(f"{link['produto_id']}: {str(e).splitlines()[0][:90]}")
+                    else: time.sleep(5)
+            time.sleep(random.uniform(*PAUSA))
+        resultado = "ok" if len(linhas) == len(paginas) else "parcial" if linhas else "falha"
+    except Bloqueio as e:
+        resultado, erros = "bloqueado", [str(e)] + erros
+    acrescentar(arq_precos, COLUNAS, linhas)
+    nota = "; ".join(erros[:6]) + (f"; e mais {len(erros) - 6}" if len(erros) > 6 else "")
+    acrescentar(arq_exec, COLUNAS_EXEC, [{"data": hoje, "rede_id": rede.rede_id, "cep_id": "", "produtos_tentados": len(paginas), "produtos_lidos": len(linhas), "resultado": resultado, "erro": limpar(nota), "loja": "preco unico do site"}])
+    print(f"[{rede.rede_id}] {resultado}: {len(linhas)}/{len(paginas)} lidos, {sem_preco} sem estoque, {time.time() - inicio:.0f} s" + (f" | {nota}" if nota else ""), flush=True)
+
+
+REDES = [Tenda(), Atacadao(), Carrefour()]
 
 
 def robots(rede):
@@ -327,6 +389,11 @@ def main():
             da_rede = [l for l in links if l["rede_id"] == rede.rede_id and l["status"] in LINKS_QUE_ENTRAM and l["url"]]
             print(f"[{rede.rede_id}] {len(da_rede)} paginas de produto, {len(ceps)} CEPs", flush=True)
             if not da_rede: continue   # rede ainda sem links conferidos
+            if getattr(rede, "preco_unico", False):
+                # preco unico: uma vez por noite. Na coleta por zona, so a parte do Centro le estas redes
+                if not a.zona or a.zona.lower() == "centro":
+                    coletar_unico(rede, da_rede, hoje, a.limite, arq_precos, arq_exec)
+                continue
             coletar_rede(pw, rede, da_rede, ceps, hoje, a.limite, a.diagnostico, arq_precos, arq_exec)
     print("fim", flush=True)
 
