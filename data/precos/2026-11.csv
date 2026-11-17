@@ -6,3 +6,71 @@ data,rede_id,produto_id,cep_id,preco_reais,unidade_de_venda,disponivel,nome_na_p
 2026-11-17,tenda,P006,C18,33.90,un,sim,Azeite de Oliva Extra Virgem Gallo Vidro 500ml,500ml,2026-11-17T09:18:13-0300
 2026-11-17,tenda,P007,C18,3.79,un,sim,Açúcar Refinado União 1kg,1kg,2026-11-17T09:18:17-0300
 2026-11-17,tenda,P008,C18,3.49,un,sim,Açúcar Cristal União 1kg,1kg,2026-11-17T09:18:27-0300
+2026-11-17,tenda,P001,C01,26.39,un,sim,Arroz Branco T1 Camil Seleções 5kg,5kg,2026-11-17T11:22:35-0300
+2026-11-17,tenda,P003,C01,8.09,un,sim,Feijão Carioca Tipo 1 Camil 1kg,1kg,2026-11-17T11:22:41-0300
+2026-11-17,tenda,P004,C01,7.09,un,sim,Feijão Preto Camil 1kg,1kg,2026-11-17T11:22:50-0300
+2026-11-17,tenda,P005,C01,7.89,un,sim,Óleo de Soja Soya Pet 900ml,900ml,2026-11-17T11:22:59-0300
+2026-11-17,tenda,P006,C01,33.90,un,sim,Azeite de Oliva Extra Virgem Gallo Vidro 500ml,500ml,2026-11-17T11:23:05-0300
+2026-11-17,tenda,P007,C01,3.79,un,sim,Açúcar Refinado União 1kg,1kg,2026-11-17T11:23:15-0300
+2026-11-17,tenda,P008,C01,3.49,un,sim,Açúcar Cristal União 1kg,1kg,2026-11-17T11:23:23-0300
+2026-11-17,tenda,P009,C01,26.99,un,sim,Café Torrado e Moído Extraforte Pilão Pacote 500g,500g,2026-11-17T11:23:30-0300
+2026-11-17,tenda,P011,C01,6.29,un,sim,Farinha de trigo Dona Benta 1kg,1kg,2026-11-17T11:24:55-0300
+2026-11-17,tenda,P012,C01,5.69,un,sim,Farinha de Mandioca Tipo 1 Fina Yoki Pacote 500g,500g,2026-11-17T11:25:02-0300
+2026-11-17,tenda,P013,C01,3.99,un,sim,Macarrão Ovos Espaguete 9 Renata 500g,500g,2026-11-17T11:25:07-0300
+2026-11-17,tenda,P016,C01,8.15,un,sim,Extrato de tomate Elefante pote 300g,300g,2026-11-17T11:25:11-0300
+2026-11-17,tenda,P017,C01,4.29,un,sim,Sal Refinado Cisne 1kg,1kg,2026-11-17T11:25:18-0300
+2026-11-17,tenda,P018,C01,6.99,un,sim,Fubá de Milho Mimoso Yoki Pacote 1kg,1kg,2026-11-17T11:25:23-0300
+2026-11-17,tenda,P019,C01,12.90,un,sim,Aveia em Flocos Finos Quaker 450g,450g,2026-11-17T11:25:27-0300
+2026-11-17,tenda,P020,C01,9.49,un,sim,Achocolatado em Pó Nescau Lata 350g,350g,2026-11-17T11:25:35-0300
+2026-11-17,tenda,P021,C01,6.79,un,sim,Biscoito Cream Cracker Amanteigado Tradicional Vitarella 350g,350g,2026-11-17T11:25:42-0300
+2026-11-17,tenda,P022,C01,2.79,un,sim,Biscoito Recheado Sabor Chocolate Passatempo Nestlé 130g,130g,2026-11-17T11:25:49-0300
+2026-11-17,tenda,P023,C01,7.99,un,sim,Pão de Forma Pullman 480g,480g,2026-11-17T11:25:53-0300
+2026-11-17,tenda,P024,C01,9.19,un,sim,Margarina Cremosa com Sal Qualy 500g,500g,2026-11-17T11:25:57-0300
+2026-11-17,tenda,P026,C01,14.90,un,sim,Ketchup Tradicional Heinz 397g,397g,2026-11-17T11:26:03-0300
+2026-11-17,tenda,P027,C01,6.49,un,sim,Sardinha em Óleo Gomes da Costa 125g,125g,2026-11-17T11:26:07-0300
+2026-11-17,tenda,P028,C01,9.29,un,sim,Atum Ralado em Óleo Gomes da Costa 170g,170g,2026-11-17T11:26:11-0300
+2026-11-17,tenda,P029,C01,4.29,un,sim,Milho Verde Quero Lata 170g,170g,2026-11-17T11:26:18-0300
+2026-11-17,tenda,P030,C01,4.49,un,sim,Ervilha Quero Lata 170g,170g,2026-11-17T11:26:21-0300
+2026-11-17,tenda,P031,C01,4.59,un,sim,Vinagre de Álcool Castelo 750ml,750ml,2026-11-17T11:26:26-0300
+2026-11-17,tenda,P033,C01,3.49,un,sim,Caldo Knorr Galinha 57g 6 cubos,57g,2026-11-17T11:26:33-0300
+2026-11-17,tenda,P036,C01,8.59,un,sim,Mistura para Bolo Sabor Chocolate Dona Benta 450g,450g,2026-11-17T11:29:12-0300
+2026-11-17,tenda,P037,C01,2.99,un,sim,"Água Mineral Natural sem Gás Crystal Garrafa 1,5l","1,5l",2026-11-17T11:29:19-0300
+2026-11-17,tenda,P038,C01,12.49,un,sim,Refrigerante Coca-Cola Original 2L,2L,2026-11-17T11:29:25-0300
+2026-11-17,tenda,P040,C01,5.69,un,sim,Leite Integral Piracanjuba 1L,1L,2026-11-17T11:29:30-0300
+2026-11-17,tenda,P041,C01,5.69,un,sim,Leite Longa Vida Desnatado Piracanjuba 1L,1L,2026-11-17T11:29:35-0300
+2026-11-17,tenda,P043,C01,13.90,un,sim,Manteiga Aviação Pote com Sal 200g,200g,2026-11-17T11:31:33-0300
+2026-11-17,tenda,P046,C01,7.99,un,sim,Requeijão Cremoso Vigor 200g,200g,2026-11-17T11:31:39-0300
+2026-11-17,tenda,P047,C01,3.99,un,sim,Iogurte Natural Nestlé 170g,170g,2026-11-17T11:32:21-0300
+2026-11-17,tenda,P051,C01,8.49,un,sim,Ovos Grandes Branco 12 Unidades,12 Unidades,2026-11-17T11:32:25-0300
+2026-11-17,tenda,P052,C01,8.90,un,sim,Ovos Grandes Vermelhos 12 Unidades,12 Unidades,2026-11-17T11:32:34-0300
+2026-11-17,tenda,P053,C01,26.49,un,sim,Papel Higiênico Neve Toque de Seda Folha Dupla Leve 12 Pague 11 30M,30M,2026-11-17T11:33:23-0300
+2026-11-17,tenda,P055,C01,5.79,un,sim,Sabonete em Barra Dove Original 90g,90g,2026-11-17T11:33:30-0300
+2026-11-17,tenda,P056,C01,2.39,un,sim,Sabonete Lux Botanicals Buque de Jasmim 85gr,85gr,2026-11-17T11:33:34-0300
+2026-11-17,tenda,P059,C01,5.05,un,sim,Escova de Dente Colgate Essencial Clean 1 unid,,2026-11-17T11:34:54-0300
+2026-11-17,tenda,P061,C01,13.49,un,sim,Condicionador Seda Ceramidas Infusão Ativa Retinol e Colágeno 325ml,325ml,2026-11-17T11:36:17-0300
+2026-11-17,tenda,P062,C01,16.89,un,sim,"201 resultados para ""desodorante-aerossol-rexona-clinical-150ml""",150ml,2026-11-17T11:36:32-0300
+2026-11-17,tenda,P064,C01,5.19,un,sim,Absorvente Always Super Proteção Suave com abas 8 Unidades,8 Unidades,2026-11-17T11:36:37-0300
+2026-11-17,tenda,P067,C01,49.19,un,sim,Lava Roupa Líquido OMO Puro Cuidado 3L,3L,2026-11-17T11:38:02-0300
+2026-11-17,tenda,P068,C01,10.79,un,sim,Amaciante Concentrado Comfort Cuidado Essencial 500 ML,500 ML,2026-11-17T11:38:10-0300
+2026-11-17,tenda,P069,C01,2.69,un,sim,Detergente Ypê Neutro 500ml,500ml,2026-11-17T11:38:24-0300
+2026-11-17,tenda,P071,C01,9.45,un,sim,"194 resultados para ""desinfetante-pinho-sol-perfumado-lavanda-promo-leve-500ml-pague-450ml""",450ml,2026-11-17T11:38:33-0300
+2026-11-17,tenda,P072,C01,5.19,un,sim,"129 resultados para ""limpador-multiuso-veja-perfumado-jojo-marcante-e-envolvente-500ml""",500ml,2026-11-17T11:38:42-0300
+2026-11-17,tenda,P080,C01,14.90,un,sim,Sobrecoxa Seara IQF 1kg,1kg,2026-11-17T11:40:41-0300
+2026-11-17,tenda,P081,C01,29.97,un,sim,Frango Inteiro Congelado 3kg,3kg,2026-11-17T11:40:46-0300
+2026-11-17,tenda,P082,C01,21.12,un,sim,Patinho bovino em Bifes Resfriado bandeja 400g,400g,2026-11-17T11:40:50-0300
+2026-11-17,tenda,P083,C01,38.37,un,sim,Acém Bovino Resfriado Pedaço 1kg,1kg,2026-11-17T11:40:56-0300
+2026-11-17,tenda,P084,C01,25.08,un,sim,Contrafilé Bovino em Bifes Resfriado Bandeja 400g,400g,2026-11-17T11:41:01-0300
+2026-11-17,tenda,P085,C01,13.90,un,sim,Linguiça toscana Seara - 600g,600g,2026-11-17T11:41:16-0300
+2026-11-17,tenda,P086,C01,14.70,un,sim,"152 resultados para ""salsicha-hot-dog-defumada-perdigao-500g""",500g,2026-11-17T11:41:25-0300
+2026-11-17,tenda,P087,C01,29.89,un,sim,"178 resultados para ""file-de-tilapia-congelado-600g-peixe-cancaon""",600g,2026-11-17T11:41:41-0300
+2026-11-17,tenda,P089,C01,8.99,un,sim,Maçã Gala Saco 1kg,1kg,2026-11-17T11:41:49-0300
+2026-11-17,tenda,P090,C01,1.00,un,sim,Laranja Pera Unidade,,2026-11-17T11:41:53-0300
+2026-11-17,tenda,P091,C01,6.50,un,sim,Limão Tahiti Saco 500g,500g,2026-11-17T11:42:01-0300
+2026-11-17,tenda,P092,C01,19.99,un,sim,Tomate Salada Saco 1Kg,1Kg,2026-11-17T11:42:09-0300
+2026-11-17,tenda,P093,C01,12.90,un,sim,Cebola Roxa Select 1kg,1kg,2026-11-17T11:42:14-0300
+2026-11-17,tenda,P094,C01,2.10,un,sim,Alho Granel Saco 100g,100g,2026-11-17T11:42:56-0300
+2026-11-17,tenda,P095,C01,6.29,un,sim,Batata Lavada Extra Bandeja 1Kg,1Kg,2026-11-17T11:43:00-0300
+2026-11-17,tenda,P096,C01,3.29,un,sim,Cenoura Saco 1kg,1kg,2026-11-17T11:43:04-0300
+2026-11-17,tenda,P097,C01,4.49,un,sim,Alface Crespa Unidade,,2026-11-17T11:43:11-0300
+2026-11-17,tenda,P098,C01,19.18,un,sim,Mamão Formosa Unidade,,2026-11-17T11:43:15-0300
+2026-11-17,tenda,P100,C01,6.12,un,sim,Pimentão Verde Saco 440g,440g,2026-11-17T11:43:59-0300
