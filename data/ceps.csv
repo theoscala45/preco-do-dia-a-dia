@@ -1,0 +1,26 @@
+cep_id,zona,bairro,cep,rua,perfil
+C01,Centro,Bela Vista,01310-100,Avenida Paulista,Central
+C02,Centro,República,01045-000,Praça da República,Central
+C03,Centro,Bom Retiro,01124-000,Rua Afonso Pena,Central
+C04,Centro,Liberdade,01503-001,Avenida da Liberdade,Central
+C05,Centro,Brás,03003-000,Rua da Figueira,Central
+C06,Oeste,Pinheiros,05422-000,Rua dos Pinheiros,Central
+C07,Oeste,Lapa,05074-000,Rua Dronsfield,Intermediário
+C08,Oeste,Butantã,05503-001,Avenida Vital Brasil,Intermediário
+C09,Oeste,Rio Pequeno,05379-000,Avenida do Rio Pequeno,Intermediário
+C10,Oeste,Jardim Íris (Pirituba),05144-000,Rua Eugênio Lorenzetti,Periferia
+C11,Sul,Planalto Paulista (Moema),04077-000,Alameda dos Tupiniquins,Central
+C12,Sul,Santo Amaro,04711-000,Rua Engenheiro Mesquita Sampaio,Intermediário
+C13,Sul,Capão Redondo,05860-000,Rua Almirante Luís Penido Burnier,Periferia
+C14,Sul,Grajaú (Parque América),04822-000,Rua Jequirituba,Periferia
+C15,Sul,Jardim Ângela (Alto da Riviera),04929-000,Avenida Nova Arcádia,Periferia
+C16,Leste,Mooca,03104-000,Rua da Mooca,Intermediário
+C17,Leste,Tatuapé,03063-000,Avenida Celso Garcia,Intermediário
+C18,Leste,Itaquera,08210-000,Rua Campinas do Piauí,Periferia
+C19,Leste,Guaianases,08410-000,Rua Salvador Gianetti,Periferia
+C20,Leste,Sapopemba (Fazenda da Juta),03977-000,Rua Tenente Godofredo Cerqueira Leite,Periferia
+C21,Norte,Santana,02012-000,Praça Campo de Bagatelle,Intermediário
+C22,Norte,Tucuruvi,02304-000,Avenida Tucuruvi,Intermediário
+C23,Norte,Vila Maria,02117-000,Rua Andaraí,Intermediário
+C24,Norte,Brasilândia,02845-000,Rua Joaquim Ferreira da Rocha,Periferia
+C25,Norte,Perus,05204-000,Avenida Doutor Sylvio de Campos,Periferia

@@ -1,0 +1,101 @@
+produto_id,categoria,produto,marca,tamanho,compara_por,entra_no_indice
+P001,Alimentos básicos,Arroz branco tipo 1,Camil,5 kg,Pacote,sim
+P002,Alimentos básicos,Arroz branco tipo 1,Tio João,5 kg,Pacote,sim
+P003,Alimentos básicos,Feijão carioca tipo 1,Camil,1 kg,Pacote,sim
+P004,Alimentos básicos,Feijão preto tipo 1,Camil,1 kg,Pacote,sim
+P005,Alimentos básicos,Óleo de soja,Soya,900 ml,Garrafa,sim
+P006,Alimentos básicos,Azeite extravirgem,Gallo,500 ml,Garrafa,sim
+P007,Alimentos básicos,Açúcar refinado,União,1 kg,Pacote,sim
+P008,Alimentos básicos,Açúcar cristal,União,1 kg,Pacote,sim
+P009,Alimentos básicos,Café torrado e moído extraforte,Pilão,500 g,Pacote,sim
+P010,Alimentos básicos,Café torrado e moído tradicional,3 Corações,500 g,Pacote,sim
+P011,Alimentos básicos,Farinha de trigo tradicional,Dona Benta,1 kg,Pacote,sim
+P012,Alimentos básicos,Farinha de mandioca,Yoki,500 g,Pacote,sim
+P013,Alimentos básicos,Macarrão espaguete com ovos,Renata,500 g,Pacote,sim
+P014,Alimentos básicos,Macarrão parafuso,Barilla,500 g,Pacote,sim
+P015,Alimentos básicos,Molho de tomate tradicional,Pomarola,340 g,Sachê,sim
+P016,Alimentos básicos,Extrato de tomate,Elefante,300 g,Lata,sim
+P017,Alimentos básicos,Sal refinado,Cisne,1 kg,Pacote,sim
+P018,Alimentos básicos,Fubá mimoso,Yoki,1 kg,Pacote,sim
+P019,Alimentos básicos,Aveia em flocos,Quaker,450 g,Lata,sim
+P020,Alimentos básicos,Achocolatado em pó,Nescau,350 g,Lata,sim
+P021,Alimentos básicos,Biscoito cream cracker,Vitarella,350 g,Pacote,sim
+P022,Alimentos básicos,Biscoito recheado chocolate,Passatempo,130 g,Pacote,sim
+P023,Alimentos básicos,Pão de forma tradicional,Pullman,480 g,Pacote,sim
+P024,Alimentos básicos,Margarina com sal,Qualy,500 g,Pote,sim
+P025,Alimentos básicos,Maionese tradicional,Hellmann's,500 g,Pote,sim
+P026,Alimentos básicos,Ketchup tradicional,Heinz,397 g,Frasco,sim
+P027,Alimentos básicos,Sardinha em óleo,Gomes da Costa,125 g,Lata,sim
+P028,Alimentos básicos,Atum ralado em óleo,Gomes da Costa,170 g,Lata,sim
+P029,Alimentos básicos,Milho verde em conserva,Quero,170 g,Lata,sim
+P030,Alimentos básicos,Ervilha em conserva,Quero,170 g,Lata,sim
+P031,Alimentos básicos,Vinagre de álcool,Castelo,750 ml,Garrafa,sim
+P032,Alimentos básicos,Tempero completo,Sazón,60 g,Caixa,sim
+P033,Alimentos básicos,Caldo de galinha,Knorr,57 g,Caixa,sim
+P034,Alimentos básicos,Leite condensado,Moça,395 g,Lata,sim
+P035,Alimentos básicos,Creme de leite,Nestlé,200 g,Caixinha,sim
+P036,Alimentos básicos,Mistura para bolo,Dona Benta,450 g,Pacote,sim
+P037,Alimentos básicos,Água mineral sem gás,Crystal,"1,5 L",Garrafa,sim
+P038,Alimentos básicos,Refrigerante,Coca-Cola,2 L,Garrafa,sim
+P039,Laticínios e ovos,Leite integral UHT,Italac,1 L,Caixa,sim
+P040,Laticínios e ovos,Leite integral UHT,Piracanjuba,1 L,Caixa,sim
+P041,Laticínios e ovos,Leite desnatado UHT,Piracanjuba,1 L,Caixa,sim
+P042,Laticínios e ovos,Leite em pó integral,Ninho,380 g,Lata,sim
+P043,Laticínios e ovos,Manteiga com sal,Aviação,200 g,Pote,sim
+P044,Laticínios e ovos,Queijo muçarela fatiado,Tirolez,150 g,Bandeja,sim
+P045,Laticínios e ovos,Queijo prato fatiado,Tirolez,150 g,Bandeja,sim
+P046,Laticínios e ovos,Requeijão cremoso,Vigor,200 g,Copo,sim
+P047,Laticínios e ovos,Iogurte natural integral,Nestlé,170 g,Copo,sim
+P048,Laticínios e ovos,Iogurte de morango,Batavo,"1,25 kg",Garrafa,sim
+P049,Laticínios e ovos,Presunto cozido fatiado,Sadia,200 g,Bandeja,sim
+P050,Laticínios e ovos,Queijo minas frescal,Tirolez,500 g,Peça,sim
+P051,Laticínios e ovos,Ovos brancos grandes,Marca da loja,12 unidades,Bandeja,sim
+P052,Laticínios e ovos,Ovos vermelhos grandes,Marca da loja,12 unidades,Bandeja,sim
+P053,Higiene e limpeza,Papel higiênico folha dupla,Neve,12 rolos,Pacote,sim
+P054,Higiene e limpeza,Papel higiênico folha dupla,Personal,12 rolos,Pacote,sim
+P055,Higiene e limpeza,Sabonete em barra,Dove,90 g,Unidade,sim
+P056,Higiene e limpeza,Sabonete em barra,Lux,85 g,Unidade,sim
+P057,Higiene e limpeza,Creme dental Total 12,Colgate,90 g,Unidade,sim
+P058,Higiene e limpeza,Creme dental Máxima Proteção,Colgate,90 g,Unidade,sim
+P059,Higiene e limpeza,Escova de dente,Colgate,1 unidade,Unidade,sim
+P060,Higiene e limpeza,Shampoo,Seda,325 ml,Frasco,sim
+P061,Higiene e limpeza,Condicionador,Seda,325 ml,Frasco,sim
+P062,Higiene e limpeza,Desodorante aerosol,Rexona,150 ml,Frasco,sim
+P063,Higiene e limpeza,Fio dental,Oral-B,50 m,Unidade,sim
+P064,Higiene e limpeza,Absorvente com abas,Always,8 unidades,Pacote,sim
+P065,Higiene e limpeza,Fralda descartável tamanho M,Huggies,Pacote,Pacote,sim
+P066,Higiene e limpeza,Sabão em pó,Omo,"1,6 kg",Caixa,sim
+P067,Higiene e limpeza,Sabão líquido,Omo,3 L,Galão,sim
+P068,Higiene e limpeza,Amaciante concentrado,Comfort,500 ml,Frasco,sim
+P069,Higiene e limpeza,Detergente líquido neutro,Ypê,500 ml,Frasco,sim
+P070,Higiene e limpeza,Água sanitária,Qboa,2 L,Frasco,sim
+P071,Higiene e limpeza,Desinfetante,Pinho Sol,500 ml,Frasco,sim
+P072,Higiene e limpeza,Limpador multiuso,Veja,500 ml,Frasco,sim
+P073,Higiene e limpeza,Esponja dupla face,Scotch-Brite,3 unidades,Pacote,sim
+P074,Higiene e limpeza,Saco de lixo 50 L,Dover Roll,Rolo,Rolo,sim
+P075,Higiene e limpeza,Papel toalha,Snob,2 rolos,Pacote,sim
+P076,Higiene e limpeza,Sabão em barra,Ypê,5 unidades,Pacote,sim
+P077,Higiene e limpeza,Álcool líquido 70%,Marca a definir,1 L,Frasco,sim
+P078,Higiene e limpeza,Inseticida aerosol,SBP,300 ml,Frasco,sim
+P079,Carnes e hortifruti,Peito de frango,Sem marca,1 kg,Preço por kg,nao
+P080,Carnes e hortifruti,Coxa e sobrecoxa de frango,Sem marca,1 kg,Preço por kg,nao
+P081,Carnes e hortifruti,Frango inteiro congelado,Sadia,1 kg,Preço por kg,nao
+P082,Carnes e hortifruti,Carne moída (patinho),Sem marca,1 kg,Preço por kg,nao
+P083,Carnes e hortifruti,Acém,Sem marca,1 kg,Preço por kg,nao
+P084,Carnes e hortifruti,Contrafilé,Sem marca,1 kg,Preço por kg,nao
+P085,Carnes e hortifruti,Linguiça toscana,Seara,1 kg,Preço por kg,nao
+P086,Carnes e hortifruti,Salsicha,Perdigão,500 g,Pacote,nao
+P087,Carnes e hortifruti,Filé de tilápia congelado,Sem marca,1 kg,Preço por kg,nao
+P088,Carnes e hortifruti,Banana prata,Sem marca,1 kg,Preço por kg,nao
+P089,Carnes e hortifruti,Maçã gala,Sem marca,1 kg,Preço por kg,nao
+P090,Carnes e hortifruti,Laranja pera,Sem marca,1 kg,Preço por kg,nao
+P091,Carnes e hortifruti,Limão taiti,Sem marca,1 kg,Preço por kg,nao
+P092,Carnes e hortifruti,Tomate,Sem marca,1 kg,Preço por kg,nao
+P093,Carnes e hortifruti,Cebola,Sem marca,1 kg,Preço por kg,nao
+P094,Carnes e hortifruti,Alho,Sem marca,1 kg,Preço por kg,nao
+P095,Carnes e hortifruti,Batata,Sem marca,1 kg,Preço por kg,nao
+P096,Carnes e hortifruti,Cenoura,Sem marca,1 kg,Preço por kg,nao
+P097,Carnes e hortifruti,Alface crespa,Sem marca,1 unidade,Unidade,nao
+P098,Carnes e hortifruti,Mamão formosa,Sem marca,1 kg,Preço por kg,nao
+P099,Carnes e hortifruti,Abobrinha,Sem marca,1 kg,Preço por kg,nao
+P100,Carnes e hortifruti,Pimentão verde,Sem marca,1 kg,Preço por kg,nao
