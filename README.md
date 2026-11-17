@@ -2,7 +2,7 @@
 
 Quanto custa a mesma compra em cada bairro de São Paulo, e quanto ela subiu contra o IPCA.
 
-Projeto em construção. **Os preços que o site mostra hoje são de exemplo (inventados).** O coletor de preços reais ainda não existe.
+Projeto em construção. **Os preços que o site mostra hoje são de exemplo (inventados).** O coletor de preços reais do Tenda roda toda noite pelo GitHub Actions e grava em `data/precos/`. O site passa para os preços reais quando houver redes e meses suficientes.
 
 ## O que tem aqui
 
@@ -28,7 +28,8 @@ Depois abra http://localhost:8000. Abrir o `index.html` direto com dois cliques 
 ```
 python3 tools/gerar_exemplo.py        # recria data/exemplo/ (preços inventados)
 python3 tools/montar_site.py exemplo  # recria assets/dados.json a partir de data/exemplo/
-python3 tools/montar_site.py real     # quando o coletor estiver preenchendo data/precos.csv
+python3 tools/montar_site.py real     # quando o coletor tiver preenchido data/precos/
+python3 tools/baixar_ibge.py          # atualiza data/ipca.csv e data/pesos_ipca.csv (IBGE, SIDRA)
 ```
 
 O mapa arredondado sai de `python3 tools/arredondar_mapa.py` (precisa de `pip install shapely`). Rode depois de `tools/preparar_mapa.py`.

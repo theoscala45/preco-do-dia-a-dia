@@ -8,8 +8,9 @@ Contas:
 - Preco de referencia de um produto num ponto = mediana dos precos das redes naquele ponto.
 - Cesta do ponto = soma dos precos de referencia dos produtos do indice (carnes e hortifruti ficam fora).
   So entram produtos com preco em todos os pontos e em todas as datas, para a comparacao ser justa.
-- Indice local = cesta da data / cesta da primeira data x 100. Cada produto pesa 1 unidade.
-  Os pesos do IPCA entram quando data/pesos_ipca.csv for preenchida.
+- Indice local = media ponderada da variacao de preco de cada produto desde a primeira data, x 100.
+  O peso de cada produto vem de data/pesos_ipca.csv (peso do subitem no IPCA, do IBGE). Produto sem subitem
+  parecido no IPCA recebe o peso medio dos outros. Se a tabela de pesos estiver vazia, cada produto pesa igual.
 """
 import csv, json, os, statistics, sys
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -44,12 +45,17 @@ def main(modo):
     do_indice = [p["produto_id"] for p in produtos if p["entra_no_indice"] == "sim"]
     ref = {(d, c, p): referencia(d, c, p) for d in datas for c in cid for p in do_indice}
     completos = [p for p in do_indice if all(ref[d, c, p] is not None for d in datas for c in cid)]
+    pesos = {l["produto_id"]: float(l["peso_pct"]) for l in ler("data/pesos_ipca.csv") if l["peso_pct"]}
+    com_peso = [pesos[p] for p in completos if p in pesos]
+    medio = sum(com_peso) / len(com_peso) if com_peso else 1.0
+    w = {p: pesos.get(p, medio) for p in completos}
+    total_w = sum(w.values())
     pontos = []
     for c in ceps:
-        serie = [sum(ref[d, c["cep_id"], p] for p in completos) for d in datas]
-        pontos.append({"id": c["cep_id"], "cesta": round(serie[-1], 2),
-                       "serie": [round(v/serie[0]*100, 2) for v in serie],
-                       "var": round((serie[-1]/serie[0]-1)*100, 2)})
+        cid = c["cep_id"]
+        cesta = sum(ref[datas[-1], cid, p] for p in completos)
+        serie = [100 * sum(w[p] * ref[d, cid, p] / ref[datas[0], cid, p] for p in completos) / total_w for d in datas]
+        pontos.append({"id": cid, "cesta": round(cesta, 2), "serie": [round(v, 2) for v in serie], "var": round(serie[-1] - 100, 2)})
     # IPCA acumulado, base 100 na primeira data
     ipca = [100.0]
     meses = {l["mes"]: float(l["ipca_mensal_pct"]) for l in ler(pasta + "/ipca.csv")}
@@ -65,6 +71,7 @@ def main(modo):
             ult[r] = [tab[ultima][r].get("", {}).get(p["produto_id"]) for p in produtos]
     nomes = {r["rede_id"]: r["nome"] for r in redes_tab}
     saida = {"exemplo": modo == "exemplo", "datas": datas, "itens_na_cesta": len(completos), "ipca": ipca,
+             "pesos": {"com_peso": len(com_peso), "sem_peso": len(completos) - len(com_peso), "fonte": "IBGE, SIDRA tabela 7060"} if com_peso else None,
              "pontos": pontos,
              "produtos": [{"id": p["produto_id"], "nome": p["produto"], "marca": p["marca"], "tam": p["tamanho"],
                            "cat": p["categoria"], "indice": p["entra_no_indice"] == "sim"} for p in produtos],

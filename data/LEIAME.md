@@ -32,9 +32,9 @@ As observações de cada link ficam, por enquanto, na aba Links Tenda da planilh
 
 **execucoes.csv**. Uma linha por rede e CEP a cada noite, com o resultado (`ok`, `parcial`, `falha` ou `bloqueado`) e o erro. É daqui que sai o aviso da manhã quando uma rede ou um CEP falha.
 
-**ipca.csv** (vazia). IPCA mensal do IBGE (SIDRA), geral e por grupo, para comparar com o índice local.
+**ipca.csv**. IPCA mensal do Brasil (IBGE, SIDRA tabela 7060): índice geral, "Alimentação e bebidas" e "Higiene pessoal". Atualizar com `python3 tools/baixar_ibge.py`.
 
-**pesos_ipca.csv** (vazia nos pesos). Liga cada produto a um grupo do IPCA e ao peso desse grupo. Preencher no passo do índice.
+**pesos_ipca.csv**. Liga cada produto ao subitem do IPCA mais parecido e ao peso desse subitem no Brasil, no último mês publicado. Quando vários produtos caem no mesmo subitem, o peso é dividido entre eles. Seis produtos não têm subitem parecido (aveia, ketchup, ervilha, creme de leite, álcool, inseticida) e ficam sem peso: o índice dá a eles o peso médio. Os pesos do Brasil foram usados porque a região de São Paulo não publica peso para vários subitens da cesta.
 
 ## Regras do coletor
 

@@ -1,101 +1,101 @@
 produto_id,grupo_ipca,peso_pct,fonte
-P001,,,
-P002,,,
-P003,,,
-P004,,,
-P005,,,
-P006,,,
-P007,,,
-P008,,,
-P009,,,
-P010,,,
-P011,,,
-P012,,,
-P013,,,
-P014,,,
-P015,,,
-P016,,,
-P017,,,
-P018,,,
-P019,,,
-P020,,,
-P021,,,
-P022,,,
-P023,,,
-P024,,,
-P025,,,
-P026,,,
-P027,,,
-P028,,,
-P029,,,
-P030,,,
-P031,,,
-P032,,,
-P033,,,
-P034,,,
-P035,,,
-P036,,,
-P037,,,
-P038,,,
-P039,,,
-P040,,,
-P041,,,
-P042,,,
-P043,,,
-P044,,,
-P045,,,
-P046,,,
-P047,,,
-P048,,,
-P049,,,
-P050,,,
-P051,,,
-P052,,,
-P053,,,
-P054,,,
-P055,,,
-P056,,,
-P057,,,
-P058,,,
-P059,,,
-P060,,,
-P061,,,
-P062,,,
-P063,,,
-P064,,,
-P065,,,
-P066,,,
-P067,,,
-P068,,,
-P069,,,
-P070,,,
-P071,,,
-P072,,,
-P073,,,
-P074,,,
-P075,,,
-P076,,,
-P077,,,
-P078,,,
-P079,,,
-P080,,,
-P081,,,
-P082,,,
-P083,,,
-P084,,,
-P085,,,
-P086,,,
-P087,,,
-P088,,,
-P089,,,
-P090,,,
-P091,,,
-P092,,,
-P093,,,
-P094,,,
-P095,,,
-P096,,,
-P097,,,
-P098,,,
-P099,,,
-P100,,,
+P001,1101002.Arroz,0.2645,"IBGE, SIDRA tabela 7060, peso do subitem no Brasil em outubro 2026, dividido por 2 produtos"
+P002,1101002.Arroz,0.2645,"IBGE, SIDRA tabela 7060, peso do subitem no Brasil em outubro 2026, dividido por 2 produtos"
+P003,1101073.Feijão - carioca (rajado),0.1307,"IBGE, SIDRA tabela 7060, peso do subitem no Brasil em outubro 2026"
+P004,1101052.Feijão - preto,0.0436,"IBGE, SIDRA tabela 7060, peso do subitem no Brasil em outubro 2026"
+P005,1113013.Óleo de soja,0.2387,"IBGE, SIDRA tabela 7060, peso do subitem no Brasil em outubro 2026"
+P006,1113014.Azeite de oliva,0.0665,"IBGE, SIDRA tabela 7060, peso do subitem no Brasil em outubro 2026"
+P007,1104003.Açúcar refinado,0.0929,"IBGE, SIDRA tabela 7060, peso do subitem no Brasil em outubro 2026"
+P008,1104004.Açúcar cristal,0.0980,"IBGE, SIDRA tabela 7060, peso do subitem no Brasil em outubro 2026"
+P009,1114022.Café moído,0.2600,"IBGE, SIDRA tabela 7060, peso do subitem no Brasil em outubro 2026, dividido por 2 produtos"
+P010,1114022.Café moído,0.2600,"IBGE, SIDRA tabela 7060, peso do subitem no Brasil em outubro 2026, dividido por 2 produtos"
+P011,1102012.Farinha de trigo,0.0458,"IBGE, SIDRA tabela 7060, peso do subitem no Brasil em outubro 2026"
+P012,1102023.Farinha de mandioca,0.1096,"IBGE, SIDRA tabela 7060, peso do subitem no Brasil em outubro 2026"
+P013,1102006.Macarrão,0.0683,"IBGE, SIDRA tabela 7060, peso do subitem no Brasil em outubro 2026, dividido por 2 produtos"
+P014,1102006.Macarrão,0.0683,"IBGE, SIDRA tabela 7060, peso do subitem no Brasil em outubro 2026, dividido por 2 produtos"
+P015,1116005.Atomatado,0.0609,"IBGE, SIDRA tabela 7060, peso do subitem no Brasil em outubro 2026, dividido por 2 produtos"
+P016,1116005.Atomatado,0.0609,"IBGE, SIDRA tabela 7060, peso do subitem no Brasil em outubro 2026, dividido por 2 produtos"
+P017,1116013.Sal,0.0043,"IBGE, SIDRA tabela 7060, peso do subitem no Brasil em outubro 2026"
+P018,1102008.Fubá de milho,0.0073,"IBGE, SIDRA tabela 7060, peso do subitem no Brasil em outubro 2026"
+P019,sem subitem parecido no IPCA,,
+P020,1104052.Chocolate e achocolatado em pó,0.1482,"IBGE, SIDRA tabela 7060, peso do subitem no Brasil em outubro 2026"
+P021,1112003.Biscoito,0.2311,"IBGE, SIDRA tabela 7060, peso do subitem no Brasil em outubro 2026, dividido por 2 produtos"
+P022,1112003.Biscoito,0.2311,"IBGE, SIDRA tabela 7060, peso do subitem no Brasil em outubro 2026, dividido por 2 produtos"
+P023,1112018.Pão de forma,0.1099,"IBGE, SIDRA tabela 7060, peso do subitem no Brasil em outubro 2026"
+P024,1113040.Margarina,0.1034,"IBGE, SIDRA tabela 7060, peso do subitem no Brasil em outubro 2026"
+P025,1116033.Maionese,0.0525,"IBGE, SIDRA tabela 7060, peso do subitem no Brasil em outubro 2026"
+P026,sem subitem parecido no IPCA,,
+P027,1115039.Sardinha em conserva,0.0471,"IBGE, SIDRA tabela 7060, peso do subitem no Brasil em outubro 2026"
+P028,1115075.Atum em conserva,0.0230,"IBGE, SIDRA tabela 7060, peso do subitem no Brasil em outubro 2026"
+P029,1115058.Milho-verde em conserva,0.0286,"IBGE, SIDRA tabela 7060, peso do subitem no Brasil em outubro 2026"
+P030,sem subitem parecido no IPCA,,
+P031,1116041.Vinagre,0.0168,"IBGE, SIDRA tabela 7060, peso do subitem no Brasil em outubro 2026"
+P032,1116071.Tempero misto,0.0613,"IBGE, SIDRA tabela 7060, peso do subitem no Brasil em outubro 2026"
+P033,1116048.Caldo concentrado,0.0109,"IBGE, SIDRA tabela 7060, peso do subitem no Brasil em outubro 2026"
+P034,1111008.Leite condensado,0.0216,"IBGE, SIDRA tabela 7060, peso do subitem no Brasil em outubro 2026"
+P035,sem subitem parecido no IPCA,,
+P036,1102029.Massa semipreparada,0.1234,"IBGE, SIDRA tabela 7060, peso do subitem no Brasil em outubro 2026"
+P037,1114083.Refrigerante e água mineral,0.2695,"IBGE, SIDRA tabela 7060, peso do subitem no Brasil em outubro 2026, dividido por 2 produtos"
+P038,1114083.Refrigerante e água mineral,0.2695,"IBGE, SIDRA tabela 7060, peso do subitem no Brasil em outubro 2026, dividido por 2 produtos"
+P039,1111004.Leite longa vida,0.2653,"IBGE, SIDRA tabela 7060, peso do subitem no Brasil em outubro 2026, dividido por 3 produtos"
+P040,1111004.Leite longa vida,0.2653,"IBGE, SIDRA tabela 7060, peso do subitem no Brasil em outubro 2026, dividido por 3 produtos"
+P041,1111004.Leite longa vida,0.2653,"IBGE, SIDRA tabela 7060, peso do subitem no Brasil em outubro 2026, dividido por 3 produtos"
+P042,1111009.Leite em pó,0.2121,"IBGE, SIDRA tabela 7060, peso do subitem no Brasil em outubro 2026"
+P043,1111031.Manteiga,0.0585,"IBGE, SIDRA tabela 7060, peso do subitem no Brasil em outubro 2026"
+P044,1111011.Queijo,0.1835,"IBGE, SIDRA tabela 7060, peso do subitem no Brasil em outubro 2026, dividido por 3 produtos"
+P045,1111011.Queijo,0.1835,"IBGE, SIDRA tabela 7060, peso do subitem no Brasil em outubro 2026, dividido por 3 produtos"
+P046,1111021.Requeijão,0.0602,"IBGE, SIDRA tabela 7060, peso do subitem no Brasil em outubro 2026"
+P047,1111019.Iogurte e bebidas lácteas,0.0949,"IBGE, SIDRA tabela 7060, peso do subitem no Brasil em outubro 2026, dividido por 2 produtos"
+P048,1111019.Iogurte e bebidas lácteas,0.0949,"IBGE, SIDRA tabela 7060, peso do subitem no Brasil em outubro 2026, dividido por 2 produtos"
+P049,1109002.Presunto,0.0884,"IBGE, SIDRA tabela 7060, peso do subitem no Brasil em outubro 2026"
+P050,1111011.Queijo,0.1835,"IBGE, SIDRA tabela 7060, peso do subitem no Brasil em outubro 2026, dividido por 3 produtos"
+P051,1110044.Ovo de galinha,0.1158,"IBGE, SIDRA tabela 7060, peso do subitem no Brasil em outubro 2026, dividido por 2 produtos"
+P052,1110044.Ovo de galinha,0.1158,"IBGE, SIDRA tabela 7060, peso do subitem no Brasil em outubro 2026, dividido por 2 produtos"
+P053,6301017.Papel higiênico,0.1009,"IBGE, SIDRA tabela 7060, peso do subitem no Brasil em outubro 2026, dividido por 2 produtos"
+P054,6301017.Papel higiênico,0.1009,"IBGE, SIDRA tabela 7060, peso do subitem no Brasil em outubro 2026, dividido por 2 produtos"
+P055,6301016.Sabonete,0.1720,"IBGE, SIDRA tabela 7060, peso do subitem no Brasil em outubro 2026, dividido por 2 produtos"
+P056,6301016.Sabonete,0.1720,"IBGE, SIDRA tabela 7060, peso do subitem no Brasil em outubro 2026, dividido por 2 produtos"
+P057,6301007.Produto para higiene bucal,0.0726,"IBGE, SIDRA tabela 7060, peso do subitem no Brasil em outubro 2026, dividido por 4 produtos"
+P058,6301007.Produto para higiene bucal,0.0726,"IBGE, SIDRA tabela 7060, peso do subitem no Brasil em outubro 2026, dividido por 4 produtos"
+P059,6301007.Produto para higiene bucal,0.0726,"IBGE, SIDRA tabela 7060, peso do subitem no Brasil em outubro 2026, dividido por 4 produtos"
+P060,6301001.Produto para cabelo,0.3291,"IBGE, SIDRA tabela 7060, peso do subitem no Brasil em outubro 2026, dividido por 2 produtos"
+P061,6301001.Produto para cabelo,0.3291,"IBGE, SIDRA tabela 7060, peso do subitem no Brasil em outubro 2026, dividido por 2 produtos"
+P062,6301014.Desodorante,0.4054,"IBGE, SIDRA tabela 7060, peso do subitem no Brasil em outubro 2026"
+P063,6301007.Produto para higiene bucal,0.0726,"IBGE, SIDRA tabela 7060, peso do subitem no Brasil em outubro 2026, dividido por 4 produtos"
+P064,6301015.Absorvente higiênico,0.1085,"IBGE, SIDRA tabela 7060, peso do subitem no Brasil em outubro 2026"
+P065,6301002.Fralda descartável,0.2230,"IBGE, SIDRA tabela 7060, peso do subitem no Brasil em outubro 2026"
+P066,2104009.Sabão em pó,0.2185,"IBGE, SIDRA tabela 7060, peso do subitem no Brasil em outubro 2026"
+P067,2104019.Sabão líquido,0.0060,"IBGE, SIDRA tabela 7060, peso do subitem no Brasil em outubro 2026"
+P068,2104085.Amaciante e alvejante,0.1666,"IBGE, SIDRA tabela 7060, peso do subitem no Brasil em outubro 2026"
+P069,2104008.Detergente,0.1555,"IBGE, SIDRA tabela 7060, peso do subitem no Brasil em outubro 2026"
+P070,2104005.Água sanitária,0.0611,"IBGE, SIDRA tabela 7060, peso do subitem no Brasil em outubro 2026"
+P071,2104012.Desinfetante,0.0599,"IBGE, SIDRA tabela 7060, peso do subitem no Brasil em outubro 2026"
+P072,2104020.Limpador multiuso,0.0275,"IBGE, SIDRA tabela 7060, peso do subitem no Brasil em outubro 2026"
+P073,2104016.Esponja de limpeza,0.0041,"IBGE, SIDRA tabela 7060, peso do subitem no Brasil em outubro 2026"
+P074,2104003.Saco para lixo,0.0040,"IBGE, SIDRA tabela 7060, peso do subitem no Brasil em outubro 2026"
+P075,2104041.Papel toalha,0.0042,"IBGE, SIDRA tabela 7060, peso do subitem no Brasil em outubro 2026"
+P076,2104015.Sabão em barra,0.0262,"IBGE, SIDRA tabela 7060, peso do subitem no Brasil em outubro 2026"
+P077,sem subitem parecido no IPCA,,
+P078,sem subitem parecido no IPCA,,
+P079,1110010.Frango em pedaços,0.2964,"IBGE, SIDRA tabela 7060, peso do subitem no Brasil em outubro 2026, dividido por 2 produtos"
+P080,1110010.Frango em pedaços,0.2964,"IBGE, SIDRA tabela 7060, peso do subitem no Brasil em outubro 2026, dividido por 2 produtos"
+P081,1110009.Frango inteiro,0.3456,"IBGE, SIDRA tabela 7060, peso do subitem no Brasil em outubro 2026"
+P082,1107089.Patinho,0.1846,"IBGE, SIDRA tabela 7060, peso do subitem no Brasil em outubro 2026"
+P083,1107095.Acém,0.2840,"IBGE, SIDRA tabela 7060, peso do subitem no Brasil em outubro 2026"
+P084,1107084.Contrafilé,0.4939,"IBGE, SIDRA tabela 7060, peso do subitem no Brasil em outubro 2026"
+P085,1109008.Linguiça,0.2836,"IBGE, SIDRA tabela 7060, peso do subitem no Brasil em outubro 2026"
+P086,1109007.Salsicha,0.0379,"IBGE, SIDRA tabela 7060, peso do subitem no Brasil em outubro 2026"
+P087,1108080.Peixe - tilápia,0.0408,"IBGE, SIDRA tabela 7060, peso do subitem no Brasil em outubro 2026"
+P088,1106008.Banana - prata,0.1923,"IBGE, SIDRA tabela 7060, peso do subitem no Brasil em outubro 2026"
+P089,1106017.Maçã,0.1562,"IBGE, SIDRA tabela 7060, peso do subitem no Brasil em outubro 2026"
+P090,1106039.Laranja - pera,0.0939,"IBGE, SIDRA tabela 7060, peso do subitem no Brasil em outubro 2026"
+P091,1106015.Limão,0.0439,"IBGE, SIDRA tabela 7060, peso do subitem no Brasil em outubro 2026"
+P092,1103028.Tomate,0.3000,"IBGE, SIDRA tabela 7060, peso do subitem no Brasil em outubro 2026"
+P093,1103043.Cebola,0.1785,"IBGE, SIDRA tabela 7060, peso do subitem no Brasil em outubro 2026"
+P094,1116010.Alho,0.1040,"IBGE, SIDRA tabela 7060, peso do subitem no Brasil em outubro 2026"
+P095,1103003.Batata-inglesa,0.2270,"IBGE, SIDRA tabela 7060, peso do subitem no Brasil em outubro 2026"
+P096,1103044.Cenoura,0.0693,"IBGE, SIDRA tabela 7060, peso do subitem no Brasil em outubro 2026"
+P097,1105001.Alface,0.1245,"IBGE, SIDRA tabela 7060, peso do subitem no Brasil em outubro 2026"
+P098,1106018.Mamão,0.1150,"IBGE, SIDRA tabela 7060, peso do subitem no Brasil em outubro 2026"
+P099,1103020.Abobrinha,0.0106,"IBGE, SIDRA tabela 7060, peso do subitem no Brasil em outubro 2026"
+P100,1103026.Pimentão,0.0223,"IBGE, SIDRA tabela 7060, peso do subitem no Brasil em outubro 2026"
