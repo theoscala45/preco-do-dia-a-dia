@@ -20,7 +20,7 @@ A tabela de preços é a grande. Cada linha é um preço de um produto, numa red
 
 **redes.csv** (9 linhas). `tipo_preco` diz se o preço muda por CEP, por loja, se é único ou se ainda falta confirmar. `situacao` resume o que a leitura das regras do site permitiu.
 
-**links.csv**. Uma linha por produto e rede. Hoje só tem o Tenda. A coluna `observacao` explica cada decisão. `status` vale:
+**links.csv**. Uma linha por produto e rede. Hoje tem o Tenda e o Atacadão. A coluna `observacao` explica cada decisão. `status` vale:
 - `achado`: a página confirma marca, tamanho e tipo. O coletor lê.
 - `variante`: mesma marca e mesmo tamanho, muda só a linha, o sabor, a fragrância ou a embalagem (Lux jasmim, Seda Ceramidas). Para carnes e hortifruti, que se comparam por kg, o tamanho da bandeja não importa. O coletor lê.
 - `tamanho_diferente`: a rede só vende outro tamanho (presunto 180 g em vez de 200 g). Fica fora da coleta e do índice.

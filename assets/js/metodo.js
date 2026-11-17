@@ -35,9 +35,18 @@ $('estadoColeta').textContent = dados.exemplo
     : 'A coleta ainda não está rodando. Por isso os preços que o site mostra hoje são inventados, e a faixa no topo avisa. Ela some sozinha quando o site passar a usar os preços reais.')
   : `Os preços do site vêm da coleta. A última data lida é ${new Date(dados.datas.at(-1) + 'T12:00').toLocaleDateString('pt-BR')}.`;
 if (links.length) {
-  const n = s => links.filter(l => l.status === s).length;
-  const tenda = links.filter(l => l.rede_id === 'tenda').length;
-  $('estadoLinks').textContent = `A primeira rede preparada é o Tenda. Dos ${tenda} produtos da cesta, ${n('achado')} têm página confirmada no site do Tenda, ${n('variante') ? n('variante') + ' entram com uma variação da mesma marca e do mesmo tamanho (outra fragrância, sabor ou linha), ' : ''}${n('conferir') ? n('conferir') + ' ainda precisam de conferência, ' : ''}${n('tamanho_diferente') ? n('tamanho_diferente') + ' só existem em outro tamanho e ficam de fora, ' : ''}${n('nao_achado')} não foram achados e ${n('bloqueado_robots')} ${n('bloqueado_robots') === 1 ? 'está bloqueado' : 'estão bloqueados'} pelo robots.txt.`;
+  const nomes = { tenda: 'Tenda', atacadao: 'Atacadão' };
+  const frases = Object.keys(nomes).filter(r => links.some(l => l.rede_id === r)).map(r => {
+    const n = st => links.filter(l => l.rede_id === r && l.status === st).length;
+    const lidos = n('achado') + n('variante');
+    const partes = [`${n('achado')} com o produto exato`];
+    if (n('variante')) partes.push(`${n('variante')} com uma variação da mesma marca e do mesmo tamanho (outra fragrância, sabor ou linha)`);
+    if (n('tamanho_diferente')) partes.push(`${n('tamanho_diferente')} só em outro tamanho, que fica de fora`);
+    if (n('nao_achado')) partes.push(`${n('nao_achado')} não ${n('nao_achado') === 1 ? 'achado' : 'achados'}`);
+    if (n('bloqueado_robots')) partes.push(`${n('bloqueado_robots')} bloqueado pelo robots.txt`);
+    return `${nomes[r]}: ${lidos} produtos coletados. Dos 100, ${partes.slice(0, -1).join(', ')} e ${partes.at(-1)}.`;
+  });
+  $('estadoLinks').textContent = `Para cada rede, cada produto da cesta foi ligado à página certa no site, conferindo o título da página. ${frases.join(' ')}`;
 }
 
 iniciar(dados);

@@ -99,3 +99,103 @@ P097,tenda,https://www.tendaatacado.com.br/produto/alface-crespa-unidade-911,ach
 P098,tenda,https://www.tendaatacado.com.br/produto/mamao-formosa-kg,achado,
 P099,tenda,https://www.tendaatacado.com.br/produto/abobrinha-italiana-kg,tamanho_diferente,"Vendida por unidade, não por kg. Vendida por unidade, e a cesta compara por kg. Fica fora."
 P100,tenda,https://www.tendaatacado.com.br/produto/pimentao-verde-440g-23323,achado,Saco de 440 g. Comparar por kg.
+P001,atacadao,https://www.atacadao.com.br/arroz-branco-camil-tipo-1-12658/p,achado,Arroz Branco Camil Tipo 1 5kg.
+P002,atacadao,https://www.atacadao.com.br/arroz-tio-joao-agulhinha-tipo-1-5148/p,achado,Arroz Tio João Agulhinha Tipo 1 5kg.
+P003,atacadao,https://www.atacadao.com.br/feijao-carioca-camil-tipo-1-7382/p,achado,Feijão Carioca Camil Tipo 1 1kg.
+P004,atacadao,https://www.atacadao.com.br/feijao-preto-camil-tipo-1-3733/p,achado,Feijão Preto Camil Tipo 1 1kg.
+P005,atacadao,https://www.atacadao.com.br/oleo-de-soja-soya-11300/p,achado,Óleo de Soja Soya 900ml.
+P006,atacadao,https://www.atacadao.com.br/azeite-de-oliva-gallo-extra-virgem-7082/p,achado,Azeite de Oliva Gallo Extra Virgem 500ml.
+P007,atacadao,https://www.atacadao.com.br/acucar-uniao-refinado-21176/p,achado,Açúcar União Refinado 1kg.
+P008,atacadao,https://www.atacadao.com.br/acucar-cristal-uniao-cristalcucar-17930/p,achado,Açúcar Cristal União Cristalçúcar 1kg.
+P009,atacadao,https://www.atacadao.com.br/cafe-pilao-extra-forte-56769/p,achado,Café Pilão Extra Forte 500g. Existem também as versões a vácuo e almofada.
+P010,atacadao,https://www.atacadao.com.br/cafe-3-coracoes-tradicional-23371/p,achado,Café 3 Corações Tradicional 500g.
+P011,atacadao,https://www.atacadao.com.br/farinha-de-trigo-dona-benta-tipo-1-23162/p,achado,Farinha de Trigo Dona Benta Tipo 1 1kg.
+P012,atacadao,https://www.atacadao.com.br/farinha-de-mandioca-yoki-torrada-6277/p,variante,Só a Farinha de Mandioca Yoki Torrada 500g (a cesta não fixa o tipo; no Tenda é a fina).
+P013,atacadao,https://www.atacadao.com.br/macarrao-com-ovos-renata-espaguete-7647/p,achado,Macarrão com Ovos Renata Espaguete 500g.
+P014,atacadao,https://www.atacadao.com.br/macarrao-com-ovos-barilla-parafuso-74385/p,achado,Macarrão com Ovos Barilla Parafuso 500g.
+P015,atacadao,https://www.atacadao.com.br/molho-de-tomate-pomarola-tradicional-28220/p,achado,Molho de Tomate Pomarola Tradicional 340g. Há outra página igual (30466).
+P016,atacadao,https://www.atacadao.com.br/extrato-de-tomate-elefante-pote-com-300g-83714/p,achado,Extrato de Tomate Elefante 300g.
+P017,atacadao,https://www.atacadao.com.br/sal-cisne-refinado-extra-1675/p,achado,Sal Cisne Refinado Extra 1kg.
+P018,atacadao,https://www.atacadao.com.br/fuba-mimoso-yoki-34666/p,tamanho_diferente,Só Fubá Mimoso Yoki de 4 e 5 kg. Fica fora.
+P019,atacadao,https://www.atacadao.com.br/aveia-quaker-flocos-67860/p,achado,Aveia Quaker Flocos 450g.
+P020,atacadao,https://www.atacadao.com.br/achocolatado-em-po-nescau-84137/p,tamanho_diferente,"Nescau de 370g, não 350g. Fica fora."
+P021,atacadao,https://www.atacadao.com.br/biscoito-vitarella-cream-cracker-tradicional-17913/p,tamanho_diferente,Vitarella Cream Cracker Tradicional leve 400g pague 350g: o pacote tem 400g. Fica fora.
+P022,atacadao,https://www.atacadao.com.br/biscoito-recheado-passatempo-nestle-chocolate-pacote-com-130g-55979/p,achado,Biscoito Recheado Passatempo Nestlé Chocolate 130g.
+P023,atacadao,https://www.atacadao.com.br/pao-de-forma-pullman-tradicional-71620/p,achado,Pão de Forma Pullman Tradicional 480g.
+P024,atacadao,https://www.atacadao.com.br/margarina-qualy-com-sal-35265/p,achado,Margarina Qualy Com sal 500g.
+P025,atacadao,https://www.atacadao.com.br/maionese-hellmann%E2%80%99s-1471/p,achado,Maionese Hellmann's 500g. Há outra página igual (29993).
+P026,atacadao,https://www.atacadao.com.br/ketchup-heinz-tradicional-pet-com-397g-36531/p,achado,Ketchup Heinz Tradicional 397g.
+P027,atacadao,https://www.atacadao.com.br/sardinha-gomes-da-costa-oleo-lata-com-150g-23255/p,tamanho_diferente,Sardinha Gomes da Costa em óleo só de 75g e 150g. Fica fora.
+P028,atacadao,https://www.atacadao.com.br/atum-ralado-gomes-da-costa-oleo-lata-com-120g-8958/p,tamanho_diferente,Atum Ralado Gomes da Costa em óleo só de 120g e 450g. Fica fora.
+P029,atacadao,https://www.atacadao.com.br/milho-verde-quero-lata-com-170g-65823/p,achado,Milho Verde Quero 170g (lata). Há outras páginas de 170g.
+P030,atacadao,https://www.atacadao.com.br/ervilha-quero-65822/p,achado,Ervilha Quero 170g.
+P031,atacadao,https://www.atacadao.com.br/vinagre-de-alcool-castelo-frasco-com-750ml-41256/p,achado,Vinagre de Álcool Castelo 750ml.
+P032,atacadao,,nao_achado,Só Sazón de outros sabores e caldos. Não há o completo.
+P033,atacadao,https://www.atacadao.com.br/caldo-knorr-galinha-balance-caixeta-com-57g-54115/p,variante,Caldo Knorr Galinha Balance 57g (linha Balance).
+P034,atacadao,https://www.atacadao.com.br/leite-condensado-moca-tp-com-395g-26139/p,achado,Leite Condensado Moça 395g.
+P035,atacadao,https://www.atacadao.com.br/creme-de-leite-nestle-21220/p,achado,Creme de Leite Nestlé 200g.
+P036,atacadao,https://www.atacadao.com.br/mistura-para-bolo-dona-benta-chocolate-15659/p,variante,Mistura para Bolo Dona Benta Chocolate 450g. Mesmo sabor escolhido no Tenda.
+P037,atacadao,https://www.atacadao.com.br/agua-mineral-crystal-sem-gas-13490/p,achado,"Água Mineral Crystal Sem gás 1,5L. Há outra página igual (66099)."
+P038,atacadao,https://www.atacadao.com.br/refrigerante-coca-cola-pet-com-2l-12380/p,achado,Refrigerante Coca-Cola 2L. Há outras páginas iguais.
+P039,atacadao,https://www.atacadao.com.br/leite-longa-vida-italac-integral-tp-com-1l-20401/p,achado,Leite Longa Vida Italac Integral 1L.
+P040,atacadao,https://www.atacadao.com.br/leite-longa-vida-piracanjuba-sem-tampa-integral-tp-com-1l-18813/p,achado,Leite Longa Vida Piracanjuba Sem tampa Integral 1L.
+P041,atacadao,https://www.atacadao.com.br/leite-longa-vida-piracanjuba-desnatado-sem-tampa-tp-com-1l-18812/p,achado,Leite Longa Vida Piracanjuba Desnatado Sem tampa 1L.
+P042,atacadao,https://www.atacadao.com.br/leite-em-po-ninho-integral-71724/p,achado,Leite em Pó Ninho Integral 380g. Há outras páginas de 380g (pacote e lata).
+P043,atacadao,https://www.atacadao.com.br/manteiga-aviacao-com-sal-32778/p,achado,Manteiga Aviação Com sal 200g.
+P044,atacadao,https://www.atacadao.com.br/queijo-mussarela-fatiado-tirolez-88884/p,tamanho_diferente,Muçarela fatiada Tirolez só vendida por quilo. Fica fora.
+P045,atacadao,https://www.atacadao.com.br/queijo-prato-tirolez-fatiado-88887/p,tamanho_diferente,Queijo prato fatiado Tirolez só vendido por quilo. Fica fora.
+P046,atacadao,https://www.atacadao.com.br/requeijao-vigor-tradicional-14830/p,achado,Requeijão Vigor Tradicional 200g.
+P047,atacadao,https://www.atacadao.com.br/iogurte-natural-nestle-integral-copo-com-170g-58375/p,achado,Iogurte Natural Nestlé Integral 170g.
+P048,atacadao,https://www.atacadao.com.br/iogurte-batavo-morango-69315/p,achado,"Iogurte Batavo Morango 1,25kg."
+P049,atacadao,https://www.atacadao.com.br/presunto-sadia-fatiado-51281/p,achado,Presunto Sadia Fatiado 200g.
+P050,atacadao,https://www.atacadao.com.br/queijo-minas-frescal-tirolez-85608/p,tamanho_diferente,Queijo Minas Frescal Tirolez só vendido por quilo. Fica fora.
+P051,atacadao,https://www.atacadao.com.br/ovo-branco-grande-polpa-bandeja-com-12-unidades-21826/p,achado,Ovo Branco Grande Polpa 12 un.
+P052,atacadao,https://www.atacadao.com.br/ovo-vermelho-grande-21852/p,achado,Ovo Vermelho Grande 12 un.
+P053,atacadao,https://www.atacadao.com.br/papel-higienico-neve-folha-dupla-30m-71657/p,achado,Papel Higiênico Neve Folha Dupla 30m 12 rolos.
+P054,atacadao,https://www.atacadao.com.br/papel-higienico-personal-vip-folha-dupla---30m-pacote-com-12-rolos-56936/p,variante,"Personal Vip Folha Dupla 30m, leve 12 pague 11."
+P055,atacadao,https://www.atacadao.com.br/sabonete-dove-branco-unidade-com-90g-25200/p,achado,Sabonete Dove Branco 90g.
+P056,atacadao,https://www.atacadao.com.br/sabonete-lux-buque-de-jasmim-61006/p,variante,Sabonete Lux Buquê de Jasmim 85g. Mesma fragrância do Tenda.
+P057,atacadao,https://www.atacadao.com.br/creme-dental-colgate-total-clean-mint-10872/p,variante,Creme Dental Colgate Total Clean Mint 90g. O Total 12 passou a se chamar Total.
+P058,atacadao,https://www.atacadao.com.br/creme-dental-colgate-maxima-protecao-anticaries-12075/p,achado,Creme Dental Colgate Máxima Proteção Anticáries 90g.
+P059,atacadao,https://www.atacadao.com.br/escova-dental-colgate-essencial-clean-45580/p,variante,Escova Colgate Essencial Clean 1 un. Mesmo modelo do Tenda.
+P060,atacadao,https://www.atacadao.com.br/shampoo-seda-brilho-ceramidas-51463/p,variante,Shampoo Seda Brilho Ceramidas 325ml. Mesma linha (Ceramidas) do Tenda.
+P061,atacadao,https://www.atacadao.com.br/condicionador-seda-brilho-ceramidas-52065/p,variante,Condicionador Seda Brilho Ceramidas 325ml. Mesma linha do shampoo.
+P062,atacadao,https://www.atacadao.com.br/desodorante-aerossol-rexona-antibacterial-frasco-com-150ml-55725/p,variante,Desodorante Rexona Antibacterial 150ml. Não há a linha Clinical em 150ml.
+P063,atacadao,https://www.atacadao.com.br/fio-dental-oral-b-essencial-50m-unidade-80592/p,achado,Fio Dental Oral-B Essencial 50m.
+P064,atacadao,https://www.atacadao.com.br/absorvente-super-protecao-always-suave-com-abas-59926/p,achado,Absorvente Always Super Proteção Suave com abas 8 un.
+P065,atacadao,https://www.atacadao.com.br/fralda-descartavel-huggies-maxima-protecao-m-83418/p,variante,Huggies Máxima Proteção M 66 un. A cesta não fixa a quantidade.
+P066,atacadao,https://www.atacadao.com.br/lava-roupas-em-po-omo-lavagem-perfeita-64044/p,achado,"Omo em pó Lavagem Perfeita 1,6kg."
+P067,atacadao,https://www.atacadao.com.br/lava-roupa-liquido-omo-poder-acelerador-frasco-com-3l-44692/p,achado,Omo líquido Poder Acelerador 3L.
+P068,atacadao,https://www.atacadao.com.br/amaciante-para-roupas-concentrado-comfort-56514/p,achado,Amaciante Concentrado Comfort 500ml.
+P069,atacadao,https://www.atacadao.com.br/detergente-liquido-ype-neutro-11757/p,achado,Detergente Ypê Neutro 500ml.
+P070,atacadao,https://www.atacadao.com.br/agua-sanitaria-qboa-21369/p,achado,Água Sanitária Qboa 2L. Há outra página igual (89724).
+P071,atacadao,https://www.atacadao.com.br/desinfetante-pinho-sol-original-1291/p,achado,Desinfetante Pinho Sol Original 500ml.
+P072,atacadao,https://www.atacadao.com.br/limpador-veja-multiuso-antibacteriano-71134/p,variante,Limpador Veja Multiuso Antibacteriano 500ml.
+P073,atacadao,https://www.atacadao.com.br/esponja-scotch-brite-ref--0066-pacote-com-3-unidades-14702/p,achado,"Esponja Scotch-Brite Ref. 0066, 3 un."
+P074,atacadao,https://www.atacadao.com.br/saco-de-lixo-dover-roll-azul-50l-6230/p,achado,"Saco de Lixo Dover Roll Azul 50L, 20 un."
+P075,atacadao,https://www.atacadao.com.br/toalha-de-papel-snob-60-folhas-24318/p,achado,Toalha de Papel Snob 2 rolos.
+P076,atacadao,https://www.atacadao.com.br/sabao-em-barra-ype-vermelho-pacote-com-5x180g-75081/p,variante,Sabão em Barra Ypê Vermelho 5x180g. A cesta não fixa o tipo.
+P077,atacadao,https://www.atacadao.com.br/alcool-desinfetante-montenegro-70%C2%B0inpm-frasco-com-1l-76610/p,achado,Álcool Desinfetante Montenegro 70° INPM 1L.
+P078,atacadao,https://www.atacadao.com.br/inseticida-aerosol-sbp-multi-inseticida-tubo-com-300ml-23808/p,achado,Inseticida SBP Multi Inseticida 300ml.
+P079,atacadao,https://www.atacadao.com.br/file-de-peito-de-frango-sadia-congelado-44343/p,variante,Filé de Peito de Frango Sadia Congelado 1kg. Mesmo produto do Tenda. Comparar por kg.
+P080,atacadao,https://www.atacadao.com.br/coxa-e-sobrecoxa-de-frango-aurora-congelada-9737/p,variante,Coxa e Sobrecoxa Aurora Congelada 1kg. Comparar por kg.
+P081,atacadao,https://www.atacadao.com.br/frango-inteiro-sadia-congelado-sem-miudos-62563/p,achado,"Frango Inteiro Sadia Congelado, por quilo."
+P082,atacadao,https://www.atacadao.com.br/carne-bovina-moida-de-patinho-reserva-resfriada-85424/p,achado,"Carne Bovina Moída de Patinho Reserva Resfriada, por quilo."
+P083,atacadao,https://www.atacadao.com.br/carne-bovina-acem-sem-osso-reserva-resfriada-85698/p,achado,"Acém sem osso Reserva Resfriado, por quilo."
+P084,atacadao,https://www.atacadao.com.br/carne-bovina-contrafile-sem-osso-reserva-resfriada-85395/p,achado,"Contrafilé sem osso Reserva Resfriado, por quilo."
+P085,atacadao,https://www.atacadao.com.br/linguica-toscana-seara-resfriada-4757/p,achado,"Linguiça Toscana Seara Resfriada, por quilo."
+P086,atacadao,https://www.atacadao.com.br/salsicha-hot-dog-perdigao-resfriada-5970/p,achado,Salsicha Hot Dog Perdigão Resfriada 500g.
+P087,atacadao,https://www.atacadao.com.br/file-de-tilapia-cancao-congelado-83952/p,variante,Filé de Tilápia Canção Congelado 800g. Mesma marca do Tenda. Comparar por kg.
+P088,atacadao,https://www.atacadao.com.br/banana-prata-quilo-1646/p,achado,"Banana Prata, por quilo."
+P089,atacadao,https://www.atacadao.com.br/maca-nacional-gala-quilo-1825/p,achado,"Maçã Nacional Gala, por quilo."
+P090,atacadao,https://www.atacadao.com.br/laranja-pera-2488/p,achado,"Laranja-pera, por quilo."
+P091,atacadao,https://www.atacadao.com.br/limao-taiti-quilo-1805/p,achado,"Limão-taiti, por quilo."
+P092,atacadao,https://www.atacadao.com.br/tomate-salada-1688/p,achado,"Tomate Salada, por quilo."
+P093,atacadao,https://www.atacadao.com.br/cebola-quilo-14692/p,achado,"Cebola, por quilo."
+P094,atacadao,https://www.atacadao.com.br/alho-a-granel-21933/p,achado,"Alho a granel, por quilo."
+P095,atacadao,https://www.atacadao.com.br/batata-lavada-quilo-14691/p,achado,"Batata Lavada, por quilo."
+P096,atacadao,https://www.atacadao.com.br/cenoura-quilo-1920/p,achado,"Cenoura, por quilo."
+P097,atacadao,https://www.atacadao.com.br/alface-crespa-unidade-1592/p,achado,"Alface Crespa, unidade."
+P098,atacadao,https://www.atacadao.com.br/mamao-formosa-quilo-4786/p,achado,"Mamão Formosa, por quilo."
+P099,atacadao,https://www.atacadao.com.br/abobrinha-brasileira-1891/p,tamanho_diferente,Abobrinha só em caixa. Fica fora.
+P100,atacadao,https://www.atacadao.com.br/pimentao-verde-quilo-1527/p,achado,"Pimentão Verde, por quilo."
