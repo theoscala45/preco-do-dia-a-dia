@@ -1,0 +1,46 @@
+// Página "Método e fontes": as tabelas vêm dos mesmos arquivos que o resto do site usa.
+import { $, gsap, ScrollTrigger, calmo, carregar, iniciar } from './base.js';
+
+const [dados, geo, rotas] = await carregar('dados', 'geo', 'rotas');
+// tabela CSV simples (sem vírgula dentro dos campos) -> lista de objetos
+const csv = async caminho => {
+  const [cab, ...linhas] = (await (await fetch(caminho)).text()).trim().split(/\r?\n/).map(l => l.split(','));
+  return linhas.map(l => Object.fromEntries(cab.map((c, i) => [c, l[i] ?? ''])));
+};
+const [links, execucoes] = await Promise.all([csv('data/links.csv').catch(() => []), csv('data/execucoes.csv').catch(() => [])]);
+
+// grupos da cesta
+const cats = [...new Set(dados.produtos.map(p => p.cat))];
+$('grupos').innerHTML = cats.map(c => {
+  const todos = dados.produtos.filter(p => p.cat === c), noIndice = todos.filter(p => p.indice).length;
+  return `<li><b>${todos.length}</b><span>${c}</span><small>${noIndice ? 'no índice' : 'só no comparador'}</small></li>`;
+}).join('');
+$('tabProdutos').innerHTML = `<thead><tr><th scope="col">Produto</th><th scope="col">Marca</th><th scope="col">Tamanho</th><th scope="col">Grupo</th><th scope="col">Índice</th></tr></thead><tbody>${
+  dados.produtos.map(p => `<tr><th scope="row">${p.nome}</th><td>${p.marca}</td><td>${p.tam}</td><td>${p.cat}</td><td>${p.indice ? 'sim' : 'não'}</td></tr>`).join('')}</tbody>`;
+$('tabPontos').innerHTML = `<thead><tr><th scope="col">Ponto</th><th scope="col">Zona</th><th scope="col">CEP</th><th scope="col">Rua</th><th scope="col">Perfil (do projeto)</th></tr></thead><tbody>${
+  geo.pontos.map(p => `<tr><th scope="row">${p.bairro}</th><td>${p.zona}</td><td>${p.cep}</td><td>${p.rua}</td><td>${p.perfil}</td></tr>`).join('')}</tbody>`;
+$('nCesta').textContent = dados.itens_na_cesta;
+$('nLojas').textContent = rotas.lojas.length;
+
+// estado da coleta, dito como está
+const dias = new Set(execucoes.map(e => e.data)).size;
+$('estadoColeta').textContent = dados.exemplo
+  ? (dias
+    ? `A coleta já rodou em ${dias} ${dias === 1 ? 'dia' : 'dias'}, mas ainda não cobre todas as redes. Por isso os preços que o site mostra hoje são inventados, e a faixa no topo avisa. Ela some sozinha quando o site passar a usar os preços reais.`
+    : 'A coleta ainda não está rodando. Por isso os preços que o site mostra hoje são inventados, e a faixa no topo avisa. Ela some sozinha quando o site passar a usar os preços reais.')
+  : `Os preços do site vêm da coleta. A última data lida é ${new Date(dados.datas.at(-1) + 'T12:00').toLocaleDateString('pt-BR')}.`;
+if (links.length) {
+  const n = s => links.filter(l => l.status === s).length;
+  const tenda = links.filter(l => l.rede_id === 'tenda').length;
+  $('estadoLinks').textContent = `A primeira rede preparada é o Tenda. Dos ${tenda} produtos da cesta, ${n('achado')} têm página confirmada no site do Tenda, ${n('variante') ? n('variante') + ' entram com uma variação da mesma marca e do mesmo tamanho, ' : ''}${n('conferir') ? n('conferir') + ' ainda precisam de conferência, ' : ''}${n('tamanho_diferente') ? n('tamanho_diferente') + ' só existem em outro tamanho e ficam de fora, ' : ''}${n('nao_achado')} não foram achados e ${n('bloqueado_robots')} ${n('bloqueado_robots') === 1 ? 'está bloqueado' : 'estão bloqueados'} pelo robots.txt.`;
+}
+
+iniciar(dados);
+
+// o índice lateral marca a seção em que a leitura está
+document.querySelectorAll('.bloco').forEach(sec => {
+  const a = document.querySelector(`.indice a[href="#${sec.id}"]`);
+  ScrollTrigger.create({ trigger: sec, start: 'top 45%', end: 'bottom 45%', onToggle: s => a?.classList.toggle('ativo', s.isActive) });
+});
+document.querySelector('.abre-lista')?.addEventListener('toggle', () => ScrollTrigger.refresh());
+if (!calmo) gsap.from('.grupos li', { autoAlpha: 0, y: 20, duration: 0.7, stagger: 0.08, scrollTrigger: { trigger: '.grupos', start: 'top 88%', once: true } });

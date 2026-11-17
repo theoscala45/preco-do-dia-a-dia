@@ -11,17 +11,20 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%230C0C0D'/%3E%3Ccircle cx='16' cy='16' r='7' fill='%23FF7A1A'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="assets/vendor/maplibre-gl.css">
 <link rel="stylesheet" href="assets/css/estilo.css">
+<script>if(!matchMedia('(prefers-reduced-motion: reduce)').matches){document.documentElement.classList.add('anima');setTimeout(function(){document.documentElement.classList.add('mostra')},5000)}</script>
 </head>
-<body>
+<body class="pg-inicio">
 
 <p class="aviso" id="aviso" role="note" hidden><b>Dados de exemplo.</b> Os preços reais começam quando o coletor estiver rodando.</p>
 
 <header class="topo">
-  <a class="marca" href="#inicio">O Preço do Dia a Dia</a>
-  <nav aria-label="Seções">
-    <a href="#como">Como funciona</a>
-    <a href="#inflacao">Inflação do bairro</a>
-    <a class="nav-cta" href="#cesta">Montar lista</a>
+  <a class="marca" href="index.html">O Preço do Dia a Dia</a>
+  <button type="button" class="menu-botao" id="menuBotao" aria-expanded="false" aria-controls="menu">Menu</button>
+  <nav id="menu" aria-label="Páginas">
+    <a href="index.html">Início</a>
+    <a href="lista.html">Sua lista</a>
+    <a href="inflacao.html">Inflação do bairro</a>
+    <a href="metodo.html">Método e fontes</a>
   </nav>
 </header>
 
@@ -30,19 +33,16 @@
     <div class="palco" id="palco" aria-hidden="true">
       <div id="mapa"></div>
       <div class="dica" id="dica"></div>
+      <ol class="trilha" id="trilha"><li>01</li><li>02</li><li>03</li><i></i></ol>
     </div>
 
     <div class="trilho">
       <section class="abre">
-        <p class="sobre">São Paulo, capital <i></i> 25 pontos de coleta <i></i> 7 redes</p>
-        <h1 class="titulo">
-          <span class="linha"><span>Quanto custa a mesma</span></span>
-          <span class="linha"><span>compra em cada bairro</span></span>
-          <span class="linha"><span>de São Paulo?</span></span>
-        </h1>
-        <p class="lide" id="lide">A mesma lista de 100 produtos, em 7 redes de supermercado. Digite seu CEP: o mapa vai até o seu bairro e traça o caminho até a rede mais barata.</p>
+        <p class="sobre" data-surge>São Paulo, capital <i></i> 25 pontos de coleta <i></i> 7 redes</p>
+        <h1 class="titulo" data-titulo>Quanto custa a mesma compra em cada bairro de São Paulo?</h1>
+        <p class="lide" id="lide" data-surge>A mesma lista de 100 produtos, em 7 redes de supermercado. Digite seu CEP: o mapa vai até o seu bairro e traça o caminho até a rede mais barata.</p>
 
-        <form class="cep-form" id="cepForm" novalidate>
+        <form class="cep-form" id="cepForm" novalidate data-surge>
           <label for="cep">Seu CEP</label>
           <div class="cep-linha">
             <input id="cep" name="cep" inputmode="numeric" autocomplete="postal-code" placeholder="05422-000" maxlength="9" aria-describedby="cepMsg">
@@ -51,7 +51,7 @@
           <p class="cep-msg" id="cepMsg" aria-live="polite"></p>
         </form>
 
-        <div class="media" id="media">
+        <div class="media" id="media" data-surge>
           <span id="mediaRotulo">Cesta de 78 itens, média da cidade</span>
           <span class="preco"><small>R$</small><b id="etqInt">0</b><sup id="etqCent">,00</sup></span>
         </div>
@@ -86,7 +86,7 @@
           <p class="passo">02</p>
           <h2>Sete redes para cada CEP</h2>
           <p>Em cada ponto, o site consulta o preço que as redes mostram na internet para aquele CEP. O mapa traça o caminho de carro até a loja mais próxima de cada rede. O laranja leva à mais barata.</p>
-          <p class="nota">Lojas e ruas vêm do OpenStreetMap, um mapa feito por voluntários: pode faltar loja. O preço é o do site da rede para o CEP, não o da prateleira daquela loja. Carnes, frutas e verduras entram na comparação de listas, mas ficam fora da cesta do mapa. Por enquanto, só a capital.</p>
+          <p class="nota">Lojas e ruas vêm do OpenStreetMap, um mapa feito por voluntários: pode faltar loja. O preço é o do site da rede para o CEP, não o da prateleira daquela loja. Por enquanto, só a capital.</p>
         </div>
       </section>
 
@@ -99,26 +99,35 @@
             <svg id="grafico" viewBox="0 0 520 300" role="img" aria-labelledby="grafT"><title id="grafT">Índice da cesta por ponto de coleta comparado com o IPCA, em 12 meses</title></svg>
             <figcaption>Base 100 no primeiro mês. Cada produto pesa igual. Os pesos do IPCA entram depois.</figcaption>
           </figure>
+          <a class="seta" href="inflacao.html">Ver a inflação por bairro, zona e perfil</a>
         </div>
       </section>
     </div>
   </div>
 
-  <section class="cesta" id="cesta">
+  <section class="faixa-numeros" data-risco>
+    <div data-surge><b data-conta="100">100</b><span>produtos na cesta, com marca e tamanho fixos</span></div>
+    <div data-surge><b data-conta="7">7</b><span>redes de supermercado comparadas</span></div>
+    <div data-surge><b data-conta="25">25</b><span>pontos de coleta, cinco por zona</span></div>
+    <div data-surge><b data-conta="212" id="numLojas">212</b><span>lojas reais no mapa, do OpenStreetMap</span></div>
+  </section>
+
+  <section class="cesta" id="cesta" data-risco>
     <div class="cesta-texto">
-      <p class="passo">Comparador</p>
-      <h2>Monte sua lista</h2>
-      <p>Escolha os produtos. O resultado mostra onde a lista sai mais barata numa loja só e se compensa dividir a compra em duas. Nunca mais que duas.</p>
+      <p class="passo" data-surge>Comparador</p>
+      <h2 data-titulo>Monte sua lista</h2>
+      <p data-surge>Escolha os produtos. O site mostra onde a lista sai mais barata numa loja só e se compensa dividir a compra em duas. Nunca mais que duas.</p>
 
-      <p class="cesta-ponto" id="cestaPonto"></p>
-
-      <label for="busca">Adicionar produto</label>
-      <input id="busca" type="search" placeholder="arroz, leite, sabão em pó" autocomplete="off" aria-controls="sugestoes">
-      <ul class="sugestoes" id="sugestoes"></ul>
-      <button type="button" class="quieto" id="basica">Usar a lista básica de 12 itens</button>
+      <div data-surge>
+        <p class="cesta-ponto" id="cestaPonto"></p>
+        <label for="busca">Adicionar produto</label>
+        <input id="busca" type="search" placeholder="arroz, leite, sabão em pó" autocomplete="off" aria-controls="sugestoes">
+        <ul class="sugestoes" id="sugestoes"></ul>
+        <button type="button" class="quieto" id="basica">Usar a lista básica de 12 itens</button>
+      </div>
     </div>
 
-    <div class="cupom-mesa">
+    <div class="cupom-mesa" data-surge data-desliza="28">
       <article class="cupom" id="cupom" aria-live="polite">
         <header>
           <strong>Sua lista</strong>
@@ -127,14 +136,29 @@
         <ul class="cupom-itens" id="cupomItens"></ul>
         <p class="cupom-vazio" id="cupomVazio">A lista está vazia. Adicione um produto ou use a lista básica.</p>
         <div class="cupom-total" id="cupomTotal" hidden>
-          <div class="tot-linha"><span>Numa loja só</span><b id="totLoja"></b></div>
+          <div class="tot-linha"><span>Mais barato numa loja só</span><b id="totLoja"></b></div>
           <div class="tot-grande preco"><small>R$</small><b id="totInt">0</b><sup id="totCent">,00</sup></div>
           <p class="tot-falta" id="totFalta"></p>
-          <div class="tot-duas" id="totDuas" hidden></div>
-          <ol class="ranking" id="ranking" aria-label="Total da lista em cada rede"></ol>
+          <p class="tot-duas" id="totDuas" hidden></p>
+          <a class="botao" href="lista.html">Ver o resultado completo</a>
         </div>
       </article>
     </div>
+  </section>
+
+  <section class="portas" data-risco>
+    <a class="porta" href="inflacao.html" data-surge>
+      <span class="passo">Índice local</span>
+      <strong>Inflação do seu bairro</strong>
+      <span>A mesma cesta, mês a mês, contra o IPCA. Por ponto, por zona e por perfil.</span>
+      <span class="seta">Abrir</span>
+    </a>
+    <a class="porta" href="metodo.html" data-surge>
+      <span class="passo">Como é feito</span>
+      <strong>Método e fontes</strong>
+      <span>Como os produtos foram escolhidos, de onde vêm os preços e o que o site não sabe.</span>
+      <span class="seta">Abrir</span>
+    </a>
   </section>
 </main>
 
@@ -144,6 +168,10 @@
   <p>Seu CEP e sua lista ficam só no seu navegador. Código e tabelas abertos no <a href="https://github.com/theoscala45/preco-do-dia-a-dia">GitHub</a>.</p>
 </footer>
 
+<script src="assets/vendor/gsap.min.js" defer></script>
+<script src="assets/vendor/ScrollTrigger.min.js" defer></script>
+<script src="assets/vendor/SplitText.min.js" defer></script>
+<script src="assets/vendor/lenis.min.js" defer></script>
 <script src="assets/vendor/maplibre-gl.js" defer></script>
 <script type="module" src="assets/js/main.js"></script>
 </body>

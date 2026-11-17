@@ -8,7 +8,8 @@ Projeto em construção. **Os preços que o site mostra hoje são de exemplo (in
 
 | Pasta ou arquivo | O que é |
 |---|---|
-| `index.html`, `assets/` | O site. Página inicial com o mapa 3D, a história guiada pelo scroll e o comparador de lista. |
+| `index.html`, `lista.html`, `inflacao.html`, `metodo.html`, `assets/` | O site: início com o mapa real, resultado da lista, inflação do bairro, método e fontes. |
+| `.claude/skills/` | Skills de animação (GSAP e Lenis) usadas ao escrever o site. Não fazem parte do site. |
 | `DESIGN.md` | Direção visual: cores, tipografia, regras de movimento. |
 | `data/` | As tabelas do projeto (ver `data/LEIAME.md`). `data/exemplo/` tem os preços inventados. |
 | `tools/` | Scripts que geram as tabelas, o mapa e o arquivo de dados do site. |
@@ -48,4 +49,5 @@ Com `real`, a faixa "Dados de exemplo" some do site sozinha.
 - Contorno dos distritos: Prefeitura de São Paulo (GeoSampa), via `codigourbano/distritos-sp`.
 - Mapa, lojas e ruas: © colaboradores do OpenStreetMap (licença ODbL). Busca pelo Nominatim, rotas pelo OSRM.
 - Imagem do mapa: blocos do OpenFreeMap, carregados dos servidores deles quando a página abre. O estilo `assets/mapa-estilo.json` é uma adaptação do estilo Dark do OpenFreeMap.
-- MapLibre GL JS (BSD de 3 cláusulas) e família Red Hat (SIL Open Font License). As licenças estão em `assets/vendor` e `assets/fonts`.
+- MapLibre GL JS (BSD de 3 cláusulas), Lenis (MIT) e família Red Hat (SIL Open Font License). As licenças estão em `assets/vendor` e `assets/fonts`.
+- GSAP, ScrollTrigger e SplitText: licença padrão "no charge" da GreenSock (https://gsap.com/standard-license).

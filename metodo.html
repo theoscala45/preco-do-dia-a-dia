@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0C0C0D">
+<title>Método e fontes: O Preço do Dia a Dia</title>
+<meta name="description" content="Como a cesta foi escolhida, de onde vêm os preços, como o índice é calculado e o que o site não sabe.">
+<link rel="preload" href="assets/fonts/red-hat-display-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/red-hat-text-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%230C0C0D'/%3E%3Ccircle cx='16' cy='16' r='7' fill='%23FF7A1A'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/css/estilo.css">
+<script>if(!matchMedia('(prefers-reduced-motion: reduce)').matches){document.documentElement.classList.add('anima');setTimeout(function(){document.documentElement.classList.add('mostra')},5000)}</script>
+</head>
+<body class="pg-metodo">
+
+<p class="aviso" id="aviso" role="note" hidden><b>Dados de exemplo.</b> Os preços reais começam quando o coletor estiver rodando.</p>
+
+<header class="topo">
+  <a class="marca" href="index.html">O Preço do Dia a Dia</a>
+  <button type="button" class="menu-botao" id="menuBotao" aria-expanded="false" aria-controls="menu">Menu</button>
+  <nav id="menu" aria-label="Páginas">
+    <a href="index.html">Início</a>
+    <a href="lista.html">Sua lista</a>
+    <a href="inflacao.html">Inflação do bairro</a>
+    <a href="metodo.html">Método e fontes</a>
+  </nav>
+</header>
+
+<main class="pagina">
+  <header class="pg-topo">
+    <p class="sobre" data-surge>Método e fontes <i></i> o que o site sabe e o que não sabe</p>
+    <h1 class="titulo" data-titulo>Como os números deste site são feitos</h1>
+    <p class="lide" data-surge>De onde vêm os preços, como a cesta foi escolhida, como as contas são feitas e quais são os limites. Tudo o que está aqui pode ser conferido nas tabelas e no código, que são abertos.</p>
+  </header>
+
+  <dl class="resumo">
+    <div class="cartao" data-surge><dd><b data-conta="100">100</b></dd><dt>produtos na cesta, com marca e tamanho fixos</dt></div>
+    <div class="cartao" data-surge><dd><b data-conta="78">78</b></dd><dt>entram no índice. Carnes e hortifruti ficam fora</dt></div>
+    <div class="cartao" data-surge><dd><b data-conta="25">25</b></dd><dt>pontos de coleta na capital, cinco por zona</dt></div>
+    <div class="cartao" data-surge><dd><b data-conta="7">7</b></dd><dt>redes no site, de nove estudadas</dt></div>
+  </dl>
+
+  <div class="metodo-grade">
+    <nav class="indice" aria-label="Nesta página" data-surge>
+      <p class="passo">Nesta página</p>
+      <ol>
+        <li><a href="#cesta">A cesta de 100 produtos</a></li>
+        <li><a href="#pontos">Os 25 pontos de coleta</a></li>
+        <li><a href="#redes">As redes e as regras de cada uma</a></li>
+        <li><a href="#coleta">Como os preços são lidos</a></li>
+        <li><a href="#contas">Como as contas são feitas</a></li>
+        <li><a href="#mapa-e-rotas">O mapa, as lojas e as rotas</a></li>
+        <li><a href="#limites">O que o site não sabe</a></li>
+        <li><a href="#fontes">Fontes e licenças</a></li>
+      </ol>
+    </nav>
+
+    <div class="texto">
+      <section id="cesta" class="bloco">
+        <p class="passo" data-surge>01</p>
+        <h2 data-titulo>A cesta de 100 produtos</h2>
+        <div class="prosa" data-surge>
+          <p>A cesta tem 100 produtos de supermercado. Cada um tem marca e tamanho definidos, por exemplo "Arroz branco tipo 1, Camil, 5 kg". Assim o site compara sempre o mesmo produto entre redes e entre meses, e não "um arroz qualquer".</p>
+          <p>Os produtos se dividem em quatro grupos. Carnes, frutas e verduras entram no comparador de listas, mas ficam fora do índice de preços: o corte, o peso e a qualidade mudam de uma loja para outra, e a comparação deixaria de ser do mesmo produto.</p>
+        </div>
+        <ul class="grupos" id="grupos" data-surge></ul>
+        <details class="abre-lista" data-surge>
+          <summary>Ver os 100 produtos</summary>
+          <div class="rolagem"><table class="tabela simples" id="tabProdutos"></table></div>
+        </details>
+      </section>
+
+      <section id="pontos" class="bloco">
+        <p class="passo" data-surge>02</p>
+        <h2 data-titulo>Os 25 pontos de coleta</h2>
+        <div class="prosa" data-surge>
+          <p>Algumas redes mostram na internet um preço diferente para cada CEP. Por isso o site consulta os preços em 25 CEPs da capital, cinco por zona: centro, oeste, sul, leste e norte. Cada CEP é um ponto de coleta.</p>
+          <p>Quando você digita o seu CEP, o site usa o ponto de coleta de numeração mais próxima. É uma aproximação: o ponto pode ficar a alguns quilômetros da sua casa. Os 96 distritos da cidade usam o ponto mais próximo.</p>
+          <p>Cada ponto tem um perfil: Central, Intermediário ou Periferia. Essa classificação foi feita pelo projeto e não é um dado oficial. O plano é trocá-la por dados de renda.</p>
+        </div>
+        <div class="rolagem" data-surge><table class="tabela simples" id="tabPontos"></table></div>
+      </section>
+
+      <section id="redes" class="bloco">
+        <p class="passo" data-surge>03</p>
+        <h2 data-titulo>As redes e as regras de cada uma</h2>
+        <div class="prosa" data-surge>
+          <p>Antes de ler qualquer preço, o projeto leu o arquivo robots.txt e os termos de uso de nove redes. O robots.txt é o arquivo em que um site diz o que programas automáticos podem ou não podem ler. O coletor obedece a esse arquivo e nunca contorna um bloqueio.</p>
+          <p>Sete redes aparecem no site. A St Marche proíbe, nos termos de uso, copiar ou republicar conteúdo sem autorização por escrito: sem essa autorização, ela não é coletada. O Nagumo fica para uma fase futura, com a Grande São Paulo.</p>
+        </div>
+        <div class="rolagem" data-surge>
+          <table class="tabela simples">
+            <thead><tr><th scope="col">Rede</th><th scope="col">Preço muda por</th><th scope="col">robots.txt</th><th scope="col">Termos de uso</th><th scope="col">Situação</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Tenda Atacado</th><td>CEP</td><td>Bloqueia a busca, libera páginas de produto</td><td>Não tem. Só política de privacidade</td><td><span class="selo ok">Liberado</span></td></tr>
+              <tr><th scope="row">Carrefour</th><td>CEP</td><td>Libera busca e produto</td><td>Não encontrados</td><td><span class="selo">Liberado com dúvida</span></td></tr>
+              <tr><th scope="row">Atacadão</th><td>Loja</td><td>Bloqueia a busca, libera produto</td><td>O conteúdo é do Atacadão. Uso não autorizado é vedado. Nada sobre programas automáticos</td><td><span class="selo">Liberado com cuidado</span></td></tr>
+              <tr><th scope="row">Pão de Açúcar</th><td>Preço único (provável)</td><td>Bloqueia a busca</td><td>Não encontrados</td><td><span class="selo">Liberado com dúvida</span></td></tr>
+              <tr><th scope="row">Sonda</th><td>Preço único</td><td>Libera produto</td><td>Só falam de redes sociais</td><td><span class="selo ok">Liberado</span></td></tr>
+              <tr><th scope="row">St Marche</th><td>Preço único</td><td>Libera produto</td><td>Proíbem copiar ou republicar sem autorização por escrito</td><td><span class="selo nao">Não coletada</span></td></tr>
+              <tr><th scope="row">Santa Luzia</th><td>Preço único (loja única)</td><td>Bloqueia a busca, libera produto</td><td>Não encontrados</td><td><span class="selo">Liberado com dúvida</span></td></tr>
+              <tr><th scope="row">Hirota</th><td>A confirmar</td><td>Bloqueia a busca, libera produto</td><td>Não tem</td><td><span class="selo">Liberado com dúvida</span></td></tr>
+              <tr><th scope="row">Nagumo</th><td>Loja</td><td>Não tem robots.txt</td><td>Só regras de compra</td><td><span class="selo nao">Fase futura</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="nota" data-surge>"Liberado com dúvida" quer dizer que o robots.txt permite a leitura, mas os termos de uso não foram encontrados ou não foram confirmados.</p>
+      </section>
+
+      <section id="coleta" class="bloco">
+        <p class="passo" data-surge>04</p>
+        <h2 data-titulo>Como os preços são lidos</h2>
+        <div class="prosa" data-surge>
+          <p>Um programa, o coletor, abre a página de cada produto no site da rede, informa o CEP do ponto de coleta e anota o preço que a página mostra. As regras dele são estas:</p>
+        </div>
+        <ul class="regras" data-fila>
+          <li><b>Só páginas normais de produto.</b> As mesmas que qualquer pessoa abre no navegador.</li>
+          <li><b>Devagar.</b> Uma página por vez, com intervalo entre elas.</li>
+          <li><b>Obedece ao robots.txt.</b> Página bloqueada não é lida.</li>
+          <li><b>Só fatos.</b> Preço, nome e tamanho. Nada de fotos nem descrições.</li>
+          <li><b>Guarda o que a página diz.</b> O nome e o tamanho anotados são os da página, não os do endereço.</li>
+          <li><b>Falhou, registra e segue.</b> Se uma rede ou um CEP falha, o coletor anota a falha, pula e continua.</li>
+        </ul>
+        <div class="prosa" data-surge>
+          <p>Produto sem preço no dia entra na tabela como indisponível. Isso é um dado, não um erro: quer dizer que a rede não vendia aquele produto para aquele CEP naquele dia.</p>
+          <p id="estadoColeta"></p>
+          <p id="estadoLinks"></p>
+        </div>
+      </section>
+
+      <section id="contas" class="bloco">
+        <p class="passo" data-surge>05</p>
+        <h2 data-titulo>Como as contas são feitas</h2>
+        <dl class="contas" data-fila>
+          <div><dt>Preço de referência</dt><dd>Para cada produto e cada ponto, o site usa a mediana dos preços das redes naquele ponto. A mediana é o valor do meio: metade das redes cobra mais, metade cobra menos. Uma rede muito cara ou muito barata não puxa o número.</dd></div>
+          <div><dt>Cesta do ponto</dt><dd>É a soma dos preços de referência dos produtos do índice. Só entram produtos que têm preço em todos os pontos e em todas as datas. Hoje são <span id="nCesta">78</span>.</dd></div>
+          <div><dt>Índice local</dt><dd>É a cesta de cada mês dividida pela cesta do primeiro mês, vezes 100. O primeiro mês vale 100. Um índice de 105 quer dizer que a cesta ficou 5% mais cara.</dd></div>
+          <div><dt>Pesos</dt><dd>Hoje cada produto conta uma unidade. No IPCA, cada item pesa conforme o gasto das famílias. Os pesos do IPCA ainda não foram aplicados, e o índice vai mudar quando forem.</dd></div>
+          <div><dt>IPCA</dt><dd>É a inflação mensal oficial, do IBGE, acumulada a partir do mesmo primeiro mês para ser comparada com o índice local.</dd></div>
+          <div><dt>Comparador de lista</dt><dd>O site soma a sua lista em cada rede. Vence a rede com menos itens indisponíveis e, no empate, a de menor total. A economia é a diferença para a rede mais cara que tem os mesmos itens.</dd></div>
+          <div><dt>Divisão em duas lojas</dt><dd>O site testa todas as duplas de redes e compra cada item onde ele é mais barato. A divisão só aparece se economizar pelo menos R$ 2 ou achar mais itens. Nunca são mais de duas lojas: ir a três mercados custa tempo e transporte que o site não mede.</dd></div>
+          <div><dt>Redes no mapa do início</dt><dd>O valor de cada rede é a soma dos produtos do índice que as sete redes vendem naquele ponto. Assim todas são comparadas pelos mesmos itens.</dd></div>
+        </dl>
+      </section>
+
+      <section id="mapa-e-rotas" class="bloco">
+        <p class="passo" data-surge>06</p>
+        <h2 data-titulo>O mapa, as lojas e as rotas</h2>
+        <div class="prosa" data-surge>
+          <p>O mapa, as ruas e os endereços das lojas vêm do OpenStreetMap, um mapa do mundo feito por voluntários. O site achou <span id="nLojas">212</span> lojas das sete redes na Grande São Paulo. As rotas são caminhos de carro, calculados do ponto de coleta até a loja mais próxima de cada rede.</p>
+          <p>O cadastro do OpenStreetMap tem falhas. Pode faltar loja, e pode haver loja que já fechou. Quando faltam lojas de uma rede, a "loja mais próxima" dela aparece mais longe do que é.</p>
+          <p>O preço comparado é o do site da rede para o CEP. A loja do mapa mostra onde fica a unidade mais próxima, não onde aquele preço foi lido.</p>
+        </div>
+      </section>
+
+      <section id="limites" class="bloco">
+        <p class="passo" data-surge>07</p>
+        <h2 data-titulo>O que o site não sabe</h2>
+        <ul class="lista-limites" data-fila>
+          <li><b>O preço da prateleira.</b> O site lê o preço da internet. A loja física pode cobrar outro valor.</li>
+          <li><b>Promoções de cartão, clube e aplicativo.</b> Só entra o preço que a página mostra para qualquer pessoa.</li>
+          <li><b>Frete e taxa de entrega.</b> O total da lista não inclui entrega.</li>
+          <li><b>O que acontece fora da capital.</b> Por enquanto, só a cidade de São Paulo.</li>
+          <li><b>O seu endereço exato.</b> O CEP vira o ponto de coleta mais próximo, entre 25.</li>
+          <li><b>Marcas e tamanhos fora da cesta.</b> Se você compra outra marca, o seu total é outro.</li>
+          <li><b>A qualidade de carnes, frutas e verduras.</b> Por isso elas ficam fora do índice.</li>
+          <li><b>A inflação oficial do bairro.</b> Ela não existe. O índice local é uma medida do projeto.</li>
+        </ul>
+      </section>
+
+      <section id="fontes" class="bloco">
+        <p class="passo" data-surge>08</p>
+        <h2 data-titulo>Fontes e licenças</h2>
+        <ul class="fontes" data-fila>
+          <li><b>Preços.</b> Sites das redes de supermercado, lidos pelo coletor do projeto.</li>
+          <li><b>IPCA.</b> IBGE, Sistema Nacional de Índices de Preços ao Consumidor, pelo SIDRA.</li>
+          <li><b>Mapa, ruas e lojas.</b> © colaboradores do <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>, licença ODbL. Busca pelo Nominatim.</li>
+          <li><b>Imagem do mapa.</b> <a href="https://openfreemap.org">OpenFreeMap</a>. O seu navegador baixa as imagens do mapa dos servidores deles.</li>
+          <li><b>Rotas.</b> OSRM, sobre dados do OpenStreetMap.</li>
+          <li><b>Contorno dos distritos.</b> Prefeitura de São Paulo, GeoSampa.</li>
+          <li><b>Programas usados no site.</b> MapLibre GL JS, GSAP e Lenis. Fontes da família Red Hat.</li>
+          <li><b>Código e tabelas.</b> Abertos no <a href="https://github.com/theoscala45/preco-do-dia-a-dia">GitHub</a>. As tabelas ficam na pasta <code>data</code>.</li>
+        </ul>
+        <p class="nota" data-surge>O site não tem cadastro, não usa cookies de rastreamento e não envia o seu CEP nem a sua lista para lugar nenhum. Os dois ficam guardados só no seu navegador.</p>
+      </section>
+    </div>
+  </div>
+</main>
+
+<footer class="rodape">
+  <p>Projeto estudantil independente, em construção. Os preços desta versão são inventados para testar o site.</p>
+  <p>Mapa, lojas e ruas: © colaboradores do <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>. Imagem do mapa servida pelo <a href="https://openfreemap.org">OpenFreeMap</a>. Rotas calculadas com o OSRM. Contorno dos distritos: Prefeitura de São Paulo (GeoSampa).</p>
+  <p>Seu CEP e sua lista ficam só no seu navegador. Código e tabelas abertos no <a href="https://github.com/theoscala45/preco-do-dia-a-dia">GitHub</a>.</p>
+</footer>
+
+<script src="assets/vendor/gsap.min.js" defer></script>
+<script src="assets/vendor/ScrollTrigger.min.js" defer></script>
+<script src="assets/vendor/SplitText.min.js" defer></script>
+<script src="assets/vendor/lenis.min.js" defer></script>
+<script type="module" src="assets/js/metodo.js"></script>
+</body>
+</html>

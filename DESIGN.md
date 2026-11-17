@@ -44,24 +44,35 @@ Algarismos tabulares nos preços. Caixa normal, sem rótulos em maiúsculas.
 
 ## Movimento
 
-Sem mola e sem pulo. Uma curva só: `cubic-bezier(.2,.8,.2,1)`.
+Feito com GSAP (linhas do tempo, ScrollTrigger, SplitText) e Lenis (scroll suave). Sem mola e sem pulo. Curvas `power3.out` para entradas e `power2.inOut` para o que se desenha.
 
-1. **Entrada.** As linhas do título sobem de trás de uma máscara, uma depois da outra. O mapa aparece em fade.
-2. **O mergulho.** Com um CEP (ou um clique num distrito), a câmera voa da cidade inteira até o bairro. As rotas se desenham uma por vez, da rede mais cara à mais barata, e a etiqueta de cada loja aparece quando a rota chega. No fim, a rota da mais barata fica laranja, as outras apagam, e a câmera se aproxima dela. Um ponto de luz corre pela rota laranja.
-3. **O scroll troca as cenas.** Cidade inteira, pontos de coleta em destaque, mergulho de demonstração (Pinheiros, se não houver CEP), distritos coloridos pela alta em 12 meses com o gráfico.
-4. **Resposta a ações.** Passar o ponteiro numa rede da lista destaca a rota dela no mapa. Preço novo: o número rola.
-5. Com "reduzir movimento": a câmera corta direto, as rotas já aparecem prontas, sem ponto de luz.
+1. **Scroll suave.** O Lenis suaviza a rolagem e alimenta o ScrollTrigger. O mapa não aproxima com a rolagem, para não prender a página.
+2. **Entradas.** Os títulos sobem linha por linha, de trás de uma máscara (SplitText). Blocos marcados com `data-surge` sobem e aparecem em lote quando entram na tela. Listas com `data-fila` entram linha por linha. Números com `data-conta` contam do zero.
+3. **Ligado ao scroll.** Uma barra laranja no topo mostra quanto da página foi lida. O cabeçalho some ao descer e volta ao subir. Riscos divisórios (`data-risco`) se desenham. Na página inicial, o texto da abertura sobe e apaga, uma trilha lateral marca o capítulo e as linhas do gráfico se desenham conforme a rolagem.
+4. **O mergulho.** Com um CEP (ou um clique num distrito), a câmera voa da cidade inteira até o bairro. Uma linha do tempo desenha as rotas uma por vez, da rede mais cara à mais barata, e a etiqueta de cada loja aparece quando a rota chega. No fim, a rota da mais barata fica laranja, as outras apagam, a câmera se aproxima dela e um ponto de luz passa a correr pela rota.
+5. **As cenas.** ScrollTrigger troca a cena do mapa: cidade inteira, pontos de coleta em destaque, mergulho de demonstração (Pinheiros, se não houver CEP), distritos coloridos pela alta em 12 meses.
+6. **Resposta a ações.** Passar o ponteiro numa rede da lista destaca a rota dela. Preço novo: o número rola. Trocar a visão do gráfico de inflação redesenha as linhas da esquerda para a direita.
+7. **Reduzir movimento.** Tudo acima fica dentro de `gsap.matchMedia('(prefers-reduced-motion: no-preference)')`. Com a preferência ligada não há Lenis, as entradas não acontecem, a câmera corta direto e as rotas já aparecem prontas.
+
+## Páginas
+
+- **Início** (`index.html`): mapa, CEP, três capítulos, números, montagem da lista.
+- **Sua lista** (`lista.html`): loja única mais barata, economia, divisão em duas lojas, rota no mapa, total por rede e tabela produto por produto.
+- **Inflação do bairro** (`inflacao.html`): três números, gráfico por ponto, zona ou perfil, mapa dos distritos e os 25 pontos em ordem.
+- **Método e fontes** (`metodo.html`): cesta, pontos, redes, coleta, contas, limites e fontes.
+
+O CEP e a lista ficam no `localStorage` e valem para todas as páginas. No celular, o menu abre em tela cheia.
 
 ## Mapa
 
-- Biblioteca: MapLibre GL JS 5 (`assets/vendor`, licença BSD).
+- Biblioteca: MapLibre GL JS 5 (`assets/vendor`, licença BSD). O módulo `assets/js/mapa.js` tem as peças comuns aos três mapas do site.
 - Imagem do mapa: blocos vetoriais do OpenFreeMap (dados do OpenStreetMap), com o estilo `assets/mapa-estilo.json`, uma adaptação do estilo Dark do OpenFreeMap para a paleta do site.
 - Distritos: contorno da Prefeitura de São Paulo (GeoSampa), encolhido e arredondado, levantado em 3D na visão da cidade inteira. Some quando a câmera desce. O contorno é simplificado.
 - Lojas: busca do OpenStreetMap (Nominatim), em `data/lojas.csv`. O cadastro é feito por voluntários e pode faltar loja (o Tenda, por exemplo, tem poucas lojas cadastradas).
 - Pontos de coleta: a rua de cada CEP de `data/ceps.csv`, localizada pelo Nominatim (`data/pontos_geo.csv`).
 - Rotas: de carro, do ponto de coleta até a loja mais próxima de cada rede, calculadas pelo OSRM (`assets/rotas.json`).
 - O preço comparado é o do site de cada rede para o CEP, não o da prateleira da loja do mapa. A página diz isso.
-- O mapa não aproxima com a rolagem da página (precisa de Ctrl ou dois dedos), para não prender o scroll.
+- O mapa não aproxima com a rolagem da página. No computador há botões de aproximar e afastar. No toque, o mapa se move com dois dedos.
 
 ## Imagens e ícones
 
