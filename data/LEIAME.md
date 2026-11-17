@@ -4,9 +4,9 @@ Cada tabela é um arquivo CSV (UTF-8, vírgula como separador). O coletor escrev
 
 ## Como as tabelas se ligam
 
-`precos.csv` é a tabela grande. Cada linha é um preço de um produto, numa rede, num CEP, num dia. As outras tabelas dão nome aos códigos dessa.
+A tabela de preços é a grande. Cada linha é um preço de um produto, numa rede, num CEP, num dia. Ela fica na pasta `precos/`, um arquivo por mês (`precos/2026-11.csv`), porque uma noite de coleta soma cerca de 1.700 linhas e um arquivo único passaria do limite do GitHub em menos de dois anos. As outras tabelas dão nome aos códigos dessa.
 
-| Código em precos.csv | Tabela com o significado |
+| Código na tabela de preços | Tabela com o significado |
 |---|---|
 | `produto_id` | produtos.csv |
 | `rede_id` | redes.csv |
@@ -28,9 +28,9 @@ Cada tabela é um arquivo CSV (UTF-8, vírgula como separador). O coletor escrev
 
 As observações de cada link ficam, por enquanto, na aba Links Tenda da planilha.
 
-**precos.csv** (vazia). O coletor acrescenta linhas. Produto sem preço no dia entra com `disponivel` igual a `nao`. Ele é dado, não erro.
+**precos/AAAA-MM.csv**. O coletor acrescenta linhas toda noite. Colunas: data, rede_id, produto_id, cep_id, preco_reais, unidade_de_venda, disponivel, nome_na_pagina, tamanho_na_pagina, lido_em. Produto sem preço no dia entra com `disponivel` igual a `nao`. Ele é dado, não erro. O preço guardado é o preço comum da página, não o do cartão da rede nem o de atacado.
 
-**execucoes.csv** (vazia). Uma linha por rede e CEP a cada noite, com o resultado e o erro. É daqui que sai o aviso da manhã quando uma rede ou um CEP falha.
+**execucoes.csv**. Uma linha por rede e CEP a cada noite, com o resultado (`ok`, `parcial`, `falha` ou `bloqueado`) e o erro. É daqui que sai o aviso da manhã quando uma rede ou um CEP falha.
 
 **ipca.csv** (vazia). IPCA mensal do IBGE (SIDRA), geral e por grupo, para comparar com o índice local.
 
@@ -43,6 +43,9 @@ As observações de cada link ficam, por enquanto, na aba Links Tenda da planilh
 3. Guardar o nome e o tamanho que a página mostra, não os da URL. Em alguns produtos eles diferem.
 4. Guardar só fatos: preço, nome, tamanho. Nada de fotos nem descrições.
 5. Se uma rede ou um CEP falhar, registrar em `execucoes.csv`, pular e seguir com o resto.
+6. Se a rede bloquear o coletor (erro 403 ou 429, captcha), parar a rede na hora e registrar `bloqueado`. Nunca contornar.
+
+O coletor fica em `coletor/coletar.py` e roda toda noite pelo GitHub Actions (`.github/workflows/coleta.yml`). Quando algo falha, ele abre a issue "Falha na coleta".
 
 ## Tabelas do mapa (OpenStreetMap)
 

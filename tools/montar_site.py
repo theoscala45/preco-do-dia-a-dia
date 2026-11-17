@@ -2,7 +2,7 @@
 
 Uso:
   python3 tools/montar_site.py exemplo   -> le data/exemplo/ (precos inventados; o site mostra a faixa de aviso)
-  python3 tools/montar_site.py real      -> le data/ (quando o coletor estiver rodando)
+  python3 tools/montar_site.py real      -> le data/precos/ (quando o coletor estiver rodando)
 
 Contas:
 - Preco de referencia de um produto num ponto = mediana dos precos das redes naquele ponto.
@@ -20,8 +20,13 @@ def ler(caminho):
 def main(modo):
     pasta = "data/exemplo" if modo == "exemplo" else "data"
     produtos, ceps, redes_tab = ler("data/produtos.csv"), ler("data/ceps.csv"), ler("data/redes.csv")
-    precos = [l for l in ler(pasta + "/precos.csv") if l["disponivel"] == "sim"]
-    if not precos: sys.exit("precos.csv esta vazia. Use o modo exemplo.")
+    if modo == "exemplo":
+        todos = ler(pasta + "/precos.csv")
+    else:   # o coletor grava um arquivo por mes em data/precos/
+        import glob
+        todos = [l for f in sorted(glob.glob(os.path.join(RAIZ, "data/precos/*.csv"))) for l in csv.DictReader(open(f, encoding="utf-8"))]
+    precos = [l for l in todos if l["disponivel"] == "sim"]
+    if not precos: sys.exit("Ainda nao ha precos coletados em data/precos/. Use o modo exemplo.")
     datas = sorted({l["data"] for l in precos}); ultima = datas[-1]
     redes = sorted({l["rede_id"] for l in precos})
     pid = {p["produto_id"]: i for i, p in enumerate(produtos)}

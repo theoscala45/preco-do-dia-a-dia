@@ -1,3 +1,5 @@
+# ATENCAO: este foi o script que criou as tabelas no comeco do projeto. Ele reescreve produtos, ceps, redes, links,
+# ipca e pesos do zero. Nao rode de novo sem ler: links.csv e as tabelas do IBGE ja foram editadas depois.
 import csv, os
 D = "/home/claude/tenda/data"
 B = "https://www.tendaatacado.com.br/produto/"
@@ -204,8 +206,7 @@ from collections import Counter
 print(Counter(r[3] for r in rows))
 
 # ---- tabelas que o coletor preenche ----
-w("precos.csv", ["data","rede_id","produto_id","cep_id","preco_reais","unidade_de_venda","disponivel","nome_na_pagina","tamanho_na_pagina","lido_em"], [])
-w("execucoes.csv", ["data","rede_id","cep_id","produtos_tentados","produtos_lidos","resultado","erro"], [])
+# precos (data/precos/AAAA-MM.csv) e execucoes.csv sao escritos pelo coletor (coletor/coletar.py). Este script nao mexe neles.
 w("ipca.csv", ["mes","ipca_mensal_pct","ipca_alimentos_pct","ipca_higiene_pct","fonte"], [])
 w("pesos_ipca.csv", ["produto_id","grupo_ipca","peso_pct","fonte"], [[f"P{i:03d}","","",""] for i in range(1,101)])
 print("ok")
