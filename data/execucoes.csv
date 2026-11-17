@@ -5,4 +5,13 @@ data,rede_id,cep_id,produtos_tentados,produtos_lidos,resultado,erro
 2026-11-17,tenda,C04,40,3,parcial,P003: Locator.wait_for: Timeout 15000ms exceeded.; P004: Locator.wait_for: Timeout 15000ms exceeded.; P005: Locator.wait_for: Timeout 15000ms exceeded.; P006: Locator.click: Timeout 30000ms exceeded.; P007: Locator.wait_for: Timeout 15000ms exceeded.; P008: Locator.wait_for: Timeout 15000ms exceeded
 2026-11-17,tenda,C05,40,2,parcial,P003: Locator.wait_for: Timeout 15000ms exceeded.; P004: Locator.click: Timeout 30000ms exceeded.; P005: Locator.wait_for: Timeout 15000ms exceeded.; P006: Locator.wait_for: Timeout 15000ms exceeded.; P007: Locator.wait_for: Timeout 15000ms exceeded.; P008: Locator.click: Timeout 30000ms exceeded.; 
 2026-11-17,tenda,C06,3,1,parcial,P003: Locator.wait_for: Timeout 20000ms exceeded.; P004: Locator.wait_for: Timeout 20000ms exceeded.
+2026-11-17,tenda,C11,12,12,ok,
+2026-11-17,tenda,C12,12,12,ok,
+2026-11-17,tenda,C13,12,12,ok,
+2026-11-17,tenda,C14,12,12,ok,
+2026-11-17,tenda,C15,12,12,ok,
+2026-11-17,tenda,C16,12,12,ok,
+2026-11-17,tenda,C17,12,12,ok,
 2026-11-17,tenda,C18,6,6,ok,
+2026-11-17,tenda,C19,12,12,ok,
+2026-11-17,tenda,C20,12,12,ok,

@@ -1,23 +1,4 @@
 data,rede_id,produto_id,cep_id,preco_reais,unidade_de_venda,disponivel,nome_na_pagina,tamanho_na_pagina,lido_em
-2026-11-17,tenda,P001,C01,26.39,un,sim,Arroz Branco T1 Camil Seleções 5kg,5kg,2026-11-17T11:52:15-0300
-2026-11-17,tenda,P010,C01,,,nao,Café em pó 3 Corações Tradicional 500g,500g,2026-11-17T11:57:53-0300
-2026-11-17,tenda,P051,C01,8.49,un,sim,Ovos Grandes Branco 12 Unidades,12 Unidades,2026-11-17T12:20:46-0300
-2026-11-17,tenda,P001,C02,26.39,un,sim,Arroz Branco T1 Camil Seleções 5kg,5kg,2026-11-17T12:20:53-0300
-2026-11-17,tenda,P010,C02,,,nao,Café em pó 3 Corações Tradicional 500g,500g,2026-11-17T12:26:18-0300
-2026-11-17,tenda,P001,C03,26.39,un,sim,Arroz Branco T1 Camil Seleções 5kg,5kg,2026-11-17T12:50:02-0300
-2026-11-17,tenda,P010,C03,,,nao,Café em pó 3 Corações Tradicional 500g,500g,2026-11-17T12:55:55-0300
-2026-11-17,tenda,P001,C04,26.39,un,sim,Arroz Branco T1 Camil Seleções 5kg,5kg,2026-11-17T13:19:37-0300
-2026-11-17,tenda,P010,C04,,,nao,Café em pó 3 Corações Tradicional 500g,500g,2026-11-17T13:25:02-0300
-2026-11-17,tenda,P036,C04,,,nao,500,,2026-11-17T13:40:07-0300
-2026-11-17,tenda,P001,C05,26.39,un,sim,Arroz Branco T1 Camil Seleções 5kg,5kg,2026-11-17T13:46:26-0300
-2026-11-17,tenda,P010,C05,,,nao,Café em pó 3 Corações Tradicional 500g,500g,2026-11-17T13:52:20-0300
-2026-11-17,tenda,P001,C06,26.39,un,sim,Arroz Branco T1 Camil Seleções 5kg,5kg,2026-11-17T00:41:53-0300
-2026-11-17,tenda,P001,C18,26.39,un,sim,Arroz Branco T1 Camil Seleções 5kg,5kg,2026-11-17T09:17:59-0300
-2026-11-17,tenda,P003,C18,8.09,un,sim,Feijão Carioca Tipo 1 Camil 1kg,1kg,2026-11-17T09:18:04-0300
-2026-11-17,tenda,P004,C18,7.09,un,sim,Feijão Preto Camil 1kg,1kg,2026-11-17T09:18:09-0300
-2026-11-17,tenda,P006,C18,33.90,un,sim,Azeite de Oliva Extra Virgem Gallo Vidro 500ml,500ml,2026-11-17T09:18:13-0300
-2026-11-17,tenda,P007,C18,3.79,un,sim,Açúcar Refinado União 1kg,1kg,2026-11-17T09:18:17-0300
-2026-11-17,tenda,P008,C18,3.49,un,sim,Açúcar Cristal União 1kg,1kg,2026-11-17T09:18:27-0300
 2026-11-17,tenda,P001,C01,26.39,un,sim,Arroz Branco T1 Camil Seleções 5kg,5kg,2026-11-17T11:22:35-0300
 2026-11-17,tenda,P003,C01,8.09,un,sim,Feijão Carioca Tipo 1 Camil 1kg,1kg,2026-11-17T11:22:41-0300
 2026-11-17,tenda,P004,C01,7.09,un,sim,Feijão Preto Camil 1kg,1kg,2026-11-17T11:22:50-0300
@@ -26,6 +7,7 @@ data,rede_id,produto_id,cep_id,preco_reais,unidade_de_venda,disponivel,nome_na_p
 2026-11-17,tenda,P007,C01,3.79,un,sim,Açúcar Refinado União 1kg,1kg,2026-11-17T11:23:15-0300
 2026-11-17,tenda,P008,C01,3.49,un,sim,Açúcar Cristal União 1kg,1kg,2026-11-17T11:23:23-0300
 2026-11-17,tenda,P009,C01,26.99,un,sim,Café Torrado e Moído Extraforte Pilão Pacote 500g,500g,2026-11-17T11:23:30-0300
+2026-11-17,tenda,P010,C01,,,nao,Café em pó 3 Corações Tradicional 500g,500g,2026-11-17T11:57:53-0300
 2026-11-17,tenda,P011,C01,6.29,un,sim,Farinha de trigo Dona Benta 1kg,1kg,2026-11-17T11:24:55-0300
 2026-11-17,tenda,P012,C01,5.69,un,sim,Farinha de Mandioca Tipo 1 Fina Yoki Pacote 500g,500g,2026-11-17T11:25:02-0300
 2026-11-17,tenda,P013,C01,3.99,un,sim,Macarrão Ovos Espaguete 9 Renata 500g,500g,2026-11-17T11:25:07-0300
@@ -86,3 +68,127 @@ data,rede_id,produto_id,cep_id,preco_reais,unidade_de_venda,disponivel,nome_na_p
 2026-11-17,tenda,P097,C01,4.49,un,sim,Alface Crespa Unidade,,2026-11-17T11:43:11-0300
 2026-11-17,tenda,P098,C01,19.18,un,sim,Mamão Formosa Unidade,,2026-11-17T11:43:15-0300
 2026-11-17,tenda,P100,C01,6.12,un,sim,Pimentão Verde Saco 440g,440g,2026-11-17T11:43:59-0300
+2026-11-17,tenda,P001,C02,26.39,un,sim,Arroz Branco T1 Camil Seleções 5kg,5kg,2026-11-17T12:20:53-0300
+2026-11-17,tenda,P010,C02,,,nao,Café em pó 3 Corações Tradicional 500g,500g,2026-11-17T12:26:18-0300
+2026-11-17,tenda,P001,C03,26.39,un,sim,Arroz Branco T1 Camil Seleções 5kg,5kg,2026-11-17T12:50:02-0300
+2026-11-17,tenda,P010,C03,,,nao,Café em pó 3 Corações Tradicional 500g,500g,2026-11-17T12:55:55-0300
+2026-11-17,tenda,P001,C04,26.39,un,sim,Arroz Branco T1 Camil Seleções 5kg,5kg,2026-11-17T13:19:37-0300
+2026-11-17,tenda,P010,C04,,,nao,Café em pó 3 Corações Tradicional 500g,500g,2026-11-17T13:25:02-0300
+2026-11-17,tenda,P036,C04,,,nao,500,,2026-11-17T13:40:07-0300
+2026-11-17,tenda,P001,C05,26.39,un,sim,Arroz Branco T1 Camil Seleções 5kg,5kg,2026-11-17T13:46:26-0300
+2026-11-17,tenda,P010,C05,,,nao,Café em pó 3 Corações Tradicional 500g,500g,2026-11-17T13:52:20-0300
+2026-11-17,tenda,P001,C06,26.39,un,sim,Arroz Branco T1 Camil Seleções 5kg,5kg,2026-11-17T00:41:53-0300
+2026-11-17,tenda,P001,C11,26.39,un,sim,Arroz Branco T1 Camil Seleções 5kg,5kg,2026-11-17T16:19:52-0300
+2026-11-17,tenda,P003,C11,8.09,un,sim,Feijão Carioca Tipo 1 Camil 1kg,1kg,2026-11-17T16:19:57-0300
+2026-11-17,tenda,P004,C11,7.09,un,sim,Feijão Preto Camil 1kg,1kg,2026-11-17T16:20:01-0300
+2026-11-17,tenda,P005,C11,7.89,un,sim,Óleo de Soja Soya Pet 900ml,900ml,2026-11-17T16:20:04-0300
+2026-11-17,tenda,P006,C11,31.90,un,sim,Azeite de Oliva Extra Virgem Gallo Vidro 500ml,500ml,2026-11-17T16:20:07-0300
+2026-11-17,tenda,P007,C11,3.79,un,sim,Açúcar Refinado União 1kg,1kg,2026-11-17T16:20:12-0300
+2026-11-17,tenda,P008,C11,3.49,un,sim,Açúcar Cristal União 1kg,1kg,2026-11-17T16:20:15-0300
+2026-11-17,tenda,P009,C11,26.99,un,sim,Café Torrado e Moído Extraforte Pilão Pacote 500g,500g,2026-11-17T16:20:20-0300
+2026-11-17,tenda,P010,C11,,,nao,Café em pó 3 Corações Tradicional 500g,500g,2026-11-17T16:20:39-0300
+2026-11-17,tenda,P011,C11,5.19,un,sim,Farinha de trigo Dona Benta 1kg,1kg,2026-11-17T16:20:44-0300
+2026-11-17,tenda,P012,C11,5.79,un,sim,Farinha de Mandioca Tipo 1 Fina Yoki Pacote 500g,500g,2026-11-17T16:20:48-0300
+2026-11-17,tenda,P013,C11,3.99,un,sim,Macarrão Ovos Espaguete 9 Renata 500g,500g,2026-11-17T16:20:51-0300
+2026-11-17,tenda,P001,C12,26.39,un,sim,Arroz Branco T1 Camil Seleções 5kg,5kg,2026-11-17T16:21:00-0300
+2026-11-17,tenda,P003,C12,8.09,un,sim,Feijão Carioca Tipo 1 Camil 1kg,1kg,2026-11-17T16:21:05-0300
+2026-11-17,tenda,P004,C12,7.09,un,sim,Feijão Preto Camil 1kg,1kg,2026-11-17T16:21:10-0300
+2026-11-17,tenda,P005,C12,7.89,un,sim,Óleo de Soja Soya Pet 900ml,900ml,2026-11-17T16:21:13-0300
+2026-11-17,tenda,P006,C12,31.90,un,sim,Azeite de Oliva Extra Virgem Gallo Vidro 500ml,500ml,2026-11-17T16:21:18-0300
+2026-11-17,tenda,P007,C12,3.79,un,sim,Açúcar Refinado União 1kg,1kg,2026-11-17T16:21:21-0300
+2026-11-17,tenda,P008,C12,3.49,un,sim,Açúcar Cristal União 1kg,1kg,2026-11-17T16:21:25-0300
+2026-11-17,tenda,P009,C12,26.99,un,sim,Café Torrado e Moído Extraforte Pilão Pacote 500g,500g,2026-11-17T16:21:28-0300
+2026-11-17,tenda,P010,C12,,,nao,Café em pó 3 Corações Tradicional 500g,500g,2026-11-17T16:21:48-0300
+2026-11-17,tenda,P011,C12,5.19,un,sim,Farinha de trigo Dona Benta 1kg,1kg,2026-11-17T16:21:52-0300
+2026-11-17,tenda,P012,C12,5.79,un,sim,Farinha de Mandioca Tipo 1 Fina Yoki Pacote 500g,500g,2026-11-17T16:21:56-0300
+2026-11-17,tenda,P013,C12,3.99,un,sim,Macarrão Ovos Espaguete 9 Renata 500g,500g,2026-11-17T16:21:59-0300
+2026-11-17,tenda,P001,C13,26.39,un,sim,Arroz Branco T1 Camil Seleções 5kg,5kg,2026-11-17T16:22:08-0300
+2026-11-17,tenda,P003,C13,8.09,un,sim,Feijão Carioca Tipo 1 Camil 1kg,1kg,2026-11-17T16:22:12-0300
+2026-11-17,tenda,P004,C13,7.09,un,sim,Feijão Preto Camil 1kg,1kg,2026-11-17T16:22:16-0300
+2026-11-17,tenda,P005,C13,7.89,un,sim,Óleo de Soja Soya Pet 900ml,900ml,2026-11-17T16:22:20-0300
+2026-11-17,tenda,P006,C13,31.90,un,sim,Azeite de Oliva Extra Virgem Gallo Vidro 500ml,500ml,2026-11-17T16:22:24-0300
+2026-11-17,tenda,P007,C13,3.79,un,sim,Açúcar Refinado União 1kg,1kg,2026-11-17T16:22:28-0300
+2026-11-17,tenda,P008,C13,3.49,un,sim,Açúcar Cristal União 1kg,1kg,2026-11-17T16:22:31-0300
+2026-11-17,tenda,P009,C13,26.99,un,sim,Café Torrado e Moído Extraforte Pilão Pacote 500g,500g,2026-11-17T16:22:36-0300
+2026-11-17,tenda,P010,C13,,,nao,Café em pó 3 Corações Tradicional 500g,500g,2026-11-17T16:22:56-0300
+2026-11-17,tenda,P011,C13,5.19,un,sim,Farinha de trigo Dona Benta 1kg,1kg,2026-11-17T16:23:00-0300
+2026-11-17,tenda,P012,C13,5.79,un,sim,Farinha de Mandioca Tipo 1 Fina Yoki Pacote 500g,500g,2026-11-17T16:23:03-0300
+2026-11-17,tenda,P013,C13,3.99,un,sim,Macarrão Ovos Espaguete 9 Renata 500g,500g,2026-11-17T16:23:08-0300
+2026-11-17,tenda,P001,C14,26.39,un,sim,Arroz Branco T1 Camil Seleções 5kg,5kg,2026-11-17T16:23:17-0300
+2026-11-17,tenda,P003,C14,8.09,un,sim,Feijão Carioca Tipo 1 Camil 1kg,1kg,2026-11-17T16:23:21-0300
+2026-11-17,tenda,P004,C14,7.09,un,sim,Feijão Preto Camil 1kg,1kg,2026-11-17T16:23:26-0300
+2026-11-17,tenda,P005,C14,7.89,un,sim,Óleo de Soja Soya Pet 900ml,900ml,2026-11-17T16:23:29-0300
+2026-11-17,tenda,P006,C14,31.90,un,sim,Azeite de Oliva Extra Virgem Gallo Vidro 500ml,500ml,2026-11-17T16:23:33-0300
+2026-11-17,tenda,P007,C14,3.79,un,sim,Açúcar Refinado União 1kg,1kg,2026-11-17T16:23:37-0300
+2026-11-17,tenda,P008,C14,3.49,un,sim,Açúcar Cristal União 1kg,1kg,2026-11-17T16:23:40-0300
+2026-11-17,tenda,P009,C14,26.99,un,sim,Café Torrado e Moído Extraforte Pilão Pacote 500g,500g,2026-11-17T16:23:44-0300
+2026-11-17,tenda,P010,C14,,,nao,Café em pó 3 Corações Tradicional 500g,500g,2026-11-17T16:24:04-0300
+2026-11-17,tenda,P011,C14,5.19,un,sim,Farinha de trigo Dona Benta 1kg,1kg,2026-11-17T16:24:07-0300
+2026-11-17,tenda,P012,C14,5.79,un,sim,Farinha de Mandioca Tipo 1 Fina Yoki Pacote 500g,500g,2026-11-17T16:24:11-0300
+2026-11-17,tenda,P013,C14,3.99,un,sim,Macarrão Ovos Espaguete 9 Renata 500g,500g,2026-11-17T16:24:15-0300
+2026-11-17,tenda,P001,C15,26.39,un,sim,Arroz Branco T1 Camil Seleções 5kg,5kg,2026-11-17T16:24:23-0300
+2026-11-17,tenda,P003,C15,8.09,un,sim,Feijão Carioca Tipo 1 Camil 1kg,1kg,2026-11-17T16:24:27-0300
+2026-11-17,tenda,P004,C15,7.09,un,sim,Feijão Preto Camil 1kg,1kg,2026-11-17T16:24:32-0300
+2026-11-17,tenda,P005,C15,7.89,un,sim,Óleo de Soja Soya Pet 900ml,900ml,2026-11-17T16:24:35-0300
+2026-11-17,tenda,P006,C15,31.90,un,sim,Azeite de Oliva Extra Virgem Gallo Vidro 500ml,500ml,2026-11-17T16:24:38-0300
+2026-11-17,tenda,P007,C15,3.79,un,sim,Açúcar Refinado União 1kg,1kg,2026-11-17T16:24:42-0300
+2026-11-17,tenda,P008,C15,3.49,un,sim,Açúcar Cristal União 1kg,1kg,2026-11-17T16:24:46-0300
+2026-11-17,tenda,P009,C15,26.99,un,sim,Café Torrado e Moído Extraforte Pilão Pacote 500g,500g,2026-11-17T16:24:50-0300
+2026-11-17,tenda,P010,C15,,,nao,Café em pó 3 Corações Tradicional 500g,500g,2026-11-17T16:25:10-0300
+2026-11-17,tenda,P011,C15,5.19,un,sim,Farinha de trigo Dona Benta 1kg,1kg,2026-11-17T16:25:13-0300
+2026-11-17,tenda,P012,C15,5.79,un,sim,Farinha de Mandioca Tipo 1 Fina Yoki Pacote 500g,500g,2026-11-17T16:25:17-0300
+2026-11-17,tenda,P013,C15,3.99,un,sim,Macarrão Ovos Espaguete 9 Renata 500g,500g,2026-11-17T16:25:20-0300
+2026-11-17,tenda,P001,C16,26.39,un,sim,Arroz Branco T1 Camil Seleções 5kg,5kg,2026-11-17T16:19:57-0300
+2026-11-17,tenda,P003,C16,8.09,un,sim,Feijão Carioca Tipo 1 Camil 1kg,1kg,2026-11-17T16:20:01-0300
+2026-11-17,tenda,P004,C16,7.09,un,sim,Feijão Preto Camil 1kg,1kg,2026-11-17T16:20:04-0300
+2026-11-17,tenda,P005,C16,7.89,un,sim,Óleo de Soja Soya Pet 900ml,900ml,2026-11-17T16:20:07-0300
+2026-11-17,tenda,P006,C16,33.90,un,sim,Azeite de Oliva Extra Virgem Gallo Vidro 500ml,500ml,2026-11-17T16:20:11-0300
+2026-11-17,tenda,P007,C16,3.79,un,sim,Açúcar Refinado União 1kg,1kg,2026-11-17T16:20:14-0300
+2026-11-17,tenda,P008,C16,3.49,un,sim,Açúcar Cristal União 1kg,1kg,2026-11-17T16:20:18-0300
+2026-11-17,tenda,P009,C16,26.99,un,sim,Café Torrado e Moído Extraforte Pilão Pacote 500g,500g,2026-11-17T16:20:23-0300
+2026-11-17,tenda,P010,C16,,,nao,Café em pó 3 Corações Tradicional 500g,500g,2026-11-17T16:20:42-0300
+2026-11-17,tenda,P011,C16,6.29,un,sim,Farinha de trigo Dona Benta 1kg,1kg,2026-11-17T16:20:46-0300
+2026-11-17,tenda,P012,C16,5.69,un,sim,Farinha de Mandioca Tipo 1 Fina Yoki Pacote 500g,500g,2026-11-17T16:20:49-0300
+2026-11-17,tenda,P013,C16,3.99,un,sim,Macarrão Ovos Espaguete 9 Renata 500g,500g,2026-11-17T16:20:53-0300
+2026-11-17,tenda,P001,C17,26.39,un,sim,Arroz Branco T1 Camil Seleções 5kg,5kg,2026-11-17T16:21:00-0300
+2026-11-17,tenda,P003,C17,8.09,un,sim,Feijão Carioca Tipo 1 Camil 1kg,1kg,2026-11-17T16:21:03-0300
+2026-11-17,tenda,P004,C17,7.09,un,sim,Feijão Preto Camil 1kg,1kg,2026-11-17T16:21:07-0300
+2026-11-17,tenda,P005,C17,7.89,un,sim,Óleo de Soja Soya Pet 900ml,900ml,2026-11-17T16:21:10-0300
+2026-11-17,tenda,P006,C17,33.90,un,sim,Azeite de Oliva Extra Virgem Gallo Vidro 500ml,500ml,2026-11-17T16:21:14-0300
+2026-11-17,tenda,P007,C17,3.79,un,sim,Açúcar Refinado União 1kg,1kg,2026-11-17T16:21:19-0300
+2026-11-17,tenda,P008,C17,3.49,un,sim,Açúcar Cristal União 1kg,1kg,2026-11-17T16:21:22-0300
+2026-11-17,tenda,P009,C17,26.99,un,sim,Café Torrado e Moído Extraforte Pilão Pacote 500g,500g,2026-11-17T16:21:26-0300
+2026-11-17,tenda,P010,C17,,,nao,Café em pó 3 Corações Tradicional 500g,500g,2026-11-17T16:21:46-0300
+2026-11-17,tenda,P011,C17,6.29,un,sim,Farinha de trigo Dona Benta 1kg,1kg,2026-11-17T16:21:50-0300
+2026-11-17,tenda,P012,C17,5.69,un,sim,Farinha de Mandioca Tipo 1 Fina Yoki Pacote 500g,500g,2026-11-17T16:21:54-0300
+2026-11-17,tenda,P013,C17,3.99,un,sim,Macarrão Ovos Espaguete 9 Renata 500g,500g,2026-11-17T16:21:58-0300
+2026-11-17,tenda,P001,C18,26.39,un,sim,Arroz Branco T1 Camil Seleções 5kg,5kg,2026-11-17T09:17:59-0300
+2026-11-17,tenda,P003,C18,8.09,un,sim,Feijão Carioca Tipo 1 Camil 1kg,1kg,2026-11-17T09:18:04-0300
+2026-11-17,tenda,P004,C18,7.09,un,sim,Feijão Preto Camil 1kg,1kg,2026-11-17T09:18:09-0300
+2026-11-17,tenda,P006,C18,33.90,un,sim,Azeite de Oliva Extra Virgem Gallo Vidro 500ml,500ml,2026-11-17T09:18:13-0300
+2026-11-17,tenda,P007,C18,3.79,un,sim,Açúcar Refinado União 1kg,1kg,2026-11-17T09:18:17-0300
+2026-11-17,tenda,P008,C18,3.49,un,sim,Açúcar Cristal União 1kg,1kg,2026-11-17T09:18:27-0300
+2026-11-17,tenda,P001,C19,26.39,un,sim,Arroz Branco T1 Camil Seleções 5kg,5kg,2026-11-17T16:22:07-0300
+2026-11-17,tenda,P003,C19,8.09,un,sim,Feijão Carioca Tipo 1 Camil 1kg,1kg,2026-11-17T16:22:10-0300
+2026-11-17,tenda,P004,C19,7.09,un,sim,Feijão Preto Camil 1kg,1kg,2026-11-17T16:22:13-0300
+2026-11-17,tenda,P005,C19,7.89,un,sim,Óleo de Soja Soya Pet 900ml,900ml,2026-11-17T16:22:17-0300
+2026-11-17,tenda,P006,C19,33.90,un,sim,Azeite de Oliva Extra Virgem Gallo Vidro 500ml,500ml,2026-11-17T16:22:21-0300
+2026-11-17,tenda,P007,C19,3.79,un,sim,Açúcar Refinado União 1kg,1kg,2026-11-17T16:22:25-0300
+2026-11-17,tenda,P008,C19,3.49,un,sim,Açúcar Cristal União 1kg,1kg,2026-11-17T16:22:28-0300
+2026-11-17,tenda,P009,C19,26.99,un,sim,Café Torrado e Moído Extraforte Pilão Pacote 500g,500g,2026-11-17T16:22:31-0300
+2026-11-17,tenda,P010,C19,,,nao,Café em pó 3 Corações Tradicional 500g,500g,2026-11-17T16:22:50-0300
+2026-11-17,tenda,P011,C19,6.29,un,sim,Farinha de trigo Dona Benta 1kg,1kg,2026-11-17T16:22:54-0300
+2026-11-17,tenda,P012,C19,5.69,un,sim,Farinha de Mandioca Tipo 1 Fina Yoki Pacote 500g,500g,2026-11-17T16:22:57-0300
+2026-11-17,tenda,P013,C19,3.99,un,sim,Macarrão Ovos Espaguete 9 Renata 500g,500g,2026-11-17T16:23:01-0300
+2026-11-17,tenda,P001,C20,26.39,un,sim,Arroz Branco T1 Camil Seleções 5kg,5kg,2026-11-17T16:23:07-0300
+2026-11-17,tenda,P003,C20,8.09,un,sim,Feijão Carioca Tipo 1 Camil 1kg,1kg,2026-11-17T16:23:10-0300
+2026-11-17,tenda,P004,C20,7.09,un,sim,Feijão Preto Camil 1kg,1kg,2026-11-17T16:23:13-0300
+2026-11-17,tenda,P005,C20,7.89,un,sim,Óleo de Soja Soya Pet 900ml,900ml,2026-11-17T16:23:16-0300
+2026-11-17,tenda,P006,C20,33.90,un,sim,Azeite de Oliva Extra Virgem Gallo Vidro 500ml,500ml,2026-11-17T16:23:20-0300
+2026-11-17,tenda,P007,C20,3.79,un,sim,Açúcar Refinado União 1kg,1kg,2026-11-17T16:23:29-0300
+2026-11-17,tenda,P008,C20,3.49,un,sim,Açúcar Cristal União 1kg,1kg,2026-11-17T16:23:33-0300
+2026-11-17,tenda,P009,C20,26.99,un,sim,Café Torrado e Moído Extraforte Pilão Pacote 500g,500g,2026-11-17T16:23:37-0300
+2026-11-17,tenda,P010,C20,,,nao,Café em pó 3 Corações Tradicional 500g,500g,2026-11-17T16:23:56-0300
+2026-11-17,tenda,P011,C20,6.29,un,sim,Farinha de trigo Dona Benta 1kg,1kg,2026-11-17T16:23:59-0300
+2026-11-17,tenda,P012,C20,5.69,un,sim,Farinha de Mandioca Tipo 1 Fina Yoki Pacote 500g,500g,2026-11-17T16:24:03-0300
+2026-11-17,tenda,P013,C20,3.99,un,sim,Macarrão Ovos Espaguete 9 Renata 500g,500g,2026-11-17T16:24:07-0300
