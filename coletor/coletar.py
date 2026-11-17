@@ -26,7 +26,7 @@ from zoneinfo import ZoneInfo
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SP = ZoneInfo("America/Sao_Paulo")
 COLUNAS = ["data", "rede_id", "produto_id", "cep_id", "preco_reais", "unidade_de_venda", "disponivel", "nome_na_pagina", "tamanho_na_pagina", "lido_em"]
-COLUNAS_EXEC = ["data", "rede_id", "cep_id", "produtos_tentados", "produtos_lidos", "resultado", "erro"]
+COLUNAS_EXEC = ["data", "rede_id", "cep_id", "produtos_tentados", "produtos_lidos", "resultado", "erro", "loja"]
 LINKS_QUE_ENTRAM = {"achado", "variante"}      # status de data/links.csv que o coletor le
 PAUSA = (2.0, 3.5)                             # segundos entre uma pagina e a proxima
 TAMANHO = re.compile(r"(\d+(?:[.,]\d+)?\s?(?:kg|g|gr|ml|l|lt|un|unid|unidades|rolos|m)\b(?:\s?pague\s?\d+\s?\w+)?)", re.I)
@@ -75,6 +75,8 @@ class Tenda:
     que mostra o preco antigo riscado e o novo. O coletor guarda o novo: e o que a pessoa paga."""
     rede_id = "tenda"
     site = "https://www.tendaatacado.com.br"
+    hosts = ("tendaatacado.com.br",)   # enderecos que a pagina precisa para mostrar o preco; o resto e bloqueado
+    loja = ""
     BLOCO = ".position-prices :is(.SimplePriceComponent, .PriceDiscountComponent)"
 
     def esperar_bloco(self, pg, espera):
@@ -128,7 +130,58 @@ class Tenda:
         return {"nome": nome, "tamanho": tamanho_do_nome(nome), "preco": preco, "unidade": unidade, "disponivel": True}, cep_dado
 
 
-REDES = [Tenda()]
+class Atacadao:
+    """Atacadao. O preco muda por loja. Para cada CEP, o coletor abre a barra "para o CEP" da propria pagina,
+    escolhe "Retirada na Loja", digita o CEP e fica com a primeira loja da lista, que o site ordena da mais perto
+    para a mais longe. A loja vale para as paginas seguintes. O site mostra dois precos: o de 1 unidade e o de
+    atacado ("a partir de N unidades"). O coletor guarda o de 1 unidade, que aparece no resumo da compra."""
+    rede_id = "atacadao"
+    site = "https://www.atacadao.com.br"
+    hosts = ("atacadao.com.br", "cloud.carrefour.com.br", "vtexassets.com", "vteximg.com.br")
+    loja = ""
+    TITULO = "[data-test=product-details-title]"
+
+    def escolher_loja(self, pg, cep):
+        pg.wait_for_timeout(2500)   # a barra da regiao so responde depois que a pagina termina de montar
+        # o botao do CEP na barra do topo abre a janela "Como deseja comprar?"
+        pg.locator("[data-test-id=regionalization-bar-zip-btn-desktop] >> visible=true").first.click()
+        pg.locator("text=Retirada na Loja >> visible=true").first.click()
+        campo = pg.locator('input[placeholder*="02170-901"] >> visible=true').first
+        campo.wait_for(state="visible", timeout=15000)
+        campo.click()
+        pg.keyboard.type(re.sub(r"\D", "", cep), delay=120)
+        pg.keyboard.press("Enter")
+        primeira = pg.locator("text=/^Loja - / >> visible=true").first
+        primeira.wait_for(state="visible", timeout=20000)
+        primeira.click()
+        pg.locator("role=button[name=/continuar/i] >> visible=true").first.click()
+        barra = pg.locator("[data-test-id=regionalization-bar] >> visible=true").first
+        pg.wait_for_function("t => document.body.innerText.includes(t)", arg="Retire na Loja", timeout=20000)
+        m = re.search(r"Loja - ([^\n]+?)\s*(para o CEP|$)", barra.inner_text().replace("\n", " "))
+        self.loja = m.group(1).strip() if m else ""
+
+    def ler_produto(self, pg, cep, cep_dado):
+        pg.locator(self.TITULO).first.wait_for(state="visible", timeout=25000)
+        if not cep_dado:
+            self.escolher_loja(pg, cep)
+            cep_dado = True
+            pg.wait_for_timeout(2500)
+        nome = pg.locator(self.TITULO).first.inner_text().strip()
+        # o preco carrega depois do titulo: espera o resumo da compra ou o aviso de indisponivel
+        try:
+            pg.wait_for_function("() => /unidade\\s*·\\s*R\\$|Produto indispon/i.test(document.body.innerText)", timeout=15000)
+        except Exception:
+            raise RuntimeError("preco nao apareceu")
+        texto = pg.evaluate("""t => { let e = document.querySelector(t); for (let i = 0; i < 8 && e && !/Resumo da compra|indispon/i.test(e.innerText); i++) e = e.parentElement; return e ? e.innerText : ''; }""", self.TITULO)
+        m = re.search(r"1\s*unidade\s*·\s*R\$\s*([\d.]+,\d{2})", texto)
+        if not m:
+            if re.search(r"Produto indispon", texto, re.I):
+                return {"nome": nome, "tamanho": tamanho_do_nome(nome), "preco": None, "unidade": "", "disponivel": False}, cep_dado
+            raise RuntimeError("preco de 1 unidade nao encontrado")
+        return {"nome": nome, "tamanho": tamanho_do_nome(nome), "preco": m.group(1).replace(".", "").replace(",", "."), "unidade": "un", "disponivel": True}, cep_dado
+
+
+REDES = [Tenda(), Atacadao()]
 
 
 def robots(rede):
@@ -168,7 +221,7 @@ def coletar_rede(pw, rede, links, ceps, hoje, limite, diag, arq_precos, arq_exec
     if os.environ.get("COLETOR_NAVEGADOR"): opcoes["executable_path"] = os.environ["COLETOR_NAVEGADOR"]
     if os.environ.get("COLETOR_PROXY"): opcoes["proxy"] = {"server": os.environ["COLETOR_PROXY"]}
     navegador = pw.chromium.launch(**opcoes)
-    host = rede.site.split("/")[2].replace("www.", "")
+    hosts = rede.hosts
     try:
         for cep in ceps:
             if (rede.rede_id, cep["cep_id"]) in ja:
@@ -177,8 +230,9 @@ def coletar_rede(pw, rede, links, ceps, hoje, limite, diag, arq_precos, arq_exec
             ctx = navegador.new_context(locale="pt-BR", viewport={"width": 1280, "height": 900})
             pg = ctx.new_page()
             # so o que a pagina precisa para mostrar o preco: nada de fotos, fontes ou rastreadores
-            pg.route("**/*", lambda rota: rota.abort() if rota.request.resource_type in ("image", "media", "font") or host not in rota.request.url.split("/")[2] else rota.continue_())
+            pg.route("**/*", lambda rota: rota.abort() if rota.request.resource_type in ("image", "media", "font") or not any(h in rota.request.url.split("/")[2] for h in hosts) else rota.continue_())
             linhas, lidos, sem_preco, erros, cep_dado = [], 0, 0, [], False
+            rede.loja = ""
             try:
                 for n, link in enumerate(paginas):
                     for tentativa in (1, 2):
@@ -214,7 +268,7 @@ def coletar_rede(pw, rede, links, ceps, hoje, limite, diag, arq_precos, arq_exec
                 resultado = "ok" if lidos == len(paginas) else "parcial" if lidos else "falha"
             except Bloqueio as e:
                 acrescentar(arq_precos, COLUNAS, linhas)
-                acrescentar(arq_exec, COLUNAS_EXEC, [{"data": hoje, "rede_id": rede.rede_id, "cep_id": cep["cep_id"], "produtos_tentados": len(paginas), "produtos_lidos": lidos, "resultado": "bloqueado", "erro": limpar(str(e))}])
+                acrescentar(arq_exec, COLUNAS_EXEC, [{"data": hoje, "rede_id": rede.rede_id, "cep_id": cep["cep_id"], "produtos_tentados": len(paginas), "produtos_lidos": lidos, "resultado": "bloqueado", "erro": limpar(str(e)), "loja": limpar(rede.loja)}])
                 print(f"[{rede.rede_id} {cep['cep_id']}] BLOQUEADO: {e}. Parando a rede.", flush=True)
                 ctx.close(); return
             except Exception as e:
@@ -222,8 +276,8 @@ def coletar_rede(pw, rede, links, ceps, hoje, limite, diag, arq_precos, arq_exec
             ctx.close()
             acrescentar(arq_precos, COLUNAS, linhas)
             nota = "; ".join(erros[:6]) + (f"; e mais {len(erros) - 6}" if len(erros) > 6 else "")
-            acrescentar(arq_exec, COLUNAS_EXEC, [{"data": hoje, "rede_id": rede.rede_id, "cep_id": cep["cep_id"], "produtos_tentados": len(paginas), "produtos_lidos": lidos, "resultado": resultado, "erro": limpar(nota)}])
-            print(f"[{rede.rede_id} {cep['cep_id']}] {resultado}: {lidos}/{len(paginas)} lidos, {sem_preco} sem preco na regiao, {time.time() - inicio:.0f} s" + (f" | {nota}" if nota else ""), flush=True)
+            acrescentar(arq_exec, COLUNAS_EXEC, [{"data": hoje, "rede_id": rede.rede_id, "cep_id": cep["cep_id"], "produtos_tentados": len(paginas), "produtos_lidos": lidos, "resultado": resultado, "erro": limpar(nota), "loja": limpar(rede.loja)}])
+            print(f"[{rede.rede_id} {cep['cep_id']}] {resultado}: {lidos}/{len(paginas)} lidos, {sem_preco} sem preco na regiao, {time.time() - inicio:.0f} s" + (f" | loja {rede.loja}" if rede.loja else "") + (f" | {nota}" if nota else ""), flush=True)
             falhas_seguidas = falhas_seguidas + 1 if resultado == "falha" else 0
             if falhas_seguidas >= 3:
                 print(f"[{rede.rede_id}] 3 CEPs seguidos falharam. Parando a rede.", flush=True); break
@@ -237,6 +291,7 @@ def main():
     ap.add_argument("--zona", default="", help="so os pontos desta zona (Centro, Oeste, Sul, Leste, Norte)")
     ap.add_argument("--limite", type=int, default=0, help="le so os N primeiros produtos")
     ap.add_argument("--saida", default="", help="pasta para precos.csv e execucoes.csv (padrao: data/)")
+    ap.add_argument("--redes", default="", help="so estas redes (padrao: todas as prontas)")
     ap.add_argument("--diagnostico", default="", help="pasta para guardar foto e texto das paginas que falharem")
     a = ap.parse_args()
     from playwright.sync_api import sync_playwright
@@ -250,9 +305,10 @@ def main():
         arq_precos, arq_exec = os.path.join(RAIZ, "data", "precos", f"{hoje[:7]}.csv"), os.path.join(RAIZ, "data", "execucoes.csv")
     links = ler(os.path.join(RAIZ, "data", "links.csv"))
     with sync_playwright() as pw:
-        for rede in REDES:
+        for rede in [r for r in REDES if not a.redes or r.rede_id in a.redes.split(",")]:
             da_rede = [l for l in links if l["rede_id"] == rede.rede_id and l["status"] in LINKS_QUE_ENTRAM and l["url"]]
             print(f"[{rede.rede_id}] {len(da_rede)} paginas de produto, {len(ceps)} CEPs", flush=True)
+            if not da_rede: continue   # rede ainda sem links conferidos
             coletar_rede(pw, rede, da_rede, ceps, hoje, a.limite, a.diagnostico, arq_precos, arq_exec)
     print("fim", flush=True)
 
