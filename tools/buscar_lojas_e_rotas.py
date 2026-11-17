@@ -2,6 +2,7 @@
 
 Passos (rodar nesta ordem, um por vez):
   python3 tools/buscar_lojas_e_rotas.py lojas    -> data/lojas.csv       (lojas de cada rede na Grande SP)
+  python3 tools/buscar_lojas_e_rotas.py lojas tenda  -> busca de novo so o Tenda e mantem as outras redes
   python3 tools/buscar_lojas_e_rotas.py pontos   -> data/pontos_geo.csv  (latitude e longitude dos 25 pontos de coleta)
   python3 tools/buscar_lojas_e_rotas.py rotas    -> assets/rotas.json    (caminho de carro de cada ponto ate a loja mais proxima de cada rede)
 
@@ -10,14 +11,14 @@ Dados (c) colaboradores do OpenStreetMap, licenca ODbL.
 Regras: um pedido por segundo, so fatos (nome, endereco, coordenada). O cadastro do OpenStreetMap e feito por
 voluntarios: pode faltar loja ou sobrar loja fechada.
 """
-import csv, json, math, os, sys, time, urllib.parse, urllib.request
+import csv, json, math, os, sys, time, urllib.error, urllib.parse, urllib.request
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 AGENTE = "coleta-estudantil/1.0"
 CAIXA = "-47.00,-23.25,-46.25,-24.05"   # Grande Sao Paulo: oeste, norte, leste, sul
 # o que procurar em cada rede e o que o nome precisa ter
 REDES = {
-    "tenda": (["Tenda Atacado"], ["tenda"]),
+    "tenda": (["Tenda Atacado", "Tenda Atacadista", "Tenda"], ["tenda atacad", "tenda"]),
     "carrefour": (["Carrefour", "Carrefour Bairro", "Carrefour Hipermercado"], ["carrefour"]),
     "atacadao": (["Atacadão"], ["atacadão", "atacadao"]),
     "pao-de-acucar": (["Pão de Açúcar"], ["pão de açúcar", "pao de acucar"]),
@@ -26,14 +27,21 @@ REDES = {
     "hirota": (["Hirota Food", "Hirota"], ["hirota"]),
 }
 TIPOS = {"supermarket", "wholesale", "department_store", "mall", "greengrocer", "deli"}
-FORA = ["express", "minuto", "posto", "drogaria", "farmácia", "farmacia", "estacionamento", "banco", "sorvete", "eletro", "atacadão dos", "atacadao dos", "atacadão de", "atacadao de", "atacadão da", "atacadão do"]
+FORA = ["tenda dos", "tenda 1", "tenda 2", "tenda da", "tenda do ", "express", "minuto", "posto", "drogaria", "farmácia", "farmacia", "estacionamento", "banco", "sorvete", "eletro", "atacadão dos", "atacadao dos", "atacadão de", "atacadao de", "atacadão da", "atacadão do"]
 
 
-def pedir(url, pausa=1.1):
-    time.sleep(pausa)
-    req = urllib.request.Request(url, headers={"User-Agent": AGENTE, "Accept-Language": "pt-BR"})
-    with urllib.request.urlopen(req, timeout=60) as r:
-        return json.load(r)
+def pedir(url, pausa=1.5):
+    """Um pedido por vez. Se o servico pedir calma (erro 429), espera e tenta de novo, ate 3 vezes."""
+    for tentativa in range(4):
+        time.sleep(pausa)
+        req = urllib.request.Request(url, headers={"User-Agent": AGENTE, "Accept-Language": "pt-BR"})
+        try:
+            with urllib.request.urlopen(req, timeout=60) as r:
+                return json.load(r)
+        except urllib.error.HTTPError as e:
+            if e.code != 429 or tentativa == 3: raise
+            print("servico pediu calma (429), esperando", 60 * (tentativa + 1), "s", flush=True)
+            time.sleep(60 * (tentativa + 1))
 
 
 def metros(a, b):
@@ -50,9 +58,13 @@ def endereco(a):
     return ", ".join(x for x in [rua + (f", {num}" if num else ""), bairro, cidade] if x)
 
 
-def lojas():
+def lojas(so=None):
+    """so: lista de redes para buscar de novo. As outras redes ficam como estao em data/lojas.csv."""
     linhas = []
+    if so:
+        linhas = [{**l, "lat": float(l["lat"]), "lon": float(l["lon"])} for l in csv.DictReader(open(os.path.join(RAIZ, "data", "lojas.csv"), encoding="utf-8")) if l["rede_id"] not in so]
     for rede, (buscas, nomes) in REDES.items():
+        if so and rede not in so: continue
         achadas, vistos = [], set()
         for q in buscas:
             fora = []
@@ -135,4 +147,5 @@ def rotas():
 
 
 if __name__ == "__main__":
-    {"lojas": lojas, "pontos": pontos, "rotas": rotas}[sys.argv[1]]()
+    if sys.argv[1] == "lojas": lojas(sys.argv[2].split(",") if len(sys.argv) > 2 else None)
+    else: {"pontos": pontos, "rotas": rotas}[sys.argv[1]]()

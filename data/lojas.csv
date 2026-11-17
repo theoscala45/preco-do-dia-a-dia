@@ -1,7 +1,4 @@
 rede_id,nome,lat,lon,endereco,osm
-tenda,Tenda Atacado,-23.681513,-46.597232,"Avenida Fábio Eduardo Ramos Esquível, 3000, Canhema, Diadema",way/206909193
-tenda,Tenda Atacado,-23.544908,-46.309505,"Rua Baruel, 315, Centro, Suzano",way/1049374913
-tenda,Tenda Atacado,-23.523950,-46.826307,"Avenida Desembargador Doutor Eduardo Cunha de Abreu, 495, Vila Municipal, Carapicuíba",way/708938763
 carrefour,Carrefour,-23.559557,-46.515927,"Avenida Rio das Pedras, 555, Vila Antonieta, São Paulo",relation/12421013
 carrefour,Carrefour,-23.522228,-46.599188,"Avenida Morvan Dias de Figueiredo (Local), 3351, Bairro da Coroa, São Paulo",way/164337987
 carrefour,Carrefour,-23.563727,-46.613759,"Praça Alberto Lion, Cambuci, São Paulo",way/441834744
@@ -211,3 +208,10 @@ hirota,Hirota Food,-23.621240,-46.640232,"Avenida Jabaquara, 1930, Mirandópolis
 hirota,Hirota Food,-23.617224,-46.677732,"Rua Vieira de Morais, 265, Brooklin Velho, São Paulo",node/12581644639
 hirota,Hirota,-23.570989,-46.633490,"Avenida da Aclimação, 488, Liberdade, São Paulo",way/431463844
 hirota,HIROTA,-23.606690,-46.621405,"Rua Vigário Albernaz, 695, Vila Gumercindo, São Paulo",node/3727956800
+tenda,Tenda Atacado,-23.681513,-46.597232,"Avenida Fábio Eduardo Ramos Esquível, 3000, Canhema, Diadema",way/206909193
+tenda,Tenda Atacado,-23.544908,-46.309505,"Rua Baruel, 315, Centro, Suzano",way/1049374913
+tenda,Tenda Atacado,-23.523950,-46.826307,"Avenida Desembargador Doutor Eduardo Cunha de Abreu, 495, Vila Municipal, Carapicuíba",way/708938763
+tenda,Tenda Atacadista,-23.665684,-46.722954,"Avenida Guarapiranga, 900, Socorro, São Paulo",way/249884975
+tenda,Tenda Atacadista,-23.488072,-46.365902,"Rua Itú, 500, Vila Virgínia, Itaquaquecetuba",way/1302092556
+tenda,Tenda,-24.011557,-46.437071,"Avenida Presidente Kennedy, Aviação, Praia Grande",way/1167863742
+tenda,Tenda,-24.017259,-46.473803,"Rua Savério Fittipaldi, Tupiry, Praia Grande",node/7830036658

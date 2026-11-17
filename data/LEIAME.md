@@ -52,9 +52,9 @@ Geradas por `tools/buscar_lojas_e_rotas.py`. Dados © colaboradores do OpenStree
 
 | Arquivo | Colunas | O que é |
 |---|---|---|
-| `lojas.csv` | rede_id, nome, lat, lon, endereco, osm | Lojas de cada rede na Grande São Paulo, achadas pela busca do OpenStreetMap (Nominatim). 212 lojas. |
+| `lojas.csv` | rede_id, nome, lat, lon, endereco, osm | Lojas de cada rede na Grande São Paulo, achadas pela busca do OpenStreetMap (Nominatim). O Tenda foi buscado também pelos nomes "Tenda" e "Tenda Atacadista". |
 | `pontos_geo.csv` | cep_id, lat, lon, precisao, osm | Latitude e longitude da rua de cada um dos 25 pontos de coleta. |
 
-Limites: o cadastro do OpenStreetMap é feito por voluntários. Pode faltar loja, e pode haver loja fechada. O Tenda tem só 3 lojas cadastradas na área, então a "loja mais próxima" dele costuma ficar longe. A coordenada do ponto é a da rua, não a do número.
+Limites: o cadastro do OpenStreetMap é feito por voluntários. Pode faltar loja, e pode haver loja fechada. O Tenda tem só 7 lojas cadastradas na área (a rede tem bem mais), então a "loja mais próxima" dele costuma ficar longe. A coordenada do ponto é a da rua, não a do número.
 
 As rotas (de carro, do ponto até a loja mais próxima de cada rede, calculadas pelo OSRM) ficam em `assets/rotas.json`. Os distritos e os pontos em latitude e longitude ficam em `assets/geo.json`, feito por `tools/preparar_geo.py`.
