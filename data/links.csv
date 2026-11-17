@@ -199,3 +199,103 @@ P097,atacadao,https://www.atacadao.com.br/alface-crespa-unidade-1592/p,achado,"A
 P098,atacadao,https://www.atacadao.com.br/mamao-formosa-quilo-4786/p,achado,"Mamão Formosa, por quilo."
 P099,atacadao,https://www.atacadao.com.br/abobrinha-brasileira-1891/p,tamanho_diferente,Abobrinha só em caixa. Fica fora.
 P100,atacadao,,nao_achado,"A página está no sitemap, mas o site responde ""Página não encontrada"": o Atacadão não vende esse hortifrúti pela internet."
+P001,carrefour,https://mercado.carrefour.com.br/arroz-branco-camil-tipo-1-5kg-115789/p,achado,Arroz Branco Camil Tipo 1 5kg.
+P002,carrefour,https://mercado.carrefour.com.br/arroz-branco-longo-fino-tipo-1-tio-joao-5-kg/p,achado,Arroz Branco Longo-fino Tipo 1 Tio João 5 Kg.
+P003,carrefour,https://mercado.carrefour.com.br/feijao-carioca-camil-1kg-871281/p,achado,Feijão Carioca Camil 1kg.
+P004,carrefour,,nao_achado,Feijão preto Camil não está no sitemap.
+P005,carrefour,https://mercado.carrefour.com.br/oleo-de-soja-soya-900ml-141836/p,achado,Óleo de Soja Soya 900ml.
+P006,carrefour,https://mercado.carrefour.com.br/azeite-portugues-extra-virgem-tradicional-gallo-500ml-309451/p,achado,Azeite Português Extra Virgem Tradicional Gallo 500ml.
+P007,carrefour,https://mercado.carrefour.com.br/acucar-refinado-uniao-1kg-197564/p,achado,Açúcar Refinado União 1kg.
+P008,carrefour,https://mercado.carrefour.com.br/acucar-cristal-uniao-1kg-4429818/p,achado,Açúcar Cristal União 1Kg.
+P009,carrefour,https://mercado.carrefour.com.br/cafe-torrado-e-moido-extraforte-pilao-pacote-500g-9457771/p,achado,Café Torrado e Moído Extraforte Pilão Pacote 500g.
+P010,carrefour,https://mercado.carrefour.com.br/cafe-em-po-tradicional-3-coracoes-500g-1047752/p,achado,Café em Pó Tradicional 3 Corações 500g.
+P011,carrefour,https://mercado.carrefour.com.br/farinha-de-trigo-tradicional-dona-benta-1kg-7868901/p,achado,Farinha de Trigo Tradicional Dona Benta 1kg.
+P012,carrefour,https://mercado.carrefour.com.br/farinha-de-mandioca-tipo-1-fina-yoki-pacote-500g-201324/p,achado,Farinha de Mandioca Tipo 1 Fina Yoki Pacote 500g.
+P013,carrefour,https://mercado.carrefour.com.br/macarrao-espaguete-renata-com-ovos-n-9-500g-7162243/p,achado,Macarrão Espaguete Renata com Ovos Nº 9 500g. Espaguete nº 9.
+P014,carrefour,https://mercado.carrefour.com.br/macarrao-fusilli-grano-duro-barilla-500g-171727/p,variante,"Macarrão Fusilli Grano Duro Barilla 500g. Fusilli (parafuso) grano duro, não com ovos."
+P015,carrefour,https://mercado.carrefour.com.br/molho-de-tomate-tradicional-pomarola-sache-300g-4028287/p,tamanho_diferente,Molho de Tomate Tradicional Pomarola Sachê 300g. Não há o de 340g; o mais perto é o sachê de 300g. Fica fora.
+P016,carrefour,https://mercado.carrefour.com.br/extrato-de-tomate-tradicional-elefante-pote-300g-3014800/p,variante,"Extrato de Tomate Tradicional Elefante Pote 300g. Pote, como no Tenda."
+P017,carrefour,,nao_achado,Sal Cisne não está no sitemap.
+P018,carrefour,,nao_achado,Fubá Yoki não está no sitemap.
+P019,carrefour,https://mercado.carrefour.com.br/aveia-em-flocos-regulares-quaker-embalagem-economica-450g-5925584/p,achado,Aveia em Flocos Regulares Quaker Embalagem Econômica 450g.
+P020,carrefour,https://mercado.carrefour.com.br/achocolatado-em-po-nescau-350g-3533506/p,achado,Achocolatado em Pó Nescau 350g.
+P021,carrefour,https://mercado.carrefour.com.br/biscoito-cream-cracker-amanteigado-vitarella-350g-6670059/p,variante,"Biscoito Cream Cracker Amanteigado Vitarella 350g. Versão amanteigada, como no Tenda."
+P022,carrefour,https://mercado.carrefour.com.br/biscoito-passatempo-recheado-chocolate-130g-8611785/p,achado,Biscoito Passatempo Recheado Chocolate 130g.
+P023,carrefour,https://mercado.carrefour.com.br/pao-de-forma-pullman-480g-763810/p,achado,Pão de Forma Pullman 480g.
+P024,carrefour,https://mercado.carrefour.com.br/margarina-cremosa-com-sal-qualy-500g-149730/p,achado,Margarina Cremosa com Sal Qualy 500g.
+P025,carrefour,https://mercado.carrefour.com.br/maionese-hellmanns-tradicional-500g-200913/p,achado,Maionese Hellmann's Tradicional 500g.
+P026,carrefour,https://mercado.carrefour.com.br/ketchup-heinz-tradicional-397g-8883300/p,achado,Ketchup Heinz Tradicional 397g.
+P027,carrefour,,nao_achado,Sardinha Gomes da Costa em óleo não está no sitemap.
+P028,carrefour,https://mercado.carrefour.com.br/atum-ralado-em-oleo-gomes-da-costa-170g-325040/p,achado,Atum Ralado em Óleo Gomes da Costa 170g.
+P029,carrefour,https://mercado.carrefour.com.br/milho-verde-quero-lata-170g-5784913/p,achado,Milho Verde Quero Lata 170g.
+P030,carrefour,https://mercado.carrefour.com.br/ervilha-quero-lata-170g-5783941/p,achado,Ervilha Quero Lata 170g.
+P031,carrefour,https://mercado.carrefour.com.br/vinagre-de-alcool-castelo-750ml-204986/p,achado,Vinagre de Álcool Castelo 750ml.
+P032,carrefour,,nao_achado,Só Sazón de outros sabores.
+P033,carrefour,https://mercado.carrefour.com.br/caldo-knorr-galinha-57g-6-cubos-3054128/p,achado,Caldo Knorr Galinha 57g 6 cubos.
+P034,carrefour,https://mercado.carrefour.com.br/leite-condensado-moca-tradicional-lata-abre-facil-395g-429244/p,achado,Leite Condensado Moça Tradicional Lata Abre Fácil 395g. Lata.
+P035,carrefour,https://mercado.carrefour.com.br/creme-de-leite-nestle-200g-515647/p,achado,Creme de Leite NESTLÉ 200g.
+P036,carrefour,https://mercado.carrefour.com.br/mistura-para-bolo-de-chocolate-dona-benta-450g-8619565/p,variante,"Mistura para Bolo de Chocolate Dona Benta 450g. Sabor chocolate, como no Tenda e no Atacadão."
+P037,carrefour,https://mercado.carrefour.com.br/agua-mineral-crystal-sem-gas-15l-8812128/p,achado,"Água Mineral Crystal Sem Gás 1,5L."
+P038,carrefour,https://mercado.carrefour.com.br/refrigerante-cocacola-garrafa-2-l-5761719/p,achado,Refrigerante Coca-Cola Garrafa 2 L.
+P039,carrefour,https://mercado.carrefour.com.br/leite-integral-uht-italac-1-litro-8819505/p,achado,Leite Integral UHT Italac 1 Litro.
+P040,carrefour,https://mercado.carrefour.com.br/leite-integral-piracanjuba-1-litro-3371689/p,achado,Leite Integral Piracanjuba 1 Litro.
+P041,carrefour,https://mercado.carrefour.com.br/leite-desnatado-piracanjuba-1-litro-3371697/p,achado,Leite Desnatado Piracanjuba 1 Litro.
+P042,carrefour,https://mercado.carrefour.com.br/leite-em-po-ninho-integral-lata-380g-6419143/p,achado,Leite em Pó Ninho Integral Lata 380g.
+P043,carrefour,https://mercado.carrefour.com.br/manteiga-com-sal-aviacao-200g-3280578/p,achado,Manteiga com Sal Aviação 200g.
+P044,carrefour,https://mercado.carrefour.com.br/queijo-mucarela-fatiada-tirolez-150g-5033624/p,achado,Queijo Muçarela Fatiada Tirolez 150g.
+P045,carrefour,https://mercado.carrefour.com.br/queijo-mucarela-fatiada-light-sem-lactose-tirolez-150g-5036950/p,achado,Queijo Muçarela Fatiada Light sem Lactose Tirolez 150g.
+P046,carrefour,https://mercado.carrefour.com.br/requeijao-cremoso-vigor-200g-7522150/p,achado,Requeijão Cremoso Vigor 200g.
+P047,carrefour,https://mercado.carrefour.com.br/iogurte-integral-nestle-tradicional-170g-8706719/p,achado,Iogurte Integral Nestlé Tradicional 170g.
+P048,carrefour,https://mercado.carrefour.com.br/iogurte-parcialmente-desnatado-de-morango-batavo-125-kg-embalagem-economica-6190634/p,tamanho_diferente,"Iogurte Parcialmente Desnatado Morango Batavo Garrafa 1,15kg Embalagem Econômica. Só a garrafa de 1,15kg. Fica fora."
+P049,carrefour,https://mercado.carrefour.com.br/presunto-cozido-fatiado-soltissimo-sadia-200-g-9739874/p,achado,"Presunto Cozido Fatiado Soltíssimo Sadia 200 g. Linha Soltíssimo, fatiado 200g."
+P050,carrefour,,nao_achado,Não há minas frescal Tirolez.
+P051,carrefour,https://mercado.carrefour.com.br/ovos-brancos-carrefour-20-unidades-5286387/p,tamanho_diferente,Ovos Brancos Carrefour 20 Unidades. Só bandeja de 20. Fica fora.
+P052,carrefour,https://mercado.carrefour.com.br/ovos-vermelhos-carrefour-20-unidades-8453624/p,tamanho_diferente,Ovos Vermelhos Carrefour 20 Unidades. Só bandeja de 20. Fica fora.
+P053,carrefour,https://mercado.carrefour.com.br/papel-higienico-folha-dupla-neutro-neve-toque-da-seda-30-metros-leve-12-pague-11-unidades-3171264/p,variante,"Papel Higiênico Folha Dupla Neutro Neve Toque da Seda 30 Metros Leve 12 Pague 11 Unidades. Leve 12 pague 11, como no Tenda."
+P054,carrefour,https://mercado.carrefour.com.br/papel-higienico-folha-dupla-neutro-personal-vip-20m-leve-18-pague-16-unidades-6930689/p,tamanho_diferente,Papel Higiênico Folha Dupla Neutro Personal Vip 20m Leve 18 Pague 16 Unidades. Só pacotes de 18 e 20. Fica fora.
+P055,carrefour,https://mercado.carrefour.com.br/sabonete-em-barra-dove-original-90g-7812973/p,achado,Sabonete em Barra Dove Original 90g.
+P056,carrefour,https://mercado.carrefour.com.br/sabonete-em-barra-corporal-lux-botanicals-lavanda-85g-5459834/p,variante,Sabonete em Barra Corporal Lux Botanicals Lavanda 85g. Lux Botanicals Lavanda 85g (o Buquê de Jasmim só em pacote com 6).
+P057,carrefour,https://mercado.carrefour.com.br/creme-dental-original-mint-colgate-total-prevencao-ativa-caixa-90g-3958663/p,variante,Creme Dental Original Mint Colgate Total Prevenção Ativa Caixa 90g. Mesmo produto do Tenda.
+P058,carrefour,https://mercado.carrefour.com.br/creme-dental-colgate-maxima-protecao-anticaries-90g-184071/p,achado,Creme Dental Colgate Máxima Proteção Anticáries 90g.
+P059,carrefour,,nao_achado,Só modelos especiais ou pacotes.
+P060,carrefour,https://mercado.carrefour.com.br/shampoo-seda-ceramidas-infusao-ativa-retinol-e-colageno-325ml-9761497/p,variante,"Shampoo Seda Ceramidas Infusão Ativa Retinol e Colágeno 325ml. Linha Ceramidas, como no Tenda."
+P061,carrefour,https://mercado.carrefour.com.br/condicionador-seda-ceramidas-infusao-ativa-retinol-e-colageno-325ml-9943641/p,variante,"Condicionador Seda Ceramidas Infusão Ativa Retinol e Colágeno 325ml. Linha Ceramidas, como no Tenda."
+P062,carrefour,https://mercado.carrefour.com.br/desodorante-antitranspirante-aerosol-rexona-clinical-invisible-96h-150ml-3995615/p,variante,"Desodorante Antitranspirante Aerosol Rexona Clinical Invisible 96h 150ml. Linha Clinical, como no Tenda."
+P063,carrefour,https://mercado.carrefour.com.br/fio-dental-oral-b-essential-floss-sabor-menta-50m-3933148/p,achado,Fio Dental Oral-B Essential Floss Sabor Menta 50m.
+P064,carrefour,https://mercado.carrefour.com.br/absorvente-always-dia-ultra-suave-com-abas-8-unidades-5238226/p,variante,Absorvente Always Dia Ultra Suave com Abas 8 Unidades. Dia Ultra Suave com abas 8 un.
+P065,carrefour,https://mercado.carrefour.com.br/fralda-descartavel-infantil-huggies-maxima-protecao-m-55-a-95kg-pacote-66-unidades-leve-mais-pague-menos-3600564/p,variante,"Fralda Descartável Infantil Huggies Máxima Proteção M 5,5 a 9,5kg Pacote 66 Unidades Leve Mais Pague Menos. Máxima Proteção M 66 un."
+P066,carrefour,https://mercado.carrefour.com.br/sabao-em-po-omo-lavagem-perfeita-800g-5666732/p,tamanho_diferente,Sabão em Pó Omo Lavagem Perfeita 800g. Só 800g e 2kg. Fica fora.
+P067,carrefour,https://mercado.carrefour.com.br/lava-roupas-liquido-omo-lavagem-perfeita-galao-3l-4393260/p,variante,Lava-Roupas Líquido Omo Lavagem Perfeita Galão 3L. Lavagem Perfeita 3L.
+P068,carrefour,https://mercado.carrefour.com.br/amaciante-concentrado-comfort-frescor-intenso-500-ml-8334994/p,variante,Amaciante Concentrado Comfort Frescor Intenso 500 ml. Frescor Intenso 500ml.
+P069,carrefour,https://mercado.carrefour.com.br/detergente-ype-clear-500ml-283819/p,variante,Detergente Ypê Clear 500ml. Ypê Clear 500ml; o neutro só em pacote com 6.
+P070,carrefour,https://mercado.carrefour.com.br/agua-sanitaria-qboa-galao-5l-7163673/p,tamanho_diferente,Água Sanitária Qboa Galão 5l. Só galão de 5L. Fica fora.
+P071,carrefour,https://mercado.carrefour.com.br/desinfetante-pinho-sol-pinho-500ml-4761766/p,variante,Desinfetante Pinho Sol Original Refil Leve 500ml Pague 450ml. Leve 500ml pague 450ml.
+P072,carrefour,https://mercado.carrefour.com.br/limpador-multiuso-veja-gold-original-500ml-com-10-de-desconto-9662715/p,achado,Limpador Multiuso Veja O Original Clássico 500ml Oferta.
+P073,carrefour,https://mercado.carrefour.com.br/esponja-limpeza-extrema-scotch-brite-antibac-leve-4-pague-3-unidades-6649106/p,tamanho_diferente,Esponja Limpeza Extrema Scotch Brite Antibac Leve 4 Pague 3 Unidades. Só Extrema leve 4 pague 3. Fica fora.
+P074,carrefour,https://mercado.carrefour.com.br/saco-de-lixo-dover-roll-super-forte-azul-com-20-unidades-de-50-litros-8625697/p,achado,"Saco de Lixo Dover Roll Super Forte Azul com 20 Unidades de 50 Litros. Azul, 20 sacos de 50L."
+P075,carrefour,,nao_achado,Snob não está no sitemap.
+P076,carrefour,https://mercado.carrefour.com.br/sabao-em-barra-ype-neutro-800g-6571026/p,tamanho_diferente,Sabão em Barra Ypê Neutro 800g. Só barra de 800g. Fica fora.
+P077,carrefour,,nao_achado,Não há álcool líquido 70% de 1L.
+P078,carrefour,https://mercado.carrefour.com.br/inseticida-multi-insetos-sbp-aerosol-ultra-360ml-5412013/p,tamanho_diferente,Inseticida Multi Insetos SBP Aerosol Ultra 360ml. Só 360ml. Fica fora.
+P079,carrefour,https://mercado.carrefour.com.br/file-de-frango-peito-congelado-sem-osso-sadia-1kg-7087942/p,variante,"Filé de Frango Peito Congelado sem Osso Sadia 1Kg. Filé de peito congelado Sadia 1kg, como no Tenda e no Atacadão. Comparar por kg."
+P080,carrefour,https://mercado.carrefour.com.br/pedacos-de-sobrecoxa-de-frango-congelado-sadia-1kg-8619808/p,variante,Pedaços de Sobrecoxa de Frango Congelado Sadia 1Kg. Pedaços de sobrecoxa Sadia 1kg. Comparar por kg.
+P081,carrefour,,nao_achado,Frango inteiro Sadia não está no sitemap.
+P082,carrefour,https://mercado.carrefour.com.br/carne-moida-de-patinho-swift-1kg-3229190/p,achado,Carne Moída de Patinho Swift 1Kg. Moída de patinho Swift 1kg.
+P083,carrefour,https://mercado.carrefour.com.br/acem-bovina-carrefour-aproximadamente-900-g-21938/p,variante,"Acém Bovina Carrefour Aproximadamente 900 g. Acém Carrefour, peça de cerca de 900g vendida por peso. Comparar por kg."
+P084,carrefour,https://mercado.carrefour.com.br/bife-de-contra-file-swift-1kg-3229238/p,variante,Bife de Contra Filé Swift 1Kg. Bife de contrafilé Swift 1kg. Comparar por kg.
+P085,carrefour,,nao_achado,Não há linguiça toscana Seara.
+P086,carrefour,https://mercado.carrefour.com.br/salsicha-tradicional-perdigao-hot-dog-500-g-3237230/p,achado,Salsicha Tradicional Perdigão Hot Dog 500 g.
+P087,carrefour,https://mercado.carrefour.com.br/file-de-tilapia-sem-pele-congelado-carrefour-classic-400g-3260593/p,variante,Filé De Tilápia Sem Pele Congelado Carrefour Classic 400g. Tilápia Carrefour Classic 400g. Comparar por kg.
+P088,carrefour,https://mercado.carrefour.com.br/banana-prata-carrefour-600g-211427/p,variante,Banana Prata Carrefour  600g. Banana prata Carrefour 600g. Comparar por kg.
+P089,carrefour,https://mercado.carrefour.com.br/maca-gala-carrefour-mercado-1kg-3466183/p,achado,Maca Gala Carrefour Mercado 1kg.
+P090,carrefour,https://mercado.carrefour.com.br/laranja-pera-carrefour-aprox-600g-222321/p,variante,"Laranja Pêra Carrefour Aprox. 600g. Laranja pera, cerca de 600g vendida por peso. Comparar por kg."
+P091,carrefour,,nao_achado,Limão taiti não está no sitemap.
+P092,carrefour,https://mercado.carrefour.com.br/tomate-salada-unico-1-kg-5154626/p,achado,Tomate Salada Único 1Kg.
+P093,carrefour,https://mercado.carrefour.com.br/cebola-unico-1kg-5154650/p,achado,Cebola Único Carrefour 1Kg.
+P094,carrefour,https://mercado.carrefour.com.br/alho-granel-carrefour-aprox-75g-65226/p,variante,"Alho Granel Carrefour Aprox. 75g. Alho a granel, cerca de 75g vendido por peso. Comparar por kg."
+P095,carrefour,https://mercado.carrefour.com.br/batata-lavada-unico-1kg-5154731/p,achado,Batata Lavada Único Carrefour 1Kg.
+P096,carrefour,https://mercado.carrefour.com.br/cenoura-unico-1kg-5154669/p,achado,Cenoura Único 1Kg.
+P097,carrefour,https://mercado.carrefour.com.br/alface-crespa-carrefour-mercado-em-unidade-8264880/p,achado,Alface Crespa Carrefour Mercado Em Unidade.
+P098,carrefour,https://mercado.carrefour.com.br/mamao-formosa-garantia-de-origem-aprox-1-6-kg-20524/p,variante,"Mamão Formosa Garantia de Origem Aprox. 1,6 Kg. Mamão formosa, cerca de 1,6kg vendido por peso. Comparar por kg."
+P099,carrefour,https://mercado.carrefour.com.br/abobrinha-italiana-carrefour-aprox-400g-20672/p,variante,"Abobrinha Italiana Carrefour Aprox. 400g. Abobrinha italiana, cerca de 400g vendida por peso. Comparar por kg."
+P100,carrefour,,nao_achado,Pimentão não está no sitemap.
