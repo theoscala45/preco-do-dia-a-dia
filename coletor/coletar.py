@@ -20,7 +20,7 @@ Regras (ver data/LEIAME.md):
 Saida padrao: data/precos/AAAA-MM.csv (uma linha por produto, CEP e dia) e data/execucoes.csv (uma linha por rede, CEP e dia).
 As linhas de execucao sao gravadas a cada CEP, para nada se perder se o tempo acabar no meio.
 """
-import argparse, csv, datetime, html, json, os, random, re, time, urllib.parse, urllib.request, urllib.robotparser
+import argparse, csv, datetime, gzip, html, json, os, random, re, time, urllib.parse, urllib.request, urllib.robotparser
 from zoneinfo import ZoneInfo
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -227,26 +227,50 @@ class Sonda:
     loja = ""
 
     def ler_pagina(self, url):
-        req = urllib.request.Request(urllib.parse.quote(url, safe=":/%"), headers={"User-Agent": "Mozilla/5.0 (preco-do-dia-a-dia)"})
-        with urllib.request.urlopen(req, timeout=60) as r:
-            if r.status in (403, 429): raise Bloqueio(f"a rede respondeu {r.status}")
-            final, h = r.geturl(), r.read().decode("utf-8", "replace")
-        if re.search(r"<title>\s*(captcha|just a moment|attention required)", h, re.I):
-            raise Bloqueio("pagina de bloqueio (captcha)")
-        if "/produto/" not in final:
-            raise RuntimeError("pagina nao existe mais (o site mandou para a pagina inicial)")
-        dados = None
-        for bloco in re.findall(r'<script type="application/ld\+json">(.*?)</script>', h, re.S):
-            try: d = json.loads(bloco)
-            except ValueError: continue
-            if isinstance(d, dict) and d.get("@type") == "Product": dados = d
-        if not dados:
-            raise RuntimeError("pagina sem dados de produto")
-        nome = html.unescape(dados.get("name", "")).strip()
-        preco = (dados.get("offers") or {}).get("price")
-        if "InStock" not in str(dados.get("availability", "")) or not preco:
-            return {"nome": nome, "tamanho": tamanho_do_nome(nome), "preco": None, "unidade": "", "disponivel": False}
-        return {"nome": nome, "tamanho": tamanho_do_nome(nome), "preco": f"{float(preco):.2f}", "unidade": "un", "disponivel": True}
+        return ler_schema(url, "/produto/")
+
+
+class SantaLuzia:
+    """Casa Santa Luzia (santaluzia.com.br). Loja unica, entao o preco e unico. A pagina de produto abre sem
+    navegador e traz os dados padronizados de produto (schema.org). Os links vieram do sitemap do site."""
+    rede_id = "santa-luzia"
+    site = "https://www.santaluzia.com.br"
+    preco_unico = True
+    loja = ""
+
+    def ler_pagina(self, url):
+        return ler_schema(url, "/p")
+
+
+def ler_schema(url, marca_de_produto):
+    """Le uma pagina de produto sem navegador e pega nome, preco e estoque nos dados padronizados (schema.org)."""
+    req = urllib.request.Request(urllib.parse.quote(url, safe=":/%"), headers={"User-Agent": "Mozilla/5.0 (preco-do-dia-a-dia)"})
+    with urllib.request.urlopen(req, timeout=60) as r:
+        if r.status in (403, 429): raise Bloqueio(f"a rede respondeu {r.status}")
+        final, corpo = r.geturl(), r.read()
+    if corpo[:2] == b"\x1f\x8b":   # alguns sites mandam a pagina comprimida mesmo sem pedir
+        corpo = gzip.decompress(corpo)
+    h = corpo.decode("utf-8", "replace")
+    if re.search(r"<title>\s*(captcha|just a moment|attention required)", h, re.I):
+        raise Bloqueio("pagina de bloqueio (captcha)")
+    if marca_de_produto not in urllib.parse.urlparse(final).path:
+        raise RuntimeError("pagina nao existe mais (o site mandou para outra pagina)")
+    dados = None
+    for bloco in re.findall(r'<script[^>]*application/ld\+json[^>]*>(.*?)</script>', h, re.S):
+        try: d = json.loads(bloco)
+        except ValueError: continue
+        if isinstance(d, dict) and d.get("@type") == "Product": dados = d
+    if not dados:
+        raise RuntimeError("pagina sem dados de produto")
+    nome = html.unescape(dados.get("name", "")).strip()
+    oferta = dados.get("offers") or {}
+    if isinstance(oferta.get("offers"), list) and oferta["offers"]:   # AggregateOffer: vale a primeira oferta
+        oferta = oferta["offers"][0]
+    preco = oferta.get("price")
+    estoque = str(oferta.get("availability") or dados.get("availability") or "")
+    if "InStock" not in estoque or not preco:
+        return {"nome": nome, "tamanho": tamanho_do_nome(nome), "preco": None, "unidade": "", "disponivel": False}
+    return {"nome": nome, "tamanho": tamanho_do_nome(nome), "preco": f"{float(preco):.2f}", "unidade": "un", "disponivel": True}
 
 
 class PaoDeAcucar:
@@ -347,7 +371,7 @@ def coletar_unico(rede, links, hoje, limite, arq_precos, arq_exec, pw=None):
     print(f"[{rede.rede_id}] {resultado}: {len(linhas)}/{len(paginas)} lidos, {sem_preco} sem estoque, {time.time() - inicio:.0f} s" + (f" | {nota}" if nota else ""), flush=True)
 
 
-REDES = [Tenda(), Atacadao(), Carrefour(), PaoDeAcucar(), Sonda()]
+REDES = [Tenda(), Atacadao(), Carrefour(), PaoDeAcucar(), Sonda(), SantaLuzia()]
 
 
 def robots(rede):

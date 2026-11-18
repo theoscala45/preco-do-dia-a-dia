@@ -399,3 +399,103 @@ P097,pao-de-acucar,https://www.paodeacucar.com/produto/5639/alface-crespa-natura
 P098,pao-de-acucar,https://www.paodeacucar.com/produto/38181/mamao-formosa-granel-2kg-1-unid,achado,"Mamão Formosa Granel, vendido por kg."
 P099,pao-de-acucar,https://www.paodeacucar.com/produto/80045/abobrinha-italiana-granel-800g-aprox-2-a-3-unid,variante,"Abobrinha Italiana Granel, cerca de 800g vendida por peso. A página dá o preço do kg."
 P100,pao-de-acucar,https://www.paodeacucar.com/produto/54611/pimentao-verde-extra-granel-300g-2-unidades,variante,"Pimentão Verde Extra Granel, cerca de 300g vendido por peso. A página dá o preço do kg."
+P001,santa-luzia,https://www.santaluzia.com.br/arroz-camil-tipo-1-5kg---909580/p,achado,Arroz Camil Tipo 1 5kg.
+P002,santa-luzia,https://www.santaluzia.com.br/arroz-tipo-1-tio-joao-5kg--614920/p,achado,Arroz Tipo 1 Tio João 5kg.
+P003,santa-luzia,https://www.santaluzia.com.br/feijao-carioca-camil-1kg-1134353/p,achado,Feijão Carioca Camil 1kg.
+P004,santa-luzia,https://www.santaluzia.com.br/feijao-preto-camil-500g-552666/p,tamanho_diferente,Feijão Preto Camil 500g. Só o de 500g. Fica fora.
+P005,santa-luzia,,nao_achado,Não há óleo de soja Soya; só Liza.
+P006,santa-luzia,https://www.santaluzia.com.br/azeite-de-oliva-extravirgem-gallo-500ml-651605/p,achado,Azeite de Oliva Extravirgem Gallo 500ml.
+P007,santa-luzia,https://www.santaluzia.com.br/acucar-refinado-uniao-1kg-649090/p,achado,Açúcar Refinado União 1kg.
+P008,santa-luzia,https://www.santaluzia.com.br/acucar-cristalizado-uniao-1kg-578681/p,achado,Açúcar Cristal União 1kg.
+P009,santa-luzia,https://www.santaluzia.com.br/cafe-torrado-e-moido-extra-forte-vacuo-pilao-500g--1062050/p,achado,Café Torrado e Moído Extra Forte Pilão Vácuo 500g.
+P010,santa-luzia,https://www.santaluzia.com.br/cafe-torrado-e-moido-vacuo-tradicional-3-coracoes-250g--964913/p,tamanho_diferente,Café Tradicional 3 Corações 250g. O tradicional só em 250g. Fica fora.
+P011,santa-luzia,https://www.santaluzia.com.br/farinha-de-trigo-dona-benta-1kg-501662/p,achado,Farinha de Trigo Dona Benta 1kg.
+P012,santa-luzia,https://www.santaluzia.com.br/farinha-de-mandioca-crua-yoki-500g-539155/p,variante,Farinha de Mandioca Crua Yoki 500g.
+P013,santa-luzia,https://www.santaluzia.com.br/macarrao-renata-ovos-espaguete-8-516260/p,achado,Macarrão Renata com Ovos Espaguete 8 500g.
+P014,santa-luzia,,nao_achado,Não há parafuso Barilla com ovos; só fusilli integral e sem glúten.
+P015,santa-luzia,https://www.santaluzia.com.br/molho-de-tomate-tradicional-pomarola-300g-3120732/p,tamanho_diferente,Molho de Tomate Tradicional Pomarola 300g. Não há o de 340g. Fica fora.
+P016,santa-luzia,https://www.santaluzia.com.br/extrato-de-tomate-elefante-cargill-300g-3076423/p,achado,Extrato de Tomate Elefante 300g.
+P017,santa-luzia,https://www.santaluzia.com.br/sal-refinado-tradicional-cisne-1kg-648841/p,achado,Sal Refinado Cisne 1kg.
+P018,santa-luzia,https://www.santaluzia.com.br/fuba-mimoso-de-milho-yoki-500g-529435/p,tamanho_diferente,Fubá Mimoso Yoki 500g. Só o de 500g. Fica fora.
+P019,santa-luzia,https://www.santaluzia.com.br/aveia-integral-em-flocos-quaker-165g-3028011/p,tamanho_diferente,Aveia em Flocos Quaker 165g. Só a de 165g. Fica fora.
+P020,santa-luzia,https://www.santaluzia.com.br/achocolatado-em-po-nescau-nestle-370g-3169545/p,tamanho_diferente,Achocolatado em Pó Nescau 370g. Não há o de 350g. Fica fora.
+P021,santa-luzia,,nao_achado,Não há biscoito Vitarella.
+P022,santa-luzia,https://www.santaluzia.com.br/biscoito-passatempo-recehado-de-chocolate-nestle-130g-805602/p,achado,Biscoito Passatempo Recheado de Chocolate 130g.
+P023,santa-luzia,https://www.santaluzia.com.br/pao-de-forma-pullman--480g-586498/p,achado,Pão de Forma Pullman 480g.
+P024,santa-luzia,https://www.santaluzia.com.br/margarina-com-sal-qualy---500g-511447/p,achado,Margarina com Sal Qualy 500g.
+P025,santa-luzia,https://www.santaluzia.com.br/maionese-hellmannquots-500g--501115/p,achado,Maionese Hellmann's 500g.
+P026,santa-luzia,https://www.santaluzia.com.br/ketchup-tradicional-heinz-397g--651630/p,achado,Ketchup Tradicional Heinz 397g.
+P027,santa-luzia,https://www.santaluzia.com.br/files-de-sardinha-em-oleo-gomes-da-costa-125g-667188/p,achado,Filés de Sardinha em Óleo Gomes da Costa 125g.
+P028,santa-luzia,https://www.santaluzia.com.br/atum-ralado-em-oleo-gomes-da-costa-170g-1051300/p,achado,Atum Ralado em Óleo Gomes da Costa 170g.
+P029,santa-luzia,https://www.santaluzia.com.br/milho-verde-quero-280g-127612/p,tamanho_diferente,Milho Verde Quero 280g. Só a lata de 280g. Fica fora.
+P030,santa-luzia,https://www.santaluzia.com.br/ervilha-quero-280g-127604/p,tamanho_diferente,Ervilha Quero 280g. Só a lata de 280g. Fica fora.
+P031,santa-luzia,https://www.santaluzia.com.br/vinagre-de-alcool-castelo-750ml-512583/p,achado,Vinagre de Álcool Castelo 750ml.
+P032,santa-luzia,,nao_achado,Só Sazón de outros sabores; não há o tempero completo.
+P033,santa-luzia,https://www.santaluzia.com.br/caldo-de-galinha-knorr-57g-512273/p,achado,Caldo de Galinha Knorr 57g.
+P034,santa-luzia,https://www.santaluzia.com.br/leite-condensado-integral-moca-395g-502502/p,achado,Leite Condensado Integral Moça 395g.
+P035,santa-luzia,https://www.santaluzia.com.br/creme-de-leite-original-nestle-200g-574104/p,achado,Creme de Leite Original Nestlé 200g.
+P036,santa-luzia,https://www.santaluzia.com.br/mistura-para-bolo-de-baunilha-dona-benta-450g-591173/p,variante,Mistura para Bolo de Baunilha Dona Benta 450g. O de chocolate não aparece.
+P037,santa-luzia,,nao_achado,Não há água Crystal.
+P038,santa-luzia,https://www.santaluzia.com.br/coca-cola-sabor-original-2l-515639/p,achado,Coca-Cola Sabor Original 2L.
+P039,santa-luzia,https://www.santaluzia.com.br/leite-uht-integral-italac---1l-1006010/p,achado,Leite UHT Integral Italac 1L.
+P040,santa-luzia,,nao_achado,Não há leite integral Piracanjuba comum; só o sem lactose.
+P041,santa-luzia,https://www.santaluzia.com.br/leite-desnatado-piracanjuba---1l-794309/p,achado,Leite Desnatado Piracanjuba 1L.
+P042,santa-luzia,https://www.santaluzia.com.br/leite-ninho-em-po-zero-lactose-380g-1097938/p,variante,Leite em Pó Ninho Zero Lactose 380g. O integral comum não aparece.
+P043,santa-luzia,https://www.santaluzia.com.br/manteiga-com-sal-aviacao--200g-586005/p,achado,Manteiga com Sal Aviação 200g.
+P044,santa-luzia,https://www.santaluzia.com.br/queijo-mussarela-fatiado-light-sem-lactose-tirolez---150g-1171100/p,variante,"Queijo Mussarela Fatiado Light sem Lactose Tirolez 150g, como no Carrefour."
+P045,santa-luzia,https://www.santaluzia.com.br/queijo-prato-fatiado-light-tirolez---150g-1171119/p,variante,Queijo Prato Fatiado Light Tirolez 150g.
+P046,santa-luzia,https://www.santaluzia.com.br/requeijao-tradicional-vigor---200g-1010328/p,achado,Requeijão Tradicional Vigor 200g.
+P047,santa-luzia,https://www.santaluzia.com.br/iogurte-natural-nestle---170g-935387/p,achado,Iogurte Natural Nestlé 170g.
+P048,santa-luzia,https://www.santaluzia.com.br/iogurte-morango-probio2-batavo--115kg-3237915/p,tamanho_diferente,"Iogurte Morango Probio2 Batavo 1,15kg. Só garrafa de 1,15kg. Fica fora."
+P049,santa-luzia,https://www.santaluzia.com.br/presunto-cozido-fatiado-soltissimo-sadia--200g-1109138/p,achado,Presunto Cozido Fatiado Soltíssimo Sadia 200g.
+P050,santa-luzia,,nao_achado,Não há queijo minas frescal Tirolez; só creme de queijo minas.
+P051,santa-luzia,https://www.santaluzia.com.br/ovos-brancos-grandes-planalto---20-un-3226972/p,tamanho_diferente,Ovos Brancos Grandes Planalto 20 unidades. Só bandejas de 10 e 20. Fica fora.
+P052,santa-luzia,https://www.santaluzia.com.br/ovos-planalto-vermelho-grande---10-uni-3226913/p,tamanho_diferente,Ovos Vermelhos Grandes Planalto 10 unidades. Só bandejas de 10 e 20. Fica fora.
+P053,santa-luzia,https://www.santaluzia.com.br/papel-higienico-neutro-l18-p16-neve---1196650/p,tamanho_diferente,Papel Higiênico Neve Neutro Leve 18 Pague 16. Não há pacote de 12 com folha dupla. Fica fora.
+P054,santa-luzia,https://www.santaluzia.com.br/papel-higienico-neutro-tripla-folha-personal-vip3---12x20m-3187837/p,variante,Papel Higiênico Personal Vip3 Folha Tripla 12 rolos de 20m.
+P055,santa-luzia,https://www.santaluzia.com.br/sabonete-cremoso-dove-90g--832065/p,achado,Sabonete Cremoso Dove 90g (o Dove original).
+P056,santa-luzia,,nao_achado,Não há sabonete Lux.
+P057,santa-luzia,https://www.santaluzia.com.br/creme-dental-total-12-original-mint-colgate--90g-3257177/p,achado,Creme Dental Colgate Total 12 Original Mint 90g.
+P058,santa-luzia,https://www.santaluzia.com.br/creme-dental-maxima-protecao-colgate--90g-506672/p,achado,Creme Dental Colgate Máxima Proteção 90g.
+P059,santa-luzia,,nao_achado,Escova Colgate só em pacotes com 2.
+P060,santa-luzia,,nao_achado,Não há shampoo Seda.
+P061,santa-luzia,,nao_achado,Não há condicionador Seda.
+P062,santa-luzia,https://www.santaluzia.com.br/desodorante-aerosol-antibacterial-invisible-rexona--150ml-1185780/p,variante,Desodorante Aerosol Rexona Antibacterial Invisible 150ml.
+P063,santa-luzia,,nao_achado,Não há fio dental Oral-B.
+P064,santa-luzia,https://www.santaluzia.com.br/absorventes-pequenos-suave-com-abas-always-8-unidades-3001075/p,variante,Absorvente Always Suave com Abas 8 unidades.
+P065,santa-luzia,,nao_achado,Não há fraldas Huggies.
+P066,santa-luzia,https://www.santaluzia.com.br/lava-roupas-omo-lavagem-perfeita-16kg--1290959/p,achado,"Lava-Roupas Omo Lavagem Perfeita 1,6kg."
+P067,santa-luzia,https://www.santaluzia.com.br/sabao-liquido-puro-cuidado-omo-3l-1147820/p,variante,Sabão Líquido Omo Puro Cuidado 3L.
+P068,santa-luzia,https://www.santaluzia.com.br/amaciante-concentrado-energia-floral-comfort-500ml-1119850/p,variante,Amaciante Concentrado Comfort Energia Floral 500ml.
+P069,santa-luzia,https://www.santaluzia.com.br/detergente-neutro-ype-500ml--603228/p,achado,Detergente Neutro Ypê 500ml.
+P070,santa-luzia,https://www.santaluzia.com.br/agua-sanitaria-multiplo-uso-qboa-1l--532550/p,tamanho_diferente,Água Sanitária Qboa 1L. Só a de 1L. Fica fora.
+P071,santa-luzia,https://www.santaluzia.com.br/desinfetante-perfumado-original-pinho-sol-500ml-667480/p,achado,Desinfetante Pinho Sol Original 500ml.
+P072,santa-luzia,,nao_achado,Não há limpador multiuso Veja.
+P073,santa-luzia,,nao_achado,Esponja Scotch-Brite só avulsa; não há pacote com 3.
+P074,santa-luzia,https://www.santaluzia.com.br/saco-de-lixo-super-forte-azul-50--litros--dover-roll---20-unidades-3211401/p,achado,Saco de Lixo Dover Roll Super Forte Azul 50L 20 unidades.
+P075,santa-luzia,https://www.santaluzia.com.br/papel-toalha-2-unidades--snob---120-folhas-3159680/p,achado,Papel Toalha Snob 2 rolos.
+P076,santa-luzia,https://www.santaluzia.com.br/sabao-em-barra-glicerinado-neutro-5-unidades-de-180g-ype-3099288/p,variante,Sabão em Barra Glicerinado Neutro Ypê 5 unidades de 180g.
+P077,santa-luzia,,nao_achado,Não há álcool líquido 70% de 1L; só 46º.
+P078,santa-luzia,https://www.santaluzia.com.br/multi-inseticida-de-citronela-sbp-380ml-936898/p,tamanho_diferente,Multi-Inseticida SBP Citronela 380ml. Só 380ml ou mais. Fica fora.
+P079,santa-luzia,,nao_achado,"O site não vende carnes, frutas e verduras frescas pela internet."
+P080,santa-luzia,,nao_achado,"O site não vende carnes, frutas e verduras frescas pela internet."
+P081,santa-luzia,,nao_achado,"O site não vende carnes, frutas e verduras frescas pela internet."
+P082,santa-luzia,,nao_achado,"O site não vende carnes, frutas e verduras frescas pela internet."
+P083,santa-luzia,,nao_achado,"O site não vende carnes, frutas e verduras frescas pela internet."
+P084,santa-luzia,,nao_achado,"O site não vende carnes, frutas e verduras frescas pela internet."
+P085,santa-luzia,,nao_achado,Não há linguiça toscana Seara.
+P086,santa-luzia,https://www.santaluzia.com.br/salsicha-hot-dog-perdigao--500g-510602/p,achado,Salsicha Hot Dog Perdigão 500g.
+P087,santa-luzia,,nao_achado,"O site não vende carnes, frutas e verduras frescas pela internet."
+P088,santa-luzia,,nao_achado,"O site não vende carnes, frutas e verduras frescas pela internet."
+P089,santa-luzia,,nao_achado,"O site não vende carnes, frutas e verduras frescas pela internet."
+P090,santa-luzia,,nao_achado,"O site não vende carnes, frutas e verduras frescas pela internet."
+P091,santa-luzia,,nao_achado,"O site não vende carnes, frutas e verduras frescas pela internet."
+P092,santa-luzia,,nao_achado,"O site não vende carnes, frutas e verduras frescas pela internet."
+P093,santa-luzia,,nao_achado,"O site não vende carnes, frutas e verduras frescas pela internet."
+P094,santa-luzia,,nao_achado,"O site não vende carnes, frutas e verduras frescas pela internet."
+P095,santa-luzia,,nao_achado,"O site não vende carnes, frutas e verduras frescas pela internet."
+P096,santa-luzia,,nao_achado,"O site não vende carnes, frutas e verduras frescas pela internet."
+P097,santa-luzia,,nao_achado,"O site não vende carnes, frutas e verduras frescas pela internet."
+P098,santa-luzia,,nao_achado,"O site não vende carnes, frutas e verduras frescas pela internet."
+P099,santa-luzia,,nao_achado,"O site não vende carnes, frutas e verduras frescas pela internet."
+P100,santa-luzia,,nao_achado,"O site não vende carnes, frutas e verduras frescas pela internet."
