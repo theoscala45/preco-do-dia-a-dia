@@ -20,7 +20,7 @@ Regras (ver data/LEIAME.md):
 Saida padrao: data/precos/AAAA-MM.csv (uma linha por produto, CEP e dia) e data/execucoes.csv (uma linha por rede, CEP e dia).
 As linhas de execucao sao gravadas a cada CEP, para nada se perder se o tempo acabar no meio.
 """
-import argparse, csv, datetime, html, os, random, re, time, urllib.parse, urllib.request, urllib.robotparser
+import argparse, csv, datetime, html, json, os, random, re, time, urllib.parse, urllib.request, urllib.robotparser
 from zoneinfo import ZoneInfo
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -216,6 +216,39 @@ class Carrefour:
         return {"nome": nome, "tamanho": tamanho_do_nome(nome), "preco": f"{float(oferta.group(1)):.2f}", "unidade": "un", "disponivel": True}
 
 
+class Sonda:
+    """Sonda (sondadelivery.com.br). O preco e unico: a pagina de produto mostra o preco sem pedir CEP. A pagina
+    abre sem navegador e traz os dados padronizados de produto (schema.org: nome, preco e estoque), como no
+    Carrefour. O sitemap do site e de 2023 e quase nao tem produtos, entao os links foram achados percorrendo as
+    paginas de categoria."""
+    rede_id = "sonda"
+    site = "https://www.sondadelivery.com.br"
+    preco_unico = True
+    loja = ""
+
+    def ler_pagina(self, url):
+        req = urllib.request.Request(urllib.parse.quote(url, safe=":/%"), headers={"User-Agent": "Mozilla/5.0 (preco-do-dia-a-dia)"})
+        with urllib.request.urlopen(req, timeout=60) as r:
+            if r.status in (403, 429): raise Bloqueio(f"a rede respondeu {r.status}")
+            final, h = r.geturl(), r.read().decode("utf-8", "replace")
+        if re.search(r"<title>\s*(captcha|just a moment|attention required)", h, re.I):
+            raise Bloqueio("pagina de bloqueio (captcha)")
+        if "/produto/" not in final:
+            raise RuntimeError("pagina nao existe mais (o site mandou para a pagina inicial)")
+        dados = None
+        for bloco in re.findall(r'<script type="application/ld\+json">(.*?)</script>', h, re.S):
+            try: d = json.loads(bloco)
+            except ValueError: continue
+            if isinstance(d, dict) and d.get("@type") == "Product": dados = d
+        if not dados:
+            raise RuntimeError("pagina sem dados de produto")
+        nome = html.unescape(dados.get("name", "")).strip()
+        preco = (dados.get("offers") or {}).get("price")
+        if "InStock" not in str(dados.get("availability", "")) or not preco:
+            return {"nome": nome, "tamanho": tamanho_do_nome(nome), "preco": None, "unidade": "", "disponivel": False}
+        return {"nome": nome, "tamanho": tamanho_do_nome(nome), "preco": f"{float(preco):.2f}", "unidade": "un", "disponivel": True}
+
+
 class PaoDeAcucar:
     """Pao de Acucar. O preco e unico: a pagina de produto mostra o preco sem pedir CEP. O site so abre em
     navegador (pedidos sem navegador recebem uma pagina de verificacao), entao a leitura usa o navegador automatico,
@@ -314,7 +347,7 @@ def coletar_unico(rede, links, hoje, limite, arq_precos, arq_exec, pw=None):
     print(f"[{rede.rede_id}] {resultado}: {len(linhas)}/{len(paginas)} lidos, {sem_preco} sem estoque, {time.time() - inicio:.0f} s" + (f" | {nota}" if nota else ""), flush=True)
 
 
-REDES = [Tenda(), Atacadao(), Carrefour(), PaoDeAcucar()]
+REDES = [Tenda(), Atacadao(), Carrefour(), PaoDeAcucar(), Sonda()]
 
 
 def robots(rede):
