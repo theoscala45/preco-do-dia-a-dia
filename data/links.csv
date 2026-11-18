@@ -699,3 +699,103 @@ P097,hirota,https://www.lojahirota.com.br/produto/15605/alface-crespa-hid-unid,v
 P098,hirota,https://www.lojahirota.com.br/produto/6962/mamao-formosa-2kg,variante,"Mamão Formosa, vendido por kg."
 P099,hirota,https://www.lojahirota.com.br/produto/6927/abobrinha-italiana-600g-aprox-1-un,variante,"Abobrinha Italiana, vendida por kg."
 P100,hirota,https://www.lojahirota.com.br/produto/6883/pimentao-verde-250g-qt-aprox-1-un,variante,"Pimentão Verde, vendido por kg."
+P001,st-marche,https://marche.com.br/products/arroz-camil-longo-fino-tipo-1-5kg,achado,Arroz Longo Fino Camil Tipo 1 5kg.
+P002,st-marche,https://marche.com.br/products/arroz-100-graos-nobres-tio-joao-5kg,variante,Arroz Tio João 100% Grãos Nobres 5kg. O tipo 1 comum não aparece.
+P003,st-marche,https://marche.com.br/products/feijao-camil-carioca-1kg,achado,Feijão Carioca Camil 1kg.
+P004,st-marche,https://marche.com.br/products/feijao-camil-preto-1kg,achado,Feijão Preto Camil 1kg.
+P005,st-marche,https://marche.com.br/products/oleo-de-soja-soya-900ml,achado,Óleo de Soja Soya 900ml.
+P006,st-marche,https://marche.com.br/products/azeite-portugues-de-oliva-extra-virgem-gallo-vidro-500ml,achado,Azeite Português Extra Virgem Gallo 500ml.
+P007,st-marche,https://marche.com.br/products/acucar-refinado-uniao-pacote-1kg,achado,Açúcar Refinado União 1kg.
+P008,st-marche,https://marche.com.br/products/acucar-cristal-uniao-1kg,achado,Açúcar Cristal União 1kg.
+P009,st-marche,https://marche.com.br/products/cafe-a-vacuo-torrado-e-moido-extra-forte-pilao-500g,achado,Café Extra Forte Pilão a Vácuo 500g.
+P010,st-marche,https://marche.com.br/products/cafe-tradicional-3-coracoes-500g,achado,Café Tradicional 3 Corações 500g.
+P011,st-marche,https://marche.com.br/products/farinha-de-trigo-tradicional-dona-benta-1kg,achado,Farinha de Trigo Tradicional Dona Benta 1kg.
+P012,st-marche,https://marche.com.br/products/farinha-de-mandioca-tipo-1-yoki-pacote-500g,achado,Farinha de Mandioca Tipo 1 Yoki 500g.
+P013,st-marche,https://marche.com.br/products/macarrao-de-semola-renata-com-ovos-espaguete-8-500g,achado,Macarrão Renata com Ovos Espaguete 8 500g.
+P014,st-marche,https://marche.com.br/products/macarrao-barilla-com-ovos-parafuso-500g,achado,Macarrão Barilla com Ovos Parafuso 500g.
+P015,st-marche,https://marche.com.br/products/molho-de-tomate-pomarola-tradicional-sache-300g,achado,Molho de Tomate Pomarola Tradicional Sachê 300g.
+P016,st-marche,https://marche.com.br/products/extrato-tomate-elefante-tradicional-300g,variante,"Extrato de Tomate Elefante Tradicional 300g, como nas outras redes."
+P017,st-marche,https://marche.com.br/products/sal-refinado-cisne-pacote-1kg,achado,Sal Refinado Cisne 1kg.
+P018,st-marche,https://marche.com.br/products/fuba-yoki-500g,achado,Fubá Yoki 500g.
+P019,st-marche,https://marche.com.br/products/aveia-quaker-em-flocos-450g,achado,Aveia Quaker em Flocos 450g.
+P020,st-marche,https://marche.com.br/products/achocolatado-nescau-em-po-fator-crescer-350g,variante,Achocolatado Nescau Fator Crescer 350g.
+P021,st-marche,https://marche.com.br/products/biscoito-vitarella-cream-cracker-350g,achado,Biscoito Vitarella Cream Cracker 350g.
+P022,st-marche,https://marche.com.br/products/biscoito-nestle-passatempo-recheado-de-chocolate-pacote-130g,achado,Biscoito Passatempo Recheado de Chocolate 130g.
+P023,st-marche,https://marche.com.br/products/pao-de-forma-tradicional-pullman-480g,achado,Pão de Forma Tradicional Pullman 480g.
+P024,st-marche,https://marche.com.br/products/margarina-cremosa-com-sal-qualy-500g,achado,Margarina Cremosa com Sal Qualy 500g.
+P025,st-marche,https://marche.com.br/products/maionese-tradicional-hellmanns-500g,achado,Maionese Tradicional Hellmann's 500g.
+P026,st-marche,https://marche.com.br/products/ketchup-tradicional-heinz-397g,achado,Ketchup Tradicional Heinz 397g.
+P027,st-marche,https://marche.com.br/products/sardinha-em-oleo-gomes-da-costa-125g,achado,Sardinha em Óleo Gomes da Costa 125g.
+P028,st-marche,https://marche.com.br/products/atum-ralado-em-oleo-gomes-da-costa-lata-130g,tamanho_diferente,Atum Ralado em Óleo Gomes da Costa 130g. Só a lata de 130g. Fica fora.
+P029,st-marche,https://marche.com.br/products/milho-verde-quero-170g,achado,Milho Verde Quero 170g.
+P030,st-marche,https://marche.com.br/products/ervilha-quero-em-conserva-170g,achado,Ervilha Quero 170g.
+P031,st-marche,https://marche.com.br/products/vinagre-castelo-alcool-750ml,achado,Vinagre de Álcool Castelo 750ml.
+P032,st-marche,https://marche.com.br/products/tempero-po-sazon-para-frango-pacote-60g,achado,Tempero Sazón para Frango 60g.
+P033,st-marche,https://marche.com.br/products/caldo-de-galinha-knorr-57g-com-6-cubos,achado,Caldo de Galinha Knorr 57g.
+P034,st-marche,https://marche.com.br/products/leite-condensado-moca-nestle-lata-395g,achado,Leite Condensado Moça Lata 395g.
+P035,st-marche,https://marche.com.br/products/creme-de-leite-nestle-200g,achado,Creme de Leite Nestlé 200g.
+P036,st-marche,,nao_achado,Não há mistura para bolo Dona Benta.
+P037,st-marche,https://marche.com.br/products/agua-mineral-sem-gas-crystal-pet-1-5-litros,achado,"Água Mineral sem Gás Crystal 1,5L."
+P038,st-marche,https://marche.com.br/products/coca-cola-sabor-original-pet-2-litros,achado,Coca-Cola Original 2L.
+P039,st-marche,https://marche.com.br/products/leite-longa-vida-integral-italac-1-litro,achado,Leite Longa Vida Integral Italac 1L.
+P040,st-marche,https://marche.com.br/products/leite-longa-vida-integral-piracanjuba-1-litro,achado,Leite Longa Vida Integral Piracanjuba 1L.
+P041,st-marche,https://marche.com.br/products/leite-longa-vida-desnatado-piracanjuba-1-litro,achado,Leite Longa Vida Desnatado Piracanjuba 1L.
+P042,st-marche,https://marche.com.br/products/leite-em-po-integral-ninho-forti-380g,variante,Leite em Pó Integral Ninho Forti+ 380g.
+P043,st-marche,https://marche.com.br/products/manteiga-aviacao-lata-com-sal-200g,variante,Manteiga com Sal Aviação Lata 200g. O pote de 200g não aparece.
+P044,st-marche,https://marche.com.br/products/mussarela-tirolez-150g,achado,Mussarela Tirolez 150g.
+P045,st-marche,https://marche.com.br/products/queijo-prato-tirolez-150g,achado,Queijo Prato Tirolez 150g.
+P046,st-marche,https://marche.com.br/products/requeijao-cremoso-vigor-tradicional-200g,achado,Requeijão Cremoso Vigor Tradicional 200g.
+P047,st-marche,https://marche.com.br/products/iogurte-natural-nestle-170g,achado,Iogurte Natural Nestlé 170g.
+P048,st-marche,,nao_achado,Não há iogurte de morango Batavo em garrafa.
+P049,st-marche,https://marche.com.br/products/soltissimo-presunto-cozido-fatiado-sadia-200g,achado,Presunto Cozido Fatiado Soltíssimo Sadia 200g.
+P050,st-marche,https://marche.com.br/products/queijo-minas-frescal-tirolez-470g,tamanho_diferente,Queijo Minas Frescal Tirolez 470g. Não há o de 500g. Fica fora.
+P051,st-marche,https://marche.com.br/products/ovos-happy-eggs-brancos-grandes-com-20-unidades,achado,Ovos Brancos Grandes Happy Eggs 20 unidades.
+P052,st-marche,https://marche.com.br/products/ovos-happy-eggs-vermelhos-grandes-com-20-unidades,achado,Ovos Vermelhos Grandes Happy Eggs 20 unidades.
+P053,st-marche,https://marche.com.br/products/papel-higienico-neve-folha-dupla-rolo-de-20-metros-com-12-rolos,variante,Papel Higiênico Neve Folha Dupla 12 rolos de 20m.
+P054,st-marche,https://marche.com.br/products/papel-higienico-personal-vip-folha-dupla-30m-leve-12-e-pague-11-unidades,variante,Papel Higiênico Personal Vip Folha Dupla 30m Leve 12 Pague 11.
+P055,st-marche,https://marche.com.br/products/sabonete-em-barra-original-dove-90g,achado,Sabonete em Barra Original Dove 90g.
+P056,st-marche,,nao_achado,Não há sabonete Lux.
+P057,st-marche,https://marche.com.br/products/creme-dental-colgate-total-12-advanced-fresh-90g,variante,Creme Dental Colgate Total 12 Advanced Fresh 90g.
+P058,st-marche,https://marche.com.br/products/creme-dental-maxima-protecao-anticaries-colgate-90g,achado,Creme Dental Colgate Máxima Proteção Anticáries 90g.
+P059,st-marche,,nao_achado,Escova Colgate só em pacotes com 2 ou mais.
+P060,st-marche,,nao_achado,Não há shampoo Seda de 325ml; só a linha infantil.
+P061,st-marche,,nao_achado,Não há condicionador Seda de 325ml; só a linha infantil.
+P062,st-marche,https://marche.com.br/products/antitranspirante-aerossol-invisible-rexona-motionsense-150ml,variante,Antitranspirante Aerossol Rexona Invisible 150ml.
+P063,st-marche,,nao_achado,Não há fio dental Oral-B de 50m.
+P064,st-marche,https://marche.com.br/products/absorvente-always-cobertura-suave-p-com-abas-32-unidades,tamanho_diferente,Absorvente Always Suave com Abas 32 unidades. Só pacotes grandes. Fica fora.
+P065,st-marche,,nao_achado,Não há fraldas Huggies.
+P066,st-marche,,nao_achado,Omo em pó só Branco Absoluto 720g.
+P067,st-marche,https://marche.com.br/products/lava-roupas-liquido-omo-lavagem-perfeita-3-litros,achado,Lava-Roupas Líquido Omo Lavagem Perfeita 3L.
+P068,st-marche,https://marche.com.br/products/amaciante-concentrado-comfort-puro-cuidado-500ml,variante,Amaciante Concentrado Comfort Puro Cuidado 500ml.
+P069,st-marche,https://marche.com.br/products/detergente-liquido-neutro-ype-500ml,achado,Detergente Líquido Neutro Ypê 500ml.
+P070,st-marche,https://marche.com.br/products/agua-sanitaria-super-candida-2-litros,achado,Água Sanitária Super Candida 2L.
+P071,st-marche,https://marche.com.br/products/desinfetante-pinho-sol-original-500ml,achado,Desinfetante Pinho Sol Original 500ml.
+P072,st-marche,https://marche.com.br/products/limpador-multi-uso-gold-original-veja-500ml,achado,Limpador Multiuso Veja Gold Original 500ml.
+P073,st-marche,https://marche.com.br/products/esponja-scotch-brite-lou-deli-laranja-com-03-unidades,variante,Esponja Scotch-Brite Louças Delicadas 3 unidades.
+P074,st-marche,,nao_achado,Não há saco de lixo Dover Roll.
+P075,st-marche,https://marche.com.br/products/papel-toalha-snob-folha-dupla-decora-com-02-unidades,variante,Papel Toalha Snob Folha Dupla Decorado 2 rolos.
+P076,st-marche,,nao_achado,Não há sabão em barra Ypê.
+P077,st-marche,https://marche.com.br/products/alcool-liquido-coperalcool-46-eucalipto-1-litro,variante,Álcool Líquido Coperalcool 46º Eucalipto 1L. O tradicional só em 500ml.
+P078,st-marche,https://marche.com.br/products/repelente-sbp-ultra-barreira-360ml,achado,Inseticida SBP Aerosol Ultra 360ml.
+P079,st-marche,https://marche.com.br/products/file-de-peito-de-frango-congelado-sadia-1kg,variante,Filé de Peito de Frango Congelado Sadia 1kg. Comparar por kg.
+P080,st-marche,https://marche.com.br/products/coxa-e-sobrecoxa-de-frango,variante,"Coxa e Sobrecoxa de Frango, por kg."
+P081,st-marche,https://marche.com.br/products/frango-inteiro-supreme-sadia-kg,variante,"Frango Inteiro Supreme Sadia, por kg."
+P082,st-marche,https://marche.com.br/products/patinho-bov-moido-kg,variante,"Patinho Moído, por kg."
+P083,st-marche,https://marche.com.br/products/acem-em-pedaco,variante,"Acém em Pedaço, por kg."
+P084,st-marche,https://marche.com.br/products/contra-file-bov-bife-kg,variante,"Contrafilé em Bifes, por kg."
+P085,st-marche,,nao_achado,Não há linguiça toscana Seara.
+P086,st-marche,https://marche.com.br/products/salsicha-hot-dog-perdigao-500g,achado,Salsicha Hot Dog Perdigão 500g.
+P087,st-marche,https://marche.com.br/products/file-de-tilapia-congelado-netuno-500g,variante,Filé de Tilápia Congelado Netuno 500g. Comparar por kg.
+P088,st-marche,https://marche.com.br/products/banana-prata-1,achado,"Banana Prata, por kg."
+P089,st-marche,https://marche.com.br/products/maca-gala-1,achado,"Maçã Gala, por kg."
+P090,st-marche,https://marche.com.br/products/laranja-pera,achado,"Laranja Pêra, por kg."
+P091,st-marche,https://marche.com.br/products/limao-tahiti,achado,"Limão Tahiti, por kg."
+P092,st-marche,https://marche.com.br/products/tomate-italiano,variante,"Tomate Italiano, por kg. O tomate comum não aparece."
+P093,st-marche,https://marche.com.br/products/cebola,achado,"Cebola, por kg."
+P094,st-marche,https://marche.com.br/products/alho-em-dente-st-marche-kg,variante,"Alho em Dente St Marche, por kg."
+P095,st-marche,https://marche.com.br/products/batata-comum-1,achado,"Batata Comum, por kg."
+P096,st-marche,https://marche.com.br/products/cenoura,achado,"Cenoura, por kg."
+P097,st-marche,https://marche.com.br/products/alface-crespa-tomita,variante,"Alface Crespa Tomita, 1 unidade."
+P098,st-marche,https://marche.com.br/products/mamao-formosa,achado,"Mamão Formosa, por kg."
+P099,st-marche,https://marche.com.br/products/abobrinha-italiana-selecionada,achado,"Abobrinha Italiana Selecionada, por kg."
+P100,st-marche,https://marche.com.br/products/pimentao-verde-a-granel-st-marche-kg,achado,"Pimentão Verde a Granel, por kg."

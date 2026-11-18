@@ -252,6 +252,39 @@ class SantaLuzia:
         return ler_schema(url, "/p")
 
 
+class StMarche:
+    """St Marche (marche.com.br). Os termos de uso pedem autorizacao por escrito para copiar ou republicar conteudo;
+    a St Marche autorizou o projeto por e-mail em 11/2026 (ver docs/emails-para-as-redes.md). Preco unico do site,
+    lido sem navegador: a pagina de produto traz o nome, o preco e o estoque do produto escolhido. Os links vieram
+    do sitemap."""
+    rede_id = "st-marche"
+    site = "https://marche.com.br"
+    preco_unico = True
+    loja = ""
+
+    def ler_pagina(self, url):
+        req = urllib.request.Request(urllib.parse.quote(url, safe=":/%"), headers={"User-Agent": "Mozilla/5.0 (preco-do-dia-a-dia)"})
+        with urllib.request.urlopen(req, timeout=60) as r:
+            final, corpo = r.geturl(), r.read()
+        if corpo[:2] == b"\x1f\x8b":
+            corpo = gzip.decompress(corpo)
+        h = corpo.decode("utf-8", "replace")
+        if "Verifying your connection" in h[:3000]:
+            raise Bloqueio("pagina de verificacao de conexao")
+        if "/products/" not in final:
+            raise RuntimeError("pagina nao existe mais (o site mandou para outra pagina)")
+        m = re.search(r'"selectedVariant":\{"availableForSale":(true|false).*?"price":\{"amount":"([\d.]+)".*?"product":\{"title":"((?:[^"\\]|\\.)*)"', h, re.S)
+        if not m:
+            raise RuntimeError("pagina sem dados de produto")
+        nome = html.unescape(json.loads('"' + m.group(3) + '"')).strip()
+        if m.group(1) != "true":
+            return {"nome": nome, "tamanho": tamanho_do_nome(nome), "preco": None, "unidade": "", "disponivel": False}
+        preco = f"{float(m.group(2)):.2f}"
+        # frutas, verduras e carnes: a pagina mostra "R$ 11,99 /kg" e o preco e o do quilo
+        por_kg = re.search(r"R\$\s*" + re.escape(preco.replace(".", ",")) + r"\s*(?:<[^>]*>\s*)*/\s*kg", h, re.I)
+        return {"nome": nome, "tamanho": tamanho_do_nome(nome), "preco": preco, "unidade": "kg" if por_kg else "un", "disponivel": True}
+
+
 class Hirota:
     """Hirota Food (lojahirota.com.br). O preco muda um pouco de loja para loja (conferido em 11/2026: a maioria igual,
     carnes e alguns itens diferentes). O site so abre em navegador e oferece 5 lojas de retirada: Nazare (Ipiranga),
@@ -461,7 +494,7 @@ def coletar_unico(rede, links, hoje, limite, arq_precos, arq_exec, pw=None):
     print(f"[{rede.rede_id}] {resultado}: {len(linhas)}/{len(paginas)} lidos, {sem_preco} sem estoque, {time.time() - inicio:.0f} s" + (f" | {nota}" if nota else ""), flush=True)
 
 
-REDES = [Tenda(), Atacadao(), Carrefour(), PaoDeAcucar(), Sonda(), SantaLuzia(), Hirota()]
+REDES = [Tenda(), Atacadao(), Carrefour(), PaoDeAcucar(), Sonda(), SantaLuzia(), StMarche(), Hirota()]
 
 
 def robots(rede):

@@ -154,7 +154,7 @@ redes = [
  ["atacadao","Atacadão","por_loja","liberado_com_cuidado","https://www.atacadao.com.br"],
  ["pao-de-acucar","Pão de Açúcar","unico","liberado_com_duvida","https://www.paodeacucar.com"],
  ["sonda","Sonda","unico","liberado",""],
- ["st-marche","St Marche","unico","pedir_autorizacao",""],
+ ["st-marche","St Marche","unico","autorizado","https://marche.com.br"],
  ["santa-luzia","Santa Luzia","unico","liberado_com_duvida",""],
  ["hirota","Hirota","por_loja","liberado_com_duvida","https://www.lojahirota.com.br"],
  ["nagumo","Nagumo","por_loja","liberado",""],

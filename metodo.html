@@ -87,7 +87,7 @@
         <h2 data-titulo>As redes e as regras de cada uma</h2>
         <div class="prosa" data-surge>
           <p>Antes de ler qualquer preço, o projeto leu o arquivo robots.txt e os termos de uso de nove redes. O robots.txt é o arquivo em que um site diz o que programas automáticos podem ou não podem ler. O coletor obedece a esse arquivo e nunca contorna um bloqueio.</p>
-          <p>Sete redes aparecem no site. A St Marche proíbe, nos termos de uso, copiar ou republicar conteúdo sem autorização por escrito: sem essa autorização, ela não é coletada. O Nagumo fica para uma fase futura, com a Grande São Paulo.</p>
+          <p>Oito redes aparecem no site. A St Marche proíbe, nos termos de uso, copiar ou republicar conteúdo sem autorização por escrito. O projeto pediu essa autorização por e-mail e a St Marche autorizou, sem condições. O Nagumo fica para uma fase futura, com a Grande São Paulo.</p>
         </div>
         <div class="rolagem" data-surge>
           <table class="tabela simples">
@@ -98,7 +98,7 @@
               <tr><th scope="row">Atacadão</th><td>Loja</td><td>Bloqueia a busca, libera produto</td><td>O conteúdo é do Atacadão. Uso não autorizado é vedado. Nada sobre programas automáticos</td><td><span class="selo">Liberado com cuidado</span></td></tr>
               <tr><th scope="row">Pão de Açúcar</th><td>Preço único</td><td>Bloqueia a busca, libera produto</td><td>Não encontrados</td><td><span class="selo">Liberado com dúvida</span></td></tr>
               <tr><th scope="row">Sonda</th><td>Preço único</td><td>Libera produto</td><td>Só falam de redes sociais</td><td><span class="selo ok">Liberado</span></td></tr>
-              <tr><th scope="row">St Marche</th><td>Preço único</td><td>Libera produto</td><td>Proíbem copiar ou republicar sem autorização por escrito</td><td><span class="selo nao">Não coletada</span></td></tr>
+              <tr><th scope="row">St Marche</th><td>Preço único</td><td>Libera produto</td><td>Pedem autorização por escrito para copiar ou republicar</td><td><span class="selo ok">Autorizado por e-mail</span></td></tr>
               <tr><th scope="row">Santa Luzia</th><td>Preço único (loja única)</td><td>Bloqueia a busca, libera produto</td><td>Não encontrados</td><td><span class="selo">Liberado com dúvida</span></td></tr>
               <tr><th scope="row">Hirota</th><td>Loja</td><td>Bloqueia a busca, libera produto</td><td>Não tem</td><td><span class="selo">Liberado com dúvida</span></td></tr>
               <tr><th scope="row">Nagumo</th><td>Loja</td><td>Não tem robots.txt</td><td>Só regras de compra</td><td><span class="selo nao">Fase futura</span></td></tr>
@@ -128,6 +128,7 @@
           <p>No Carrefour, o site mostra uma verificação contra robôs (captcha) para o navegador automático que informaria o CEP. O projeto não contorna esse tipo de bloqueio. Por isso, no Carrefour, o coletor lê só a página normal de cada produto e guarda o preço padrão do site, o que aparece antes de alguém informar o CEP. É um preço único para a cidade. O projeto pediu ao Carrefour autorização para ler o preço por CEP.</p>
           <p>No Pão de Açúcar, a página de produto mostra o preço sem pedir CEP, e o preço é o mesmo para a cidade. O site não tem lista pública de produtos (sitemap) e o robots.txt bloqueia a busca. Por isso os links foram achados percorrendo as páginas de categoria do site, como uma pessoa faria. Essas páginas só abrem em navegador, então o coletor usa o navegador automático também aqui.</p>
           <p>O Sonda e o Santa Luzia também têm preço único. As páginas de produto dos dois abrem sem navegador e trazem o preço nos dados padronizados da página. No Sonda, os links foram achados percorrendo as páginas de categoria; no Santa Luzia, pela lista pública de produtos (sitemap). O site do Santa Luzia não vende carnes, frutas e verduras frescas pela internet, então esses produtos ficam de fora nessa rede.</p>
+          <p>A St Marche também tem preço único. A página de produto abre sem navegador e traz o preço e a disponibilidade nos dados da própria página. Os links vieram da lista pública de produtos do site (sitemap). Frutas, verduras e carnes aparecem com o preço do quilo.</p>
           <p>No Hirota, o preço muda um pouco de loja para loja: a maioria dos produtos custa o mesmo, mas carnes e alguns itens mudam. O site oferece cinco lojas de retirada (Nazaré, Morumbi, Santa Cecília, Vila Formosa e Campo Belo). Para cada CEP, o coletor escolhe a mais perto do ponto, em linha reta, e guarda o preço dela. Para Perus, por exemplo, é a de Santa Cecília, a 17 km.</p>
           <p id="estadoColeta"></p>
           <p id="estadoLinks"></p>
@@ -153,7 +154,7 @@
         <p class="passo" data-surge>06</p>
         <h2 data-titulo>O mapa, as lojas e as rotas</h2>
         <div class="prosa" data-surge>
-          <p>O mapa, as ruas e os endereços das lojas vêm do OpenStreetMap, um mapa do mundo feito por voluntários. O site achou <span id="nLojas">212</span> lojas das sete redes na Grande São Paulo. As rotas são caminhos de carro, calculados do ponto de coleta até a loja mais próxima de cada rede.</p>
+          <p>O mapa, as ruas e os endereços das lojas vêm do OpenStreetMap, um mapa do mundo feito por voluntários. O site achou <span id="nLojas">212</span> lojas das redes na Grande São Paulo. As rotas são caminhos de carro, calculados do ponto de coleta até a loja mais próxima de cada rede.</p>
           <p>O cadastro do OpenStreetMap tem falhas. Pode faltar loja, e pode haver loja que já fechou. Quando faltam lojas de uma rede, a "loja mais próxima" dela aparece mais longe do que é.</p>
           <p>O preço comparado é o do site da rede para o CEP. A loja do mapa mostra onde fica a unidade mais próxima, não onde aquele preço foi lido.</p>
         </div>

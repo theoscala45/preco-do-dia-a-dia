@@ -3,7 +3,7 @@
 O Theo revisa, completa o que está entre colchetes e envia pela conta dele.
 
 Situação em 18/11/2026:
-- 1 (St Marche, pedido de autorização): enviado. Aguardando resposta; sem autorização, a rede não é coletada.
+- 1 (St Marche, pedido de autorização): enviado. A St Marche autorizou por e-mail, sem condições. A rede entrou na coleta em 18/11/2026.
 - 2 (Carrefour, pedido de acesso por CEP): enviado a atendimento@carrefour.com.br em 18/11/2026. Aguardando resposta. A 2b só vale se eles autorizarem.
 - 3 (Pão de Açúcar e Santa Luzia, aviso): enviado aos dois. Sem resposta até agora.
 
