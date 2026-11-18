@@ -8,7 +8,7 @@ P006,tenda,https://www.tendaatacado.com.br/produto/azeite-extra-virgem-gallo-500
 P007,tenda,https://www.tendaatacado.com.br/produto/acucar-refinado-uniao-1kg-60,achado,
 P008,tenda,https://www.tendaatacado.com.br/produto/acucar-cristal-uniao-1kg,achado,
 P009,tenda,https://www.tendaatacado.com.br/produto/cafe-torrado-e-moido-extraforte-pilao-pacote-500g,achado,Existe também a versão a vácuo.
-P010,tenda,https://www.tendaatacado.com.br/produto/cafe-em-po-3-coracoes-tradicional-500g,achado,Existe também a versão a vácuo.
+P010,tenda,https://www.tendaatacado.com.br/produto/cafe-tradicional-a-vacuo-3-coracoes-500g-2108,achado,Café Tradicional a Vácuo 3 Corações 500g. A página do café em pó comum ficava indisponível em todos os CEPs.
 P011,tenda,https://www.tendaatacado.com.br/produto/farinha-de-trigo-tradicional-dona-benta-1kg-156,achado,
 P012,tenda,https://www.tendaatacado.com.br/produto/farinha-de-mandioca-tipo-1-fina-yoki-pacote-500g,achado,"Tipo 1 fina, 500 g."
 P013,tenda,https://www.tendaatacado.com.br/produto/macarrao-ovos-espaguete-9-renata-500g-12256,achado,Espaguete nº 9. Existe também o nº 8 (macarrao-ovos-espaguete-8-renata-500g-10739). Escolher um.
@@ -567,7 +567,7 @@ P065,sonda,,nao_achado,Não há fraldas Huggies; só Pampers.
 P066,sonda,https://www.sondadelivery.com.br/delivery/produto/lava-roupas-em-po-puro-cuidado-omo-tamanho-familia-22kg/1000041899,tamanho_diferente,"Lava-Roupas em Pó Omo Puro Cuidado 2,2kg. Omo em pó só em 720g e 2,2kg. Fica fora."
 P067,sonda,https://www.sondadelivery.com.br/delivery/produto/lava-roupas-liquido-lavagem-perfeita-omo-3l/1000020248,variante,"Lava-Roupas Líquido Omo Lavagem Perfeita 3L. Lavagem Perfeita, como no Carrefour."
 P068,sonda,https://www.sondadelivery.com.br/delivery/produto/amaciante-concentrado-frescor-intenso-comfort-500ml/1000016588,variante,Amaciante Concentrado Comfort Frescor Intenso 500ml.
-P069,sonda,https://www.sondadelivery.com.br/delivery/produto/lava-loucas-liquido-clear-ype-500ml/1000019972,variante,Lava-Louças Líquido Ypê Clear 500ml. O neutro não aparece.
+P069,sonda,https://www.sondadelivery.com.br/delivery/produto/lava-loucas-ype-neutro-500ml/1000020019,achado,Lava-Louças Ypê Neutro 500ml.
 P070,sonda,https://www.sondadelivery.com.br/delivery/produto/agua-sanitaria-super-candida-2-litros/1000019600,achado,Água Sanitária Super Candida 2L.
 P071,sonda,https://www.sondadelivery.com.br/delivery/produto/desinfetante-pinho-sol-500ml/1000019937,achado,Desinfetante Pinho Sol 500ml.
 P072,sonda,https://www.sondadelivery.com.br/delivery/produto/limpador-multi-uso-veja-500ml/1000019846,achado,Limpador Multiuso Veja 500ml.
