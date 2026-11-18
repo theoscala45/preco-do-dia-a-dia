@@ -599,3 +599,103 @@ P097,sonda,,nao_achado,Não há alface crespa.
 P098,sonda,,nao_achado,Não há mamão formosa; só papaya.
 P099,sonda,https://www.sondadelivery.com.br/delivery/produto/abobrinha-italiana-600g/41693,variante,Abobrinha Italiana 600g. Comparar por kg pelo peso do pacote.
 P100,sonda,https://www.sondadelivery.com.br/delivery/produto/pimentao-verde-600g/41347,variante,Pimentão Verde 600g. Comparar por kg pelo peso do pacote.
+P001,hirota,https://www.lojahirota.com.br/produto/498/arroz-camil-tipo-1-5kg,achado,Arroz Camil Tipo 1 5kg.
+P002,hirota,https://www.lojahirota.com.br/produto/2838/arroz-tio-joao-tipo-1-5kg,achado,Arroz Tio João Tipo 1 5kg.
+P003,hirota,https://www.lojahirota.com.br/produto/6813/feijao-carioca-camil-1kg,achado,Feijão Carioca Camil 1kg.
+P004,hirota,https://www.lojahirota.com.br/produto/1859/feijao-preto-camil-1kg,achado,Feijão Preto Camil 1kg.
+P005,hirota,https://www.lojahirota.com.br/produto/2059/oleo-soja-soya-pet-900ml,achado,Óleo de Soja Soya Pet 900ml.
+P006,hirota,https://www.lojahirota.com.br/produto/1923/azeite-de-oliva-gallo-extra-virgem-500ml,achado,Azeite de Oliva Gallo Extra Virgem 500ml.
+P007,hirota,https://www.lojahirota.com.br/produto/2066/acucar-uniao-1kg,achado,Açúcar União 1kg (refinado).
+P008,hirota,https://www.lojahirota.com.br/produto/2051/acucar-cristalcucar-uniao-1kg,achado,Açúcar Cristalçúcar União 1kg.
+P009,hirota,https://www.lojahirota.com.br/produto/2890/cafe-extra-forte-pilao-500gr,achado,Café Extra Forte Pilão 500g.
+P010,hirota,https://www.lojahirota.com.br/produto/1632/cafe-torrado-e-moido-extra-forte-3-coracoes-pacote-500g,variante,Café Torrado e Moído Extra Forte 3 Corações 500g. O tradicional de 500g não aparece.
+P011,hirota,https://www.lojahirota.com.br/produto/777/farinha-de-trigo-dona-benta-tradicional-1kg,achado,Farinha de Trigo Dona Benta Tradicional 1kg.
+P012,hirota,https://www.lojahirota.com.br/produto/5646/farinha-de-mandioca-yoki-500g-crua,variante,Farinha de Mandioca Yoki Crua 500g.
+P013,hirota,https://www.lojahirota.com.br/produto/4335/massa-espaguete-renata-com-ovos-numero-8-500gr,achado,Massa Espaguete Renata com Ovos Número 8 500g.
+P014,hirota,https://www.lojahirota.com.br/produto/8868/macarrao-com-ovos-barilla-parafuso-500g,achado,Macarrão com Ovos Barilla Parafuso 500g.
+P015,hirota,https://www.lojahirota.com.br/produto/4303/molho-pomarola-trad-sache-300g,tamanho_diferente,Molho Pomarola Tradicional Sachê 300g. Não há o de 340g. Fica fora.
+P016,hirota,https://www.lojahirota.com.br/produto/14526/extrato-de-tomate-elefante-pote-300g,variante,"Extrato de Tomate Elefante Pote 300g. Pote, como no Tenda e no Carrefour."
+P017,hirota,https://www.lojahirota.com.br/produto/3153/sal-refinado-tradicional-cisne-1kg,achado,Sal Refinado Tradicional Cisne 1kg.
+P018,hirota,https://www.lojahirota.com.br/produto/5922/fuba-mimoso-yoki-500g,tamanho_diferente,Fubá Mimoso Yoki 500g. Só o de 500g. Fica fora.
+P019,hirota,https://www.lojahirota.com.br/produto/1635/aveia-em-flocos-quaker-caixa-165g,tamanho_diferente,Aveia em Flocos Quaker Caixa 165g. Só a de 165g. Fica fora.
+P020,hirota,https://www.lojahirota.com.br/produto/2345/achocolatado-em-po-nestle-nescau-350g,achado,Achocolatado em Pó Nescau 350g.
+P021,hirota,https://www.lojahirota.com.br/produto/4275/biscoito-vitarella-cream-craker-400g,tamanho_diferente,Biscoito Vitarella Cream Cracker 400g. Só o de 400g. Fica fora.
+P022,hirota,https://www.lojahirota.com.br/produto/4504/biscoito-passatempo-recheado-130g-chocolate,achado,Biscoito Passatempo Recheado Chocolate 130g.
+P023,hirota,https://www.lojahirota.com.br/produto/793/pao-de-forma-pullman-tradicional-500g,tamanho_diferente,Pão de Forma Pullman Tradicional 500g. Só o de 500g. Fica fora.
+P024,hirota,https://www.lojahirota.com.br/produto/383/margarina-qualy-sadia-com-sal-500g,achado,Margarina Qualy com Sal 500g.
+P025,hirota,https://www.lojahirota.com.br/produto/3148/maionese-hellmanns-tradicional-500ml,achado,Maionese Hellmann's Tradicional 500g.
+P026,hirota,https://www.lojahirota.com.br/produto/4308/ketchup-heinz-tradicional-397g,achado,Ketchup Heinz Tradicional 397g.
+P027,hirota,https://www.lojahirota.com.br/produto/3416/sardinha-gomes-da-costa-com-oleo-125g,achado,Sardinha Gomes da Costa com Óleo 125g.
+P028,hirota,https://www.lojahirota.com.br/produto/3747/atum-gomes-da-costa-ralado-em-oleo-170g,achado,Atum Gomes da Costa Ralado em Óleo 170g.
+P029,hirota,https://www.lojahirota.com.br/produto/1129/milho-verde-quero-conserva-lt-170g,achado,Milho Verde Quero Lata 170g.
+P030,hirota,https://www.lojahirota.com.br/produto/2266/ervilha-em-conserva-quero-lata-170g,achado,Ervilha em Conserva Quero Lata 170g.
+P031,hirota,https://www.lojahirota.com.br/produto/3028/vinagre-castelo-de-alcool-750ml,achado,Vinagre Castelo de Álcool 750ml.
+P032,hirota,,nao_achado,Só Sazón de outros sabores; não há o tempero completo.
+P033,hirota,https://www.lojahirota.com.br/produto/2433/caldo-knorr-galinha-6-cubos,achado,Caldo Knorr Galinha 6 cubos (57g).
+P034,hirota,https://www.lojahirota.com.br/produto/6677/leite-condensado-moca-tradicional-nestle-395g,achado,Leite Condensado Moça Tradicional 395g.
+P035,hirota,https://www.lojahirota.com.br/produto/3040/creme-de-leite-nestle-tradicional-200g,achado,Creme de Leite Nestlé Tradicional 200g.
+P036,hirota,https://www.lojahirota.com.br/produto/4165/mistura-para-bolo-de-chocolate-dona-benta-450g,variante,"Mistura para Bolo de Chocolate Dona Benta 450g. Sabor chocolate, como nas outras redes."
+P037,hirota,https://www.lojahirota.com.br/produto/1011/agua-mineral-crystal-sem-gas-15l,achado,"Água Mineral Crystal sem Gás 1,5L."
+P038,hirota,,nao_achado,Não há Coca-Cola de 2L avulsa; só em pacote com outro refrigerante.
+P039,hirota,https://www.lojahirota.com.br/produto/1349/leite-italac-1-litro-integral,achado,Leite Italac Integral 1L.
+P040,hirota,https://www.lojahirota.com.br/produto/16785/leite-longa-vida-integral-piracanjuba-1l,achado,Leite Longa Vida Integral Piracanjuba 1L.
+P041,hirota,https://www.lojahirota.com.br/produto/16793/leite-longa-vida-piracanjuba-desnatado-1l,achado,Leite Longa Vida Desnatado Piracanjuba 1L.
+P042,hirota,https://www.lojahirota.com.br/produto/1922/leite-ninho-po-integral-380g,achado,Leite Ninho em Pó Integral 380g.
+P043,hirota,https://www.lojahirota.com.br/produto/923/manteiga-aviacao-extra-com-sal-200g,achado,Manteiga Aviação Extra com Sal 200g.
+P044,hirota,,nao_achado,Não há muçarela fatiada Tirolez de 150g.
+P045,hirota,,nao_achado,Não há queijo prato fatiado Tirolez de 150g.
+P046,hirota,https://www.lojahirota.com.br/produto/1690/requeijao-vigor-cremoso-tradicional-200g,achado,Requeijão Vigor Cremoso Tradicional 200g.
+P047,hirota,https://www.lojahirota.com.br/produto/5767/iogurte-nestle-natural-com-mel-170g,variante,Iogurte Nestlé Natural com Mel 170g. O natural integral de 170g não aparece.
+P048,hirota,https://www.lojahirota.com.br/produto/3163/iogurte-batavo-pz-1150g-morango,tamanho_diferente,"Iogurte Batavo Morango 1,15kg. Só a garrafa de 1,15kg. Fica fora."
+P049,hirota,https://www.lojahirota.com.br/produto/5826/presunto-cozido-fatiado-soltissimo-sadia-200g,achado,Presunto Cozido Fatiado Soltíssimo Sadia 200g.
+P050,hirota,,nao_achado,Não há queijo minas frescal Tirolez.
+P051,hirota,,nao_achado,Não há ovos à venda no site.
+P052,hirota,,nao_achado,Não há ovos à venda no site.
+P053,hirota,,nao_achado,O site não vende produtos de higiene pessoal pela internet.
+P054,hirota,,nao_achado,O site não vende produtos de higiene pessoal pela internet.
+P055,hirota,,nao_achado,O site não vende produtos de higiene pessoal pela internet.
+P056,hirota,,nao_achado,O site não vende produtos de higiene pessoal pela internet.
+P057,hirota,,nao_achado,O site não vende produtos de higiene pessoal pela internet.
+P058,hirota,,nao_achado,O site não vende produtos de higiene pessoal pela internet.
+P059,hirota,,nao_achado,O site não vende produtos de higiene pessoal pela internet.
+P060,hirota,,nao_achado,O site não vende produtos de higiene pessoal pela internet.
+P061,hirota,,nao_achado,O site não vende produtos de higiene pessoal pela internet.
+P062,hirota,,nao_achado,O site não vende produtos de higiene pessoal pela internet.
+P063,hirota,,nao_achado,O site não vende produtos de higiene pessoal pela internet.
+P064,hirota,,nao_achado,O site não vende produtos de higiene pessoal pela internet.
+P065,hirota,,nao_achado,O site não vende produtos de higiene pessoal pela internet.
+P066,hirota,https://www.lojahirota.com.br/produto/8065/sabao-omo-16kg-sanitizante,variante,"Sabão em Pó Omo Sanitizante 1,6kg."
+P067,hirota,https://www.lojahirota.com.br/produto/5554/sabao-liquido-omo-lavagem-perfeita-3-litros,variante,"Sabão Líquido Omo Lavagem Perfeita 3L, como no Carrefour."
+P068,hirota,https://www.lojahirota.com.br/produto/3320/amaciante-comfort-conc-500ml-original,variante,Amaciante Comfort Concentrado Original 500ml.
+P069,hirota,https://www.lojahirota.com.br/produto/4112/detergente-liquido-ype-neutro-500ml,achado,Detergente Líquido Ypê Neutro 500ml.
+P070,hirota,,nao_achado,Não há água sanitária Qboa.
+P071,hirota,https://www.lojahirota.com.br/produto/5079/desinfetante-pinho-sol-original-500ml,achado,Desinfetante Pinho Sol Original 500ml.
+P072,hirota,https://www.lojahirota.com.br/produto/8260/limp-veja-multiuso-500ml-10off-floral,variante,Limpador Veja Multiuso Floral 500ml.
+P073,hirota,,nao_achado,Esponja Scotch-Brite só avulsa; não há pacote com 3.
+P074,hirota,,nao_achado,Não há saco de lixo Dover Roll.
+P075,hirota,,nao_achado,Não há papel toalha Snob.
+P076,hirota,,nao_achado,Não há sabão em barra Ypê.
+P077,hirota,,nao_achado,Não há álcool líquido 70% de 1L.
+P078,hirota,https://www.lojahirota.com.br/produto/3640/sbp-aero-300ml-citronela-lp,variante,Inseticida SBP Aerossol Citronela 300ml.
+P079,hirota,https://www.lojahirota.com.br/produto/3765/frango-file-de-peito-korin-congelado,variante,Filé de Peito de Frango Korin Congelado. Comparar por kg pelo peso do pacote.
+P080,hirota,https://www.lojahirota.com.br/produto/6006/sobrecoxas-congeladas-de-frango-sadia-1kg,variante,"Sobrecoxas Congeladas de Frango Sadia 1kg, como no Carrefour. Comparar por kg."
+P081,hirota,https://www.lojahirota.com.br/produto/6906/frango-inteiro-resfriado,variante,"Frango Inteiro Resfriado, vendido por kg. Não há o Sadia congelado."
+P082,hirota,https://www.lojahirota.com.br/produto/7756/carne-moida-de-patinho-bovina-resfriada-500g,variante,"Carne Moída de Patinho Bovina Resfriada, vendida por kg."
+P083,hirota,https://www.lojahirota.com.br/produto/7752/acem-bovino-resfriado-pedaco-bandeja-1kg,variante,"Acém Bovino Resfriado Pedaço, vendido por kg."
+P084,hirota,https://www.lojahirota.com.br/produto/7004/contra-file-bovino-resfriado-pct-500g,variante,"Contra Filé Bovino Resfriado, vendido por kg."
+P085,hirota,,nao_achado,Não há linguiça toscana Seara; só Sadia e Na Brasa.
+P086,hirota,https://www.lojahirota.com.br/produto/3522/salsicha-perdigao-hotdog-resfriada-500g,achado,Salsicha Perdigão Hot-Dog Resfriada 500g.
+P087,hirota,https://www.lojahirota.com.br/produto/12877/file-tilapia-fresco-500g,variante,"Filé de Tilápia Fresco, vendido por kg. Não há o congelado."
+P088,hirota,https://www.lojahirota.com.br/produto/6885/banana-prata-800g-qt-aprox-6-un-,variante,"Banana Prata, vendida por kg."
+P089,hirota,https://www.lojahirota.com.br/produto/6982/maca-gala-nacional-250g,variante,"Maçã Gala Nacional, vendida por kg."
+P090,hirota,https://www.lojahirota.com.br/produto/6888/laranja-pera-15kg-qt-aprox-6-un,variante,"Laranja Pera, vendida por kg."
+P091,hirota,,nao_achado,Não há limão taiti.
+P092,hirota,https://www.lojahirota.com.br/produto/7227/tomate-italiano-200g,variante,"Tomate Italiano, vendido por kg. O tomate comum não aparece."
+P093,hirota,https://www.lojahirota.com.br/produto/6990/cebola-250g-qt-aprox-1-un,variante,"Cebola, vendida por kg."
+P094,hirota,https://www.lojahirota.com.br/produto/7493/alho-a-granel-100g,variante,"Alho a Granel, vendido por kg."
+P095,hirota,https://www.lojahirota.com.br/produto/6884/batata-lavada-500g,variante,"Batata Lavada, vendida por kg."
+P096,hirota,https://www.lojahirota.com.br/produto/6867/cenoura-300g,variante,"Cenoura, vendida por kg."
+P097,hirota,https://www.lojahirota.com.br/produto/15605/alface-crespa-hid-unid,variante,"Alface Crespa Hidropônica, 1 unidade."
+P098,hirota,https://www.lojahirota.com.br/produto/6962/mamao-formosa-2kg,variante,"Mamão Formosa, vendido por kg."
+P099,hirota,https://www.lojahirota.com.br/produto/6927/abobrinha-italiana-600g-aprox-1-un,variante,"Abobrinha Italiana, vendida por kg."
+P100,hirota,https://www.lojahirota.com.br/produto/6883/pimentao-verde-250g-qt-aprox-1-un,variante,"Pimentão Verde, vendido por kg."
