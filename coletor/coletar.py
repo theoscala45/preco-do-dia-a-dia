@@ -251,8 +251,8 @@ def ler_schema(url, marca_de_produto):
     if corpo[:2] == b"\x1f\x8b":   # alguns sites mandam a pagina comprimida mesmo sem pedir
         corpo = gzip.decompress(corpo)
     h = corpo.decode("utf-8", "replace")
-    if re.search(r"<title>\s*(captcha|just a moment|attention required)", h, re.I):
-        raise Bloqueio("pagina de bloqueio (captcha)")
+    if re.search(r"<title>\s*(captcha|just a moment|attention required)", h, re.I) or "Unauthorized Request Blocked" in h:
+        raise Bloqueio("pagina de bloqueio")
     if marca_de_produto not in urllib.parse.urlparse(final).path:
         raise RuntimeError("pagina nao existe mais (o site mandou para outra pagina)")
     dados = None

@@ -499,3 +499,103 @@ P097,santa-luzia,,nao_achado,"O site não vende carnes, frutas e verduras fresca
 P098,santa-luzia,,nao_achado,"O site não vende carnes, frutas e verduras frescas pela internet."
 P099,santa-luzia,,nao_achado,"O site não vende carnes, frutas e verduras frescas pela internet."
 P100,santa-luzia,,nao_achado,"O site não vende carnes, frutas e verduras frescas pela internet."
+P001,sonda,https://www.sondadelivery.com.br/delivery/produto/arroz-branco-camil-5kg/1000001195,achado,Arroz Branco Camil 5kg.
+P002,sonda,https://www.sondadelivery.com.br/delivery/produto/arroz-agulhinha-tio-joao-5kg/1000001194,achado,Arroz Agulhinha Tio João 5kg.
+P003,sonda,https://www.sondadelivery.com.br/delivery/produto/feijao-carioca-camil-1kg/1000001726,achado,Feijão Carioca Camil 1kg.
+P004,sonda,,nao_achado,Não há feijão preto Camil.
+P005,sonda,,nao_achado,Não há óleo de soja Soya; só o de girassol e o de milho da marca.
+P006,sonda,https://www.sondadelivery.com.br/delivery/produto/azeite-de-oliva-classico-extra-virgem-gallo-500ml/1000001853,achado,Azeite de Oliva Clássico Extra Virgem Gallo 500ml.
+P007,sonda,https://www.sondadelivery.com.br/delivery/produto/acucar-refinado-uniao-1kg/1000001025,achado,Açúcar Refinado União 1kg.
+P008,sonda,https://www.sondadelivery.com.br/delivery/produto/acucar-cristalcucar-uniao-1kg/1000000969,achado,Açúcar Cristal União 1kg.
+P009,sonda,https://www.sondadelivery.com.br/delivery/produto/cafe-torrado-e-moido-extra-forte-pilao-almofada-500g/1000000817,achado,Café Torrado e Moído Extra Forte Pilão Almofada 500g.
+P010,sonda,https://www.sondadelivery.com.br/delivery/produto/cafe-tradicional-3-coracoes-vacuo-500g/1000001208,achado,Café Tradicional 3 Corações Vácuo 500g.
+P011,sonda,https://www.sondadelivery.com.br/delivery/produto/farinha-de-trigo-tradicional-tipo-1-dona-benta-pacote-1kg/1000002224,achado,Farinha de Trigo Tradicional Tipo 1 Dona Benta 1kg.
+P012,sonda,https://www.sondadelivery.com.br/delivery/produto/farinha-de-mandioca-torrada-yoki-500g/1000002104,variante,Farinha de Mandioca Torrada Yoki 500g.
+P013,sonda,,nao_achado,Não há espaguete Renata com ovos; só o orgânico.
+P014,sonda,https://www.sondadelivery.com.br/delivery/produto/massa-com-ovos-parafuso-barilla-pacote-500g/1000002750,achado,Massa com Ovos Parafuso Barilla 500g.
+P015,sonda,https://www.sondadelivery.com.br/delivery/produto/molho-de-tomate-tradicional-pomarola-sache-300g/1000042236,tamanho_diferente,Molho de Tomate Tradicional Pomarola Sachê 300g. Não há o de 340g. Fica fora.
+P016,sonda,https://www.sondadelivery.com.br/delivery/produto/extrato-de-tomate-elefante-pote-300g/1000045596,variante,"Extrato de Tomate Elefante Pote 300g. Pote, como no Tenda e no Carrefour."
+P017,sonda,https://www.sondadelivery.com.br/delivery/produto/sal-refinado-cisne-pacote-1kg/1000002452,achado,Sal Refinado Cisne 1kg.
+P018,sonda,,nao_achado,Não há fubá mimoso Yoki; só o pré-cozido.
+P019,sonda,https://www.sondadelivery.com.br/delivery/produto/aveia-flocos-quaker-450g/1000033774,achado,Aveia em Flocos Quaker 450g.
+P020,sonda,https://www.sondadelivery.com.br/delivery/produto/achocolatado-em-po-nescau-lata-350g/1000048513,achado,Achocolatado em Pó Nescau Lata 350g.
+P021,sonda,https://www.sondadelivery.com.br/delivery/produto/biscoito-cream-cracker-tradicional-vitarella-350g/1000041114,achado,Biscoito Cream Cracker Tradicional Vitarella 350g.
+P022,sonda,https://www.sondadelivery.com.br/delivery/produto/biscoito-recheado-chocolate-passatempo-130g/1000005290,achado,Biscoito Recheado Chocolate Passatempo 130g.
+P023,sonda,https://www.sondadelivery.com.br/delivery/produto/pao-de-forma-tradicional-pullman-480g/1000010349,achado,Pão de Forma Tradicional Pullman 480g.
+P024,sonda,https://www.sondadelivery.com.br/delivery/produto/margarina-com-sal-qualy-500g/1000010923,achado,Margarina com Sal Qualy 500g.
+P025,sonda,https://www.sondadelivery.com.br/delivery/produto/maionese-hellmanns-tradicional-leve-600g-pague-500g/1000040831,variante,Maionese Hellmann's Tradicional Leve 600g Pague 500g. A página do pote de 500g tem um endereço com defeito que o próprio site bloqueia.
+P026,sonda,https://www.sondadelivery.com.br/delivery/produto/ketchup-tomate-heinz-397g/1000002477,achado,Ketchup Heinz 397g.
+P027,sonda,,nao_achado,"Não há sardinha Gomes da Costa em óleo de 125g; só com molho ou limão, em latas menores."
+P028,sonda,https://www.sondadelivery.com.br/delivery/produto/atum-ralado-oleo-gomes-da-costa-130g/1000001923,tamanho_diferente,Atum Ralado em Óleo Gomes da Costa 130g. Só a lata de 130g. Fica fora.
+P029,sonda,https://www.sondadelivery.com.br/delivery/produto/milho-verde-quero-lata-170g/1000031531,achado,Milho Verde Quero Lata 170g.
+P030,sonda,https://www.sondadelivery.com.br/delivery/produto/ervilha-lata-quero-170g/1000031533,achado,Ervilha Quero Lata 170g.
+P031,sonda,https://www.sondadelivery.com.br/delivery/produto/vinagre-de-alcool-ervas-finas-castelo-750ml/1000002027,variante,Vinagre de Álcool Ervas Finas Castelo 750ml. O comum não aparece.
+P032,sonda,,nao_achado,Só Sazón de outros sabores; não há o tempero completo.
+P033,sonda,,nao_achado,A página do Caldo Knorr Galinha 57g tem um endereço com defeito que o próprio site bloqueia.
+P034,sonda,https://www.sondadelivery.com.br/delivery/produto/leite-condensado-integral-moca-lata-395g/1000004548,achado,Leite Condensado Integral Moça Lata 395g.
+P035,sonda,https://www.sondadelivery.com.br/delivery/produto/creme-de-leite-nestle-200g/1000004986,achado,Creme de Leite Nestlé 200g.
+P036,sonda,https://www.sondadelivery.com.br/delivery/produto/mistura-para-bolo-chocolate-dona-benta-sache-450g/1000004765,variante,"Mistura para Bolo de Chocolate Dona Benta 450g. Sabor chocolate, como nas outras redes."
+P037,sonda,https://www.sondadelivery.com.br/delivery/produto/agua-mineral-sem-gas-crystal-1l/1000007551,tamanho_diferente,"Água Mineral sem Gás Crystal 1L. Sem gás só em 500ml, 1L e 5L; a de 1,5L só com gás. Fica fora."
+P038,sonda,https://www.sondadelivery.com.br/delivery/produto/refrigerante-coca-cola-sabor-original-menos-acucar-pet-2l/1000007812,variante,Refrigerante Coca-Cola Sabor Original Menos Açúcar Pet 2L. A original de 2L não aparece; só a de menos açúcar.
+P039,sonda,https://www.sondadelivery.com.br/delivery/produto/leite-longa-vida-integral-italac-1-litro/1000012310,achado,Leite Longa Vida Integral Italac 1L.
+P040,sonda,,nao_achado,Não há leite integral Piracanjuba; só o semidesnatado zero lactose com proteína.
+P041,sonda,,nao_achado,Não há leite desnatado Piracanjuba.
+P042,sonda,,nao_achado,Não há leite em pó Ninho integral; só o adulto semidesnatado.
+P043,sonda,https://www.sondadelivery.com.br/delivery/produto/manteiga-com-sal-de-primeira-qualidade-aviacao-pote-200g/1000010577,achado,Manteiga com Sal de Primeira Qualidade Aviação Pote 200g.
+P044,sonda,https://www.sondadelivery.com.br/delivery/produto/queijo-mussarela-tirolez-fatiado-embalado-150g/1000025519,achado,Queijo Mussarela Tirolez Fatiado 150g.
+P045,sonda,https://www.sondadelivery.com.br/delivery/produto/queijo-prato-tirolez-fatiado-embalado-150g/1000025560,achado,Queijo Prato Tirolez Fatiado 150g.
+P046,sonda,https://www.sondadelivery.com.br/delivery/produto/requeijao-tradicional-vigor-200g/1000012426,achado,Requeijão Tradicional Vigor 200g.
+P047,sonda,,nao_achado,"Não há iogurte natural Nestlé; há Batavo, Danone e outras marcas."
+P048,sonda,,nao_achado,Não há iogurte de morango Batavo em garrafa; só copos e potes pequenos.
+P049,sonda,https://www.sondadelivery.com.br/delivery/produto/presunto-cozido-sadia-soltissimo-fatiado-200g/1000011200,achado,Presunto Cozido Sadia Soltíssimo Fatiado 200g.
+P050,sonda,https://www.sondadelivery.com.br/delivery/produto/queijo-minas-frescal-original-tirolez-150g/1000047045,tamanho_diferente,Queijo Minas Frescal Tirolez 150g. Só o de 150g. Fica fora.
+P051,sonda,https://www.sondadelivery.com.br/delivery/produto/ovos-branco-tipo-extra-mantiqueira-pvc-20-unidades/1000009969,tamanho_diferente,Ovos Brancos Tipo Extra Mantiqueira 20 unidades. Só bandejas de 10 e 20. Fica fora.
+P052,sonda,https://www.sondadelivery.com.br/delivery/produto/ovos-vermelho-grande-mantiqueira-happy-eggs-20-unidades/1000037371,tamanho_diferente,Ovos Vermelhos Grandes Mantiqueira Happy Eggs 20 unidades. Só bandejas de 10 e 20. Fica fora.
+P053,sonda,https://www.sondadelivery.com.br/delivery/produto/papel-higienico-folha-dupla-neutro-neve-30m-pacote-leve-12-pague-11-unidades/1000021051,variante,"Papel Higiênico Folha Dupla Neve 30m Leve 12 Pague 11. Leve 12 pague 11, como no Tenda."
+P054,sonda,https://www.sondadelivery.com.br/delivery/produto/papel-higienico-folha-dupla-neutro-20m-personal-leve-12-pague-11-unidades/1000042021,variante,Papel Higiênico Folha Dupla Personal 20m Leve 12 Pague 11. Rolo de 20m.
+P055,sonda,https://www.sondadelivery.com.br/delivery/produto/sabonete-em-barra-original-dove-90g/1000015198,achado,Sabonete em Barra Original Dove 90g.
+P056,sonda,https://www.sondadelivery.com.br/delivery/produto/sabonete-em-barra-buque-de-jasmim-lux-botanicals-85g/1000024796,achado,Sabonete em Barra Buquê de Jasmim Lux Botanicals 85g.
+P057,sonda,https://www.sondadelivery.com.br/delivery/produto/creme-dental-original-mint-colgate-total-prevencao-ativa-90g/1000052949,variante,Creme Dental Colgate Total Original Mint Prevenção Ativa 90g. Mesmo produto do Tenda.
+P058,sonda,https://www.sondadelivery.com.br/delivery/produto/creme-dental-menta-refrescante-colgate-maxima-protecao-anticaries-180g/1000051812,tamanho_diferente,Creme Dental Colgate Máxima Proteção Anticáries 180g. Só 180g. Fica fora.
+P059,sonda,https://www.sondadelivery.com.br/delivery/produto/escova-dental-media-classic-clean-colgate-unidade/1000013461,variante,"O modelo estava a definir. Escolhido: Colgate Classic Clean média, 1 unidade."
+P060,sonda,https://www.sondadelivery.com.br/delivery/produto/shampoo-ceramidas-seda-cocriacoes-325ml/1000014713,variante,"Shampoo Seda Cocriações Ceramidas 325ml. Linha Ceramidas, como no Tenda."
+P061,sonda,https://www.sondadelivery.com.br/delivery/produto/condicionador-cocriacoes-ceramidas-seda-325ml/1000014908,variante,"Condicionador Seda Cocriações Ceramidas 325ml. Linha Ceramidas, como no Tenda."
+P062,sonda,https://www.sondadelivery.com.br/delivery/produto/desodorante-invisible-rexona-clinical-aerosol-150ml/1000053970,variante,"Desodorante Aerosol Rexona Clinical Invisible 150ml. Linha Clinical, como no Tenda."
+P063,sonda,,nao_achado,"Não há fio dental Oral-B; só Johnson's, Sanifill e Condor."
+P064,sonda,https://www.sondadelivery.com.br/delivery/produto/absorvente-com-abas-noite-ultrassuave-g-always-8-unidades/1000031641,variante,Absorvente com Abas Always Noite Ultrassuave G 8 unidades. Só a linha noturna em 8 unidades.
+P065,sonda,,nao_achado,Não há fraldas Huggies; só Pampers.
+P066,sonda,https://www.sondadelivery.com.br/delivery/produto/lava-roupas-em-po-puro-cuidado-omo-tamanho-familia-22kg/1000041899,tamanho_diferente,"Lava-Roupas em Pó Omo Puro Cuidado 2,2kg. Omo em pó só em 720g e 2,2kg. Fica fora."
+P067,sonda,https://www.sondadelivery.com.br/delivery/produto/lava-roupas-liquido-lavagem-perfeita-omo-3l/1000020248,variante,"Lava-Roupas Líquido Omo Lavagem Perfeita 3L. Lavagem Perfeita, como no Carrefour."
+P068,sonda,https://www.sondadelivery.com.br/delivery/produto/amaciante-concentrado-frescor-intenso-comfort-500ml/1000016588,variante,Amaciante Concentrado Comfort Frescor Intenso 500ml.
+P069,sonda,https://www.sondadelivery.com.br/delivery/produto/lava-loucas-liquido-clear-ype-500ml/1000019972,variante,Lava-Louças Líquido Ypê Clear 500ml. O neutro não aparece.
+P070,sonda,,nao_achado,"Não há água sanitária Qboa; só Candura, Super Candida, Daclor, Suprema e Ypê."
+P071,sonda,https://www.sondadelivery.com.br/delivery/produto/desinfetante-pinho-sol-500ml/1000019937,achado,Desinfetante Pinho Sol 500ml.
+P072,sonda,https://www.sondadelivery.com.br/delivery/produto/limpador-multi-uso-veja-500ml/1000019846,achado,Limpador Multiuso Veja 500ml.
+P073,sonda,https://www.sondadelivery.com.br/delivery/produto/esponja-nao-risca-banheiro-scotch-brite-3-unidades/1000014293,variante,Esponja Não Risca Scotch-Brite 3 unidades (linha banheiro).
+P074,sonda,https://www.sondadelivery.com.br/delivery/produto/saco-para-lixo-ciclus-dover-roll-50l-20-unidades-cada/1000056172,variante,Saco para Lixo Dover Roll Ciclus 50L 20 unidades.
+P075,sonda,,nao_achado,Não há papel toalha Snob.
+P076,sonda,https://www.sondadelivery.com.br/delivery/produto/sabao-em-barra-neutro-original-ype-pacote-800g-5-unidades/1000042897,achado,Sabão em Barra Neutro Original Ypê 5 unidades 800g.
+P077,sonda,,nao_achado,Não há álcool líquido 70% de 1L.
+P078,sonda,https://www.sondadelivery.com.br/delivery/produto/inseticida-ultra-base-agua-sbp-360ml/1000042471,tamanho_diferente,Inseticida SBP Ultra Base Água 360ml. Só 360ml ou mais. Fica fora.
+P079,sonda,https://www.sondadelivery.com.br/delivery/produto/file-de-peito-de-frango-sadia-congelado-1kg/1000012945,variante,"Filé de Peito de Frango Sadia Congelado 1kg, como no Tenda e no Carrefour. Comparar por kg."
+P080,sonda,https://www.sondadelivery.com.br/delivery/produto/sobrecoxa-de-frango-cortes-sadia-congelado-1kg/1000013274,variante,"Sobrecoxa de Frango Sadia Cortes Congelado 1kg, como no Carrefour. Comparar por kg."
+P081,sonda,,nao_achado,Não há frango inteiro Sadia.
+P082,sonda,https://www.sondadelivery.com.br/delivery/produto/carne-moida-patinho-500g/1000036485,variante,Carne Moída de Patinho 500g. Comparar por kg pelo peso da bandeja.
+P083,sonda,https://www.sondadelivery.com.br/delivery/produto/acem-pedaco-15kg/1000036470,variante,"Acém pedaço 1,5kg. Comparar por kg pelo peso da peça."
+P084,sonda,https://www.sondadelivery.com.br/delivery/produto/contra-file-pedaco-2kg/1000036489,variante,Contra Filé pedaço 2kg. Comparar por kg pelo peso da peça.
+P085,sonda,https://www.sondadelivery.com.br/delivery/produto/linguica-toscana-seara-600g/1000053492,variante,Linguiça Toscana Seara 600g. Comparar por kg pelo peso da bandeja.
+P086,sonda,https://www.sondadelivery.com.br/delivery/produto/salsicha-hot-dog-perdigao-500g/1000011372,achado,Salsicha Hot Dog Perdigão 500g.
+P087,sonda,https://www.sondadelivery.com.br/delivery/produto/file-de-tilapia-new-fish-congelado-500g/1000024312,variante,Filé de Tilápia New Fish Congelado 500g. Comparar por kg pelo peso do pacote.
+P088,sonda,https://www.sondadelivery.com.br/delivery/produto/banana-prata-11kg/41613,variante,"Banana Prata 1,1kg. Comparar por kg pelo peso do pacote."
+P089,sonda,https://www.sondadelivery.com.br/delivery/produto/maca-gala-600g/41604,variante,Maçã Gala 600g. Comparar por kg pelo peso do pacote.
+P090,sonda,,nao_achado,Não há laranja pera; só laranja lima.
+P091,sonda,https://www.sondadelivery.com.br/delivery/produto/limao-taiti-550g/41579,variante,Limão Taiti 550g. Comparar por kg pelo peso do pacote.
+P092,sonda,https://www.sondadelivery.com.br/delivery/produto/tomate-italiano-1kg/41727,variante,Tomate Italiano 1kg. O tomate comum não aparece.
+P093,sonda,https://www.sondadelivery.com.br/delivery/produto/cebola-1kg/41349,achado,Cebola 1kg.
+P094,sonda,https://www.sondadelivery.com.br/delivery/produto/alho-bello-200g/1000009871,variante,Alho Bello 200g. Comparar por kg pelo peso do pacote.
+P095,sonda,,nao_achado,"Não há batata comum; só batata-doce, baroa e yakon."
+P096,sonda,https://www.sondadelivery.com.br/delivery/produto/cenoura-550g/41729,variante,Cenoura 550g. Comparar por kg pelo peso do pacote.
+P097,sonda,,nao_achado,Não há alface crespa.
+P098,sonda,,nao_achado,Não há mamão formosa; só papaya.
+P099,sonda,https://www.sondadelivery.com.br/delivery/produto/abobrinha-italiana-600g/41693,variante,Abobrinha Italiana 600g. Comparar por kg pelo peso do pacote.
+P100,sonda,https://www.sondadelivery.com.br/delivery/produto/pimentao-verde-600g/41347,variante,Pimentão Verde 600g. Comparar por kg pelo peso do pacote.
