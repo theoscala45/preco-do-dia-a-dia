@@ -96,7 +96,7 @@
               <tr><th scope="row">Tenda Atacado</th><td>CEP</td><td>Bloqueia a busca, libera páginas de produto</td><td>Não tem. Só política de privacidade</td><td><span class="selo ok">Liberado</span></td></tr>
               <tr><th scope="row">Carrefour</th><td>CEP</td><td>Libera busca e produto</td><td>Não encontrados</td><td><span class="selo">Liberado com dúvida</span></td></tr>
               <tr><th scope="row">Atacadão</th><td>Loja</td><td>Bloqueia a busca, libera produto</td><td>O conteúdo é do Atacadão. Uso não autorizado é vedado. Nada sobre programas automáticos</td><td><span class="selo">Liberado com cuidado</span></td></tr>
-              <tr><th scope="row">Pão de Açúcar</th><td>Preço único (provável)</td><td>Bloqueia a busca</td><td>Não encontrados</td><td><span class="selo">Liberado com dúvida</span></td></tr>
+              <tr><th scope="row">Pão de Açúcar</th><td>Preço único</td><td>Bloqueia a busca, libera produto</td><td>Não encontrados</td><td><span class="selo">Liberado com dúvida</span></td></tr>
               <tr><th scope="row">Sonda</th><td>Preço único</td><td>Libera produto</td><td>Só falam de redes sociais</td><td><span class="selo ok">Liberado</span></td></tr>
               <tr><th scope="row">St Marche</th><td>Preço único</td><td>Libera produto</td><td>Proíbem copiar ou republicar sem autorização por escrito</td><td><span class="selo nao">Não coletada</span></td></tr>
               <tr><th scope="row">Santa Luzia</th><td>Preço único (loja única)</td><td>Bloqueia a busca, libera produto</td><td>Não encontrados</td><td><span class="selo">Liberado com dúvida</span></td></tr>
@@ -126,6 +126,7 @@
           <p>Produto sem preço no dia entra na tabela como indisponível. Isso é um dado, não um erro: quer dizer que a rede não vendia aquele produto para aquele CEP naquele dia.</p>
           <p>No Atacadão o preço muda por loja. Para cada CEP, o coletor usa a loja de retirada mais perto que o próprio site oferece. Só algumas lojas fazem retirada pela internet, então essa loja pode ficar longe do bairro: para Capão Redondo, por exemplo, é a de Villa Lobos, a 14 km. O preço é o da internet para aquela loja, e o Atacadão não vende frutas e verduras pela internet.</p>
           <p>No Carrefour, o site mostra uma verificação contra robôs (captcha) para o navegador automático que informaria o CEP. O projeto não contorna esse tipo de bloqueio. Por isso, no Carrefour, o coletor lê só a página normal de cada produto e guarda o preço padrão do site, o que aparece antes de alguém informar o CEP. É um preço único para a cidade. O projeto pediu ao Carrefour autorização para ler o preço por CEP.</p>
+          <p>No Pão de Açúcar, a página de produto mostra o preço sem pedir CEP, e o preço é o mesmo para a cidade. O site não tem lista pública de produtos (sitemap) e o robots.txt bloqueia a busca. Por isso os links foram achados percorrendo as páginas de categoria do site, como uma pessoa faria. Essas páginas só abrem em navegador, então o coletor usa o navegador automático também aqui.</p>
           <p id="estadoColeta"></p>
           <p id="estadoLinks"></p>
         </div>

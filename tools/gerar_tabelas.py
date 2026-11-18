@@ -152,7 +152,7 @@ redes = [
  ["tenda","Tenda Atacado","por_cep","liberado","https://www.tendaatacado.com.br"],
  ["carrefour","Carrefour","por_cep","liberado_com_duvida","https://mercado.carrefour.com.br"],
  ["atacadao","Atacadão","por_loja","liberado_com_cuidado","https://www.atacadao.com.br"],
- ["pao-de-acucar","Pão de Açúcar","unico_provavel","liberado_com_duvida","https://www.paodeacucar.com"],
+ ["pao-de-acucar","Pão de Açúcar","unico","liberado_com_duvida","https://www.paodeacucar.com"],
  ["sonda","Sonda","unico","liberado",""],
  ["st-marche","St Marche","unico","pedir_autorizacao",""],
  ["santa-luzia","Santa Luzia","unico","liberado_com_duvida",""],

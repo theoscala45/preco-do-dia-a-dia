@@ -216,7 +216,54 @@ class Carrefour:
         return {"nome": nome, "tamanho": tamanho_do_nome(nome), "preco": f"{float(oferta.group(1)):.2f}", "unidade": "un", "disponivel": True}
 
 
-def coletar_unico(rede, links, hoje, limite, arq_precos, arq_exec):
+class PaoDeAcucar:
+    """Pao de Acucar. O preco e unico: a pagina de produto mostra o preco sem pedir CEP. O site so abre em
+    navegador (pedidos sem navegador recebem uma pagina de verificacao), entao a leitura usa o navegador automatico,
+    como no Tenda e no Atacadao. Sem sitemap e com a busca bloqueada pelo robots.txt, os links foram achados
+    percorrendo as paginas de categoria."""
+    rede_id = "pao-de-acucar"
+    site = "https://www.paodeacucar.com"
+    preco_unico = True
+    navegador = True
+    hosts = ("paodeacucar.com", "gpa.digital")
+    loja = ""
+    pg = None
+
+    def ler_pagina(self, url):
+        pg = self.pg
+        resposta = pg.goto(url, wait_until="domcontentloaded", timeout=60000)
+        conferir_bloqueio(resposta, pg)
+        if (resposta is not None and resposta.status == 404) or "nao encontrad" in semacento(pg.title()):
+            raise RuntimeError("pagina nao existe mais (404)")
+        pg.locator("h1").first.wait_for(state="visible", timeout=25000)
+        nome = pg.locator("h1").first.inner_text().strip()
+        try:
+            pg.wait_for_function("() => /R\\$\\s*[\\d.]+,\\d{2}|indispon|avise-me/i.test(document.querySelector('h1').parentElement.parentElement.parentElement.innerText)", timeout=15000)
+        except Exception:
+            pass
+        texto = pg.evaluate("""() => { let e = document.querySelector('h1'); for (let i = 0; i < 6 && e.parentElement && !/R\\$|indispon|avise-me/i.test(e.innerText); i++) e = e.parentElement; return e.innerText; }""")
+        # o bloco do preco vai do titulo ao botao Comprar; o cupom e o frete ficam depois
+        variavel = bool(re.search(r"peso vari[aá]vel", texto, re.I))
+        texto = re.split(r"\bComprar\b|Calcular o frete", texto)[0] + ("\npeso variavel" if variavel else "")
+        # produto de peso variavel (frutas, verduras, carnes): vale o preco do quilo, que a pagina mostra como
+        # "Preco por 1kg - R$ X". Nos outros, essa linha e so a conta da pagina e fica de fora.
+        por_kg = re.search(r"Pre[cç]o por 1\s*kg\s*-\s*R\$\s*([\d.]+,\d{2})", texto, re.I)
+        if por_kg and re.search(r"peso vari[aá]vel|/\s*kg", texto, re.I):
+            preco = float(por_kg.group(1).replace(".", "").replace(",", "."))
+            return {"nome": nome, "tamanho": tamanho_do_nome(nome), "preco": f"{preco:.2f}", "unidade": "kg", "disponivel": True}
+        texto = re.sub(r"Pre[cç]o por [^\n]*", "", texto)
+        m = re.search(r"R\$\s*([\d.]+,\d{2})\s*(/\s*kg)?", texto, re.I)
+        if not m:
+            if re.search(r"indispon|avise-me|esgotad", texto, re.I):
+                return {"nome": nome, "tamanho": tamanho_do_nome(nome), "preco": None, "unidade": "", "disponivel": False}
+            raise RuntimeError("preco nao encontrado na pagina")
+        # o primeiro valor e o preco atual; numa promocao o segundo e o preco antigo, riscado.
+        # "-50% na 2a unidade" nao conta: o preco de uma unidade e o primeiro.
+        preco = float(m.group(1).replace(".", "").replace(",", "."))
+        return {"nome": nome, "tamanho": tamanho_do_nome(nome), "preco": f"{preco:.2f}", "unidade": "kg" if m.group(2) else "un", "disponivel": True}
+
+
+def coletar_unico(rede, links, hoje, limite, arq_precos, arq_exec, pw=None):
     """Redes de preco unico: uma leitura por noite, sem CEP (cep_id vazio), sem navegador."""
     ja = any(e["rede_id"] == rede.rede_id and e["data"] == hoje and e["resultado"] == "ok" for e in ler(arq_exec) + ler(os.path.join(RAIZ, "data", "execucoes.csv")))
     if ja:
@@ -225,6 +272,15 @@ def coletar_unico(rede, links, hoje, limite, arq_precos, arq_exec):
     paginas = [l for l in links if rp.can_fetch("*", l["url"])]
     if limite: paginas = paginas[:limite]
     linhas, erros, sem_preco, inicio, resultado = [], [], 0, time.time(), ""
+    navegador = None
+    if getattr(rede, "navegador", False):
+        opcoes = {}
+        if os.environ.get("COLETOR_NAVEGADOR"): opcoes["executable_path"] = os.environ["COLETOR_NAVEGADOR"]
+        if os.environ.get("COLETOR_PROXY"): opcoes["proxy"] = {"server": os.environ["COLETOR_PROXY"]}
+        navegador = pw.chromium.launch(**opcoes)
+        rede.pg = navegador.new_context(locale="pt-BR", viewport={"width": 1280, "height": 900}).new_page()
+        hosts = rede.hosts
+        rede.pg.route("**/*", lambda rota: rota.abort() if rota.request.resource_type in ("image", "media", "font") or not any(h in rota.request.url.split("/")[2] for h in hosts) else rota.continue_())
     try:
         for link in paginas:
             for tentativa in (1, 2):
@@ -244,13 +300,15 @@ def coletar_unico(rede, links, hoje, limite, arq_precos, arq_exec):
         resultado = "ok" if len(linhas) == len(paginas) else "parcial" if linhas else "falha"
     except Bloqueio as e:
         resultado, erros = "bloqueado", [str(e)] + erros
+    finally:
+        if navegador: navegador.close()
     acrescentar(arq_precos, COLUNAS, linhas)
     nota = "; ".join(erros[:6]) + (f"; e mais {len(erros) - 6}" if len(erros) > 6 else "")
     acrescentar(arq_exec, COLUNAS_EXEC, [{"data": hoje, "rede_id": rede.rede_id, "cep_id": "", "produtos_tentados": len(paginas), "produtos_lidos": len(linhas), "resultado": resultado, "erro": limpar(nota), "loja": "preco unico do site"}])
     print(f"[{rede.rede_id}] {resultado}: {len(linhas)}/{len(paginas)} lidos, {sem_preco} sem estoque, {time.time() - inicio:.0f} s" + (f" | {nota}" if nota else ""), flush=True)
 
 
-REDES = [Tenda(), Atacadao(), Carrefour()]
+REDES = [Tenda(), Atacadao(), Carrefour(), PaoDeAcucar()]
 
 
 def robots(rede):
@@ -392,7 +450,7 @@ def main():
             if getattr(rede, "preco_unico", False):
                 # preco unico: uma vez por noite. Na coleta por zona, so a parte do Centro le estas redes
                 if not a.zona or a.zona.lower() == "centro":
-                    coletar_unico(rede, da_rede, hoje, a.limite, arq_precos, arq_exec)
+                    coletar_unico(rede, da_rede, hoje, a.limite, arq_precos, arq_exec, pw)
                 continue
             coletar_rede(pw, rede, da_rede, ceps, hoje, a.limite, a.diagnostico, arq_precos, arq_exec)
     print("fim", flush=True)
