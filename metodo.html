@@ -94,7 +94,7 @@
             <thead><tr><th scope="col">Rede</th><th scope="col">Preço muda por</th><th scope="col">robots.txt</th><th scope="col">Termos de uso</th><th scope="col">Situação</th></tr></thead>
             <tbody>
               <tr><th scope="row">Tenda Atacado</th><td>CEP</td><td>Bloqueia a busca, libera páginas de produto</td><td>Não tem. Só política de privacidade</td><td><span class="selo ok">Liberado</span></td></tr>
-              <tr><th scope="row">Carrefour</th><td>CEP</td><td>Libera busca e produto</td><td>Não encontrados</td><td><span class="selo">Liberado com dúvida</span></td></tr>
+              <tr><th scope="row">Carrefour</th><td>CEP (o projeto lê o preço único do site)</td><td>Libera busca e produto</td><td>Não encontrados</td><td><span class="selo">Liberado com dúvida</span></td></tr>
               <tr><th scope="row">Atacadão</th><td>Loja</td><td>Bloqueia a busca, libera produto</td><td>O conteúdo é do Atacadão. Uso não autorizado é vedado. Nada sobre programas automáticos</td><td><span class="selo">Liberado com cuidado</span></td></tr>
               <tr><th scope="row">Pão de Açúcar</th><td>Preço único</td><td>Bloqueia a busca, libera produto</td><td>Não encontrados</td><td><span class="selo">Liberado com dúvida</span></td></tr>
               <tr><th scope="row">Sonda</th><td>Preço único</td><td>Libera produto</td><td>Só falam de redes sociais</td><td><span class="selo ok">Liberado</span></td></tr>
@@ -112,7 +112,7 @@
         <p class="passo" data-surge>04</p>
         <h2 data-titulo>Como os preços são lidos</h2>
         <div class="prosa" data-surge>
-          <p>Um programa, o coletor, abre a página de cada produto no site da rede, informa o CEP do ponto de coleta e anota o preço que a página mostra. As regras dele são estas:</p>
+          <p>Um programa, o coletor, abre a página de cada produto no site da rede e anota o preço que a página mostra. Nas redes em que o preço muda por CEP ou por loja, ele antes informa o CEP do ponto de coleta ou escolhe a loja mais perto. Ele roda toda noite, de madrugada. As regras dele são estas:</p>
         </div>
         <ul class="regras" data-fila>
           <li><b>Só páginas normais de produto.</b> As mesmas que qualquer pessoa abre no navegador.</li>
