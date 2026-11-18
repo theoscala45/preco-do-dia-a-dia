@@ -22,11 +22,25 @@ rolar($('etqInt'), $('etqCent'), media);
 // ---------- as redes em cada ponto: soma dos itens do índice que todas as redes têm ali
 const precoEm = (r, i, prod) => { const t = dados.precos[r.id]; return r.por_cep ? t[i][prod] : t[prod]; };
 const doIndice = dados.produtos.map((p, k) => (p.indice ? k : -1)).filter(k => k >= 0);
-const redesNoPonto = dados.pontos.map((_, i) => {
-  const comuns = doIndice.filter(k => dados.redes.every(r => precoEm(r, i, k) != null));
-  const totais = dados.redes.map(r => comuns.reduce((s, k) => s + precoEm(r, i, k), 0));
-  const ordem = totais.map((_, k) => k).sort((a, b) => totais[a] - totais[b]);
-  return { n: comuns.length, totais, ordem, melhor: ordem[0] };
+// cada rede é comparada pelos itens do índice que ela vende no ponto: o preço de cada item é dividido pela
+// mediana das redes naquele ponto, e a média dessas razões (com o peso do item no IPCA) diz quanto a rede
+// cobra acima ou abaixo da mediana. O valor mostrado é a cesta do ponto vezes esse fator.
+const mediana = v => { const s = [...v].sort((a, b) => a - b), m = s.length >> 1; return s.length % 2 ? s[m] : (s[m - 1] + s[m]) / 2; };
+const redesNoPonto = dados.pontos.map((pt, i) => {
+  const med = {};
+  for (const k of doIndice) {
+    const v = dados.redes.map(r => precoEm(r, i, k)).filter(x => x != null);
+    if (v.length >= 3) med[k] = mediana(v);   // com menos de 3 redes a mediana não diz muito
+  }
+  const itens = dados.redes.map(r => doIndice.filter(k => med[k] && precoEm(r, i, k) != null));
+  const fatores = dados.redes.map((r, j) => {
+    const peso = itens[j].reduce((s, k) => s + (dados.produtos[k].peso ?? 1), 0);
+    return peso ? itens[j].reduce((s, k) => s + (dados.produtos[k].peso ?? 1) * precoEm(r, i, k) / med[k], 0) / peso : null;
+  });
+  const base = pt.cesta || Object.values(med).reduce((s, x) => s + x, 0);
+  const totais = fatores.map(f => (f == null ? null : base * f));
+  const ordem = totais.map((_, k) => k).filter(k => totais[k] != null).sort((a, b) => totais[a] - totais[b]);
+  return { itens: itens.map(x => x.length), fatores, totais, ordem, melhor: ordem[0] };
 });
 // rota e loja mais próxima de cada rede, por ponto (OpenStreetMap)
 const rotaDe = (i, k) => rotas.pontos.find(p => p.id === geo.pontos[i].id)?.redes[dados.redes[k].id];
@@ -126,10 +140,10 @@ function escolher(i, viaCep) {
   guarda.gravar('ponto', i);
   const p = geo.pontos[i], r = redesNoPonto[i];
   $('resBairro').textContent = curto(p.bairro);
-  $('resSub').textContent = `Soma dos ${r.n} itens que as ${dados.redes.length} redes vendem neste ponto.`;
+  $('resSub').textContent = 'Quanto a cesta do índice custaria em cada rede, comparando cada item com a mediana das redes neste ponto.';
   $('redesLista').innerHTML = r.ordem.map((k, pos) => {
     const rota = rotaDe(i, k), loja = rota && rotas.lojas[rota.loja], dif = r.totais[k] - r.totais[r.melhor];
-    const onde = rota ? `<b>${rota.km.toLocaleString('pt-BR')} km</b> até a loja mais próxima${loja.end ? ', ' + loja.end.split(',')[0] : ''}` : 'Sem loja no mapa';
+    const onde = (rota ? `<b>${rota.km.toLocaleString('pt-BR')} km</b> até a loja mais próxima${loja.end ? ', ' + loja.end.split(',')[0] : ''}` : 'Sem loja no mapa') + ` · ${r.itens[k]} itens`;
     return `<li class="${pos ? '' : 'melhor'}" data-k="${k}"><span class="pos">${String(pos + 1).padStart(2, '0')}</span><div><span class="nome">${nomes[k]}</span><span class="onde">${onde}</span></div><span class="val">${reais(r.totais[k])}<small>${pos ? '+ ' + reais(dif) : 'mais barata'}</small></span></li>`;
   }).join('');
   $('resNota').textContent = `Ponto de coleta ${viaCep ? 'mais próximo, pela faixa do CEP' : 'escolhido no mapa'}: ${p.rua}, ${p.cep}. Preço do site de cada rede para esse CEP.`;

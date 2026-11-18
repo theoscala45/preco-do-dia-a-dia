@@ -104,7 +104,8 @@ def main(modo, arquivo_saida="assets/dados.json", arquivos_precos=None):
              "pesos": {"com_peso": len(com_peso), "sem_peso": len(completos) - len(com_peso), "fonte": "IBGE, SIDRA tabela 7060"} if com_peso else None,
              "pontos": pontos,
              "produtos": [{"id": p["produto_id"], "nome": p["produto"], "marca": p["marca"], "tam": p["tamanho"],
-                           "cat": p["categoria"], "indice": p["entra_no_indice"] == "sim"} for p in produtos],
+                           "cat": p["categoria"], "indice": p["entra_no_indice"] == "sim",
+                           "peso": round(pesos.get(p["produto_id"], medio), 4)} for p in produtos],
              "redes": [{"id": r, "nome": nomes.get(r, r), "por_cep": isinstance(ult[r][0], list)} for r in redes],
              "precos": ult}
     json.dump(saida, open(os.path.join(RAIZ, arquivo_saida), "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
