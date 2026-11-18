@@ -299,3 +299,81 @@ P097,carrefour,https://mercado.carrefour.com.br/alface-crespa-carrefour-mercado-
 P098,carrefour,https://mercado.carrefour.com.br/mamao-formosa-garantia-de-origem-aprox-1-6-kg-20524/p,variante,"Mamão Formosa Garantia de Origem Aprox. 1,6 Kg. Mamão formosa, cerca de 1,6kg vendido por peso. Comparar por kg."
 P099,carrefour,https://mercado.carrefour.com.br/abobrinha-italiana-carrefour-aprox-400g-20672/p,variante,"Abobrinha Italiana Carrefour Aprox. 400g. Abobrinha italiana, cerca de 400g vendida por peso. Comparar por kg."
 P100,carrefour,,nao_achado,Pimentão não está no sitemap.
+P001,pao-de-acucar,https://www.paodeacucar.com/produto/41329/arroz-agulhinha-tipo-1-camil-pacote-5kg,achado,Arroz Agulhinha Tipo 1 Camil 5kg. Agulhinha é o arroz branco tipo 1.
+P002,pao-de-acucar,https://www.paodeacucar.com/produto/138068/arroz-agulhinha-tipo-1-tio-joao-pacote-5kg,achado,Arroz Agulhinha Tipo 1 Tio João 5kg.
+P003,pao-de-acucar,https://www.paodeacucar.com/produto/9461/feijao-carioca-tipo-1-camil-pacote-1kg,achado,Feijão Carioca Tipo 1 Camil 1kg.
+P004,pao-de-acucar,https://www.paodeacucar.com/produto/9493/feijao-preto-tipo-1-camil-pacote-1kg,achado,Feijão Preto Tipo 1 Camil 1kg.
+P005,pao-de-acucar,https://www.paodeacucar.com/produto/124153/oleo-de-soja-soya-garrafa-900ml,achado,Óleo de Soja Soya 900ml.
+P006,pao-de-acucar,https://www.paodeacucar.com/produto/100849/azeite-de-oliva-extra-virgem-classico-portugues-gallo-vidro-500ml,achado,Azeite de Oliva Extra Virgem Clássico Português Gallo 500ml.
+P007,pao-de-acucar,https://www.paodeacucar.com/produto/74215/acucar-refinado-uniao-pacote-1kg,achado,Açúcar Refinado União 1kg.
+P008,pao-de-acucar,https://www.paodeacucar.com/produto/162802/acucar-cristalcucar-uniao-pacote-1kg,achado,Açúcar Cristal União 1kg.
+P009,pao-de-acucar,https://www.paodeacucar.com/produto/292186/cafe-torrado-e-moido-extraforte-pilao-pacote-500g,achado,Café Torrado e Moído Extraforte Pilão 500g.
+P010,pao-de-acucar,https://www.paodeacucar.com/produto/82810/cafe-torrado-e-moido-tradicional-3-coracoes-pacote-500g,achado,Café Torrado e Moído Tradicional 3 Corações 500g.
+P011,pao-de-acucar,https://www.paodeacucar.com/produto/43619/farinha-de-trigo-tradicional-dona-benta-pacote-1kg,achado,Farinha de Trigo Tradicional Dona Benta 1kg.
+P012,pao-de-acucar,https://www.paodeacucar.com/produto/44521/farinha-de-mandioca-crua-yoki-pacote-500g,variante,Farinha de Mandioca Crua Yoki 500g. A fina só em 1kg; a crua de 500g é o mais perto.
+P013,pao-de-acucar,https://www.paodeacucar.com/produto/159771/macarrao-de-semola-com-ovos-espaguete-8-renata-pacote-500g,achado,Macarrão de Sêmola com Ovos Espaguete 8 Renata 500g.
+P014,pao-de-acucar,https://www.paodeacucar.com/produto/279929/macarrao-com-ovos-parafuso-barilla-pacote-500g,achado,Macarrão com Ovos Parafuso Barilla 500g.
+P015,pao-de-acucar,https://www.paodeacucar.com/produto/1404204/molho-de-tomate-pomarola-tradicional-300g,tamanho_diferente,Molho de Tomate Pomarola Tradicional 300g. Não há o de 340g. Fica fora.
+P016,pao-de-acucar,https://www.paodeacucar.com/produto/1571148/extrato-de-tomate-elefante-pote-300g,variante,"Extrato de Tomate Elefante Pote 300g. Pote, como no Tenda e no Carrefour."
+P017,pao-de-acucar,https://www.paodeacucar.com/produto/11672/sal-refinado-cisne-tradicional-pacote-1kg,achado,Sal Refinado Cisne 1kg.
+P018,pao-de-acucar,https://www.paodeacucar.com/produto/52448/fuba-de-milho-yoki-pacote-1kg,achado,Fubá de Milho Yoki 1kg.
+P020,pao-de-acucar,https://www.paodeacucar.com/produto/1617743/achocolatado-po-nescau-lata-350g,achado,Achocolatado em Pó Nescau Lata 350g.
+P023,pao-de-acucar,https://www.paodeacucar.com/produto/1944/pao-de-forma-tradicional-pullman-480g,achado,Pão de Forma Tradicional Pullman 480g.
+P025,pao-de-acucar,https://www.paodeacucar.com/produto/19389/maionese-hellmanns-tradicional-500g,achado,Maionese Hellmann's Tradicional 500g.
+P026,pao-de-acucar,https://www.paodeacucar.com/produto/91853/ketchup-heinz-tradicional-397g,achado,Ketchup Heinz Tradicional 397g.
+P027,pao-de-acucar,https://www.paodeacucar.com/produto/5663/file-de-sardinha-com-oleo-com-pimenta-gomes-da-costa-caixa-125g,variante,Filé de Sardinha com Óleo com Pimenta Gomes da Costa 125g. A de 125g só com pimenta; a só em óleo vem em 85g.
+P028,pao-de-acucar,https://www.paodeacucar.com/produto/44884/atum-ralado-ao-natural-gomes-da-costa-lata-170g,variante,Atum Ralado ao Natural Gomes da Costa 170g. Em óleo só há a lata de 130g; ao natural tem 170g.
+P029,pao-de-acucar,https://www.paodeacucar.com/produto/452867/milho-verde-em-conserva-quero-lata-170g,achado,Milho Verde em Conserva Quero 170g.
+P030,pao-de-acucar,https://www.paodeacucar.com/produto/452869/ervilha-em-conserva-quero-lata-170g,achado,Ervilha em Conserva Quero 170g.
+P031,pao-de-acucar,https://www.paodeacucar.com/produto/90775/vinagre-de-alcool-castelo-750ml,achado,Vinagre de Álcool Castelo 750ml.
+P037,pao-de-acucar,https://www.paodeacucar.com/produto/99466/agua-mineral-natural-sem-gas-crystal-garrafa-1-5l,achado,"Água Mineral sem Gás Crystal 1,5L."
+P038,pao-de-acucar,https://www.paodeacucar.com/produto/449568/refrigerante-coca-cola-original-garrafa-2l,achado,Refrigerante Coca-Cola Original 2L.
+P039,pao-de-acucar,https://www.paodeacucar.com/produto/176191/leite-longa-vida-integral-italac-1-litro,achado,Leite Longa Vida Integral Italac 1L.
+P040,pao-de-acucar,https://www.paodeacucar.com/produto/164065/leite-uht-integral-piracanjuba-caixa-com-tampa-1l,achado,Leite UHT Integral Piracanjuba 1L.
+P041,pao-de-acucar,https://www.paodeacucar.com/produto/140374/leite-desnatado-piracanjuba-1l,achado,Leite Desnatado Piracanjuba 1L.
+P042,pao-de-acucar,https://www.paodeacucar.com/produto/586550/leite-em-po-ninho-integral-lata-380g,achado,Leite em Pó Ninho Integral Lata 380g.
+P053,pao-de-acucar,https://www.paodeacucar.com/produto/568597/papel-higienico-folha-dupla-neutro-neve-toque-da-seda-30m-pacote-leve-12-pague-11-unidades,variante,"Papel Higiênico Folha Dupla Neve Toque da Seda 30m Leve 12 Pague 11. Leve 12 pague 11, como no Tenda."
+P054,pao-de-acucar,https://www.paodeacucar.com/produto/284478/papel-higienico-folha-dupla-neutro-personal-vip-30m-pacote-leve-12-pague-11-unidades,variante,Papel Higiênico Folha Dupla Personal Vip 30m Leve 12 Pague 11. Leve 12 pague 11.
+P055,pao-de-acucar,https://www.paodeacucar.com/produto/127976/sabonete-barra-original-dove-90g,achado,Sabonete Barra Original Dove 90g.
+P056,pao-de-acucar,https://www.paodeacucar.com/produto/77467/sabonete-barra-glicerinado-lavanda-lux-botanicals-envoltorio-85g,variante,"Sabonete Barra Lux Botanicals Lavanda 85g. Lavanda, como no Carrefour."
+P057,pao-de-acucar,https://www.paodeacucar.com/produto/1637924/creme-dental-colgate-total-original-mint-prevencao-ativa-90g,variante,Creme Dental Colgate Total Original Mint Prevenção Ativa 90g. Mesmo produto do Tenda.
+P058,pao-de-acucar,,nao_achado,Não há Colgate Máxima Proteção.
+P059,pao-de-acucar,https://www.paodeacucar.com/produto/172652/escova-dental-macia-colgate-classic-clean-cabeca-normal,variante,"O modelo estava a definir. Escolhido: Colgate Classic Clean macia, 1 unidade."
+P060,pao-de-acucar,https://www.paodeacucar.com/produto/35316/shampoo-seda-ceramidas-frasco-325ml,variante,"Shampoo Seda Ceramidas 325ml. Linha Ceramidas, como no Tenda."
+P061,pao-de-acucar,https://www.paodeacucar.com/produto/36121/condicionador-seda-cachos-definidos-frasco-325ml,variante,Condicionador Seda Cachos Definidos 325ml. O de Ceramidas não aparece; Cachos Definidos é o único de 325ml.
+P062,pao-de-acucar,https://www.paodeacucar.com/produto/1640686/desodorante-aerossol-rexona-clinical-invisible-spray-150ml,variante,"Desodorante Aerossol Rexona Clinical Invisible 150ml. Linha Clinical, como no Tenda."
+P063,pao-de-acucar,https://www.paodeacucar.com/produto/108942/fio-dental-encerado-oral-b-50m,achado,Fio Dental Encerado Oral-B 50m.
+P064,pao-de-acucar,,nao_achado,Absorvente Always não aparece nas categorias do site.
+P065,pao-de-acucar,https://www.paodeacucar.com/produto/365812/fralda-huggies-supreme-care-m-40-fraldas,variante,Fralda Huggies Supreme Care M 40 unidades. Não há a Máxima Proteção M.
+P066,pao-de-acucar,https://www.paodeacucar.com/produto/440145/sabao-em-po-omo-lavagem-perfeita-1-6kg,achado,"Sabão em Pó Omo Lavagem Perfeita 1,6kg."
+P067,pao-de-acucar,https://www.paodeacucar.com/produto/1645109/lava-roupas-liquido-lavagem-perfeita-omo-3l,variante,"Lava-Roupas Líquido Omo Lavagem Perfeita 3L. Lavagem Perfeita, como no Carrefour."
+P068,pao-de-acucar,https://www.paodeacucar.com/produto/5361/amaciante-de-roupa-concentrado-frescor-intenso-comfort-frasco-500ml,variante,Amaciante Concentrado Comfort Frescor Intenso 500ml.
+P069,pao-de-acucar,https://www.paodeacucar.com/produto/51538/lava-loucas-liquido-clear-ype-squeeze-500ml,variante,Lava-Louças Ypê Clear 500ml. O neutro só em pacote com 6.
+P070,pao-de-acucar,,nao_achado,Não há Qboa; só Super Candida e Ypê.
+P071,pao-de-acucar,https://www.paodeacucar.com/produto/141644/desinfetante-uso-geral-original-pinho-sol-frasco-500ml,achado,Desinfetante Pinho Sol Original 500ml.
+P072,pao-de-acucar,https://www.paodeacucar.com/produto/49581/limpador-multiuso-original-veja-gold-squeeze-500ml,achado,Limpador Multiuso Veja Gold Original 500ml.
+P073,pao-de-acucar,https://www.paodeacucar.com/produto/311641/esponja-laranja-nao-risca-loucas-delicadas-scotch-brite-antibac-3-unidades,variante,Esponja Scotch-Brite Não Risca Antibac 3 unidades.
+P074,pao-de-acucar,,nao_achado,Não há saco de lixo Dover Roll; só Embalixo e a marca da loja.
+P075,pao-de-acucar,https://www.paodeacucar.com/produto/1233079/toalha-de-papel-snob-folha-dupla-2-unidades,achado,Toalha de Papel Snob Folha Dupla 2 unidades.
+P076,pao-de-acucar,https://www.paodeacucar.com/produto/804250/sabao-barra-neutro-original-ype-pacote-800g-5-unidades,achado,Sabão em Barra Neutro Ypê 5 unidades 800g.
+P077,pao-de-acucar,,nao_achado,Não há álcool líquido 70% de 1L; só 46º.
+P078,pao-de-acucar,https://www.paodeacucar.com/produto/1449830/inseticida-aerossol-a-base-de-agua-sbp-ultra-frasco-360ml-spray,tamanho_diferente,Inseticida Aerossol SBP Ultra 360ml. Só 360ml ou mais. Fica fora.
+P079,pao-de-acucar,https://www.paodeacucar.com/produto/65885/file-de-peito-de-frango-congelado-sem-pele-sem-osso-sadia-1kg,variante,"Filé de Peito de Frango Congelado Sadia 1kg, como no Tenda e no Carrefour. Comparar por kg."
+P080,pao-de-acucar,https://www.paodeacucar.com/produto/67565/sobrecoxa-de-frango-congelada-sadia-1kg,variante,"Sobrecoxa de Frango Congelada Sadia 1kg, como no Carrefour. Comparar por kg."
+P081,pao-de-acucar,,nao_achado,Não há frango inteiro Sadia; só o orgânico.
+P082,pao-de-acucar,https://www.paodeacucar.com/produto/1617160/carne-moida-de-patinho-swift-1kg,achado,Carne Moída de Patinho Swift 1kg.
+P083,pao-de-acucar,https://www.paodeacucar.com/produto/133819/acem-em-pedaco-resfriado-bandeja-800g,variante,"Acém em Pedaço Resfriado, bandeja de cerca de 800g vendida por peso. A página dá o preço do kg."
+P084,pao-de-acucar,https://www.paodeacucar.com/produto/323907/contra-file-bovino-kg,achado,"Contra Filé Bovino, vendido por kg."
+P088,pao-de-acucar,https://www.paodeacucar.com/produto/153808/banana-prata-granel-700g-aprox-5-a-6-unid,variante,"Banana Prata Granel, cerca de 700g vendida por peso. A página dá o preço do kg."
+P089,pao-de-acucar,https://www.paodeacucar.com/produto/78635/maca-gala-granel-500g-aprox-2-a-3-unid,variante,"Maçã Gala Granel, cerca de 500g vendida por peso. A página dá o preço do kg."
+P090,pao-de-acucar,https://www.paodeacucar.com/produto/101504/laranja-pera-granel-1kg-aprox-4-a-5-unid,achado,"Laranja Pera Granel, vendida por kg."
+P091,pao-de-acucar,https://www.paodeacucar.com/produto/101906/limao-tahiti-granel-500g-aprox-4-a-5-unid,variante,"Limão Tahiti Granel, cerca de 500g vendido por peso. A página dá o preço do kg."
+P092,pao-de-acucar,https://www.paodeacucar.com/produto/67366/tomate-granel-500g-aprox-2-a-3-unid,variante,"Tomate Granel, cerca de 500g vendido por peso. A página dá o preço do kg."
+P093,pao-de-acucar,https://www.paodeacucar.com/produto/67204/cebola-granel-600g-aprox-2-a-3-unid,variante,"Cebola Granel, cerca de 600g vendida por peso. A página dá o preço do kg."
+P094,pao-de-acucar,https://www.paodeacucar.com/produto/47797/alho-granel-200g-1-cabeca,variante,"Alho Granel, uma cabeça de cerca de 200g vendida por peso. A página dá o preço do kg."
+P095,pao-de-acucar,https://www.paodeacucar.com/produto/67746/batata-granel-1kg-aprox-5-a-6-unid,achado,"Batata Granel, vendida por kg."
+P096,pao-de-acucar,https://www.paodeacucar.com/produto/65429/cenoura-granel-500g-aprox-2-a-3-unid,variante,"Cenoura Granel, cerca de 500g vendida por peso. A página dá o preço do kg."
+P097,pao-de-acucar,https://www.paodeacucar.com/produto/5639/alface-crespa-naturalmente-fresca-qualita,variante,"Alface Crespa Qualitá, 1 unidade (marca da loja)."
+P098,pao-de-acucar,https://www.paodeacucar.com/produto/38181/mamao-formosa-granel-2kg-1-unid,achado,"Mamão Formosa Granel, vendido por kg."
+P099,pao-de-acucar,https://www.paodeacucar.com/produto/80045/abobrinha-italiana-granel-800g-aprox-2-a-3-unid,variante,"Abobrinha Italiana Granel, cerca de 800g vendida por peso. A página dá o preço do kg."
+P100,pao-de-acucar,https://www.paodeacucar.com/produto/54611/pimentao-verde-extra-granel-300g-2-unidades,variante,"Pimentão Verde Extra Granel, cerca de 300g vendido por peso. A página dá o preço do kg."
