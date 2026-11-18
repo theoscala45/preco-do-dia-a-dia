@@ -53,6 +53,21 @@ Obrigado,
 [nome]
 [e-mail]
 
+### 2b. Resposta à autorização do Carrefour
+
+O Carrefour respondeu que o projeto pode ler os preços, uma vez por dia. O captcha continua bloqueando o navegador automático que informa o CEP, e o projeto não contorna bloqueios. Esta resposta pergunta como o programa deve acessar.
+
+**Assunto:** Re: Pedido de acesso para projeto estudantil de comparação de preços
+
+Olá,
+
+Obrigado pela autorização. Vamos ler os preços uma vez por dia, como combinado.
+
+Um detalhe técnico: o site mostra uma verificação contra robôs (captcha) quando o programa informa o CEP, e o projeto não contorna esse tipo de bloqueio. Vocês poderiam indicar como o programa deve acessar? Por exemplo, liberar o acesso de um programa que se identifica com o nome "preco-do-dia-a-dia", ou indicar outra forma oficial de consultar o preço por CEP.
+
+Obrigado,
+[nome]
+
 ---
 
 ## 3. Pão de Açúcar e Santa Luzia: aviso
