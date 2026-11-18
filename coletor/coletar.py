@@ -242,6 +242,45 @@ class SantaLuzia:
         return ler_schema(url, "/p")
 
 
+class Hirota:
+    """Hirota Food (lojahirota.com.br). O site so abre em navegador e mostra o preco da loja de retirada que ele
+    escolhe sozinho para quem nao informou CEP (Av. Nazare, 1299, Ipiranga). O coletor guarda esse preco: um preco
+    unico, o da loja padrao do site. Se o preco muda de loja para loja ainda nao foi confirmado. Sem sitemap e com a
+    busca bloqueada pelo robots.txt, os links foram achados percorrendo as paginas de departamento."""
+    rede_id = "hirota"
+    site = "https://www.lojahirota.com.br"
+    preco_unico = True
+    navegador = True
+    hosts = ("lojahirota.com.br", "vipcommerce.com.br")
+    loja = "loja padrao do site (Av. Nazare, 1299)"
+    pg = None
+
+    def ler_pagina(self, url):
+        pg = self.pg
+        resposta = pg.goto(url, wait_until="domcontentloaded", timeout=60000)
+        conferir_bloqueio(resposta, pg)
+        try:
+            pg.wait_for_function("() => /Adicionar a lista[\\s\\S]*?(R\\$|indispon|avise-me)/i.test(document.body.innerText)", timeout=25000)
+        except Exception:
+            pass
+        texto = pg.evaluate("() => document.body.innerText")
+        nome = re.split(r"\s+-\s+Hirota", pg.title())[0].strip()
+        if not nome or "nao encontrad" in semacento(texto[:3000]) or "Adicionar a lista" not in texto:
+            raise RuntimeError("pagina sem produto (pode nao existir mais)")
+        bloco = texto.split("Adicionar a lista", 1)[1]
+        bloco = re.split(r"Adicionar ao carrinho|Compare|Avise-me", bloco)[0]
+        if not re.search(r"R\$", bloco):
+            if re.search(r"indispon|esgotad|avise", texto, re.I):
+                return {"nome": nome, "tamanho": tamanho_do_nome(nome), "preco": None, "unidade": "", "disponivel": False}
+            raise RuntimeError("preco nao encontrado na pagina")
+        por_kg = re.search(r"R\$\s*([\d.]+,\d{2})\s*/\s*kg", bloco, re.I)
+        if por_kg:   # produto vendido por peso: a pagina da o preco do quilo e o da porcao; vale o do quilo
+            return {"nome": nome, "tamanho": tamanho_do_nome(nome), "preco": f"{float(por_kg.group(1).replace('.', '').replace(',', '.')):.2f}", "unidade": "kg", "disponivel": True}
+        valores = re.findall(r"R\$\s*([\d.]+,\d{2})", bloco)
+        # numa oferta a pagina mostra o preco atual e, depois, o antigo riscado: vale o primeiro
+        return {"nome": nome, "tamanho": tamanho_do_nome(nome), "preco": f"{float(valores[0].replace('.', '').replace(',', '.')):.2f}", "unidade": "un", "disponivel": True}
+
+
 def ler_schema(url, marca_de_produto):
     """Le uma pagina de produto sem navegador e pega nome, preco e estoque nos dados padronizados (schema.org)."""
     req = urllib.request.Request(urllib.parse.quote(url, safe=":/%"), headers={"User-Agent": "Mozilla/5.0 (preco-do-dia-a-dia)"})
@@ -367,11 +406,11 @@ def coletar_unico(rede, links, hoje, limite, arq_precos, arq_exec, pw=None):
         if navegador: navegador.close()
     acrescentar(arq_precos, COLUNAS, linhas)
     nota = "; ".join(erros[:6]) + (f"; e mais {len(erros) - 6}" if len(erros) > 6 else "")
-    acrescentar(arq_exec, COLUNAS_EXEC, [{"data": hoje, "rede_id": rede.rede_id, "cep_id": "", "produtos_tentados": len(paginas), "produtos_lidos": len(linhas), "resultado": resultado, "erro": limpar(nota), "loja": "preco unico do site"}])
+    acrescentar(arq_exec, COLUNAS_EXEC, [{"data": hoje, "rede_id": rede.rede_id, "cep_id": "", "produtos_tentados": len(paginas), "produtos_lidos": len(linhas), "resultado": resultado, "erro": limpar(nota), "loja": rede.loja or "preco unico do site"}])
     print(f"[{rede.rede_id}] {resultado}: {len(linhas)}/{len(paginas)} lidos, {sem_preco} sem estoque, {time.time() - inicio:.0f} s" + (f" | {nota}" if nota else ""), flush=True)
 
 
-REDES = [Tenda(), Atacadao(), Carrefour(), PaoDeAcucar(), Sonda(), SantaLuzia()]
+REDES = [Tenda(), Atacadao(), Carrefour(), PaoDeAcucar(), Sonda(), SantaLuzia(), Hirota()]
 
 
 def robots(rede):
