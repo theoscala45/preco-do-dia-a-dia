@@ -176,11 +176,15 @@ class Atacadao:
         nome = pg.locator(self.TITULO).first.inner_text().strip()
         # o preco carrega depois do titulo: espera o resumo da compra ou o aviso de indisponivel
         try:
-            pg.wait_for_function("() => /unidade\\s*·\\s*R\\$|Produto indispon/i.test(document.body.innerText)", timeout=15000)
+            pg.wait_for_function("() => /unidade\\s*·\\s*R\\$|R\\$\\s*[\\d.]+,\\d{2}\\s*\\/\\s*kg|Produto indispon/i.test(document.body.innerText)", timeout=15000)
         except Exception:
             raise RuntimeError("preco nao apareceu")
         texto = pg.evaluate("""t => { let e = document.querySelector(t); for (let i = 0; i < 8 && e && !/Resumo da compra|indispon/i.test(e.innerText); i++) e = e.parentElement; return e ? e.innerText : ''; }""", self.TITULO)
         m = re.search(r"1\s*unidade\s*·\s*R\$\s*([\d.]+,\d{2})", texto)
+        kg = re.search(r"R\$\s*([\d.]+,\d{2})\s*/\s*kg", texto, re.I)
+        if not m and kg:
+            # produto de peso variavel (carnes): a pagina mostra o preco da peca e o do quilo; vale o do quilo
+            return {"nome": nome, "tamanho": tamanho_do_nome(nome), "preco": kg.group(1).replace(".", "").replace(",", "."), "unidade": "kg", "disponivel": True}, cep_dado
         if not m:
             if re.search(r"Produto indispon", texto, re.I):
                 return {"nome": nome, "tamanho": tamanho_do_nome(nome), "preco": None, "unidade": "", "disponivel": False}, cep_dado
@@ -289,7 +293,12 @@ class Hirota:
                 pass
         texto = pg.evaluate("() => document.body.innerText")
         nome = re.split(r"\s+-\s+Hirota", pg.title())[0].strip()
-        if not nome or "Adicionar a lista" not in texto:
+        if "Adicionar a lista" not in texto:
+            if "Tabloide de Ofertas" in texto and cep_dado:
+                # a loja escolhida nao vende este produto: a pagina abre so com o cabecalho e o rodape do site.
+                # E um dado (indisponivel nesta loja), nao um erro. Se for sempre assim, a revisao semanal aponta.
+                nome = pg.url.rstrip("/").split("/")[-1].replace("-", " ")
+                return {"nome": nome, "tamanho": tamanho_do_nome(nome), "preco": None, "unidade": "", "disponivel": False}, cep_dado
             raise RuntimeError("pagina sem produto (pode nao existir mais)")
         bloco = re.split(r"Adicionar ao carrinho|Compare|Avise-me", texto.split("Adicionar a lista", 1)[1])[0]
         if not re.search(r"R\$", bloco):
