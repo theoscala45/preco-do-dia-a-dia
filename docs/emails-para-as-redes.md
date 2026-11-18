@@ -1,6 +1,11 @@
 # Rascunhos de e-mail para as redes
 
-Nenhum destes e-mails foi enviado. O Theo revisa, completa o que está entre colchetes e envia pela conta dele.
+O Theo revisa, completa o que está entre colchetes e envia pela conta dele.
+
+Situação em 18/11/2026:
+- 1 (St Marche, pedido de autorização): enviado. Aguardando resposta; sem autorização, a rede não é coletada.
+- 2 (Carrefour, pedido de acesso por CEP): enviado a atendimento@carrefour.com.br em 18/11/2026. Aguardando resposta. A 2b só vale se eles autorizarem.
+- 3 (Pão de Açúcar e Santa Luzia, aviso): enviado aos dois. Sem resposta até agora.
 
 Onde achar o contato: o rodapé do site de cada rede costuma ter "Fale conosco" ou "SAC". Para pedidos de autorização, vale pedir que o SAC encaminhe ao jurídico ou ao marketing.
 
