@@ -15,3 +15,82 @@ data,rede_id,cep_id,produtos_tentados,produtos_lidos,resultado,erro,loja
 2026-11-17,tenda,C18,6,6,ok,,
 2026-11-17,tenda,C19,12,12,ok,,
 2026-11-17,tenda,C20,12,12,ok,,
+2026-11-18,atacadao,C01,80,80,ok,,Pacaembu
+2026-11-18,atacadao,C02,80,80,ok,mesma loja do C01: precos repetidos,Pacaembu
+2026-11-18,atacadao,C03,80,80,ok,mesma loja do C01: precos repetidos,Pacaembu
+2026-11-18,atacadao,C04,80,80,ok,mesma loja do C01: precos repetidos,Pacaembu
+2026-11-18,atacadao,C05,80,80,ok,mesma loja do C01: precos repetidos,Pacaembu
+2026-11-18,atacadao,C06,80,79,parcial,P083: preco nao apareceu,Villa Lobos
+2026-11-18,atacadao,C07,80,79,parcial,mesma loja do C06: precos repetidos; P083: preco nao apareceu,Villa Lobos
+2026-11-18,atacadao,C08,80,79,parcial,mesma loja do C06: precos repetidos; P083: preco nao apareceu,Villa Lobos
+2026-11-18,atacadao,C09,80,79,parcial,mesma loja do C06: precos repetidos; P083: preco nao apareceu,Villa Lobos
+2026-11-18,atacadao,C10,80,79,parcial,mesma loja do C06: precos repetidos; P083: preco nao apareceu,Villa Lobos
+2026-11-18,atacadao,C11,80,80,ok,,Ipiranga
+2026-11-18,atacadao,C12,80,79,parcial,P083: preco nao apareceu,Villa Lobos
+2026-11-18,atacadao,C13,80,79,parcial,mesma loja do C12: precos repetidos; P083: preco nao apareceu,Villa Lobos
+2026-11-18,atacadao,C14,80,79,parcial,mesma loja do C12: precos repetidos; P083: preco nao apareceu,Villa Lobos
+2026-11-18,atacadao,C15,80,79,parcial,mesma loja do C12: precos repetidos; P083: preco nao apareceu,Villa Lobos
+2026-11-18,atacadao,C16,80,80,ok,,Ipiranga
+2026-11-18,atacadao,C17,80,78,parcial,P082: preco nao apareceu; P083: preco nao apareceu,Tatuapé
+2026-11-18,atacadao,C18,80,77,parcial,P082: preco nao apareceu; P083: preco nao apareceu; P098: preco nao apareceu,Aricanduva
+2026-11-18,atacadao,C19,80,79,parcial,P082: preco nao apareceu,Vila Maria
+2026-11-18,atacadao,C20,80,78,parcial,P082: preco nao apareceu; P083: preco nao apareceu,Mauá João Ramalho
+2026-11-18,atacadao,C21,80,80,ok,,Pacaembu
+2026-11-18,atacadao,C22,80,79,parcial,P082: preco nao apareceu,Vila Maria
+2026-11-18,atacadao,C23,80,79,parcial,mesma loja do C22: precos repetidos; P082: preco nao apareceu,Vila Maria
+2026-11-18,atacadao,C24,80,80,ok,,Taipas
+2026-11-18,atacadao,C25,80,80,ok,mesma loja do C24: precos repetidos,Taipas
+2026-11-18,carrefour,,83,83,ok,,preco unico do site
+2026-11-18,hirota,C01,67,67,ok,,Santa Cecília (Av. Gen. Olímpio da Silveira; 39)
+2026-11-18,hirota,C02,67,67,ok,mesma loja do C01: precos repetidos,Santa Cecília (Av. Gen. Olímpio da Silveira; 39)
+2026-11-18,hirota,C03,67,67,ok,mesma loja do C01: precos repetidos,Santa Cecília (Av. Gen. Olímpio da Silveira; 39)
+2026-11-18,hirota,C04,67,67,ok,mesma loja do C01: precos repetidos,Santa Cecília (Av. Gen. Olímpio da Silveira; 39)
+2026-11-18,hirota,C05,67,67,ok,mesma loja do C01: precos repetidos,Santa Cecília (Av. Gen. Olímpio da Silveira; 39)
+2026-11-18,hirota,C06,67,67,ok,,Santa Cecília (Av. Gen. Olímpio da Silveira; 39)
+2026-11-18,hirota,C07,67,67,ok,mesma loja do C06: precos repetidos,Santa Cecília (Av. Gen. Olímpio da Silveira; 39)
+2026-11-18,hirota,C08,67,64,parcial,P066: pagina sem produto (pode nao existir mais); P084: pagina sem produto (pode nao existir mais); P087: pagina sem produto (pode nao existir mais),Campo Belo (R. Vieira de Morais; 263)
+2026-11-18,hirota,C09,67,67,ok,,Morumbi (Av. Dr. Guilherme Dumont Vilares; 1450)
+2026-11-18,hirota,C10,67,67,ok,mesma loja do C06: precos repetidos,Santa Cecília (Av. Gen. Olímpio da Silveira; 39)
+2026-11-18,hirota,C11,67,64,parcial,P066: pagina sem produto (pode nao existir mais); P084: pagina sem produto (pode nao existir mais); P087: pagina sem produto (pode nao existir mais),Campo Belo (R. Vieira de Morais; 263)
+2026-11-18,hirota,C12,67,64,parcial,mesma loja do C11: precos repetidos; P066: pagina sem produto (pode nao existir mais); P084: pagina sem produto (pode nao existir mais); P087: pagina sem produto (pode nao existir mais),Campo Belo (R. Vieira de Morais; 263)
+2026-11-18,hirota,C13,67,67,ok,,Morumbi (Av. Dr. Guilherme Dumont Vilares; 1450)
+2026-11-18,hirota,C14,67,64,parcial,mesma loja do C11: precos repetidos; P066: pagina sem produto (pode nao existir mais); P084: pagina sem produto (pode nao existir mais); P087: pagina sem produto (pode nao existir mais),Campo Belo (R. Vieira de Morais; 263)
+2026-11-18,hirota,C15,67,67,ok,mesma loja do C13: precos repetidos,Morumbi (Av. Dr. Guilherme Dumont Vilares; 1450)
+2026-11-18,hirota,C16,67,67,ok,,Nazaré (Av. Nazaré; 1299)
+2026-11-18,hirota,C17,67,65,parcial,P066: pagina sem produto (pode nao existir mais); P084: pagina sem produto (pode nao existir mais),Vila Formosa (Av. Dr. Eduardo Cotching; 1628)
+2026-11-18,hirota,C18,67,65,parcial,mesma loja do C17: precos repetidos; P066: pagina sem produto (pode nao existir mais); P084: pagina sem produto (pode nao existir mais),Vila Formosa (Av. Dr. Eduardo Cotching; 1628)
+2026-11-18,hirota,C19,67,65,parcial,mesma loja do C17: precos repetidos; P066: pagina sem produto (pode nao existir mais); P084: pagina sem produto (pode nao existir mais),Vila Formosa (Av. Dr. Eduardo Cotching; 1628)
+2026-11-18,hirota,C20,67,65,parcial,mesma loja do C17: precos repetidos; P066: pagina sem produto (pode nao existir mais); P084: pagina sem produto (pode nao existir mais),Vila Formosa (Av. Dr. Eduardo Cotching; 1628)
+2026-11-18,hirota,C21,67,67,ok,,Santa Cecília (Av. Gen. Olímpio da Silveira; 39)
+2026-11-18,hirota,C22,67,67,ok,mesma loja do C21: precos repetidos,Santa Cecília (Av. Gen. Olímpio da Silveira; 39)
+2026-11-18,hirota,C23,67,67,ok,mesma loja do C21: precos repetidos,Santa Cecília (Av. Gen. Olímpio da Silveira; 39)
+2026-11-18,hirota,C24,67,67,ok,mesma loja do C21: precos repetidos,Santa Cecília (Av. Gen. Olímpio da Silveira; 39)
+2026-11-18,hirota,C25,67,67,ok,mesma loja do C21: precos repetidos,Santa Cecília (Av. Gen. Olímpio da Silveira; 39)
+2026-11-18,pao-de-acucar,,90,90,ok,,preco unico do site
+2026-11-18,santa-luzia,,54,53,parcial,P031: pagina sem dados de produto,preco unico do site
+2026-11-18,sonda,,74,74,ok,,preco unico do site
+2026-11-18,tenda,C01,79,79,ok,,
+2026-11-18,tenda,C02,79,79,ok,,
+2026-11-18,tenda,C03,79,79,ok,,
+2026-11-18,tenda,C04,79,79,ok,,
+2026-11-18,tenda,C05,79,79,ok,,
+2026-11-18,tenda,C06,79,79,ok,,
+2026-11-18,tenda,C07,79,79,ok,,
+2026-11-18,tenda,C08,79,79,ok,,
+2026-11-18,tenda,C09,79,79,ok,,
+2026-11-18,tenda,C10,79,79,ok,,
+2026-11-18,tenda,C11,79,79,ok,,
+2026-11-18,tenda,C12,79,79,ok,,
+2026-11-18,tenda,C13,79,79,ok,,
+2026-11-18,tenda,C14,79,79,ok,,
+2026-11-18,tenda,C15,79,79,ok,,
+2026-11-18,tenda,C16,79,79,ok,,
+2026-11-18,tenda,C17,79,79,ok,,
+2026-11-18,tenda,C18,79,79,ok,,
+2026-11-18,tenda,C19,79,79,ok,,
+2026-11-18,tenda,C20,79,79,ok,,
+2026-11-18,tenda,C21,79,79,ok,,
+2026-11-18,tenda,C22,79,79,ok,,
+2026-11-18,tenda,C23,79,79,ok,,
+2026-11-18,tenda,C24,79,79,ok,,
+2026-11-18,tenda,C25,79,79,ok,,
