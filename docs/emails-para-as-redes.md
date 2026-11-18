@@ -33,17 +33,21 @@ Obrigado pela atenção,
 
 ## 2. Carrefour: pedido de acesso
 
-O site do Carrefour mostra uma tela de captcha para programas automáticos. Por isso o projeto lê só a página normal de cada produto, sem informar CEP, e guarda o preço padrão do site. Para ter o preço por bairro, é preciso a autorização deles.
+O site do Carrefour mostra uma tela de captcha para programas automáticos. Por isso o projeto lê só a página normal de cada produto, sem informar CEP, e guarda o preço padrão do site, um preço só para a cidade. Para ter o preço por bairro, é preciso a autorização deles.
+
+Para onde mandar: atendimento@carrefour.com.br (o e-mail que aparece no rodapé do site do Carrefour Mercado). Vale começar pedindo que encaminhem ao setor responsável pelo site ou ao jurídico.
 
 **Assunto:** Pedido de acesso para projeto estudantil de comparação de preços
 
 Olá,
 
-Meu nome é [nome], sou aluno do ensino médio em São Paulo. Faço um projeto estudantil sem fins lucrativos chamado O Preço do Dia a Dia. Ele compara quanto custa a mesma lista de 100 produtos de supermercado em diferentes bairros da cidade e mede a variação desses preços contra o IPCA.
+Peço, por favor, que esta mensagem seja encaminhada ao setor responsável pelo site do Carrefour Mercado.
 
-Hoje o projeto lê, uma vez por dia e devagar, a página normal de cerca de 100 produtos no site do Carrefour Mercado, e guarda só o preço padrão, o nome e o tamanho. Não copia fotos nem descrições.
+Meu nome é [nome], sou aluno do ensino médio em São Paulo. Faço um projeto estudantil sem fins lucrativos chamado O Preço do Dia a Dia. Ele compara quanto custa a mesma lista de 100 produtos de supermercado em sete redes e em 25 bairros da cidade, e mede a variação desses preços contra o IPCA.
 
-O site mostra preços diferentes por CEP, e é isso que o projeto quer comparar entre bairros. Mas a verificação contra robôs bloqueia o navegador automático que informaria o CEP, e o projeto não contorna bloqueios. Por isso pergunto: vocês autorizariam o acesso do coletor para 25 CEPs da capital, uma vez por dia? Se houver uma forma preferida de acesso, ou condições, sigo o que vocês indicarem.
+Hoje o projeto lê, uma vez por dia, de madrugada e devagar (uma página por vez, com alguns segundos entre elas), a página normal de 83 produtos no site do Carrefour Mercado. Guarda só o preço padrão, o nome e o tamanho. Não copia fotos nem descrições, e publica apenas o preço de cada produto e a soma da lista, com a data e a fonte.
+
+O site mostra preços diferentes por CEP, e é isso que o projeto quer comparar entre bairros. Mas a verificação contra robôs bloqueia o navegador automático que informaria o CEP, e o projeto não contorna bloqueios. Por isso pergunto: vocês autorizariam o acesso do coletor para 25 CEPs da capital, uma vez por dia? Seriam cerca de 2 mil páginas por noite, no mesmo ritmo lento. Se houver uma forma preferida de acesso, ou condições, sigo o que vocês indicarem.
 
 Se preferirem que o projeto não use os preços do Carrefour, me avisem e eu retiro a rede.
 
@@ -53,9 +57,9 @@ Obrigado,
 [nome]
 [e-mail]
 
-### 2b. Resposta à autorização do Carrefour
+### 2b. Só se o Carrefour autorizar: resposta
 
-O Carrefour respondeu que o projeto pode ler os preços, uma vez por dia. O captcha continua bloqueando o navegador automático que informa o CEP, e o projeto não contorna bloqueios. Esta resposta pergunta como o programa deve acessar.
+Use esta resposta apenas se o Carrefour responder autorizando. O captcha continua bloqueando o navegador automático que informa o CEP, e o projeto não contorna bloqueios, então ela pergunta como o programa deve acessar.
 
 **Assunto:** Re: Pedido de acesso para projeto estudantil de comparação de preços
 
