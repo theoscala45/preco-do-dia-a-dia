@@ -32,9 +32,13 @@ def peso_kg(texto):
     v = float(n.replace(",", "."))
     return v if u.lower() == "kg" else v / 1000
 
-def preco_comparavel(l, por_kg):
-    """O preco que entra nas contas: o da pagina ou, nos produtos comparados por kg, o do quilo."""
+def preco_comparavel(l, por_kg, tamanho_da_cesta=""):
+    """O preco que entra nas contas: o da pagina ou, nos produtos comparados por kg, o do quilo.
+    Produto da cesta com peso fixo (ex.: queijo minas de 500 g) que a rede vende por peso: a pagina da o preco do
+    quilo, e ele vira o preco do peso da cesta (R$ 69,90 o kg -> R$ 34,95 os 500 g)."""
     v = float(l["preco_reais"])
+    if not por_kg and l.get("unidade_de_venda") == "kg" and peso_kg(tamanho_da_cesta):
+        return round(v * peso_kg(tamanho_da_cesta), 2)
     if not por_kg or l.get("unidade_de_venda") == "kg":
         return v
     kg = peso_kg(l.get("tamanho_na_pagina")) or peso_kg(l.get("nome_na_pagina"))
@@ -58,9 +62,10 @@ def main(modo, arquivo_saida="assets/dados.json", arquivos_precos=None):
     # preco[data][rede][cep ou ""][produto]
     tab = {}
     por_kg = {p["produto_id"] for p in produtos if "kg" in p["compara_por"].lower()}
+    tam_cesta = {p["produto_id"]: p["tamanho"] for p in produtos}
     fora = 0
     for l in precos:
-        v = preco_comparavel(l, l["produto_id"] in por_kg) if modo != "exemplo" else float(l["preco_reais"])
+        v = preco_comparavel(l, l["produto_id"] in por_kg, tam_cesta.get(l["produto_id"], "")) if modo != "exemplo" else float(l["preco_reais"])
         if v is None: fora += 1; continue
         tab.setdefault(l["data"], {}).setdefault(l["rede_id"], {}).setdefault(l["cep_id"], {})[l["produto_id"]] = v
     def no_ponto(data, rede, cep, prod):

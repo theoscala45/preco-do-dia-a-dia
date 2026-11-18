@@ -87,7 +87,7 @@
         <h2 data-titulo>As redes e as regras de cada uma</h2>
         <div class="prosa" data-surge>
           <p>Antes de ler qualquer preço, o projeto leu o arquivo robots.txt e os termos de uso de nove redes. O robots.txt é o arquivo em que um site diz o que programas automáticos podem ou não podem ler. O coletor obedece a esse arquivo e nunca contorna um bloqueio.</p>
-          <p>Oito redes aparecem no site. A St Marche proíbe, nos termos de uso, copiar ou republicar conteúdo sem autorização por escrito. O projeto pediu essa autorização por e-mail e a St Marche autorizou, sem condições. O Nagumo fica para uma fase futura, com a Grande São Paulo.</p>
+          <p>As nove redes aparecem no site. A St Marche proíbe, nos termos de uso, copiar ou republicar conteúdo sem autorização por escrito. O projeto pediu essa autorização por e-mail e a St Marche autorizou, sem condições.</p>
         </div>
         <div class="rolagem" data-surge>
           <table class="tabela simples">
@@ -101,7 +101,7 @@
               <tr><th scope="row">St Marche</th><td>Preço único</td><td>Libera produto</td><td>Pedem autorização por escrito para copiar ou republicar</td><td><span class="selo ok">Autorizado por e-mail</span></td></tr>
               <tr><th scope="row">Santa Luzia</th><td>Preço único (loja única)</td><td>Bloqueia a busca, libera produto</td><td>Não encontrados</td><td><span class="selo">Liberado com dúvida</span></td></tr>
               <tr><th scope="row">Hirota</th><td>Loja</td><td>Bloqueia a busca, libera produto</td><td>Não tem</td><td><span class="selo">Liberado com dúvida</span></td></tr>
-              <tr><th scope="row">Nagumo</th><td>Loja</td><td>Não tem robots.txt</td><td>Só regras de compra</td><td><span class="selo nao">Fase futura</span></td></tr>
+              <tr><th scope="row">Nagumo</th><td>Loja</td><td>Não tem robots.txt</td><td>Só regras de compra</td><td><span class="selo ok">Liberado</span></td></tr>
             </tbody>
           </table>
         </div>
@@ -129,6 +129,7 @@
           <p>No Pão de Açúcar, a página de produto mostra o preço sem pedir CEP, e o preço é o mesmo para a cidade. O site não tem lista pública de produtos (sitemap) e o robots.txt bloqueia a busca. Por isso os links foram achados percorrendo as páginas de categoria do site, como uma pessoa faria. Essas páginas só abrem em navegador, então o coletor usa o navegador automático também aqui.</p>
           <p>O Sonda e o Santa Luzia também têm preço único. As páginas de produto dos dois abrem sem navegador e trazem o preço nos dados padronizados da página. No Sonda, os links foram achados percorrendo as páginas de categoria; no Santa Luzia, pela lista pública de produtos (sitemap). O site do Santa Luzia não vende carnes, frutas e verduras frescas pela internet, então esses produtos ficam de fora nessa rede.</p>
           <p>A St Marche também tem preço único. A página de produto abre sem navegador e traz o preço e a disponibilidade nos dados da própria página. Os links vieram da lista pública de produtos do site (sitemap). Frutas, verduras e carnes aparecem com o preço do quilo.</p>
+          <p>No Nagumo, o preço muda de loja para loja: cerca de um produto em dez custa diferente, mais nas frutas e nas carnes. Para cada CEP, o coletor informa o CEP no próprio site e fica com a primeira loja de retirada que ele oferece. As lojas do Nagumo ficam quase todas na zona leste e em cidades vizinhas (Guarulhos, Santo André, Osasco), então a loja usada pode ficar longe do ponto: para a Bela Vista, por exemplo, é a de Osasco. O site não tem robots.txt, e os links foram achados pela busca do próprio site. Numa promoção, vale o preço que a página mostra (o "Por:").</p>
           <p>No Hirota, o preço muda um pouco de loja para loja: a maioria dos produtos custa o mesmo, mas carnes e alguns itens mudam. O site oferece cinco lojas de retirada (Nazaré, Morumbi, Santa Cecília, Vila Formosa e Campo Belo). Para cada CEP, o coletor escolhe a mais perto do ponto, em linha reta, e guarda o preço dela. Para Perus, por exemplo, é a de Santa Cecília, a 17 km.</p>
           <p id="estadoColeta"></p>
           <p id="estadoLinks"></p>

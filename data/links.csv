@@ -799,3 +799,103 @@ P097,st-marche,https://marche.com.br/products/alface-crespa-tomita,variante,"Alf
 P098,st-marche,https://marche.com.br/products/mamao-formosa,achado,"Mamão Formosa, por kg."
 P099,st-marche,https://marche.com.br/products/abobrinha-italiana-selecionada,achado,"Abobrinha Italiana Selecionada, por kg."
 P100,st-marche,https://marche.com.br/products/pimentao-verde-a-granel-st-marche-kg,achado,"Pimentão Verde a Granel, por kg."
+P001,nagumo,https://www.nagumo.com.br/categoria/departamentos/basicos-e-matinais/commodities/arroz/arroz-branco-tipo-1-camil-5kg-293303.html,achado,Arroz Branco Tipo 1 Camil 5kg.
+P002,nagumo,https://www.nagumo.com.br/categoria/departamentos/basicos-e-matinais/commodities/arroz/arroz-branco-tio-jo%C3%A3o-t1-5kg-279901.html,achado,Arroz Branco Tio João Tipo 1 5kg.
+P003,nagumo,https://www.nagumo.com.br/categoria/departamentos/basicos-e-matinais/commodities/feijao/feijao-carioca-tipo-1-camil-1kg-139151.html,achado,Feijão Carioca Tipo 1 Camil 1kg.
+P004,nagumo,https://www.nagumo.com.br/categoria/departamentos/basicos-e-matinais/commodities/feijao/feijao-preto-tipo-1-camil-1kg-194549.html,achado,Feijão Preto Tipo 1 Camil 1kg.
+P005,nagumo,https://www.nagumo.com.br/%C3%B3leo-soja-soya-900ml-113090.html,achado,Óleo de Soja Soya 900ml.
+P006,nagumo,https://www.nagumo.com.br/categoria/departamentos/basicos-e-matinais/commodities/azeite/azeite-oliva-extra-virgem-gallo-500ml-712088.html,achado,Azeite de Oliva Extra Virgem Gallo 500ml.
+P007,nagumo,https://www.nagumo.com.br/categoria/departamentos/basicos-e-matinais/commodities/acucar/a%C3%A7%C3%BAcar-uni%C3%A3o-refinado-1kg-124669.html,achado,Açúcar Refinado União 1kg.
+P008,nagumo,https://www.nagumo.com.br/categoria/departamentos/basicos-e-matinais/commodities/acucar/a%C3%A7%C3%BAcar-cristal-org%C3%A2nico-uni%C3%A3o-1kg-788601.html,variante,Açúcar Cristal Orgânico União 1kg. O cristal comum não aparece.
+P009,nagumo,https://www.nagumo.com.br/categoria/departamentos/basicos-e-matinais/commodities/cafe/caf%C3%A9-torrado-e-mo%C3%ADdo-extra-forte-v%C3%A1cuo-pil%C3%A3o-500g-335201.html,achado,Café Torrado e Moído Extra Forte Pilão a Vácuo 500g.
+P010,nagumo,https://www.nagumo.com.br/categoria/departamentos/basicos-e-matinais/commodities/cafe/caf%C3%A9-tradicional-3-cora%C3%A7%C3%B5es-500g-813105.html,achado,Café Tradicional 3 Corações 500g.
+P011,nagumo,https://www.nagumo.com.br/categoria/mercearia-salgada/confeitaria-e-preparo/farinha-trigo/farinha-de-trigo-tradicional-dona-benta-1kg-291767.html,achado,Farinha de Trigo Tradicional Dona Benta 1kg.
+P012,nagumo,https://www.nagumo.com.br/categoria/mercearia-salgada/farinaceos/farinha-mandioca/farinha-de-mandioca-tipo-1-yoki-pacote-500g-213035.html,achado,Farinha de Mandioca Tipo 1 Yoki 500g.
+P013,nagumo,https://www.nagumo.com.br/categoria/mercearia-salgada/salgada/massas/massa-espaguete-renata-com-ovos-numero-8--500g-825955.html,achado,Massa Espaguete Renata com Ovos nº 8 500g.
+P014,nagumo,https://www.nagumo.com.br/categoria/mercearia-salgada/salgada/massas/massa-com-ovos-parafuso-barilla-500g-322355.html,achado,Massa com Ovos Parafuso Barilla 500g.
+P015,nagumo,https://www.nagumo.com.br/categoria/mercearia-salgada/molhos/atomatados/molho-de-tomate-pomarola-sache-300-tradicional-249583.html,achado,Molho de Tomate Pomarola Tradicional Sachê 300g.
+P016,nagumo,https://www.nagumo.com.br/categoria/mercearia-salgada/molhos/atomatados/extrato-de-tomate-elefante-300g-253643.html,achado,Extrato de Tomate Elefante 300g.
+P017,nagumo,https://www.nagumo.com.br/categoria/mercearia-salgada/temperos-e-caldos/sal/sal-de-cozinha-refinado-cisne-1kg-322492.html,achado,Sal Refinado Cisne 1kg.
+P018,nagumo,https://www.nagumo.com.br/categoria/mercearia-salgada/farinaceos/fuba-de-milho/fub%C3%A1-mimoso-yoki-500g-212922.html,achado,Fubá Mimoso Yoki 500g.
+P019,nagumo,https://www.nagumo.com.br/categoria/departamentos/basicos-e-matinais/matinais/aveia/aveia-em-flocos-regulares-econ%C3%B4mica-quaker-450g-227714.html,achado,Aveia em Flocos Regulares Quaker 450g.
+P020,nagumo,https://www.nagumo.com.br/categoria/departamentos/basicos-e-matinais/matinais/saborizadores-de-leite/nescau-lata-350g.alimento-achocolatado-em-p%C3%B3-instant%C3%A2neo-264317.html,achado,Achocolatado Nescau Lata 350g.
+P021,nagumo,https://www.nagumo.com.br/categoria/mercearia-doce/doce/biscoito/biscoito-cream-cracker-tradicional-vitarella-350g-248191.html,achado,Biscoito Cream Cracker Tradicional Vitarella 350g.
+P022,nagumo,https://www.nagumo.com.br/categoria/mercearia-doce/doce/biscoito/biscoito-recheado-de-chocolate-passatempo-130g-829724.html,achado,Biscoito Recheado de Chocolate Passatempo 130g.
+P023,nagumo,https://www.nagumo.com.br/categoria/departamentos/padaria/industrializada/paes-industrializados/p%C3%A3o-de-forma-pullman-480g-340892.html,achado,Pão de Forma Pullman 480g.
+P024,nagumo,https://www.nagumo.com.br/categoria/departamentos/frios-e-laticinios/passadores/margarina/margarina-cremosa-com-sal-qualy-500g-121385.html,achado,Margarina Cremosa com Sal Qualy 500g.
+P025,nagumo,https://www.nagumo.com.br/categoria/mercearia-salgada/molho-lanche/maionese/maionese-hellmann%27s-tradicional-500g-280761.html,achado,Maionese Tradicional Hellmann's 500g.
+P026,nagumo,https://www.nagumo.com.br/categoria/mercearia-salgada/molho-lanche/catchup/ketchup-tradicional-heinz-397g-776325.html,achado,Ketchup Tradicional Heinz 397g.
+P027,nagumo,https://www.nagumo.com.br/categoria/mercearia-salgada/peixe-enlatado/sardinha-em-lata/sardinha-com-%C3%B3leo-gomes-da-costa-75g-881357.html,tamanho_diferente,Sardinha com Óleo Gomes da Costa 75g. Só a lata de 75g. Fica fora.
+P028,nagumo,https://www.nagumo.com.br/categoria/mercearia-salgada/peixe-enlatado/atum-em-lata/atum-ralado-em-%C3%B3leo-gomes-da-costa-170g-45278.html,achado,Atum Ralado em Óleo Gomes da Costa 170g.
+P029,nagumo,https://www.nagumo.com.br/categoria/mercearia-salgada/vegetais-e-conservas/milho-verde/milho-verde-quero-170g.-220527.html,achado,Milho Verde Quero 170g.
+P030,nagumo,https://www.nagumo.com.br/categoria/mercearia-salgada/vegetais-e-conservas/ervilha/ervilha-quero-lata-170g-220528.html,achado,Ervilha Quero Lata 170g.
+P031,nagumo,https://www.nagumo.com.br/categoria/mercearia-salgada/temperos-e-caldos/vinagre/vinagre-%C3%A1lcool-castelo-750ml-874540.html,achado,Vinagre de Álcool Castelo 750ml.
+P032,nagumo,https://www.nagumo.com.br/categoria/mercearia-salgada/temperos-e-caldos/caldos/saz%C3%B3n-de-frango-60g-226868.html,achado,Sazón de Frango 60g.
+P033,nagumo,https://www.nagumo.com.br/categoria/mercearia-salgada/temperos-e-caldos/caldos/caldo-de-galinha-knorr-57g-112246.html,achado,Caldo de Galinha Knorr 57g.
+P034,nagumo,https://www.nagumo.com.br/categoria/mercearia-salgada/confeitaria-e-preparo/leite-condensado/leite-condensado-mo%C3%A7a-nestle-395g-lata-175005.html,achado,Leite Condensado Moça Lata 395g.
+P035,nagumo,https://www.nagumo.com.br/categoria/mercearia-salgada/confeitaria-e-preparo/creme-leite/creme-de-leite-nestl%C3%A9-caixa-200g-264267.html,achado,Creme de Leite Nestlé Caixa 200g.
+P036,nagumo,https://www.nagumo.com.br/categoria/mercearia-salgada/confeitaria-e-preparo/mistura-bolo/mistura-para-bolo-de-chocolate-dona-benta-450g-828949.html,variante,"Mistura para Bolo de Chocolate Dona Benta 450g, como nas outras redes."
+P037,nagumo,https://www.nagumo.com.br/categoria/departamentos/bebidas/nao-alcoolicas/agua-mineral/agua-sem-gas-crystal-1.5l-390972.html,achado,"Água sem Gás Crystal 1,5L."
+P038,nagumo,https://www.nagumo.com.br/categoria/departamentos/bebidas/nao-alcoolicas/refrigerante/refrigerante-original-coca-cola-2l-181471.html,achado,Refrigerante Coca-Cola Original 2L.
+P039,nagumo,https://www.nagumo.com.br/categoria/departamentos/basicos-e-matinais/commodities/leite-uht/leite-uht-integral-italac-1l-497442.html,achado,Leite UHT Integral Italac 1L.
+P040,nagumo,https://www.nagumo.com.br/categoria/departamentos/basicos-e-matinais/commodities/leite-uht/leite-integral-uht-piracanjuba-1l-798839.html,achado,Leite Integral UHT Piracanjuba 1L.
+P041,nagumo,https://www.nagumo.com.br/categoria/departamentos/basicos-e-matinais/commodities/leite-uht/leite-desnatado-piracanjuba-1l-810005.html,achado,Leite Desnatado Piracanjuba 1L.
+P042,nagumo,https://www.nagumo.com.br/categoria/departamentos/basicos-e-matinais/commodities/leite-po/leite-em-p%C3%B3-integral-instant%C3%A2neo-ninho-380g-262006.html,achado,Leite em Pó Integral Instantâneo Ninho 380g.
+P043,nagumo,https://www.nagumo.com.br/categoria/departamentos/frios-e-laticinios/passadores/manteiga/manteiga-com-sal-avia%C3%A7%C3%A3o-pote-200g-180986.html,achado,Manteiga com Sal Aviação Pote 200g.
+P044,nagumo,https://www.nagumo.com.br/categoria/departamentos/frios-e-laticinios/laticinios/queijos/queijo-mussarela-fatiado-tirolez-150g-864121.html,achado,Queijo Mussarela Fatiado Tirolez 150g.
+P045,nagumo,https://www.nagumo.com.br/categoria/departamentos/frios-e-laticinios/laticinios/queijos/queijo-prato-fatiado-tirolez-150g-864183.html,achado,Queijo Prato Fatiado Tirolez 150g.
+P046,nagumo,https://www.nagumo.com.br/categoria/departamentos/frios-e-laticinios/passadores/requeijao/requeij%C3%A3o-cremoso-tradicional-vigor-copo-200g-150057.html,achado,Requeijão Cremoso Tradicional Vigor Copo 200g.
+P047,nagumo,https://www.nagumo.com.br/categoria/departamentos/frios-e-laticinios/laticinios/iogurte/iogurte-integral-natural-nestl%C3%A9-copo-170g-830942.html,achado,Iogurte Integral Natural Nestlé 170g.
+P048,nagumo,https://www.nagumo.com.br/categoria/departamentos/frios-e-laticinios/laticinios/iogurte/iogurte-de-morango-pense-zero-batavo-garrafa-1%2C15kg-241415.html,variante,"Iogurte de Morango Pense Zero Batavo Garrafa 1,15kg. Linha Pense Zero."
+P049,nagumo,https://www.nagumo.com.br/categoria/departamentos/frios-e-laticinios/refrigerados/embutidos-e-defumados/presunto-cozido-fatiado-solt%C3%ADssimo-sadia-200g-487542.html,achado,Presunto Cozido Fatiado Soltíssimo Sadia 200g.
+P050,nagumo,https://www.nagumo.com.br/categoria/departamentos/frios-e-laticinios/laticinios/queijos/queijo-de-minas-frescal-tirolez-57653.html,achado,"Queijo Minas Frescal Tirolez, peça de cerca de 500g vendida por peso. A página dá o preço do kg; o site converte para 500g."
+P051,nagumo,https://www.nagumo.com.br/categoria/departamentos/hortifruti/granjeiros/ovos/ovos-branco-grande-com-20-274990.html,achado,Ovos Brancos Grandes 20 unidades.
+P052,nagumo,https://www.nagumo.com.br/categoria/departamentos/hortifruti/granjeiros/ovos/ovos-vermelho-grande-20un-274903.html,achado,Ovos Vermelhos Grandes 20 unidades.
+P053,nagumo,https://www.nagumo.com.br/categoria/higiene-e-perfumaria/higiene/papel-higienico/papel-higi%C3%AAnico-neutro-folha-dupla-toque-seda-neve-12un-20m-251597.html,variante,Papel Higiênico Neve Folha Dupla Toque de Seda 12 rolos de 20m.
+P054,nagumo,https://www.nagumo.com.br/categoria/higiene-e-perfumaria/higiene/papel-higienico/papel-higi%C3%AAnico-neutro-folha-dupla-personal-vip-lv12pg11-30m-769709.html,variante,Papel Higiênico Personal Vip Folha Dupla 30m Leve 12 Pague 11.
+P055,nagumo,https://www.nagumo.com.br/categoria/higiene-e-perfumaria/corpo-e-banho/sabonete-barra/sabonete-em-barra-original-dove-90g-617321.html,achado,Sabonete em Barra Original Dove 90g.
+P056,nagumo,https://www.nagumo.com.br/categoria/higiene-e-perfumaria/corpo-e-banho/sabonete-barra/sabonete-em-barra-botanicals-lavanda-lux-85g-207277.html,variante,"Sabonete Lux Botanicals Lavanda 85g, como no Carrefour e no Pão de Açúcar."
+P057,nagumo,https://www.nagumo.com.br/categoria/higiene-e-perfumaria/higiene/higiene-bucal/creme-dental-colgate-total-12-advanced-fresh-90g-128278.html,variante,Creme Dental Colgate Total 12 Advanced Fresh 90g.
+P058,nagumo,https://www.nagumo.com.br/categoria/higiene-e-perfumaria/higiene/higiene-bucal/creme-dental-m%C3%A1xima-prote%C3%A7%C3%A3o-antic%C3%A1ries-colgate-90-g-189392.html,achado,Creme Dental Colgate Máxima Proteção Anticáries 90g.
+P059,nagumo,https://www.nagumo.com.br/categoria/higiene-e-perfumaria/higiene/higiene-bucal/escova-dental-classic-clean-macia-colgate-182300.html,variante,"Escova Dental Colgate Classic Clean Macia, como no Pão de Açúcar."
+P060,nagumo,https://www.nagumo.com.br/categoria/higiene-e-perfumaria/cuidado-cabelo/shampoo/shampoo-ceramidas-seda-325ml-549547.html,variante,"Shampoo Seda Ceramidas 325ml, como no Pão de Açúcar."
+P061,nagumo,https://www.nagumo.com.br/categoria/higiene-e-perfumaria/cuidado-cabelo/condicionador/tratamento-condicionador-seda-ceramidas-frasco-325ml-549790.html,variante,Condicionador Seda Ceramidas 325ml.
+P062,nagumo,https://www.nagumo.com.br/categoria/higiene-e-perfumaria/corpo-e-banho/desodorante/desodorante-aerosol-feminino-antibacterial-%2B-invisible-rexona-150ml-103720.html,variante,Desodorante Aerosol Rexona Antibacterial + Invisible 150ml.
+P063,nagumo,https://www.nagumo.com.br/categoria/higiene-e-perfumaria/higiene/higiene-bucal/fio-dental-essential-de-menta-oral-b-50m-489638.html,achado,Fio Dental Oral-B Essential Menta 50m.
+P064,nagumo,https://www.nagumo.com.br/categoria/higiene-e-perfumaria/higiene/absorvente-higienico/absorvente-super-prote%C3%A7%C3%A3o-suave-com-abas-always-8un-206995.html,variante,Absorvente Always Super Proteção Suave com Abas 8 unidades.
+P065,nagumo,https://www.nagumo.com.br/categoria/higiene-e-perfumaria/cuidado-infantil/fralda-infantil/fralda-descart%C3%A1vel-infantil-huggies-tripla-prote%C3%A7%C3%A3o-m-5%2C5-a-9%2C5kg-pacote-36-unidades-gr%C3%A1tis-2-fraldas-266569.html,variante,Fralda Huggies Tripla Proteção M 36 unidades.
+P066,nagumo,https://www.nagumo.com.br/categoria/departamentos/limpeza/cuidado-roupa/lava-roupa/lava-roupas-em-p%C3%B3-lavagem-perfeita-omo-1%2C4kg-276651.html,tamanho_diferente,"Omo Lavagem Perfeita em pó só em 800g e 1,4kg. Fica fora."
+P067,nagumo,https://www.nagumo.com.br/categoria/departamentos/limpeza/cuidado-roupa/lava-roupa/sab%C3%A3o-l%C3%ADquido-lavagem-perfeita-omo-3l-277693.html,achado,Sabão Líquido Omo Lavagem Perfeita 3L.
+P068,nagumo,https://www.nagumo.com.br/categoria/departamentos/limpeza/cuidado-roupa/amaciante-roupa/amaciante-concentrado-puro-cuidado-comfort-500ml-494786.html,variante,Amaciante Concentrado Comfort Puro Cuidado 500ml.
+P069,nagumo,https://www.nagumo.com.br/categoria/departamentos/limpeza/especialista-cozinha/lava-louca/detergente-yp%C3%AA-neutro-500ml-359467.html,achado,Detergente Ypê Neutro 500ml.
+P070,nagumo,https://www.nagumo.com.br/categoria/departamentos/limpeza/cuidado-casa/agua-sanitaria/%C3%A1gua-sanitaria-super-candida-2l-223680.html,achado,Água Sanitária Super Candida 2L.
+P071,nagumo,https://www.nagumo.com.br/categoria/departamentos/limpeza/cuidado-casa/desifetante/desinfetante-original-pinho-sol-leve-500ml-pague-450ml-466752.html,variante,Desinfetante Pinho Sol Original Leve 500ml Pague 450ml.
+P072,nagumo,https://www.nagumo.com.br/categoria/departamentos/limpeza/cuidado-casa/limpadores/limpador-multiuso-original-gold-veja-500ml-537186.html,achado,Limpador Multiuso Veja Gold Original 500ml.
+P073,nagumo,https://www.nagumo.com.br/categoria/departamentos/bazar/cozinha/esponja-sintetica/esponja-laranja-loucas-delicadas-scotch-brite-3-unidades-821315.html,variante,"Esponja Scotch-Brite Louças Delicadas 3 unidades, como na St Marche."
+P074,nagumo,,nao_achado,Não há saco de lixo Dover Roll; só Embalixo e Santa Ajuda.
+P075,nagumo,https://www.nagumo.com.br/categoria/departamentos/bazar/cozinha/descartavel-cozinha/toalha-de-papel-folha-dupla-cl%C3%A1ssica-19x20cm-snob-2un-256057.html,achado,Toalha de Papel Folha Dupla Clássica Snob 2 unidades.
+P076,nagumo,https://www.nagumo.com.br/categoria/departamentos/limpeza/cuidado-roupa/sabao-em-barra/sab%C3%A3o-barra-glicerinado-neutro-original-yp%C3%AA-800g-5-unidades-246466.html,achado,Sabão em Barra Glicerinado Neutro Ypê 5 unidades 800g.
+P077,nagumo,https://www.nagumo.com.br/alcool-coperalcool-liquido-tradicional-46-inpm-1lt-297448.html,achado,Álcool Líquido Coperalcool Tradicional 46º 1L.
+P078,nagumo,https://www.nagumo.com.br/categoria/departamentos/limpeza/cuidado-casa/inseticidas/inseticida-aerossol-a%C3%A7%C3%A3o-magn%C3%A9tica-base-%C3%A1gua-sbp-360ml-256981.html,variante,Inseticida Aerossol SBP Base Água 360ml.
+P079,nagumo,https://www.nagumo.com.br/categoria/departamentos/acougue/ave/ave-congelada/file-de-peito-de-frango-congelado-pacote-sadia-1kg-354196.html,variante,Filé de Peito de Frango Congelado Sadia 1kg. Comparar por kg.
+P080,nagumo,https://www.nagumo.com.br/categoria/departamentos/acougue/ave/ave-refrigerada/coxa-e-sobrecoxa-de-frango-resfriado-206478.html,variante,"Coxa e Sobrecoxa de Frango Resfriada, por kg."
+P081,nagumo,https://www.nagumo.com.br/categoria/departamentos/acougue/ave/ave-congelada/frango-inteiro-congelado-sadia-78863.html,variante,"Frango Inteiro Congelado Sadia, por kg."
+P082,nagumo,https://www.nagumo.com.br/categoria/departamentos/acougue/bovino/bovino-manipulado/carne-patinho-moido-206291.html,achado,"Carne Patinho Moído, por kg."
+P083,nagumo,https://www.nagumo.com.br/categoria/departamentos/acougue/bovino/bovino-vacuo/carne-ac%C3%A9m-sem-osso-v%C3%A1cuo-46480.html,variante,"Acém sem Osso a Vácuo, por kg."
+P084,nagumo,https://www.nagumo.com.br/categoria/departamentos/acougue/bovino/bovino-manipulado/carne-contra-file-bife-206490.html,variante,"Contrafilé em Bife, por kg."
+P085,nagumo,https://www.nagumo.com.br/categoria/departamentos/frios-e-laticinios/refrigerados/embutidos-e-defumados/lingui%C3%A7a-carne-su%C3%ADna-toscana-seara-600g-274471.html,variante,Linguiça Toscana Seara 600g. Comparar por kg.
+P086,nagumo,https://www.nagumo.com.br/categoria/departamentos/frios-e-laticinios/refrigerados/embutidos-e-defumados/salsicha-hot-dog-perdig%C3%A3o-500g-109093.html,achado,Salsicha Hot Dog Perdigão 500g.
+P087,nagumo,https://www.nagumo.com.br/categoria/departamentos/peixaria/peixes/peixe-congelado/fil%C3%A9-de-til%C3%A1pia-congelado-sem-pele-oceani-pacote-400g-272454.html,variante,Filé de Tilápia Congelado sem Pele Oceani 400g. Comparar por kg.
+P088,nagumo,https://www.nagumo.com.br/categoria/departamentos/hortifruti/frutas/fruta-tradicional/banana-prata-kg-2011.html,achado,"Banana Prata, por kg."
+P089,nagumo,https://www.nagumo.com.br/categoria/departamentos/hortifruti/frutas/fruta-citrica/ma%C3%A7a-gala-2141.html,achado,"Maçã Gala, por kg."
+P090,nagumo,https://www.nagumo.com.br/categoria/departamentos/hortifruti/frutas/fruta-citrica/laranja-pera-2097.html,achado,"Laranja Pera, por kg."
+P091,nagumo,https://www.nagumo.com.br/categoria/departamentos/hortifruti/frutas/fruta-citrica/lim%C3%A3o-thaiti-2127.html,achado,"Limão Tahiti, por kg."
+P092,nagumo,https://www.nagumo.com.br/categoria/departamentos/hortifruti/legumes/caules-e-frutos/tomate-salada-13758.html,achado,"Tomate Salada, por kg."
+P093,nagumo,https://www.nagumo.com.br/categoria/departamentos/hortifruti/legumes/bulbos/cebola-8853.html,achado,"Cebola, por kg."
+P094,nagumo,https://www.nagumo.com.br/categoria/departamentos/hortifruti/armazem/granel/alho-66396.html,achado,"Alho, por kg."
+P095,nagumo,https://www.nagumo.com.br/categoria/departamentos/hortifruti/legumes/tuberculos/batata-lavada-7511.html,achado,"Batata Lavada, por kg."
+P096,nagumo,https://www.nagumo.com.br/categoria/departamentos/hortifruti/legumes/tuberculos/legume-cenoura--13772.html,achado,"Cenoura, por kg."
+P097,nagumo,https://www.nagumo.com.br/categoria/departamentos/hortifruti/higienizados/folhas-e-flores/alface-crespa-j.watanabe-unidade-508520.html,variante,"Alface Crespa J.Watanabe, 1 unidade."
+P098,nagumo,https://www.nagumo.com.br/categoria/departamentos/hortifruti/frutas/fruta-tradicional/mam%C3%A3o-formosa-2172.html,achado,"Mamão Formosa, por kg."
+P099,nagumo,https://www.nagumo.com.br/categoria/departamentos/hortifruti/legumes/caules-e-frutos/ab%C3%B3bora-italiana-2639.html,achado,"Abobrinha italiana, por kg."
+P100,nagumo,https://www.nagumo.com.br/categoria/departamentos/hortifruti/legumes/caules-e-frutos/piment%C3%A3o-verde-2752.html,achado,"Pimentão Verde, por kg."

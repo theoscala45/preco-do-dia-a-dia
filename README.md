@@ -2,7 +2,7 @@
 
 Quanto custa a mesma compra em cada bairro de São Paulo, e quanto ela subiu contra o IPCA.
 
-Projeto em construção. **Os preços que o site mostra hoje são de exemplo (inventados).** O coletor de preços reais roda toda noite pelo GitHub Actions (02h17, com reserva às 05h17) e grava em `data/precos/`. Ele lê oito redes: Tenda, Atacadão, Carrefour, Pão de Açúcar, Sonda, Santa Luzia, St Marche e Hirota. O site passa para os preços reais quando houver dados suficientes.
+Projeto em construção. **Os preços que o site mostra hoje são de exemplo (inventados).** O coletor de preços reais roda toda noite pelo GitHub Actions (02h17, com reserva às 05h17) e grava em `data/precos/`. Ele lê nove redes: Tenda, Atacadão, Carrefour, Pão de Açúcar, Sonda, Santa Luzia, St Marche, Hirota e Nagumo. O site passa para os preços reais quando houver dados suficientes.
 
 ## O que tem aqui
 

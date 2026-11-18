@@ -20,7 +20,7 @@ Regras (ver data/LEIAME.md):
 Saida padrao: data/precos/AAAA-MM.csv (uma linha por produto, CEP e dia) e data/execucoes.csv (uma linha por rede, CEP e dia).
 As linhas de execucao sao gravadas a cada CEP, para nada se perder se o tempo acabar no meio.
 """
-import argparse, csv, datetime, gzip, html, json, os, random, re, time, urllib.parse, urllib.request, urllib.robotparser
+import argparse, csv, datetime, gzip, html, json, os, random, re, time, urllib.error, urllib.parse, urllib.request, urllib.robotparser
 from zoneinfo import ZoneInfo
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -351,6 +351,89 @@ class Hirota:
         return {"nome": nome, "tamanho": tamanho_do_nome(nome), "preco": f"{float(valor.replace('.', '').replace(',', '.')):.2f}", "unidade": "un", "disponivel": True}, cep_dado
 
 
+class Nagumo:
+    """Nagumo (nagumo.com.br). O preco muda por loja (conferido em 11/2026: cerca de 1 produto em 10 com preco
+    diferente entre lojas, mais nas frutas e carnes). Para cada CEP, o coletor abre "Trocar de Loja", digita o CEP
+    e o numero 100, escolhe "Retirar na loja" e fica com a primeira loja que o site oferece para o CEP. As lojas
+    ficam quase todas fora da capital ou na zona leste, entao a loja usada pode ficar longe do ponto (para a
+    Bela Vista, Osasco). O site nao tem robots.txt; os links foram achados pela busca do proprio site.
+    O coletor guarda o preco que a pagina mostra (numa promocao, o "Por:"); nos produtos vendidos por peso, o do
+    quilo ("R$ 65,98/kg"). A disponibilidade na loja vem dos dados padronizados da pagina (schema.org)."""
+    rede_id = "nagumo"
+    site = "https://www.nagumo.com.br"
+    hosts = ("nagumo.com.br",)
+    por_loja = True
+    loja = ""
+
+    def escolher_loja(self, pg, cep):
+        url = pg.url
+        pg.locator("text=Trocar de Loja >> visible=true").first.click(force=True)
+        janela = pg.locator("#new-switch-store-modal")
+        janela.locator("input[name=cep]").wait_for(state="visible", timeout=15000)
+        janela.locator("input[name=cep]").fill(re.sub(r"\D", "", cep))
+        janela.locator("input[name=number]").fill("100")
+        pg.wait_for_timeout(800)
+        janela.locator(".zipCodeBtn").click()
+        janela.get_by_text("Retirar na loja").first.wait_for(state="visible", timeout=20000)
+        janela.get_by_text("Retirar na loja").first.click(force=True)
+        primeira = janela.locator(".pickup__instore_city:visible").first
+        primeira.wait_for(state="visible", timeout=20000)
+        nome = primeira.inner_text().strip()
+        endereco = janela.locator(".pickup__instore_address:visible").first.inner_text().strip()
+        primeira.click(force=True)
+        # a pagina recarrega com a loja nova; espera a barra do topo mostrar o nome dela
+        pg.wait_for_function("t => document.body.innerText.includes('Loja ' + t)", arg=nome, timeout=30000)
+        partes = [p.strip() for p in endereco.split(",")]
+        self.loja = f"{nome} ({', '.join(partes[:2]).title()}, {partes[-2].title() if len(partes) > 2 else ''})".replace(", )", ")")
+        for _ in range(3):
+            try:
+                pg.goto(url, wait_until="domcontentloaded", timeout=60000); break
+            except Exception:
+                pg.wait_for_timeout(4000)
+
+    # o preco que a pagina mostra para o produto principal (fora das vitrines de "produtos parecidos")
+    JS = """() => { const vis = s => [...document.querySelectorAll(s)].filter(e => e.offsetParent && !e.closest('.productCard')).map(e => e.innerText.trim());
+                    return {preco: vis('.productPrice__price')[0] || '', kg: vis('.price-full-kg')[0] || ''}; }"""
+
+    def ler_produto(self, pg, cep, cep_dado):
+        pg.locator("script[type='application/ld+json']").first.wait_for(state="attached", timeout=25000)
+        if not cep_dado:
+            pg.locator("text=Trocar de Loja >> visible=true").first.wait_for(state="visible", timeout=25000)
+            self.escolher_loja(pg, cep)
+            cep_dado = True
+            pg.locator("script[type='application/ld+json']").first.wait_for(state="attached", timeout=25000)
+        loja = re.search(r"Loja (0\d\d-[^\n]+)", pg.locator("body").inner_text())
+        if loja and self.loja and not self.loja.startswith(loja.group(1).strip()):
+            raise RuntimeError(f"a pagina abriu com outra loja ({loja.group(1).strip()})")
+        prod = None
+        for bloco in pg.locator("script[type='application/ld+json']").all_text_contents():
+            try: d = json.loads(bloco)
+            except ValueError: continue
+            for x in (d if isinstance(d, list) else [d]):
+                if isinstance(x, dict) and x.get("@type") == "Product": prod = x
+        if not prod:
+            raise RuntimeError("pagina sem dados de produto (pode nao existir mais)")
+        nome = html.unescape(prod.get("name", "")).strip()
+        oferta = prod.get("offers") or {}
+        if isinstance(oferta, list): oferta = oferta[0] if oferta else {}
+        if "InStock" not in str(oferta.get("availability", "")):
+            return {"nome": nome, "tamanho": tamanho_do_nome(nome), "preco": None, "unidade": "", "disponivel": False}, cep_dado
+        # os dados padronizados trazem o preco cheio; numa promocao ("De R$ 32,90 Por: R$ 25,90") vale o que a
+        # pagina mostra. Nos produtos vendidos por peso, vale o preco do quilo ("R$ 65,98/kg").
+        try:
+            pg.wait_for_function("() => [...document.querySelectorAll('.productPrice__price')].some(e => e.offsetParent && !e.closest('.productCard') && /R\\$/.test(e.innerText))", timeout=20000)
+        except Exception:
+            raise RuntimeError("preco nao apareceu")
+        pg.wait_for_timeout(800)   # o preco do quilo aparece logo depois do preco da unidade
+        v = pg.evaluate(self.JS)
+        kg = re.search(r"R\$\s*([\d.]+(?:,\d{1,2})?)\s*/\s*kg", v["kg"], re.I)
+        m = kg or re.search(r"R\$\s*([\d.]+,\d{2})", v["preco"])
+        if not m:
+            raise RuntimeError("preco nao encontrado na pagina")
+        preco = f"{float(m.group(1).replace('.', '').replace(',', '.')):.2f}"
+        return {"nome": nome, "tamanho": tamanho_do_nome(nome), "preco": preco, "unidade": "kg" if kg else "un", "disponivel": True}, cep_dado
+
+
 def ler_schema(url, marca_de_produto):
     """Le uma pagina de produto sem navegador e pega nome, preco e estoque nos dados padronizados (schema.org)."""
     req = urllib.request.Request(urllib.parse.quote(url, safe=":/%"), headers={"User-Agent": "Mozilla/5.0 (preco-do-dia-a-dia)"})
@@ -494,14 +577,18 @@ def coletar_unico(rede, links, hoje, limite, arq_precos, arq_exec, pw=None):
     print(f"[{rede.rede_id}] {resultado}: {len(linhas)}/{len(paginas)} lidos, {sem_preco} sem estoque, {time.time() - inicio:.0f} s" + (f" | {nota}" if nota else ""), flush=True)
 
 
-REDES = [Tenda(), Atacadao(), Carrefour(), PaoDeAcucar(), Sonda(), SantaLuzia(), StMarche(), Hirota()]
+REDES = [Tenda(), Atacadao(), Carrefour(), PaoDeAcucar(), Sonda(), SantaLuzia(), StMarche(), Hirota(), Nagumo()]
 
 
 def robots(rede):
     rp = urllib.robotparser.RobotFileParser()
     req = urllib.request.Request(rede.site + "/robots.txt", headers={"User-Agent": "coletor-de-precos"})
-    with urllib.request.urlopen(req, timeout=40) as r:
-        rp.parse(r.read().decode("utf-8", "replace").splitlines())
+    try:
+        with urllib.request.urlopen(req, timeout=40) as r:
+            rp.parse(r.read().decode("utf-8", "replace").splitlines())
+    except urllib.error.HTTPError as e:
+        if e.code != 404: raise
+        rp.parse([])   # o site nao tem robots.txt (o Nagumo, por exemplo): pela regra do arquivo, nada e proibido
     return rp
 
 
