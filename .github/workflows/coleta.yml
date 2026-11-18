@@ -8,6 +8,9 @@ name: Coleta noturna de preços
 on:
   schedule:
     - cron: "17 5 * * *"   # 02h17 em São Paulo
+    # Reserva: o GitHub às vezes atrasa ou pula um horário agendado. Se a coleta das 02h17 rodou, esta só confere:
+    # o coletor pula cada rede e cada CEP que já terminou bem no dia.
+    - cron: "17 8 * * *"   # 05h17 em São Paulo
   workflow_dispatch:
     inputs:
       zonas:
@@ -21,6 +24,11 @@ permissions:
   contents: write
   issues: write
 
+concurrency:
+  group: coleta
+  cancel-in-progress: false
+
+# uma coleta por vez: se a reserva começar com a primeira ainda rodando, ela espera
 concurrency:
   group: coleta
   cancel-in-progress: false
