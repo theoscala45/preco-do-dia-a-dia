@@ -1,0 +1,38 @@
+name: Revisão semanal dos links
+
+# Toda segunda de manhã, lê o que a coleta gravou na última semana (sem abrir nenhum site) e abre a issue
+# "Links para revisar" quando uma página falha vários dias, mostra outro produto, fica sem estoque a semana
+# toda ou nunca é lida. Quando não sobra nada para revisar, a issue é fechada.
+
+on:
+  schedule:
+    - cron: "43 11 * * 1"   # segunda, 08h43 em São Paulo
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  revisar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Conferir os links
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set +e
+          python coletor/revisar_links.py; achou=$?
+          cat coletor/revisar.md >> "$GITHUB_STEP_SUMMARY"
+          aberta=$(gh issue list --state open --search "Links para revisar in:title" --json number --jq '.[0].number')
+          if [ "$achou" != "0" ]; then
+            if [ -n "$aberta" ]; then gh issue comment "$aberta" --body-file coletor/revisar.md
+            else gh issue create --title "Links para revisar" --body-file coletor/revisar.md; fi
+          elif [ -n "$aberta" ]; then
+            gh issue close "$aberta" --comment "Nenhum link precisa de revisão nesta semana. Fechando."
+          fi
+          exit 0

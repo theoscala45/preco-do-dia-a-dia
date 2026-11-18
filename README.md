@@ -13,8 +13,8 @@ Projeto em construção. **Os preços que o site mostra hoje são de exemplo (in
 | `DESIGN.md` | Direção visual: cores, tipografia, regras de movimento. |
 | `data/` | As tabelas do projeto (ver `data/LEIAME.md`). `data/exemplo/` tem os preços inventados. |
 | `tools/` | Scripts que geram as tabelas, o mapa e o arquivo de dados do site. |
-| `coletor/` | O coletor de preços (`coletar.py`), a junção das partes da noite (`juntar.py`) e o aviso de falha (`alerta.py`). |
-| `.github/workflows/` | A coleta noturna e o agente de casamento de produtos. |
+| `coletor/` | O coletor de preços (`coletar.py`), a junção das partes da noite (`juntar.py`), o aviso de falha (`alerta.py`) e a revisão semanal dos links (`revisar_links.py`, que abre a issue "Links para revisar" às segundas). |
+| `.github/workflows/` | A coleta noturna, a revisão semanal dos links e o agente de casamento de produtos. |
 | `agente/` | Agente que acha a página de cada produto no site de uma rede nova (ainda sem chave da API). |
 | `docs/emails-para-as-redes.md` | Rascunhos dos e-mails às redes. |
 | `docs/briefing-site.md` | O que o site precisa ser. |
