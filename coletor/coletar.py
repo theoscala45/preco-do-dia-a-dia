@@ -343,6 +343,7 @@ class PaoDeAcucar:
     site = "https://www.paodeacucar.com"
     preco_unico = True
     navegador = True
+    sem_filtro = True   # ver coletar_unico: o site recusa o navegador com pedidos interceptados
     hosts = ("paodeacucar.com", "gpa.digital")
     loja = ""
     pg = None
@@ -359,7 +360,15 @@ class PaoDeAcucar:
             pg.wait_for_function("() => /R\\$\\s*[\\d.]+,\\d{2}|indispon|avise-me/i.test(document.querySelector('h1').parentElement.parentElement.parentElement.innerText)", timeout=15000)
         except Exception:
             pass
-        texto = pg.evaluate("""() => { let e = document.querySelector('h1'); for (let i = 0; i < 6 && e.parentElement && !/R\\$|indispon|avise-me/i.test(e.innerText); i++) e = e.parentElement; return e.innerText; }""")
+        js = """() => { let e = document.querySelector('h1'); for (let i = 0; i < 6 && e.parentElement && !/R\\$|indispon|avise-me/i.test(e.innerText); i++) e = e.parentElement; return e.innerText; }"""
+        # o bloco do preco pode mostrar um valor de passagem enquanto a pagina termina de montar:
+        # le de novo ate duas leituras seguidas darem o mesmo texto
+        texto = pg.evaluate(js)
+        for _ in range(4):
+            pg.wait_for_timeout(1200)
+            de_novo = pg.evaluate(js)
+            if de_novo == texto: break
+            texto = de_novo
         # o bloco do preco vai do titulo ao botao Comprar; o cupom e o frete ficam depois
         variavel = bool(re.search(r"peso vari[aá]vel", texto, re.I))
         texto = re.split(r"\bComprar\b|Calcular o frete", texto)[0] + ("\npeso variavel" if variavel else "")
@@ -401,10 +410,15 @@ def coletar_unico(rede, links, hoje, limite, arq_precos, arq_exec, pw=None):
         opcoes = {}
         if os.environ.get("COLETOR_NAVEGADOR"): opcoes["executable_path"] = os.environ["COLETOR_NAVEGADOR"]
         if os.environ.get("COLETOR_PROXY"): opcoes["proxy"] = {"server": os.environ["COLETOR_PROXY"]}
+        if getattr(rede, "sem_filtro", False):
+            # a verificacao de seguranca do site recusa o navegador quando o coletor intercepta os pedidos
+            # (o filtro de imagens). Aqui as imagens sao desligadas no proprio navegador, sem interceptar nada.
+            opcoes["args"] = ["--blink-settings=imagesEnabled=false"]
         navegador = pw.chromium.launch(**opcoes)
         rede.pg = navegador.new_context(locale="pt-BR", viewport={"width": 1280, "height": 900}).new_page()
         hosts = rede.hosts
-        rede.pg.route("**/*", lambda rota: rota.abort() if rota.request.resource_type in ("image", "media", "font") or not any(h in rota.request.url.split("/")[2] for h in hosts) else rota.continue_())
+        if not getattr(rede, "sem_filtro", False):
+            rede.pg.route("**/*", lambda rota: rota.abort() if rota.request.resource_type in ("image", "media", "font") or not any(h in rota.request.url.split("/")[2] for h in hosts) else rota.continue_())
     try:
         for link in paginas:
             for tentativa in (1, 2):

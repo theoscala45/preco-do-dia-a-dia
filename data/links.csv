@@ -16,7 +16,7 @@ P014,tenda,,nao_achado,Barilla não apareceu. Segunda busca no sitemap em 17/11/
 P015,tenda,,nao_achado,"Não há Pomarola tradicional de 300g; só passata, refogado e outros sabores."
 P016,tenda,https://www.tendaatacado.com.br/produto/ext-tom-elefante-pt-300g,variante,Achado na segunda busca: Extrato de tomate Elefante pote 300g. Pote em vez de lata.
 P017,tenda,https://www.tendaatacado.com.br/produto/sal-refinado-cisne-1kg-304,achado,
-P018,tenda,https://www.tendaatacado.com.br/produto/fuba-de-milho-mimoso-yoki-pacote-1kg,achado,
+P018,tenda,https://www.tendaatacado.com.br/produto/fuba-mimoso-yoki-pacote-500g,achado,Fubá Mimoso Yoki Pacote 500g.
 P019,tenda,https://www.tendaatacado.com.br/produto/aveia-em-flocos-finos-quaker-450g,variante,"Flocos finos, 450 g. A página não diz se é lata. Mesma marca e tamanho. Entra como variante."
 P020,tenda,https://www.tendaatacado.com.br/produto/achocolatado-em-po-nescau-lata-350g,achado,Existe também a lata leve 350 g pague 330 g.
 P021,tenda,https://www.tendaatacado.com.br/produto/biscoito-cream-cracker-amanteigado-tradicional-vitarella-350g,variante,"Versão amanteigada, 350 g. Entra como variante: mesma marca e tamanho."
@@ -68,14 +68,14 @@ P066,tenda,,nao_achado,"Omo em pó 1,6 kg não apareceu. Segunda busca no sitema
 P067,tenda,https://www.tendaatacado.com.br/produto/detergente-liquido-omo-puro-cuidado-3l,achado,
 P068,tenda,https://www.tendaatacado.com.br/produto/amaciante-concentrado-comfort-frescor-intenso-500ml,variante,"A página chama de Comfort Cuidado Essencial, 500 ml. O nome difere da URL. Entra como variante: mesma marca e tamanho."
 P069,tenda,https://www.tendaatacado.com.br/produto/detergente-ype-neutro-500ml,achado,
-P070,tenda,,nao_achado,Qboa não apareceu. Segunda busca no sitemap em 17/11/2026: não achado.
+P070,tenda,,nao_achado,Não há Super Candida; só Ypê e Triex.
 P071,tenda,https://www.tendaatacado.com.br/produto/desinfetante-pinho-sol-perfumado-lavanda-promo-leve-500ml-pague-450ml,variante,Promoção leve 500 ml pague 450 ml. O frasco tem 500 ml. Entra como variante: mesma marca e tamanho.
 P072,tenda,https://www.tendaatacado.com.br/produto/limpador-multiuso-veja-perfumado-jojo-marcante-e-envolvente-500ml,variante,"Veja Perfumado Jojo, 500 ml. Existe também o Veja Gold lavanda. Entra como variante: mesma marca e tamanho."
 P073,tenda,,bloqueado_robots,"A página está no sitemap (esponja-multiuso-scotch-brite-4un-3, pacote com 4), mas o robots.txt bloqueia a leitura. Não ler."
 P074,tenda,,nao_achado,Dover Roll não apareceu. Segunda busca no sitemap em 17/11/2026: não achado.
 P075,tenda,,nao_achado,Snob não apareceu. Segunda busca no sitemap em 17/11/2026: não achado.
 P076,tenda,,nao_achado,Só apareceu barra Ypê de 800 g. Segunda busca no sitemap em 17/11/2026: não achado.
-P077,tenda,,nao_achado,Álcool líquido 70% não apareceu. Segunda busca no sitemap em 17/11/2026: não achado.
+P077,tenda,https://www.tendaatacado.com.br/produto/alcool-coperalcool-tradicional-46-1l-4176,achado,Álcool Coperalcool Tradicional 46º 1L.
 P078,tenda,https://www.tendaatacado.com.br/produto/inseticida-aerossol-ultra-frasco-sbp-360ml,achado,SBP Aerossol Ultra 360ml.
 P079,tenda,https://www.tendaatacado.com.br/produto/file-de-peito-de-frabgo-congelado-sadia-zip-pct1kg-3842,variante,"Filé de peito congelado Sadia, 1 kg. Comparar por kg. Fora do índice."
 P080,tenda,https://www.tendaatacado.com.br/produto/sobrecoxa-seara-iqf-1kg,variante,"Sobrecoxa Seara congelada (IQF), 1 kg. Comparar por kg. Fora do índice."
@@ -88,7 +88,7 @@ P086,tenda,https://www.tendaatacado.com.br/produto/salsicha-hot-dog-defumada-per
 P087,tenda,https://www.tendaatacado.com.br/produto/file-de-tilapia-congelado-600g-peixe-cancaon,achado,"Peixe Canção congelado, 600 g. Comparar por kg."
 P088,tenda,,nao_achado,Banana prata não apareceu. Segunda busca no sitemap em 17/11/2026: não achado.
 P089,tenda,https://www.tendaatacado.com.br/produto/maca-gala-1kg-15833,achado,
-P090,tenda,https://www.tendaatacado.com.br/produto/laranja-pera-a-granel-kg,achado,
+P090,tenda,https://www.tendaatacado.com.br/produto/laranja-pera-select-3kg,variante,"Laranja Pera Select, saco de 3kg. A página ""a granel kg"" vende por unidade, sem peso, e não dá para comparar por kg."
 P091,tenda,https://www.tendaatacado.com.br/produto/limao-tahiti-500gr-15812,achado,Saco de 500 g. Comparar por kg.
 P092,tenda,https://www.tendaatacado.com.br/produto/tomate-salada-1kg-15830,achado,
 P093,tenda,https://www.tendaatacado.com.br/produto/cebola-roxa-select-1kg,variante,"Só a cebola roxa Select, 1 kg. Cebola roxa, em geral mais cara que a comum. Fora do índice."
@@ -96,7 +96,7 @@ P094,tenda,https://www.tendaatacado.com.br/produto/alho-granel-100gr-15813,achad
 P095,tenda,https://www.tendaatacado.com.br/produto/batata-lavada-extra-bandeja-1kg-15829,achado,
 P096,tenda,https://www.tendaatacado.com.br/produto/cenoura-1kg-15831,achado,
 P097,tenda,https://www.tendaatacado.com.br/produto/alface-crespa-unidade-911,achado,
-P098,tenda,https://www.tendaatacado.com.br/produto/mamao-formosa-kg,achado,
+P098,tenda,https://www.tendaatacado.com.br/produto/mamao-formosa-kg,variante,"Mamão Formosa vendido por unidade, sem peso: o preço é lido, mas fica fora da comparação por kg. Não há mamão formosa por peso."
 P099,tenda,https://www.tendaatacado.com.br/produto/abobrinha-italiana-kg,tamanho_diferente,"Vendida por unidade, não por kg. Vendida por unidade, e a cesta compara por kg. Fica fora."
 P100,tenda,https://www.tendaatacado.com.br/produto/pimentao-verde-440g-23323,achado,Saco de 440 g. Comparar por kg.
 P001,atacadao,https://www.atacadao.com.br/arroz-branco-camil-tipo-1-12658/p,achado,Arroz Branco Camil Tipo 1 5kg.
@@ -116,7 +116,7 @@ P014,atacadao,https://www.atacadao.com.br/macarrao-com-ovos-barilla-parafuso-743
 P015,atacadao,https://www.atacadao.com.br/molho-de-tomate-pomarola-tradicional-78087/p,achado,Molho de Tomate Pomarola Tradicional 300g.
 P016,atacadao,https://www.atacadao.com.br/extrato-de-tomate-elefante-pote-com-300g-83714/p,achado,Extrato de Tomate Elefante 300g.
 P017,atacadao,https://www.atacadao.com.br/sal-cisne-refinado-extra-1675/p,achado,Sal Cisne Refinado Extra 1kg.
-P018,atacadao,https://www.atacadao.com.br/fuba-mimoso-yoki-34666/p,tamanho_diferente,Só Fubá Mimoso Yoki de 4 e 5 kg. Fica fora.
+P018,atacadao,https://www.atacadao.com.br/fuba-yoki-6090/p,achado,Fubá Yoki 500g.
 P019,atacadao,https://www.atacadao.com.br/aveia-quaker-flocos-67860/p,achado,Aveia Quaker Flocos 450g.
 P020,atacadao,https://www.atacadao.com.br/achocolatado-em-po-nescau-84137/p,tamanho_diferente,"Nescau de 370g, não 350g. Fica fora."
 P021,atacadao,https://www.atacadao.com.br/biscoito-vitarella-cream-cracker-tradicional-17913/p,tamanho_diferente,Vitarella Cream Cracker Tradicional leve 400g pague 350g: o pacote tem 400g. Fica fora.
@@ -168,14 +168,14 @@ P066,atacadao,https://www.atacadao.com.br/lava-roupas-em-po-omo-lavagem-perfeita
 P067,atacadao,https://www.atacadao.com.br/lava-roupa-liquido-omo-poder-acelerador-frasco-com-3l-44692/p,achado,Omo líquido Poder Acelerador 3L.
 P068,atacadao,https://www.atacadao.com.br/amaciante-para-roupas-concentrado-comfort-56514/p,achado,Amaciante Concentrado Comfort 500ml.
 P069,atacadao,https://www.atacadao.com.br/detergente-liquido-ype-neutro-11757/p,achado,Detergente Ypê Neutro 500ml.
-P070,atacadao,https://www.atacadao.com.br/agua-sanitaria-qboa-21369/p,achado,Água Sanitária Qboa 2L. Há outra página igual (89724).
+P070,atacadao,https://www.atacadao.com.br/agua-sanitaria-super-candida-89723/p,achado,Água Sanitária Super Candida 2L.
 P071,atacadao,https://www.atacadao.com.br/desinfetante-pinho-sol-original-1291/p,achado,Desinfetante Pinho Sol Original 500ml.
 P072,atacadao,https://www.atacadao.com.br/limpador-veja-multiuso-antibacteriano-71134/p,variante,Limpador Veja Multiuso Antibacteriano 500ml.
 P073,atacadao,https://www.atacadao.com.br/esponja-scotch-brite-ref--0066-pacote-com-3-unidades-14702/p,achado,"Esponja Scotch-Brite Ref. 0066, 3 un."
 P074,atacadao,https://www.atacadao.com.br/saco-de-lixo-dover-roll-azul-50l-6230/p,achado,"Saco de Lixo Dover Roll Azul 50L, 20 un."
 P075,atacadao,https://www.atacadao.com.br/toalha-de-papel-snob-60-folhas-24318/p,achado,Toalha de Papel Snob 2 rolos.
 P076,atacadao,https://www.atacadao.com.br/sabao-em-barra-ype-vermelho-pacote-com-5x180g-75081/p,variante,Sabão em Barra Ypê Vermelho 5x180g. A cesta não fixa o tipo.
-P077,atacadao,https://www.atacadao.com.br/alcool-desinfetante-montenegro-70%C2%B0inpm-frasco-com-1l-76610/p,achado,Álcool Desinfetante Montenegro 70° INPM 1L.
+P077,atacadao,https://www.atacadao.com.br/alcool-coperalcool-46º-inpm-42170/p,achado,Álcool Coperalcool 46º INPM 1L.
 P078,atacadao,https://www.atacadao.com.br/inseticida-aerossol-sbp-multi-inseticida-ultra-frasco-com-360ml-80694/p,achado,Inseticida Aerossol SBP Multi Inseticida Ultra 360ml.
 P079,atacadao,https://www.atacadao.com.br/file-de-peito-de-frango-sadia-congelado-44343/p,variante,Filé de Peito de Frango Sadia Congelado 1kg. Mesmo produto do Tenda. Comparar por kg.
 P080,atacadao,https://www.atacadao.com.br/coxa-e-sobrecoxa-de-frango-aurora-congelada-9737/p,variante,Coxa e Sobrecoxa Aurora Congelada 1kg. Comparar por kg.
@@ -268,18 +268,18 @@ P066,carrefour,https://mercado.carrefour.com.br/sabao-em-po-omo-lavagem-perfeita
 P067,carrefour,https://mercado.carrefour.com.br/lava-roupas-liquido-omo-lavagem-perfeita-galao-3l-4393260/p,variante,Lava-Roupas Líquido Omo Lavagem Perfeita Galão 3L. Lavagem Perfeita 3L.
 P068,carrefour,https://mercado.carrefour.com.br/amaciante-concentrado-comfort-frescor-intenso-500-ml-8334994/p,variante,Amaciante Concentrado Comfort Frescor Intenso 500 ml. Frescor Intenso 500ml.
 P069,carrefour,https://mercado.carrefour.com.br/detergente-ype-clear-500ml-283819/p,variante,Detergente Ypê Clear 500ml. Ypê Clear 500ml; o neutro só em pacote com 6.
-P070,carrefour,https://mercado.carrefour.com.br/agua-sanitaria-qboa-galao-5l-7163673/p,tamanho_diferente,Água Sanitária Qboa Galão 5l. Só galão de 5L. Fica fora.
+P070,carrefour,https://mercado.carrefour.com.br/agua-sanitaria-super-candida-2l-1002651/p,achado,Água Sanitária Super Candida 2L.
 P071,carrefour,https://mercado.carrefour.com.br/desinfetante-pinho-sol-pinho-500ml-4761766/p,variante,Desinfetante Pinho Sol Original Refil Leve 500ml Pague 450ml. Leve 500ml pague 450ml.
 P072,carrefour,https://mercado.carrefour.com.br/limpador-multiuso-veja-gold-original-500ml-com-10-de-desconto-9662715/p,achado,Limpador Multiuso Veja O Original Clássico 500ml Oferta.
 P073,carrefour,https://mercado.carrefour.com.br/esponja-limpeza-extrema-scotch-brite-antibac-leve-4-pague-3-unidades-6649106/p,tamanho_diferente,Esponja Limpeza Extrema Scotch Brite Antibac Leve 4 Pague 3 Unidades. Só Extrema leve 4 pague 3. Fica fora.
 P074,carrefour,https://mercado.carrefour.com.br/saco-de-lixo-dover-roll-super-forte-azul-com-20-unidades-de-50-litros-8625697/p,achado,"Saco de Lixo Dover Roll Super Forte Azul com 20 Unidades de 50 Litros. Azul, 20 sacos de 50L."
 P075,carrefour,,nao_achado,Snob não está no sitemap.
 P076,carrefour,https://mercado.carrefour.com.br/sabao-em-barra-ype-neutro-800g-6571026/p,tamanho_diferente,Sabão em Barra Ypê Neutro 800g. Só barra de 800g. Fica fora.
-P077,carrefour,,nao_achado,Não há álcool líquido 70% de 1L.
+P077,carrefour,https://mercado.carrefour.com.br/alcool-coperalcool-bacfree-1-litro-5601215/p,achado,Álcool Coperalcool Bacfree 1L.
 P078,carrefour,https://mercado.carrefour.com.br/inseticida-multi-insetos-sbp-aerosol-ultra-360ml-5412013/p,achado,Inseticida Multi Insetos SBP Aerosol Ultra 360ml.
 P079,carrefour,https://mercado.carrefour.com.br/file-de-frango-peito-congelado-sem-osso-sadia-1kg-7087942/p,variante,"Filé de Frango Peito Congelado sem Osso Sadia 1Kg. Filé de peito congelado Sadia 1kg, como no Tenda e no Atacadão. Comparar por kg."
 P080,carrefour,https://mercado.carrefour.com.br/pedacos-de-sobrecoxa-de-frango-congelado-sadia-1kg-8619808/p,variante,Pedaços de Sobrecoxa de Frango Congelado Sadia 1Kg. Pedaços de sobrecoxa Sadia 1kg. Comparar por kg.
-P081,carrefour,,nao_achado,Frango inteiro Sadia não está no sitemap.
+P081,carrefour,https://mercado.carrefour.com.br/frango-inteiro-congelado-carrefour-classic-aprox-2-8-kg-344702/p,variante,"Frango Inteiro Congelado Carrefour Classic, cerca de 2,8kg (a cesta pede Sadia, que não está no sitemap). Comparar por kg, como no Tenda."
 P082,carrefour,https://mercado.carrefour.com.br/carne-moida-de-patinho-swift-1kg-3229190/p,achado,Carne Moída de Patinho Swift 1Kg. Moída de patinho Swift 1kg.
 P083,carrefour,https://mercado.carrefour.com.br/acem-bovina-carrefour-aproximadamente-900-g-21938/p,variante,"Acém Bovina Carrefour Aproximadamente 900 g. Acém Carrefour, peça de cerca de 900g vendida por peso. Comparar por kg."
 P084,carrefour,https://mercado.carrefour.com.br/bife-de-contra-file-swift-1kg-3229238/p,variante,Bife de Contra Filé Swift 1Kg. Bife de contrafilé Swift 1kg. Comparar por kg.
@@ -316,7 +316,7 @@ P014,pao-de-acucar,https://www.paodeacucar.com/produto/279929/macarrao-com-ovos-
 P015,pao-de-acucar,https://www.paodeacucar.com/produto/1404204/molho-de-tomate-pomarola-tradicional-300g,achado,Molho de Tomate Pomarola Tradicional 300g.
 P016,pao-de-acucar,https://www.paodeacucar.com/produto/1571148/extrato-de-tomate-elefante-pote-300g,variante,"Extrato de Tomate Elefante Pote 300g. Pote, como no Tenda e no Carrefour."
 P017,pao-de-acucar,https://www.paodeacucar.com/produto/11672/sal-refinado-cisne-tradicional-pacote-1kg,achado,Sal Refinado Cisne 1kg.
-P018,pao-de-acucar,https://www.paodeacucar.com/produto/52448/fuba-de-milho-yoki-pacote-1kg,achado,Fubá de Milho Yoki 1kg.
+P018,pao-de-acucar,https://www.paodeacucar.com/produto/52930/fuba-de-milho-yoki-pacote-500g,achado,Fubá de Milho Yoki Pacote 500g.
 P019,pao-de-acucar,https://www.paodeacucar.com/produto/460706/aveia-em-flocos-regulares-quaker-caixa-450g-embalagem-economica,achado,"Aveia em Flocos Regulares Quaker 450g, caixa (a cesta diz lata; é o mesmo produto em outra embalagem)."
 P020,pao-de-acucar,https://www.paodeacucar.com/produto/1617743/achocolatado-po-nescau-lata-350g,achado,Achocolatado em Pó Nescau Lata 350g.
 P021,pao-de-acucar,https://www.paodeacucar.com/produto/1286775/biscoito-cream-cracker-integral-vitarella-pacote-367-5g,tamanho_diferente,"Biscoito Cream Cracker Integral Vitarella 367,5g. Só a versão integral, em outro tamanho. Fica fora."
@@ -368,14 +368,14 @@ P066,pao-de-acucar,https://www.paodeacucar.com/produto/440145/sabao-em-po-omo-la
 P067,pao-de-acucar,https://www.paodeacucar.com/produto/1645109/lava-roupas-liquido-lavagem-perfeita-omo-3l,variante,"Lava-Roupas Líquido Omo Lavagem Perfeita 3L. Lavagem Perfeita, como no Carrefour."
 P068,pao-de-acucar,https://www.paodeacucar.com/produto/5361/amaciante-de-roupa-concentrado-frescor-intenso-comfort-frasco-500ml,variante,Amaciante Concentrado Comfort Frescor Intenso 500ml.
 P069,pao-de-acucar,https://www.paodeacucar.com/produto/51538/lava-loucas-liquido-clear-ype-squeeze-500ml,variante,Lava-Louças Ypê Clear 500ml. O neutro só em pacote com 6.
-P070,pao-de-acucar,,nao_achado,Não há Qboa; só Super Candida e Ypê.
+P070,pao-de-acucar,https://www.paodeacucar.com/produto/9176/agua-sanitaria-super-candida-frasco-2l,achado,Água Sanitária Super Candida Frasco 2L.
 P071,pao-de-acucar,https://www.paodeacucar.com/produto/141644/desinfetante-uso-geral-original-pinho-sol-frasco-500ml,achado,Desinfetante Pinho Sol Original 500ml.
 P072,pao-de-acucar,https://www.paodeacucar.com/produto/49581/limpador-multiuso-original-veja-gold-squeeze-500ml,achado,Limpador Multiuso Veja Gold Original 500ml.
 P073,pao-de-acucar,https://www.paodeacucar.com/produto/311641/esponja-laranja-nao-risca-loucas-delicadas-scotch-brite-antibac-3-unidades,variante,Esponja Scotch-Brite Não Risca Antibac 3 unidades.
 P074,pao-de-acucar,,nao_achado,Não há saco de lixo Dover Roll; só Embalixo e a marca da loja.
 P075,pao-de-acucar,https://www.paodeacucar.com/produto/1233079/toalha-de-papel-snob-folha-dupla-2-unidades,achado,Toalha de Papel Snob Folha Dupla 2 unidades.
 P076,pao-de-acucar,https://www.paodeacucar.com/produto/804250/sabao-barra-neutro-original-ype-pacote-800g-5-unidades,achado,Sabão em Barra Neutro Ypê 5 unidades 800g.
-P077,pao-de-acucar,,nao_achado,Não há álcool líquido 70% de 1L; só 46º.
+P077,pao-de-acucar,https://www.paodeacucar.com/produto/272569/alcool-liquido-46-inpm-classico-coperalcool-bacfree-frasco-1l,achado,Álcool Líquido 46º INPM Clássico Coperalcool Bacfree Frasco 1L.
 P078,pao-de-acucar,https://www.paodeacucar.com/produto/1449830/inseticida-aerossol-a-base-de-agua-sbp-ultra-frasco-360ml-spray,achado,Inseticida Aerossol à Base de Água SBP Ultra 360ml.
 P079,pao-de-acucar,https://www.paodeacucar.com/produto/65885/file-de-peito-de-frango-congelado-sem-pele-sem-osso-sadia-1kg,variante,"Filé de Peito de Frango Congelado Sadia 1kg, como no Tenda e no Carrefour. Comparar por kg."
 P080,pao-de-acucar,https://www.paodeacucar.com/produto/67565/sobrecoxa-de-frango-congelada-sadia-1kg,variante,"Sobrecoxa de Frango Congelada Sadia 1kg, como no Carrefour. Comparar por kg."
@@ -416,7 +416,7 @@ P014,santa-luzia,,nao_achado,Não há parafuso Barilla com ovos; só fusilli int
 P015,santa-luzia,https://www.santaluzia.com.br/molho-de-tomate-tradicional-pomarola-300g-3120732/p,achado,Molho de Tomate Tradicional Pomarola 300g.
 P016,santa-luzia,https://www.santaluzia.com.br/extrato-de-tomate-elefante-cargill-300g-3076423/p,achado,Extrato de Tomate Elefante 300g.
 P017,santa-luzia,https://www.santaluzia.com.br/sal-refinado-tradicional-cisne-1kg-648841/p,achado,Sal Refinado Cisne 1kg.
-P018,santa-luzia,https://www.santaluzia.com.br/fuba-mimoso-de-milho-yoki-500g-529435/p,tamanho_diferente,Fubá Mimoso Yoki 500g. Só o de 500g. Fica fora.
+P018,santa-luzia,https://www.santaluzia.com.br/fuba-mimoso-de-milho-yoki-500g-529435/p,achado,Fubá Mimoso de Milho Yoki 500g.
 P019,santa-luzia,https://www.santaluzia.com.br/aveia-integral-em-flocos-quaker-165g-3028011/p,tamanho_diferente,Aveia em Flocos Quaker 165g. Só a de 165g. Fica fora.
 P020,santa-luzia,https://www.santaluzia.com.br/achocolatado-em-po-nescau-nestle-370g-3169545/p,tamanho_diferente,Achocolatado em Pó Nescau 370g. Não há o de 350g. Fica fora.
 P021,santa-luzia,,nao_achado,Não há biscoito Vitarella.
@@ -468,14 +468,14 @@ P066,santa-luzia,https://www.santaluzia.com.br/lava-roupas-omo-lavagem-perfeita-
 P067,santa-luzia,https://www.santaluzia.com.br/sabao-liquido-puro-cuidado-omo-3l-1147820/p,variante,Sabão Líquido Omo Puro Cuidado 3L.
 P068,santa-luzia,https://www.santaluzia.com.br/amaciante-concentrado-energia-floral-comfort-500ml-1119850/p,variante,Amaciante Concentrado Comfort Energia Floral 500ml.
 P069,santa-luzia,https://www.santaluzia.com.br/detergente-neutro-ype-500ml--603228/p,achado,Detergente Neutro Ypê 500ml.
-P070,santa-luzia,https://www.santaluzia.com.br/agua-sanitaria-multiplo-uso-qboa-1l--532550/p,tamanho_diferente,Água Sanitária Qboa 1L. Só a de 1L. Fica fora.
+P070,santa-luzia,https://www.santaluzia.com.br/agua-sanitaria-com-cloro-ativo-super-candida-2l--680419/p,achado,Água Sanitária com Cloro Ativo Super Candida 2L.
 P071,santa-luzia,https://www.santaluzia.com.br/desinfetante-perfumado-original-pinho-sol-500ml-667480/p,achado,Desinfetante Pinho Sol Original 500ml.
 P072,santa-luzia,,nao_achado,Não há limpador multiuso Veja.
 P073,santa-luzia,,nao_achado,Esponja Scotch-Brite só avulsa; não há pacote com 3.
 P074,santa-luzia,https://www.santaluzia.com.br/saco-de-lixo-super-forte-azul-50--litros--dover-roll---20-unidades-3211401/p,achado,Saco de Lixo Dover Roll Super Forte Azul 50L 20 unidades.
 P075,santa-luzia,https://www.santaluzia.com.br/papel-toalha-2-unidades--snob---120-folhas-3159680/p,achado,Papel Toalha Snob 2 rolos.
 P076,santa-luzia,https://www.santaluzia.com.br/sabao-em-barra-glicerinado-neutro-5-unidades-de-180g-ype-3099288/p,variante,Sabão em Barra Glicerinado Neutro Ypê 5 unidades de 180g.
-P077,santa-luzia,,nao_achado,Não há álcool líquido 70% de 1L; só 46º.
+P077,santa-luzia,https://www.santaluzia.com.br/alcool-46-inpm-coperalcool-1l--1003844/p,achado,Álcool 46º INPM Coperalcool 1L.
 P078,santa-luzia,https://www.santaluzia.com.br/multi-inseticida-de-citronela-sbp-380ml-936898/p,tamanho_diferente,Multi-Inseticida SBP Citronela 380ml. Não há o de 360ml. Fica fora.
 P079,santa-luzia,,nao_achado,"O site não vende carnes, frutas e verduras frescas pela internet."
 P080,santa-luzia,,nao_achado,"O site não vende carnes, frutas e verduras frescas pela internet."
@@ -568,14 +568,14 @@ P066,sonda,https://www.sondadelivery.com.br/delivery/produto/lava-roupas-em-po-p
 P067,sonda,https://www.sondadelivery.com.br/delivery/produto/lava-roupas-liquido-lavagem-perfeita-omo-3l/1000020248,variante,"Lava-Roupas Líquido Omo Lavagem Perfeita 3L. Lavagem Perfeita, como no Carrefour."
 P068,sonda,https://www.sondadelivery.com.br/delivery/produto/amaciante-concentrado-frescor-intenso-comfort-500ml/1000016588,variante,Amaciante Concentrado Comfort Frescor Intenso 500ml.
 P069,sonda,https://www.sondadelivery.com.br/delivery/produto/lava-loucas-liquido-clear-ype-500ml/1000019972,variante,Lava-Louças Líquido Ypê Clear 500ml. O neutro não aparece.
-P070,sonda,,nao_achado,"Não há água sanitária Qboa; só Candura, Super Candida, Daclor, Suprema e Ypê."
+P070,sonda,https://www.sondadelivery.com.br/delivery/produto/agua-sanitaria-super-candida-2-litros/1000019600,achado,Água Sanitária Super Candida 2L.
 P071,sonda,https://www.sondadelivery.com.br/delivery/produto/desinfetante-pinho-sol-500ml/1000019937,achado,Desinfetante Pinho Sol 500ml.
 P072,sonda,https://www.sondadelivery.com.br/delivery/produto/limpador-multi-uso-veja-500ml/1000019846,achado,Limpador Multiuso Veja 500ml.
 P073,sonda,https://www.sondadelivery.com.br/delivery/produto/esponja-nao-risca-banheiro-scotch-brite-3-unidades/1000014293,variante,Esponja Não Risca Scotch-Brite 3 unidades (linha banheiro).
 P074,sonda,https://www.sondadelivery.com.br/delivery/produto/saco-para-lixo-ciclus-dover-roll-50l-20-unidades-cada/1000056172,variante,Saco para Lixo Dover Roll Ciclus 50L 20 unidades.
 P075,sonda,,nao_achado,Não há papel toalha Snob.
 P076,sonda,https://www.sondadelivery.com.br/delivery/produto/sabao-em-barra-neutro-original-ype-pacote-800g-5-unidades/1000042897,achado,Sabão em Barra Neutro Original Ypê 5 unidades 800g.
-P077,sonda,,nao_achado,Não há álcool líquido 70% de 1L.
+P077,sonda,https://www.sondadelivery.com.br/delivery/produto/alcool-cha-branco-46o-inpm-coperalcool-1l/1000052278,variante,Álcool Chá Branco 46º INPM Coperalcool 1L. O clássico só em 500ml.
 P078,sonda,https://www.sondadelivery.com.br/delivery/produto/inseticida-ultra-base-agua-sbp-360ml/1000042471,achado,Inseticida SBP Ultra Base Água 360ml.
 P079,sonda,https://www.sondadelivery.com.br/delivery/produto/file-de-peito-de-frango-sadia-congelado-1kg/1000012945,variante,"Filé de Peito de Frango Sadia Congelado 1kg, como no Tenda e no Carrefour. Comparar por kg."
 P080,sonda,https://www.sondadelivery.com.br/delivery/produto/sobrecoxa-de-frango-cortes-sadia-congelado-1kg/1000013274,variante,"Sobrecoxa de Frango Sadia Cortes Congelado 1kg, como no Carrefour. Comparar por kg."
@@ -616,7 +616,7 @@ P014,hirota,https://www.lojahirota.com.br/produto/8868/macarrao-com-ovos-barilla
 P015,hirota,https://www.lojahirota.com.br/produto/4303/molho-pomarola-trad-sache-300g,achado,Molho Pomarola Tradicional Sachê 300g.
 P016,hirota,https://www.lojahirota.com.br/produto/14526/extrato-de-tomate-elefante-pote-300g,variante,"Extrato de Tomate Elefante Pote 300g. Pote, como no Tenda e no Carrefour."
 P017,hirota,https://www.lojahirota.com.br/produto/3153/sal-refinado-tradicional-cisne-1kg,achado,Sal Refinado Tradicional Cisne 1kg.
-P018,hirota,https://www.lojahirota.com.br/produto/5922/fuba-mimoso-yoki-500g,tamanho_diferente,Fubá Mimoso Yoki 500g. Só o de 500g. Fica fora.
+P018,hirota,https://www.lojahirota.com.br/produto/5922/fuba-mimoso-yoki-500g,achado,Fubá Mimoso Yoki 500g.
 P019,hirota,https://www.lojahirota.com.br/produto/1635/aveia-em-flocos-quaker-caixa-165g,tamanho_diferente,Aveia em Flocos Quaker Caixa 165g. Só a de 165g. Fica fora.
 P020,hirota,https://www.lojahirota.com.br/produto/2345/achocolatado-em-po-nestle-nescau-350g,achado,Achocolatado em Pó Nescau 350g.
 P021,hirota,https://www.lojahirota.com.br/produto/4275/biscoito-vitarella-cream-craker-400g,tamanho_diferente,Biscoito Vitarella Cream Cracker 400g. Só o de 400g. Fica fora.
@@ -668,14 +668,14 @@ P066,hirota,https://www.lojahirota.com.br/produto/8065/sabao-omo-16kg-sanitizant
 P067,hirota,https://www.lojahirota.com.br/produto/5554/sabao-liquido-omo-lavagem-perfeita-3-litros,variante,"Sabão Líquido Omo Lavagem Perfeita 3L, como no Carrefour."
 P068,hirota,https://www.lojahirota.com.br/produto/3320/amaciante-comfort-conc-500ml-original,variante,Amaciante Comfort Concentrado Original 500ml.
 P069,hirota,https://www.lojahirota.com.br/produto/4112/detergente-liquido-ype-neutro-500ml,achado,Detergente Líquido Ypê Neutro 500ml.
-P070,hirota,,nao_achado,Não há água sanitária Qboa.
+P070,hirota,https://www.lojahirota.com.br/produto/3974/agua-sanitaria-super-candida-2l,achado,Água Sanitária Super Candida 2L.
 P071,hirota,https://www.lojahirota.com.br/produto/5079/desinfetante-pinho-sol-original-500ml,achado,Desinfetante Pinho Sol Original 500ml.
 P072,hirota,https://www.lojahirota.com.br/produto/8260/limp-veja-multiuso-500ml-10off-floral,variante,Limpador Veja Multiuso Floral 500ml.
 P073,hirota,,nao_achado,Esponja Scotch-Brite só avulsa; não há pacote com 3.
 P074,hirota,,nao_achado,Não há saco de lixo Dover Roll.
 P075,hirota,,nao_achado,Não há papel toalha Snob.
 P076,hirota,,nao_achado,Não há sabão em barra Ypê.
-P077,hirota,,nao_achado,Não há álcool líquido 70% de 1L.
+P077,hirota,https://www.lojahirota.com.br/produto/710/alcool-coperalcool-46-1l,achado,Álcool Coperalcool 46º 1L.
 P078,hirota,https://www.lojahirota.com.br/produto/3640/sbp-aero-300ml-citronela-lp,tamanho_diferente,Inseticida SBP Aerossol Citronela 300ml. Não há o de 360ml. Fica fora.
 P079,hirota,,nao_achado,"O filé de peito Korin não informa o peso do pacote, então não dá para comparar por kg; o outro filé de peito do site é temperado."
 P080,hirota,https://www.lojahirota.com.br/produto/6006/sobrecoxas-congeladas-de-frango-sadia-1kg,variante,"Sobrecoxas Congeladas de Frango Sadia 1kg, como no Carrefour. Comparar por kg."

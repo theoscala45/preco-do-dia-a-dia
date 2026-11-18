@@ -26,7 +26,7 @@ Alimentos básicos|Macarrão parafuso|Barilla|500 g|Pacote
 Alimentos básicos|Molho de tomate tradicional|Pomarola|300 g|Sachê
 Alimentos básicos|Extrato de tomate|Elefante|300 g|Lata
 Alimentos básicos|Sal refinado|Cisne|1 kg|Pacote
-Alimentos básicos|Fubá mimoso|Yoki|1 kg|Pacote
+Alimentos básicos|Fubá mimoso|Yoki|500 g|Pacote
 Alimentos básicos|Aveia em flocos|Quaker|450 g|Lata
 Alimentos básicos|Achocolatado em pó|Nescau|350 g|Lata
 Alimentos básicos|Biscoito cream cracker|Vitarella|350 g|Pacote
@@ -78,14 +78,14 @@ Higiene e limpeza|Sabão em pó|Omo|1,6 kg|Caixa
 Higiene e limpeza|Sabão líquido|Omo|3 L|Galão
 Higiene e limpeza|Amaciante concentrado|Comfort|500 ml|Frasco
 Higiene e limpeza|Detergente líquido neutro|Ypê|500 ml|Frasco
-Higiene e limpeza|Água sanitária|Qboa|2 L|Frasco
+Higiene e limpeza|Água sanitária|Super Candida|2 L|Frasco
 Higiene e limpeza|Desinfetante|Pinho Sol|500 ml|Frasco
 Higiene e limpeza|Limpador multiuso|Veja|500 ml|Frasco
 Higiene e limpeza|Esponja dupla face|Scotch-Brite|3 unidades|Pacote
 Higiene e limpeza|Saco de lixo 50 L|Dover Roll|Rolo|Rolo
 Higiene e limpeza|Papel toalha|Snob|2 rolos|Pacote
 Higiene e limpeza|Sabão em barra|Ypê|5 unidades|Pacote
-Higiene e limpeza|Álcool líquido 70%|Marca a definir|1 L|Frasco
+Higiene e limpeza|Álcool líquido 46º|Coperalcool|1 L|Frasco
 Higiene e limpeza|Inseticida aerosol|SBP|360 ml|Frasco
 Carnes e hortifruti|Peito de frango|Sem marca|1 kg|Preço por kg
 Carnes e hortifruti|Coxa e sobrecoxa de frango|Sem marca|1 kg|Preço por kg
