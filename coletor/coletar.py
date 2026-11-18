@@ -528,7 +528,7 @@ def coletar_rede(pw, rede, links, ceps, hoje, limite, diag, arq_precos, arq_exec
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--ceps", default="", help="ids separados por virgula (padrao: todos)")
-    ap.add_argument("--zona", default="", help="so os pontos desta zona (Centro, Oeste, Sul, Leste, Norte)")
+    ap.add_argument("--zona", default="", help="so os pontos desta zona (Centro, Oeste, Sul, Leste, Norte), ou Unico para so as redes de preco unico")
     ap.add_argument("--limite", type=int, default=0, help="le so os N primeiros produtos")
     ap.add_argument("--saida", default="", help="pasta para precos.csv e execucoes.csv (padrao: data/)")
     ap.add_argument("--redes", default="", help="so estas redes (padrao: todas as prontas)")
@@ -549,11 +549,13 @@ def main():
             da_rede = [l for l in links if l["rede_id"] == rede.rede_id and l["status"] in LINKS_QUE_ENTRAM and l["url"]]
             print(f"[{rede.rede_id}] {len(da_rede)} paginas de produto, {len(ceps)} CEPs", flush=True)
             if not da_rede: continue   # rede ainda sem links conferidos
+            so_unico = a.zona.lower() == "unico"
             if getattr(rede, "preco_unico", False):
-                # preco unico: uma vez por noite. Na coleta por zona, so a parte do Centro le estas redes
-                if not a.zona or a.zona.lower() == "centro":
+                # preco unico: uma vez por noite. Na coleta por zona, estas redes ficam numa parte so delas ("Unico")
+                if not a.zona or so_unico:
                     coletar_unico(rede, da_rede, hoje, a.limite, arq_precos, arq_exec, pw)
                 continue
+            if so_unico: continue
             coletar_rede(pw, rede, da_rede, ceps, hoje, a.limite, a.diagnostico, arq_precos, arq_exec)
     print("fim", flush=True)
 

@@ -1,6 +1,7 @@
 name: Coleta noturna de preços
 
-# Cada zona da cidade (5 CEPs) é uma parte separada. No máximo 2 partes rodam ao mesmo tempo,
+# Cada zona da cidade (5 CEPs) é uma parte separada, e as redes de preço único (um preço só para a
+# cidade) têm uma parte própria, "Unico". No máximo 2 partes rodam ao mesmo tempo,
 # para o site da rede receber poucas visitas por vez. No fim, uma última parte junta tudo,
 # grava no repositório e abre a issue "Falha na coleta" se algo deu errado.
 
@@ -10,7 +11,7 @@ on:
   workflow_dispatch:
     inputs:
       zonas:
-        description: "Zonas, separadas por vírgula (Centro,Oeste,Sul,Leste,Norte). Vazio = todas"
+        description: "Zonas, separadas por vírgula (Unico,Centro,Oeste,Sul,Leste,Norte). Vazio = todas"
         default: ""
       limite:
         description: "Ler só os N primeiros produtos (0 = todos)"
@@ -32,7 +33,7 @@ jobs:
       fail-fast: false
       max-parallel: 2
       matrix:
-        zona: [Centro, Oeste, Sul, Leste, Norte]
+        zona: [Unico, Centro, Oeste, Sul, Leste, Norte]
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
