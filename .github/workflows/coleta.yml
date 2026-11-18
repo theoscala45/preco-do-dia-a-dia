@@ -28,11 +28,6 @@ concurrency:
   group: coleta
   cancel-in-progress: false
 
-# uma coleta por vez: se a reserva começar com a primeira ainda rodando, ela espera
-concurrency:
-  group: coleta
-  cancel-in-progress: false
-
 jobs:
   coletar:
     runs-on: ubuntu-latest
