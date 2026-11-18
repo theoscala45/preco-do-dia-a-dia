@@ -317,8 +317,12 @@ P015,pao-de-acucar,https://www.paodeacucar.com/produto/1404204/molho-de-tomate-p
 P016,pao-de-acucar,https://www.paodeacucar.com/produto/1571148/extrato-de-tomate-elefante-pote-300g,variante,"Extrato de Tomate Elefante Pote 300g. Pote, como no Tenda e no Carrefour."
 P017,pao-de-acucar,https://www.paodeacucar.com/produto/11672/sal-refinado-cisne-tradicional-pacote-1kg,achado,Sal Refinado Cisne 1kg.
 P018,pao-de-acucar,https://www.paodeacucar.com/produto/52448/fuba-de-milho-yoki-pacote-1kg,achado,Fubá de Milho Yoki 1kg.
+P019,pao-de-acucar,https://www.paodeacucar.com/produto/460706/aveia-em-flocos-regulares-quaker-caixa-450g-embalagem-economica,achado,"Aveia em Flocos Regulares Quaker 450g, caixa (a cesta diz lata; é o mesmo produto em outra embalagem)."
 P020,pao-de-acucar,https://www.paodeacucar.com/produto/1617743/achocolatado-po-nescau-lata-350g,achado,Achocolatado em Pó Nescau Lata 350g.
+P021,pao-de-acucar,https://www.paodeacucar.com/produto/1286775/biscoito-cream-cracker-integral-vitarella-pacote-367-5g,tamanho_diferente,"Biscoito Cream Cracker Integral Vitarella 367,5g. Só a versão integral, em outro tamanho. Fica fora."
+P022,pao-de-acucar,https://www.paodeacucar.com/produto/177670/biscoito-recheio-chocolate-passatempo-pacote-130g,achado,Biscoito Recheio Chocolate Passatempo 130g.
 P023,pao-de-acucar,https://www.paodeacucar.com/produto/1944/pao-de-forma-tradicional-pullman-480g,achado,Pão de Forma Tradicional Pullman 480g.
+P024,pao-de-acucar,https://www.paodeacucar.com/produto/71812/margarina-cremosa-com-sal-qualy-pote-500g,achado,Margarina Cremosa com Sal Qualy 500g.
 P025,pao-de-acucar,https://www.paodeacucar.com/produto/19389/maionese-hellmanns-tradicional-500g,achado,Maionese Hellmann's Tradicional 500g.
 P026,pao-de-acucar,https://www.paodeacucar.com/produto/91853/ketchup-heinz-tradicional-397g,achado,Ketchup Heinz Tradicional 397g.
 P027,pao-de-acucar,https://www.paodeacucar.com/produto/5663/file-de-sardinha-com-oleo-com-pimenta-gomes-da-costa-caixa-125g,variante,Filé de Sardinha com Óleo com Pimenta Gomes da Costa 125g. A de 125g só com pimenta; a só em óleo vem em 85g.
@@ -326,12 +330,27 @@ P028,pao-de-acucar,https://www.paodeacucar.com/produto/44884/atum-ralado-ao-natu
 P029,pao-de-acucar,https://www.paodeacucar.com/produto/452867/milho-verde-em-conserva-quero-lata-170g,achado,Milho Verde em Conserva Quero 170g.
 P030,pao-de-acucar,https://www.paodeacucar.com/produto/452869/ervilha-em-conserva-quero-lata-170g,achado,Ervilha em Conserva Quero 170g.
 P031,pao-de-acucar,https://www.paodeacucar.com/produto/90775/vinagre-de-alcool-castelo-750ml,achado,Vinagre de Álcool Castelo 750ml.
+P032,pao-de-acucar,,nao_achado,"Só Sazón de outros sabores (carnes, frango, feijão); não há o tempero completo."
+P033,pao-de-acucar,https://www.paodeacucar.com/produto/111995/caldo-knorr-galinha-12-cubos-114g,tamanho_diferente,"Caldo Knorr Galinha 12 cubos 114g. A caixa de 57g só em carne, legumes e bacon. Fica fora."
+P034,pao-de-acucar,https://www.paodeacucar.com/produto/50670/leite-condensado-integral-moca-lata-395g,achado,Leite Condensado Integral Moça Lata 395g.
+P035,pao-de-acucar,https://www.paodeacucar.com/produto/43804/creme-de-leite-uht-leve-homogeneizado-nestle-caixa-200g,achado,Creme de Leite UHT Leve Nestlé Caixa 200g.
+P036,pao-de-acucar,https://www.paodeacucar.com/produto/356426/mistura-para-bolo-de-chocolate-dona-benta-pacote-450g,variante,"Mistura para Bolo de Chocolate Dona Benta 450g. Sabor chocolate, como nas outras redes."
 P037,pao-de-acucar,https://www.paodeacucar.com/produto/99466/agua-mineral-natural-sem-gas-crystal-garrafa-1-5l,achado,"Água Mineral sem Gás Crystal 1,5L."
 P038,pao-de-acucar,https://www.paodeacucar.com/produto/449568/refrigerante-coca-cola-original-garrafa-2l,achado,Refrigerante Coca-Cola Original 2L.
 P039,pao-de-acucar,https://www.paodeacucar.com/produto/176191/leite-longa-vida-integral-italac-1-litro,achado,Leite Longa Vida Integral Italac 1L.
 P040,pao-de-acucar,https://www.paodeacucar.com/produto/164065/leite-uht-integral-piracanjuba-caixa-com-tampa-1l,achado,Leite UHT Integral Piracanjuba 1L.
 P041,pao-de-acucar,https://www.paodeacucar.com/produto/140374/leite-desnatado-piracanjuba-1l,achado,Leite Desnatado Piracanjuba 1L.
 P042,pao-de-acucar,https://www.paodeacucar.com/produto/586550/leite-em-po-ninho-integral-lata-380g,achado,Leite em Pó Ninho Integral Lata 380g.
+P043,pao-de-acucar,https://www.paodeacucar.com/produto/6971/manteiga-com-sal-aviacao-pote-200g,achado,Manteiga com Sal Aviação Pote 200g.
+P044,pao-de-acucar,https://www.paodeacucar.com/produto/353791/queijo-mussarela-fatiado-tirolez-150g,achado,Queijo Mussarela Fatiado Tirolez 150g.
+P045,pao-de-acucar,https://www.paodeacucar.com/produto/353790/queijo-prato-fatiado-tirolez-150g,achado,Queijo Prato Fatiado Tirolez 150g.
+P046,pao-de-acucar,https://www.paodeacucar.com/produto/69603/requeijao-cremoso-tradicional-vigor-copo-200g,achado,Requeijão Cremoso Tradicional Vigor Copo 200g.
+P047,pao-de-acucar,,nao_achado,Não há iogurte natural Nestlé; só Batavo e Vigor.
+P048,pao-de-acucar,https://www.paodeacucar.com/produto/478011/iogurte-parcialmente-desnatado-morango-batavo-garrafa-1-15kg-embalagem-economica,tamanho_diferente,"Iogurte Parcialmente Desnatado Morango Batavo Garrafa 1,15kg. Só a garrafa de 1,15kg. Fica fora."
+P049,pao-de-acucar,https://www.paodeacucar.com/produto/304858/presunto-cozido-fatiado-sadia-soltissimo-200g,achado,Presunto Cozido Fatiado Sadia Soltíssimo 200g.
+P050,pao-de-acucar,https://www.paodeacucar.com/produto/60145/queijo-minas-frescal-tirolez-500g,achado,"Queijo Minas Frescal Tirolez 500g. Peso variável: a página dá o preço do kg, e o coletor guarda esse."
+P051,pao-de-acucar,https://www.paodeacucar.com/produto/459562/ovos-brancos-grandes-bandeja-com-20-unidades,tamanho_diferente,Ovos Brancos Grandes Bandeja 20 Unidades. Só bandeja de 20. Fica fora.
+P052,pao-de-acucar,,nao_achado,Não há ovos vermelhos comuns; só orgânicos e caipiras com 10 unidades.
 P053,pao-de-acucar,https://www.paodeacucar.com/produto/568597/papel-higienico-folha-dupla-neutro-neve-toque-da-seda-30m-pacote-leve-12-pague-11-unidades,variante,"Papel Higiênico Folha Dupla Neve Toque da Seda 30m Leve 12 Pague 11. Leve 12 pague 11, como no Tenda."
 P054,pao-de-acucar,https://www.paodeacucar.com/produto/284478/papel-higienico-folha-dupla-neutro-personal-vip-30m-pacote-leve-12-pague-11-unidades,variante,Papel Higiênico Folha Dupla Personal Vip 30m Leve 12 Pague 11. Leve 12 pague 11.
 P055,pao-de-acucar,https://www.paodeacucar.com/produto/127976/sabonete-barra-original-dove-90g,achado,Sabonete Barra Original Dove 90g.
@@ -364,6 +383,9 @@ P081,pao-de-acucar,,nao_achado,Não há frango inteiro Sadia; só o orgânico.
 P082,pao-de-acucar,https://www.paodeacucar.com/produto/1617160/carne-moida-de-patinho-swift-1kg,achado,Carne Moída de Patinho Swift 1kg.
 P083,pao-de-acucar,https://www.paodeacucar.com/produto/133819/acem-em-pedaco-resfriado-bandeja-800g,variante,"Acém em Pedaço Resfriado, bandeja de cerca de 800g vendida por peso. A página dá o preço do kg."
 P084,pao-de-acucar,https://www.paodeacucar.com/produto/323907/contra-file-bovino-kg,achado,"Contra Filé Bovino, vendido por kg."
+P085,pao-de-acucar,https://www.paodeacucar.com/produto/146326/linguica-toscana-seara-600g,variante,"Linguiça Toscana Seara, bandeja de cerca de 600g vendida por peso. A página dá o preço do kg."
+P086,pao-de-acucar,https://www.paodeacucar.com/produto/113887/salsicha-hot-dog-perdigao-500g-12-unidades,achado,Salsicha Hot-Dog Perdigão 500g.
+P087,pao-de-acucar,https://www.paodeacucar.com/produto/437965/file-de-tilapia-congelado-qualita-500g,variante,"Filé de Tilápia Congelado Qualitá 500g (marca da loja), como no Carrefour. Comparar por kg."
 P088,pao-de-acucar,https://www.paodeacucar.com/produto/153808/banana-prata-granel-700g-aprox-5-a-6-unid,variante,"Banana Prata Granel, cerca de 700g vendida por peso. A página dá o preço do kg."
 P089,pao-de-acucar,https://www.paodeacucar.com/produto/78635/maca-gala-granel-500g-aprox-2-a-3-unid,variante,"Maçã Gala Granel, cerca de 500g vendida por peso. A página dá o preço do kg."
 P090,pao-de-acucar,https://www.paodeacucar.com/produto/101504/laranja-pera-granel-1kg-aprox-4-a-5-unid,achado,"Laranja Pera Granel, vendida por kg."

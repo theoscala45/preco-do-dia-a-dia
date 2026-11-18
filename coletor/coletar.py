@@ -253,6 +253,12 @@ class PaoDeAcucar:
             return {"nome": nome, "tamanho": tamanho_do_nome(nome), "preco": f"{preco:.2f}", "unidade": "kg", "disponivel": True}
         texto = re.sub(r"Pre[cç]o por [^\n]*", "", texto)
         m = re.search(r"R\$\s*([\d.]+,\d{2})\s*(/\s*kg)?", texto, re.I)
+        peso = re.search(r"(\d+(?:,\d+)?)\s*(kg|g)\b", nome, re.I)
+        if m and not m.group(2) and peso and re.search(r"peso vari[aá]vel", texto, re.I):
+            # em promocao a pagina nao mostra "Preco por 1kg"; a conta e a mesma que ela faz: preco / peso do nome
+            kg = float(peso.group(1).replace(",", ".")) / (1000 if peso.group(2).lower() == "g" else 1)
+            preco = float(m.group(1).replace(".", "").replace(",", ".")) / kg
+            return {"nome": nome, "tamanho": tamanho_do_nome(nome), "preco": f"{preco:.2f}", "unidade": "kg", "disponivel": True}
         if not m:
             if re.search(r"indispon|avise-me|esgotad", texto, re.I):
                 return {"nome": nome, "tamanho": tamanho_do_nome(nome), "preco": None, "unidade": "", "disponivel": False}
