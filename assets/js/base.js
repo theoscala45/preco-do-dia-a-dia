@@ -12,7 +12,9 @@ export const pct = (v, casas = 1) => v.toLocaleString('pt-BR', { minimumFraction
 export const curto = bairro => bairro.split(' (')[0];
 export const semAcento = s => s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
 
-export const carregar = (...nomes) => Promise.all(nomes.map(n => fetch(`assets/${n}.json`).then(r => r.json())));
+// ?previa no endereço: a página carrega assets/dados-previa.json (preços reais, ainda fora do site oficial)
+export const PREVIA = new URLSearchParams(location.search).has('previa');
+export const carregar = (...nomes) => Promise.all(nomes.map(n => fetch(`assets/${n === 'dados' && PREVIA ? 'dados-previa' : n}.json`).then(r => r.json())));
 
 // CEP, ponto de coleta e lista ficam só no navegador da pessoa
 export const guarda = {
@@ -96,8 +98,14 @@ export function iniciar(dados) {
   gsap.registerPlugin(ScrollTrigger, SplitText);
   gsap.defaults({ ease: 'power3.out', duration: 0.8 });
 
-  // faixa de aviso: aparece sempre que os dados forem de exemplo
-  if (dados?.exemplo) {
+  // faixa de aviso: aparece sempre que os dados forem de exemplo, ou na prévia dos preços reais
+  if (PREVIA) {
+    const dia = dados?.datas?.at(-1) ? new Date(dados.datas.at(-1) + 'T12:00').toLocaleDateString('pt-BR') : '';
+    $('aviso').textContent = `Prévia com os preços reais coletados em ${dia}. Ainda não é a versão oficial do site, e a inflação só aparece depois de alguns meses de coleta.`;
+    // os links entre as páginas continuam na prévia
+    document.querySelectorAll('a[href$=".html"]').forEach(a => { a.href = a.getAttribute('href') + '?previa'; });
+  }
+  if (dados?.exemplo || PREVIA) {
     $('aviso').hidden = false;
     document.documentElement.style.setProperty('--aviso-h', $('aviso').offsetHeight + 'px');
   }

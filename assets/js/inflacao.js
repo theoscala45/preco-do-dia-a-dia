@@ -46,7 +46,7 @@ function desenharGrafico(animar = true) {
   const fundo = estado.vista === 'ponto' ? series.filter((_, k) => k !== estado.ponto) : [];
   const tudo = [...linhas.flatMap(l => l.serie), ...fundo.flat()];
   const y0 = Math.floor(Math.min(...tudo) - 0.2), y1 = Math.ceil(Math.max(...tudo) + 0.2);
-  const X = t => L + (W - L - R) * t / (N - 1), Y = v => H - B - (H - B - T) * (v - y0) / (y1 - y0);
+  const X = t => L + (W - L - R) * t / Math.max(1, N - 1), Y = v => H - B - (H - B - T) * (v - y0) / (y1 - y0);
   const caminho = s => s.map((v, t) => `${t ? 'L' : 'M'}${X(t).toFixed(1)} ${Y(v).toFixed(1)}`).join('');
   geom = { W, H, L, R, T, B, X, Y };
   svg.setAttribute('viewBox', `0 0 ${W} ${H}`); svg.setAttribute('width', W); svg.setAttribute('height', H);

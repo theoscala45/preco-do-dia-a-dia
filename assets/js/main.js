@@ -94,7 +94,7 @@ ScrollTrigger.create({ trigger: '.cena', start: 'top bottom', end: 'bottom top',
 const svg = $('grafico'), L = 6, R = 432, T = 16, B = 262;
 const series = dados.pontos.map(p => p.serie);
 const tudo = [...series.flat(), ...dados.ipca], y0 = Math.floor(Math.min(...tudo)) - 0.5, y1 = Math.ceil(Math.max(...tudo)) + 0.5;
-const X = i => L + (R - L) * i / (dados.datas.length - 1), Y = v => B - (B - T) * (v - y0) / (y1 - y0);
+const X = i => L + (R - L) * i / Math.max(1, dados.datas.length - 1), Y = v => B - (B - T) * (v - y0) / (y1 - y0);
 const caminho = s => s.map((v, i) => `${i ? 'L' : 'M'}${X(i).toFixed(1)} ${Y(v).toFixed(1)}`).join('');
 const mes = d => new Date(d + 'T12:00').toLocaleDateString('pt-BR', { month: 'short', year: '2-digit' }).replace('. de ', ' ').replace('.', '');
 let g = '';
