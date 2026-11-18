@@ -100,7 +100,7 @@
               <tr><th scope="row">Sonda</th><td>Preço único</td><td>Libera produto</td><td>Só falam de redes sociais</td><td><span class="selo ok">Liberado</span></td></tr>
               <tr><th scope="row">St Marche</th><td>Preço único</td><td>Libera produto</td><td>Proíbem copiar ou republicar sem autorização por escrito</td><td><span class="selo nao">Não coletada</span></td></tr>
               <tr><th scope="row">Santa Luzia</th><td>Preço único (loja única)</td><td>Bloqueia a busca, libera produto</td><td>Não encontrados</td><td><span class="selo">Liberado com dúvida</span></td></tr>
-              <tr><th scope="row">Hirota</th><td>A confirmar</td><td>Bloqueia a busca, libera produto</td><td>Não tem</td><td><span class="selo">Liberado com dúvida</span></td></tr>
+              <tr><th scope="row">Hirota</th><td>Loja</td><td>Bloqueia a busca, libera produto</td><td>Não tem</td><td><span class="selo">Liberado com dúvida</span></td></tr>
               <tr><th scope="row">Nagumo</th><td>Loja</td><td>Não tem robots.txt</td><td>Só regras de compra</td><td><span class="selo nao">Fase futura</span></td></tr>
             </tbody>
           </table>
@@ -128,7 +128,7 @@
           <p>No Carrefour, o site mostra uma verificação contra robôs (captcha) para o navegador automático que informaria o CEP. O projeto não contorna esse tipo de bloqueio. Por isso, no Carrefour, o coletor lê só a página normal de cada produto e guarda o preço padrão do site, o que aparece antes de alguém informar o CEP. É um preço único para a cidade. O projeto pediu ao Carrefour autorização para ler o preço por CEP.</p>
           <p>No Pão de Açúcar, a página de produto mostra o preço sem pedir CEP, e o preço é o mesmo para a cidade. O site não tem lista pública de produtos (sitemap) e o robots.txt bloqueia a busca. Por isso os links foram achados percorrendo as páginas de categoria do site, como uma pessoa faria. Essas páginas só abrem em navegador, então o coletor usa o navegador automático também aqui.</p>
           <p>O Sonda e o Santa Luzia também têm preço único. As páginas de produto dos dois abrem sem navegador e trazem o preço nos dados padronizados da página. No Sonda, os links foram achados percorrendo as páginas de categoria; no Santa Luzia, pela lista pública de produtos (sitemap). O site do Santa Luzia não vende carnes, frutas e verduras frescas pela internet, então esses produtos ficam de fora nessa rede.</p>
-          <p>No Hirota, o site só abre em navegador e mostra o preço da loja de retirada que ele escolhe sozinho para quem não informou CEP: a da Av. Nazaré, no Ipiranga. O coletor guarda esse preço. Ainda não foi confirmado se o preço muda de uma loja do Hirota para outra.</p>
+          <p>No Hirota, o preço muda um pouco de loja para loja: a maioria dos produtos custa o mesmo, mas carnes e alguns itens mudam. O site oferece cinco lojas de retirada (Nazaré, Morumbi, Santa Cecília, Vila Formosa e Campo Belo). Para cada CEP, o coletor escolhe a mais perto do ponto, em linha reta, e guarda o preço dela. Para Perus, por exemplo, é a de Santa Cecília, a 17 km.</p>
           <p id="estadoColeta"></p>
           <p id="estadoLinks"></p>
         </div>

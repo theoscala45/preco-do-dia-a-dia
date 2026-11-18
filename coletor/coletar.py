@@ -243,42 +243,64 @@ class SantaLuzia:
 
 
 class Hirota:
-    """Hirota Food (lojahirota.com.br). O site so abre em navegador e mostra o preco da loja de retirada que ele
-    escolhe sozinho para quem nao informou CEP (Av. Nazare, 1299, Ipiranga). O coletor guarda esse preco: um preco
-    unico, o da loja padrao do site. Se o preco muda de loja para loja ainda nao foi confirmado. Sem sitemap e com a
-    busca bloqueada pelo robots.txt, os links foram achados percorrendo as paginas de departamento."""
+    """Hirota Food (lojahirota.com.br). O preco muda um pouco de loja para loja (conferido em 11/2026: a maioria igual,
+    carnes e alguns itens diferentes). O site so abre em navegador e oferece 5 lojas de retirada: Nazare (Ipiranga),
+    Morumbi, Santa Cecilia, Vila Formosa e Campo Belo. Para cada CEP, o coletor escolhe a loja de retirada mais perto
+    do ponto, em linha reta, e le o preco dela. Sem sitemap e com a busca bloqueada pelo robots.txt, os links foram
+    achados percorrendo as paginas de departamento."""
     rede_id = "hirota"
     site = "https://www.lojahirota.com.br"
-    preco_unico = True
-    navegador = True
     hosts = ("lojahirota.com.br", "vipcommerce.com.br")
-    loja = "loja padrao do site (Av. Nazare, 1299)"
-    pg = None
+    por_loja = True
+    loja = ""
+    LOJAS = {"Delivery Nazaré": (-23.5954603, -46.6097547), "Delivery Morumbi": (-23.6185630, -46.7412821),
+             "Delivery S.Cecilia": (-23.5330740, -46.6571490), "Delivery H. Online V.Formosa": (-23.5647236, -46.5462619),
+             "Delivery Campo Belo": (-23.6173027, -46.6778460)}
+    ENDERECOS = {"Delivery Nazaré": "Nazaré (Av. Nazaré, 1299)", "Delivery Morumbi": "Morumbi (Av. Dr. Guilherme Dumont Vilares, 1450)",
+                 "Delivery S.Cecilia": "Santa Cecília (Av. Gen. Olímpio da Silveira, 39)", "Delivery H. Online V.Formosa": "Vila Formosa (Av. Dr. Eduardo Cotching, 1628)",
+                 "Delivery Campo Belo": "Campo Belo (R. Vieira de Morais, 263)"}
 
-    def ler_pagina(self, url):
-        pg = self.pg
-        resposta = pg.goto(url, wait_until="domcontentloaded", timeout=60000)
-        conferir_bloqueio(resposta, pg)
+    def loja_do_cep(self, cep):
+        pontos = json.load(open(os.path.join(RAIZ, "assets", "geo.json"), encoding="utf-8"))["pontos"]
+        p = next(x for x in pontos if x["cep"] == cep)
+        dist = lambda k: ((self.LOJAS[k][0] - p["lat"]) * 111) ** 2 + ((self.LOJAS[k][1] - p["lon"]) * 102) ** 2
+        return min(self.LOJAS, key=dist)
+
+    def escolher_loja(self, pg, cep):
+        url, nome = pg.url, self.loja_do_cep(cep)
+        pg.locator("text=Retirar na loja >> visible=true").first.click()
+        pg.locator(".vip-selectable-tile", has_text=nome).first.wait_for(state="visible", timeout=20000)
+        pg.locator(".vip-selectable-tile", has_text=nome).first.click(force=True)
+        pg.wait_for_timeout(2500)
+        self.loja = self.ENDERECOS[nome]
+        pg.goto(url, wait_until="domcontentloaded", timeout=60000)
+
+    def ler_produto(self, pg, cep, cep_dado):
         try:
             pg.wait_for_function("() => /Adicionar a lista[\\s\\S]*?(R\\$|indispon|avise-me)/i.test(document.body.innerText)", timeout=25000)
         except Exception:
             pass
+        if not cep_dado:
+            self.escolher_loja(pg, cep)
+            cep_dado = True
+            try:
+                pg.wait_for_function("() => /Adicionar a lista[\\s\\S]*?(R\\$|indispon|avise-me)/i.test(document.body.innerText)", timeout=25000)
+            except Exception:
+                pass
         texto = pg.evaluate("() => document.body.innerText")
         nome = re.split(r"\s+-\s+Hirota", pg.title())[0].strip()
-        if not nome or "nao encontrad" in semacento(texto[:3000]) or "Adicionar a lista" not in texto:
+        if not nome or "Adicionar a lista" not in texto:
             raise RuntimeError("pagina sem produto (pode nao existir mais)")
-        bloco = texto.split("Adicionar a lista", 1)[1]
-        bloco = re.split(r"Adicionar ao carrinho|Compare|Avise-me", bloco)[0]
+        bloco = re.split(r"Adicionar ao carrinho|Compare|Avise-me", texto.split("Adicionar a lista", 1)[1])[0]
         if not re.search(r"R\$", bloco):
             if re.search(r"indispon|esgotad|avise", texto, re.I):
-                return {"nome": nome, "tamanho": tamanho_do_nome(nome), "preco": None, "unidade": "", "disponivel": False}
+                return {"nome": nome, "tamanho": tamanho_do_nome(nome), "preco": None, "unidade": "", "disponivel": False}, cep_dado
             raise RuntimeError("preco nao encontrado na pagina")
         por_kg = re.search(r"R\$\s*([\d.]+,\d{2})\s*/\s*kg", bloco, re.I)
         if por_kg:   # produto vendido por peso: a pagina da o preco do quilo e o da porcao; vale o do quilo
-            return {"nome": nome, "tamanho": tamanho_do_nome(nome), "preco": f"{float(por_kg.group(1).replace('.', '').replace(',', '.')):.2f}", "unidade": "kg", "disponivel": True}
-        valores = re.findall(r"R\$\s*([\d.]+,\d{2})", bloco)
-        # numa oferta a pagina mostra o preco atual e, depois, o antigo riscado: vale o primeiro
-        return {"nome": nome, "tamanho": tamanho_do_nome(nome), "preco": f"{float(valores[0].replace('.', '').replace(',', '.')):.2f}", "unidade": "un", "disponivel": True}
+            return {"nome": nome, "tamanho": tamanho_do_nome(nome), "preco": f"{float(por_kg.group(1).replace('.', '').replace(',', '.')):.2f}", "unidade": "kg", "disponivel": True}, cep_dado
+        valor = re.search(r"R\$\s*([\d.]+,\d{2})", bloco).group(1)   # numa oferta o primeiro e o preco atual
+        return {"nome": nome, "tamanho": tamanho_do_nome(nome), "preco": f"{float(valor.replace('.', '').replace(',', '.')):.2f}", "unidade": "un", "disponivel": True}, cep_dado
 
 
 def ler_schema(url, marca_de_produto):

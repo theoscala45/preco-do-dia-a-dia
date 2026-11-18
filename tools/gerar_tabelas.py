@@ -156,7 +156,7 @@ redes = [
  ["sonda","Sonda","unico","liberado",""],
  ["st-marche","St Marche","unico","pedir_autorizacao",""],
  ["santa-luzia","Santa Luzia","unico","liberado_com_duvida",""],
- ["hirota","Hirota","a_confirmar","liberado_com_duvida","https://www.lojahirota.com.br"],
+ ["hirota","Hirota","por_loja","liberado_com_duvida","https://www.lojahirota.com.br"],
  ["nagumo","Nagumo","por_loja","liberado",""],
 ]
 w("redes.csv", ["rede_id","nome","tipo_preco","situacao","site"], redes)
