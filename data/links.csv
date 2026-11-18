@@ -13,7 +13,7 @@ P011,tenda,https://www.tendaatacado.com.br/produto/farinha-de-trigo-tradicional-
 P012,tenda,https://www.tendaatacado.com.br/produto/farinha-de-mandioca-tipo-1-fina-yoki-pacote-500g,achado,"Tipo 1 fina, 500 g."
 P013,tenda,https://www.tendaatacado.com.br/produto/macarrao-ovos-espaguete-9-renata-500g-12256,achado,Espaguete nº 9. Existe também o nº 8 (macarrao-ovos-espaguete-8-renata-500g-10739). Escolher um.
 P014,tenda,,nao_achado,Barilla não apareceu. Segunda busca no sitemap em 17/11/2026: não achado.
-P015,tenda,,nao_achado,"Só apareceu molho Tarantella de 1,02 kg. Segunda busca no sitemap em 17/11/2026: não achado."
+P015,tenda,,nao_achado,"Não há Pomarola tradicional de 300g; só passata, refogado e outros sabores."
 P016,tenda,https://www.tendaatacado.com.br/produto/ext-tom-elefante-pt-300g,variante,Achado na segunda busca: Extrato de tomate Elefante pote 300g. Pote em vez de lata.
 P017,tenda,https://www.tendaatacado.com.br/produto/sal-refinado-cisne-1kg-304,achado,
 P018,tenda,https://www.tendaatacado.com.br/produto/fuba-de-milho-mimoso-yoki-pacote-1kg,achado,
@@ -30,7 +30,7 @@ P028,tenda,https://www.tendaatacado.com.br/produto/atum-ralado-em-oleo-gomes-da-
 P029,tenda,https://www.tendaatacado.com.br/produto/milho-verde-quero-170g-30981,achado,
 P030,tenda,https://www.tendaatacado.com.br/produto/ervilha-quero-170g-30987,achado,
 P031,tenda,https://www.tendaatacado.com.br/produto/vinagre-de-alcool-castelo-750ml-4012,achado,
-P032,tenda,,nao_achado,"Só apareceram Sazón marrom e laranja, não o completo. Segunda busca no sitemap em 17/11/2026: não achado."
+P032,tenda,https://www.tendaatacado.com.br/produto/tempero-floppy-sazon-amarelo-60g-478,achado,Tempero Sazón Amarelo 60g (o amarelo é o de frango).
 P033,tenda,https://www.tendaatacado.com.br/produto/caldo-knorr-de-galinha-57g-1561,achado,
 P034,tenda,https://www.tendaatacado.com.br/produto/leite-condensado-moca-395g-3226,achado,
 P035,tenda,https://www.tendaatacado.com.br/produto/creme-de-leite-tradicional-nestle-200g-2762,achado,
@@ -46,11 +46,11 @@ P044,tenda,https://www.tendaatacado.com.br/produto/queijo-mussarela-tirolez-fat-
 P045,tenda,,nao_achado,Tirolez fatiado não apareceu. Segunda busca no sitemap em 17/11/2026: não achado.
 P046,tenda,https://www.tendaatacado.com.br/produto/requeijao-cremoso-vigor-200g-4689,achado,
 P047,tenda,https://www.tendaatacado.com.br/produto/nestle-iogurte-natural-170g-2919,achado,Achado na segunda busca: Iogurte Natural Nestlé 170g.
-P048,tenda,,nao_achado,Só apareceu o de 510 g. Segunda busca no sitemap em 17/11/2026: não achado.
+P048,tenda,https://www.tendaatacado.com.br/produto/iog-des-batavo-pense-zero-morango-1-15kg,variante,"Iogurte Desnatado Morango Zero Lactose Pense Zero Batavo 1,15kg. Linha zero lactose."
 P049,tenda,https://www.tendaatacado.com.br/produto/presunto-cozido-sadia-fat-180g,tamanho_diferente,"Fatiado confirmado, mas 180 g em vez de 200 g. Tamanho diferente (180 g). Fica fora da coleta e do índice."
 P050,tenda,,nao_achado,Queijo minas frescal Tirolez não apareceu. Segunda busca no sitemap em 17/11/2026: não achado.
-P051,tenda,https://www.tendaatacado.com.br/produto/ovos-grandes-branco-12-unidades-1395,achado,
-P052,tenda,https://www.tendaatacado.com.br/produto/ovos-grandes-vermelhos-12-unidades-1583,achado,
+P051,tenda,https://www.tendaatacado.com.br/produto/ovos-extra-branco-20-unidades-1604,variante,"Ovos Extra Brancos 20 unidades (tipo extra, não grande)."
+P052,tenda,https://www.tendaatacado.com.br/produto/ovos-grandes-vermelhos-select-pacote-com-20-unidades,achado,Ovos Grandes Vermelhos Select 20 unidades.
 P053,tenda,https://www.tendaatacado.com.br/produto/papel-higienico-neve-toque-de-seda-folha-dupla-leve-12-pague-11-30m,variante,"12 rolos, folha dupla, leve 12 pague 11. Mesmo produto, em promoção leve 12 pague 11. Entra como variante."
 P054,tenda,,nao_achado,Personal não apareceu. Segunda busca no sitemap em 17/11/2026: não achado.
 P055,tenda,https://www.tendaatacado.com.br/produto/sabonete-dove-cremoso-90g-283,achado,
@@ -76,7 +76,7 @@ P074,tenda,,nao_achado,Dover Roll não apareceu. Segunda busca no sitemap em 17/
 P075,tenda,,nao_achado,Snob não apareceu. Segunda busca no sitemap em 17/11/2026: não achado.
 P076,tenda,,nao_achado,Só apareceu barra Ypê de 800 g. Segunda busca no sitemap em 17/11/2026: não achado.
 P077,tenda,,nao_achado,Álcool líquido 70% não apareceu. Segunda busca no sitemap em 17/11/2026: não achado.
-P078,tenda,https://www.tendaatacado.com.br/produto/inseticida-aerossol-acao-magnetica-sbp-360ml,tamanho_diferente,"SBP Ação Magnética, 360 ml, não 300 ml. Tamanho diferente (360 ml). Fica fora da coleta e do índice."
+P078,tenda,https://www.tendaatacado.com.br/produto/inseticida-aerossol-ultra-frasco-sbp-360ml,achado,SBP Aerossol Ultra 360ml.
 P079,tenda,https://www.tendaatacado.com.br/produto/file-de-peito-de-frabgo-congelado-sadia-zip-pct1kg-3842,variante,"Filé de peito congelado Sadia, 1 kg. Comparar por kg. Fora do índice."
 P080,tenda,https://www.tendaatacado.com.br/produto/sobrecoxa-seara-iqf-1kg,variante,"Sobrecoxa Seara congelada (IQF), 1 kg. Comparar por kg. Fora do índice."
 P081,tenda,https://www.tendaatacado.com.br/produto/frango-inteiro-cong-kg,variante,"Frango inteiro congelado sem marca, vendido por peso (a cesta pede Sadia). Comparar por kg. Fora do índice."
@@ -113,7 +113,7 @@ P011,atacadao,https://www.atacadao.com.br/farinha-de-trigo-dona-benta-tipo-1-231
 P012,atacadao,https://www.atacadao.com.br/farinha-de-mandioca-yoki-torrada-6277/p,variante,Só a Farinha de Mandioca Yoki Torrada 500g (a cesta não fixa o tipo; no Tenda é a fina).
 P013,atacadao,https://www.atacadao.com.br/macarrao-com-ovos-renata-espaguete-7647/p,achado,Macarrão com Ovos Renata Espaguete 500g.
 P014,atacadao,https://www.atacadao.com.br/macarrao-com-ovos-barilla-parafuso-74385/p,achado,Macarrão com Ovos Barilla Parafuso 500g.
-P015,atacadao,https://www.atacadao.com.br/molho-de-tomate-pomarola-tradicional-28220/p,achado,Molho de Tomate Pomarola Tradicional 340g. Há outra página igual (30466).
+P015,atacadao,https://www.atacadao.com.br/molho-de-tomate-pomarola-tradicional-78087/p,achado,Molho de Tomate Pomarola Tradicional 300g.
 P016,atacadao,https://www.atacadao.com.br/extrato-de-tomate-elefante-pote-com-300g-83714/p,achado,Extrato de Tomate Elefante 300g.
 P017,atacadao,https://www.atacadao.com.br/sal-cisne-refinado-extra-1675/p,achado,Sal Cisne Refinado Extra 1kg.
 P018,atacadao,https://www.atacadao.com.br/fuba-mimoso-yoki-34666/p,tamanho_diferente,Só Fubá Mimoso Yoki de 4 e 5 kg. Fica fora.
@@ -130,7 +130,7 @@ P028,atacadao,https://www.atacadao.com.br/atum-ralado-gomes-da-costa-oleo-lata-c
 P029,atacadao,https://www.atacadao.com.br/milho-verde-quero-lata-com-170g-65823/p,achado,Milho Verde Quero 170g (lata). Há outras páginas de 170g.
 P030,atacadao,https://www.atacadao.com.br/ervilha-quero-65822/p,achado,Ervilha Quero 170g.
 P031,atacadao,https://www.atacadao.com.br/vinagre-de-alcool-castelo-frasco-com-750ml-41256/p,achado,Vinagre de Álcool Castelo 750ml.
-P032,atacadao,,nao_achado,Só Sazón de outros sabores e caldos. Não há o completo.
+P032,atacadao,https://www.atacadao.com.br/tempero-sazon-frango-21746/p,achado,Tempero Sazón Frango 60g.
 P033,atacadao,https://www.atacadao.com.br/caldo-knorr-galinha-balance-caixeta-com-57g-54115/p,variante,Caldo Knorr Galinha Balance 57g (linha Balance).
 P034,atacadao,https://www.atacadao.com.br/leite-condensado-moca-tp-com-395g-26139/p,achado,Leite Condensado Moça 395g.
 P035,atacadao,https://www.atacadao.com.br/creme-de-leite-nestle-21220/p,achado,Creme de Leite Nestlé 200g.
@@ -146,11 +146,11 @@ P044,atacadao,https://www.atacadao.com.br/queijo-mussarela-fatiado-tirolez-88884
 P045,atacadao,https://www.atacadao.com.br/queijo-prato-tirolez-fatiado-88887/p,tamanho_diferente,Queijo prato fatiado Tirolez só vendido por quilo. Fica fora.
 P046,atacadao,https://www.atacadao.com.br/requeijao-vigor-tradicional-14830/p,achado,Requeijão Vigor Tradicional 200g.
 P047,atacadao,https://www.atacadao.com.br/iogurte-natural-nestle-integral-copo-com-170g-58375/p,achado,Iogurte Natural Nestlé Integral 170g.
-P048,atacadao,https://www.atacadao.com.br/iogurte-batavo-morango-69315/p,achado,"Iogurte Batavo Morango 1,25kg."
+P048,atacadao,https://www.atacadao.com.br/iogurte-batavo-morango-garrafa-com-1-15kg-75527/p,achado,"Iogurte Batavo Morango 1,15kg."
 P049,atacadao,https://www.atacadao.com.br/presunto-sadia-fatiado-51281/p,achado,Presunto Sadia Fatiado 200g.
 P050,atacadao,https://www.atacadao.com.br/queijo-minas-frescal-tirolez-85608/p,tamanho_diferente,Queijo Minas Frescal Tirolez só vendido por quilo. Fica fora.
-P051,atacadao,https://www.atacadao.com.br/ovo-branco-grande-polpa-bandeja-com-12-unidades-21826/p,achado,Ovo Branco Grande Polpa 12 un.
-P052,atacadao,https://www.atacadao.com.br/ovo-vermelho-grande-21852/p,achado,Ovo Vermelho Grande 12 un.
+P051,atacadao,,nao_achado,Ovos brancos só em bandeja de 12.
+P052,atacadao,,nao_achado,Ovos vermelhos só em bandeja de 12.
 P053,atacadao,https://www.atacadao.com.br/papel-higienico-neve-folha-dupla-30m-71657/p,achado,Papel Higiênico Neve Folha Dupla 30m 12 rolos.
 P054,atacadao,https://www.atacadao.com.br/papel-higienico-personal-vip-folha-dupla---30m-pacote-com-12-rolos-56936/p,variante,"Personal Vip Folha Dupla 30m, leve 12 pague 11."
 P055,atacadao,https://www.atacadao.com.br/sabonete-dove-branco-unidade-com-90g-25200/p,achado,Sabonete Dove Branco 90g.
@@ -176,7 +176,7 @@ P074,atacadao,https://www.atacadao.com.br/saco-de-lixo-dover-roll-azul-50l-6230/
 P075,atacadao,https://www.atacadao.com.br/toalha-de-papel-snob-60-folhas-24318/p,achado,Toalha de Papel Snob 2 rolos.
 P076,atacadao,https://www.atacadao.com.br/sabao-em-barra-ype-vermelho-pacote-com-5x180g-75081/p,variante,Sabão em Barra Ypê Vermelho 5x180g. A cesta não fixa o tipo.
 P077,atacadao,https://www.atacadao.com.br/alcool-desinfetante-montenegro-70%C2%B0inpm-frasco-com-1l-76610/p,achado,Álcool Desinfetante Montenegro 70° INPM 1L.
-P078,atacadao,https://www.atacadao.com.br/inseticida-aerosol-sbp-multi-inseticida-tubo-com-300ml-23808/p,achado,Inseticida SBP Multi Inseticida 300ml.
+P078,atacadao,https://www.atacadao.com.br/inseticida-aerossol-sbp-multi-inseticida-ultra-frasco-com-360ml-80694/p,achado,Inseticida Aerossol SBP Multi Inseticida Ultra 360ml.
 P079,atacadao,https://www.atacadao.com.br/file-de-peito-de-frango-sadia-congelado-44343/p,variante,Filé de Peito de Frango Sadia Congelado 1kg. Mesmo produto do Tenda. Comparar por kg.
 P080,atacadao,https://www.atacadao.com.br/coxa-e-sobrecoxa-de-frango-aurora-congelada-9737/p,variante,Coxa e Sobrecoxa Aurora Congelada 1kg. Comparar por kg.
 P081,atacadao,https://www.atacadao.com.br/frango-inteiro-sadia-congelado-sem-miudos-62563/p,achado,"Frango Inteiro Sadia Congelado, por quilo."
@@ -213,7 +213,7 @@ P011,carrefour,https://mercado.carrefour.com.br/farinha-de-trigo-tradicional-don
 P012,carrefour,https://mercado.carrefour.com.br/farinha-de-mandioca-tipo-1-fina-yoki-pacote-500g-201324/p,achado,Farinha de Mandioca Tipo 1 Fina Yoki Pacote 500g.
 P013,carrefour,https://mercado.carrefour.com.br/macarrao-espaguete-renata-com-ovos-n-9-500g-7162243/p,achado,Macarrão Espaguete Renata com Ovos Nº 9 500g. Espaguete nº 9.
 P014,carrefour,https://mercado.carrefour.com.br/macarrao-fusilli-grano-duro-barilla-500g-171727/p,variante,"Macarrão Fusilli Grano Duro Barilla 500g. Fusilli (parafuso) grano duro, não com ovos."
-P015,carrefour,https://mercado.carrefour.com.br/molho-de-tomate-tradicional-pomarola-sache-300g-4028287/p,tamanho_diferente,Molho de Tomate Tradicional Pomarola Sachê 300g. Não há o de 340g; o mais perto é o sachê de 300g. Fica fora.
+P015,carrefour,https://mercado.carrefour.com.br/molho-de-tomate-tradicional-pomarola-sache-300g-4028287/p,achado,Molho de Tomate Tradicional Pomarola Sachê 300g.
 P016,carrefour,https://mercado.carrefour.com.br/extrato-de-tomate-tradicional-elefante-pote-300g-3014800/p,variante,"Extrato de Tomate Tradicional Elefante Pote 300g. Pote, como no Tenda."
 P017,carrefour,,nao_achado,Sal Cisne não está no sitemap.
 P018,carrefour,,nao_achado,Fubá Yoki não está no sitemap.
@@ -230,7 +230,7 @@ P028,carrefour,https://mercado.carrefour.com.br/atum-ralado-em-oleo-gomes-da-cos
 P029,carrefour,https://mercado.carrefour.com.br/milho-verde-quero-lata-170g-5784913/p,achado,Milho Verde Quero Lata 170g.
 P030,carrefour,https://mercado.carrefour.com.br/ervilha-quero-lata-170g-5783941/p,achado,Ervilha Quero Lata 170g.
 P031,carrefour,https://mercado.carrefour.com.br/vinagre-de-alcool-castelo-750ml-204986/p,achado,Vinagre de Álcool Castelo 750ml.
-P032,carrefour,,nao_achado,Só Sazón de outros sabores.
+P032,carrefour,https://mercado.carrefour.com.br/tempero-pronto-para-frango-com-sal-sazon-60g-204056/p,achado,Tempero Pronto para Frango Sazón 60g.
 P033,carrefour,https://mercado.carrefour.com.br/caldo-knorr-galinha-57g-6-cubos-3054128/p,achado,Caldo Knorr Galinha 57g 6 cubos.
 P034,carrefour,https://mercado.carrefour.com.br/leite-condensado-moca-tradicional-lata-abre-facil-395g-429244/p,achado,Leite Condensado Moça Tradicional Lata Abre Fácil 395g. Lata.
 P035,carrefour,https://mercado.carrefour.com.br/creme-de-leite-nestle-200g-515647/p,achado,Creme de Leite NESTLÉ 200g.
@@ -246,11 +246,11 @@ P044,carrefour,https://mercado.carrefour.com.br/queijo-mucarela-fatiada-tirolez-
 P045,carrefour,https://mercado.carrefour.com.br/queijo-mucarela-fatiada-light-sem-lactose-tirolez-150g-5036950/p,achado,Queijo Muçarela Fatiada Light sem Lactose Tirolez 150g.
 P046,carrefour,https://mercado.carrefour.com.br/requeijao-cremoso-vigor-200g-7522150/p,achado,Requeijão Cremoso Vigor 200g.
 P047,carrefour,https://mercado.carrefour.com.br/iogurte-integral-nestle-tradicional-170g-8706719/p,achado,Iogurte Integral Nestlé Tradicional 170g.
-P048,carrefour,https://mercado.carrefour.com.br/iogurte-parcialmente-desnatado-de-morango-batavo-125-kg-embalagem-economica-6190634/p,tamanho_diferente,"Iogurte Parcialmente Desnatado Morango Batavo Garrafa 1,15kg Embalagem Econômica. Só a garrafa de 1,15kg. Fica fora."
+P048,carrefour,https://mercado.carrefour.com.br/iogurte-parcialmente-desnatado-morango-batavo-probio2-garrafa-1-15kg-embalagem-economica-3604977/p,variante,"Iogurte Morango Batavo Probio2 Garrafa 1,15kg. Linha Probio2."
 P049,carrefour,https://mercado.carrefour.com.br/presunto-cozido-fatiado-soltissimo-sadia-200-g-9739874/p,achado,"Presunto Cozido Fatiado Soltíssimo Sadia 200 g. Linha Soltíssimo, fatiado 200g."
 P050,carrefour,,nao_achado,Não há minas frescal Tirolez.
-P051,carrefour,https://mercado.carrefour.com.br/ovos-brancos-carrefour-20-unidades-5286387/p,tamanho_diferente,Ovos Brancos Carrefour 20 Unidades. Só bandeja de 20. Fica fora.
-P052,carrefour,https://mercado.carrefour.com.br/ovos-vermelhos-carrefour-20-unidades-8453624/p,tamanho_diferente,Ovos Vermelhos Carrefour 20 Unidades. Só bandeja de 20. Fica fora.
+P051,carrefour,https://mercado.carrefour.com.br/ovos-brancos-carrefour-20-unidades-5286387/p,achado,Ovos Brancos Carrefour 20 unidades.
+P052,carrefour,https://mercado.carrefour.com.br/ovos-vermelhos-carrefour-20-unidades-8453624/p,achado,Ovos Vermelhos Carrefour 20 unidades.
 P053,carrefour,https://mercado.carrefour.com.br/papel-higienico-folha-dupla-neutro-neve-toque-da-seda-30-metros-leve-12-pague-11-unidades-3171264/p,variante,"Papel Higiênico Folha Dupla Neutro Neve Toque da Seda 30 Metros Leve 12 Pague 11 Unidades. Leve 12 pague 11, como no Tenda."
 P054,carrefour,https://mercado.carrefour.com.br/papel-higienico-folha-dupla-neutro-personal-vip-20m-leve-18-pague-16-unidades-6930689/p,tamanho_diferente,Papel Higiênico Folha Dupla Neutro Personal Vip 20m Leve 18 Pague 16 Unidades. Só pacotes de 18 e 20. Fica fora.
 P055,carrefour,https://mercado.carrefour.com.br/sabonete-em-barra-dove-original-90g-7812973/p,achado,Sabonete em Barra Dove Original 90g.
@@ -276,7 +276,7 @@ P074,carrefour,https://mercado.carrefour.com.br/saco-de-lixo-dover-roll-super-fo
 P075,carrefour,,nao_achado,Snob não está no sitemap.
 P076,carrefour,https://mercado.carrefour.com.br/sabao-em-barra-ype-neutro-800g-6571026/p,tamanho_diferente,Sabão em Barra Ypê Neutro 800g. Só barra de 800g. Fica fora.
 P077,carrefour,,nao_achado,Não há álcool líquido 70% de 1L.
-P078,carrefour,https://mercado.carrefour.com.br/inseticida-multi-insetos-sbp-aerosol-ultra-360ml-5412013/p,tamanho_diferente,Inseticida Multi Insetos SBP Aerosol Ultra 360ml. Só 360ml. Fica fora.
+P078,carrefour,https://mercado.carrefour.com.br/inseticida-multi-insetos-sbp-aerosol-ultra-360ml-5412013/p,achado,Inseticida Multi Insetos SBP Aerosol Ultra 360ml.
 P079,carrefour,https://mercado.carrefour.com.br/file-de-frango-peito-congelado-sem-osso-sadia-1kg-7087942/p,variante,"Filé de Frango Peito Congelado sem Osso Sadia 1Kg. Filé de peito congelado Sadia 1kg, como no Tenda e no Atacadão. Comparar por kg."
 P080,carrefour,https://mercado.carrefour.com.br/pedacos-de-sobrecoxa-de-frango-congelado-sadia-1kg-8619808/p,variante,Pedaços de Sobrecoxa de Frango Congelado Sadia 1Kg. Pedaços de sobrecoxa Sadia 1kg. Comparar por kg.
 P081,carrefour,,nao_achado,Frango inteiro Sadia não está no sitemap.
@@ -313,7 +313,7 @@ P011,pao-de-acucar,https://www.paodeacucar.com/produto/43619/farinha-de-trigo-tr
 P012,pao-de-acucar,https://www.paodeacucar.com/produto/44521/farinha-de-mandioca-crua-yoki-pacote-500g,variante,Farinha de Mandioca Crua Yoki 500g. A fina só em 1kg; a crua de 500g é o mais perto.
 P013,pao-de-acucar,https://www.paodeacucar.com/produto/159771/macarrao-de-semola-com-ovos-espaguete-8-renata-pacote-500g,achado,Macarrão de Sêmola com Ovos Espaguete 8 Renata 500g.
 P014,pao-de-acucar,https://www.paodeacucar.com/produto/279929/macarrao-com-ovos-parafuso-barilla-pacote-500g,achado,Macarrão com Ovos Parafuso Barilla 500g.
-P015,pao-de-acucar,https://www.paodeacucar.com/produto/1404204/molho-de-tomate-pomarola-tradicional-300g,tamanho_diferente,Molho de Tomate Pomarola Tradicional 300g. Não há o de 340g. Fica fora.
+P015,pao-de-acucar,https://www.paodeacucar.com/produto/1404204/molho-de-tomate-pomarola-tradicional-300g,achado,Molho de Tomate Pomarola Tradicional 300g.
 P016,pao-de-acucar,https://www.paodeacucar.com/produto/1571148/extrato-de-tomate-elefante-pote-300g,variante,"Extrato de Tomate Elefante Pote 300g. Pote, como no Tenda e no Carrefour."
 P017,pao-de-acucar,https://www.paodeacucar.com/produto/11672/sal-refinado-cisne-tradicional-pacote-1kg,achado,Sal Refinado Cisne 1kg.
 P018,pao-de-acucar,https://www.paodeacucar.com/produto/52448/fuba-de-milho-yoki-pacote-1kg,achado,Fubá de Milho Yoki 1kg.
@@ -330,7 +330,7 @@ P028,pao-de-acucar,https://www.paodeacucar.com/produto/44884/atum-ralado-ao-natu
 P029,pao-de-acucar,https://www.paodeacucar.com/produto/452867/milho-verde-em-conserva-quero-lata-170g,achado,Milho Verde em Conserva Quero 170g.
 P030,pao-de-acucar,https://www.paodeacucar.com/produto/452869/ervilha-em-conserva-quero-lata-170g,achado,Ervilha em Conserva Quero 170g.
 P031,pao-de-acucar,https://www.paodeacucar.com/produto/90775/vinagre-de-alcool-castelo-750ml,achado,Vinagre de Álcool Castelo 750ml.
-P032,pao-de-acucar,,nao_achado,"Só Sazón de outros sabores (carnes, frango, feijão); não há o tempero completo."
+P032,pao-de-acucar,https://www.paodeacucar.com/produto/113854/tempero-po-para-frango-sazon-pacote-60g-12-unidades,achado,Tempero em Pó para Frango Sazón 60g.
 P033,pao-de-acucar,https://www.paodeacucar.com/produto/111995/caldo-knorr-galinha-12-cubos-114g,tamanho_diferente,"Caldo Knorr Galinha 12 cubos 114g. A caixa de 57g só em carne, legumes e bacon. Fica fora."
 P034,pao-de-acucar,https://www.paodeacucar.com/produto/50670/leite-condensado-integral-moca-lata-395g,achado,Leite Condensado Integral Moça Lata 395g.
 P035,pao-de-acucar,https://www.paodeacucar.com/produto/43804/creme-de-leite-uht-leve-homogeneizado-nestle-caixa-200g,achado,Creme de Leite UHT Leve Nestlé Caixa 200g.
@@ -346,10 +346,10 @@ P044,pao-de-acucar,https://www.paodeacucar.com/produto/353791/queijo-mussarela-f
 P045,pao-de-acucar,https://www.paodeacucar.com/produto/353790/queijo-prato-fatiado-tirolez-150g,achado,Queijo Prato Fatiado Tirolez 150g.
 P046,pao-de-acucar,https://www.paodeacucar.com/produto/69603/requeijao-cremoso-tradicional-vigor-copo-200g,achado,Requeijão Cremoso Tradicional Vigor Copo 200g.
 P047,pao-de-acucar,,nao_achado,Não há iogurte natural Nestlé; só Batavo e Vigor.
-P048,pao-de-acucar,https://www.paodeacucar.com/produto/478011/iogurte-parcialmente-desnatado-morango-batavo-garrafa-1-15kg-embalagem-economica,tamanho_diferente,"Iogurte Parcialmente Desnatado Morango Batavo Garrafa 1,15kg. Só a garrafa de 1,15kg. Fica fora."
+P048,pao-de-acucar,https://www.paodeacucar.com/produto/478011/iogurte-parcialmente-desnatado-morango-batavo-garrafa-1-15kg-embalagem-economica,achado,"Iogurte Parcialmente Desnatado Morango Batavo Garrafa 1,15kg."
 P049,pao-de-acucar,https://www.paodeacucar.com/produto/304858/presunto-cozido-fatiado-sadia-soltissimo-200g,achado,Presunto Cozido Fatiado Sadia Soltíssimo 200g.
 P050,pao-de-acucar,https://www.paodeacucar.com/produto/60145/queijo-minas-frescal-tirolez-500g,achado,"Queijo Minas Frescal Tirolez 500g. Peso variável: a página dá o preço do kg, e o coletor guarda esse."
-P051,pao-de-acucar,https://www.paodeacucar.com/produto/459562/ovos-brancos-grandes-bandeja-com-20-unidades,tamanho_diferente,Ovos Brancos Grandes Bandeja 20 Unidades. Só bandeja de 20. Fica fora.
+P051,pao-de-acucar,https://www.paodeacucar.com/produto/459562/ovos-brancos-grandes-bandeja-com-20-unidades,achado,Ovos Brancos Grandes Bandeja 20 unidades.
 P052,pao-de-acucar,,nao_achado,Não há ovos vermelhos comuns; só orgânicos e caipiras com 10 unidades.
 P053,pao-de-acucar,https://www.paodeacucar.com/produto/568597/papel-higienico-folha-dupla-neutro-neve-toque-da-seda-30m-pacote-leve-12-pague-11-unidades,variante,"Papel Higiênico Folha Dupla Neve Toque da Seda 30m Leve 12 Pague 11. Leve 12 pague 11, como no Tenda."
 P054,pao-de-acucar,https://www.paodeacucar.com/produto/284478/papel-higienico-folha-dupla-neutro-personal-vip-30m-pacote-leve-12-pague-11-unidades,variante,Papel Higiênico Folha Dupla Personal Vip 30m Leve 12 Pague 11. Leve 12 pague 11.
@@ -376,7 +376,7 @@ P074,pao-de-acucar,,nao_achado,Não há saco de lixo Dover Roll; só Embalixo e 
 P075,pao-de-acucar,https://www.paodeacucar.com/produto/1233079/toalha-de-papel-snob-folha-dupla-2-unidades,achado,Toalha de Papel Snob Folha Dupla 2 unidades.
 P076,pao-de-acucar,https://www.paodeacucar.com/produto/804250/sabao-barra-neutro-original-ype-pacote-800g-5-unidades,achado,Sabão em Barra Neutro Ypê 5 unidades 800g.
 P077,pao-de-acucar,,nao_achado,Não há álcool líquido 70% de 1L; só 46º.
-P078,pao-de-acucar,https://www.paodeacucar.com/produto/1449830/inseticida-aerossol-a-base-de-agua-sbp-ultra-frasco-360ml-spray,tamanho_diferente,Inseticida Aerossol SBP Ultra 360ml. Só 360ml ou mais. Fica fora.
+P078,pao-de-acucar,https://www.paodeacucar.com/produto/1449830/inseticida-aerossol-a-base-de-agua-sbp-ultra-frasco-360ml-spray,achado,Inseticida Aerossol à Base de Água SBP Ultra 360ml.
 P079,pao-de-acucar,https://www.paodeacucar.com/produto/65885/file-de-peito-de-frango-congelado-sem-pele-sem-osso-sadia-1kg,variante,"Filé de Peito de Frango Congelado Sadia 1kg, como no Tenda e no Carrefour. Comparar por kg."
 P080,pao-de-acucar,https://www.paodeacucar.com/produto/67565/sobrecoxa-de-frango-congelada-sadia-1kg,variante,"Sobrecoxa de Frango Congelada Sadia 1kg, como no Carrefour. Comparar por kg."
 P081,pao-de-acucar,,nao_achado,Não há frango inteiro Sadia; só o orgânico.
@@ -413,7 +413,7 @@ P011,santa-luzia,https://www.santaluzia.com.br/farinha-de-trigo-dona-benta-1kg-5
 P012,santa-luzia,https://www.santaluzia.com.br/farinha-de-mandioca-crua-yoki-500g-539155/p,variante,Farinha de Mandioca Crua Yoki 500g.
 P013,santa-luzia,https://www.santaluzia.com.br/macarrao-renata-ovos-espaguete-8-516260/p,achado,Macarrão Renata com Ovos Espaguete 8 500g.
 P014,santa-luzia,,nao_achado,Não há parafuso Barilla com ovos; só fusilli integral e sem glúten.
-P015,santa-luzia,https://www.santaluzia.com.br/molho-de-tomate-tradicional-pomarola-300g-3120732/p,tamanho_diferente,Molho de Tomate Tradicional Pomarola 300g. Não há o de 340g. Fica fora.
+P015,santa-luzia,https://www.santaluzia.com.br/molho-de-tomate-tradicional-pomarola-300g-3120732/p,achado,Molho de Tomate Tradicional Pomarola 300g.
 P016,santa-luzia,https://www.santaluzia.com.br/extrato-de-tomate-elefante-cargill-300g-3076423/p,achado,Extrato de Tomate Elefante 300g.
 P017,santa-luzia,https://www.santaluzia.com.br/sal-refinado-tradicional-cisne-1kg-648841/p,achado,Sal Refinado Cisne 1kg.
 P018,santa-luzia,https://www.santaluzia.com.br/fuba-mimoso-de-milho-yoki-500g-529435/p,tamanho_diferente,Fubá Mimoso Yoki 500g. Só o de 500g. Fica fora.
@@ -430,7 +430,7 @@ P028,santa-luzia,https://www.santaluzia.com.br/atum-ralado-em-oleo-gomes-da-cost
 P029,santa-luzia,https://www.santaluzia.com.br/milho-verde-quero-280g-127612/p,tamanho_diferente,Milho Verde Quero 280g. Só a lata de 280g. Fica fora.
 P030,santa-luzia,https://www.santaluzia.com.br/ervilha-quero-280g-127604/p,tamanho_diferente,Ervilha Quero 280g. Só a lata de 280g. Fica fora.
 P031,santa-luzia,https://www.santaluzia.com.br/vinagre-de-alcool-castelo-750ml-512583/p,achado,Vinagre de Álcool Castelo 750ml.
-P032,santa-luzia,,nao_achado,Só Sazón de outros sabores; não há o tempero completo.
+P032,santa-luzia,https://www.santaluzia.com.br/tempero-para-frango-sazon-12x5g-511005/p,achado,Tempero para Frango Sazón 12 sachês de 5g (60g).
 P033,santa-luzia,https://www.santaluzia.com.br/caldo-de-galinha-knorr-57g-512273/p,achado,Caldo de Galinha Knorr 57g.
 P034,santa-luzia,https://www.santaluzia.com.br/leite-condensado-integral-moca-395g-502502/p,achado,Leite Condensado Integral Moça 395g.
 P035,santa-luzia,https://www.santaluzia.com.br/creme-de-leite-original-nestle-200g-574104/p,achado,Creme de Leite Original Nestlé 200g.
@@ -446,11 +446,11 @@ P044,santa-luzia,https://www.santaluzia.com.br/queijo-mussarela-fatiado-light-se
 P045,santa-luzia,https://www.santaluzia.com.br/queijo-prato-fatiado-light-tirolez---150g-1171119/p,variante,Queijo Prato Fatiado Light Tirolez 150g.
 P046,santa-luzia,https://www.santaluzia.com.br/requeijao-tradicional-vigor---200g-1010328/p,achado,Requeijão Tradicional Vigor 200g.
 P047,santa-luzia,https://www.santaluzia.com.br/iogurte-natural-nestle---170g-935387/p,achado,Iogurte Natural Nestlé 170g.
-P048,santa-luzia,https://www.santaluzia.com.br/iogurte-morango-probio2-batavo--115kg-3237915/p,tamanho_diferente,"Iogurte Morango Probio2 Batavo 1,15kg. Só garrafa de 1,15kg. Fica fora."
+P048,santa-luzia,https://www.santaluzia.com.br/iogurte-morango-probio2-batavo--115kg-3237915/p,variante,"Iogurte Morango Probio2 Batavo 1,15kg. Linha Probio2."
 P049,santa-luzia,https://www.santaluzia.com.br/presunto-cozido-fatiado-soltissimo-sadia--200g-1109138/p,achado,Presunto Cozido Fatiado Soltíssimo Sadia 200g.
 P050,santa-luzia,,nao_achado,Não há queijo minas frescal Tirolez; só creme de queijo minas.
-P051,santa-luzia,https://www.santaluzia.com.br/ovos-brancos-grandes-planalto---20-un-3226972/p,tamanho_diferente,Ovos Brancos Grandes Planalto 20 unidades. Só bandejas de 10 e 20. Fica fora.
-P052,santa-luzia,https://www.santaluzia.com.br/ovos-planalto-vermelho-grande---10-uni-3226913/p,tamanho_diferente,Ovos Vermelhos Grandes Planalto 10 unidades. Só bandejas de 10 e 20. Fica fora.
+P051,santa-luzia,https://www.santaluzia.com.br/ovos-brancos-grandes-planalto---20-un-3226972/p,achado,Ovos Brancos Grandes Planalto 20 unidades.
+P052,santa-luzia,https://www.santaluzia.com.br/ovos-vermelhos-grandes-planalto---20-un-3226980/p,achado,Ovos Vermelhos Grandes Planalto 20 unidades.
 P053,santa-luzia,https://www.santaluzia.com.br/papel-higienico-neutro-l18-p16-neve---1196650/p,tamanho_diferente,Papel Higiênico Neve Neutro Leve 18 Pague 16. Não há pacote de 12 com folha dupla. Fica fora.
 P054,santa-luzia,https://www.santaluzia.com.br/papel-higienico-neutro-tripla-folha-personal-vip3---12x20m-3187837/p,variante,Papel Higiênico Personal Vip3 Folha Tripla 12 rolos de 20m.
 P055,santa-luzia,https://www.santaluzia.com.br/sabonete-cremoso-dove-90g--832065/p,achado,Sabonete Cremoso Dove 90g (o Dove original).
@@ -476,7 +476,7 @@ P074,santa-luzia,https://www.santaluzia.com.br/saco-de-lixo-super-forte-azul-50-
 P075,santa-luzia,https://www.santaluzia.com.br/papel-toalha-2-unidades--snob---120-folhas-3159680/p,achado,Papel Toalha Snob 2 rolos.
 P076,santa-luzia,https://www.santaluzia.com.br/sabao-em-barra-glicerinado-neutro-5-unidades-de-180g-ype-3099288/p,variante,Sabão em Barra Glicerinado Neutro Ypê 5 unidades de 180g.
 P077,santa-luzia,,nao_achado,Não há álcool líquido 70% de 1L; só 46º.
-P078,santa-luzia,https://www.santaluzia.com.br/multi-inseticida-de-citronela-sbp-380ml-936898/p,tamanho_diferente,Multi-Inseticida SBP Citronela 380ml. Só 380ml ou mais. Fica fora.
+P078,santa-luzia,https://www.santaluzia.com.br/multi-inseticida-de-citronela-sbp-380ml-936898/p,tamanho_diferente,Multi-Inseticida SBP Citronela 380ml. Não há o de 360ml. Fica fora.
 P079,santa-luzia,,nao_achado,"O site não vende carnes, frutas e verduras frescas pela internet."
 P080,santa-luzia,,nao_achado,"O site não vende carnes, frutas e verduras frescas pela internet."
 P081,santa-luzia,,nao_achado,"O site não vende carnes, frutas e verduras frescas pela internet."
@@ -513,7 +513,7 @@ P011,sonda,https://www.sondadelivery.com.br/delivery/produto/farinha-de-trigo-tr
 P012,sonda,https://www.sondadelivery.com.br/delivery/produto/farinha-de-mandioca-torrada-yoki-500g/1000002104,variante,Farinha de Mandioca Torrada Yoki 500g.
 P013,sonda,,nao_achado,Não há espaguete Renata com ovos; só o orgânico.
 P014,sonda,https://www.sondadelivery.com.br/delivery/produto/massa-com-ovos-parafuso-barilla-pacote-500g/1000002750,achado,Massa com Ovos Parafuso Barilla 500g.
-P015,sonda,https://www.sondadelivery.com.br/delivery/produto/molho-de-tomate-tradicional-pomarola-sache-300g/1000042236,tamanho_diferente,Molho de Tomate Tradicional Pomarola Sachê 300g. Não há o de 340g. Fica fora.
+P015,sonda,https://www.sondadelivery.com.br/delivery/produto/molho-de-tomate-tradicional-pomarola-sache-300g/1000042236,achado,Molho de Tomate Tradicional Pomarola Sachê 300g.
 P016,sonda,https://www.sondadelivery.com.br/delivery/produto/extrato-de-tomate-elefante-pote-300g/1000045596,variante,"Extrato de Tomate Elefante Pote 300g. Pote, como no Tenda e no Carrefour."
 P017,sonda,https://www.sondadelivery.com.br/delivery/produto/sal-refinado-cisne-pacote-1kg/1000002452,achado,Sal Refinado Cisne 1kg.
 P018,sonda,,nao_achado,Não há fubá mimoso Yoki; só o pré-cozido.
@@ -530,7 +530,7 @@ P028,sonda,https://www.sondadelivery.com.br/delivery/produto/atum-ralado-oleo-go
 P029,sonda,https://www.sondadelivery.com.br/delivery/produto/milho-verde-quero-lata-170g/1000031531,achado,Milho Verde Quero Lata 170g.
 P030,sonda,https://www.sondadelivery.com.br/delivery/produto/ervilha-lata-quero-170g/1000031533,achado,Ervilha Quero Lata 170g.
 P031,sonda,https://www.sondadelivery.com.br/delivery/produto/vinagre-de-alcool-ervas-finas-castelo-750ml/1000002027,variante,Vinagre de Álcool Ervas Finas Castelo 750ml. O comum não aparece.
-P032,sonda,,nao_achado,Só Sazón de outros sabores; não há o tempero completo.
+P032,sonda,https://www.sondadelivery.com.br/delivery/produto/tempero-frango-sazon-60g/1000001946,achado,Tempero Frango Sazón 60g.
 P033,sonda,,nao_achado,A página do Caldo Knorr Galinha 57g tem um endereço com defeito que o próprio site bloqueia.
 P034,sonda,https://www.sondadelivery.com.br/delivery/produto/leite-condensado-integral-moca-lata-395g/1000004548,achado,Leite Condensado Integral Moça Lata 395g.
 P035,sonda,https://www.sondadelivery.com.br/delivery/produto/creme-de-leite-nestle-200g/1000004986,achado,Creme de Leite Nestlé 200g.
@@ -549,8 +549,8 @@ P047,sonda,,nao_achado,"Não há iogurte natural Nestlé; há Batavo, Danone e o
 P048,sonda,,nao_achado,Não há iogurte de morango Batavo em garrafa; só copos e potes pequenos.
 P049,sonda,https://www.sondadelivery.com.br/delivery/produto/presunto-cozido-sadia-soltissimo-fatiado-200g/1000011200,achado,Presunto Cozido Sadia Soltíssimo Fatiado 200g.
 P050,sonda,https://www.sondadelivery.com.br/delivery/produto/queijo-minas-frescal-original-tirolez-150g/1000047045,tamanho_diferente,Queijo Minas Frescal Tirolez 150g. Só o de 150g. Fica fora.
-P051,sonda,https://www.sondadelivery.com.br/delivery/produto/ovos-branco-tipo-extra-mantiqueira-pvc-20-unidades/1000009969,tamanho_diferente,Ovos Brancos Tipo Extra Mantiqueira 20 unidades. Só bandejas de 10 e 20. Fica fora.
-P052,sonda,https://www.sondadelivery.com.br/delivery/produto/ovos-vermelho-grande-mantiqueira-happy-eggs-20-unidades/1000037371,tamanho_diferente,Ovos Vermelhos Grandes Mantiqueira Happy Eggs 20 unidades. Só bandejas de 10 e 20. Fica fora.
+P051,sonda,https://www.sondadelivery.com.br/delivery/produto/ovos-branco-tipo-extra-mantiqueira-pvc-20-unidades/1000009969,variante,"Ovos Brancos Tipo Extra Mantiqueira 20 unidades (tipo extra, não grande)."
+P052,sonda,https://www.sondadelivery.com.br/delivery/produto/ovos-vermelho-grande-mantiqueira-happy-eggs-20-unidades/1000037371,achado,Ovos Vermelhos Grandes Mantiqueira Happy Eggs 20 unidades.
 P053,sonda,https://www.sondadelivery.com.br/delivery/produto/papel-higienico-folha-dupla-neutro-neve-30m-pacote-leve-12-pague-11-unidades/1000021051,variante,"Papel Higiênico Folha Dupla Neve 30m Leve 12 Pague 11. Leve 12 pague 11, como no Tenda."
 P054,sonda,https://www.sondadelivery.com.br/delivery/produto/papel-higienico-folha-dupla-neutro-20m-personal-leve-12-pague-11-unidades/1000042021,variante,Papel Higiênico Folha Dupla Personal 20m Leve 12 Pague 11. Rolo de 20m.
 P055,sonda,https://www.sondadelivery.com.br/delivery/produto/sabonete-em-barra-original-dove-90g/1000015198,achado,Sabonete em Barra Original Dove 90g.
@@ -576,7 +576,7 @@ P074,sonda,https://www.sondadelivery.com.br/delivery/produto/saco-para-lixo-cicl
 P075,sonda,,nao_achado,Não há papel toalha Snob.
 P076,sonda,https://www.sondadelivery.com.br/delivery/produto/sabao-em-barra-neutro-original-ype-pacote-800g-5-unidades/1000042897,achado,Sabão em Barra Neutro Original Ypê 5 unidades 800g.
 P077,sonda,,nao_achado,Não há álcool líquido 70% de 1L.
-P078,sonda,https://www.sondadelivery.com.br/delivery/produto/inseticida-ultra-base-agua-sbp-360ml/1000042471,tamanho_diferente,Inseticida SBP Ultra Base Água 360ml. Só 360ml ou mais. Fica fora.
+P078,sonda,https://www.sondadelivery.com.br/delivery/produto/inseticida-ultra-base-agua-sbp-360ml/1000042471,achado,Inseticida SBP Ultra Base Água 360ml.
 P079,sonda,https://www.sondadelivery.com.br/delivery/produto/file-de-peito-de-frango-sadia-congelado-1kg/1000012945,variante,"Filé de Peito de Frango Sadia Congelado 1kg, como no Tenda e no Carrefour. Comparar por kg."
 P080,sonda,https://www.sondadelivery.com.br/delivery/produto/sobrecoxa-de-frango-cortes-sadia-congelado-1kg/1000013274,variante,"Sobrecoxa de Frango Sadia Cortes Congelado 1kg, como no Carrefour. Comparar por kg."
 P081,sonda,,nao_achado,Não há frango inteiro Sadia.
@@ -613,7 +613,7 @@ P011,hirota,https://www.lojahirota.com.br/produto/777/farinha-de-trigo-dona-bent
 P012,hirota,https://www.lojahirota.com.br/produto/5646/farinha-de-mandioca-yoki-500g-crua,variante,Farinha de Mandioca Yoki Crua 500g.
 P013,hirota,https://www.lojahirota.com.br/produto/4335/massa-espaguete-renata-com-ovos-numero-8-500gr,achado,Massa Espaguete Renata com Ovos Número 8 500g.
 P014,hirota,https://www.lojahirota.com.br/produto/8868/macarrao-com-ovos-barilla-parafuso-500g,achado,Macarrão com Ovos Barilla Parafuso 500g.
-P015,hirota,https://www.lojahirota.com.br/produto/4303/molho-pomarola-trad-sache-300g,tamanho_diferente,Molho Pomarola Tradicional Sachê 300g. Não há o de 340g. Fica fora.
+P015,hirota,https://www.lojahirota.com.br/produto/4303/molho-pomarola-trad-sache-300g,achado,Molho Pomarola Tradicional Sachê 300g.
 P016,hirota,https://www.lojahirota.com.br/produto/14526/extrato-de-tomate-elefante-pote-300g,variante,"Extrato de Tomate Elefante Pote 300g. Pote, como no Tenda e no Carrefour."
 P017,hirota,https://www.lojahirota.com.br/produto/3153/sal-refinado-tradicional-cisne-1kg,achado,Sal Refinado Tradicional Cisne 1kg.
 P018,hirota,https://www.lojahirota.com.br/produto/5922/fuba-mimoso-yoki-500g,tamanho_diferente,Fubá Mimoso Yoki 500g. Só o de 500g. Fica fora.
@@ -630,7 +630,7 @@ P028,hirota,https://www.lojahirota.com.br/produto/3747/atum-gomes-da-costa-ralad
 P029,hirota,https://www.lojahirota.com.br/produto/1129/milho-verde-quero-conserva-lt-170g,achado,Milho Verde Quero Lata 170g.
 P030,hirota,https://www.lojahirota.com.br/produto/2266/ervilha-em-conserva-quero-lata-170g,achado,Ervilha em Conserva Quero Lata 170g.
 P031,hirota,https://www.lojahirota.com.br/produto/3028/vinagre-castelo-de-alcool-750ml,achado,Vinagre Castelo de Álcool 750ml.
-P032,hirota,,nao_achado,Só Sazón de outros sabores; não há o tempero completo.
+P032,hirota,https://www.lojahirota.com.br/produto/6697/tempero-sazon-frango-60g,achado,Tempero Sazón Frango 60g.
 P033,hirota,https://www.lojahirota.com.br/produto/2433/caldo-knorr-galinha-6-cubos,achado,Caldo Knorr Galinha 6 cubos (57g).
 P034,hirota,https://www.lojahirota.com.br/produto/6677/leite-condensado-moca-tradicional-nestle-395g,achado,Leite Condensado Moça Tradicional 395g.
 P035,hirota,https://www.lojahirota.com.br/produto/3040/creme-de-leite-nestle-tradicional-200g,achado,Creme de Leite Nestlé Tradicional 200g.
@@ -646,7 +646,7 @@ P044,hirota,,nao_achado,Não há muçarela fatiada Tirolez de 150g.
 P045,hirota,,nao_achado,Não há queijo prato fatiado Tirolez de 150g.
 P046,hirota,https://www.lojahirota.com.br/produto/1690/requeijao-vigor-cremoso-tradicional-200g,achado,Requeijão Vigor Cremoso Tradicional 200g.
 P047,hirota,https://www.lojahirota.com.br/produto/5767/iogurte-nestle-natural-com-mel-170g,variante,Iogurte Nestlé Natural com Mel 170g. O natural integral de 170g não aparece.
-P048,hirota,https://www.lojahirota.com.br/produto/3163/iogurte-batavo-pz-1150g-morango,tamanho_diferente,"Iogurte Batavo Morango 1,15kg. Só a garrafa de 1,15kg. Fica fora."
+P048,hirota,https://www.lojahirota.com.br/produto/3163/iogurte-batavo-pz-1150g-morango,variante,"Iogurte Batavo Pense Zero Morango 1,15kg. Linha zero lactose."
 P049,hirota,https://www.lojahirota.com.br/produto/5826/presunto-cozido-fatiado-soltissimo-sadia-200g,achado,Presunto Cozido Fatiado Soltíssimo Sadia 200g.
 P050,hirota,,nao_achado,Não há queijo minas frescal Tirolez.
 P051,hirota,,nao_achado,Não há ovos à venda no site.
@@ -676,7 +676,7 @@ P074,hirota,,nao_achado,Não há saco de lixo Dover Roll.
 P075,hirota,,nao_achado,Não há papel toalha Snob.
 P076,hirota,,nao_achado,Não há sabão em barra Ypê.
 P077,hirota,,nao_achado,Não há álcool líquido 70% de 1L.
-P078,hirota,https://www.lojahirota.com.br/produto/3640/sbp-aero-300ml-citronela-lp,variante,Inseticida SBP Aerossol Citronela 300ml.
+P078,hirota,https://www.lojahirota.com.br/produto/3640/sbp-aero-300ml-citronela-lp,tamanho_diferente,Inseticida SBP Aerossol Citronela 300ml. Não há o de 360ml. Fica fora.
 P079,hirota,,nao_achado,"O filé de peito Korin não informa o peso do pacote, então não dá para comparar por kg; o outro filé de peito do site é temperado."
 P080,hirota,https://www.lojahirota.com.br/produto/6006/sobrecoxas-congeladas-de-frango-sadia-1kg,variante,"Sobrecoxas Congeladas de Frango Sadia 1kg, como no Carrefour. Comparar por kg."
 P081,hirota,https://www.lojahirota.com.br/produto/6906/frango-inteiro-resfriado,variante,"Frango Inteiro Resfriado, vendido por kg. Não há o Sadia congelado."

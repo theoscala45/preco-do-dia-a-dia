@@ -23,7 +23,7 @@ Alimentos básicos|Farinha de trigo tradicional|Dona Benta|1 kg|Pacote
 Alimentos básicos|Farinha de mandioca|Yoki|500 g|Pacote
 Alimentos básicos|Macarrão espaguete com ovos|Renata|500 g|Pacote
 Alimentos básicos|Macarrão parafuso|Barilla|500 g|Pacote
-Alimentos básicos|Molho de tomate tradicional|Pomarola|340 g|Sachê
+Alimentos básicos|Molho de tomate tradicional|Pomarola|300 g|Sachê
 Alimentos básicos|Extrato de tomate|Elefante|300 g|Lata
 Alimentos básicos|Sal refinado|Cisne|1 kg|Pacote
 Alimentos básicos|Fubá mimoso|Yoki|1 kg|Pacote
@@ -40,7 +40,7 @@ Alimentos básicos|Atum ralado em óleo|Gomes da Costa|170 g|Lata
 Alimentos básicos|Milho verde em conserva|Quero|170 g|Lata
 Alimentos básicos|Ervilha em conserva|Quero|170 g|Lata
 Alimentos básicos|Vinagre de álcool|Castelo|750 ml|Garrafa
-Alimentos básicos|Tempero completo|Sazón|60 g|Caixa
+Alimentos básicos|Tempero para frango|Sazón|60 g|Caixa
 Alimentos básicos|Caldo de galinha|Knorr|57 g|Caixa
 Alimentos básicos|Leite condensado|Moça|395 g|Lata
 Alimentos básicos|Creme de leite|Nestlé|200 g|Caixinha
@@ -56,11 +56,11 @@ Laticínios e ovos|Queijo muçarela fatiado|Tirolez|150 g|Bandeja
 Laticínios e ovos|Queijo prato fatiado|Tirolez|150 g|Bandeja
 Laticínios e ovos|Requeijão cremoso|Vigor|200 g|Copo
 Laticínios e ovos|Iogurte natural integral|Nestlé|170 g|Copo
-Laticínios e ovos|Iogurte de morango|Batavo|1,25 kg|Garrafa
+Laticínios e ovos|Iogurte de morango|Batavo|1,15 kg|Garrafa
 Laticínios e ovos|Presunto cozido fatiado|Sadia|200 g|Bandeja
 Laticínios e ovos|Queijo minas frescal|Tirolez|500 g|Peça
-Laticínios e ovos|Ovos brancos grandes|Marca da loja|12 unidades|Bandeja
-Laticínios e ovos|Ovos vermelhos grandes|Marca da loja|12 unidades|Bandeja
+Laticínios e ovos|Ovos brancos grandes|Marca da loja|20 unidades|Bandeja
+Laticínios e ovos|Ovos vermelhos grandes|Marca da loja|20 unidades|Bandeja
 Higiene e limpeza|Papel higiênico folha dupla|Neve|12 rolos|Pacote
 Higiene e limpeza|Papel higiênico folha dupla|Personal|12 rolos|Pacote
 Higiene e limpeza|Sabonete em barra|Dove|90 g|Unidade
@@ -86,7 +86,7 @@ Higiene e limpeza|Saco de lixo 50 L|Dover Roll|Rolo|Rolo
 Higiene e limpeza|Papel toalha|Snob|2 rolos|Pacote
 Higiene e limpeza|Sabão em barra|Ypê|5 unidades|Pacote
 Higiene e limpeza|Álcool líquido 70%|Marca a definir|1 L|Frasco
-Higiene e limpeza|Inseticida aerosol|SBP|300 ml|Frasco
+Higiene e limpeza|Inseticida aerosol|SBP|360 ml|Frasco
 Carnes e hortifruti|Peito de frango|Sem marca|1 kg|Preço por kg
 Carnes e hortifruti|Coxa e sobrecoxa de frango|Sem marca|1 kg|Preço por kg
 Carnes e hortifruti|Frango inteiro congelado|Sadia|1 kg|Preço por kg

@@ -13,7 +13,7 @@ P011,Alimentos básicos,Farinha de trigo tradicional,Dona Benta,1 kg,Pacote,sim
 P012,Alimentos básicos,Farinha de mandioca,Yoki,500 g,Pacote,sim
 P013,Alimentos básicos,Macarrão espaguete com ovos,Renata,500 g,Pacote,sim
 P014,Alimentos básicos,Macarrão parafuso,Barilla,500 g,Pacote,sim
-P015,Alimentos básicos,Molho de tomate tradicional,Pomarola,340 g,Sachê,sim
+P015,Alimentos básicos,Molho de tomate tradicional,Pomarola,300 g,Sachê,sim
 P016,Alimentos básicos,Extrato de tomate,Elefante,300 g,Lata,sim
 P017,Alimentos básicos,Sal refinado,Cisne,1 kg,Pacote,sim
 P018,Alimentos básicos,Fubá mimoso,Yoki,1 kg,Pacote,sim
@@ -30,7 +30,7 @@ P028,Alimentos básicos,Atum ralado em óleo,Gomes da Costa,170 g,Lata,sim
 P029,Alimentos básicos,Milho verde em conserva,Quero,170 g,Lata,sim
 P030,Alimentos básicos,Ervilha em conserva,Quero,170 g,Lata,sim
 P031,Alimentos básicos,Vinagre de álcool,Castelo,750 ml,Garrafa,sim
-P032,Alimentos básicos,Tempero completo,Sazón,60 g,Caixa,sim
+P032,Alimentos básicos,Tempero para frango,Sazón,60 g,Caixa,sim
 P033,Alimentos básicos,Caldo de galinha,Knorr,57 g,Caixa,sim
 P034,Alimentos básicos,Leite condensado,Moça,395 g,Lata,sim
 P035,Alimentos básicos,Creme de leite,Nestlé,200 g,Caixinha,sim
@@ -46,11 +46,11 @@ P044,Laticínios e ovos,Queijo muçarela fatiado,Tirolez,150 g,Bandeja,sim
 P045,Laticínios e ovos,Queijo prato fatiado,Tirolez,150 g,Bandeja,sim
 P046,Laticínios e ovos,Requeijão cremoso,Vigor,200 g,Copo,sim
 P047,Laticínios e ovos,Iogurte natural integral,Nestlé,170 g,Copo,sim
-P048,Laticínios e ovos,Iogurte de morango,Batavo,"1,25 kg",Garrafa,sim
+P048,Laticínios e ovos,Iogurte de morango,Batavo,"1,15 kg",Garrafa,sim
 P049,Laticínios e ovos,Presunto cozido fatiado,Sadia,200 g,Bandeja,sim
 P050,Laticínios e ovos,Queijo minas frescal,Tirolez,500 g,Peça,sim
-P051,Laticínios e ovos,Ovos brancos grandes,Marca da loja,12 unidades,Bandeja,sim
-P052,Laticínios e ovos,Ovos vermelhos grandes,Marca da loja,12 unidades,Bandeja,sim
+P051,Laticínios e ovos,Ovos brancos grandes,Marca da loja,20 unidades,Bandeja,sim
+P052,Laticínios e ovos,Ovos vermelhos grandes,Marca da loja,20 unidades,Bandeja,sim
 P053,Higiene e limpeza,Papel higiênico folha dupla,Neve,12 rolos,Pacote,sim
 P054,Higiene e limpeza,Papel higiênico folha dupla,Personal,12 rolos,Pacote,sim
 P055,Higiene e limpeza,Sabonete em barra,Dove,90 g,Unidade,sim
@@ -76,7 +76,7 @@ P074,Higiene e limpeza,Saco de lixo 50 L,Dover Roll,Rolo,Rolo,sim
 P075,Higiene e limpeza,Papel toalha,Snob,2 rolos,Pacote,sim
 P076,Higiene e limpeza,Sabão em barra,Ypê,5 unidades,Pacote,sim
 P077,Higiene e limpeza,Álcool líquido 70%,Marca a definir,1 L,Frasco,sim
-P078,Higiene e limpeza,Inseticida aerosol,SBP,300 ml,Frasco,sim
+P078,Higiene e limpeza,Inseticida aerosol,SBP,360 ml,Frasco,sim
 P079,Carnes e hortifruti,Peito de frango,Sem marca,1 kg,Preço por kg,nao
 P080,Carnes e hortifruti,Coxa e sobrecoxa de frango,Sem marca,1 kg,Preço por kg,nao
 P081,Carnes e hortifruti,Frango inteiro congelado,Sadia,1 kg,Preço por kg,nao
