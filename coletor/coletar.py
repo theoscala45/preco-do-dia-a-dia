@@ -179,9 +179,15 @@ class Atacadao:
             pg.wait_for_function("() => /unidade\\s*·\\s*R\\$|R\\$\\s*[\\d.]+,\\d{2}\\s*\\/\\s*kg|Produto indispon/i.test(document.body.innerText)", timeout=15000)
         except Exception:
             raise RuntimeError("preco nao apareceu")
-        texto = pg.evaluate("""t => { let e = document.querySelector(t); for (let i = 0; i < 8 && e && !/Resumo da compra|indispon/i.test(e.innerText); i++) e = e.parentElement; return e ? e.innerText : ''; }""", self.TITULO)
-        m = re.search(r"1\s*unidade\s*·\s*R\$\s*([\d.]+,\d{2})", texto)
-        kg = re.search(r"R\$\s*([\d.]+,\d{2})\s*/\s*kg", texto, re.I)
+        js = """t => { let e = document.querySelector(t); for (let i = 0; i < 8 && e && !/Resumo da compra|indispon/i.test(e.innerText); i++) e = e.parentElement; return e ? e.innerText : ''; }"""
+        # a espera acima aceita o "/kg" dos produtos parecidos, la embaixo; o bloco do proprio produto pode
+        # ainda estar montando. Le de novo algumas vezes antes de desistir.
+        for _ in range(4):
+            texto = pg.evaluate(js, self.TITULO)
+            m = re.search(r"1\s*unidade\s*·\s*R\$\s*([\d.]+,\d{2})", texto)
+            kg = re.search(r"R\$\s*([\d.]+,\d{2})\s*/\s*kg", texto, re.I)
+            if m or kg or re.search(r"Produto indispon", texto, re.I): break
+            pg.wait_for_timeout(2000)
         if not m and kg:
             # produto de peso variavel (carnes): a pagina mostra o preco da peca e o do quilo; vale o do quilo
             return {"nome": nome, "tamanho": tamanho_do_nome(nome), "preco": kg.group(1).replace(".", "").replace(",", "."), "unidade": "kg", "disponivel": True}, cep_dado
