@@ -1,4 +1,4 @@
-// Página "Inflação do seu bairro": índice local contra o IPCA, por ponto, por zona e por perfil.
+// Página "Inflação do seu bairro": índice local contra o IPCA, por ponto, por zona e por faixa de renda.
 import { $, gsap, ScrollTrigger, calmo, reais, pct, curto, contar, carregar, guarda, ligarCep, iniciar } from './base.js';
 
 const [dados, geo] = await carregar('dados', 'geo');
@@ -74,7 +74,7 @@ function desenharGrafico(animar = true) {
   $('legenda').innerHTML = linhas.map(l => `<li><i style="background:${l.cor}"></i>${l.nome}<b>${sinal(l.serie.at(-1) - 100)}%</b></li>`).join('')
     + (fundo.length ? '<li class="apagado"><i></i>os outros 24 pontos</li>' : '');
   $('grafNota').textContent = `Base 100 em ${mesLongo(dados.datas[0])}. ` + (dados.pesos ? 'Cada produto pesa como o seu item no IPCA.' : 'Cada produto pesa igual.')
-    + (estado.vista === 'zona' ? ' Cada zona é a média dos seus 5 pontos.' : estado.vista === 'perfil' ? ' Cada perfil é a média dos seus pontos. O perfil é uma classificação do projeto, não um dado oficial.' : '');
+    + (estado.vista === 'zona' ? ' Cada zona é a média dos seus 5 pontos.' : estado.vista === 'perfil' ? ' Cada faixa de renda é a média dos seus pontos. A faixa vem do Censo 2022 (IBGE), pela renda do distrito.' : '');
 
   if (animar && !calmo && visto) {
     gsap.fromTo('#corteR', { attr: { width: 0 } }, { attr: { width: W }, duration: primeira ? 1.8 : 1.1, ease: 'power2.inOut' });

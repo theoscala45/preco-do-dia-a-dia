@@ -61,6 +61,7 @@ Com `real`, a faixa "Dados de exemplo" some do site sozinha.
 ## Fontes e licenças
 
 - Contorno dos distritos: Prefeitura de São Paulo (GeoSampa), via `codigourbano/distritos-sp`.
+- Renda dos distritos: IBGE, Censo Demográfico 2022, rendimento do responsável pelo domicílio, por distrito (`tools/baixar_renda.py`).
 - Mapa, lojas e ruas: © colaboradores do OpenStreetMap (licença ODbL). Busca pelo Nominatim, rotas pelo OSRM.
 - Imagem do mapa: blocos do OpenFreeMap, carregados dos servidores deles quando a página abre. O estilo `assets/mapa-estilo.json` é uma adaptação do estilo Dark do OpenFreeMap.
 - MapLibre GL JS (BSD de 3 cláusulas), Lenis (MIT) e família Red Hat (SIL Open Font License). As licenças estão em `assets/vendor` e `assets/fonts`.

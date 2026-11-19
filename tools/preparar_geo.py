@@ -29,7 +29,9 @@ for i, d in enumerate(mapa["distritos"]):
                     "geometry": {"type": "MultiPolygon", "coordinates": [[anel(a) for a in poly] for poly in d["macio"]]}})
 
 geo = {p["cep_id"]: p for p in csv.DictReader(ler("data", "pontos_geo.csv"))}
+renda = {r["cep_id"]: r for r in csv.DictReader(ler("data", "renda.csv"))}   # tools/baixar_renda.py
 pontos = [{"id": p["cep_id"], "bairro": p["bairro"], "zona": p["zona"], "perfil": p["perfil"], "cep": p["cep"], "rua": p["rua"],
+           "distrito": renda[p["cep_id"]]["distrito"], "renda": round(float(renda[p["cep_id"]]["renda_media"])),
            "lat": float(geo[p["cep_id"]]["lat"]), "lon": float(geo[p["cep_id"]]["lon"])} for p in csv.DictReader(ler("data", "ceps.csv"))]
 
 saida = {"fonte": "Contorno dos distritos: Prefeitura de Sao Paulo (GeoSampa), via codigourbano/distritos-sp. Pontos: OpenStreetMap (Nominatim).",

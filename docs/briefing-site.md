@@ -29,7 +29,7 @@ O site lê as tabelas CSV de `data/` (ver `data/LEIAME.md`). Hoje só `produtos.
 - A divisão da compra usa no máximo 2 mercados.
 - Carnes e hortifruti entram no comparador, mas ficam fora do índice principal.
 - O recorte inicial é só a capital.
-- A classificação por perfil (Central, Intermediário, Periferia) é uma classificação do projeto, não um dado oficial.
+- A classificação por perfil (Central, Intermediário, Periferia) era do projeto; em 19/11/2026 foi trocada pela faixa de renda do distrito, do Censo 2022 (IBGE).
 - O índice usa pesos do IPCA, ainda não preenchidos.
 
 ## Técnico

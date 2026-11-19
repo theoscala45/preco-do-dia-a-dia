@@ -22,8 +22,8 @@ $('grupos').innerHTML = cats.map(c => {
 }).join('');
 $('tabProdutos').innerHTML = `<thead><tr><th scope="col">Produto</th><th scope="col">Marca</th><th scope="col">Tamanho</th><th scope="col">Grupo</th><th scope="col">Índice</th></tr></thead><tbody>${
   dados.produtos.map(p => `<tr><th scope="row">${p.nome}</th><td>${p.marca}</td><td>${p.tam}</td><td>${p.cat}</td><td>${p.indice ? 'sim' : 'não'}</td></tr>`).join('')}</tbody>`;
-$('tabPontos').innerHTML = `<thead><tr><th scope="col">Ponto</th><th scope="col">Zona</th><th scope="col">CEP</th><th scope="col">Rua</th><th scope="col">Perfil (do projeto)</th></tr></thead><tbody>${
-  geo.pontos.map(p => `<tr><th scope="row">${p.bairro}</th><td>${p.zona}</td><td>${p.cep}</td><td>${p.rua}</td><td>${p.perfil}</td></tr>`).join('')}</tbody>`;
+$('tabPontos').innerHTML = `<thead><tr><th scope="col">Ponto</th><th scope="col">Zona</th><th scope="col">CEP</th><th scope="col">Rua</th><th scope="col">Renda do distrito</th></tr></thead><tbody>${
+  geo.pontos.map(p => `<tr><th scope="row">${p.bairro}</th><td>${p.zona}</td><td>${p.cep}</td><td>${p.rua}</td><td>${p.perfil} <small>(R$ ${p.renda.toLocaleString('pt-BR')})</small></td></tr>`).join('')}</tbody>`;
 $('nCesta').textContent = dados.itens_na_cesta;
 $('nLojas').textContent = rotas.lojas.length;
 
