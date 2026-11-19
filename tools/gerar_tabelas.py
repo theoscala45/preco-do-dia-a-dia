@@ -122,11 +122,11 @@ w("produtos.csv", ["produto_id","categoria","produto","marca","tamanho","compara
 ceps_txt = """Centro|Bela Vista|01310-100|Avenida Paulista|Renda alta
 Centro|República|01045-000|Praça da República|Renda alta
 Centro|Bom Retiro|01124-000|Rua Afonso Pena|Renda média
-Centro|Liberdade|01503-001|Avenida da Liberdade|Renda alta
+Centro|Sé|01001-000|Praça da Sé|Renda alta
 Centro|Brás|03003-000|Rua da Figueira|Renda média
 Oeste|Pinheiros|05422-000|Rua dos Pinheiros|Renda alta
 Oeste|Lapa|05074-000|Rua Dronsfield|Renda alta
-Oeste|Butantã|05503-001|Avenida Vital Brasil|Renda alta
+Oeste|Raposo Tavares (Jardim Boa Vista)|05583-030|Rua Gabriel de Amorim|Renda alta
 Oeste|Rio Pequeno|05379-000|Avenida do Rio Pequeno|Renda média
 Oeste|Jardim Íris (Pirituba)|05144-000|Rua Eugênio Lorenzetti|Renda média
 Sul|Planalto Paulista (Moema)|04077-000|Alameda dos Tupiniquins|Renda alta
@@ -134,13 +134,13 @@ Sul|Santo Amaro|04711-000|Rua Engenheiro Mesquita Sampaio|Renda alta
 Sul|Capão Redondo|05860-000|Rua Almirante Luís Penido Burnier|Renda baixa
 Sul|Grajaú (Parque América)|04822-000|Rua Jequirituba|Renda baixa
 Sul|Jardim Ângela (Alto da Riviera)|04929-000|Avenida Nova Arcádia|Renda baixa
-Leste|Mooca|03104-000|Rua da Mooca|Renda alta
+Leste|Cidade Tiradentes|08471-000|Avenida dos Metalúrgicos|Renda alta
 Leste|Tatuapé|03063-000|Avenida Celso Garcia|Renda alta
 Leste|Itaquera|08210-000|Rua Campinas do Piauí|Renda média
 Leste|Guaianases|08410-000|Rua Salvador Gianetti|Renda baixa
 Leste|Sapopemba (Fazenda da Juta)|03977-000|Rua Tenente Godofredo Cerqueira Leite|Renda baixa
 Norte|Santana|02012-000|Praça Campo de Bagatelle|Renda alta
-Norte|Tucuruvi|02304-000|Avenida Tucuruvi|Renda alta
+Norte|Jaçanã|02265-002|Avenida Guapira|Renda alta
 Norte|Vila Maria|02117-000|Rua Andaraí|Renda média
 Norte|Brasilândia|02845-000|Rua Joaquim Ferreira da Rocha|Renda baixa
 Norte|Perus|05204-000|Avenida Doutor Sylvio de Campos|Renda baixa"""

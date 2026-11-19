@@ -16,7 +16,7 @@ A tabela de preços é a grande. Cada linha é um preço de um produto, numa red
 
 **produtos.csv** (100 linhas). A cesta. `compara_por` diz como comparar preços (pacote, kg, unidade). `entra_no_indice` é `nao` para carnes e hortifruti: eles aparecem no comparador de cesta, mas ficam fora do índice principal.
 
-**ceps.csv** (25 linhas). Cinco CEPs por zona da capital (Centro, Oeste, Sul, Leste, Norte). A coluna `perfil` é a faixa de renda do distrito do ponto (Renda alta, Renda média, Renda baixa), do Censo 2022; ver `renda.csv`.
+**ceps.csv** (25 linhas). Cinco CEPs por zona da capital (Centro, Oeste, Sul, Leste, Norte). A coluna `perfil` é a faixa de renda do distrito do ponto (Renda alta, Renda média, Renda baixa), do Censo 2022; ver `renda.csv`. Em 19/11/2026, para equilibrar as faixas, quatro pontos mudaram de lugar mantendo o código: C04 Liberdade virou Sé, C08 Butantã virou Raposo Tavares, C16 Mooca virou Cidade Tiradentes e C22 Tucuruvi virou Jaçanã. As coletas de 17 e 18/11 com esses códigos são dos pontos antigos; elas ficam antes do início da série (`site.txt`) e não entram nas contas.
 
 **renda.csv** (25 linhas). O distrito de cada ponto, o código do IBGE e o rendimento médio e mediano mensal da pessoa responsável pelo domicílio (IBGE, Censo 2022, por distrito). A `faixa` compara o rendimento médio com os 96 distritos da cidade, em terços. O Censo 2022 só divulga o rendimento do responsável, não a renda da família. Refazer com `python3 tools/baixar_renda.py` e depois `python3 tools/preparar_geo.py`.
 

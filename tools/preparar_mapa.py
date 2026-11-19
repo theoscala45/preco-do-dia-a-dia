@@ -1,6 +1,7 @@
 """Le o contorno dos 96 distritos de Sao Paulo (GeoJSON) e grava assets/mapa.json.
 
 Uso: python3 tools/preparar_mapa.py caminho/para/distritos-sp.geojson
+     python3 tools/preparar_mapa.py --pontos   (so refaz os pontos, depois de mudar data/ceps.csv)
 Fonte do contorno: Prefeitura de Sao Paulo (GeoSampa), via github.com/codigourbano/distritos-sp.
 Cada ponto de coleta (data/ceps.csv) fica no centro do seu distrito. E uma aproximacao.
 Cada distrito usa o ponto de coleta mais proximo.
@@ -10,10 +11,10 @@ RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TOL = 0.10        # tolerancia da simplificacao, em unidades do mapa (o mapa tem ~100 de altura)
 AREA_MIN = 0.6    # descarta ilhas minusculas
 
-PONTO_DISTRITO = {"C01":"BELA VISTA","C02":"REPUBLICA","C03":"BOM RETIRO","C04":"LIBERDADE","C05":"BRAS",
- "C06":"PINHEIROS","C07":"LAPA","C08":"BUTANTA","C09":"RIO PEQUENO","C10":"PIRITUBA","C11":"MOEMA",
- "C12":"SANTO AMARO","C13":"CAPAO REDONDO","C14":"GRAJAU","C15":"JARDIM ANGELA","C16":"MOOCA","C17":"TATUAPE",
- "C18":"ITAQUERA","C19":"GUAIANASES","C20":"SAPOPEMBA","C21":"SANTANA","C22":"TUCURUVI","C23":"VILA MARIA",
+PONTO_DISTRITO = {"C01":"BELA VISTA","C02":"REPUBLICA","C03":"BOM RETIRO","C04":"SE","C05":"BRAS",
+ "C06":"PINHEIROS","C07":"LAPA","C08":"RAPOSO TAVARES","C09":"RIO PEQUENO","C10":"PIRITUBA","C11":"MOEMA",
+ "C12":"SANTO AMARO","C13":"CAPAO REDONDO","C14":"GRAJAU","C15":"JARDIM ANGELA","C16":"CIDADE TIRADENTES","C17":"TATUAPE",
+ "C18":"ITAQUERA","C19":"GUAIANASES","C20":"SAPOPEMBA","C21":"SANTANA","C22":"JACANA","C23":"VILA MARIA",
  "C24":"BRASILANDIA","C25":"PERUS"}
 
 def dp(pts, tol):
@@ -82,5 +83,20 @@ def main(src):
               open(os.path.join(RAIZ, "assets/mapa.json"), "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
     print(len(distritos), "distritos,", n, "vertices,", len(pontos), "pontos")
 
+def so_pontos():
+    """Refaz so os pontos e o ponto de cada distrito em assets/mapa.json, sem o contorno original (que fica igual)."""
+    caminho = os.path.join(RAIZ, "assets/mapa.json")
+    m = json.load(open(caminho, encoding="utf-8"))
+    por_nome = {d["nome"]: d for d in m["distritos"]}
+    m["pontos"] = []
+    for linha in csv.DictReader(open(os.path.join(RAIZ, "data/ceps.csv"), encoding="utf-8")):
+        d = por_nome[PONTO_DISTRITO[linha["cep_id"]]]
+        m["pontos"].append({"id": linha["cep_id"], "bairro": linha["bairro"], "zona": linha["zona"],
+                            "perfil": linha["perfil"], "cep": linha["cep"], "x": d["c"][0], "y": d["c"][1]})
+    for d in m["distritos"]:
+        d["ponto"] = min(range(len(m["pontos"])), key=lambda i: (m["pontos"][i]["x"]-d["c"][0])**2 + (m["pontos"][i]["y"]-d["c"][1])**2)
+    json.dump(m, open(caminho, "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
+    print(len(m["distritos"]), "distritos,", len(m["pontos"]), "pontos (so os pontos refeitos)")
+
 if __name__ == "__main__":
-    main(sys.argv[1])
+    so_pontos() if sys.argv[1] == "--pontos" else main(sys.argv[1])
