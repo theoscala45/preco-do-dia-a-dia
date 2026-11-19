@@ -12,6 +12,9 @@ on:
     # Reserva: o GitHub às vezes atrasa ou pula um horário agendado. Se a coleta das 02h17 rodou, esta só confere:
     # o coletor pula cada rede e cada CEP que já terminou bem no dia.
     - cron: "17 8 * * *"   # 05h17 em São Paulo
+    # Mais duas reservas: em 18 e 19/11/2026 o GitHub atrasou ou pulou os dois horários acima.
+    - cron: "43 11 * * *"  # 08h43 em São Paulo
+    - cron: "43 15 * * *"  # 12h43 em São Paulo
   workflow_dispatch:
     inputs:
       zonas:
