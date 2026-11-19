@@ -751,7 +751,7 @@ P049,st-marche,https://marche.com.br/products/soltissimo-presunto-cozido-fatiado
 P050,st-marche,https://marche.com.br/products/queijo-minas-frescal-tirolez-470g,tamanho_diferente,Queijo Minas Frescal Tirolez 470g. Não há o de 500g. Fica fora.
 P051,st-marche,https://marche.com.br/products/ovos-happy-eggs-brancos-grandes-com-20-unidades,achado,Ovos Brancos Grandes Happy Eggs 20 unidades.
 P052,st-marche,https://marche.com.br/products/ovos-happy-eggs-vermelhos-grandes-com-20-unidades,achado,Ovos Vermelhos Grandes Happy Eggs 20 unidades.
-P053,st-marche,https://marche.com.br/products/papel-higienico-neve-folha-dupla-rolo-de-20-metros-com-12-rolos,variante,Papel Higiênico Neve Folha Dupla 12 rolos de 20m.
+P053,st-marche,https://marche.com.br/products/papel-higienico-neve-toque-da-seda-folha-dupla-30-metros-12-unidades,achado,Papel Higiênico Neve Toque da Seda Folha Dupla 30m 12 unidades.
 P054,st-marche,https://marche.com.br/products/papel-higienico-personal-vip-folha-dupla-30m-leve-12-e-pague-11-unidades,variante,Papel Higiênico Personal Vip Folha Dupla 30m Leve 12 Pague 11.
 P055,st-marche,https://marche.com.br/products/sabonete-em-barra-original-dove-90g,achado,Sabonete em Barra Original Dove 90g.
 P056,st-marche,,nao_achado,Não há sabonete Lux.
@@ -760,13 +760,13 @@ P058,st-marche,https://marche.com.br/products/creme-dental-maxima-protecao-antic
 P059,st-marche,,nao_achado,Escova Colgate só em pacotes com 2 ou mais.
 P060,st-marche,,nao_achado,Não há shampoo Seda de 325ml; só a linha infantil.
 P061,st-marche,,nao_achado,Não há condicionador Seda de 325ml; só a linha infantil.
-P062,st-marche,https://marche.com.br/products/antitranspirante-aerossol-invisible-rexona-motionsense-150ml,variante,Antitranspirante Aerossol Rexona Invisible 150ml.
+P062,st-marche,https://marche.com.br/products/antitranspirante-aerossol-sem-perfume-rexona-clinical-150ml,variante,"Desodorante Aerosol Rexona Clinical Sem Perfume 150ml. Linha Clinical, como nas outras redes."
 P063,st-marche,,nao_achado,Não há fio dental Oral-B de 50m.
 P064,st-marche,https://marche.com.br/products/absorvente-always-cobertura-suave-p-com-abas-32-unidades,tamanho_diferente,Absorvente Always Suave com Abas 32 unidades. Só pacotes grandes. Fica fora.
 P065,st-marche,,nao_achado,Não há fraldas Huggies.
 P066,st-marche,,nao_achado,Omo em pó só Branco Absoluto 720g.
 P067,st-marche,https://marche.com.br/products/lava-roupas-liquido-omo-lavagem-perfeita-3-litros,achado,Lava-Roupas Líquido Omo Lavagem Perfeita 3L.
-P068,st-marche,https://marche.com.br/products/amaciante-concentrado-comfort-puro-cuidado-500ml,variante,Amaciante Concentrado Comfort Puro Cuidado 500ml.
+P068,st-marche,https://marche.com.br/products/amaciante-concentrado-comfort-original-500ml,variante,"Amaciante Comfort Concentrado Frescor Intenso 500ml (o endereço diz original), como no Carrefour, no Pão de Açúcar e no Sonda."
 P069,st-marche,https://marche.com.br/products/detergente-liquido-neutro-ype-500ml,achado,Detergente Líquido Neutro Ypê 500ml.
 P070,st-marche,https://marche.com.br/products/agua-sanitaria-super-candida-2-litros,achado,Água Sanitária Super Candida 2L.
 P071,st-marche,https://marche.com.br/products/desinfetante-pinho-sol-original-500ml,achado,Desinfetante Pinho Sol Original 500ml.
@@ -806,7 +806,7 @@ P004,nagumo,https://www.nagumo.com.br/categoria/departamentos/basicos-e-matinais
 P005,nagumo,https://www.nagumo.com.br/%C3%B3leo-soja-soya-900ml-113090.html,achado,Óleo de Soja Soya 900ml.
 P006,nagumo,https://www.nagumo.com.br/categoria/departamentos/basicos-e-matinais/commodities/azeite/azeite-oliva-extra-virgem-gallo-500ml-712088.html,achado,Azeite de Oliva Extra Virgem Gallo 500ml.
 P007,nagumo,https://www.nagumo.com.br/categoria/departamentos/basicos-e-matinais/commodities/acucar/a%C3%A7%C3%BAcar-uni%C3%A3o-refinado-1kg-124669.html,achado,Açúcar Refinado União 1kg.
-P008,nagumo,https://www.nagumo.com.br/categoria/departamentos/basicos-e-matinais/commodities/acucar/a%C3%A7%C3%BAcar-cristal-org%C3%A2nico-uni%C3%A3o-1kg-788601.html,variante,Açúcar Cristal Orgânico União 1kg. O cristal comum não aparece.
+P008,nagumo,https://www.nagumo.com.br/categoria/departamentos/basicos-e-matinais/commodities/acucar/a%C3%A7%C3%BAcar-cristal%C3%A7%C3%BAcar-uni%C3%A3o-1kg-833097.html,achado,Açúcar Cristalçúcar União 1kg. Trocado em 19/11/2026: antes era o orgânico.
 P009,nagumo,https://www.nagumo.com.br/categoria/departamentos/basicos-e-matinais/commodities/cafe/caf%C3%A9-torrado-e-mo%C3%ADdo-extra-forte-v%C3%A1cuo-pil%C3%A3o-500g-335201.html,achado,Café Torrado e Moído Extra Forte Pilão a Vácuo 500g.
 P010,nagumo,https://www.nagumo.com.br/categoria/departamentos/basicos-e-matinais/commodities/cafe/caf%C3%A9-tradicional-3-cora%C3%A7%C3%B5es-500g-813105.html,achado,Café Tradicional 3 Corações 500g.
 P011,nagumo,https://www.nagumo.com.br/categoria/mercearia-salgada/confeitaria-e-preparo/farinha-trigo/farinha-de-trigo-tradicional-dona-benta-1kg-291767.html,achado,Farinha de Trigo Tradicional Dona Benta 1kg.
@@ -851,7 +851,7 @@ P049,nagumo,https://www.nagumo.com.br/categoria/departamentos/frios-e-laticinios
 P050,nagumo,https://www.nagumo.com.br/categoria/departamentos/frios-e-laticinios/laticinios/queijos/queijo-de-minas-frescal-tirolez-57653.html,achado,"Queijo Minas Frescal Tirolez, peça de cerca de 500g vendida por peso. A página dá o preço do kg; o site converte para 500g."
 P051,nagumo,https://www.nagumo.com.br/categoria/departamentos/hortifruti/granjeiros/ovos/ovos-branco-grande-com-20-274990.html,achado,Ovos Brancos Grandes 20 unidades.
 P052,nagumo,https://www.nagumo.com.br/categoria/departamentos/hortifruti/granjeiros/ovos/ovos-vermelho-grande-20un-274903.html,achado,Ovos Vermelhos Grandes 20 unidades.
-P053,nagumo,https://www.nagumo.com.br/categoria/higiene-e-perfumaria/higiene/papel-higienico/papel-higi%C3%AAnico-neutro-folha-dupla-toque-seda-neve-12un-20m-251597.html,variante,Papel Higiênico Neve Folha Dupla Toque de Seda 12 rolos de 20m.
+P053,nagumo,https://www.nagumo.com.br/categoria/higiene-e-perfumaria/higiene/papel-higienico/papel-higi%C3%AAnico-folha-dupla-neutro-neve-toque-da-seda-30m-pacote-leve-12-pague-11-unidades-889377.html,variante,"Papel Higiênico Neve Toque da Seda Folha Dupla 30m Leve 12 Pague 11, como no Carrefour, no Pão de Açúcar e no Sonda."
 P054,nagumo,https://www.nagumo.com.br/categoria/higiene-e-perfumaria/higiene/papel-higienico/papel-higi%C3%AAnico-neutro-folha-dupla-personal-vip-lv12pg11-30m-769709.html,variante,Papel Higiênico Personal Vip Folha Dupla 30m Leve 12 Pague 11.
 P055,nagumo,https://www.nagumo.com.br/categoria/higiene-e-perfumaria/corpo-e-banho/sabonete-barra/sabonete-em-barra-original-dove-90g-617321.html,achado,Sabonete em Barra Original Dove 90g.
 P056,nagumo,https://www.nagumo.com.br/categoria/higiene-e-perfumaria/corpo-e-banho/sabonete-barra/sabonete-em-barra-botanicals-lavanda-lux-85g-207277.html,variante,"Sabonete Lux Botanicals Lavanda 85g, como no Carrefour e no Pão de Açúcar."
@@ -860,13 +860,13 @@ P058,nagumo,https://www.nagumo.com.br/categoria/higiene-e-perfumaria/higiene/hig
 P059,nagumo,https://www.nagumo.com.br/categoria/higiene-e-perfumaria/higiene/higiene-bucal/escova-dental-classic-clean-macia-colgate-182300.html,variante,"Escova Dental Colgate Classic Clean Macia, como no Pão de Açúcar."
 P060,nagumo,https://www.nagumo.com.br/categoria/higiene-e-perfumaria/cuidado-cabelo/shampoo/shampoo-ceramidas-seda-325ml-549547.html,variante,"Shampoo Seda Ceramidas 325ml, como no Pão de Açúcar."
 P061,nagumo,https://www.nagumo.com.br/categoria/higiene-e-perfumaria/cuidado-cabelo/condicionador/tratamento-condicionador-seda-ceramidas-frasco-325ml-549790.html,variante,Condicionador Seda Ceramidas 325ml.
-P062,nagumo,https://www.nagumo.com.br/categoria/higiene-e-perfumaria/corpo-e-banho/desodorante/desodorante-aerosol-feminino-antibacterial-%2B-invisible-rexona-150ml-103720.html,variante,Desodorante Aerosol Rexona Antibacterial + Invisible 150ml.
+P062,nagumo,https://www.nagumo.com.br/categoria/higiene-e-perfumaria/corpo-e-banho/desodorante/antitranspirante-aerossol-rexona-clinical-invisible-150ml-spray-271429.html,variante,"Antitranspirante Aerossol Rexona Clinical Invisible 150ml. Linha Clinical, como no Carrefour, no Pão de Açúcar e no Sonda."
 P063,nagumo,https://www.nagumo.com.br/categoria/higiene-e-perfumaria/higiene/higiene-bucal/fio-dental-essential-de-menta-oral-b-50m-489638.html,achado,Fio Dental Oral-B Essential Menta 50m.
 P064,nagumo,https://www.nagumo.com.br/categoria/higiene-e-perfumaria/higiene/absorvente-higienico/absorvente-super-prote%C3%A7%C3%A3o-suave-com-abas-always-8un-206995.html,variante,Absorvente Always Super Proteção Suave com Abas 8 unidades.
 P065,nagumo,https://www.nagumo.com.br/categoria/higiene-e-perfumaria/cuidado-infantil/fralda-infantil/fralda-descart%C3%A1vel-infantil-huggies-tripla-prote%C3%A7%C3%A3o-m-5%2C5-a-9%2C5kg-pacote-36-unidades-gr%C3%A1tis-2-fraldas-266569.html,variante,Fralda Huggies Tripla Proteção M 36 unidades.
 P066,nagumo,https://www.nagumo.com.br/categoria/departamentos/limpeza/cuidado-roupa/lava-roupa/lava-roupas-em-p%C3%B3-lavagem-perfeita-omo-1%2C4kg-276651.html,tamanho_diferente,"Omo Lavagem Perfeita em pó só em 800g e 1,4kg. Fica fora."
 P067,nagumo,https://www.nagumo.com.br/categoria/departamentos/limpeza/cuidado-roupa/lava-roupa/sab%C3%A3o-l%C3%ADquido-lavagem-perfeita-omo-3l-277693.html,achado,Sabão Líquido Omo Lavagem Perfeita 3L.
-P068,nagumo,https://www.nagumo.com.br/categoria/departamentos/limpeza/cuidado-roupa/amaciante-roupa/amaciante-concentrado-puro-cuidado-comfort-500ml-494786.html,variante,Amaciante Concentrado Comfort Puro Cuidado 500ml.
+P068,nagumo,https://www.nagumo.com.br/categoria/departamentos/limpeza/cuidado-roupa/amaciante-roupa/amaciante-comfort-concentrado-frescor-intenso-500ml-717182.html,variante,"Amaciante Comfort Concentrado Frescor Intenso 500ml, como no Carrefour, no Pão de Açúcar e no Sonda."
 P069,nagumo,https://www.nagumo.com.br/categoria/departamentos/limpeza/especialista-cozinha/lava-louca/detergente-yp%C3%AA-neutro-500ml-359467.html,achado,Detergente Ypê Neutro 500ml.
 P070,nagumo,https://www.nagumo.com.br/categoria/departamentos/limpeza/cuidado-casa/agua-sanitaria/%C3%A1gua-sanitaria-super-candida-2l-223680.html,achado,Água Sanitária Super Candida 2L.
 P071,nagumo,https://www.nagumo.com.br/categoria/departamentos/limpeza/cuidado-casa/desifetante/desinfetante-original-pinho-sol-leve-500ml-pague-450ml-466752.html,variante,Desinfetante Pinho Sol Original Leve 500ml Pague 450ml.
