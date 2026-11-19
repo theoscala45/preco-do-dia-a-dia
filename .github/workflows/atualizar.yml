@@ -46,7 +46,8 @@ jobs:
           for i in 1 2 3; do git pull --rebase origin main && git push origin HEAD:main && break || sleep 15; done
           echo "mudou=sim" >> "$GITHUB_OUTPUT"
       - name: Publicar o site
-        if: steps.guardar.outputs.mudou == 'sim'
+        # pelo botao Run workflow, publica sempre (serve para republicar o site a mao)
+        if: steps.guardar.outputs.mudou == 'sim' || github.event_name == 'workflow_dispatch'
         env:
           GH_TOKEN: ${{ github.token }}
         run: gh api -X POST "repos/${{ github.repository }}/pages/builds" --silent || echo "::warning::o GitHub Pages não aceitou o pedido de publicação"
