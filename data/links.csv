@@ -212,7 +212,7 @@ P010,carrefour,https://mercado.carrefour.com.br/cafe-em-po-tradicional-3-coracoe
 P011,carrefour,https://mercado.carrefour.com.br/farinha-de-trigo-tradicional-dona-benta-1kg-7868901/p,achado,Farinha de Trigo Tradicional Dona Benta 1kg.
 P012,carrefour,https://mercado.carrefour.com.br/farinha-de-mandioca-tipo-1-fina-yoki-pacote-500g-201324/p,achado,Farinha de Mandioca Tipo 1 Fina Yoki Pacote 500g.
 P013,carrefour,https://mercado.carrefour.com.br/macarrao-espaguete-renata-com-ovos-n-9-500g-7162243/p,achado,Macarrão Espaguete Renata com Ovos Nº 9 500g. Espaguete nº 9.
-P014,carrefour,https://mercado.carrefour.com.br/macarrao-fusilli-grano-duro-barilla-500g-171727/p,variante,"Macarrão Fusilli Grano Duro Barilla 500g. Fusilli (parafuso) grano duro, não com ovos."
+P014,carrefour,,nao_achado,"Só o Fusilli Grano Duro Barilla 500g, linha mais cara; não há o parafuso com ovos. Fica fora: outra linha do produto, 40% ou mais acima da mediana das outras redes (revisão de 19/11/2026)."
 P015,carrefour,https://mercado.carrefour.com.br/molho-de-tomate-tradicional-pomarola-sache-300g-4028287/p,achado,Molho de Tomate Tradicional Pomarola Sachê 300g.
 P016,carrefour,https://mercado.carrefour.com.br/extrato-de-tomate-tradicional-elefante-pote-300g-3014800/p,variante,"Extrato de Tomate Tradicional Elefante Pote 300g. Pote, como no Tenda."
 P017,carrefour,,nao_achado,Sal Cisne não está no sitemap.
@@ -325,7 +325,7 @@ P023,pao-de-acucar,https://www.paodeacucar.com/produto/1944/pao-de-forma-tradici
 P024,pao-de-acucar,https://www.paodeacucar.com/produto/71812/margarina-cremosa-com-sal-qualy-pote-500g,achado,Margarina Cremosa com Sal Qualy 500g.
 P025,pao-de-acucar,https://www.paodeacucar.com/produto/19389/maionese-hellmanns-tradicional-500g,achado,Maionese Hellmann's Tradicional 500g.
 P026,pao-de-acucar,https://www.paodeacucar.com/produto/91853/ketchup-heinz-tradicional-397g,achado,Ketchup Heinz Tradicional 397g.
-P027,pao-de-acucar,https://www.paodeacucar.com/produto/5663/file-de-sardinha-com-oleo-com-pimenta-gomes-da-costa-caixa-125g,variante,Filé de Sardinha com Óleo com Pimenta Gomes da Costa 125g. A de 125g só com pimenta; a só em óleo vem em 85g.
+P027,pao-de-acucar,,nao_achado,"Só filé de sardinha com óleo e pimenta Gomes da Costa. Fica fora: outra linha do produto, 40% ou mais acima da mediana das outras redes (revisão de 19/11/2026)."
 P028,pao-de-acucar,https://www.paodeacucar.com/produto/44884/atum-ralado-ao-natural-gomes-da-costa-lata-170g,variante,Atum Ralado ao Natural Gomes da Costa 170g. Em óleo só há a lata de 130g; ao natural tem 170g.
 P029,pao-de-acucar,https://www.paodeacucar.com/produto/452867/milho-verde-em-conserva-quero-lata-170g,achado,Milho Verde em Conserva Quero 170g.
 P030,pao-de-acucar,https://www.paodeacucar.com/produto/452869/ervilha-em-conserva-quero-lata-170g,achado,Ervilha em Conserva Quero 170g.
@@ -425,7 +425,7 @@ P023,santa-luzia,https://www.santaluzia.com.br/pao-de-forma-pullman--480g-586498
 P024,santa-luzia,https://www.santaluzia.com.br/margarina-com-sal-qualy---500g-511447/p,achado,Margarina com Sal Qualy 500g.
 P025,santa-luzia,https://www.santaluzia.com.br/maionese-hellmannquots-500g--501115/p,achado,Maionese Hellmann's 500g.
 P026,santa-luzia,https://www.santaluzia.com.br/ketchup-tradicional-heinz-397g--651630/p,achado,Ketchup Tradicional Heinz 397g.
-P027,santa-luzia,https://www.santaluzia.com.br/files-de-sardinha-em-oleo-gomes-da-costa-125g-667188/p,achado,Filés de Sardinha em Óleo Gomes da Costa 125g.
+P027,santa-luzia,,nao_achado,"Só filés de sardinha em óleo Gomes da Costa 125g, linha mais cara que a sardinha inteira. Fica fora: outra linha do produto, 40% ou mais acima da mediana das outras redes (revisão de 19/11/2026)."
 P028,santa-luzia,https://www.santaluzia.com.br/atum-ralado-em-oleo-gomes-da-costa-170g-1051300/p,achado,Atum Ralado em Óleo Gomes da Costa 170g.
 P029,santa-luzia,https://www.santaluzia.com.br/milho-verde-quero-280g-127612/p,tamanho_diferente,Milho Verde Quero 280g. Só a lata de 280g. Fica fora.
 P030,santa-luzia,https://www.santaluzia.com.br/ervilha-quero-280g-127604/p,tamanho_diferente,Ervilha Quero 280g. Só a lata de 280g. Fica fora.
@@ -440,7 +440,7 @@ P038,santa-luzia,https://www.santaluzia.com.br/coca-cola-sabor-original-2l-51563
 P039,santa-luzia,https://www.santaluzia.com.br/leite-uht-integral-italac---1l-1006010/p,achado,Leite UHT Integral Italac 1L.
 P040,santa-luzia,,nao_achado,Não há leite integral Piracanjuba comum; só o sem lactose.
 P041,santa-luzia,https://www.santaluzia.com.br/leite-desnatado-piracanjuba---1l-794309/p,achado,Leite Desnatado Piracanjuba 1L.
-P042,santa-luzia,https://www.santaluzia.com.br/leite-ninho-em-po-zero-lactose-380g-1097938/p,variante,Leite em Pó Ninho Zero Lactose 380g. O integral comum não aparece.
+P042,santa-luzia,,nao_achado,"Só o composto lácteo Ninho Zero Lactose 380g, que não é leite em pó integral. Fica fora: outra linha do produto, 40% ou mais acima da mediana das outras redes (revisão de 19/11/2026)."
 P043,santa-luzia,https://www.santaluzia.com.br/manteiga-com-sal-aviacao--200g-586005/p,achado,Manteiga com Sal Aviação 200g.
 P044,santa-luzia,https://www.santaluzia.com.br/queijo-mussarela-fatiado-light-sem-lactose-tirolez---150g-1171100/p,variante,"Queijo Mussarela Fatiado Light sem Lactose Tirolez 150g, como no Carrefour."
 P045,santa-luzia,https://www.santaluzia.com.br/queijo-prato-fatiado-light-tirolez---150g-1171119/p,variante,Queijo Prato Fatiado Light Tirolez 150g.
@@ -452,7 +452,7 @@ P050,santa-luzia,,nao_achado,Não há queijo minas frescal Tirolez; só creme de
 P051,santa-luzia,https://www.santaluzia.com.br/ovos-brancos-grandes-planalto---20-un-3226972/p,achado,Ovos Brancos Grandes Planalto 20 unidades.
 P052,santa-luzia,https://www.santaluzia.com.br/ovos-vermelhos-grandes-planalto---20-un-3226980/p,achado,Ovos Vermelhos Grandes Planalto 20 unidades.
 P053,santa-luzia,https://www.santaluzia.com.br/papel-higienico-neutro-l18-p16-neve---1196650/p,tamanho_diferente,Papel Higiênico Neve Neutro Leve 18 Pague 16. Não há pacote de 12 com folha dupla. Fica fora.
-P054,santa-luzia,https://www.santaluzia.com.br/papel-higienico-neutro-tripla-folha-personal-vip3---12x20m-3187837/p,variante,Papel Higiênico Personal Vip3 Folha Tripla 12 rolos de 20m.
+P054,santa-luzia,,nao_achado,"Só Personal VIP3, de folha tripla. Fica fora: outra linha do produto, 40% ou mais acima da mediana das outras redes (revisão de 19/11/2026)."
 P055,santa-luzia,https://www.santaluzia.com.br/sabonete-cremoso-dove-90g--832065/p,achado,Sabonete Cremoso Dove 90g (o Dove original).
 P056,santa-luzia,,nao_achado,Não há sabonete Lux.
 P057,santa-luzia,https://www.santaluzia.com.br/creme-dental-total-12-original-mint-colgate--90g-3257177/p,achado,Creme Dental Colgate Total 12 Original Mint 90g.
@@ -529,7 +529,7 @@ P027,sonda,,nao_achado,"Não há sardinha Gomes da Costa em óleo de 125g; só c
 P028,sonda,https://www.sondadelivery.com.br/delivery/produto/atum-ralado-oleo-gomes-da-costa-130g/1000001923,tamanho_diferente,Atum Ralado em Óleo Gomes da Costa 130g. Só a lata de 130g. Fica fora.
 P029,sonda,https://www.sondadelivery.com.br/delivery/produto/milho-verde-quero-lata-170g/1000031531,achado,Milho Verde Quero Lata 170g.
 P030,sonda,https://www.sondadelivery.com.br/delivery/produto/ervilha-lata-quero-170g/1000031533,achado,Ervilha Quero Lata 170g.
-P031,sonda,https://www.sondadelivery.com.br/delivery/produto/vinagre-de-alcool-ervas-finas-castelo-750ml/1000002027,variante,Vinagre de Álcool Ervas Finas Castelo 750ml. O comum não aparece.
+P031,sonda,,nao_achado,"Só vinagre de álcool Castelo com sabor (ervas finas, alho, hortelã); o comum não aparece. Fica fora: outra linha do produto, 40% ou mais acima da mediana das outras redes (revisão de 19/11/2026)."
 P032,sonda,https://www.sondadelivery.com.br/delivery/produto/tempero-frango-sazon-60g/1000001946,achado,Tempero Frango Sazón 60g.
 P033,sonda,,nao_achado,A página do Caldo Knorr Galinha 57g tem um endereço com defeito que o próprio site bloqueia.
 P034,sonda,https://www.sondadelivery.com.br/delivery/produto/leite-condensado-integral-moca-lata-395g/1000004548,achado,Leite Condensado Integral Moça Lata 395g.
@@ -562,7 +562,7 @@ P060,sonda,https://www.sondadelivery.com.br/delivery/produto/shampoo-ceramidas-s
 P061,sonda,https://www.sondadelivery.com.br/delivery/produto/condicionador-cocriacoes-ceramidas-seda-325ml/1000014908,variante,"Condicionador Seda Cocriações Ceramidas 325ml. Linha Ceramidas, como no Tenda."
 P062,sonda,https://www.sondadelivery.com.br/delivery/produto/desodorante-invisible-rexona-clinical-aerosol-150ml/1000053970,variante,"Desodorante Aerosol Rexona Clinical Invisible 150ml. Linha Clinical, como no Tenda."
 P063,sonda,,nao_achado,"Não há fio dental Oral-B; só Johnson's, Sanifill e Condor."
-P064,sonda,https://www.sondadelivery.com.br/delivery/produto/absorvente-com-abas-noite-ultrassuave-g-always-8-unidades/1000031641,variante,Absorvente com Abas Always Noite Ultrassuave G 8 unidades. Só a linha noturna em 8 unidades.
+P064,sonda,,nao_achado,"Só absorventes Always da linha Noite. Fica fora: outra linha do produto, 40% ou mais acima da mediana das outras redes (revisão de 19/11/2026)."
 P065,sonda,,nao_achado,Não há fraldas Huggies; só Pampers.
 P066,sonda,https://www.sondadelivery.com.br/delivery/produto/lava-roupas-em-po-puro-cuidado-omo-tamanho-familia-22kg/1000041899,tamanho_diferente,"Lava-Roupas em Pó Omo Puro Cuidado 2,2kg. Omo em pó só em 720g e 2,2kg. Fica fora."
 P067,sonda,https://www.sondadelivery.com.br/delivery/produto/lava-roupas-liquido-lavagem-perfeita-omo-3l/1000020248,variante,"Lava-Roupas Líquido Omo Lavagem Perfeita 3L. Lavagem Perfeita, como no Carrefour."

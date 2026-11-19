@@ -24,7 +24,7 @@ A tabela de preços é a grande. Cada linha é um preço de um produto, numa red
 
 **links.csv**. Uma linha por produto e rede. Hoje tem o Tenda, o Atacadão, o Carrefour, o Pão de Açúcar, o Sonda, o Santa Luzia, a St Marche, o Hirota e o Nagumo. A coluna `observacao` explica cada decisão. `status` vale:
 - `achado`: a página confirma marca, tamanho e tipo. O coletor lê.
-- `variante`: mesma marca e mesmo tamanho, muda só a linha, o sabor, a fragrância ou a embalagem (Lux jasmim, Seda Ceramidas). Para carnes e hortifruti, que se comparam por kg, o tamanho da bandeja não importa. O coletor lê.
+- `variante`: mesma marca e mesmo tamanho, muda só a linha, o sabor, a fragrância ou a embalagem (Lux jasmim, Seda Ceramidas). Para carnes e hortifruti, que se comparam por kg, o tamanho da bandeja não importa. O coletor lê. Uma variante que custa 40% ou mais acima da mediana das outras redes, por ser outra linha do produto (com sabor, de outro tipo, mais cara), fica fora como `nao_achado`, para não distorcer a comparação.
 - `tamanho_diferente`: a rede só vende outro tamanho (presunto 180 g em vez de 200 g). Fica fora da coleta e do índice.
 - `nao_achado`: o produto não apareceu no sitemap, nem na segunda busca.
 - `bloqueado_robots`: a página existe, mas o robots.txt bloqueia a leitura. Não ler.
