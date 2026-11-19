@@ -1,0 +1,52 @@
+name: Atualizar o site e o IPCA
+
+# Todo mês, nos dias em que o IBGE costuma divulgar o IPCA (entre o dia 8 e o dia 14), baixa o IPCA mensal e os
+# pesos dos subitens (tools/baixar_ibge.py). Se algo mudou, monta o site de novo e pede a publicação.
+# Também roda quando alguém muda data/site.txt (por exemplo, para passar o site de exemplo para real) e pelo
+# botão "Run workflow".
+
+on:
+  schedule:
+    - cron: "43 15 8-14 * *"   # dias 8 a 14 de cada mês, 12h43 em São Paulo
+  push:
+    branches: [main]
+    paths: [data/site.txt]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+
+# a mesma fila da coleta: os dois fluxos gravam no repositório, então um espera o outro
+concurrency:
+  group: coleta
+  cancel-in-progress: false
+
+jobs:
+  atualizar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Baixar o IPCA do IBGE
+        if: github.event_name != 'push'
+        run: python tools/baixar_ibge.py || echo "::warning::o IBGE não respondeu; fica o IPCA que já estava"
+      - name: Montar o site e guardar
+        id: guardar
+        run: |
+          python tools/atualizar_site.py
+          git config user.name "coletor"
+          git config user.email "coletor@users.noreply.github.com"
+          git add data/ipca.csv data/pesos_ipca.csv assets/dados.json assets/dados-previa.json
+          if git diff --cached --quiet; then echo "nada novo"; echo "mudou=nao" >> "$GITHUB_OUTPUT"; exit 0; fi
+          git commit -m "Site e IPCA atualizados em $(TZ=America/Sao_Paulo date +%F)"
+          for i in 1 2 3; do git pull --rebase origin main && git push origin HEAD:main && break || sleep 15; done
+          echo "mudou=sim" >> "$GITHUB_OUTPUT"
+      - name: Publicar o site
+        if: steps.guardar.outputs.mudou == 'sim'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api -X POST "repos/${{ github.repository }}/pages/builds" --silent || echo "::warning::o GitHub Pages não aceitou o pedido de publicação"

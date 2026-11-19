@@ -14,7 +14,12 @@ Contas:
 - Preco de referencia de um produto num ponto = mediana dos precos das redes naquele ponto.
 - Cesta do ponto = soma dos precos de referencia dos produtos do indice (carnes e hortifruti ficam fora).
   So entram produtos com preco em todos os pontos e em todas as datas, para a comparacao ser justa.
-- Indice local = media ponderada da variacao de preco de cada produto desde a primeira data, x 100.
+- Indice local = media ponderada da variacao de preco de cada produto desde a primeira data, x 100. A variacao de
+  um produto num ponto e a mediana da variacao de cada rede que tinha preco nas duas datas: cada rede e comparada
+  com ela mesma. Assim, uma rede que entra ou sai da coleta nao vira inflacao falsa.
+- IPCA acumulado = produto das variacoes mensais dos meses depois do mes da primeira data, ate o mes de cada data.
+  Os meses que o IBGE ainda nao publicou contam como zero (o campo "ipca_ate" diz o ultimo mes publicado).
+- Real: so entram as coletas a partir do "inicio" de data/site.txt (o primeiro dia com todas as redes).
   O peso de cada produto vem de data/pesos_ipca.csv (peso do subitem no IPCA, do IBGE). Produto sem subitem
   parecido no IPCA recebe o peso medio dos outros. Se a tabela de pesos estiver vazia, cada produto pesa igual.
 """
@@ -44,7 +49,16 @@ def preco_comparavel(l, por_kg, tamanho_da_cesta=""):
     kg = peso_kg(l.get("tamanho_na_pagina")) or peso_kg(l.get("nome_na_pagina"))
     return round(v / kg, 2) if kg else None
 
-def main(modo, arquivo_saida="assets/dados.json", arquivos_precos=None):
+def config():
+    """Le data/site.txt (linhas chave=valor; # comeca comentario)."""
+    c = {}
+    for linha in open(os.path.join(RAIZ, "data", "site.txt"), encoding="utf-8"):
+        linha = linha.split("#")[0].strip()
+        if "=" in linha:
+            k, v = linha.split("=", 1); c[k.strip()] = v.strip()
+    return c
+
+def main(modo, arquivo_saida="assets/dados.json", arquivos_precos=None, inicio=None):
     pasta = "data/exemplo" if modo == "exemplo" else "data"
     produtos, ceps, redes_tab = ler("data/produtos.csv"), ler("data/ceps.csv"), ler("data/redes.csv")
     if modo == "exemplo":
@@ -53,8 +67,10 @@ def main(modo, arquivo_saida="assets/dados.json", arquivos_precos=None):
         import glob
         arquivos = arquivos_precos or sorted(glob.glob(os.path.join(RAIZ, "data/precos/*.csv")))
         todos = [l for f in arquivos for l in csv.DictReader(open(f, encoding="utf-8"))]
+        inicio = inicio if inicio is not None else config().get("inicio", "")
+        todos = [l for l in todos if l["data"] >= inicio]
     precos = [l for l in todos if l["disponivel"] == "sim"]
-    if not precos: sys.exit("Ainda nao ha precos coletados em data/precos/. Use o modo exemplo.")
+    if not precos: sys.exit("Ainda nao ha precos coletados em data/precos/ (a partir do inicio de data/site.txt).")
     datas = sorted({l["data"] for l in precos}); ultima = datas[-1]
     redes = sorted({l["rede_id"] for l in precos})
     pid = {p["produto_id"]: i for i, p in enumerate(produtos)}
@@ -85,17 +101,24 @@ def main(modo, arquivo_saida="assets/dados.json", arquivos_precos=None):
     if not completos:
         print("aviso: nenhum produto do indice tem preco em todos os pontos e datas; a cesta e o indice ficam vazios")
         total_w = 1
+    def variacao(d, cep, prod):
+        # cada rede contra ela mesma; sem nenhuma rede com preco nas duas datas, usa a mediana do ponto
+        rs = [b / a for r in redes for a, b in [(no_ponto(datas[0], r, cep, prod), no_ponto(d, r, cep, prod))] if a and b]
+        return statistics.median(rs) if rs else ref[d, cep, prod] / ref[datas[0], cep, prod]
     pontos = []
     for c in ceps:
         cid = c["cep_id"]
         cesta = sum(ref[datas[-1], cid, p] for p in completos)
-        serie = [100 * sum(w[p] * ref[d, cid, p] / ref[datas[0], cid, p] for p in completos) / total_w if completos else 100.0 for d in datas]
+        serie = [100 * sum(w[p] * variacao(d, cid, p) for p in completos) / total_w if completos else 100.0 for d in datas]
         pontos.append({"id": cid, "cesta": round(cesta, 2), "serie": [round(v, 2) for v in serie], "var": round(serie[-1] - 100, 2)})
-    # IPCA acumulado, base 100 na primeira data
-    ipca = [100.0]
-    meses = {l["mes"]: float(l["ipca_mensal_pct"]) for l in ler(pasta + "/ipca.csv")}
-    for d in datas[1:]:
-        ipca.append(round(ipca[-1]*(1+meses.get(d[:7], 0)/100), 2))
+    # IPCA acumulado, base 100 na primeira data: cada mes entra uma vez, a partir do mes seguinte ao da base
+    meses = {l["mes"]: float(l["ipca_mensal_pct"]) for l in ler(pasta + "/ipca.csv") if l["ipca_mensal_pct"]}
+    def acumulado(d):
+        v = 100.0
+        for m in sorted(meses):
+            if datas[0][:7] < m <= d[:7]: v *= 1 + meses[m] / 100
+        return round(v, 2)
+    ipca = [acumulado(d) for d in datas]
     # precos da ultima data, para o comparador de cesta
     ult = {}
     for r in redes:
@@ -105,7 +128,7 @@ def main(modo, arquivo_saida="assets/dados.json", arquivos_precos=None):
         else:
             ult[r] = [tab[ultima][r].get("", {}).get(p["produto_id"]) for p in produtos]
     nomes = {r["rede_id"]: r["nome"] for r in redes_tab}
-    saida = {"exemplo": modo == "exemplo", "datas": datas, "itens_na_cesta": len(completos), "ipca": ipca,
+    saida = {"exemplo": modo == "exemplo", "datas": datas, "itens_na_cesta": len(completos), "ipca": ipca, "ipca_ate": max(meses) if meses else None,
              "pesos": {"com_peso": len(com_peso), "sem_peso": len(completos) - len(com_peso), "fonte": "IBGE, SIDRA tabela 7060"} if com_peso else None,
              "pontos": pontos,
              "produtos": [{"id": p["produto_id"], "nome": p["produto"], "marca": p["marca"], "tam": p["tamanho"],
@@ -126,4 +149,5 @@ if __name__ == "__main__":
     saida = args[args.index("--saida") + 1] if "--saida" in args else "assets/dados.json"
     modo = next((a for a in args if a in ("exemplo", "real")), "exemplo")
     precos = args[args.index("--precos") + 1].split(",") if "--precos" in args else None
-    main(modo, saida, precos)
+    inicio = args[args.index("--inicio") + 1] if "--inicio" in args else None
+    main(modo, saida, precos, inicio)

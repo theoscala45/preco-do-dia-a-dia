@@ -1,0 +1,11 @@
+# O que o site mostra. Para mudar, edite a linha e salve (dá para fazer pelo próprio GitHub, no lápis).
+# Ao salvar, o fluxo "Atualizar o site e o IPCA" monta o site de novo em alguns minutos.
+#
+# dados=exemplo  -> o site mostra os preços de exemplo (inventados), com a faixa de aviso.
+# dados=real     -> o site mostra os preços coletados.
+# A prévia com os preços reais (endereço com ?previa) é montada sempre, depois de cada coleta.
+dados=exemplo
+
+# Primeiro dia da série de preços (as coletas antes dele ficam fora das contas). 19/11/2026 é o primeiro dia
+# com as nove redes.
+inicio=2026-11-19

@@ -2,7 +2,7 @@
 
 Quanto custa a mesma compra em cada bairro de São Paulo, e quanto ela subiu contra o IPCA.
 
-Projeto em construção. **Os preços que o site mostra hoje são de exemplo (inventados).** O coletor de preços reais roda toda noite pelo GitHub Actions (02h17, com reserva às 05h17) e grava em `data/precos/`. Ele lê nove redes: Tenda, Atacadão, Carrefour, Pão de Açúcar, Sonda, Santa Luzia, St Marche, Hirota e Nagumo. O site passa para os preços reais quando houver dados suficientes.
+Projeto em construção. **Os preços que o site mostra hoje são de exemplo (inventados).** O coletor de preços reais roda toda noite pelo GitHub Actions (02h17, com reserva às 05h17) e grava em `data/precos/`. Ele lê nove redes: Tenda, Atacadão, Carrefour, Pão de Açúcar, Sonda, Santa Luzia, St Marche, Hirota e Nagumo. O site passa para os preços reais quando `data/site.txt` disser `dados=real`; até lá, a prévia com os preços reais fica no endereço com `?previa`.
 
 ## O que tem aqui
 
@@ -27,12 +27,21 @@ python3 -m http.server 8000
 
 Depois abra http://localhost:8000. Abrir o `index.html` direto com dois cliques não funciona, porque o navegador bloqueia a leitura dos dados.
 
-## Refazer os dados do site
+## O que roda sozinho
+
+- **Toda noite** (`.github/workflows/coleta.yml`): a coleta, e depois o site é montado de novo e publicado. A prévia (`?previa`) sempre recebe os preços reais; o site normal recebe os reais só com `dados=real` em `data/site.txt`.
+- **Todo mês, entre os dias 8 e 14** (`.github/workflows/atualizar.yml`): o IPCA e os pesos do IBGE são baixados de novo; se mudaram, o site é montado e publicado.
+- **Ao salvar `data/site.txt`**: o mesmo fluxo monta e publica o site. É assim que o site passa de exemplo para real.
+- **Toda segunda** (`.github/workflows/revisar-links.yml`): a revisão dos links.
+
+## Refazer os dados do site à mão
+
 
 ```
 python3 tools/gerar_exemplo.py        # recria data/exemplo/ (preços inventados)
 python3 tools/montar_site.py exemplo  # recria assets/dados.json a partir de data/exemplo/
 python3 tools/montar_site.py real     # quando o coletor tiver preenchido data/precos/
+python3 tools/atualizar_site.py       # o que os fluxos rodam: prévia e site, conforme data/site.txt
 python3 tools/baixar_ibge.py          # atualiza data/ipca.csv e data/pesos_ipca.csv (IBGE, SIDRA)
 ```
 

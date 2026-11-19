@@ -33,7 +33,7 @@ A tabela de preços é a grande. Cada linha é um preço de um produto, numa red
 
 Nas contas do site, os produtos que a cesta compara por kg usam o preço do quilo. Quando a rede vende em bandeja ou pacote (`unidade_de_venda` igual a `un`), o preço é dividido pelo peso que a página mostra no nome (carne moída de 500 g a R$ 29,49 vira R$ 58,98 o kg). Produto vendido por unidade, sem peso no nome (laranja e mamão no Tenda), fica fora dessa comparação.
 
-**ipca.csv**. IPCA mensal do Brasil (IBGE, SIDRA tabela 7060): índice geral, "Alimentação e bebidas" e "Higiene pessoal". Atualizar com `python3 tools/baixar_ibge.py`.
+**ipca.csv**. IPCA mensal do Brasil (IBGE, SIDRA tabela 7060): índice geral, "Alimentação e bebidas" e "Higiene pessoal". Atualizado sozinho todo mês (fluxo "Atualizar o site e o IPCA"), ou à mão com `python3 tools/baixar_ibge.py`.
 
 **pesos_ipca.csv**. Liga cada produto ao subitem do IPCA mais parecido e ao peso desse subitem no Brasil, no último mês publicado. Quando vários produtos caem no mesmo subitem, o peso é dividido entre eles. Seis produtos não têm subitem parecido (aveia, ketchup, ervilha, creme de leite, álcool, inseticida) e ficam sem peso: o índice dá a eles o peso médio. Os pesos do Brasil foram usados porque a região de São Paulo não publica peso para vários subitens da cesta.
 
@@ -60,3 +60,5 @@ Geradas por `tools/buscar_lojas_e_rotas.py`. Dados © colaboradores do OpenStree
 Limites: o cadastro do OpenStreetMap é feito por voluntários. Pode faltar loja, e pode haver loja fechada. O Tenda tem só 7 lojas cadastradas na área (a rede tem bem mais), então a "loja mais próxima" dele costuma ficar longe. A coordenada do ponto é a da rua, não a do número.
 
 As rotas (de carro, do ponto até a loja mais próxima de cada rede, calculadas pelo OSRM) ficam em `assets/rotas.json`. Os distritos e os pontos em latitude e longitude ficam em `assets/geo.json`, feito por `tools/preparar_geo.py`.
+
+**site.txt**. O que o site mostra: `dados=exemplo` (preços inventados) ou `dados=real` (preços coletados), e o `inicio`, o primeiro dia da série. Ao salvar, o fluxo "Atualizar o site e o IPCA" monta e publica o site.
