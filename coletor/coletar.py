@@ -362,6 +362,9 @@ class Nagumo:
     rede_id = "nagumo"
     site = "https://www.nagumo.com.br"
     hosts = ("nagumo.com.br",)
+    # em 19/11/2026 o site respondeu 429 (pedidos demais) com duas zonas lendo ao mesmo tempo: aqui a pausa
+    # entre paginas e maior que nas outras redes
+    pausa = (8.0, 12.0)
     por_loja = True
     loja = ""
 
@@ -679,7 +682,7 @@ def coletar_rede(pw, rede, links, ceps, hoje, limite, diag, arq_precos, arq_exec
                         linhas = [{**l, "cep_id": cep["cep_id"]} for l in o["linhas"]]
                         lidos, sem_preco, erros, copiado_de = o["lidos"], o["sem_preco"], list(o["erros"]), o["cep"]
                         break
-                    time.sleep(random.uniform(*PAUSA))
+                    time.sleep(random.uniform(*getattr(rede, "pausa", PAUSA)))
                 resultado = "ok" if lidos == len(paginas) else "parcial" if lidos else "falha"
             except Bloqueio as e:
                 acrescentar(arq_precos, COLUNAS, linhas)
