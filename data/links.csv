@@ -257,7 +257,7 @@ P055,carrefour,https://mercado.carrefour.com.br/sabonete-em-barra-dove-original-
 P056,carrefour,https://mercado.carrefour.com.br/sabonete-em-barra-corporal-lux-botanicals-lavanda-85g-5459834/p,variante,Sabonete em Barra Corporal Lux Botanicals Lavanda 85g. Lux Botanicals Lavanda 85g (o Buquê de Jasmim só em pacote com 6).
 P057,carrefour,https://mercado.carrefour.com.br/creme-dental-original-mint-colgate-total-prevencao-ativa-caixa-90g-3958663/p,variante,Creme Dental Original Mint Colgate Total Prevenção Ativa Caixa 90g. Mesmo produto do Tenda.
 P058,carrefour,https://mercado.carrefour.com.br/creme-dental-colgate-maxima-protecao-anticaries-90g-184071/p,achado,Creme Dental Colgate Máxima Proteção Anticáries 90g.
-P059,carrefour,,nao_achado,Só modelos especiais ou pacotes.
+P059,carrefour,https://mercado.carrefour.com.br/escova-dental-colgate-classic-clean-3405036/p,variante,"Escova Dental Colgate Classic Clean, 1 unidade, como no Pão de Açúcar e no Nagumo. Achada na lista nova do site em 19/11/2026."
 P060,carrefour,https://mercado.carrefour.com.br/shampoo-seda-ceramidas-infusao-ativa-retinol-e-colageno-325ml-9761497/p,variante,"Shampoo Seda Ceramidas Infusão Ativa Retinol e Colágeno 325ml. Linha Ceramidas, como no Tenda."
 P061,carrefour,https://mercado.carrefour.com.br/condicionador-seda-ceramidas-infusao-ativa-retinol-e-colageno-325ml-9943641/p,variante,"Condicionador Seda Ceramidas Infusão Ativa Retinol e Colágeno 325ml. Linha Ceramidas, como no Tenda."
 P062,carrefour,https://mercado.carrefour.com.br/desodorante-antitranspirante-aerosol-rexona-clinical-invisible-96h-150ml-3995615/p,variante,"Desodorante Antitranspirante Aerosol Rexona Clinical Invisible 96h 150ml. Linha Clinical, como no Tenda."
@@ -289,7 +289,7 @@ P087,carrefour,https://mercado.carrefour.com.br/file-de-tilapia-sem-pele-congela
 P088,carrefour,https://mercado.carrefour.com.br/banana-prata-carrefour-600g-211427/p,variante,Banana Prata Carrefour  600g. Banana prata Carrefour 600g. Comparar por kg.
 P089,carrefour,https://mercado.carrefour.com.br/maca-gala-carrefour-mercado-1kg-3466183/p,achado,Maca Gala Carrefour Mercado 1kg.
 P090,carrefour,https://mercado.carrefour.com.br/laranja-pera-carrefour-aprox-600g-222321/p,variante,"Laranja Pêra Carrefour Aprox. 600g. Laranja pera, cerca de 600g vendida por peso. Comparar por kg."
-P091,carrefour,,nao_achado,Limão taiti não está no sitemap.
+P091,carrefour,https://mercado.carrefour.com.br/limao-tahiti-unico-700g-3394670/p,variante,"Limão Tahiti Único, pacote de 700g. Comparar por kg. Achado na lista nova do site em 19/11/2026."
 P092,carrefour,https://mercado.carrefour.com.br/tomate-salada-unico-1-kg-5154626/p,achado,Tomate Salada Único 1Kg.
 P093,carrefour,https://mercado.carrefour.com.br/cebola-unico-1kg-5154650/p,achado,Cebola Único Carrefour 1Kg.
 P094,carrefour,https://mercado.carrefour.com.br/alho-granel-carrefour-aprox-75g-65226/p,variante,"Alho Granel Carrefour Aprox. 75g. Alho a granel, cerca de 75g vendido por peso. Comparar por kg."
@@ -298,7 +298,7 @@ P096,carrefour,https://mercado.carrefour.com.br/cenoura-unico-1kg-5154669/p,acha
 P097,carrefour,https://mercado.carrefour.com.br/alface-crespa-carrefour-mercado-em-unidade-8264880/p,achado,Alface Crespa Carrefour Mercado Em Unidade.
 P098,carrefour,https://mercado.carrefour.com.br/mamao-formosa-garantia-de-origem-aprox-1-6-kg-20524/p,variante,"Mamão Formosa Garantia de Origem Aprox. 1,6 Kg. Mamão formosa, cerca de 1,6kg vendido por peso. Comparar por kg."
 P099,carrefour,https://mercado.carrefour.com.br/abobrinha-italiana-carrefour-aprox-400g-20672/p,variante,"Abobrinha Italiana Carrefour Aprox. 400g. Abobrinha italiana, cerca de 400g vendida por peso. Comparar por kg."
-P100,carrefour,,nao_achado,Pimentão não está no sitemap.
+P100,carrefour,https://mercado.carrefour.com.br/pimentao-verde-carrefour-aprox-250g-10308/p,variante,"Pimentão Verde Carrefour, cerca de 250g. Comparar por kg. Achado na lista nova do site em 19/11/2026."
 P001,pao-de-acucar,https://www.paodeacucar.com/produto/41329/arroz-agulhinha-tipo-1-camil-pacote-5kg,achado,Arroz Agulhinha Tipo 1 Camil 5kg. Agulhinha é o arroz branco tipo 1.
 P002,pao-de-acucar,https://www.paodeacucar.com/produto/138068/arroz-agulhinha-tipo-1-tio-joao-pacote-5kg,achado,Arroz Agulhinha Tipo 1 Tio João 5kg.
 P003,pao-de-acucar,https://www.paodeacucar.com/produto/9461/feijao-carioca-tipo-1-camil-pacote-1kg,achado,Feijão Carioca Tipo 1 Camil 1kg.
