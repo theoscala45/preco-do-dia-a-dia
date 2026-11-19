@@ -23,6 +23,12 @@ on:
       limite:
         description: "Ler só os N primeiros produtos (0 = todos)"
         default: "0"
+      redes:
+        description: "Só estas redes, separadas por vírgula (ex.: pao-de-acucar). Vazio = todas"
+        default: ""
+      refazer:
+        description: "Ler de novo o que já terminou bem hoje (sim ou nao). A leitura nova substitui a antiga"
+        default: "nao"
 
 permissions:
   contents: write
@@ -54,7 +60,7 @@ jobs:
           python -m playwright install --with-deps chromium
       - name: Coletar a zona ${{ matrix.zona }}
         if: ${{ !inputs.zonas || contains(inputs.zonas, matrix.zona) }}
-        run: python coletor/coletar.py --zona "${{ matrix.zona }}" --limite "${{ inputs.limite || '0' }}" --saida "saida/${{ matrix.zona }}" --diagnostico "saida/${{ matrix.zona }}/diagnostico"
+        run: python coletor/coletar.py --zona "${{ matrix.zona }}" --limite "${{ inputs.limite || '0' }}" --redes "${{ inputs.redes || '' }}" ${{ inputs.refazer == 'sim' && '--refazer' || '' }} --saida "saida/${{ matrix.zona }}" --diagnostico "saida/${{ matrix.zona }}/diagnostico"
       - name: Entregar o resultado da zona
         if: always()
         uses: actions/upload-artifact@v4

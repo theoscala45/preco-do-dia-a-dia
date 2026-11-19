@@ -487,22 +487,29 @@ class PaoDeAcucar:
             raise RuntimeError("pagina nao existe mais (404)")
         pg.locator("h1").first.wait_for(state="visible", timeout=25000)
         nome = pg.locator("h1").first.inner_text().strip()
-        try:
-            pg.wait_for_function("() => /R\\$\\s*[\\d.]+,\\d{2}|indispon|avise-me/i.test(document.querySelector('h1').parentElement.parentElement.parentElement.innerText)", timeout=15000)
-        except Exception:
-            pass
-        js = """() => { let e = document.querySelector('h1'); for (let i = 0; i < 6 && e.parentElement && !/R\\$|indispon|avise-me/i.test(e.innerText); i++) e = e.parentElement; return e.innerText; }"""
+        # o bloco do preco vai do titulo ao botao Comprar. Depois vem a vitrine "Veja tambem", com os precos de
+        # outros produtos: ela fica de fora. Em 18/11/2026, com a pagina ainda montando, o coletor chegou a ler o
+        # preco do primeiro produto da vitrine (um condicionador de R$ 19,99 saiu como R$ 79,90).
+        js = """() => { const h = document.querySelector('h1'); if (!h) return '';
+                        const t = document.body.innerText, i = t.indexOf(h.innerText.trim());
+                        if (i < 0) return '';
+                        return t.slice(i).split(/\\bComprar\\b|Calcular o frete|Veja tamb[eé]m/i)[0]; }"""
+        bloco = lambda s: re.search(r"R\$\s*[\d.]+,\d{2}|indispon|avise-me|esgotad", s, re.I)
+        texto = ""
+        for _ in range(12):   # ate ~15 s para o preco do proprio produto aparecer
+            texto = pg.evaluate(js)
+            if bloco(texto): break
+            pg.wait_for_timeout(1200)
         # o bloco do preco pode mostrar um valor de passagem enquanto a pagina termina de montar:
         # le de novo ate duas leituras seguidas darem o mesmo texto
-        texto = pg.evaluate(js)
         for _ in range(4):
             pg.wait_for_timeout(1200)
             de_novo = pg.evaluate(js)
             if de_novo == texto: break
             texto = de_novo
         # o bloco do preco vai do titulo ao botao Comprar; o cupom e o frete ficam depois
-        variavel = bool(re.search(r"peso vari[aá]vel", texto, re.I))
-        texto = re.split(r"\bComprar\b|Calcular o frete", texto)[0] + ("\npeso variavel" if variavel else "")
+        variavel = bool(re.search(r"peso vari[aá]vel", pg.evaluate("() => document.body.innerText.split(/Veja tamb[eé]m/i)[0]"), re.I))
+        texto = texto + ("\npeso variavel" if variavel else "")
         # produto de peso variavel (frutas, verduras, carnes): vale o preco do quilo, que a pagina mostra como
         # "Preco por 1kg - R$ X". Nos outros, essa linha e so a conta da pagina e fica de fora.
         por_kg = re.search(r"Pre[cç]o por 1\s*kg\s*-\s*R\$\s*([\d.]+,\d{2})", texto, re.I)
@@ -527,9 +534,9 @@ class PaoDeAcucar:
         return {"nome": nome, "tamanho": tamanho_do_nome(nome), "preco": f"{preco:.2f}", "unidade": "kg" if m.group(2) else "un", "disponivel": True}
 
 
-def coletar_unico(rede, links, hoje, limite, arq_precos, arq_exec, pw=None):
+def coletar_unico(rede, links, hoje, limite, arq_precos, arq_exec, pw=None, refazer=False):
     """Redes de preco unico: uma leitura por noite, sem CEP (cep_id vazio), sem navegador."""
-    ja = any(e["rede_id"] == rede.rede_id and e["data"] == hoje and e["resultado"] == "ok" for e in ler(arq_exec) + ler(os.path.join(RAIZ, "data", "execucoes.csv")))
+    ja = not refazer and any(e["rede_id"] == rede.rede_id and e["data"] == hoje and e["resultado"] == "ok" for e in ler(arq_exec) + ler(os.path.join(RAIZ, "data", "execucoes.csv")))
     if ja:
         print(f"[{rede.rede_id}] ja lido hoje, pulando", flush=True); return
     rp = robots(rede)
@@ -604,10 +611,10 @@ def limpar(texto):
     return re.sub(r'[,"\n]', ";", texto)[:300]   # a tabela usa virgula como separador
 
 
-def coletar_rede(pw, rede, links, ceps, hoje, limite, diag, arq_precos, arq_exec):
+def coletar_rede(pw, rede, links, ceps, hoje, limite, diag, arq_precos, arq_exec, refazer=False):
     falhas_seguidas = 0
     # so pula o CEP que ja terminou bem hoje (uma coleta interrompida no meio e refeita)
-    ja = {(e["rede_id"], e["cep_id"]) for e in ler(arq_exec) + ler(os.path.join(RAIZ, "data", "execucoes.csv")) if e["data"] == hoje and e["resultado"] == "ok"}
+    ja = set() if refazer else {(e["rede_id"], e["cep_id"]) for e in ler(arq_exec) + ler(os.path.join(RAIZ, "data", "execucoes.csv")) if e["data"] == hoje and e["resultado"] == "ok"}
     try:
         rp = robots(rede)
     except Exception as e:
@@ -704,6 +711,7 @@ def main():
     ap.add_argument("--saida", default="", help="pasta para precos.csv e execucoes.csv (padrao: data/)")
     ap.add_argument("--redes", default="", help="so estas redes (padrao: todas as prontas)")
     ap.add_argument("--diagnostico", default="", help="pasta para guardar foto e texto das paginas que falharem")
+    ap.add_argument("--refazer", action="store_true", help="le de novo mesmo o que ja terminou bem hoje (a leitura nova substitui a antiga)")
     a = ap.parse_args()
     from playwright.sync_api import sync_playwright
     hoje = agora().strftime("%Y-%m-%d")
@@ -724,10 +732,10 @@ def main():
             if getattr(rede, "preco_unico", False):
                 # preco unico: uma vez por noite. Na coleta por zona, estas redes ficam numa parte so delas ("Unico")
                 if not a.zona or so_unico:
-                    coletar_unico(rede, da_rede, hoje, a.limite, arq_precos, arq_exec, pw)
+                    coletar_unico(rede, da_rede, hoje, a.limite, arq_precos, arq_exec, pw, a.refazer)
                 continue
             if so_unico: continue
-            coletar_rede(pw, rede, da_rede, ceps, hoje, a.limite, a.diagnostico, arq_precos, arq_exec)
+            coletar_rede(pw, rede, da_rede, ceps, hoje, a.limite, a.diagnostico, arq_precos, arq_exec, a.refazer)
     print("fim", flush=True)
 
 
