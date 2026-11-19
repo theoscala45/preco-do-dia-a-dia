@@ -168,7 +168,7 @@ data,rede_id,cep_id,produtos_tentados,produtos_lidos,resultado,erro,loja
 2026-11-19,nagumo,C23,97,97,ok,,051-PQ CONTI (Avenida Joao Palma Aleman; 715; Guarulhos)
 2026-11-19,nagumo,C24,97,97,ok,,046-OSASCO (Rua Avestruz; 688; Osasco)
 2026-11-19,nagumo,C25,97,97,ok,mesma loja do C24: precos repetidos,046-OSASCO (Rua Avestruz; 688; Osasco)
-2026-11-19,pao-de-acucar,,92,92,ok,,preco unico do site
+2026-11-19,pao-de-acucar,,91,91,ok,,preco unico do site
 2026-11-19,santa-luzia,,57,57,ok,,preco unico do site
 2026-11-19,sonda,,76,76,ok,,preco unico do site
 2026-11-19,st-marche,,85,85,ok,,preco unico do site

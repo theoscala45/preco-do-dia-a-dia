@@ -12070,98 +12070,98 @@ data,rede_id,produto_id,cep_id,preco_reais,unidade_de_venda,disponivel,nome_na_p
 2026-11-19,nagumo,P098,C25,16.98,kg,sim,Mamão Formosa,,2026-11-19T17:48:35-0300
 2026-11-19,nagumo,P099,C25,11.98,kg,sim,Abóbora Italiana,,2026-11-19T17:48:52-0300
 2026-11-19,nagumo,P100,C25,17.98,kg,sim,Pimentão Verde,,2026-11-19T17:49:09-0300
-2026-11-19,pao-de-acucar,P001,,32.99,un,sim,Arroz Agulhinha Tipo 1 CAMIL Pacote 5kg,5kg,2026-11-19T10:37:48-0300
-2026-11-19,pao-de-acucar,P002,,34.99,un,sim,Arroz Agulhinha Tipo 1 TIO JOÃO Pacote 5kg,5kg,2026-11-19T10:37:54-0300
-2026-11-19,pao-de-acucar,P003,,9.79,un,sim,Feijão Carioca Tipo 1 CAMIL Pacote 1kg,1kg,2026-11-19T10:37:59-0300
-2026-11-19,pao-de-acucar,P004,,8.79,un,sim,Feijão Preto Tipo 1 Camil Pacote 1kg,1kg,2026-11-19T10:38:04-0300
-2026-11-19,pao-de-acucar,P005,,9.79,un,sim,Óleo De Soja SOYA Garrafa 900ml,900ml,2026-11-19T10:38:09-0300
-2026-11-19,pao-de-acucar,P006,,32.99,un,sim,Azeite de Oliva Extra Virgem Clássico Português Gallo Vidro 500ml,500ml,2026-11-19T10:38:15-0300
-2026-11-19,pao-de-acucar,P007,,4.89,un,sim,Açúcar Refinado União Pacote 1kg,1kg,2026-11-19T10:38:20-0300
-2026-11-19,pao-de-acucar,P008,,4.29,un,sim,Açúcar Cristalçúcar UNIÃO Pacote 1kg,1kg,2026-11-19T10:38:25-0300
-2026-11-19,pao-de-acucar,P009,,31.99,un,sim,Café Torrado e Moído Extraforte Pilão Pacote 500g,500g,2026-11-19T10:38:30-0300
-2026-11-19,pao-de-acucar,P010,,30.65,un,sim,Café Torrado e Moído Tradicional 3 Corações Pacote 500g,500g,2026-11-19T10:38:36-0300
-2026-11-19,pao-de-acucar,P011,,6.79,un,sim,Farinha de Trigo Tradicional DONA BENTA Pacote 1kg,1kg,2026-11-19T10:38:40-0300
-2026-11-19,pao-de-acucar,P012,,8.79,un,sim,Farinha de Mandioca Crua YOKI Pacote 500g,500g,2026-11-19T10:38:46-0300
-2026-11-19,pao-de-acucar,P013,,4.79,un,sim,Macarrão de Sêmola com Ovos Espaguete 8 Renata Pacote 500g,500g,2026-11-19T10:38:51-0300
-2026-11-19,pao-de-acucar,P014,,6.29,un,sim,Macarrão com Ovos Parafuso Barilla Pacote 500g,500g,2026-11-19T10:38:56-0300
-2026-11-19,pao-de-acucar,P015,,4.09,un,sim,Molho de Tomate Pomarola Tradicional 300g,300g,2026-11-19T10:39:01-0300
-2026-11-19,pao-de-acucar,P016,,10.49,un,sim,Extrato de Tomate Elefante Pote 300g,300g,2026-11-19T10:39:06-0300
-2026-11-19,pao-de-acucar,P017,,4.29,un,sim,Sal Refinado CISNE Tradicional Pacote 1Kg,1Kg,2026-11-19T10:39:12-0300
-2026-11-19,pao-de-acucar,P018,,5.79,un,sim,Fubá de Milho YOKI Pacote 500g,500g,2026-11-19T10:39:17-0300
-2026-11-19,pao-de-acucar,P019,,18.99,un,sim,Aveia Em Flocos Regulares Quaker Caixa 450G Embalagem Econômica,450G,2026-11-19T10:39:22-0300
-2026-11-19,pao-de-acucar,P020,,12.74,un,sim,Achocolatado Pó Nescau Lata 350g,350g,2026-11-19T10:39:27-0300
-2026-11-19,pao-de-acucar,P022,,2.99,un,sim,Biscoito Recheio Chocolate Passatempo Pacote 130g,130g,2026-11-19T10:39:33-0300
-2026-11-19,pao-de-acucar,P023,,8.99,un,sim,Pão de Forma Tradicional Pullman 480g,480g,2026-11-19T10:39:38-0300
-2026-11-19,pao-de-acucar,P024,,7.49,un,sim,Margarina Cremosa com Sal Qualy Pote 500g,500g,2026-11-19T10:39:42-0300
-2026-11-19,pao-de-acucar,P025,,14.49,un,sim,Maionese Hellmanns Tradicional 500g,500g,2026-11-19T10:39:48-0300
-2026-11-19,pao-de-acucar,P026,,18.49,un,sim,Ketchup Heinz Tradicional 397g,397g,2026-11-19T10:39:53-0300
+2026-11-19,pao-de-acucar,P001,,32.99,un,sim,Arroz Agulhinha Tipo 1 CAMIL Pacote 5kg,5kg,2026-11-19T18:43:08-0300
+2026-11-19,pao-de-acucar,P002,,34.99,un,sim,Arroz Agulhinha Tipo 1 TIO JOÃO Pacote 5kg,5kg,2026-11-19T18:43:14-0300
+2026-11-19,pao-de-acucar,P003,,9.79,un,sim,Feijão Carioca Tipo 1 CAMIL Pacote 1kg,1kg,2026-11-19T18:43:20-0300
+2026-11-19,pao-de-acucar,P004,,8.79,un,sim,Feijão Preto Tipo 1 Camil Pacote 1kg,1kg,2026-11-19T18:43:26-0300
+2026-11-19,pao-de-acucar,P005,,9.79,un,sim,Óleo De Soja SOYA Garrafa 900ml,900ml,2026-11-19T18:43:31-0300
+2026-11-19,pao-de-acucar,P006,,32.99,un,sim,Azeite de Oliva Extra Virgem Clássico Português Gallo Vidro 500ml,500ml,2026-11-19T18:43:37-0300
+2026-11-19,pao-de-acucar,P007,,4.89,un,sim,Açúcar Refinado União Pacote 1kg,1kg,2026-11-19T18:43:44-0300
+2026-11-19,pao-de-acucar,P008,,4.29,un,sim,Açúcar Cristalçúcar UNIÃO Pacote 1kg,1kg,2026-11-19T18:43:49-0300
+2026-11-19,pao-de-acucar,P009,,31.99,un,sim,Café Torrado e Moído Extraforte Pilão Pacote 500g,500g,2026-11-19T18:43:55-0300
+2026-11-19,pao-de-acucar,P010,,30.65,un,sim,Café Torrado e Moído Tradicional 3 Corações Pacote 500g,500g,2026-11-19T18:44:01-0300
+2026-11-19,pao-de-acucar,P011,,6.79,un,sim,Farinha de Trigo Tradicional DONA BENTA Pacote 1kg,1kg,2026-11-19T18:44:06-0300
+2026-11-19,pao-de-acucar,P012,,8.79,un,sim,Farinha de Mandioca Crua YOKI Pacote 500g,500g,2026-11-19T18:44:12-0300
+2026-11-19,pao-de-acucar,P013,,4.79,un,sim,Macarrão de Sêmola com Ovos Espaguete 8 Renata Pacote 500g,500g,2026-11-19T18:44:19-0300
+2026-11-19,pao-de-acucar,P014,,6.29,un,sim,Macarrão com Ovos Parafuso Barilla Pacote 500g,500g,2026-11-19T18:44:25-0300
+2026-11-19,pao-de-acucar,P015,,4.09,un,sim,Molho de Tomate Pomarola Tradicional 300g,300g,2026-11-19T18:44:30-0300
+2026-11-19,pao-de-acucar,P016,,10.49,un,sim,Extrato de Tomate Elefante Pote 300g,300g,2026-11-19T18:44:35-0300
+2026-11-19,pao-de-acucar,P017,,4.29,un,sim,Sal Refinado CISNE Tradicional Pacote 1Kg,1Kg,2026-11-19T18:44:42-0300
+2026-11-19,pao-de-acucar,P018,,5.79,un,sim,Fubá de Milho YOKI Pacote 500g,500g,2026-11-19T18:44:48-0300
+2026-11-19,pao-de-acucar,P019,,18.99,un,sim,Aveia Em Flocos Regulares Quaker Caixa 450G Embalagem Econômica,450G,2026-11-19T18:44:54-0300
+2026-11-19,pao-de-acucar,P020,,12.74,un,sim,Achocolatado Pó Nescau Lata 350g,350g,2026-11-19T18:45:01-0300
+2026-11-19,pao-de-acucar,P022,,2.99,un,sim,Biscoito Recheio Chocolate Passatempo Pacote 130g,130g,2026-11-19T18:45:07-0300
+2026-11-19,pao-de-acucar,P023,,8.99,un,sim,Pão de Forma Tradicional Pullman 480g,480g,2026-11-19T18:45:14-0300
+2026-11-19,pao-de-acucar,P024,,7.49,un,sim,Margarina Cremosa com Sal Qualy Pote 500g,500g,2026-11-19T18:45:20-0300
+2026-11-19,pao-de-acucar,P025,,14.49,un,sim,Maionese Hellmanns Tradicional 500g,500g,2026-11-19T18:45:26-0300
+2026-11-19,pao-de-acucar,P026,,18.49,un,sim,Ketchup Heinz Tradicional 397g,397g,2026-11-19T18:45:31-0300
 2026-11-19,pao-de-acucar,P027,,14.44,un,sim,Filé de Sardinha com Óleo com Pimenta Gomes da Costa Caixa 125g,125g,2026-11-19T10:39:58-0300
-2026-11-19,pao-de-acucar,P028,,11.04,un,sim,Atum Ralado ao Natural Gomes da Costa Lata 170g,170g,2026-11-19T10:40:03-0300
-2026-11-19,pao-de-acucar,P029,,4.99,un,sim,Milho Verde em Conserva Quero Lata 170g,170g,2026-11-19T10:40:09-0300
-2026-11-19,pao-de-acucar,P030,,,,nao,Ervilha em Conserva Quero Lata 170g,170g,2026-11-19T10:40:15-0300
-2026-11-19,pao-de-acucar,P031,,5.29,un,sim,Vinagre de Álcool CASTELO 750ml,750ml,2026-11-19T10:40:20-0300
-2026-11-19,pao-de-acucar,P032,,7.79,un,sim,Tempero Pó para Frango Sazón Pacote 60g 12 Unidades,12 Unidades,2026-11-19T10:40:25-0300
-2026-11-19,pao-de-acucar,P034,,11.59,un,sim,Leite Condensado Integral Moça Lata 395g,395g,2026-11-19T10:40:30-0300
-2026-11-19,pao-de-acucar,P035,,5.29,un,sim,Creme de Leite UHT Leve Homogeneizado Nestlé Caixa 200g,200g,2026-11-19T10:40:35-0300
-2026-11-19,pao-de-acucar,P036,,11.49,un,sim,Mistura para Bolo de Chocolate Dona Benta Pacote 450g,450g,2026-11-19T10:40:40-0300
-2026-11-19,pao-de-acucar,P037,,3.99,un,sim,"Água Mineral Natural sem Gás Crystal Garrafa 1,5l","1,5l",2026-11-19T10:40:46-0300
-2026-11-19,pao-de-acucar,P038,,10.99,un,sim,Refrigerante Coca-Cola Original Garrafa 2l,2l,2026-11-19T10:40:50-0300
-2026-11-19,pao-de-acucar,P039,,6.49,un,sim,Leite Longa Vida Integral ITALAC 1 Litro,,2026-11-19T10:40:55-0300
-2026-11-19,pao-de-acucar,P040,,7.29,un,sim,Leite UHT Integral Piracanjuba Caixa com tampa 1L,1L,2026-11-19T10:41:01-0300
-2026-11-19,pao-de-acucar,P041,,6.49,un,sim,Leite Desnatado Piracanjuba 1L,1L,2026-11-19T10:41:06-0300
-2026-11-19,pao-de-acucar,P042,,21.49,un,sim,Leite Em Pó Ninho Integral Lata 380g,380g,2026-11-19T10:41:11-0300
-2026-11-19,pao-de-acucar,P043,,14.99,un,sim,Manteiga com Sal Aviação Pote 200g,200g,2026-11-19T10:41:16-0300
-2026-11-19,pao-de-acucar,P044,,9.68,un,sim,Queijo Mussarela Fatiado Tirolez 150g,150g,2026-11-19T10:41:23-0300
-2026-11-19,pao-de-acucar,P045,,9.68,un,sim,Queijo Prato Fatiado Tirolez 150g,150g,2026-11-19T10:41:28-0300
-2026-11-19,pao-de-acucar,P046,,7.99,un,sim,Requeijão Cremoso Tradicional Vigor Copo 200g,200g,2026-11-19T10:41:33-0300
-2026-11-19,pao-de-acucar,P048,,19.99,un,sim,"Iogurte Parcialmente Desnatado Morango Batavo Garrafa 1,15kg Embalagem Econômica","1,15kg",2026-11-19T10:41:38-0300
-2026-11-19,pao-de-acucar,P049,,11.92,un,sim,Presunto Cozido Fatiado Sadia Soltíssimo 200g,200g,2026-11-19T10:41:43-0300
-2026-11-19,pao-de-acucar,P050,,44.92,kg,sim,Queijo Minas Frescal Tirolez 500g,500g,2026-11-19T10:41:49-0300
-2026-11-19,pao-de-acucar,P051,,17.99,un,sim,Ovos Brancos Grandes Bandeja com 20 Unidades,20 Unidades,2026-11-19T10:41:55-0300
-2026-11-19,pao-de-acucar,P053,,29.99,un,sim,Papel Higiênico Folha Dupla Neutro Neve Toque da Seda 30m Pacote Leve 12 Pague 11 Unidades,11 Unidades,2026-11-19T10:42:00-0300
-2026-11-19,pao-de-acucar,P054,,17.99,un,sim,Papel Higiênico Folha Dupla Neutro Personal Vip 30m Pacote Leve 12 Pague 11 Unidades,11 Unidades,2026-11-19T10:42:05-0300
-2026-11-19,pao-de-acucar,P055,,5.79,un,sim,Sabonete Barra Original Dove 90G,90G,2026-11-19T10:42:11-0300
-2026-11-19,pao-de-acucar,P056,,2.99,un,sim,Sabonete Barra Glicerinado Lavanda Lux Botanicals Envoltório 85g,85g,2026-11-19T10:42:15-0300
-2026-11-19,pao-de-acucar,P057,,14.49,un,sim,Creme Dental Colgate Total Original Mint Prevenção Ativa 90g,90g,2026-11-19T10:42:21-0300
-2026-11-19,pao-de-acucar,P059,,4.19,un,sim,Escova Dental Macia Colgate Classic Clean Cabeça Normal,,2026-11-19T10:42:26-0300
-2026-11-19,pao-de-acucar,P060,,12.99,un,sim,Shampoo Seda Ceramidas Frasco 325ml,325ml,2026-11-19T10:42:32-0300
-2026-11-19,pao-de-acucar,P061,,19.99,un,sim,Condicionador Seda Cachos Definidos Frasco 325ml,325ml,2026-11-19T10:42:37-0300
-2026-11-19,pao-de-acucar,P062,,20.99,un,sim,Desodorante Aerossol Rexona Clinical Invisible Spray 150ml,150ml,2026-11-19T10:42:41-0300
-2026-11-19,pao-de-acucar,P063,,25.99,un,sim,Fio Dental Encerado Oral-B 50m,50m,2026-11-19T10:42:46-0300
-2026-11-19,pao-de-acucar,P065,,54.99,un,sim,Fralda Huggies Supreme Care M - 40 Fraldas,,2026-11-19T10:42:52-0300
-2026-11-19,pao-de-acucar,P066,,30.99,un,sim,"Sabão em Pó OMO Lavagem Perfeita 1,6Kg","1,6Kg",2026-11-19T10:42:56-0300
-2026-11-19,pao-de-acucar,P067,,55.91,un,sim,Lava Roupas Líquido Lavagem Perfeita Omo 3l,3l,2026-11-19T10:43:01-0300
-2026-11-19,pao-de-acucar,P068,,16.99,un,sim,Amaciante de Roupa Concentrado Frescor Intenso Comfort Frasco 500ml,500ml,2026-11-19T10:43:06-0300
-2026-11-19,pao-de-acucar,P069,,2.89,un,sim,Lava-Louças Líquido Clear Ypê Squeeze 500ml,500ml,2026-11-19T10:43:11-0300
-2026-11-19,pao-de-acucar,P070,,9.79,un,sim,Água Sanitária Super Candida Frasco 2l,2l,2026-11-19T10:43:16-0300
-2026-11-19,pao-de-acucar,P071,,10.49,un,sim,Desinfetante Uso Geral Original Pinho Sol Frasco 500ml,500ml,2026-11-19T10:43:21-0300
-2026-11-19,pao-de-acucar,P072,,7.49,un,sim,Limpador Multiuso Original Veja Gold Squeeze 500ml,500ml,2026-11-19T10:43:26-0300
-2026-11-19,pao-de-acucar,P073,,11.49,un,sim,Esponja Laranja Não Risca Louças Delicadas Scotch-Brite Antibac 3 Unidades,3 Unidades,2026-11-19T10:43:31-0300
-2026-11-19,pao-de-acucar,P075,,8.29,un,sim,Toalha de Papel SNOB Folha Dupla 2 Unidades,2 Unidades,2026-11-19T10:43:36-0300
-2026-11-19,pao-de-acucar,P076,,18.49,un,sim,Sabão Barra Neutro Original Ypê Pacote 800g 5 Unidades,5 Unidades,2026-11-19T10:43:41-0300
-2026-11-19,pao-de-acucar,P077,,17.99,un,sim,Álcool Líquido 46º INPM Clássico Coperalcool Bacfree Frasco 1l,1l,2026-11-19T10:43:46-0300
-2026-11-19,pao-de-acucar,P078,,24.99,un,sim,Inseticida Aerossol à Base de Água SBP Ultra Frasco 360ml Spray,360ml,2026-11-19T10:43:51-0300
-2026-11-19,pao-de-acucar,P079,,34.90,un,sim,Filé de Peito de Frango Congelado sem Pele sem Osso Sadia 1kg,1kg,2026-11-19T10:43:57-0300
-2026-11-19,pao-de-acucar,P080,,21.90,un,sim,Sobrecoxa de Frango Congelada Sadia 1kg,1kg,2026-11-19T10:44:03-0300
-2026-11-19,pao-de-acucar,P082,,54.90,un,sim,Carne Moída de Patinho Swift 1kg,1kg,2026-11-19T10:44:08-0300
-2026-11-19,pao-de-acucar,P083,,49.90,kg,sim,Acém Em Pedaço Resfriado Bandeja 800g,800g,2026-11-19T10:44:13-0300
-2026-11-19,pao-de-acucar,P084,,52.90,kg,sim,Contra Filé Bovino Kg,,2026-11-19T10:44:17-0300
-2026-11-19,pao-de-acucar,P085,,34.90,kg,sim,Linguiça Toscana Seara 600g,600g,2026-11-19T10:44:22-0300
-2026-11-19,pao-de-acucar,P086,,13.90,un,sim,Salsicha Hot-Dog Perdigão 500g 12 Unidades,12 Unidades,2026-11-19T10:44:27-0300
-2026-11-19,pao-de-acucar,P087,,35.90,un,sim,Filé De Tilapia Congelado  Qualitá 500g,500g,2026-11-19T10:44:33-0300
-2026-11-19,pao-de-acucar,P088,,10.49,kg,sim,Banana Prata Granel 700g (Aprox. 5 a 6 Unid),6 Unid,2026-11-19T10:44:37-0300
-2026-11-19,pao-de-acucar,P089,,18.98,kg,sim,Maçã Gala Granel 500g (Aprox. 2 a 3 Unid),3 Unid,2026-11-19T10:44:43-0300
-2026-11-19,pao-de-acucar,P090,,6.29,kg,sim,Laranja Pera Granel 1kg (Aprox. 4 a 5 Unid),5 Unid,2026-11-19T10:44:49-0300
-2026-11-19,pao-de-acucar,P091,,19.98,kg,sim,Limao Tahiti Granel 500g (Aprox. 4 a 5 Unid),5 Unid,2026-11-19T10:44:54-0300
-2026-11-19,pao-de-acucar,P092,,24.98,kg,sim,Tomate Granel 500g (Aprox. 2 a 3 Unid),3 Unid,2026-11-19T10:44:59-0300
-2026-11-19,pao-de-acucar,P093,,14.98,kg,sim,Cebola Granel 600g (Aprox. 2 a 3 Unid),3 Unid,2026-11-19T10:45:05-0300
-2026-11-19,pao-de-acucar,P094,,40.00,kg,sim,Alho Granel 200g (1 Cabeça),200g,2026-11-19T10:45:10-0300
-2026-11-19,pao-de-acucar,P095,,12.99,kg,sim,Batata Granel 1kg (Aprox. 5 a 6 Unid),6 Unid,2026-11-19T10:45:16-0300
-2026-11-19,pao-de-acucar,P096,,9.98,kg,sim,Cenoura Granel 500G (Aprox. 2 a 3 Unid),3 Unid,2026-11-19T10:45:21-0300
-2026-11-19,pao-de-acucar,P097,,6.99,un,sim,Alface Crespa Naturalmente Fresca Qualitá,,2026-11-19T10:45:26-0300
-2026-11-19,pao-de-acucar,P098,,13.30,kg,sim,Mamão Formosa Granel 2kg (1 Unid),1 Unid,2026-11-19T10:45:31-0300
-2026-11-19,pao-de-acucar,P099,,7.99,kg,sim,Abobrinha Italiana Granel 800g (Aprox. 2 a 3 Unid),3 Unid,2026-11-19T10:45:36-0300
-2026-11-19,pao-de-acucar,P100,,,,nao,Pimentão Verde Extra Granel 300g (2 Unidades),2 Unidades,2026-11-19T10:45:41-0300
+2026-11-19,pao-de-acucar,P028,,11.04,un,sim,Atum Ralado ao Natural Gomes da Costa Lata 170g,170g,2026-11-19T18:45:37-0300
+2026-11-19,pao-de-acucar,P029,,4.99,un,sim,Milho Verde em Conserva Quero Lata 170g,170g,2026-11-19T18:45:43-0300
+2026-11-19,pao-de-acucar,P030,,4.99,un,sim,Ervilha em Conserva Quero Lata 170g,170g,2026-11-19T18:45:49-0300
+2026-11-19,pao-de-acucar,P031,,5.29,un,sim,Vinagre de Álcool CASTELO 750ml,750ml,2026-11-19T18:45:56-0300
+2026-11-19,pao-de-acucar,P032,,7.79,un,sim,Tempero Pó para Frango Sazón Pacote 60g 12 Unidades,12 Unidades,2026-11-19T18:46:02-0300
+2026-11-19,pao-de-acucar,P034,,11.59,un,sim,Leite Condensado Integral Moça Lata 395g,395g,2026-11-19T18:46:08-0300
+2026-11-19,pao-de-acucar,P035,,5.29,un,sim,Creme de Leite UHT Leve Homogeneizado Nestlé Caixa 200g,200g,2026-11-19T18:46:15-0300
+2026-11-19,pao-de-acucar,P036,,11.49,un,sim,Mistura para Bolo de Chocolate Dona Benta Pacote 450g,450g,2026-11-19T18:46:21-0300
+2026-11-19,pao-de-acucar,P037,,3.99,un,sim,"Água Mineral Natural sem Gás Crystal Garrafa 1,5l","1,5l",2026-11-19T18:46:27-0300
+2026-11-19,pao-de-acucar,P038,,10.99,un,sim,Refrigerante Coca-Cola Original Garrafa 2l,2l,2026-11-19T18:46:34-0300
+2026-11-19,pao-de-acucar,P039,,6.49,un,sim,Leite Longa Vida Integral ITALAC 1 Litro,,2026-11-19T18:46:39-0300
+2026-11-19,pao-de-acucar,P040,,7.29,un,sim,Leite UHT Integral Piracanjuba Caixa com tampa 1L,1L,2026-11-19T18:46:46-0300
+2026-11-19,pao-de-acucar,P041,,6.49,un,sim,Leite Desnatado Piracanjuba 1L,1L,2026-11-19T18:46:52-0300
+2026-11-19,pao-de-acucar,P042,,21.49,un,sim,Leite Em Pó Ninho Integral Lata 380g,380g,2026-11-19T18:46:57-0300
+2026-11-19,pao-de-acucar,P043,,14.99,un,sim,Manteiga com Sal Aviação Pote 200g,200g,2026-11-19T18:47:03-0300
+2026-11-19,pao-de-acucar,P044,,9.68,un,sim,Queijo Mussarela Fatiado Tirolez 150g,150g,2026-11-19T18:47:08-0300
+2026-11-19,pao-de-acucar,P045,,9.68,un,sim,Queijo Prato Fatiado Tirolez 150g,150g,2026-11-19T18:47:14-0300
+2026-11-19,pao-de-acucar,P046,,7.99,un,sim,Requeijão Cremoso Tradicional Vigor Copo 200g,200g,2026-11-19T18:47:20-0300
+2026-11-19,pao-de-acucar,P048,,19.99,un,sim,"Iogurte Parcialmente Desnatado Morango Batavo Garrafa 1,15kg Embalagem Econômica","1,15kg",2026-11-19T18:47:27-0300
+2026-11-19,pao-de-acucar,P049,,11.92,un,sim,Presunto Cozido Fatiado Sadia Soltíssimo 200g,200g,2026-11-19T18:47:33-0300
+2026-11-19,pao-de-acucar,P050,,44.92,kg,sim,Queijo Minas Frescal Tirolez 500g,500g,2026-11-19T18:47:39-0300
+2026-11-19,pao-de-acucar,P051,,17.99,un,sim,Ovos Brancos Grandes Bandeja com 20 Unidades,20 Unidades,2026-11-19T18:47:45-0300
+2026-11-19,pao-de-acucar,P053,,29.99,un,sim,Papel Higiênico Folha Dupla Neutro Neve Toque da Seda 30m Pacote Leve 12 Pague 11 Unidades,11 Unidades,2026-11-19T18:47:51-0300
+2026-11-19,pao-de-acucar,P054,,17.99,un,sim,Papel Higiênico Folha Dupla Neutro Personal Vip 30m Pacote Leve 12 Pague 11 Unidades,11 Unidades,2026-11-19T18:47:57-0300
+2026-11-19,pao-de-acucar,P055,,5.79,un,sim,Sabonete Barra Original Dove 90G,90G,2026-11-19T18:48:02-0300
+2026-11-19,pao-de-acucar,P056,,2.99,un,sim,Sabonete Barra Glicerinado Lavanda Lux Botanicals Envoltório 85g,85g,2026-11-19T18:48:08-0300
+2026-11-19,pao-de-acucar,P057,,14.49,un,sim,Creme Dental Colgate Total Original Mint Prevenção Ativa 90g,90g,2026-11-19T18:48:14-0300
+2026-11-19,pao-de-acucar,P059,,4.19,un,sim,Escova Dental Macia Colgate Classic Clean Cabeça Normal,,2026-11-19T18:48:20-0300
+2026-11-19,pao-de-acucar,P060,,12.99,un,sim,Shampoo Seda Ceramidas Frasco 325ml,325ml,2026-11-19T18:48:26-0300
+2026-11-19,pao-de-acucar,P061,,19.99,un,sim,Condicionador Seda Cachos Definidos Frasco 325ml,325ml,2026-11-19T18:48:32-0300
+2026-11-19,pao-de-acucar,P062,,20.99,un,sim,Desodorante Aerossol Rexona Clinical Invisible Spray 150ml,150ml,2026-11-19T18:48:39-0300
+2026-11-19,pao-de-acucar,P063,,25.99,un,sim,Fio Dental Encerado Oral-B 50m,50m,2026-11-19T18:48:45-0300
+2026-11-19,pao-de-acucar,P065,,54.99,un,sim,Fralda Huggies Supreme Care M - 40 Fraldas,,2026-11-19T18:48:51-0300
+2026-11-19,pao-de-acucar,P066,,30.99,un,sim,"Sabão em Pó OMO Lavagem Perfeita 1,6Kg","1,6Kg",2026-11-19T18:48:57-0300
+2026-11-19,pao-de-acucar,P067,,55.91,un,sim,Lava Roupas Líquido Lavagem Perfeita Omo 3l,3l,2026-11-19T18:49:03-0300
+2026-11-19,pao-de-acucar,P068,,16.99,un,sim,Amaciante de Roupa Concentrado Frescor Intenso Comfort Frasco 500ml,500ml,2026-11-19T18:49:08-0300
+2026-11-19,pao-de-acucar,P069,,2.89,un,sim,Lava-Louças Líquido Clear Ypê Squeeze 500ml,500ml,2026-11-19T18:49:15-0300
+2026-11-19,pao-de-acucar,P070,,9.79,un,sim,Água Sanitária Super Candida Frasco 2l,2l,2026-11-19T18:49:20-0300
+2026-11-19,pao-de-acucar,P071,,10.49,un,sim,Desinfetante Uso Geral Original Pinho Sol Frasco 500ml,500ml,2026-11-19T18:49:26-0300
+2026-11-19,pao-de-acucar,P072,,7.49,un,sim,Limpador Multiuso Original Veja Gold Squeeze 500ml,500ml,2026-11-19T18:49:33-0300
+2026-11-19,pao-de-acucar,P073,,11.49,un,sim,Esponja Laranja Não Risca Louças Delicadas Scotch-Brite Antibac 3 Unidades,3 Unidades,2026-11-19T18:49:39-0300
+2026-11-19,pao-de-acucar,P075,,8.29,un,sim,Toalha de Papel SNOB Folha Dupla 2 Unidades,2 Unidades,2026-11-19T18:49:45-0300
+2026-11-19,pao-de-acucar,P076,,18.49,un,sim,Sabão Barra Neutro Original Ypê Pacote 800g 5 Unidades,5 Unidades,2026-11-19T18:49:51-0300
+2026-11-19,pao-de-acucar,P077,,17.99,un,sim,Álcool Líquido 46º INPM Clássico Coperalcool Bacfree Frasco 1l,1l,2026-11-19T18:49:58-0300
+2026-11-19,pao-de-acucar,P078,,24.99,un,sim,Inseticida Aerossol à Base de Água SBP Ultra Frasco 360ml Spray,360ml,2026-11-19T18:50:04-0300
+2026-11-19,pao-de-acucar,P079,,34.90,un,sim,Filé de Peito de Frango Congelado sem Pele sem Osso Sadia 1kg,1kg,2026-11-19T18:50:11-0300
+2026-11-19,pao-de-acucar,P080,,21.90,un,sim,Sobrecoxa de Frango Congelada Sadia 1kg,1kg,2026-11-19T18:50:17-0300
+2026-11-19,pao-de-acucar,P082,,54.90,un,sim,Carne Moída de Patinho Swift 1kg,1kg,2026-11-19T18:50:23-0300
+2026-11-19,pao-de-acucar,P083,,49.90,kg,sim,Acém Em Pedaço Resfriado Bandeja 800g,800g,2026-11-19T18:50:29-0300
+2026-11-19,pao-de-acucar,P084,,52.90,kg,sim,Contra Filé Bovino Kg,,2026-11-19T18:50:35-0300
+2026-11-19,pao-de-acucar,P085,,34.90,kg,sim,Linguiça Toscana Seara 600g,600g,2026-11-19T18:50:41-0300
+2026-11-19,pao-de-acucar,P086,,13.90,un,sim,Salsicha Hot-Dog Perdigão 500g 12 Unidades,12 Unidades,2026-11-19T18:50:47-0300
+2026-11-19,pao-de-acucar,P087,,35.90,un,sim,Filé De Tilapia Congelado  Qualitá 500g,500g,2026-11-19T18:50:52-0300
+2026-11-19,pao-de-acucar,P088,,10.49,kg,sim,Banana Prata Granel 700g (Aprox. 5 a 6 Unid),6 Unid,2026-11-19T18:50:59-0300
+2026-11-19,pao-de-acucar,P089,,18.98,kg,sim,Maçã Gala Granel 500g (Aprox. 2 a 3 Unid),3 Unid,2026-11-19T18:51:05-0300
+2026-11-19,pao-de-acucar,P090,,6.29,kg,sim,Laranja Pera Granel 1kg (Aprox. 4 a 5 Unid),5 Unid,2026-11-19T18:51:12-0300
+2026-11-19,pao-de-acucar,P091,,19.98,kg,sim,Limao Tahiti Granel 500g (Aprox. 4 a 5 Unid),5 Unid,2026-11-19T18:51:17-0300
+2026-11-19,pao-de-acucar,P092,,24.98,kg,sim,Tomate Granel 500g (Aprox. 2 a 3 Unid),3 Unid,2026-11-19T18:51:23-0300
+2026-11-19,pao-de-acucar,P093,,14.98,kg,sim,Cebola Granel 600g (Aprox. 2 a 3 Unid),3 Unid,2026-11-19T18:51:30-0300
+2026-11-19,pao-de-acucar,P094,,40.00,kg,sim,Alho Granel 200g (1 Cabeça),200g,2026-11-19T18:51:36-0300
+2026-11-19,pao-de-acucar,P095,,12.99,kg,sim,Batata Granel 1kg (Aprox. 5 a 6 Unid),6 Unid,2026-11-19T18:51:41-0300
+2026-11-19,pao-de-acucar,P096,,9.98,kg,sim,Cenoura Granel 500G (Aprox. 2 a 3 Unid),3 Unid,2026-11-19T18:51:46-0300
+2026-11-19,pao-de-acucar,P097,,6.99,un,sim,Alface Crespa Naturalmente Fresca Qualitá,,2026-11-19T18:51:52-0300
+2026-11-19,pao-de-acucar,P098,,13.30,kg,sim,Mamão Formosa Granel 2kg (1 Unid),1 Unid,2026-11-19T18:51:58-0300
+2026-11-19,pao-de-acucar,P099,,7.99,kg,sim,Abobrinha Italiana Granel 800g (Aprox. 2 a 3 Unid),3 Unid,2026-11-19T18:52:04-0300
+2026-11-19,pao-de-acucar,P100,,19.00,kg,sim,Pimentão Verde Extra Granel 300g (2 Unidades),2 Unidades,2026-11-19T18:52:10-0300
 2026-11-19,santa-luzia,P001,,31.50,un,sim,Arroz Camil Tipo 1 5kg,5kg,2026-11-19T10:51:23-0300
 2026-11-19,santa-luzia,P002,,38.90,un,sim,Arroz Tipo 1 Tio João 5Kg,5Kg,2026-11-19T10:51:27-0300
 2026-11-19,santa-luzia,P003,,11.50,un,sim,Feijão Carioca Camil 1Kg,1Kg,2026-11-19T10:51:32-0300
