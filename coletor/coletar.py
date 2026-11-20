@@ -379,7 +379,19 @@ class Nagumo:
     loja = ""
 
     def escolher_loja(self, pg, cep):
+        # de madrugada a janela da loja as vezes nao responde (20/11/2026: 3 CEPs falharam assim e funcionaram
+        # de dia): tenta ate 3 vezes, abrindo a pagina de novo e esperando um pouco mais a cada vez
         url = pg.url
+        for tentativa in range(3):
+            try:
+                return self._escolher_loja(pg, cep, url)
+            except Exception:
+                if tentativa == 2: raise
+                pg.wait_for_timeout(20000 * (tentativa + 1))
+                pg.goto(url, wait_until="domcontentloaded", timeout=60000)
+                pg.locator("text=Trocar de Loja >> visible=true").first.wait_for(state="visible", timeout=25000)
+
+    def _escolher_loja(self, pg, cep, url):
         pg.locator("text=Trocar de Loja >> visible=true").first.click(force=True)
         janela = pg.locator("#new-switch-store-modal")
         janela.locator("input[name=cep]").wait_for(state="visible", timeout=15000)
