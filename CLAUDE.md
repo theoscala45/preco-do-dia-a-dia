@@ -27,7 +27,7 @@ site:
 - Push em `main` está autorizado. Commits terminam com as linhas de coautoria e da sessão.
 
 ## Regras da cesta de produtos (decididas pelo Theo em 20/11/2026)
-- Meta: cada produto da cesta tem que ser lido em pelo menos 8 dos 9 mercados. Quem não cumpre é trocado.
+- Meta: cada produto da cesta tem que ser lido em pelo menos 8 dos 9 mercados (com 10 ou mais mercados, em todos menos 1 ou 2). Quem não cumpre é trocado.
 - "Mesmo produto" = mesma marca; o tamanho pode mudar. Quando o tamanho é diferente, a comparação é pelo preço
   por kg, litro ou unidade, e o site deixa explícito o tamanho de cada mercado (produto maior custa mais).
 - Produto que não dá para achar em 8 mercados: trocar por outro parecido que todos vendem (a cesta continua com 100).

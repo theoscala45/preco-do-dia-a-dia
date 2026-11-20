@@ -35,7 +35,7 @@ $('estadoColeta').textContent = dados.exemplo
     : 'A coleta ainda não está rodando. Por isso os preços que o site mostra hoje são inventados, e a faixa no topo avisa. Ela some sozinha quando o site passar a usar os preços reais.')
   : `Os preços do site vêm da coleta. A última data lida é ${new Date(dados.datas.at(-1) + 'T12:00').toLocaleDateString('pt-BR')}.`;
 if (links.length) {
-  const nomes = { tenda: 'Tenda', atacadao: 'Atacadão', carrefour: 'Carrefour', 'pao-de-acucar': 'Pão de Açúcar', sonda: 'Sonda', 'santa-luzia': 'Santa Luzia', hirota: 'Hirota', 'st-marche': 'St Marche', nagumo: 'Nagumo' };
+  const nomes = { tenda: 'Tenda', atacadao: 'Atacadão', carrefour: 'Carrefour', 'pao-de-acucar': 'Pão de Açúcar', sonda: 'Sonda', 'santa-luzia': 'Santa Luzia', hirota: 'Hirota', 'st-marche': 'St Marche', nagumo: 'Nagumo', mambo: 'Mambo' };
   const frases = Object.keys(nomes).filter(r => links.some(l => l.rede_id === r)).map(r => {
     const n = st => links.filter(l => l.rede_id === r && l.status === st).length;
     const lidos = n('achado') + n('variante');

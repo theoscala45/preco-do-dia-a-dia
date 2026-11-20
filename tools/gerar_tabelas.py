@@ -159,6 +159,7 @@ redes = [
  ["santa-luzia","Santa Luzia","unico","liberado_com_duvida",""],
  ["hirota","Hirota","por_loja","liberado_com_duvida","https://www.lojahirota.com.br"],
  ["nagumo","Nagumo","por_loja","liberado","https://www.nagumo.com.br"],
+ ["mambo","Mambo","unico","liberado","https://www.mambo.com.br"],
 ]
 w("redes.csv", ["rede_id","nome","tipo_preco","situacao","site"], redes)
 

@@ -899,3 +899,103 @@ P097,nagumo,https://www.nagumo.com.br/categoria/departamentos/hortifruti/higieni
 P098,nagumo,https://www.nagumo.com.br/categoria/departamentos/hortifruti/frutas/fruta-tradicional/mam%C3%A3o-formosa-2172.html,achado,"Mamão Formosa, por kg."
 P099,nagumo,https://www.nagumo.com.br/categoria/departamentos/hortifruti/legumes/caules-e-frutos/ab%C3%B3bora-italiana-2639.html,achado,"Abobrinha italiana, por kg."
 P100,nagumo,https://www.nagumo.com.br/categoria/departamentos/hortifruti/legumes/caules-e-frutos/piment%C3%A3o-verde-2752.html,achado,"Pimentão Verde, por kg."
+P001,mambo,https://www.mambo.com.br/arroz-polido-longo-fino-tipo-1-camil-5kg/p,achado,Arroz Polido Longo Fino Tipo 1 Camil 5kg.
+P002,mambo,,nao_achado,Não há arroz Tio João tipo 1 de 5kg; só arrozes especiais da marca.
+P003,mambo,https://www.mambo.com.br/feijao-carioca-tipo-1-camil-1kg/p,achado,Feijão Carioca Tipo 1 Camil 1kg.
+P004,mambo,https://www.mambo.com.br/feijao-preto-tipo-1-camil-1kg/p,achado,Feijão Preto Tipo 1 Camil 1kg.
+P005,mambo,https://www.mambo.com.br/oleo-de-soja-soya-900ml/p,achado,Óleo de Soja Soya 900ml.
+P006,mambo,https://www.mambo.com.br/azeite-portugues-extra-virgem-classico-gallo-500ml/p,achado,Azeite Português Extra Virgem Clássico Gallo 500ml.
+P007,mambo,https://www.mambo.com.br/acucar-refinado-uniao-1kg/p,achado,Açúcar Refinado União 1kg.
+P008,mambo,https://www.mambo.com.br/acucar-cristal-uniao-1kg/p,achado,Açúcar Cristal União 1kg.
+P009,mambo,https://www.mambo.com.br/cafe-torrado-e-moido-extra-forte-a-vacuo-pilao-500g/p,achado,Café Extra Forte a Vácuo Pilão 500g.
+P010,mambo,https://www.mambo.com.br/cafe-torrado-e-moido-tradicional-3-coracoes-500g/p,achado,Café Tradicional 3 Corações 500g.
+P011,mambo,https://www.mambo.com.br/farinha-de-trigo-dona-benta-1kg/p,achado,Farinha de Trigo Dona Benta 1kg.
+P012,mambo,https://www.mambo.com.br/farinha-de-mandioca-crua-yoki-500g/p,variante,Farinha de Mandioca Crua Yoki 500g.
+P013,mambo,https://www.mambo.com.br/macarrao-espaguete-com-ovos-renata-500g/p,achado,Macarrão Espaguete com Ovos Renata 500g.
+P014,mambo,https://www.mambo.com.br/macarrao-parafuso-com-ovos-barilla-500g/p,achado,Macarrão Parafuso com Ovos Barilla 500g.
+P015,mambo,https://www.mambo.com.br/molho-de-tomate-pomarola-260g/p,tamanho_diferente,Molho de Tomate Pomarola 260g. Tamanho diferente de 300g: entra quando o site comparar pelo tamanho.
+P016,mambo,https://www.mambo.com.br/extrato-de-tomate-tradicional-elefante-300g/p,achado,Extrato de Tomate Tradicional Elefante 300g.
+P017,mambo,https://www.mambo.com.br/sal-refinado-cisne-1kg/p,achado,Sal Refinado Cisne 1kg.
+P018,mambo,https://www.mambo.com.br/fuba-yoki-500g/p,achado,Fubá Yoki 500g.
+P019,mambo,https://www.mambo.com.br/aveia-em-flocos-embalagem-economica-quaker-450g/p,achado,Aveia em Flocos Quaker 450g.
+P020,mambo,https://www.mambo.com.br/achocolatado-em-po-nescau-350g-/p,achado,Achocolatado em Pó Nescau 350g.
+P021,mambo,https://www.mambo.com.br/biscoito-cream-cracker-amanteigado-tradicional-vitarella-350g/p,variante,Biscoito Cream Cracker Amanteigado Vitarella 350g.
+P022,mambo,https://www.mambo.com.br/biscoito-recheado-de-chocolate-passatempo-130g/p,achado,Biscoito Recheado de Chocolate Passatempo 130g.
+P023,mambo,https://www.mambo.com.br/pao-de-forma-pullman-480g/p,achado,Pão de Forma Pullman 480g.
+P024,mambo,https://www.mambo.com.br/margarina-com-sal-qualy-500g/p,achado,Margarina com Sal Qualy 500g.
+P025,mambo,https://www.mambo.com.br/maionese-hellmanns-500g/p,achado,Maionese Hellmann's 500g.
+P026,mambo,https://www.mambo.com.br/ketchup-tradicional-heinz-397g/p,achado,Ketchup Tradicional Heinz 397g.
+P027,mambo,https://www.mambo.com.br/sardinha-com-oleo-gomes-da-costa-125g/p,achado,Sardinha com Óleo Gomes da Costa 125g.
+P028,mambo,https://www.mambo.com.br/atum-ralado-em-oleo-gomes-da-costa-170g/p,achado,Atum Ralado em Óleo Gomes da Costa 170g.
+P029,mambo,https://www.mambo.com.br/milho-verde-quero-lata-170g/p,achado,Milho Verde Quero 170g.
+P030,mambo,https://www.mambo.com.br/ervilha-quero-lata-170g/p,achado,Ervilha Quero 170g.
+P031,mambo,https://www.mambo.com.br/vinagre-de-alcool-castelo-750ml/p,achado,Vinagre de Álcool Castelo 750ml.
+P032,mambo,https://www.mambo.com.br/tempero-para-frango-sazon-60g/p,achado,Tempero para Frango Sazón 60g.
+P033,mambo,https://www.mambo.com.br/caldo-de-galinha-knorr-57g-com-6-cubos/p,achado,Caldo de Galinha Knorr 57g.
+P034,mambo,https://www.mambo.com.br/leite-condensado-integral-moca-nestle-lata-395g/p,achado,Leite Condensado Moça Lata 395g.
+P035,mambo,https://www.mambo.com.br/creme-de-leite-original-nestle-200g/p,achado,Creme de Leite Nestlé 200g.
+P036,mambo,https://www.mambo.com.br/mistura-para-bolo-de-chocolate-dona-benta-450g/p,variante,"Mistura para Bolo de Chocolate Dona Benta 450g, como nas outras redes."
+P037,mambo,https://www.mambo.com.br/agua-mineral-natural-sem-gas-crystal-garrafa-1-5l/p,achado,"Água Mineral sem Gás Crystal 1,5L."
+P038,mambo,https://www.mambo.com.br/refrigerante-original-coca-cola-garrafa-2l/p,achado,Coca-Cola Original 2L.
+P039,mambo,https://www.mambo.com.br/leite-longa-vida-integral-italac-1l/p,achado,Leite Longa Vida Integral Italac 1L.
+P040,mambo,https://www.mambo.com.br/leite-longa-vida-integral-piracanjuba-1-litro/p,achado,Leite Longa Vida Integral Piracanjuba 1L.
+P041,mambo,https://www.mambo.com.br/leite-longa-vida-desnatado-piracanjuba-1-litro/p,achado,Leite Longa Vida Desnatado Piracanjuba 1L.
+P042,mambo,https://www.mambo.com.br/leite-em-po-integral-instantaneo-ninho-lata-380g/p,achado,Leite em Pó Integral Ninho 380g.
+P043,mambo,https://www.mambo.com.br/manteiga-com-sal-aviacao-pote-200g/p,achado,Manteiga com Sal Aviação Pote 200g.
+P044,mambo,https://www.mambo.com.br/queijo-mussarela-fatiado-tirolez/p,variante,"Queijo Mussarela Fatiado Tirolez, vendido por peso: o preço do kg vira o de 150g."
+P045,mambo,https://www.mambo.com.br/queijo-prato-fatiado-tirolez/p,variante,"Queijo Prato Fatiado Tirolez, vendido por peso: o preço do kg vira o de 150g."
+P046,mambo,https://www.mambo.com.br/requeijao-vigor-200g/p,achado,Requeijão Vigor 200g.
+P047,mambo,https://www.mambo.com.br/iogurte-integral-natural-nestle-170g/p,achado,Iogurte Integral Natural Nestlé 170g.
+P048,mambo,https://www.mambo.com.br/iogurte-morango-probio2-batavo-1-15kg/p,variante,"Iogurte de Morango Probio2 Batavo 1,15kg, como no Carrefour."
+P049,mambo,https://www.mambo.com.br/presunto-cozido-soltissimo-fatiado-sadia-200g/p,achado,Presunto Cozido Soltíssimo Sadia 200g.
+P050,mambo,https://www.mambo.com.br/queijo-minas-frescal-tirolez/p,achado,"Queijo Minas Frescal Tirolez, peça vendida por peso: o preço do kg vira o de 500g."
+P051,mambo,https://www.mambo.com.br/ovos-brancos-extra-asa-pvc-bandeja-com-20-unidades/p,achado,Ovos Brancos Extra 20 unidades.
+P052,mambo,https://www.mambo.com.br/ovos-grandes-vermelhos-happy-eggs-mantiqueira-com-20-unidades/p,achado,Ovos Vermelhos Grandes Happy Eggs 20 unidades.
+P053,mambo,https://www.mambo.com.br/papel-higienico-folha-dupla-toque-de-seda-neve-leve-24-pague-21/p,tamanho_diferente,"Papel Higiênico Neve Folha Dupla, pacote de 24. Entra quando o site comparar por rolo."
+P054,mambo,https://www.mambo.com.br/papel-higienico-folha-dupla-personal-vip-leve-18-pague-16/p,tamanho_diferente,"Papel Higiênico Personal Vip Folha Dupla, pacote de 18. Entra quando o site comparar por rolo."
+P055,mambo,https://www.mambo.com.br/sabonete-em-barra-pele-sensivel-dove-90g/p,variante,Sabonete em Barra Dove Pele Sensível 90g. Não há o Original.
+P056,mambo,https://www.mambo.com.br/sabonete-lux-botanicals-buque-de-jasmim-85gr/p,variante,"Sabonete Lux Botanicals Buquê de Jasmim 85g, como no Sonda."
+P057,mambo,https://www.mambo.com.br/creme-dental-total-12-advanced-fresh-colgate-90g/p,variante,Creme Dental Colgate Total 12 Advanced Fresh 90g.
+P058,mambo,https://www.mambo.com.br/creme-dental-maxima-protecao-colgate-120g-preco-especial/p,tamanho_diferente,Creme Dental Colgate Máxima Proteção 120g. Entra quando o site comparar pelo tamanho.
+P059,mambo,https://www.mambo.com.br/escova-dental-classic-clean-media-colgate-leve-3-pague-2/p,tamanho_diferente,"Escova Colgate Classic Clean, pacote com 3. Entra quando o site comparar por unidade."
+P060,mambo,https://www.mambo.com.br/shampoo-seda-ceramidas-325ml/p,variante,"Shampoo Seda Ceramidas 325ml, como no Pão de Açúcar."
+P061,mambo,https://www.mambo.com.br/condicionador-seda-ceramidas-325ml-/p,variante,Condicionador Seda Ceramidas 325ml.
+P062,mambo,https://www.mambo.com.br/desodorante-aerosol-invisible-clinical-rexona-91g/p,variante,"Desodorante Rexona Clinical Invisible aerosol (150ml = 91g), como no Carrefour."
+P063,mambo,https://www.mambo.com.br/fio-dental-com-cera-oral-b-50m/p,achado,Fio Dental com Cera Oral-B 50m.
+P064,mambo,https://www.mambo.com.br/absorvente-super-protecao-suave-com-abas-always-com-8-unidades/p,variante,"Absorvente Always Super Proteção Suave com Abas 8 unidades, como no Nagumo."
+P065,mambo,https://www.mambo.com.br/fralda-supreme-care-mega-m-huggies-com-40-unidades/p,variante,"Fralda Huggies Supreme Care M 40 unidades, como no Pão de Açúcar."
+P066,mambo,https://www.mambo.com.br/lava-roupas-em-po-lavanda-omo-1-6kg/p,variante,"Lava-Roupas em Pó Omo Lavanda 1,6kg."
+P067,mambo,https://www.mambo.com.br/lava-roupas-liquido-omo-lavagem-perfeita-3l/p,achado,Lava-Roupas Líquido Omo Lavagem Perfeita 3L.
+P068,mambo,https://www.mambo.com.br/amaciante-concentrado-puro-cuidado-comfort-500-ml/p,variante,Amaciante Concentrado Comfort Puro Cuidado 500ml.
+P069,mambo,https://www.mambo.com.br/detergente-liquido-neutro-ype-500ml/p,achado,Detergente Líquido Neutro Ypê 500ml.
+P070,mambo,https://www.mambo.com.br/agua-sanitaria-super-candida-2-litros/p,achado,Água Sanitária Super Candida 2L.
+P071,mambo,https://www.mambo.com.br/desinfetante-original-pinho-sol-500ml/p,achado,Desinfetante Original Pinho Sol 500ml.
+P072,mambo,https://www.mambo.com.br/limpador-multiuso-original-veja-gold-500ml/p,achado,Limpador Multiuso Veja Gold Original 500ml.
+P073,mambo,https://www.mambo.com.br/esponja-scotch-brite-nao-risca-laranja-com-3-unidades/p,variante,Esponja Scotch-Brite Não Risca 3 unidades.
+P074,mambo,https://www.mambo.com.br/saco-para-lixo-resist-dover-roll-50l-20-unidades/p,achado,Saco para Lixo Dover Roll 50L 20 unidades.
+P075,mambo,https://www.mambo.com.br/toalha-papel-snob-120-folhas-com-2-unidades/p,achado,Papel Toalha Snob 2 rolos.
+P076,mambo,https://www.mambo.com.br/sabao-em-barra-ype-neutro-800g/p,achado,Sabão em Barra Neutro Ypê 800g (5 unidades).
+P077,mambo,https://www.mambo.com.br/alcool-liquido-bacfree-46-inpm-brisa-de-eucalipto-coperalcool-1-litro/p,variante,"Álcool Líquido Bacfree 46º Coperalcool Brisa de Eucalipto 1L, como na St Marche. A página do Clássico tem um símbolo no endereço que não abre."
+P078,mambo,https://www.mambo.com.br/inseticida-aerosol-ultra-sbp-360ml/p,achado,Inseticida Aerosol SBP Ultra 360ml.
+P079,mambo,https://www.mambo.com.br/file-de-peito-de-frango-congelado-sadia-1kg/p,variante,Filé de Peito de Frango Congelado Sadia 1kg. Comparar por kg.
+P080,mambo,https://www.mambo.com.br/sobrecoxa-de-frango-congelada-sadia-1kg/p,variante,"Sobrecoxa de Frango Congelada Sadia 1kg, como no Pão de Açúcar. Comparar por kg."
+P081,mambo,https://www.mambo.com.br/frango-inteiro-tradicional-resfriado-kg/p,variante,"Frango Inteiro Resfriado, por kg. Não há o Sadia."
+P082,mambo,https://www.mambo.com.br/carne-moida-de-patinho-bovina-resfriada-kg/p,variante,"Carne Moída de Patinho, por kg."
+P083,mambo,https://www.mambo.com.br/acem-bovino-resfriado-tradicional-pedaco-bandeja/p,variante,"Acém Bovino em Pedaço, por kg."
+P084,mambo,https://www.mambo.com.br/contra-file-bife-bovino-resfriado-kg-1/p,variante,"Contrafilé em Bife, por kg."
+P085,mambo,https://www.mambo.com.br/linguica-toscana-seara-600g/p,variante,Linguiça Toscana Seara 600g. Comparar por kg.
+P086,mambo,https://www.mambo.com.br/salsicha-hot-dog-perdigao-500g/p,achado,Salsicha Hot Dog Perdigão 500g.
+P087,mambo,https://www.mambo.com.br/file-de-tilapia-congelado-seara-600g/p,variante,Filé de Tilápia Congelado Seara 600g. Comparar por kg.
+P088,mambo,https://www.mambo.com.br/banana-prata-kg/p,achado,"Banana Prata, por kg."
+P089,mambo,https://www.mambo.com.br/maca-gala-garden-750g/p,variante,"Maçã Gala, pacote de 750g. Comparar por kg."
+P090,mambo,https://www.mambo.com.br/laranja-pera-kg/p,achado,"Laranja Pera, por kg."
+P091,mambo,https://www.mambo.com.br/limao-tahiti-kg/p,achado,"Limão Tahiti, por kg."
+P092,mambo,https://www.mambo.com.br/tomate-extra-kg/p,variante,"Tomate Extra (salada), por kg."
+P093,mambo,https://www.mambo.com.br/cebola-nacional-kg/p,achado,"Cebola, por kg."
+P094,mambo,https://www.mambo.com.br/alho-roxo-kg/p,achado,"Alho Roxo, por kg."
+P095,mambo,https://www.mambo.com.br/batata-lavada-pacote-2kg/p,variante,"Batata Lavada, pacote de 2kg. Comparar por kg."
+P096,mambo,https://www.mambo.com.br/cenoura-kg/p,achado,"Cenoura, por kg."
+P097,mambo,https://www.mambo.com.br/alface-crespa-hidroponica-hasegawa/p,variante,"Alface Crespa Hidropônica, 1 unidade."
+P098,mambo,https://www.mambo.com.br/mamao-formosa-especial-kg/p,achado,"Mamão Formosa, por kg."
+P099,mambo,https://www.mambo.com.br/abobrinha-italiana-kg/p,achado,"Abobrinha Italiana, por kg."
+P100,mambo,https://www.mambo.com.br/pimentao-verde-kg/p,achado,"Pimentão Verde, por kg."
