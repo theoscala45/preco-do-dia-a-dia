@@ -27,6 +27,7 @@ REDES = {
     "hirota": (["Hirota Food", "Hirota"], ["hirota"]),
     "st-marche": (["St Marche", "St. Marche", "Santa Marche"], ["marche", "marché"]),
     "nagumo": (["Nagumo", "Supermercado Nagumo"], ["nagumo"]),
+    "mambo": (["Mambo", "Supermercado Mambo", "Mambo Supermercados"], ["mambo"]),
 }
 TIPOS = {"supermarket", "wholesale", "department_store", "mall", "greengrocer", "deli"}
 FORA = ["tenda dos", "tenda 1", "tenda 2", "tenda da", "tenda do ", "express", "minuto", "posto", "drogaria", "farmácia", "farmacia", "estacionamento", "banco", "sorvete", "eletro", "atacadão dos", "atacadao dos", "atacadão de", "atacadao de", "atacadão da", "atacadão do"]
