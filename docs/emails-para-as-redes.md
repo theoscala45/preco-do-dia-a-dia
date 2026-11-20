@@ -4,7 +4,7 @@ O Theo revisa, completa o que está entre colchetes e envia pela conta dele.
 
 Situação em 18/11/2026:
 - 1 (St Marche, pedido de autorização): enviado. A St Marche autorizou por e-mail, sem condições. A rede entrou na coleta em 18/11/2026.
-- 2 (Carrefour, pedido de acesso por CEP): enviado a atendimento@carrefour.com.br em 18/11/2026. Aguardando resposta. A 2b só vale se eles autorizarem.
+- 2 (Carrefour, pedido de acesso por CEP): enviado a atendimento@carrefour.com.br em 18/11/2026. Em 20/11 chegou uma resposta automática que confundiu o pedido com cadastro de fornecedor e mandou o formulário "seja um fornecedor" (não serve). Nem autorizou nem proibiu: a coleta segue com o preço único do site. Próximo passo, se o Theo quiser: responder explicando o mal-entendido e pedindo para encaminhar ao e-commerce, ao jurídico ou à comunicação, ou procurar a área de Imprensa no site do Grupo Carrefour Brasil. A 2b só vale se eles autorizarem.
 - 3 (Pão de Açúcar e Santa Luzia, aviso): enviado aos dois. Sem resposta até agora.
 
 Onde achar o contato: o rodapé do site de cada rede costuma ter "Fale conosco" ou "SAC". Para pedidos de autorização, vale pedir que o SAC encaminhe ao jurídico ou ao marketing.
