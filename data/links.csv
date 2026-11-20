@@ -421,8 +421,8 @@ P019,santa-luzia,https://www.santaluzia.com.br/aveia-integral-em-flocos-quaker-1
 P020,santa-luzia,https://www.santaluzia.com.br/achocolatado-em-po-nescau-nestle-370g-3169545/p,tamanho_diferente,Achocolatado em Pó Nescau 370g. Não há o de 350g. Fica fora.
 P021,santa-luzia,,nao_achado,Não há biscoito Vitarella.
 P022,santa-luzia,https://www.santaluzia.com.br/biscoito-passatempo-recehado-de-chocolate-nestle-130g-805602/p,achado,Biscoito Passatempo Recheado de Chocolate 130g.
-P023,santa-luzia,https://www.santaluzia.com.br/pao-de-forma-pullman--480g-586498/p,achado,Pão de Forma Pullman 480g.
-P024,santa-luzia,https://www.santaluzia.com.br/margarina-com-sal-qualy---500g-511447/p,achado,Margarina com Sal Qualy 500g.
+P023,santa-luzia,,nao_achado,"Pão de Forma Pullman 480g. O site tirou o produto da loja online em 20/11/2026 (a página abre vazia e o produto saiu da lista do site). Só há o Artesano, linha mais cara."
+P024,santa-luzia,,nao_achado,Margarina Qualy 500g. O site tirou o produto da loja online em 20/11/2026 (a página abre vazia e o produto saiu da lista do site). Só há a Qualy Vita de 250g.
 P025,santa-luzia,https://www.santaluzia.com.br/maionese-hellmannquots-500g--501115/p,achado,Maionese Hellmann's 500g.
 P026,santa-luzia,https://www.santaluzia.com.br/ketchup-tradicional-heinz-397g--651630/p,achado,Ketchup Tradicional Heinz 397g.
 P027,santa-luzia,,nao_achado,"Só filés de sardinha em óleo Gomes da Costa 125g, linha mais cara que a sardinha inteira. Fica fora: outra linha do produto, 40% ou mais acima da mediana das outras redes (revisão de 19/11/2026)."
@@ -441,16 +441,16 @@ P039,santa-luzia,https://www.santaluzia.com.br/leite-uht-integral-italac---1l-10
 P040,santa-luzia,,nao_achado,Não há leite integral Piracanjuba comum; só o sem lactose.
 P041,santa-luzia,https://www.santaluzia.com.br/leite-desnatado-piracanjuba---1l-794309/p,achado,Leite Desnatado Piracanjuba 1L.
 P042,santa-luzia,,nao_achado,"Só o composto lácteo Ninho Zero Lactose 380g, que não é leite em pó integral. Fica fora: outra linha do produto, 40% ou mais acima da mediana das outras redes (revisão de 19/11/2026)."
-P043,santa-luzia,https://www.santaluzia.com.br/manteiga-com-sal-aviacao--200g-586005/p,achado,Manteiga com Sal Aviação 200g.
-P044,santa-luzia,https://www.santaluzia.com.br/queijo-mussarela-fatiado-light-sem-lactose-tirolez---150g-1171100/p,variante,"Queijo Mussarela Fatiado Light sem Lactose Tirolez 150g, como no Carrefour."
+P043,santa-luzia,https://www.santaluzia.com.br/manteiga-aviacao-lata-200-g-501379/p,variante,"Manteiga Aviação Lata 200g, como na St Marche. A de pote saiu da loja online em 20/11/2026."
+P044,santa-luzia,,nao_achado,Muçarela fatiada Tirolez 150g. O site tirou o produto da loja online em 20/11/2026 (a página abre vazia e o produto saiu da lista do site).
 P045,santa-luzia,https://www.santaluzia.com.br/queijo-prato-fatiado-light-tirolez---150g-1171119/p,variante,Queijo Prato Fatiado Light Tirolez 150g.
 P046,santa-luzia,https://www.santaluzia.com.br/requeijao-tradicional-vigor---200g-1010328/p,achado,Requeijão Tradicional Vigor 200g.
-P047,santa-luzia,https://www.santaluzia.com.br/iogurte-natural-nestle---170g-935387/p,achado,Iogurte Natural Nestlé 170g.
-P048,santa-luzia,https://www.santaluzia.com.br/iogurte-morango-probio2-batavo--115kg-3237915/p,variante,"Iogurte Morango Probio2 Batavo 1,15kg. Linha Probio2."
+P047,santa-luzia,,nao_achado,Iogurte natural Nestlé 170g. O site tirou o produto da loja online em 20/11/2026 (a página abre vazia e o produto saiu da lista do site).
+P048,santa-luzia,,nao_achado,"Iogurte de morango Batavo 1,15kg. O site tirou o produto da loja online em 20/11/2026 (a página abre vazia e o produto saiu da lista do site). Só há o Probio2 de 510g."
 P049,santa-luzia,https://www.santaluzia.com.br/presunto-cozido-fatiado-soltissimo-sadia--200g-1109138/p,achado,Presunto Cozido Fatiado Soltíssimo Sadia 200g.
 P050,santa-luzia,,nao_achado,Não há queijo minas frescal Tirolez; só creme de queijo minas.
-P051,santa-luzia,https://www.santaluzia.com.br/ovos-brancos-grandes-planalto---20-un-3226972/p,achado,Ovos Brancos Grandes Planalto 20 unidades.
-P052,santa-luzia,https://www.santaluzia.com.br/ovos-vermelhos-grandes-planalto---20-un-3226980/p,achado,Ovos Vermelhos Grandes Planalto 20 unidades.
+P051,santa-luzia,,nao_achado,Ovos brancos grandes 20 unidades. O site tirou o produto da loja online em 20/11/2026 (a página abre vazia e o produto saiu da lista do site). Só há ovos caipiras.
+P052,santa-luzia,,nao_achado,Ovos vermelhos grandes 20 unidades. O site tirou o produto da loja online em 20/11/2026 (a página abre vazia e o produto saiu da lista do site). Só há ovos caipiras.
 P053,santa-luzia,https://www.santaluzia.com.br/papel-higienico-neutro-l18-p16-neve---1196650/p,tamanho_diferente,Papel Higiênico Neve Neutro Leve 18 Pague 16. Não há pacote de 12 com folha dupla. Fica fora.
 P054,santa-luzia,,nao_achado,"Só Personal VIP3, de folha tripla. Fica fora: outra linha do produto, 40% ou mais acima da mediana das outras redes (revisão de 19/11/2026)."
 P055,santa-luzia,https://www.santaluzia.com.br/sabonete-cremoso-dove-90g--832065/p,achado,Sabonete Cremoso Dove 90g (o Dove original).
@@ -484,7 +484,7 @@ P082,santa-luzia,,nao_achado,"O site não vende carnes, frutas e verduras fresca
 P083,santa-luzia,,nao_achado,"O site não vende carnes, frutas e verduras frescas pela internet."
 P084,santa-luzia,,nao_achado,"O site não vende carnes, frutas e verduras frescas pela internet."
 P085,santa-luzia,,nao_achado,Não há linguiça toscana Seara.
-P086,santa-luzia,https://www.santaluzia.com.br/salsicha-hot-dog-perdigao--500g-510602/p,achado,Salsicha Hot Dog Perdigão 500g.
+P086,santa-luzia,,nao_achado,Salsicha Hot Dog Perdigão 500g. O site tirou o produto da loja online em 20/11/2026 (a página abre vazia e o produto saiu da lista do site).
 P087,santa-luzia,,nao_achado,"O site não vende carnes, frutas e verduras frescas pela internet."
 P088,santa-luzia,,nao_achado,"O site não vende carnes, frutas e verduras frescas pela internet."
 P089,santa-luzia,,nao_achado,"O site não vende carnes, frutas e verduras frescas pela internet."
