@@ -225,13 +225,16 @@ data,rede_id,cep_id,produtos_tentados,produtos_lidos,resultado,erro,loja
 2026-11-20,atacadao,C24,81,81,ok,,Taipas
 2026-11-20,atacadao,C25,81,81,ok,mesma loja do C24: precos repetidos,Taipas
 2026-11-20,carrefour,,88,88,ok,,preco unico do site
-2026-11-20,hirota,C01,70,21,parcial,P025: pagina sem produto (pode nao existir mais); P026: pagina sem produto (pode nao existir mais); P027: pagina sem produto (pode nao existir mais); P028: pagina sem produto (pode nao existir mais); P029: pagina sem produto (pode nao existir mais); P030: pagina sem produto (pode nao existir mais); ,Santa Cecília (Av. Gen. Olímpio da Silveira; 39)
-2026-11-20,hirota,C02,70,0,falha,a primeira pagina falhou: P001: Locator.click: Timeout 30000ms exceeded.,
-2026-11-20,hirota,C03,70,0,falha,a primeira pagina falhou: P001: Locator.click: Timeout 30000ms exceeded.,
-2026-11-20,hirota,C04,70,0,falha,a primeira pagina falhou: P001: Locator.click: Timeout 30000ms exceeded.,
-2026-11-20,hirota,C06,70,0,falha,a primeira pagina falhou: P001: Locator.click: Timeout 30000ms exceeded.,
-2026-11-20,hirota,C07,70,0,falha,a primeira pagina falhou: P001: Locator.click: Timeout 30000ms exceeded.,
-2026-11-20,hirota,C08,70,0,falha,a primeira pagina falhou: P001: Locator.click: Timeout 30000ms exceeded.,
+2026-11-20,hirota,C01,70,70,ok,,Santa Cecília (Av. Gen. Olímpio da Silveira; 39)
+2026-11-20,hirota,C02,70,70,ok,mesma loja do C01: precos repetidos,Santa Cecília (Av. Gen. Olímpio da Silveira; 39)
+2026-11-20,hirota,C03,70,70,ok,mesma loja do C01: precos repetidos,Santa Cecília (Av. Gen. Olímpio da Silveira; 39)
+2026-11-20,hirota,C04,70,70,ok,mesma loja do C01: precos repetidos,Santa Cecília (Av. Gen. Olímpio da Silveira; 39)
+2026-11-20,hirota,C05,70,70,ok,mesma loja do C01: precos repetidos,Santa Cecília (Av. Gen. Olímpio da Silveira; 39)
+2026-11-20,hirota,C06,70,70,ok,,Santa Cecília (Av. Gen. Olímpio da Silveira; 39)
+2026-11-20,hirota,C07,70,70,ok,mesma loja do C06: precos repetidos,Santa Cecília (Av. Gen. Olímpio da Silveira; 39)
+2026-11-20,hirota,C08,70,70,ok,,Morumbi (Av. Dr. Guilherme Dumont Vilares; 1450)
+2026-11-20,hirota,C09,70,70,ok,mesma loja do C08: precos repetidos,Morumbi (Av. Dr. Guilherme Dumont Vilares; 1450)
+2026-11-20,hirota,C10,70,70,ok,mesma loja do C06: precos repetidos,Santa Cecília (Av. Gen. Olímpio da Silveira; 39)
 2026-11-20,hirota,C11,70,70,ok,,Campo Belo (R. Vieira de Morais; 263)
 2026-11-20,hirota,C12,70,70,ok,mesma loja do C11: precos repetidos,Campo Belo (R. Vieira de Morais; 263)
 2026-11-20,hirota,C13,70,70,ok,,Morumbi (Av. Dr. Guilherme Dumont Vilares; 1450)
@@ -264,9 +267,9 @@ data,rede_id,cep_id,produtos_tentados,produtos_lidos,resultado,erro,loja
 2026-11-20,nagumo,C15,97,97,ok,mesma loja do C12: precos repetidos,046-OSASCO (Rua Avestruz; 688; Osasco)
 2026-11-20,nagumo,C16,97,97,ok,,016-RAGUEB (João Maciel; 2500; São Paulo)
 2026-11-20,nagumo,C17,97,97,ok,,050-CAMILOPO (Rua Leonilda; 265; Santo Andre)
-2026-11-20,nagumo,C18,97,0,falha,a primeira pagina falhou: P001: Locator.wait_for: Timeout 15000ms exceeded.,
+2026-11-20,nagumo,C18,97,97,ok,,017-PIRES RIO (Avenida Pires Do Rio; 4342; Sao Paulo)
 2026-11-20,nagumo,C19,97,97,ok,,017-PIRES RIO (Avenida Pires Do Rio; 4342; Sao Paulo)
-2026-11-20,nagumo,C20,97,0,falha,a primeira pagina falhou: P001: Locator.wait_for: Timeout 20000ms exceeded.,
+2026-11-20,nagumo,C20,97,97,ok,,050-CAMILOPO (Rua Leonilda; 265; Santo Andre)
 2026-11-20,nagumo,C21,97,97,ok,,051-PQ CONTI (Avenida Joao Palma Aleman; 715; Guarulhos)
 2026-11-20,nagumo,C22,97,97,ok,,057-ANELVIAR (Av Pres Humberto De A. Castelo Bran; 3413; Guarulhos)
 2026-11-20,nagumo,C23,97,97,ok,mesma loja do C21: precos repetidos,051-PQ CONTI (Avenida Joao Palma Aleman; 715; Guarulhos)
