@@ -18,6 +18,8 @@ A tabela de preços é a grande. Cada linha é um preço de um produto, numa red
 
 **ceps.csv** (25 linhas). Cinco CEPs por zona da capital (Centro, Oeste, Sul, Leste, Norte). A coluna `perfil` é a faixa de renda do distrito do ponto (Renda alta, Renda média, Renda baixa), do Censo 2022; ver `renda.csv`. Em 19/11/2026, para equilibrar as faixas, quatro pontos mudaram de lugar mantendo o código: C04 Liberdade virou Sé, C08 Butantã virou Raposo Tavares, C16 Mooca virou Cidade Tiradentes e C22 Tucuruvi virou Jaçanã. As coletas de 17 e 18/11 com esses códigos são dos pontos antigos; elas ficam antes do início da série (`site.txt`) e não entram nas contas.
 
+**Regra da cesta (20/11/2026).** Cada produto tem que ser lido em pelo menos 8 dos 9 mercados; quem não cumpre é trocado por outro parecido que todos vendem. Mesmo produto quer dizer mesma marca; o tamanho pode mudar, e então a comparação é pelo preço por kg, litro ou unidade, com o tamanho de cada mercado à mostra no site. O Santa Luzia (sem carnes, frutas, verduras e refrigerados online) e o Hirota (sem higiene online) são exceções que o site avisa.
+
 **renda.csv** (25 linhas). O distrito de cada ponto, o código do IBGE e o rendimento médio e mediano mensal da pessoa responsável pelo domicílio (IBGE, Censo 2022, por distrito). A `faixa` compara o rendimento médio com os 96 distritos da cidade, em terços. O Censo 2022 só divulga o rendimento do responsável, não a renda da família. Refazer com `python3 tools/baixar_renda.py` e depois `python3 tools/preparar_geo.py`.
 
 **redes.csv** (9 linhas). `tipo_preco` diz se o preço muda por CEP, por loja, se é único ou se ainda falta confirmar. `situacao` resume o que a leitura das regras do site permitiu.

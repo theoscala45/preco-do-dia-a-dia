@@ -26,6 +26,14 @@ site:
 - Textos: sem travessão (—), sem tom de propaganda.
 - Push em `main` está autorizado. Commits terminam com as linhas de coautoria e da sessão.
 
+## Regras da cesta de produtos (decididas pelo Theo em 20/11/2026)
+- Meta: cada produto da cesta tem que ser lido em pelo menos 8 dos 9 mercados. Quem não cumpre é trocado.
+- "Mesmo produto" = mesma marca; o tamanho pode mudar. Quando o tamanho é diferente, a comparação é pelo preço
+  por kg, litro ou unidade, e o site deixa explícito o tamanho de cada mercado (produto maior custa mais).
+- Produto que não dá para achar em 8 mercados: trocar por outro parecido que todos vendem (a cesta continua com 100).
+- Faltas que são decisão do mercado contam como exceção, e o site avisa "este mercado não vende isso pela internet":
+  o Santa Luzia não vende carnes, frutas, verduras e refrigerados online; o Hirota não vende higiene online.
+
 ## Plano combinado (19/11/2026)
 1. Coleta das 9 redes; o Claude confere se está tudo pronto.
 2. O Theo trabalha o visual do site (pelo Claude Code).
