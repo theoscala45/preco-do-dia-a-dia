@@ -459,6 +459,54 @@ class Nagumo:
         return {"nome": nome, "tamanho": tamanho_do_nome(nome), "preco": preco, "unidade": "kg" if kg else "un", "disponivel": True}, cep_dado
 
 
+class Mambo:
+    """Mambo (mambo.com.br). O preco e o mesmo em todas as lojas: conferido em 20/11/2026 em 6 produtos e 4 lojas,
+    so o estoque muda. Por isso entra como preco unico, com a regiao padrao do site (Sao Paulo), lido em navegador
+    (a pagina monta o preco depois de abrir). O robots.txt libera as paginas de produto; os termos de uso so tratam
+    de compra e conta. Numa promocao, vale o preco atual ("por"), nao o antigo riscado; nos produtos vendidos por
+    peso, vale o preco do quilo ("R$ 12,98/Kg"). Os links vieram do sitemap do site."""
+    rede_id = "mambo"
+    site = "https://www.mambo.com.br"
+    preco_unico = True
+    navegador = True
+    hosts = ("mambo.com.br", "vtexassets.com", "vteximg.com.br", "vtex.com.br")
+    loja = ""
+    pg = None
+    # o bloco de preco do produto principal: o primeiro ProductPriceContainer depois do titulo (as vitrines de
+    # "compre tambem" vem mais abaixo e tem seus proprios blocos)
+    JS = """() => { const h = document.querySelector('h1'); if (!h) return null;
+                    const cs = [...document.querySelectorAll('[class*=ProductPriceContainer]')].filter(c => h.compareDocumentPosition(c) & Node.DOCUMENT_POSITION_FOLLOWING);
+                    const c = cs[0]; let p = null;
+                    if (c) p = [...c.querySelectorAll('[class]')].find(x => x.className.split(' ').some(k => /-x-price$/.test(k)));
+                    let e = h; for (let i = 0; i < 6 && e.parentElement; i++) e = e.parentElement;
+                    return {nome: h.innerText.trim(), bloco: c ? c.innerText : '', preco: p ? p.innerText : '', texto: e.innerText.split(/Compre tamb/i)[0]}; }"""
+
+    def ler_pagina(self, url):
+        pg = self.pg
+        resposta = pg.goto(url, wait_until="domcontentloaded", timeout=60000)
+        conferir_bloqueio(resposta, pg)
+        if resposta is not None and resposta.status == 404:
+            raise RuntimeError("pagina nao existe mais (404)")
+        pg.locator("h1").first.wait_for(state="visible", timeout=30000)
+        v = None
+        for _ in range(15):   # ate ~20 s para o preco do proprio produto aparecer
+            v = pg.evaluate(self.JS)
+            if v and re.search(r"R\$", v["bloco"]): break
+            pg.wait_for_timeout(1300)
+        pg.wait_for_timeout(800)
+        v = pg.evaluate(self.JS)
+        if not v: raise RuntimeError("pagina sem produto")
+        nome = v["nome"]
+        kg = re.search(r"R\$\s*([\d.]+,\d{2})\s*/\s*kg", v["bloco"], re.I)
+        m = re.search(r"R\$\s*([\d.]+,\d{2})", v["preco"])
+        if not m and not kg:
+            if re.search(r"indispon|avise-me|esgotad", v["texto"], re.I):
+                return {"nome": nome, "tamanho": tamanho_do_nome(nome), "preco": None, "unidade": "", "disponivel": False}
+            raise RuntimeError("preco nao encontrado na pagina")
+        valor = (kg or m).group(1)
+        return {"nome": nome, "tamanho": tamanho_do_nome(nome), "preco": f"{float(valor.replace('.', '').replace(',', '.')):.2f}", "unidade": "kg" if kg else "un", "disponivel": True}
+
+
 def ler_schema(url, marca_de_produto):
     """Le uma pagina de produto sem navegador e pega nome, preco e estoque nos dados padronizados (schema.org)."""
     req = urllib.request.Request(urllib.parse.quote(url, safe=":/%"), headers={"User-Agent": "Mozilla/5.0 (preco-do-dia-a-dia)"})
@@ -609,7 +657,7 @@ def coletar_unico(rede, links, hoje, limite, arq_precos, arq_exec, pw=None, refa
     print(f"[{rede.rede_id}] {resultado}: {len(linhas)}/{len(paginas)} lidos, {sem_preco} sem estoque, {time.time() - inicio:.0f} s" + (f" | {nota}" if nota else ""), flush=True)
 
 
-REDES = [Tenda(), Atacadao(), Carrefour(), PaoDeAcucar(), Sonda(), SantaLuzia(), StMarche(), Hirota(), Nagumo()]
+REDES = [Tenda(), Atacadao(), Carrefour(), PaoDeAcucar(), Sonda(), SantaLuzia(), StMarche(), Hirota(), Nagumo(), Mambo()]
 
 
 def robots(rede):
