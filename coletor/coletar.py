@@ -311,9 +311,19 @@ class Hirota:
 
     def escolher_loja(self, pg, cep):
         url, nome = pg.url, self.loja_do_cep(cep)
-        pg.locator("text=Retirar na loja >> visible=true").first.click()
-        pg.locator(".vip-selectable-tile", has_text=nome).first.wait_for(state="visible", timeout=20000)
-        pg.locator(".vip-selectable-tile", has_text=nome).first.click(force=True)
+        # de madrugada o site as vezes demora a responder ao clique (20/11/2026: 7 CEPs falharam assim e
+        # funcionaram de dia): tenta ate 3 vezes, abrindo a pagina de novo e esperando um pouco mais a cada vez
+        for tentativa in range(3):
+            try:
+                pg.locator("text=Retirar na loja >> visible=true").first.click(timeout=30000)
+                pg.locator(".vip-selectable-tile", has_text=nome).first.wait_for(state="visible", timeout=20000)
+                pg.locator(".vip-selectable-tile", has_text=nome).first.click(force=True)
+                break
+            except Exception:
+                if tentativa == 2: raise
+                pg.wait_for_timeout(20000 * (tentativa + 1))
+                pg.goto(url, wait_until="domcontentloaded", timeout=60000)
+                pg.wait_for_timeout(4000)
         pg.wait_for_timeout(2500)
         self.loja = self.ENDERECOS[nome]
         pg.goto(url, wait_until="domcontentloaded", timeout=60000)
