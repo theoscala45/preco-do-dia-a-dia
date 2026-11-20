@@ -250,6 +250,7 @@ data,rede_id,cep_id,produtos_tentados,produtos_lidos,resultado,erro,loja
 2026-11-20,hirota,C23,70,70,ok,mesma loja do C21: precos repetidos,Santa Cecília (Av. Gen. Olímpio da Silveira; 39)
 2026-11-20,hirota,C24,70,70,ok,mesma loja do C21: precos repetidos,Santa Cecília (Av. Gen. Olímpio da Silveira; 39)
 2026-11-20,hirota,C25,70,70,ok,mesma loja do C21: precos repetidos,Santa Cecília (Av. Gen. Olímpio da Silveira; 39)
+2026-11-20,mambo,,94,94,ok,,preco unico do site
 2026-11-20,nagumo,C01,97,97,ok,,046-OSASCO (Rua Avestruz; 688; Osasco)
 2026-11-20,nagumo,C02,97,97,ok,,051-PQ CONTI (Avenida Joao Palma Aleman; 715; Guarulhos)
 2026-11-20,nagumo,C03,97,97,ok,mesma loja do C02: precos repetidos,051-PQ CONTI (Avenida Joao Palma Aleman; 715; Guarulhos)
@@ -260,7 +261,7 @@ data,rede_id,cep_id,produtos_tentados,produtos_lidos,resultado,erro,loja
 2026-11-20,nagumo,C08,97,97,ok,mesma loja do C06: precos repetidos,046-OSASCO (Rua Avestruz; 688; Osasco)
 2026-11-20,nagumo,C09,97,97,ok,mesma loja do C06: precos repetidos,046-OSASCO (Rua Avestruz; 688; Osasco)
 2026-11-20,nagumo,C10,97,97,ok,mesma loja do C06: precos repetidos,046-OSASCO (Rua Avestruz; 688; Osasco)
-2026-11-20,nagumo,C11,97,0,falha,a primeira pagina falhou: P001: Locator.wait_for: Timeout 20000ms exceeded.,
+2026-11-20,nagumo,C11,97,97,ok,,050-CAMILOPO (Rua Leonilda; 265; Santo Andre)
 2026-11-20,nagumo,C12,97,97,ok,,046-OSASCO (Rua Avestruz; 688; Osasco)
 2026-11-20,nagumo,C13,97,97,ok,mesma loja do C12: precos repetidos,046-OSASCO (Rua Avestruz; 688; Osasco)
 2026-11-20,nagumo,C14,97,97,ok,,026-STO AND2 (Rua Coronel Seabra; 321; Santo Andre)
@@ -276,7 +277,7 @@ data,rede_id,cep_id,produtos_tentados,produtos_lidos,resultado,erro,loja
 2026-11-20,nagumo,C24,97,97,ok,,046-OSASCO (Rua Avestruz; 688; Osasco)
 2026-11-20,nagumo,C25,97,97,ok,mesma loja do C24: precos repetidos,046-OSASCO (Rua Avestruz; 688; Osasco)
 2026-11-20,pao-de-acucar,,91,91,ok,,preco unico do site
-2026-11-20,santa-luzia,,54,45,parcial,P023: pagina sem dados de produto; P024: pagina sem dados de produto; P043: pagina sem dados de produto; P044: pagina sem dados de produto; P047: pagina sem dados de produto; P048: pagina sem dados de produto; e mais 3,preco unico do site
+2026-11-20,santa-luzia,,46,46,ok,,preco unico do site
 2026-11-20,sonda,,74,74,ok,,preco unico do site
 2026-11-20,st-marche,,85,85,ok,,preco unico do site
 2026-11-20,tenda,C01,80,80,ok,,
