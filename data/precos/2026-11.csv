@@ -25399,148 +25399,793 @@ data,rede_id,produto_id,cep_id,preco_reais,unidade_de_venda,disponivel,nome_na_p
 2026-11-21,atacadao,P090,C25,,,nao,Laranja-pera Quilo,,2026-11-21T07:58:27-0300
 2026-11-21,atacadao,P097,C25,,,nao,Alface Crespa un,,2026-11-21T07:58:31-0300
 2026-11-21,atacadao,P098,C25,,,nao,Mamão Formosa Quilo,,2026-11-21T07:58:36-0300
-2026-11-21,carrefour,P001,,24.99,un,sim,Arroz Branco Camil Tipo 1 5kg,5kg,2026-11-21T02:17:31-0300
-2026-11-21,carrefour,P002,,29.99,un,sim,Arroz Branco Longo-fino Tipo 1 Tio João 5 Kg,5 Kg,2026-11-21T02:17:34-0300
-2026-11-21,carrefour,P003,,8.99,un,sim,Feijão Carioca Camil 1kg,1kg,2026-11-21T02:17:38-0300
-2026-11-21,carrefour,P005,,7.79,un,sim,Óleo de Soja Soya 900ml,900ml,2026-11-21T02:17:41-0300
-2026-11-21,carrefour,P006,,35.48,un,sim,Azeite Português Extra Virgem Tradicional Gallo 500ml,500ml,2026-11-21T02:17:45-0300
-2026-11-21,carrefour,P007,,3.98,un,sim,Açúcar Refinado União 1kg,1kg,2026-11-21T02:17:48-0300
-2026-11-21,carrefour,P008,,3.59,un,sim,Açúcar Cristal União 1Kg,1Kg,2026-11-21T02:17:51-0300
-2026-11-21,carrefour,P009,,23.90,un,sim,Café Torrado e Moído Extraforte Pilão Pacote 500g,500g,2026-11-21T02:17:55-0300
-2026-11-21,carrefour,P010,,23.98,un,sim,Café em Pó Tradicional 3 Corações 500g,500g,2026-11-21T02:17:59-0300
-2026-11-21,carrefour,P011,,5.79,un,sim,Farinha de Trigo Tradicional Dona Benta 1kg,1kg,2026-11-21T02:18:03-0300
-2026-11-21,carrefour,P012,,8.89,un,sim,Farinha de Mandioca Tipo 1 Fina Yoki Pacote 500g,500g,2026-11-21T02:18:07-0300
-2026-11-21,carrefour,P013,,4.19,un,sim,Macarrão Espaguete Renata com Ovos Nº 9 500g,500g,2026-11-21T02:18:11-0300
-2026-11-21,carrefour,P015,,2.99,un,sim,Molho de Tomate Tradicional Pomarola Sachê 300g,300g,2026-11-21T02:18:14-0300
-2026-11-21,carrefour,P016,,10.49,un,sim,Extrato de Tomate Tradicional Elefante Pote 300g,300g,2026-11-21T02:18:17-0300
-2026-11-21,carrefour,P019,,14.69,un,sim,Aveia em Flocos Regulares Quaker Embalagem Econômica 450g,450g,2026-11-21T02:18:20-0300
-2026-11-21,carrefour,P020,,13.29,un,sim,Achocolatado em Pó Nescau 350g,350g,2026-11-21T02:18:24-0300
-2026-11-21,carrefour,P021,,8.09,un,sim,Biscoito Cream Cracker Amanteigado Vitarella 350g,350g,2026-11-21T02:18:28-0300
-2026-11-21,carrefour,P022,,4.39,un,sim,Biscoito Passatempo Recheado Chocolate 130g,130g,2026-11-21T02:18:31-0300
-2026-11-21,carrefour,P023,,6.99,un,sim,Pão de Forma Pullman 480g,480g,2026-11-21T02:18:35-0300
-2026-11-21,carrefour,P024,,10.39,un,sim,Margarina Cremosa com Sal Qualy 500g,500g,2026-11-21T02:18:39-0300
-2026-11-21,carrefour,P025,,14.69,un,sim,Maionese Hellmann's Tradicional 500g,500g,2026-11-21T02:18:42-0300
-2026-11-21,carrefour,P026,,16.59,un,sim,Ketchup Heinz Tradicional 397g,397g,2026-11-21T02:18:46-0300
-2026-11-21,carrefour,P028,,10.99,un,sim,Atum Ralado em Óleo Gomes da Costa 170g,170g,2026-11-21T02:18:49-0300
-2026-11-21,carrefour,P029,,4.69,un,sim,Milho Verde Quero Lata 170g,170g,2026-11-21T02:18:53-0300
-2026-11-21,carrefour,P030,,4.69,un,sim,Ervilha Quero Lata 170g,170g,2026-11-21T02:18:57-0300
-2026-11-21,carrefour,P031,,5.39,un,sim,Vinagre de Álcool Castelo 750ml,750ml,2026-11-21T02:19:00-0300
-2026-11-21,carrefour,P032,,7.09,un,sim,Tempero Pronto para Frango com Sal Sazon 60g,60g,2026-11-21T02:19:04-0300
-2026-11-21,carrefour,P033,,4.29,un,sim,Caldo Knorr Galinha 57g 6 cubos,57g,2026-11-21T02:19:08-0300
-2026-11-21,carrefour,P034,,13.55,un,sim,Leite Condensado Moça Tradicional Lata Abre Fácil 395g,395g,2026-11-21T02:19:11-0300
-2026-11-21,carrefour,P035,,3.69,un,sim,Creme de Leite NESTLÉ 200g,200g,2026-11-21T02:19:15-0300
-2026-11-21,carrefour,P036,,12.59,un,sim,Mistura para Bolo de Chocolate Dona Benta 450g,450g,2026-11-21T02:19:19-0300
-2026-11-21,carrefour,P037,,3.19,un,sim,"Água Mineral Crystal Sem Gás 1,5L","1,5L",2026-11-21T02:19:22-0300
-2026-11-21,carrefour,P038,,11.99,un,sim,Refrigerante Coca-Cola Garrafa 2 L,2 L,2026-11-21T02:19:27-0300
-2026-11-21,carrefour,P039,,4.99,un,sim,Leite Integral UHT Italac 1 Litro,,2026-11-21T02:19:30-0300
-2026-11-21,carrefour,P040,,4.99,un,sim,Leite Integral Piracanjuba 1 Litro,,2026-11-21T02:19:34-0300
-2026-11-21,carrefour,P041,,4.99,un,sim,Leite Desnatado Piracanjuba 1 Litro,,2026-11-21T02:19:38-0300
-2026-11-21,carrefour,P042,,19.90,un,sim,Leite em Pó Ninho Integral Lata 380g,380g,2026-11-21T02:19:41-0300
-2026-11-21,carrefour,P043,,14.49,un,sim,Manteiga com Sal Aviação 200g,200g,2026-11-21T02:19:45-0300
-2026-11-21,carrefour,P044,,14.59,un,sim,Queijo Muçarela Fatiada Tirolez 150g,150g,2026-11-21T02:19:48-0300
-2026-11-21,carrefour,P045,,17.29,un,sim,Queijo Muçarela Fatiada Light sem Lactose Tirolez 150g,150g,2026-11-21T02:19:52-0300
-2026-11-21,carrefour,P046,,9.99,un,sim,Requeijão Cremoso Vigor 200g,200g,2026-11-21T02:19:56-0300
-2026-11-21,carrefour,P047,,3.29,un,sim,Iogurte Integral Nestlé Tradicional 170g,170g,2026-11-21T02:20:00-0300
-2026-11-21,carrefour,P048,,19.19,un,sim,"Iogurte Parcialmente Desnatado Morango Batavo Probio2 Garrafa 1,15kg Embalagem Econômica","1,15kg",2026-11-21T02:20:03-0300
-2026-11-21,carrefour,P049,,19.79,un,sim,Presunto Cozido Fatiado Soltíssimo Sadia 200 g,200 g,2026-11-21T02:20:06-0300
-2026-11-21,carrefour,P051,,11.99,un,sim,Ovos Brancos Carrefour 20 Unidades,20 Unidades,2026-11-21T02:20:09-0300
-2026-11-21,carrefour,P052,,14.69,un,sim,Ovos Vermelhos Carrefour 20 Unidades,20 Unidades,2026-11-21T02:20:13-0300
-2026-11-21,carrefour,P053,,32.39,un,sim,Papel Higiênico Folha Dupla Neutro Neve Toque da Seda 30 Metros Leve 12 Pague 11 Unidades,11 Unidades,2026-11-21T02:20:16-0300
-2026-11-21,carrefour,P055,,6.59,un,sim,Sabonete em Barra Dove Original 90g,90g,2026-11-21T02:20:21-0300
-2026-11-21,carrefour,P056,,2.39,un,sim,Sabonete em Barra Corporal Lux Botanicals Lavanda 85g,85g,2026-11-21T02:20:25-0300
-2026-11-21,carrefour,P057,,11.69,un,sim,Creme Dental Original Mint Colgate Total Prevenção Ativa Caixa 90g,90g,2026-11-21T02:20:29-0300
-2026-11-21,carrefour,P058,,5.39,un,sim,Creme Dental Colgate Máxima Proteção Anticáries 90g,90g,2026-11-21T02:20:32-0300
-2026-11-21,carrefour,P059,,6.79,un,sim,Escova Dental Colgate Classic Clean,,2026-11-21T02:20:34-0300
-2026-11-21,carrefour,P060,,19.49,un,sim,Shampoo Seda Ceramidas Infusão Ativa Retinol e Colágeno 325ml,325ml,2026-11-21T02:20:38-0300
-2026-11-21,carrefour,P061,,20.99,un,sim,Condicionador Seda Ceramidas Infusão Ativa Retinol e Colágeno 325ml,325ml,2026-11-21T02:20:41-0300
-2026-11-21,carrefour,P062,,20.69,un,sim,Desodorante Antitranspirante Aerosol Rexona Clinical Invisible 96h 150ml,150ml,2026-11-21T02:20:45-0300
-2026-11-21,carrefour,P063,,10.39,un,sim,Fio Dental Oral-B Essential Floss Sabor Menta 50m,50m,2026-11-21T02:20:49-0300
-2026-11-21,carrefour,P064,,4.15,un,sim,Absorvente Always Dia Ultra Suave com Abas 8 Unidades,8 Unidades,2026-11-21T02:20:53-0300
-2026-11-21,carrefour,P065,,104.99,un,sim,"Fralda Descartável Infantil Huggies Máxima Proteção M 5,5 a 9,5kg Pacote 66 Unidades Leve Mais Pague Menos",66 Unidades,2026-11-21T02:20:56-0300
-2026-11-21,carrefour,P067,,37.90,un,sim,Lava-Roupas Líquido Omo Lavagem Perfeita Galão 3L,3L,2026-11-21T02:21:00-0300
-2026-11-21,carrefour,P068,,11.39,un,sim,Amaciante Concentrado Comfort Frescor Intenso 500 ml,500 ml,2026-11-21T02:21:04-0300
-2026-11-21,carrefour,P069,,2.19,un,sim,Detergente Ypê Clear 500ml,500ml,2026-11-21T02:21:08-0300
-2026-11-21,carrefour,P070,,8.29,un,sim,Água Sanitária Super Candida 2L,2L,2026-11-21T02:21:12-0300
-2026-11-21,carrefour,P071,,8.89,un,sim,Desinfetante Pinho Sol Original Refil Leve 500ml Pague 450ml,500ml Pague 450ml,2026-11-21T02:21:16-0300
-2026-11-21,carrefour,P072,,6.29,un,sim,Limpador Multiuso Veja O Original Clássico 500ml Oferta,500ml,2026-11-21T02:21:19-0300
-2026-11-21,carrefour,P074,,42.99,un,sim,Saco de Lixo Dover Roll Super Forte Azul com 20 Unidades de 50 Litros,20 Unidades,2026-11-21T02:21:22-0300
-2026-11-21,carrefour,P078,,22.79,un,sim,Inseticida Multi Insetos SBP Aerosol Ultra 360ml,360ml,2026-11-21T02:21:33-0300
-2026-11-21,carrefour,P079,,24.89,un,sim,Filé de Frango Peito Congelado sem Osso Sadia 1Kg,1Kg,2026-11-21T02:21:36-0300
-2026-11-21,carrefour,P080,,17.89,un,sim,Pedaços de Sobrecoxa de Frango Congelado Sadia 1Kg,1Kg,2026-11-21T02:21:39-0300
-2026-11-21,carrefour,P081,,30.49,un,sim,"Frango Inteiro Congelado Carrefour Classic Aprox. 2,8 Kg","2,8 Kg",2026-11-21T02:21:42-0300
-2026-11-21,carrefour,P082,,55.90,un,sim,Carne Moída de Patinho Swift 1Kg,1Kg,2026-11-21T02:21:46-0300
-2026-11-21,carrefour,P083,,45.44,un,sim,Acém Bovina Carrefour Aproximadamente 900 g,900 g,2026-11-21T02:21:50-0300
-2026-11-21,carrefour,P084,,74.90,un,sim,Bife de Contra Filé Swift 1Kg,1Kg,2026-11-21T02:21:54-0300
-2026-11-21,carrefour,P086,,14.59,un,sim,Salsicha Tradicional Perdigão Hot Dog 500 g,500 g,2026-11-21T02:21:56-0300
-2026-11-21,carrefour,P087,,26.89,un,sim,Filé De Tilápia Sem Pele Congelado Carrefour Classic 400g,400g,2026-11-21T02:21:59-0300
-2026-11-21,carrefour,P088,,6.53,un,sim,Banana Prata Carrefour  600g,600g,2026-11-21T02:22:02-0300
-2026-11-21,carrefour,P089,,10.99,un,sim,Maca Gala Carrefour Mercado 1kg,1kg,2026-11-21T02:22:05-0300
-2026-11-21,carrefour,P090,,2.99,un,sim,Laranja Pêra Carrefour Aprox. 600g,600g,2026-11-21T02:22:09-0300
-2026-11-21,carrefour,P091,,12.00,un,sim,Limão Tahiti Único 700g,700g,2026-11-21T02:22:12-0300
-2026-11-21,carrefour,P092,,18.00,un,sim,Tomate Salada Único 1Kg,1Kg,2026-11-21T02:22:15-0300
-2026-11-21,carrefour,P093,,8.00,un,sim,Cebola Único Carrefour 1Kg,1Kg,2026-11-21T02:22:18-0300
-2026-11-21,carrefour,P094,,1.49,un,sim,Alho Granel Carrefour Aprox. 75g,75g,2026-11-21T02:22:21-0300
-2026-11-21,carrefour,P095,,6.00,un,sim,Batata Lavada Único Carrefour 1Kg,1Kg,2026-11-21T02:22:25-0300
-2026-11-21,carrefour,P096,,4.00,un,sim,Cenoura Único 1Kg,1Kg,2026-11-21T02:22:28-0300
-2026-11-21,carrefour,P097,,1.99,un,sim,Alface Crespa Carrefour Mercado Em Unidade,,2026-11-21T02:22:32-0300
-2026-11-21,carrefour,P098,,22.22,un,sim,"Mamão Formosa Garantia de Origem Aprox. 1,6 Kg","1,6 Kg",2026-11-21T02:22:36-0300
-2026-11-21,carrefour,P099,,3.31,un,sim,Abobrinha Italiana Carrefour Aprox. 400g,400g,2026-11-21T02:22:39-0300
-2026-11-21,carrefour,P100,,4.42,un,sim,Pimentão Verde Carrefour Aprox. 250g,250g,2026-11-21T02:22:43-0300
-2026-11-21,hirota,P001,C01,28.98,un,sim,Arroz Camil Tipo 1 5kg,5kg,2026-11-21T03:03:33-0300
-2026-11-21,hirota,P002,C01,35.98,un,sim,Arroz Tio Joao Tipo 1 5kg,5kg,2026-11-21T03:03:38-0300
-2026-11-21,hirota,P003,C01,9.98,un,sim,Feijão Carioca Camil 1kg,1kg,2026-11-21T03:03:42-0300
-2026-11-21,hirota,P004,C01,8.98,un,sim,Feijão Preto Camil 1kg,1kg,2026-11-21T03:03:48-0300
-2026-11-21,hirota,P005,C01,6.98,un,sim,Óleo Soja Soya Pet 900ml,900ml,2026-11-21T03:03:54-0300
-2026-11-21,hirota,P006,C01,36.98,un,sim,Azeite De Oliva Gallo Extra Virgem 500ml,500ml,2026-11-21T03:03:59-0300
-2026-11-21,hirota,P007,C01,4.98,un,sim,Açucar Uniao 1kg,1kg,2026-11-21T03:04:04-0300
-2026-11-21,hirota,P008,C01,4.98,un,sim,Açúcar Cristalçúcar União 1kg,1kg,2026-11-21T03:04:10-0300
-2026-11-21,hirota,P009,C01,34.98,un,sim,Cafe Extra Forte Pilao 500gr,500gr,2026-11-21T03:04:14-0300
-2026-11-21,hirota,P010,C01,30.98,un,sim,Café Torrado E Moído Extra Forte 3 Corações Pacote 500g,500g,2026-11-21T03:04:19-0300
-2026-11-21,hirota,P011,C01,,,nao,farinha de trigo dona benta tradicional 1kg,1kg,2026-11-21T03:04:47-0300
-2026-11-21,hirota,P001,C02,28.98,un,sim,Arroz Camil Tipo 1 5kg,5kg,2026-11-21T03:03:33-0300
-2026-11-21,hirota,P002,C02,35.98,un,sim,Arroz Tio Joao Tipo 1 5kg,5kg,2026-11-21T03:03:38-0300
-2026-11-21,hirota,P003,C02,9.98,un,sim,Feijão Carioca Camil 1kg,1kg,2026-11-21T03:03:42-0300
-2026-11-21,hirota,P004,C02,8.98,un,sim,Feijão Preto Camil 1kg,1kg,2026-11-21T03:03:48-0300
-2026-11-21,hirota,P005,C02,6.98,un,sim,Óleo Soja Soya Pet 900ml,900ml,2026-11-21T03:03:54-0300
-2026-11-21,hirota,P006,C02,36.98,un,sim,Azeite De Oliva Gallo Extra Virgem 500ml,500ml,2026-11-21T03:03:59-0300
-2026-11-21,hirota,P007,C02,4.98,un,sim,Açucar Uniao 1kg,1kg,2026-11-21T03:04:04-0300
-2026-11-21,hirota,P008,C02,4.98,un,sim,Açúcar Cristalçúcar União 1kg,1kg,2026-11-21T03:04:10-0300
-2026-11-21,hirota,P009,C02,34.98,un,sim,Cafe Extra Forte Pilao 500gr,500gr,2026-11-21T03:04:14-0300
-2026-11-21,hirota,P010,C02,30.98,un,sim,Café Torrado E Moído Extra Forte 3 Corações Pacote 500g,500g,2026-11-21T03:04:19-0300
-2026-11-21,hirota,P011,C02,,,nao,farinha de trigo dona benta tradicional 1kg,1kg,2026-11-21T03:04:47-0300
-2026-11-21,hirota,P001,C03,28.98,un,sim,Arroz Camil Tipo 1 5kg,5kg,2026-11-21T03:03:33-0300
-2026-11-21,hirota,P002,C03,35.98,un,sim,Arroz Tio Joao Tipo 1 5kg,5kg,2026-11-21T03:03:38-0300
-2026-11-21,hirota,P003,C03,9.98,un,sim,Feijão Carioca Camil 1kg,1kg,2026-11-21T03:03:42-0300
-2026-11-21,hirota,P004,C03,8.98,un,sim,Feijão Preto Camil 1kg,1kg,2026-11-21T03:03:48-0300
-2026-11-21,hirota,P005,C03,6.98,un,sim,Óleo Soja Soya Pet 900ml,900ml,2026-11-21T03:03:54-0300
-2026-11-21,hirota,P006,C03,36.98,un,sim,Azeite De Oliva Gallo Extra Virgem 500ml,500ml,2026-11-21T03:03:59-0300
-2026-11-21,hirota,P007,C03,4.98,un,sim,Açucar Uniao 1kg,1kg,2026-11-21T03:04:04-0300
-2026-11-21,hirota,P008,C03,4.98,un,sim,Açúcar Cristalçúcar União 1kg,1kg,2026-11-21T03:04:10-0300
-2026-11-21,hirota,P009,C03,34.98,un,sim,Cafe Extra Forte Pilao 500gr,500gr,2026-11-21T03:04:14-0300
-2026-11-21,hirota,P010,C03,30.98,un,sim,Café Torrado E Moído Extra Forte 3 Corações Pacote 500g,500g,2026-11-21T03:04:19-0300
-2026-11-21,hirota,P011,C03,,,nao,farinha de trigo dona benta tradicional 1kg,1kg,2026-11-21T03:04:47-0300
-2026-11-21,hirota,P001,C04,28.98,un,sim,Arroz Camil Tipo 1 5kg,5kg,2026-11-21T03:03:33-0300
-2026-11-21,hirota,P002,C04,35.98,un,sim,Arroz Tio Joao Tipo 1 5kg,5kg,2026-11-21T03:03:38-0300
-2026-11-21,hirota,P003,C04,9.98,un,sim,Feijão Carioca Camil 1kg,1kg,2026-11-21T03:03:42-0300
-2026-11-21,hirota,P004,C04,8.98,un,sim,Feijão Preto Camil 1kg,1kg,2026-11-21T03:03:48-0300
-2026-11-21,hirota,P005,C04,6.98,un,sim,Óleo Soja Soya Pet 900ml,900ml,2026-11-21T03:03:54-0300
-2026-11-21,hirota,P006,C04,36.98,un,sim,Azeite De Oliva Gallo Extra Virgem 500ml,500ml,2026-11-21T03:03:59-0300
-2026-11-21,hirota,P007,C04,4.98,un,sim,Açucar Uniao 1kg,1kg,2026-11-21T03:04:04-0300
-2026-11-21,hirota,P008,C04,4.98,un,sim,Açúcar Cristalçúcar União 1kg,1kg,2026-11-21T03:04:10-0300
-2026-11-21,hirota,P009,C04,34.98,un,sim,Cafe Extra Forte Pilao 500gr,500gr,2026-11-21T03:04:14-0300
-2026-11-21,hirota,P010,C04,30.98,un,sim,Café Torrado E Moído Extra Forte 3 Corações Pacote 500g,500g,2026-11-21T03:04:19-0300
-2026-11-21,hirota,P011,C04,,,nao,farinha de trigo dona benta tradicional 1kg,1kg,2026-11-21T03:04:47-0300
-2026-11-21,hirota,P001,C05,28.98,un,sim,Arroz Camil Tipo 1 5kg,5kg,2026-11-21T03:03:33-0300
-2026-11-21,hirota,P002,C05,35.98,un,sim,Arroz Tio Joao Tipo 1 5kg,5kg,2026-11-21T03:03:38-0300
-2026-11-21,hirota,P003,C05,9.98,un,sim,Feijão Carioca Camil 1kg,1kg,2026-11-21T03:03:42-0300
-2026-11-21,hirota,P004,C05,8.98,un,sim,Feijão Preto Camil 1kg,1kg,2026-11-21T03:03:48-0300
-2026-11-21,hirota,P005,C05,6.98,un,sim,Óleo Soja Soya Pet 900ml,900ml,2026-11-21T03:03:54-0300
-2026-11-21,hirota,P006,C05,36.98,un,sim,Azeite De Oliva Gallo Extra Virgem 500ml,500ml,2026-11-21T03:03:59-0300
-2026-11-21,hirota,P007,C05,4.98,un,sim,Açucar Uniao 1kg,1kg,2026-11-21T03:04:04-0300
-2026-11-21,hirota,P008,C05,4.98,un,sim,Açúcar Cristalçúcar União 1kg,1kg,2026-11-21T03:04:10-0300
-2026-11-21,hirota,P009,C05,34.98,un,sim,Cafe Extra Forte Pilao 500gr,500gr,2026-11-21T03:04:14-0300
-2026-11-21,hirota,P010,C05,30.98,un,sim,Café Torrado E Moído Extra Forte 3 Corações Pacote 500g,500g,2026-11-21T03:04:19-0300
-2026-11-21,hirota,P011,C05,,,nao,farinha de trigo dona benta tradicional 1kg,1kg,2026-11-21T03:04:47-0300
+2026-11-21,carrefour,P001,,24.99,un,sim,Arroz Branco Camil Tipo 1 5kg,5kg,2026-11-21T10:27:28-0300
+2026-11-21,carrefour,P002,,29.99,un,sim,Arroz Branco Longo-fino Tipo 1 Tio João 5 Kg,5 Kg,2026-11-21T10:27:31-0300
+2026-11-21,carrefour,P003,,8.99,un,sim,Feijão Carioca Camil 1kg,1kg,2026-11-21T10:27:35-0300
+2026-11-21,carrefour,P005,,7.79,un,sim,Óleo de Soja Soya 900ml,900ml,2026-11-21T10:27:39-0300
+2026-11-21,carrefour,P006,,35.48,un,sim,Azeite Português Extra Virgem Tradicional Gallo 500ml,500ml,2026-11-21T10:27:44-0300
+2026-11-21,carrefour,P007,,3.98,un,sim,Açúcar Refinado União 1kg,1kg,2026-11-21T10:27:47-0300
+2026-11-21,carrefour,P008,,3.59,un,sim,Açúcar Cristal União 1Kg,1Kg,2026-11-21T10:27:50-0300
+2026-11-21,carrefour,P009,,23.90,un,sim,Café Torrado e Moído Extraforte Pilão Pacote 500g,500g,2026-11-21T10:27:53-0300
+2026-11-21,carrefour,P010,,23.98,un,sim,Café em Pó Tradicional 3 Corações 500g,500g,2026-11-21T10:27:56-0300
+2026-11-21,carrefour,P011,,5.79,un,sim,Farinha de Trigo Tradicional Dona Benta 1kg,1kg,2026-11-21T10:27:59-0300
+2026-11-21,carrefour,P012,,8.89,un,sim,Farinha de Mandioca Tipo 1 Fina Yoki Pacote 500g,500g,2026-11-21T10:28:02-0300
+2026-11-21,carrefour,P013,,4.19,un,sim,Macarrão Espaguete Renata com Ovos Nº 9 500g,500g,2026-11-21T10:28:07-0300
+2026-11-21,carrefour,P015,,2.99,un,sim,Molho de Tomate Tradicional Pomarola Sachê 300g,300g,2026-11-21T10:28:10-0300
+2026-11-21,carrefour,P016,,10.49,un,sim,Extrato de Tomate Tradicional Elefante Pote 300g,300g,2026-11-21T10:28:14-0300
+2026-11-21,carrefour,P019,,14.69,un,sim,Aveia em Flocos Regulares Quaker Embalagem Econômica 450g,450g,2026-11-21T10:28:17-0300
+2026-11-21,carrefour,P020,,13.29,un,sim,Achocolatado em Pó Nescau 350g,350g,2026-11-21T10:28:21-0300
+2026-11-21,carrefour,P021,,8.09,un,sim,Biscoito Cream Cracker Amanteigado Vitarella 350g,350g,2026-11-21T10:28:24-0300
+2026-11-21,carrefour,P022,,4.39,un,sim,Biscoito Passatempo Recheado Chocolate 130g,130g,2026-11-21T10:28:27-0300
+2026-11-21,carrefour,P023,,6.99,un,sim,Pão de Forma Pullman 480g,480g,2026-11-21T10:28:31-0300
+2026-11-21,carrefour,P024,,10.39,un,sim,Margarina Cremosa com Sal Qualy 500g,500g,2026-11-21T10:28:34-0300
+2026-11-21,carrefour,P025,,14.69,un,sim,Maionese Hellmann's Tradicional 500g,500g,2026-11-21T10:28:37-0300
+2026-11-21,carrefour,P026,,16.59,un,sim,Ketchup Heinz Tradicional 397g,397g,2026-11-21T10:28:41-0300
+2026-11-21,carrefour,P028,,10.99,un,sim,Atum Ralado em Óleo Gomes da Costa 170g,170g,2026-11-21T10:28:44-0300
+2026-11-21,carrefour,P029,,4.69,un,sim,Milho Verde Quero Lata 170g,170g,2026-11-21T10:28:48-0300
+2026-11-21,carrefour,P030,,5.49,un,sim,Ervilha Quero Lata 170g,170g,2026-11-21T10:28:52-0300
+2026-11-21,carrefour,P031,,5.39,un,sim,Vinagre de Álcool Castelo 750ml,750ml,2026-11-21T10:28:55-0300
+2026-11-21,carrefour,P032,,7.09,un,sim,Tempero Pronto para Frango com Sal Sazon 60g,60g,2026-11-21T10:29:00-0300
+2026-11-21,carrefour,P033,,4.29,un,sim,Caldo Knorr Galinha 57g 6 cubos,57g,2026-11-21T10:29:04-0300
+2026-11-21,carrefour,P034,,13.55,un,sim,Leite Condensado Moça Tradicional Lata Abre Fácil 395g,395g,2026-11-21T10:29:08-0300
+2026-11-21,carrefour,P035,,3.69,un,sim,Creme de Leite NESTLÉ 200g,200g,2026-11-21T10:29:11-0300
+2026-11-21,carrefour,P036,,12.59,un,sim,Mistura para Bolo de Chocolate Dona Benta 450g,450g,2026-11-21T10:29:16-0300
+2026-11-21,carrefour,P037,,3.19,un,sim,"Água Mineral Crystal Sem Gás 1,5L","1,5L",2026-11-21T10:29:19-0300
+2026-11-21,carrefour,P038,,11.99,un,sim,Refrigerante Coca-Cola Garrafa 2 L,2 L,2026-11-21T10:29:22-0300
+2026-11-21,carrefour,P039,,4.99,un,sim,Leite Integral UHT Italac 1 Litro,,2026-11-21T10:29:26-0300
+2026-11-21,carrefour,P040,,4.99,un,sim,Leite Integral Piracanjuba 1 Litro,,2026-11-21T10:29:28-0300
+2026-11-21,carrefour,P041,,4.99,un,sim,Leite Desnatado Piracanjuba 1 Litro,,2026-11-21T10:29:31-0300
+2026-11-21,carrefour,P042,,19.90,un,sim,Leite em Pó Ninho Integral Lata 380g,380g,2026-11-21T10:29:35-0300
+2026-11-21,carrefour,P043,,14.49,un,sim,Manteiga com Sal Aviação 200g,200g,2026-11-21T10:29:39-0300
+2026-11-21,carrefour,P044,,14.59,un,sim,Queijo Muçarela Fatiada Tirolez 150g,150g,2026-11-21T10:29:43-0300
+2026-11-21,carrefour,P045,,17.29,un,sim,Queijo Muçarela Fatiada Light sem Lactose Tirolez 150g,150g,2026-11-21T10:29:46-0300
+2026-11-21,carrefour,P046,,9.99,un,sim,Requeijão Cremoso Vigor 200g,200g,2026-11-21T10:29:50-0300
+2026-11-21,carrefour,P047,,3.29,un,sim,Iogurte Integral Nestlé Tradicional 170g,170g,2026-11-21T10:29:54-0300
+2026-11-21,carrefour,P048,,19.19,un,sim,"Iogurte Parcialmente Desnatado Morango Batavo Probio2 Garrafa 1,15kg Embalagem Econômica","1,15kg",2026-11-21T10:29:57-0300
+2026-11-21,carrefour,P049,,18.89,un,sim,Presunto Cozido Fatiado Soltíssimo Sadia 200 g,200 g,2026-11-21T10:30:00-0300
+2026-11-21,carrefour,P051,,11.99,un,sim,Ovos Brancos Carrefour 20 Unidades,20 Unidades,2026-11-21T10:30:03-0300
+2026-11-21,carrefour,P052,,14.69,un,sim,Ovos Vermelhos Carrefour 20 Unidades,20 Unidades,2026-11-21T10:30:06-0300
+2026-11-21,carrefour,P053,,33.99,un,sim,Papel Higiênico Folha Dupla Neutro Neve Toque da Seda 30 Metros Leve 12 Pague 11 Unidades,11 Unidades,2026-11-21T10:30:09-0300
+2026-11-21,carrefour,P055,,6.59,un,sim,Sabonete em Barra Dove Original 90g,90g,2026-11-21T10:30:13-0300
+2026-11-21,carrefour,P056,,2.39,un,sim,Sabonete em Barra Corporal Lux Botanicals Lavanda 85g,85g,2026-11-21T10:30:16-0300
+2026-11-21,carrefour,P057,,11.69,un,sim,Creme Dental Original Mint Colgate Total Prevenção Ativa Caixa 90g,90g,2026-11-21T10:30:20-0300
+2026-11-21,carrefour,P058,,5.39,un,sim,Creme Dental Colgate Máxima Proteção Anticáries 90g,90g,2026-11-21T10:30:24-0300
+2026-11-21,carrefour,P059,,6.79,un,sim,Escova Dental Colgate Classic Clean,,2026-11-21T10:30:27-0300
+2026-11-21,carrefour,P060,,19.49,un,sim,Shampoo Seda Ceramidas Infusão Ativa Retinol e Colágeno 325ml,325ml,2026-11-21T10:30:30-0300
+2026-11-21,carrefour,P061,,20.99,un,sim,Condicionador Seda Ceramidas Infusão Ativa Retinol e Colágeno 325ml,325ml,2026-11-21T10:30:34-0300
+2026-11-21,carrefour,P062,,20.69,un,sim,Desodorante Antitranspirante Aerosol Rexona Clinical Invisible 96h 150ml,150ml,2026-11-21T10:30:37-0300
+2026-11-21,carrefour,P063,,10.39,un,sim,Fio Dental Oral-B Essential Floss Sabor Menta 50m,50m,2026-11-21T10:30:40-0300
+2026-11-21,carrefour,P064,,4.15,un,sim,Absorvente Always Dia Ultra Suave com Abas 8 Unidades,8 Unidades,2026-11-21T10:30:44-0300
+2026-11-21,carrefour,P065,,104.99,un,sim,"Fralda Descartável Infantil Huggies Máxima Proteção M 5,5 a 9,5kg Pacote 66 Unidades Leve Mais Pague Menos",66 Unidades,2026-11-21T10:30:48-0300
+2026-11-21,carrefour,P067,,37.90,un,sim,Lava-Roupas Líquido Omo Lavagem Perfeita Galão 3L,3L,2026-11-21T10:30:51-0300
+2026-11-21,carrefour,P068,,11.39,un,sim,Amaciante Concentrado Comfort Frescor Intenso 500 ml,500 ml,2026-11-21T10:30:54-0300
+2026-11-21,carrefour,P069,,2.19,un,sim,Detergente Ypê Clear 500ml,500ml,2026-11-21T10:30:58-0300
+2026-11-21,carrefour,P070,,8.29,un,sim,Água Sanitária Super Candida 2L,2L,2026-11-21T10:31:02-0300
+2026-11-21,carrefour,P071,,8.89,un,sim,Desinfetante Pinho Sol Original Refil Leve 500ml Pague 450ml,500ml Pague 450ml,2026-11-21T10:31:05-0300
+2026-11-21,carrefour,P072,,6.29,un,sim,Limpador Multiuso Veja O Original Clássico 500ml Oferta,500ml,2026-11-21T10:31:10-0300
+2026-11-21,carrefour,P074,,42.99,un,sim,Saco de Lixo Dover Roll Super Forte Azul com 20 Unidades de 50 Litros,20 Unidades,2026-11-21T10:31:14-0300
+2026-11-21,carrefour,P078,,22.79,un,sim,Inseticida Multi Insetos SBP Aerosol Ultra 360ml,360ml,2026-11-21T10:31:25-0300
+2026-11-21,carrefour,P079,,24.89,un,sim,Filé de Frango Peito Congelado sem Osso Sadia 1Kg,1Kg,2026-11-21T10:31:28-0300
+2026-11-21,carrefour,P080,,17.89,un,sim,Pedaços de Sobrecoxa de Frango Congelado Sadia 1Kg,1Kg,2026-11-21T10:31:32-0300
+2026-11-21,carrefour,P081,,30.49,un,sim,"Frango Inteiro Congelado Carrefour Classic Aprox. 2,8 Kg","2,8 Kg",2026-11-21T10:31:36-0300
+2026-11-21,carrefour,P082,,55.90,un,sim,Carne Moída de Patinho Swift 1Kg,1Kg,2026-11-21T10:31:39-0300
+2026-11-21,carrefour,P083,,45.44,un,sim,Acém Bovina Carrefour Aproximadamente 900 g,900 g,2026-11-21T10:31:43-0300
+2026-11-21,carrefour,P084,,74.90,un,sim,Bife de Contra Filé Swift 1Kg,1Kg,2026-11-21T10:31:47-0300
+2026-11-21,carrefour,P086,,14.59,un,sim,Salsicha Tradicional Perdigão Hot Dog 500 g,500 g,2026-11-21T10:31:50-0300
+2026-11-21,carrefour,P087,,26.89,un,sim,Filé De Tilápia Sem Pele Congelado Carrefour Classic 400g,400g,2026-11-21T10:31:54-0300
+2026-11-21,carrefour,P088,,6.53,un,sim,Banana Prata Carrefour  600g,600g,2026-11-21T10:31:59-0300
+2026-11-21,carrefour,P089,,10.99,un,sim,Maca Gala Carrefour Mercado 1kg,1kg,2026-11-21T10:32:02-0300
+2026-11-21,carrefour,P090,,2.99,un,sim,Laranja Pêra Carrefour Aprox. 600g,600g,2026-11-21T10:32:06-0300
+2026-11-21,carrefour,P091,,12.00,un,sim,Limão Tahiti Único 700g,700g,2026-11-21T10:32:10-0300
+2026-11-21,carrefour,P092,,18.00,un,sim,Tomate Salada Único 1Kg,1Kg,2026-11-21T10:32:14-0300
+2026-11-21,carrefour,P093,,8.00,un,sim,Cebola Único Carrefour 1Kg,1Kg,2026-11-21T10:32:17-0300
+2026-11-21,carrefour,P094,,1.49,un,sim,Alho Granel Carrefour Aprox. 75g,75g,2026-11-21T10:32:20-0300
+2026-11-21,carrefour,P095,,6.00,un,sim,Batata Lavada Único Carrefour 1Kg,1Kg,2026-11-21T10:32:23-0300
+2026-11-21,carrefour,P096,,4.00,un,sim,Cenoura Único 1Kg,1Kg,2026-11-21T10:32:27-0300
+2026-11-21,carrefour,P097,,1.99,un,sim,Alface Crespa Carrefour Mercado Em Unidade,,2026-11-21T10:32:30-0300
+2026-11-21,carrefour,P098,,22.22,un,sim,"Mamão Formosa Garantia de Origem Aprox. 1,6 Kg","1,6 Kg",2026-11-21T10:32:34-0300
+2026-11-21,carrefour,P099,,3.31,un,sim,Abobrinha Italiana Carrefour Aprox. 400g,400g,2026-11-21T10:32:38-0300
+2026-11-21,carrefour,P100,,4.42,un,sim,Pimentão Verde Carrefour Aprox. 250g,250g,2026-11-21T10:32:41-0300
+2026-11-21,hirota,P001,C01,28.98,un,sim,Arroz Camil Tipo 1 5kg,5kg,2026-11-21T10:27:48-0300
+2026-11-21,hirota,P002,C01,35.98,un,sim,Arroz Tio Joao Tipo 1 5kg,5kg,2026-11-21T10:27:53-0300
+2026-11-21,hirota,P003,C01,9.98,un,sim,Feijão Carioca Camil 1kg,1kg,2026-11-21T10:27:59-0300
+2026-11-21,hirota,P004,C01,8.98,un,sim,Feijão Preto Camil 1kg,1kg,2026-11-21T10:28:05-0300
+2026-11-21,hirota,P005,C01,6.98,un,sim,Óleo Soja Soya Pet 900ml,900ml,2026-11-21T10:28:11-0300
+2026-11-21,hirota,P006,C01,36.98,un,sim,Azeite De Oliva Gallo Extra Virgem 500ml,500ml,2026-11-21T10:28:18-0300
+2026-11-21,hirota,P007,C01,4.98,un,sim,Açucar Uniao 1kg,1kg,2026-11-21T10:28:24-0300
+2026-11-21,hirota,P008,C01,4.98,un,sim,Açúcar Cristalçúcar União 1kg,1kg,2026-11-21T10:28:30-0300
+2026-11-21,hirota,P009,C01,34.98,un,sim,Cafe Extra Forte Pilao 500gr,500gr,2026-11-21T10:28:36-0300
+2026-11-21,hirota,P010,C01,30.98,un,sim,Café Torrado E Moído Extra Forte 3 Corações Pacote 500g,500g,2026-11-21T10:28:43-0300
+2026-11-21,hirota,P011,C01,6.98,un,sim,Farinha De Trigo Dona Benta Tradicional 1kg,1kg,2026-11-21T10:28:49-0300
+2026-11-21,hirota,P012,C01,8.98,un,sim,Farinha De Mandioca Yoki 500g Crua,500g,2026-11-21T10:28:56-0300
+2026-11-21,hirota,P013,C01,4.28,un,sim,Massa Espaguete Renata Com Ovos Numero 8 500gr,500gr,2026-11-21T10:29:03-0300
+2026-11-21,hirota,P014,C01,6.28,un,sim,Macarrão Com Ovos Barilla Parafuso 500g,500g,2026-11-21T10:29:08-0300
+2026-11-21,hirota,P015,C01,3.98,un,sim,Molho Pomarola Trad Sache 300g,300g,2026-11-21T10:29:15-0300
+2026-11-21,hirota,P016,C01,10.98,un,sim,Extrato De Tomate Elefante Pote 300g,300g,2026-11-21T10:29:20-0300
+2026-11-21,hirota,P017,C01,4.28,kg,sim,Sal Refinado Tradicional Cisne 1kg,1kg,2026-11-21T10:29:26-0300
+2026-11-21,hirota,P018,C01,5.98,un,sim,Fubá Mimoso Yoki 500g,500g,2026-11-21T10:29:32-0300
+2026-11-21,hirota,P020,C01,12.98,un,sim,Achocolatado Em Pó Nestlé Nescau 350g,350g,2026-11-21T10:29:39-0300
+2026-11-21,hirota,P022,C01,3.48,un,sim,Biscoito Passatempo Recheado 130g Chocolate,130g,2026-11-21T10:29:44-0300
+2026-11-21,hirota,P024,C01,,,nao,margarina qualy sadia com sal 500g,500g,2026-11-21T10:30:12-0300
+2026-11-21,hirota,P025,C01,12.88,un,sim,Maionese Hellmann`s Tradicional 500ml,500ml,2026-11-21T10:30:38-0300
+2026-11-21,hirota,P026,C01,14.98,un,sim,Ketchup Heinz Tradicional 397g,397g,2026-11-21T10:30:44-0300
+2026-11-21,hirota,P027,C01,8.98,un,sim,Sardinha Gomes Da Costa Com Óleo 125g,125g,2026-11-21T10:30:49-0300
+2026-11-21,hirota,P028,C01,10.98,un,sim,Atum Gomes Da Costa Ralado Em Óleo 170g,170g,2026-11-21T10:30:56-0300
+2026-11-21,hirota,P029,C01,5.48,un,sim,Milho Verde Quero Conserva Lt 170g,170g,2026-11-21T10:31:03-0300
+2026-11-21,hirota,P030,C01,5.48,un,sim,Ervilha Em Conserva Quero Lata 170g,170g,2026-11-21T10:31:09-0300
+2026-11-21,hirota,P031,C01,5.48,un,sim,Vinagre Castelo De Álcool 750ml,750ml,2026-11-21T10:31:15-0300
+2026-11-21,hirota,P032,C01,7.38,un,sim,Tempero Sazón Frango 60g,60g,2026-11-21T10:31:22-0300
+2026-11-21,hirota,P033,C01,3.48,un,sim,Caldo Knorr Galinha 6 Cubos,,2026-11-21T10:31:29-0300
+2026-11-21,hirota,P034,C01,10.98,un,sim,Leite Condensado Moça Tradicional Nestlé 395g,395g,2026-11-21T10:31:35-0300
+2026-11-21,hirota,P035,C01,5.48,un,sim,Creme De Leite Nestlé Tradicional 200g,200g,2026-11-21T10:31:41-0300
+2026-11-21,hirota,P036,C01,11.98,un,sim,Mistura Para Bolo De Chocolate Dona Benta 450g,450g,2026-11-21T10:31:48-0300
+2026-11-21,hirota,P037,C01,3.98,un,sim,"Água Mineral Crystal Sem Gás 1,5l","1,5l",2026-11-21T10:31:55-0300
+2026-11-21,hirota,P039,C01,5.98,un,sim,Leite Italac 1 Litro Integral,,2026-11-21T10:32:02-0300
+2026-11-21,hirota,P040,C01,5.98,un,sim,Leite Longa Vida Integral Piracanjuba 1l,1l,2026-11-21T10:32:08-0300
+2026-11-21,hirota,P041,C01,,,nao,leite longa vida piracanjuba desnatado 1l,1l,2026-11-21T10:32:35-0300
+2026-11-21,hirota,P042,C01,26.98,un,sim,Leite Ninho Po Integral 380g,380g,2026-11-21T10:32:42-0300
+2026-11-21,hirota,P043,C01,17.48,un,sim,Manteiga Aviação Extra Com Sal 200g,200g,2026-11-21T10:32:49-0300
+2026-11-21,hirota,P046,C01,10.88,un,sim,Requeijão Vigor Cremoso Tradicional 200g,200g,2026-11-21T10:32:54-0300
+2026-11-21,hirota,P047,C01,4.98,un,sim,Iogurte Nestlé Natural Com Mel 170g,170g,2026-11-21T10:33:01-0300
+2026-11-21,hirota,P048,C01,22.98,un,sim,"Iogurte Batavo P.z. 1,150g Morango","1,150g",2026-11-21T10:33:07-0300
+2026-11-21,hirota,P049,C01,15.98,un,sim,Presunto Cozido Fatiado Soltíssimo Sadia 200g,200g,2026-11-21T10:33:12-0300
+2026-11-21,hirota,P066,C01,29.98,un,sim,"Sabao Omo 1,6kg Sanitizante","1,6kg",2026-11-21T10:33:18-0300
+2026-11-21,hirota,P067,C01,48.98,un,sim,Sabão Líquido Omo Lavagem Perfeita 3 Litros,,2026-11-21T10:33:25-0300
+2026-11-21,hirota,P068,C01,9.98,un,sim,Amaciante Comfort Conc 500ml Original,500ml,2026-11-21T10:33:31-0300
+2026-11-21,hirota,P069,C01,3.18,un,sim,Detergente Líquido Ypê Neutro 500ml,500ml,2026-11-21T10:33:37-0300
+2026-11-21,hirota,P070,C01,8.48,un,sim,Agua Sanitaria Super Candida 2l,2l,2026-11-21T10:33:44-0300
+2026-11-21,hirota,P071,C01,10.98,un,sim,Desinfetante Pinho Sol Original 500ml,500ml,2026-11-21T10:33:50-0300
+2026-11-21,hirota,P072,C01,6.48,un,sim,Limp Veja Multi-uso 500ml 10%off Floral,500ml,2026-11-21T10:33:56-0300
+2026-11-21,hirota,P077,C01,16.78,un,sim,Álcool Coperalcool 46° 1l,1l,2026-11-21T10:34:03-0300
+2026-11-21,hirota,P080,C01,,,nao,Sobrecoxas Congeladas De Frango Sadia 1kg,1kg,2026-11-21T10:34:09-0300
+2026-11-21,hirota,P081,C01,10.98,kg,sim,Frango Inteiro Resfriado,,2026-11-21T10:34:15-0300
+2026-11-21,hirota,P082,C01,67.84,kg,sim,Carne Moída De Patinho Bovina Resfriada 500g,500g,2026-11-21T10:34:22-0300
+2026-11-21,hirota,P083,C01,56.33,kg,sim,Acém Bovino Resfriado Pedaço Bandeja 1kg,1kg,2026-11-21T10:34:29-0300
+2026-11-21,hirota,P084,C01,49.98,kg,sim,Contra Filé Bovino Resfriado Pct 500g,500g,2026-11-21T10:34:35-0300
+2026-11-21,hirota,P086,C01,15.98,un,sim,Salsicha Perdigão Hot-dog Resfriada 500g,500g,2026-11-21T10:34:41-0300
+2026-11-21,hirota,P087,C01,69.98,kg,sim,File Tilapia Fresco 500g,500g,2026-11-21T10:34:47-0300
+2026-11-21,hirota,P088,C01,14.98,kg,sim,Banana Prata 800g ( Qt. Aprox. 6 Un ),6 Un,2026-11-21T10:34:54-0300
+2026-11-21,hirota,P089,C01,20.00,kg,sim,Maca Gala Nacional 250g,250g,2026-11-21T10:35:01-0300
+2026-11-21,hirota,P090,C01,7.98,kg,sim,"Laranja Pêra 1,5kg (qt. Aprox. 6 Un)",6 Un,2026-11-21T10:35:07-0300
+2026-11-21,hirota,P092,C01,25.00,kg,sim,Tomate Italiano 200g,200g,2026-11-21T10:35:13-0300
+2026-11-21,hirota,P093,C01,14.00,kg,sim,Cebola 250g (qt. Aprox. 1 Un),1 Un,2026-11-21T10:35:20-0300
+2026-11-21,hirota,P094,C01,50.00,kg,sim,Alho A Granel 100g,100g,2026-11-21T10:35:27-0300
+2026-11-21,hirota,P095,C01,11.98,kg,sim,Batata Lavada 500g,500g,2026-11-21T10:35:33-0300
+2026-11-21,hirota,P096,C01,8.97,kg,sim,Cenoura 300g,300g,2026-11-21T10:35:39-0300
+2026-11-21,hirota,P097,C01,6.98,un,sim,Alface Crespa Hid. Unid,,2026-11-21T10:35:45-0300
+2026-11-21,hirota,P098,C01,17.98,kg,sim,Mamao Formosa 2kg,2kg,2026-11-21T10:35:51-0300
+2026-11-21,hirota,P099,C01,10.98,kg,sim,Abobrinha Italiana 600g (aprox. 1 Un.),1 Un,2026-11-21T10:35:57-0300
+2026-11-21,hirota,P100,C01,19.00,kg,sim,Pimentão Verde 250g (qt. Aprox. 1 Un),1 Un,2026-11-21T10:36:04-0300
+2026-11-21,hirota,P001,C02,28.98,un,sim,Arroz Camil Tipo 1 5kg,5kg,2026-11-21T10:27:48-0300
+2026-11-21,hirota,P002,C02,35.98,un,sim,Arroz Tio Joao Tipo 1 5kg,5kg,2026-11-21T10:27:53-0300
+2026-11-21,hirota,P003,C02,9.98,un,sim,Feijão Carioca Camil 1kg,1kg,2026-11-21T10:27:59-0300
+2026-11-21,hirota,P004,C02,8.98,un,sim,Feijão Preto Camil 1kg,1kg,2026-11-21T10:28:05-0300
+2026-11-21,hirota,P005,C02,6.98,un,sim,Óleo Soja Soya Pet 900ml,900ml,2026-11-21T10:28:11-0300
+2026-11-21,hirota,P006,C02,36.98,un,sim,Azeite De Oliva Gallo Extra Virgem 500ml,500ml,2026-11-21T10:28:18-0300
+2026-11-21,hirota,P007,C02,4.98,un,sim,Açucar Uniao 1kg,1kg,2026-11-21T10:28:24-0300
+2026-11-21,hirota,P008,C02,4.98,un,sim,Açúcar Cristalçúcar União 1kg,1kg,2026-11-21T10:28:30-0300
+2026-11-21,hirota,P009,C02,34.98,un,sim,Cafe Extra Forte Pilao 500gr,500gr,2026-11-21T10:28:36-0300
+2026-11-21,hirota,P010,C02,30.98,un,sim,Café Torrado E Moído Extra Forte 3 Corações Pacote 500g,500g,2026-11-21T10:28:43-0300
+2026-11-21,hirota,P011,C02,6.98,un,sim,Farinha De Trigo Dona Benta Tradicional 1kg,1kg,2026-11-21T10:28:49-0300
+2026-11-21,hirota,P012,C02,8.98,un,sim,Farinha De Mandioca Yoki 500g Crua,500g,2026-11-21T10:28:56-0300
+2026-11-21,hirota,P013,C02,4.28,un,sim,Massa Espaguete Renata Com Ovos Numero 8 500gr,500gr,2026-11-21T10:29:03-0300
+2026-11-21,hirota,P014,C02,6.28,un,sim,Macarrão Com Ovos Barilla Parafuso 500g,500g,2026-11-21T10:29:08-0300
+2026-11-21,hirota,P015,C02,3.98,un,sim,Molho Pomarola Trad Sache 300g,300g,2026-11-21T10:29:15-0300
+2026-11-21,hirota,P016,C02,10.98,un,sim,Extrato De Tomate Elefante Pote 300g,300g,2026-11-21T10:29:20-0300
+2026-11-21,hirota,P017,C02,4.28,kg,sim,Sal Refinado Tradicional Cisne 1kg,1kg,2026-11-21T10:29:26-0300
+2026-11-21,hirota,P018,C02,5.98,un,sim,Fubá Mimoso Yoki 500g,500g,2026-11-21T10:29:32-0300
+2026-11-21,hirota,P020,C02,12.98,un,sim,Achocolatado Em Pó Nestlé Nescau 350g,350g,2026-11-21T10:29:39-0300
+2026-11-21,hirota,P022,C02,3.48,un,sim,Biscoito Passatempo Recheado 130g Chocolate,130g,2026-11-21T10:29:44-0300
+2026-11-21,hirota,P024,C02,,,nao,margarina qualy sadia com sal 500g,500g,2026-11-21T10:30:12-0300
+2026-11-21,hirota,P025,C02,12.88,un,sim,Maionese Hellmann`s Tradicional 500ml,500ml,2026-11-21T10:30:38-0300
+2026-11-21,hirota,P026,C02,14.98,un,sim,Ketchup Heinz Tradicional 397g,397g,2026-11-21T10:30:44-0300
+2026-11-21,hirota,P027,C02,8.98,un,sim,Sardinha Gomes Da Costa Com Óleo 125g,125g,2026-11-21T10:30:49-0300
+2026-11-21,hirota,P028,C02,10.98,un,sim,Atum Gomes Da Costa Ralado Em Óleo 170g,170g,2026-11-21T10:30:56-0300
+2026-11-21,hirota,P029,C02,5.48,un,sim,Milho Verde Quero Conserva Lt 170g,170g,2026-11-21T10:31:03-0300
+2026-11-21,hirota,P030,C02,5.48,un,sim,Ervilha Em Conserva Quero Lata 170g,170g,2026-11-21T10:31:09-0300
+2026-11-21,hirota,P031,C02,5.48,un,sim,Vinagre Castelo De Álcool 750ml,750ml,2026-11-21T10:31:15-0300
+2026-11-21,hirota,P032,C02,7.38,un,sim,Tempero Sazón Frango 60g,60g,2026-11-21T10:31:22-0300
+2026-11-21,hirota,P033,C02,3.48,un,sim,Caldo Knorr Galinha 6 Cubos,,2026-11-21T10:31:29-0300
+2026-11-21,hirota,P034,C02,10.98,un,sim,Leite Condensado Moça Tradicional Nestlé 395g,395g,2026-11-21T10:31:35-0300
+2026-11-21,hirota,P035,C02,5.48,un,sim,Creme De Leite Nestlé Tradicional 200g,200g,2026-11-21T10:31:41-0300
+2026-11-21,hirota,P036,C02,11.98,un,sim,Mistura Para Bolo De Chocolate Dona Benta 450g,450g,2026-11-21T10:31:48-0300
+2026-11-21,hirota,P037,C02,3.98,un,sim,"Água Mineral Crystal Sem Gás 1,5l","1,5l",2026-11-21T10:31:55-0300
+2026-11-21,hirota,P039,C02,5.98,un,sim,Leite Italac 1 Litro Integral,,2026-11-21T10:32:02-0300
+2026-11-21,hirota,P040,C02,5.98,un,sim,Leite Longa Vida Integral Piracanjuba 1l,1l,2026-11-21T10:32:08-0300
+2026-11-21,hirota,P041,C02,,,nao,leite longa vida piracanjuba desnatado 1l,1l,2026-11-21T10:32:35-0300
+2026-11-21,hirota,P042,C02,26.98,un,sim,Leite Ninho Po Integral 380g,380g,2026-11-21T10:32:42-0300
+2026-11-21,hirota,P043,C02,17.48,un,sim,Manteiga Aviação Extra Com Sal 200g,200g,2026-11-21T10:32:49-0300
+2026-11-21,hirota,P046,C02,10.88,un,sim,Requeijão Vigor Cremoso Tradicional 200g,200g,2026-11-21T10:32:54-0300
+2026-11-21,hirota,P047,C02,4.98,un,sim,Iogurte Nestlé Natural Com Mel 170g,170g,2026-11-21T10:33:01-0300
+2026-11-21,hirota,P048,C02,22.98,un,sim,"Iogurte Batavo P.z. 1,150g Morango","1,150g",2026-11-21T10:33:07-0300
+2026-11-21,hirota,P049,C02,15.98,un,sim,Presunto Cozido Fatiado Soltíssimo Sadia 200g,200g,2026-11-21T10:33:12-0300
+2026-11-21,hirota,P066,C02,29.98,un,sim,"Sabao Omo 1,6kg Sanitizante","1,6kg",2026-11-21T10:33:18-0300
+2026-11-21,hirota,P067,C02,48.98,un,sim,Sabão Líquido Omo Lavagem Perfeita 3 Litros,,2026-11-21T10:33:25-0300
+2026-11-21,hirota,P068,C02,9.98,un,sim,Amaciante Comfort Conc 500ml Original,500ml,2026-11-21T10:33:31-0300
+2026-11-21,hirota,P069,C02,3.18,un,sim,Detergente Líquido Ypê Neutro 500ml,500ml,2026-11-21T10:33:37-0300
+2026-11-21,hirota,P070,C02,8.48,un,sim,Agua Sanitaria Super Candida 2l,2l,2026-11-21T10:33:44-0300
+2026-11-21,hirota,P071,C02,10.98,un,sim,Desinfetante Pinho Sol Original 500ml,500ml,2026-11-21T10:33:50-0300
+2026-11-21,hirota,P072,C02,6.48,un,sim,Limp Veja Multi-uso 500ml 10%off Floral,500ml,2026-11-21T10:33:56-0300
+2026-11-21,hirota,P077,C02,16.78,un,sim,Álcool Coperalcool 46° 1l,1l,2026-11-21T10:34:03-0300
+2026-11-21,hirota,P080,C02,,,nao,Sobrecoxas Congeladas De Frango Sadia 1kg,1kg,2026-11-21T10:34:09-0300
+2026-11-21,hirota,P081,C02,10.98,kg,sim,Frango Inteiro Resfriado,,2026-11-21T10:34:15-0300
+2026-11-21,hirota,P082,C02,67.84,kg,sim,Carne Moída De Patinho Bovina Resfriada 500g,500g,2026-11-21T10:34:22-0300
+2026-11-21,hirota,P083,C02,56.33,kg,sim,Acém Bovino Resfriado Pedaço Bandeja 1kg,1kg,2026-11-21T10:34:29-0300
+2026-11-21,hirota,P084,C02,49.98,kg,sim,Contra Filé Bovino Resfriado Pct 500g,500g,2026-11-21T10:34:35-0300
+2026-11-21,hirota,P086,C02,15.98,un,sim,Salsicha Perdigão Hot-dog Resfriada 500g,500g,2026-11-21T10:34:41-0300
+2026-11-21,hirota,P087,C02,69.98,kg,sim,File Tilapia Fresco 500g,500g,2026-11-21T10:34:47-0300
+2026-11-21,hirota,P088,C02,14.98,kg,sim,Banana Prata 800g ( Qt. Aprox. 6 Un ),6 Un,2026-11-21T10:34:54-0300
+2026-11-21,hirota,P089,C02,20.00,kg,sim,Maca Gala Nacional 250g,250g,2026-11-21T10:35:01-0300
+2026-11-21,hirota,P090,C02,7.98,kg,sim,"Laranja Pêra 1,5kg (qt. Aprox. 6 Un)",6 Un,2026-11-21T10:35:07-0300
+2026-11-21,hirota,P092,C02,25.00,kg,sim,Tomate Italiano 200g,200g,2026-11-21T10:35:13-0300
+2026-11-21,hirota,P093,C02,14.00,kg,sim,Cebola 250g (qt. Aprox. 1 Un),1 Un,2026-11-21T10:35:20-0300
+2026-11-21,hirota,P094,C02,50.00,kg,sim,Alho A Granel 100g,100g,2026-11-21T10:35:27-0300
+2026-11-21,hirota,P095,C02,11.98,kg,sim,Batata Lavada 500g,500g,2026-11-21T10:35:33-0300
+2026-11-21,hirota,P096,C02,8.97,kg,sim,Cenoura 300g,300g,2026-11-21T10:35:39-0300
+2026-11-21,hirota,P097,C02,6.98,un,sim,Alface Crespa Hid. Unid,,2026-11-21T10:35:45-0300
+2026-11-21,hirota,P098,C02,17.98,kg,sim,Mamao Formosa 2kg,2kg,2026-11-21T10:35:51-0300
+2026-11-21,hirota,P099,C02,10.98,kg,sim,Abobrinha Italiana 600g (aprox. 1 Un.),1 Un,2026-11-21T10:35:57-0300
+2026-11-21,hirota,P100,C02,19.00,kg,sim,Pimentão Verde 250g (qt. Aprox. 1 Un),1 Un,2026-11-21T10:36:04-0300
+2026-11-21,hirota,P001,C03,28.98,un,sim,Arroz Camil Tipo 1 5kg,5kg,2026-11-21T10:27:48-0300
+2026-11-21,hirota,P002,C03,35.98,un,sim,Arroz Tio Joao Tipo 1 5kg,5kg,2026-11-21T10:27:53-0300
+2026-11-21,hirota,P003,C03,9.98,un,sim,Feijão Carioca Camil 1kg,1kg,2026-11-21T10:27:59-0300
+2026-11-21,hirota,P004,C03,8.98,un,sim,Feijão Preto Camil 1kg,1kg,2026-11-21T10:28:05-0300
+2026-11-21,hirota,P005,C03,6.98,un,sim,Óleo Soja Soya Pet 900ml,900ml,2026-11-21T10:28:11-0300
+2026-11-21,hirota,P006,C03,36.98,un,sim,Azeite De Oliva Gallo Extra Virgem 500ml,500ml,2026-11-21T10:28:18-0300
+2026-11-21,hirota,P007,C03,4.98,un,sim,Açucar Uniao 1kg,1kg,2026-11-21T10:28:24-0300
+2026-11-21,hirota,P008,C03,4.98,un,sim,Açúcar Cristalçúcar União 1kg,1kg,2026-11-21T10:28:30-0300
+2026-11-21,hirota,P009,C03,34.98,un,sim,Cafe Extra Forte Pilao 500gr,500gr,2026-11-21T10:28:36-0300
+2026-11-21,hirota,P010,C03,30.98,un,sim,Café Torrado E Moído Extra Forte 3 Corações Pacote 500g,500g,2026-11-21T10:28:43-0300
+2026-11-21,hirota,P011,C03,6.98,un,sim,Farinha De Trigo Dona Benta Tradicional 1kg,1kg,2026-11-21T10:28:49-0300
+2026-11-21,hirota,P012,C03,8.98,un,sim,Farinha De Mandioca Yoki 500g Crua,500g,2026-11-21T10:28:56-0300
+2026-11-21,hirota,P013,C03,4.28,un,sim,Massa Espaguete Renata Com Ovos Numero 8 500gr,500gr,2026-11-21T10:29:03-0300
+2026-11-21,hirota,P014,C03,6.28,un,sim,Macarrão Com Ovos Barilla Parafuso 500g,500g,2026-11-21T10:29:08-0300
+2026-11-21,hirota,P015,C03,3.98,un,sim,Molho Pomarola Trad Sache 300g,300g,2026-11-21T10:29:15-0300
+2026-11-21,hirota,P016,C03,10.98,un,sim,Extrato De Tomate Elefante Pote 300g,300g,2026-11-21T10:29:20-0300
+2026-11-21,hirota,P017,C03,4.28,kg,sim,Sal Refinado Tradicional Cisne 1kg,1kg,2026-11-21T10:29:26-0300
+2026-11-21,hirota,P018,C03,5.98,un,sim,Fubá Mimoso Yoki 500g,500g,2026-11-21T10:29:32-0300
+2026-11-21,hirota,P020,C03,12.98,un,sim,Achocolatado Em Pó Nestlé Nescau 350g,350g,2026-11-21T10:29:39-0300
+2026-11-21,hirota,P022,C03,3.48,un,sim,Biscoito Passatempo Recheado 130g Chocolate,130g,2026-11-21T10:29:44-0300
+2026-11-21,hirota,P024,C03,,,nao,margarina qualy sadia com sal 500g,500g,2026-11-21T10:30:12-0300
+2026-11-21,hirota,P025,C03,12.88,un,sim,Maionese Hellmann`s Tradicional 500ml,500ml,2026-11-21T10:30:38-0300
+2026-11-21,hirota,P026,C03,14.98,un,sim,Ketchup Heinz Tradicional 397g,397g,2026-11-21T10:30:44-0300
+2026-11-21,hirota,P027,C03,8.98,un,sim,Sardinha Gomes Da Costa Com Óleo 125g,125g,2026-11-21T10:30:49-0300
+2026-11-21,hirota,P028,C03,10.98,un,sim,Atum Gomes Da Costa Ralado Em Óleo 170g,170g,2026-11-21T10:30:56-0300
+2026-11-21,hirota,P029,C03,5.48,un,sim,Milho Verde Quero Conserva Lt 170g,170g,2026-11-21T10:31:03-0300
+2026-11-21,hirota,P030,C03,5.48,un,sim,Ervilha Em Conserva Quero Lata 170g,170g,2026-11-21T10:31:09-0300
+2026-11-21,hirota,P031,C03,5.48,un,sim,Vinagre Castelo De Álcool 750ml,750ml,2026-11-21T10:31:15-0300
+2026-11-21,hirota,P032,C03,7.38,un,sim,Tempero Sazón Frango 60g,60g,2026-11-21T10:31:22-0300
+2026-11-21,hirota,P033,C03,3.48,un,sim,Caldo Knorr Galinha 6 Cubos,,2026-11-21T10:31:29-0300
+2026-11-21,hirota,P034,C03,10.98,un,sim,Leite Condensado Moça Tradicional Nestlé 395g,395g,2026-11-21T10:31:35-0300
+2026-11-21,hirota,P035,C03,5.48,un,sim,Creme De Leite Nestlé Tradicional 200g,200g,2026-11-21T10:31:41-0300
+2026-11-21,hirota,P036,C03,11.98,un,sim,Mistura Para Bolo De Chocolate Dona Benta 450g,450g,2026-11-21T10:31:48-0300
+2026-11-21,hirota,P037,C03,3.98,un,sim,"Água Mineral Crystal Sem Gás 1,5l","1,5l",2026-11-21T10:31:55-0300
+2026-11-21,hirota,P039,C03,5.98,un,sim,Leite Italac 1 Litro Integral,,2026-11-21T10:32:02-0300
+2026-11-21,hirota,P040,C03,5.98,un,sim,Leite Longa Vida Integral Piracanjuba 1l,1l,2026-11-21T10:32:08-0300
+2026-11-21,hirota,P041,C03,,,nao,leite longa vida piracanjuba desnatado 1l,1l,2026-11-21T10:32:35-0300
+2026-11-21,hirota,P042,C03,26.98,un,sim,Leite Ninho Po Integral 380g,380g,2026-11-21T10:32:42-0300
+2026-11-21,hirota,P043,C03,17.48,un,sim,Manteiga Aviação Extra Com Sal 200g,200g,2026-11-21T10:32:49-0300
+2026-11-21,hirota,P046,C03,10.88,un,sim,Requeijão Vigor Cremoso Tradicional 200g,200g,2026-11-21T10:32:54-0300
+2026-11-21,hirota,P047,C03,4.98,un,sim,Iogurte Nestlé Natural Com Mel 170g,170g,2026-11-21T10:33:01-0300
+2026-11-21,hirota,P048,C03,22.98,un,sim,"Iogurte Batavo P.z. 1,150g Morango","1,150g",2026-11-21T10:33:07-0300
+2026-11-21,hirota,P049,C03,15.98,un,sim,Presunto Cozido Fatiado Soltíssimo Sadia 200g,200g,2026-11-21T10:33:12-0300
+2026-11-21,hirota,P066,C03,29.98,un,sim,"Sabao Omo 1,6kg Sanitizante","1,6kg",2026-11-21T10:33:18-0300
+2026-11-21,hirota,P067,C03,48.98,un,sim,Sabão Líquido Omo Lavagem Perfeita 3 Litros,,2026-11-21T10:33:25-0300
+2026-11-21,hirota,P068,C03,9.98,un,sim,Amaciante Comfort Conc 500ml Original,500ml,2026-11-21T10:33:31-0300
+2026-11-21,hirota,P069,C03,3.18,un,sim,Detergente Líquido Ypê Neutro 500ml,500ml,2026-11-21T10:33:37-0300
+2026-11-21,hirota,P070,C03,8.48,un,sim,Agua Sanitaria Super Candida 2l,2l,2026-11-21T10:33:44-0300
+2026-11-21,hirota,P071,C03,10.98,un,sim,Desinfetante Pinho Sol Original 500ml,500ml,2026-11-21T10:33:50-0300
+2026-11-21,hirota,P072,C03,6.48,un,sim,Limp Veja Multi-uso 500ml 10%off Floral,500ml,2026-11-21T10:33:56-0300
+2026-11-21,hirota,P077,C03,16.78,un,sim,Álcool Coperalcool 46° 1l,1l,2026-11-21T10:34:03-0300
+2026-11-21,hirota,P080,C03,,,nao,Sobrecoxas Congeladas De Frango Sadia 1kg,1kg,2026-11-21T10:34:09-0300
+2026-11-21,hirota,P081,C03,10.98,kg,sim,Frango Inteiro Resfriado,,2026-11-21T10:34:15-0300
+2026-11-21,hirota,P082,C03,67.84,kg,sim,Carne Moída De Patinho Bovina Resfriada 500g,500g,2026-11-21T10:34:22-0300
+2026-11-21,hirota,P083,C03,56.33,kg,sim,Acém Bovino Resfriado Pedaço Bandeja 1kg,1kg,2026-11-21T10:34:29-0300
+2026-11-21,hirota,P084,C03,49.98,kg,sim,Contra Filé Bovino Resfriado Pct 500g,500g,2026-11-21T10:34:35-0300
+2026-11-21,hirota,P086,C03,15.98,un,sim,Salsicha Perdigão Hot-dog Resfriada 500g,500g,2026-11-21T10:34:41-0300
+2026-11-21,hirota,P087,C03,69.98,kg,sim,File Tilapia Fresco 500g,500g,2026-11-21T10:34:47-0300
+2026-11-21,hirota,P088,C03,14.98,kg,sim,Banana Prata 800g ( Qt. Aprox. 6 Un ),6 Un,2026-11-21T10:34:54-0300
+2026-11-21,hirota,P089,C03,20.00,kg,sim,Maca Gala Nacional 250g,250g,2026-11-21T10:35:01-0300
+2026-11-21,hirota,P090,C03,7.98,kg,sim,"Laranja Pêra 1,5kg (qt. Aprox. 6 Un)",6 Un,2026-11-21T10:35:07-0300
+2026-11-21,hirota,P092,C03,25.00,kg,sim,Tomate Italiano 200g,200g,2026-11-21T10:35:13-0300
+2026-11-21,hirota,P093,C03,14.00,kg,sim,Cebola 250g (qt. Aprox. 1 Un),1 Un,2026-11-21T10:35:20-0300
+2026-11-21,hirota,P094,C03,50.00,kg,sim,Alho A Granel 100g,100g,2026-11-21T10:35:27-0300
+2026-11-21,hirota,P095,C03,11.98,kg,sim,Batata Lavada 500g,500g,2026-11-21T10:35:33-0300
+2026-11-21,hirota,P096,C03,8.97,kg,sim,Cenoura 300g,300g,2026-11-21T10:35:39-0300
+2026-11-21,hirota,P097,C03,6.98,un,sim,Alface Crespa Hid. Unid,,2026-11-21T10:35:45-0300
+2026-11-21,hirota,P098,C03,17.98,kg,sim,Mamao Formosa 2kg,2kg,2026-11-21T10:35:51-0300
+2026-11-21,hirota,P099,C03,10.98,kg,sim,Abobrinha Italiana 600g (aprox. 1 Un.),1 Un,2026-11-21T10:35:57-0300
+2026-11-21,hirota,P100,C03,19.00,kg,sim,Pimentão Verde 250g (qt. Aprox. 1 Un),1 Un,2026-11-21T10:36:04-0300
+2026-11-21,hirota,P001,C04,28.98,un,sim,Arroz Camil Tipo 1 5kg,5kg,2026-11-21T10:27:48-0300
+2026-11-21,hirota,P002,C04,35.98,un,sim,Arroz Tio Joao Tipo 1 5kg,5kg,2026-11-21T10:27:53-0300
+2026-11-21,hirota,P003,C04,9.98,un,sim,Feijão Carioca Camil 1kg,1kg,2026-11-21T10:27:59-0300
+2026-11-21,hirota,P004,C04,8.98,un,sim,Feijão Preto Camil 1kg,1kg,2026-11-21T10:28:05-0300
+2026-11-21,hirota,P005,C04,6.98,un,sim,Óleo Soja Soya Pet 900ml,900ml,2026-11-21T10:28:11-0300
+2026-11-21,hirota,P006,C04,36.98,un,sim,Azeite De Oliva Gallo Extra Virgem 500ml,500ml,2026-11-21T10:28:18-0300
+2026-11-21,hirota,P007,C04,4.98,un,sim,Açucar Uniao 1kg,1kg,2026-11-21T10:28:24-0300
+2026-11-21,hirota,P008,C04,4.98,un,sim,Açúcar Cristalçúcar União 1kg,1kg,2026-11-21T10:28:30-0300
+2026-11-21,hirota,P009,C04,34.98,un,sim,Cafe Extra Forte Pilao 500gr,500gr,2026-11-21T10:28:36-0300
+2026-11-21,hirota,P010,C04,30.98,un,sim,Café Torrado E Moído Extra Forte 3 Corações Pacote 500g,500g,2026-11-21T10:28:43-0300
+2026-11-21,hirota,P011,C04,6.98,un,sim,Farinha De Trigo Dona Benta Tradicional 1kg,1kg,2026-11-21T10:28:49-0300
+2026-11-21,hirota,P012,C04,8.98,un,sim,Farinha De Mandioca Yoki 500g Crua,500g,2026-11-21T10:28:56-0300
+2026-11-21,hirota,P013,C04,4.28,un,sim,Massa Espaguete Renata Com Ovos Numero 8 500gr,500gr,2026-11-21T10:29:03-0300
+2026-11-21,hirota,P014,C04,6.28,un,sim,Macarrão Com Ovos Barilla Parafuso 500g,500g,2026-11-21T10:29:08-0300
+2026-11-21,hirota,P015,C04,3.98,un,sim,Molho Pomarola Trad Sache 300g,300g,2026-11-21T10:29:15-0300
+2026-11-21,hirota,P016,C04,10.98,un,sim,Extrato De Tomate Elefante Pote 300g,300g,2026-11-21T10:29:20-0300
+2026-11-21,hirota,P017,C04,4.28,kg,sim,Sal Refinado Tradicional Cisne 1kg,1kg,2026-11-21T10:29:26-0300
+2026-11-21,hirota,P018,C04,5.98,un,sim,Fubá Mimoso Yoki 500g,500g,2026-11-21T10:29:32-0300
+2026-11-21,hirota,P020,C04,12.98,un,sim,Achocolatado Em Pó Nestlé Nescau 350g,350g,2026-11-21T10:29:39-0300
+2026-11-21,hirota,P022,C04,3.48,un,sim,Biscoito Passatempo Recheado 130g Chocolate,130g,2026-11-21T10:29:44-0300
+2026-11-21,hirota,P024,C04,,,nao,margarina qualy sadia com sal 500g,500g,2026-11-21T10:30:12-0300
+2026-11-21,hirota,P025,C04,12.88,un,sim,Maionese Hellmann`s Tradicional 500ml,500ml,2026-11-21T10:30:38-0300
+2026-11-21,hirota,P026,C04,14.98,un,sim,Ketchup Heinz Tradicional 397g,397g,2026-11-21T10:30:44-0300
+2026-11-21,hirota,P027,C04,8.98,un,sim,Sardinha Gomes Da Costa Com Óleo 125g,125g,2026-11-21T10:30:49-0300
+2026-11-21,hirota,P028,C04,10.98,un,sim,Atum Gomes Da Costa Ralado Em Óleo 170g,170g,2026-11-21T10:30:56-0300
+2026-11-21,hirota,P029,C04,5.48,un,sim,Milho Verde Quero Conserva Lt 170g,170g,2026-11-21T10:31:03-0300
+2026-11-21,hirota,P030,C04,5.48,un,sim,Ervilha Em Conserva Quero Lata 170g,170g,2026-11-21T10:31:09-0300
+2026-11-21,hirota,P031,C04,5.48,un,sim,Vinagre Castelo De Álcool 750ml,750ml,2026-11-21T10:31:15-0300
+2026-11-21,hirota,P032,C04,7.38,un,sim,Tempero Sazón Frango 60g,60g,2026-11-21T10:31:22-0300
+2026-11-21,hirota,P033,C04,3.48,un,sim,Caldo Knorr Galinha 6 Cubos,,2026-11-21T10:31:29-0300
+2026-11-21,hirota,P034,C04,10.98,un,sim,Leite Condensado Moça Tradicional Nestlé 395g,395g,2026-11-21T10:31:35-0300
+2026-11-21,hirota,P035,C04,5.48,un,sim,Creme De Leite Nestlé Tradicional 200g,200g,2026-11-21T10:31:41-0300
+2026-11-21,hirota,P036,C04,11.98,un,sim,Mistura Para Bolo De Chocolate Dona Benta 450g,450g,2026-11-21T10:31:48-0300
+2026-11-21,hirota,P037,C04,3.98,un,sim,"Água Mineral Crystal Sem Gás 1,5l","1,5l",2026-11-21T10:31:55-0300
+2026-11-21,hirota,P039,C04,5.98,un,sim,Leite Italac 1 Litro Integral,,2026-11-21T10:32:02-0300
+2026-11-21,hirota,P040,C04,5.98,un,sim,Leite Longa Vida Integral Piracanjuba 1l,1l,2026-11-21T10:32:08-0300
+2026-11-21,hirota,P041,C04,,,nao,leite longa vida piracanjuba desnatado 1l,1l,2026-11-21T10:32:35-0300
+2026-11-21,hirota,P042,C04,26.98,un,sim,Leite Ninho Po Integral 380g,380g,2026-11-21T10:32:42-0300
+2026-11-21,hirota,P043,C04,17.48,un,sim,Manteiga Aviação Extra Com Sal 200g,200g,2026-11-21T10:32:49-0300
+2026-11-21,hirota,P046,C04,10.88,un,sim,Requeijão Vigor Cremoso Tradicional 200g,200g,2026-11-21T10:32:54-0300
+2026-11-21,hirota,P047,C04,4.98,un,sim,Iogurte Nestlé Natural Com Mel 170g,170g,2026-11-21T10:33:01-0300
+2026-11-21,hirota,P048,C04,22.98,un,sim,"Iogurte Batavo P.z. 1,150g Morango","1,150g",2026-11-21T10:33:07-0300
+2026-11-21,hirota,P049,C04,15.98,un,sim,Presunto Cozido Fatiado Soltíssimo Sadia 200g,200g,2026-11-21T10:33:12-0300
+2026-11-21,hirota,P066,C04,29.98,un,sim,"Sabao Omo 1,6kg Sanitizante","1,6kg",2026-11-21T10:33:18-0300
+2026-11-21,hirota,P067,C04,48.98,un,sim,Sabão Líquido Omo Lavagem Perfeita 3 Litros,,2026-11-21T10:33:25-0300
+2026-11-21,hirota,P068,C04,9.98,un,sim,Amaciante Comfort Conc 500ml Original,500ml,2026-11-21T10:33:31-0300
+2026-11-21,hirota,P069,C04,3.18,un,sim,Detergente Líquido Ypê Neutro 500ml,500ml,2026-11-21T10:33:37-0300
+2026-11-21,hirota,P070,C04,8.48,un,sim,Agua Sanitaria Super Candida 2l,2l,2026-11-21T10:33:44-0300
+2026-11-21,hirota,P071,C04,10.98,un,sim,Desinfetante Pinho Sol Original 500ml,500ml,2026-11-21T10:33:50-0300
+2026-11-21,hirota,P072,C04,6.48,un,sim,Limp Veja Multi-uso 500ml 10%off Floral,500ml,2026-11-21T10:33:56-0300
+2026-11-21,hirota,P077,C04,16.78,un,sim,Álcool Coperalcool 46° 1l,1l,2026-11-21T10:34:03-0300
+2026-11-21,hirota,P080,C04,,,nao,Sobrecoxas Congeladas De Frango Sadia 1kg,1kg,2026-11-21T10:34:09-0300
+2026-11-21,hirota,P081,C04,10.98,kg,sim,Frango Inteiro Resfriado,,2026-11-21T10:34:15-0300
+2026-11-21,hirota,P082,C04,67.84,kg,sim,Carne Moída De Patinho Bovina Resfriada 500g,500g,2026-11-21T10:34:22-0300
+2026-11-21,hirota,P083,C04,56.33,kg,sim,Acém Bovino Resfriado Pedaço Bandeja 1kg,1kg,2026-11-21T10:34:29-0300
+2026-11-21,hirota,P084,C04,49.98,kg,sim,Contra Filé Bovino Resfriado Pct 500g,500g,2026-11-21T10:34:35-0300
+2026-11-21,hirota,P086,C04,15.98,un,sim,Salsicha Perdigão Hot-dog Resfriada 500g,500g,2026-11-21T10:34:41-0300
+2026-11-21,hirota,P087,C04,69.98,kg,sim,File Tilapia Fresco 500g,500g,2026-11-21T10:34:47-0300
+2026-11-21,hirota,P088,C04,14.98,kg,sim,Banana Prata 800g ( Qt. Aprox. 6 Un ),6 Un,2026-11-21T10:34:54-0300
+2026-11-21,hirota,P089,C04,20.00,kg,sim,Maca Gala Nacional 250g,250g,2026-11-21T10:35:01-0300
+2026-11-21,hirota,P090,C04,7.98,kg,sim,"Laranja Pêra 1,5kg (qt. Aprox. 6 Un)",6 Un,2026-11-21T10:35:07-0300
+2026-11-21,hirota,P092,C04,25.00,kg,sim,Tomate Italiano 200g,200g,2026-11-21T10:35:13-0300
+2026-11-21,hirota,P093,C04,14.00,kg,sim,Cebola 250g (qt. Aprox. 1 Un),1 Un,2026-11-21T10:35:20-0300
+2026-11-21,hirota,P094,C04,50.00,kg,sim,Alho A Granel 100g,100g,2026-11-21T10:35:27-0300
+2026-11-21,hirota,P095,C04,11.98,kg,sim,Batata Lavada 500g,500g,2026-11-21T10:35:33-0300
+2026-11-21,hirota,P096,C04,8.97,kg,sim,Cenoura 300g,300g,2026-11-21T10:35:39-0300
+2026-11-21,hirota,P097,C04,6.98,un,sim,Alface Crespa Hid. Unid,,2026-11-21T10:35:45-0300
+2026-11-21,hirota,P098,C04,17.98,kg,sim,Mamao Formosa 2kg,2kg,2026-11-21T10:35:51-0300
+2026-11-21,hirota,P099,C04,10.98,kg,sim,Abobrinha Italiana 600g (aprox. 1 Un.),1 Un,2026-11-21T10:35:57-0300
+2026-11-21,hirota,P100,C04,19.00,kg,sim,Pimentão Verde 250g (qt. Aprox. 1 Un),1 Un,2026-11-21T10:36:04-0300
+2026-11-21,hirota,P001,C05,28.98,un,sim,Arroz Camil Tipo 1 5kg,5kg,2026-11-21T10:27:48-0300
+2026-11-21,hirota,P002,C05,35.98,un,sim,Arroz Tio Joao Tipo 1 5kg,5kg,2026-11-21T10:27:53-0300
+2026-11-21,hirota,P003,C05,9.98,un,sim,Feijão Carioca Camil 1kg,1kg,2026-11-21T10:27:59-0300
+2026-11-21,hirota,P004,C05,8.98,un,sim,Feijão Preto Camil 1kg,1kg,2026-11-21T10:28:05-0300
+2026-11-21,hirota,P005,C05,6.98,un,sim,Óleo Soja Soya Pet 900ml,900ml,2026-11-21T10:28:11-0300
+2026-11-21,hirota,P006,C05,36.98,un,sim,Azeite De Oliva Gallo Extra Virgem 500ml,500ml,2026-11-21T10:28:18-0300
+2026-11-21,hirota,P007,C05,4.98,un,sim,Açucar Uniao 1kg,1kg,2026-11-21T10:28:24-0300
+2026-11-21,hirota,P008,C05,4.98,un,sim,Açúcar Cristalçúcar União 1kg,1kg,2026-11-21T10:28:30-0300
+2026-11-21,hirota,P009,C05,34.98,un,sim,Cafe Extra Forte Pilao 500gr,500gr,2026-11-21T10:28:36-0300
+2026-11-21,hirota,P010,C05,30.98,un,sim,Café Torrado E Moído Extra Forte 3 Corações Pacote 500g,500g,2026-11-21T10:28:43-0300
+2026-11-21,hirota,P011,C05,6.98,un,sim,Farinha De Trigo Dona Benta Tradicional 1kg,1kg,2026-11-21T10:28:49-0300
+2026-11-21,hirota,P012,C05,8.98,un,sim,Farinha De Mandioca Yoki 500g Crua,500g,2026-11-21T10:28:56-0300
+2026-11-21,hirota,P013,C05,4.28,un,sim,Massa Espaguete Renata Com Ovos Numero 8 500gr,500gr,2026-11-21T10:29:03-0300
+2026-11-21,hirota,P014,C05,6.28,un,sim,Macarrão Com Ovos Barilla Parafuso 500g,500g,2026-11-21T10:29:08-0300
+2026-11-21,hirota,P015,C05,3.98,un,sim,Molho Pomarola Trad Sache 300g,300g,2026-11-21T10:29:15-0300
+2026-11-21,hirota,P016,C05,10.98,un,sim,Extrato De Tomate Elefante Pote 300g,300g,2026-11-21T10:29:20-0300
+2026-11-21,hirota,P017,C05,4.28,kg,sim,Sal Refinado Tradicional Cisne 1kg,1kg,2026-11-21T10:29:26-0300
+2026-11-21,hirota,P018,C05,5.98,un,sim,Fubá Mimoso Yoki 500g,500g,2026-11-21T10:29:32-0300
+2026-11-21,hirota,P020,C05,12.98,un,sim,Achocolatado Em Pó Nestlé Nescau 350g,350g,2026-11-21T10:29:39-0300
+2026-11-21,hirota,P022,C05,3.48,un,sim,Biscoito Passatempo Recheado 130g Chocolate,130g,2026-11-21T10:29:44-0300
+2026-11-21,hirota,P024,C05,,,nao,margarina qualy sadia com sal 500g,500g,2026-11-21T10:30:12-0300
+2026-11-21,hirota,P025,C05,12.88,un,sim,Maionese Hellmann`s Tradicional 500ml,500ml,2026-11-21T10:30:38-0300
+2026-11-21,hirota,P026,C05,14.98,un,sim,Ketchup Heinz Tradicional 397g,397g,2026-11-21T10:30:44-0300
+2026-11-21,hirota,P027,C05,8.98,un,sim,Sardinha Gomes Da Costa Com Óleo 125g,125g,2026-11-21T10:30:49-0300
+2026-11-21,hirota,P028,C05,10.98,un,sim,Atum Gomes Da Costa Ralado Em Óleo 170g,170g,2026-11-21T10:30:56-0300
+2026-11-21,hirota,P029,C05,5.48,un,sim,Milho Verde Quero Conserva Lt 170g,170g,2026-11-21T10:31:03-0300
+2026-11-21,hirota,P030,C05,5.48,un,sim,Ervilha Em Conserva Quero Lata 170g,170g,2026-11-21T10:31:09-0300
+2026-11-21,hirota,P031,C05,5.48,un,sim,Vinagre Castelo De Álcool 750ml,750ml,2026-11-21T10:31:15-0300
+2026-11-21,hirota,P032,C05,7.38,un,sim,Tempero Sazón Frango 60g,60g,2026-11-21T10:31:22-0300
+2026-11-21,hirota,P033,C05,3.48,un,sim,Caldo Knorr Galinha 6 Cubos,,2026-11-21T10:31:29-0300
+2026-11-21,hirota,P034,C05,10.98,un,sim,Leite Condensado Moça Tradicional Nestlé 395g,395g,2026-11-21T10:31:35-0300
+2026-11-21,hirota,P035,C05,5.48,un,sim,Creme De Leite Nestlé Tradicional 200g,200g,2026-11-21T10:31:41-0300
+2026-11-21,hirota,P036,C05,11.98,un,sim,Mistura Para Bolo De Chocolate Dona Benta 450g,450g,2026-11-21T10:31:48-0300
+2026-11-21,hirota,P037,C05,3.98,un,sim,"Água Mineral Crystal Sem Gás 1,5l","1,5l",2026-11-21T10:31:55-0300
+2026-11-21,hirota,P039,C05,5.98,un,sim,Leite Italac 1 Litro Integral,,2026-11-21T10:32:02-0300
+2026-11-21,hirota,P040,C05,5.98,un,sim,Leite Longa Vida Integral Piracanjuba 1l,1l,2026-11-21T10:32:08-0300
+2026-11-21,hirota,P041,C05,,,nao,leite longa vida piracanjuba desnatado 1l,1l,2026-11-21T10:32:35-0300
+2026-11-21,hirota,P042,C05,26.98,un,sim,Leite Ninho Po Integral 380g,380g,2026-11-21T10:32:42-0300
+2026-11-21,hirota,P043,C05,17.48,un,sim,Manteiga Aviação Extra Com Sal 200g,200g,2026-11-21T10:32:49-0300
+2026-11-21,hirota,P046,C05,10.88,un,sim,Requeijão Vigor Cremoso Tradicional 200g,200g,2026-11-21T10:32:54-0300
+2026-11-21,hirota,P047,C05,4.98,un,sim,Iogurte Nestlé Natural Com Mel 170g,170g,2026-11-21T10:33:01-0300
+2026-11-21,hirota,P048,C05,22.98,un,sim,"Iogurte Batavo P.z. 1,150g Morango","1,150g",2026-11-21T10:33:07-0300
+2026-11-21,hirota,P049,C05,15.98,un,sim,Presunto Cozido Fatiado Soltíssimo Sadia 200g,200g,2026-11-21T10:33:12-0300
+2026-11-21,hirota,P066,C05,29.98,un,sim,"Sabao Omo 1,6kg Sanitizante","1,6kg",2026-11-21T10:33:18-0300
+2026-11-21,hirota,P067,C05,48.98,un,sim,Sabão Líquido Omo Lavagem Perfeita 3 Litros,,2026-11-21T10:33:25-0300
+2026-11-21,hirota,P068,C05,9.98,un,sim,Amaciante Comfort Conc 500ml Original,500ml,2026-11-21T10:33:31-0300
+2026-11-21,hirota,P069,C05,3.18,un,sim,Detergente Líquido Ypê Neutro 500ml,500ml,2026-11-21T10:33:37-0300
+2026-11-21,hirota,P070,C05,8.48,un,sim,Agua Sanitaria Super Candida 2l,2l,2026-11-21T10:33:44-0300
+2026-11-21,hirota,P071,C05,10.98,un,sim,Desinfetante Pinho Sol Original 500ml,500ml,2026-11-21T10:33:50-0300
+2026-11-21,hirota,P072,C05,6.48,un,sim,Limp Veja Multi-uso 500ml 10%off Floral,500ml,2026-11-21T10:33:56-0300
+2026-11-21,hirota,P077,C05,16.78,un,sim,Álcool Coperalcool 46° 1l,1l,2026-11-21T10:34:03-0300
+2026-11-21,hirota,P080,C05,,,nao,Sobrecoxas Congeladas De Frango Sadia 1kg,1kg,2026-11-21T10:34:09-0300
+2026-11-21,hirota,P081,C05,10.98,kg,sim,Frango Inteiro Resfriado,,2026-11-21T10:34:15-0300
+2026-11-21,hirota,P082,C05,67.84,kg,sim,Carne Moída De Patinho Bovina Resfriada 500g,500g,2026-11-21T10:34:22-0300
+2026-11-21,hirota,P083,C05,56.33,kg,sim,Acém Bovino Resfriado Pedaço Bandeja 1kg,1kg,2026-11-21T10:34:29-0300
+2026-11-21,hirota,P084,C05,49.98,kg,sim,Contra Filé Bovino Resfriado Pct 500g,500g,2026-11-21T10:34:35-0300
+2026-11-21,hirota,P086,C05,15.98,un,sim,Salsicha Perdigão Hot-dog Resfriada 500g,500g,2026-11-21T10:34:41-0300
+2026-11-21,hirota,P087,C05,69.98,kg,sim,File Tilapia Fresco 500g,500g,2026-11-21T10:34:47-0300
+2026-11-21,hirota,P088,C05,14.98,kg,sim,Banana Prata 800g ( Qt. Aprox. 6 Un ),6 Un,2026-11-21T10:34:54-0300
+2026-11-21,hirota,P089,C05,20.00,kg,sim,Maca Gala Nacional 250g,250g,2026-11-21T10:35:01-0300
+2026-11-21,hirota,P090,C05,7.98,kg,sim,"Laranja Pêra 1,5kg (qt. Aprox. 6 Un)",6 Un,2026-11-21T10:35:07-0300
+2026-11-21,hirota,P092,C05,25.00,kg,sim,Tomate Italiano 200g,200g,2026-11-21T10:35:13-0300
+2026-11-21,hirota,P093,C05,14.00,kg,sim,Cebola 250g (qt. Aprox. 1 Un),1 Un,2026-11-21T10:35:20-0300
+2026-11-21,hirota,P094,C05,50.00,kg,sim,Alho A Granel 100g,100g,2026-11-21T10:35:27-0300
+2026-11-21,hirota,P095,C05,11.98,kg,sim,Batata Lavada 500g,500g,2026-11-21T10:35:33-0300
+2026-11-21,hirota,P096,C05,8.97,kg,sim,Cenoura 300g,300g,2026-11-21T10:35:39-0300
+2026-11-21,hirota,P097,C05,6.98,un,sim,Alface Crespa Hid. Unid,,2026-11-21T10:35:45-0300
+2026-11-21,hirota,P098,C05,17.98,kg,sim,Mamao Formosa 2kg,2kg,2026-11-21T10:35:51-0300
+2026-11-21,hirota,P099,C05,10.98,kg,sim,Abobrinha Italiana 600g (aprox. 1 Un.),1 Un,2026-11-21T10:35:57-0300
+2026-11-21,hirota,P100,C05,19.00,kg,sim,Pimentão Verde 250g (qt. Aprox. 1 Un),1 Un,2026-11-21T10:36:04-0300
+2026-11-21,hirota,P001,C06,28.98,un,sim,Arroz Camil Tipo 1 5kg,5kg,2026-11-21T10:33:21-0300
+2026-11-21,hirota,P002,C06,35.98,un,sim,Arroz Tio Joao Tipo 1 5kg,5kg,2026-11-21T10:33:26-0300
+2026-11-21,hirota,P003,C06,9.98,un,sim,Feijão Carioca Camil 1kg,1kg,2026-11-21T10:33:31-0300
+2026-11-21,hirota,P004,C06,8.98,un,sim,Feijão Preto Camil 1kg,1kg,2026-11-21T10:33:36-0300
+2026-11-21,hirota,P005,C06,6.98,un,sim,Óleo Soja Soya Pet 900ml,900ml,2026-11-21T10:33:42-0300
+2026-11-21,hirota,P006,C06,36.98,un,sim,Azeite De Oliva Gallo Extra Virgem 500ml,500ml,2026-11-21T10:33:47-0300
+2026-11-21,hirota,P007,C06,4.98,un,sim,Açucar Uniao 1kg,1kg,2026-11-21T10:33:53-0300
+2026-11-21,hirota,P008,C06,4.98,un,sim,Açúcar Cristalçúcar União 1kg,1kg,2026-11-21T10:33:59-0300
+2026-11-21,hirota,P009,C06,34.98,un,sim,Cafe Extra Forte Pilao 500gr,500gr,2026-11-21T10:34:04-0300
+2026-11-21,hirota,P010,C06,30.98,un,sim,Café Torrado E Moído Extra Forte 3 Corações Pacote 500g,500g,2026-11-21T10:34:09-0300
+2026-11-21,hirota,P011,C06,6.98,un,sim,Farinha De Trigo Dona Benta Tradicional 1kg,1kg,2026-11-21T10:34:15-0300
+2026-11-21,hirota,P012,C06,8.98,un,sim,Farinha De Mandioca Yoki 500g Crua,500g,2026-11-21T10:34:21-0300
+2026-11-21,hirota,P013,C06,4.28,un,sim,Massa Espaguete Renata Com Ovos Numero 8 500gr,500gr,2026-11-21T10:34:26-0300
+2026-11-21,hirota,P014,C06,6.28,un,sim,Macarrão Com Ovos Barilla Parafuso 500g,500g,2026-11-21T10:34:32-0300
+2026-11-21,hirota,P015,C06,3.98,un,sim,Molho Pomarola Trad Sache 300g,300g,2026-11-21T10:34:38-0300
+2026-11-21,hirota,P016,C06,10.98,un,sim,Extrato De Tomate Elefante Pote 300g,300g,2026-11-21T10:34:43-0300
+2026-11-21,hirota,P017,C06,4.28,kg,sim,Sal Refinado Tradicional Cisne 1kg,1kg,2026-11-21T10:34:48-0300
+2026-11-21,hirota,P018,C06,5.98,un,sim,Fubá Mimoso Yoki 500g,500g,2026-11-21T10:34:54-0300
+2026-11-21,hirota,P020,C06,12.98,un,sim,Achocolatado Em Pó Nestlé Nescau 350g,350g,2026-11-21T10:34:59-0300
+2026-11-21,hirota,P022,C06,3.48,un,sim,Biscoito Passatempo Recheado 130g Chocolate,130g,2026-11-21T10:35:04-0300
+2026-11-21,hirota,P024,C06,11.98,un,sim,Margarina Qualy Sadia Com Sal 500g,500g,2026-11-21T10:35:10-0300
+2026-11-21,hirota,P025,C06,12.88,un,sim,Maionese Hellmann`s Tradicional 500ml,500ml,2026-11-21T10:35:16-0300
+2026-11-21,hirota,P026,C06,14.98,un,sim,Ketchup Heinz Tradicional 397g,397g,2026-11-21T10:35:22-0300
+2026-11-21,hirota,P027,C06,8.98,un,sim,Sardinha Gomes Da Costa Com Óleo 125g,125g,2026-11-21T10:35:28-0300
+2026-11-21,hirota,P028,C06,10.98,un,sim,Atum Gomes Da Costa Ralado Em Óleo 170g,170g,2026-11-21T10:35:33-0300
+2026-11-21,hirota,P029,C06,5.48,un,sim,Milho Verde Quero Conserva Lt 170g,170g,2026-11-21T10:35:39-0300
+2026-11-21,hirota,P030,C06,5.48,un,sim,Ervilha Em Conserva Quero Lata 170g,170g,2026-11-21T10:35:44-0300
+2026-11-21,hirota,P031,C06,5.48,un,sim,Vinagre Castelo De Álcool 750ml,750ml,2026-11-21T10:35:49-0300
+2026-11-21,hirota,P032,C06,7.38,un,sim,Tempero Sazón Frango 60g,60g,2026-11-21T10:35:53-0300
+2026-11-21,hirota,P033,C06,3.48,un,sim,Caldo Knorr Galinha 6 Cubos,,2026-11-21T10:35:59-0300
+2026-11-21,hirota,P034,C06,10.98,un,sim,Leite Condensado Moça Tradicional Nestlé 395g,395g,2026-11-21T10:36:05-0300
+2026-11-21,hirota,P035,C06,5.48,un,sim,Creme De Leite Nestlé Tradicional 200g,200g,2026-11-21T10:36:11-0300
+2026-11-21,hirota,P036,C06,11.98,un,sim,Mistura Para Bolo De Chocolate Dona Benta 450g,450g,2026-11-21T10:36:16-0300
+2026-11-21,hirota,P037,C06,3.98,un,sim,"Água Mineral Crystal Sem Gás 1,5l","1,5l",2026-11-21T10:36:21-0300
+2026-11-21,hirota,P039,C06,5.98,un,sim,Leite Italac 1 Litro Integral,,2026-11-21T10:36:28-0300
+2026-11-21,hirota,P040,C06,5.98,un,sim,Leite Longa Vida Integral Piracanjuba 1l,1l,2026-11-21T10:36:34-0300
+2026-11-21,hirota,P041,C06,5.98,un,sim,Leite Longa Vida Piracanjuba Desnatado 1l,1l,2026-11-21T10:36:39-0300
+2026-11-21,hirota,P042,C06,26.98,un,sim,Leite Ninho Po Integral 380g,380g,2026-11-21T10:36:45-0300
+2026-11-21,hirota,P043,C06,17.48,un,sim,Manteiga Aviação Extra Com Sal 200g,200g,2026-11-21T10:36:51-0300
+2026-11-21,hirota,P046,C06,10.88,un,sim,Requeijão Vigor Cremoso Tradicional 200g,200g,2026-11-21T10:36:56-0300
+2026-11-21,hirota,P047,C06,4.98,un,sim,Iogurte Nestlé Natural Com Mel 170g,170g,2026-11-21T10:37:02-0300
+2026-11-21,hirota,P048,C06,22.98,un,sim,"Iogurte Batavo P.z. 1,150g Morango","1,150g",2026-11-21T10:37:07-0300
+2026-11-21,hirota,P049,C06,15.98,un,sim,Presunto Cozido Fatiado Soltíssimo Sadia 200g,200g,2026-11-21T10:37:13-0300
+2026-11-21,hirota,P066,C06,29.98,un,sim,"Sabao Omo 1,6kg Sanitizante","1,6kg",2026-11-21T10:37:18-0300
+2026-11-21,hirota,P067,C06,48.98,un,sim,Sabão Líquido Omo Lavagem Perfeita 3 Litros,,2026-11-21T10:37:24-0300
+2026-11-21,hirota,P068,C06,9.98,un,sim,Amaciante Comfort Conc 500ml Original,500ml,2026-11-21T10:37:29-0300
+2026-11-21,hirota,P069,C06,3.18,un,sim,Detergente Líquido Ypê Neutro 500ml,500ml,2026-11-21T10:37:34-0300
+2026-11-21,hirota,P070,C06,8.48,un,sim,Agua Sanitaria Super Candida 2l,2l,2026-11-21T10:37:38-0300
+2026-11-21,hirota,P071,C06,10.98,un,sim,Desinfetante Pinho Sol Original 500ml,500ml,2026-11-21T10:37:43-0300
+2026-11-21,hirota,P072,C06,6.48,un,sim,Limp Veja Multi-uso 500ml 10%off Floral,500ml,2026-11-21T10:37:48-0300
+2026-11-21,hirota,P077,C06,16.78,un,sim,Álcool Coperalcool 46° 1l,1l,2026-11-21T10:37:54-0300
+2026-11-21,hirota,P080,C06,,,nao,Sobrecoxas Congeladas De Frango Sadia 1kg,1kg,2026-11-21T10:37:59-0300
+2026-11-21,hirota,P081,C06,10.98,kg,sim,Frango Inteiro Resfriado,,2026-11-21T10:38:04-0300
+2026-11-21,hirota,P082,C06,67.84,kg,sim,Carne Moída De Patinho Bovina Resfriada 500g,500g,2026-11-21T10:38:10-0300
+2026-11-21,hirota,P083,C06,56.33,kg,sim,Acém Bovino Resfriado Pedaço Bandeja 1kg,1kg,2026-11-21T10:38:15-0300
+2026-11-21,hirota,P084,C06,49.98,kg,sim,Contra Filé Bovino Resfriado Pct 500g,500g,2026-11-21T10:38:21-0300
+2026-11-21,hirota,P086,C06,15.98,un,sim,Salsicha Perdigão Hot-dog Resfriada 500g,500g,2026-11-21T10:38:26-0300
+2026-11-21,hirota,P087,C06,69.98,kg,sim,File Tilapia Fresco 500g,500g,2026-11-21T10:38:31-0300
+2026-11-21,hirota,P088,C06,14.98,kg,sim,Banana Prata 800g ( Qt. Aprox. 6 Un ),6 Un,2026-11-21T10:38:37-0300
+2026-11-21,hirota,P089,C06,20.00,kg,sim,Maca Gala Nacional 250g,250g,2026-11-21T10:38:43-0300
+2026-11-21,hirota,P090,C06,7.98,kg,sim,"Laranja Pêra 1,5kg (qt. Aprox. 6 Un)",6 Un,2026-11-21T10:38:48-0300
+2026-11-21,hirota,P092,C06,25.00,kg,sim,Tomate Italiano 200g,200g,2026-11-21T10:38:53-0300
+2026-11-21,hirota,P093,C06,14.00,kg,sim,Cebola 250g (qt. Aprox. 1 Un),1 Un,2026-11-21T10:38:59-0300
+2026-11-21,hirota,P094,C06,50.00,kg,sim,Alho A Granel 100g,100g,2026-11-21T10:39:05-0300
+2026-11-21,hirota,P095,C06,11.98,kg,sim,Batata Lavada 500g,500g,2026-11-21T10:39:09-0300
+2026-11-21,hirota,P096,C06,8.97,kg,sim,Cenoura 300g,300g,2026-11-21T10:39:15-0300
+2026-11-21,hirota,P097,C06,6.98,un,sim,Alface Crespa Hid. Unid,,2026-11-21T10:39:19-0300
+2026-11-21,hirota,P098,C06,17.98,kg,sim,Mamao Formosa 2kg,2kg,2026-11-21T10:39:25-0300
+2026-11-21,hirota,P099,C06,10.98,kg,sim,Abobrinha Italiana 600g (aprox. 1 Un.),1 Un,2026-11-21T10:39:30-0300
+2026-11-21,hirota,P100,C06,19.00,kg,sim,Pimentão Verde 250g (qt. Aprox. 1 Un),1 Un,2026-11-21T10:39:36-0300
+2026-11-21,hirota,P001,C07,28.98,un,sim,Arroz Camil Tipo 1 5kg,5kg,2026-11-21T10:33:21-0300
+2026-11-21,hirota,P002,C07,35.98,un,sim,Arroz Tio Joao Tipo 1 5kg,5kg,2026-11-21T10:33:26-0300
+2026-11-21,hirota,P003,C07,9.98,un,sim,Feijão Carioca Camil 1kg,1kg,2026-11-21T10:33:31-0300
+2026-11-21,hirota,P004,C07,8.98,un,sim,Feijão Preto Camil 1kg,1kg,2026-11-21T10:33:36-0300
+2026-11-21,hirota,P005,C07,6.98,un,sim,Óleo Soja Soya Pet 900ml,900ml,2026-11-21T10:33:42-0300
+2026-11-21,hirota,P006,C07,36.98,un,sim,Azeite De Oliva Gallo Extra Virgem 500ml,500ml,2026-11-21T10:33:47-0300
+2026-11-21,hirota,P007,C07,4.98,un,sim,Açucar Uniao 1kg,1kg,2026-11-21T10:33:53-0300
+2026-11-21,hirota,P008,C07,4.98,un,sim,Açúcar Cristalçúcar União 1kg,1kg,2026-11-21T10:33:59-0300
+2026-11-21,hirota,P009,C07,34.98,un,sim,Cafe Extra Forte Pilao 500gr,500gr,2026-11-21T10:34:04-0300
+2026-11-21,hirota,P010,C07,30.98,un,sim,Café Torrado E Moído Extra Forte 3 Corações Pacote 500g,500g,2026-11-21T10:34:09-0300
+2026-11-21,hirota,P011,C07,6.98,un,sim,Farinha De Trigo Dona Benta Tradicional 1kg,1kg,2026-11-21T10:34:15-0300
+2026-11-21,hirota,P012,C07,8.98,un,sim,Farinha De Mandioca Yoki 500g Crua,500g,2026-11-21T10:34:21-0300
+2026-11-21,hirota,P013,C07,4.28,un,sim,Massa Espaguete Renata Com Ovos Numero 8 500gr,500gr,2026-11-21T10:34:26-0300
+2026-11-21,hirota,P014,C07,6.28,un,sim,Macarrão Com Ovos Barilla Parafuso 500g,500g,2026-11-21T10:34:32-0300
+2026-11-21,hirota,P015,C07,3.98,un,sim,Molho Pomarola Trad Sache 300g,300g,2026-11-21T10:34:38-0300
+2026-11-21,hirota,P016,C07,10.98,un,sim,Extrato De Tomate Elefante Pote 300g,300g,2026-11-21T10:34:43-0300
+2026-11-21,hirota,P017,C07,4.28,kg,sim,Sal Refinado Tradicional Cisne 1kg,1kg,2026-11-21T10:34:48-0300
+2026-11-21,hirota,P018,C07,5.98,un,sim,Fubá Mimoso Yoki 500g,500g,2026-11-21T10:34:54-0300
+2026-11-21,hirota,P020,C07,12.98,un,sim,Achocolatado Em Pó Nestlé Nescau 350g,350g,2026-11-21T10:34:59-0300
+2026-11-21,hirota,P022,C07,3.48,un,sim,Biscoito Passatempo Recheado 130g Chocolate,130g,2026-11-21T10:35:04-0300
+2026-11-21,hirota,P024,C07,11.98,un,sim,Margarina Qualy Sadia Com Sal 500g,500g,2026-11-21T10:35:10-0300
+2026-11-21,hirota,P025,C07,12.88,un,sim,Maionese Hellmann`s Tradicional 500ml,500ml,2026-11-21T10:35:16-0300
+2026-11-21,hirota,P026,C07,14.98,un,sim,Ketchup Heinz Tradicional 397g,397g,2026-11-21T10:35:22-0300
+2026-11-21,hirota,P027,C07,8.98,un,sim,Sardinha Gomes Da Costa Com Óleo 125g,125g,2026-11-21T10:35:28-0300
+2026-11-21,hirota,P028,C07,10.98,un,sim,Atum Gomes Da Costa Ralado Em Óleo 170g,170g,2026-11-21T10:35:33-0300
+2026-11-21,hirota,P029,C07,5.48,un,sim,Milho Verde Quero Conserva Lt 170g,170g,2026-11-21T10:35:39-0300
+2026-11-21,hirota,P030,C07,5.48,un,sim,Ervilha Em Conserva Quero Lata 170g,170g,2026-11-21T10:35:44-0300
+2026-11-21,hirota,P031,C07,5.48,un,sim,Vinagre Castelo De Álcool 750ml,750ml,2026-11-21T10:35:49-0300
+2026-11-21,hirota,P032,C07,7.38,un,sim,Tempero Sazón Frango 60g,60g,2026-11-21T10:35:53-0300
+2026-11-21,hirota,P033,C07,3.48,un,sim,Caldo Knorr Galinha 6 Cubos,,2026-11-21T10:35:59-0300
+2026-11-21,hirota,P034,C07,10.98,un,sim,Leite Condensado Moça Tradicional Nestlé 395g,395g,2026-11-21T10:36:05-0300
+2026-11-21,hirota,P035,C07,5.48,un,sim,Creme De Leite Nestlé Tradicional 200g,200g,2026-11-21T10:36:11-0300
+2026-11-21,hirota,P036,C07,11.98,un,sim,Mistura Para Bolo De Chocolate Dona Benta 450g,450g,2026-11-21T10:36:16-0300
+2026-11-21,hirota,P037,C07,3.98,un,sim,"Água Mineral Crystal Sem Gás 1,5l","1,5l",2026-11-21T10:36:21-0300
+2026-11-21,hirota,P039,C07,5.98,un,sim,Leite Italac 1 Litro Integral,,2026-11-21T10:36:28-0300
+2026-11-21,hirota,P040,C07,5.98,un,sim,Leite Longa Vida Integral Piracanjuba 1l,1l,2026-11-21T10:36:34-0300
+2026-11-21,hirota,P041,C07,5.98,un,sim,Leite Longa Vida Piracanjuba Desnatado 1l,1l,2026-11-21T10:36:39-0300
+2026-11-21,hirota,P042,C07,26.98,un,sim,Leite Ninho Po Integral 380g,380g,2026-11-21T10:36:45-0300
+2026-11-21,hirota,P043,C07,17.48,un,sim,Manteiga Aviação Extra Com Sal 200g,200g,2026-11-21T10:36:51-0300
+2026-11-21,hirota,P046,C07,10.88,un,sim,Requeijão Vigor Cremoso Tradicional 200g,200g,2026-11-21T10:36:56-0300
+2026-11-21,hirota,P047,C07,4.98,un,sim,Iogurte Nestlé Natural Com Mel 170g,170g,2026-11-21T10:37:02-0300
+2026-11-21,hirota,P048,C07,22.98,un,sim,"Iogurte Batavo P.z. 1,150g Morango","1,150g",2026-11-21T10:37:07-0300
+2026-11-21,hirota,P049,C07,15.98,un,sim,Presunto Cozido Fatiado Soltíssimo Sadia 200g,200g,2026-11-21T10:37:13-0300
+2026-11-21,hirota,P066,C07,29.98,un,sim,"Sabao Omo 1,6kg Sanitizante","1,6kg",2026-11-21T10:37:18-0300
+2026-11-21,hirota,P067,C07,48.98,un,sim,Sabão Líquido Omo Lavagem Perfeita 3 Litros,,2026-11-21T10:37:24-0300
+2026-11-21,hirota,P068,C07,9.98,un,sim,Amaciante Comfort Conc 500ml Original,500ml,2026-11-21T10:37:29-0300
+2026-11-21,hirota,P069,C07,3.18,un,sim,Detergente Líquido Ypê Neutro 500ml,500ml,2026-11-21T10:37:34-0300
+2026-11-21,hirota,P070,C07,8.48,un,sim,Agua Sanitaria Super Candida 2l,2l,2026-11-21T10:37:38-0300
+2026-11-21,hirota,P071,C07,10.98,un,sim,Desinfetante Pinho Sol Original 500ml,500ml,2026-11-21T10:37:43-0300
+2026-11-21,hirota,P072,C07,6.48,un,sim,Limp Veja Multi-uso 500ml 10%off Floral,500ml,2026-11-21T10:37:48-0300
+2026-11-21,hirota,P077,C07,16.78,un,sim,Álcool Coperalcool 46° 1l,1l,2026-11-21T10:37:54-0300
+2026-11-21,hirota,P080,C07,,,nao,Sobrecoxas Congeladas De Frango Sadia 1kg,1kg,2026-11-21T10:37:59-0300
+2026-11-21,hirota,P081,C07,10.98,kg,sim,Frango Inteiro Resfriado,,2026-11-21T10:38:04-0300
+2026-11-21,hirota,P082,C07,67.84,kg,sim,Carne Moída De Patinho Bovina Resfriada 500g,500g,2026-11-21T10:38:10-0300
+2026-11-21,hirota,P083,C07,56.33,kg,sim,Acém Bovino Resfriado Pedaço Bandeja 1kg,1kg,2026-11-21T10:38:15-0300
+2026-11-21,hirota,P084,C07,49.98,kg,sim,Contra Filé Bovino Resfriado Pct 500g,500g,2026-11-21T10:38:21-0300
+2026-11-21,hirota,P086,C07,15.98,un,sim,Salsicha Perdigão Hot-dog Resfriada 500g,500g,2026-11-21T10:38:26-0300
+2026-11-21,hirota,P087,C07,69.98,kg,sim,File Tilapia Fresco 500g,500g,2026-11-21T10:38:31-0300
+2026-11-21,hirota,P088,C07,14.98,kg,sim,Banana Prata 800g ( Qt. Aprox. 6 Un ),6 Un,2026-11-21T10:38:37-0300
+2026-11-21,hirota,P089,C07,20.00,kg,sim,Maca Gala Nacional 250g,250g,2026-11-21T10:38:43-0300
+2026-11-21,hirota,P090,C07,7.98,kg,sim,"Laranja Pêra 1,5kg (qt. Aprox. 6 Un)",6 Un,2026-11-21T10:38:48-0300
+2026-11-21,hirota,P092,C07,25.00,kg,sim,Tomate Italiano 200g,200g,2026-11-21T10:38:53-0300
+2026-11-21,hirota,P093,C07,14.00,kg,sim,Cebola 250g (qt. Aprox. 1 Un),1 Un,2026-11-21T10:38:59-0300
+2026-11-21,hirota,P094,C07,50.00,kg,sim,Alho A Granel 100g,100g,2026-11-21T10:39:05-0300
+2026-11-21,hirota,P095,C07,11.98,kg,sim,Batata Lavada 500g,500g,2026-11-21T10:39:09-0300
+2026-11-21,hirota,P096,C07,8.97,kg,sim,Cenoura 300g,300g,2026-11-21T10:39:15-0300
+2026-11-21,hirota,P097,C07,6.98,un,sim,Alface Crespa Hid. Unid,,2026-11-21T10:39:19-0300
+2026-11-21,hirota,P098,C07,17.98,kg,sim,Mamao Formosa 2kg,2kg,2026-11-21T10:39:25-0300
+2026-11-21,hirota,P099,C07,10.98,kg,sim,Abobrinha Italiana 600g (aprox. 1 Un.),1 Un,2026-11-21T10:39:30-0300
+2026-11-21,hirota,P100,C07,19.00,kg,sim,Pimentão Verde 250g (qt. Aprox. 1 Un),1 Un,2026-11-21T10:39:36-0300
+2026-11-21,hirota,P001,C08,28.98,un,sim,Arroz Camil Tipo 1 5kg,5kg,2026-11-21T10:39:55-0300
+2026-11-21,hirota,P002,C08,35.98,un,sim,Arroz Tio Joao Tipo 1 5kg,5kg,2026-11-21T10:40:00-0300
+2026-11-21,hirota,P003,C08,9.98,un,sim,Feijão Carioca Camil 1kg,1kg,2026-11-21T10:40:06-0300
+2026-11-21,hirota,P004,C08,8.98,un,sim,Feijão Preto Camil 1kg,1kg,2026-11-21T10:40:11-0300
+2026-11-21,hirota,P005,C08,6.98,un,sim,Óleo Soja Soya Pet 900ml,900ml,2026-11-21T10:40:16-0300
+2026-11-21,hirota,P006,C08,36.98,un,sim,Azeite De Oliva Gallo Extra Virgem 500ml,500ml,2026-11-21T10:40:21-0300
+2026-11-21,hirota,P007,C08,4.98,un,sim,Açucar Uniao 1kg,1kg,2026-11-21T10:40:26-0300
+2026-11-21,hirota,P008,C08,4.98,un,sim,Açúcar Cristalçúcar União 1kg,1kg,2026-11-21T10:40:32-0300
+2026-11-21,hirota,P009,C08,34.98,un,sim,Cafe Extra Forte Pilao 500gr,500gr,2026-11-21T10:40:38-0300
+2026-11-21,hirota,P010,C08,30.98,un,sim,Café Torrado E Moído Extra Forte 3 Corações Pacote 500g,500g,2026-11-21T10:40:43-0300
+2026-11-21,hirota,P011,C08,6.98,un,sim,Farinha De Trigo Dona Benta Tradicional 1kg,1kg,2026-11-21T10:40:49-0300
+2026-11-21,hirota,P012,C08,8.98,un,sim,Farinha De Mandioca Yoki 500g Crua,500g,2026-11-21T10:40:54-0300
+2026-11-21,hirota,P013,C08,4.28,un,sim,Massa Espaguete Renata Com Ovos Numero 8 500gr,500gr,2026-11-21T10:41:00-0300
+2026-11-21,hirota,P014,C08,6.28,un,sim,Macarrão Com Ovos Barilla Parafuso 500g,500g,2026-11-21T10:41:04-0300
+2026-11-21,hirota,P015,C08,3.98,un,sim,Molho Pomarola Trad Sache 300g,300g,2026-11-21T10:41:09-0300
+2026-11-21,hirota,P016,C08,10.98,un,sim,Extrato De Tomate Elefante Pote 300g,300g,2026-11-21T10:41:14-0300
+2026-11-21,hirota,P017,C08,4.28,kg,sim,Sal Refinado Tradicional Cisne 1kg,1kg,2026-11-21T10:41:20-0300
+2026-11-21,hirota,P018,C08,5.98,un,sim,Fubá Mimoso Yoki 500g,500g,2026-11-21T10:41:25-0300
+2026-11-21,hirota,P020,C08,12.98,un,sim,Achocolatado Em Pó Nestlé Nescau 350g,350g,2026-11-21T10:41:30-0300
+2026-11-21,hirota,P022,C08,3.48,un,sim,Biscoito Passatempo Recheado 130g Chocolate,130g,2026-11-21T10:41:34-0300
+2026-11-21,hirota,P024,C08,11.98,un,sim,Margarina Qualy Sadia Com Sal 500g,500g,2026-11-21T10:41:39-0300
+2026-11-21,hirota,P025,C08,12.88,un,sim,Maionese Hellmann`s Tradicional 500ml,500ml,2026-11-21T10:41:44-0300
+2026-11-21,hirota,P026,C08,14.98,un,sim,Ketchup Heinz Tradicional 397g,397g,2026-11-21T10:41:50-0300
+2026-11-21,hirota,P027,C08,8.98,un,sim,Sardinha Gomes Da Costa Com Óleo 125g,125g,2026-11-21T10:41:54-0300
+2026-11-21,hirota,P028,C08,10.98,un,sim,Atum Gomes Da Costa Ralado Em Óleo 170g,170g,2026-11-21T10:42:00-0300
+2026-11-21,hirota,P029,C08,5.48,un,sim,Milho Verde Quero Conserva Lt 170g,170g,2026-11-21T10:42:05-0300
+2026-11-21,hirota,P030,C08,5.48,un,sim,Ervilha Em Conserva Quero Lata 170g,170g,2026-11-21T10:42:10-0300
+2026-11-21,hirota,P031,C08,5.48,un,sim,Vinagre Castelo De Álcool 750ml,750ml,2026-11-21T10:42:16-0300
+2026-11-21,hirota,P032,C08,7.38,un,sim,Tempero Sazón Frango 60g,60g,2026-11-21T10:42:22-0300
+2026-11-21,hirota,P033,C08,,,nao,Caldo Knorr Galinha 6 Cubos,,2026-11-21T10:42:26-0300
+2026-11-21,hirota,P034,C08,10.98,un,sim,Leite Condensado Moça Tradicional Nestlé 395g,395g,2026-11-21T10:42:31-0300
+2026-11-21,hirota,P035,C08,5.48,un,sim,Creme De Leite Nestlé Tradicional 200g,200g,2026-11-21T10:42:35-0300
+2026-11-21,hirota,P036,C08,11.98,un,sim,Mistura Para Bolo De Chocolate Dona Benta 450g,450g,2026-11-21T10:42:41-0300
+2026-11-21,hirota,P037,C08,3.98,un,sim,"Água Mineral Crystal Sem Gás 1,5l","1,5l",2026-11-21T10:42:46-0300
+2026-11-21,hirota,P039,C08,5.98,un,sim,Leite Italac 1 Litro Integral,,2026-11-21T10:42:52-0300
+2026-11-21,hirota,P040,C08,5.98,un,sim,Leite Longa Vida Integral Piracanjuba 1l,1l,2026-11-21T10:42:57-0300
+2026-11-21,hirota,P041,C08,5.98,un,sim,Leite Longa Vida Piracanjuba Desnatado 1l,1l,2026-11-21T10:43:03-0300
+2026-11-21,hirota,P042,C08,26.98,un,sim,Leite Ninho Po Integral 380g,380g,2026-11-21T10:43:08-0300
+2026-11-21,hirota,P043,C08,17.48,un,sim,Manteiga Aviação Extra Com Sal 200g,200g,2026-11-21T10:43:12-0300
+2026-11-21,hirota,P046,C08,10.88,un,sim,Requeijão Vigor Cremoso Tradicional 200g,200g,2026-11-21T10:43:17-0300
+2026-11-21,hirota,P047,C08,4.98,un,sim,Iogurte Nestlé Natural Com Mel 170g,170g,2026-11-21T10:43:22-0300
+2026-11-21,hirota,P048,C08,22.98,un,sim,"Iogurte Batavo P.z. 1,150g Morango","1,150g",2026-11-21T10:43:27-0300
+2026-11-21,hirota,P049,C08,15.98,un,sim,Presunto Cozido Fatiado Soltíssimo Sadia 200g,200g,2026-11-21T10:43:32-0300
+2026-11-21,hirota,P066,C08,29.98,un,sim,"Sabao Omo 1,6kg Sanitizante","1,6kg",2026-11-21T10:43:37-0300
+2026-11-21,hirota,P067,C08,48.98,un,sim,Sabão Líquido Omo Lavagem Perfeita 3 Litros,,2026-11-21T10:43:42-0300
+2026-11-21,hirota,P068,C08,9.98,un,sim,Amaciante Comfort Conc 500ml Original,500ml,2026-11-21T10:43:48-0300
+2026-11-21,hirota,P069,C08,3.18,un,sim,Detergente Líquido Ypê Neutro 500ml,500ml,2026-11-21T10:43:53-0300
+2026-11-21,hirota,P070,C08,8.48,un,sim,Agua Sanitaria Super Candida 2l,2l,2026-11-21T10:43:57-0300
+2026-11-21,hirota,P071,C08,10.98,un,sim,Desinfetante Pinho Sol Original 500ml,500ml,2026-11-21T10:44:03-0300
+2026-11-21,hirota,P072,C08,6.48,un,sim,Limp Veja Multi-uso 500ml 10%off Floral,500ml,2026-11-21T10:44:08-0300
+2026-11-21,hirota,P077,C08,16.78,un,sim,Álcool Coperalcool 46° 1l,1l,2026-11-21T10:44:14-0300
+2026-11-21,hirota,P080,C08,,,nao,Sobrecoxas Congeladas De Frango Sadia 1kg,1kg,2026-11-21T10:44:18-0300
+2026-11-21,hirota,P081,C08,,,nao,Frango Inteiro Resfriado,,2026-11-21T10:44:23-0300
+2026-11-21,hirota,P082,C08,67.84,kg,sim,Carne Moída De Patinho Bovina Resfriada 500g,500g,2026-11-21T10:44:29-0300
+2026-11-21,hirota,P083,C08,57.48,kg,sim,Acém Bovino Resfriado Pedaço Bandeja 1kg,1kg,2026-11-21T10:44:35-0300
+2026-11-21,hirota,P084,C08,47.90,kg,sim,Contra Filé Bovino Resfriado Pct 500g,500g,2026-11-21T10:44:40-0300
+2026-11-21,hirota,P086,C08,,,nao,Salsicha Perdigão Hot-dog Resfriada 500g,500g,2026-11-21T10:44:45-0300
+2026-11-21,hirota,P087,C08,,,nao,File Tilapia Fresco 500g,500g,2026-11-21T10:44:52-0300
+2026-11-21,hirota,P088,C08,14.98,kg,sim,Banana Prata 800g ( Qt. Aprox. 6 Un ),6 Un,2026-11-21T10:44:57-0300
+2026-11-21,hirota,P089,C08,20.00,kg,sim,Maca Gala Nacional 250g,250g,2026-11-21T10:45:02-0300
+2026-11-21,hirota,P090,C08,7.98,kg,sim,"Laranja Pêra 1,5kg (qt. Aprox. 6 Un)",6 Un,2026-11-21T10:45:07-0300
+2026-11-21,hirota,P092,C08,25.00,kg,sim,Tomate Italiano 200g,200g,2026-11-21T10:45:12-0300
+2026-11-21,hirota,P093,C08,14.00,kg,sim,Cebola 250g (qt. Aprox. 1 Un),1 Un,2026-11-21T10:45:18-0300
+2026-11-21,hirota,P094,C08,50.00,kg,sim,Alho A Granel 100g,100g,2026-11-21T10:45:23-0300
+2026-11-21,hirota,P095,C08,11.98,kg,sim,Batata Lavada 500g,500g,2026-11-21T10:45:29-0300
+2026-11-21,hirota,P096,C08,8.97,kg,sim,Cenoura 300g,300g,2026-11-21T10:45:34-0300
+2026-11-21,hirota,P097,C08,6.98,un,sim,Alface Crespa Hid. Unid,,2026-11-21T10:45:39-0300
+2026-11-21,hirota,P098,C08,17.98,kg,sim,Mamao Formosa 2kg,2kg,2026-11-21T10:45:45-0300
+2026-11-21,hirota,P099,C08,10.98,kg,sim,Abobrinha Italiana 600g (aprox. 1 Un.),1 Un,2026-11-21T10:45:51-0300
+2026-11-21,hirota,P100,C08,19.00,kg,sim,Pimentão Verde 250g (qt. Aprox. 1 Un),1 Un,2026-11-21T10:46:08-0300
+2026-11-21,hirota,P001,C09,28.98,un,sim,Arroz Camil Tipo 1 5kg,5kg,2026-11-21T10:39:55-0300
+2026-11-21,hirota,P002,C09,35.98,un,sim,Arroz Tio Joao Tipo 1 5kg,5kg,2026-11-21T10:40:00-0300
+2026-11-21,hirota,P003,C09,9.98,un,sim,Feijão Carioca Camil 1kg,1kg,2026-11-21T10:40:06-0300
+2026-11-21,hirota,P004,C09,8.98,un,sim,Feijão Preto Camil 1kg,1kg,2026-11-21T10:40:11-0300
+2026-11-21,hirota,P005,C09,6.98,un,sim,Óleo Soja Soya Pet 900ml,900ml,2026-11-21T10:40:16-0300
+2026-11-21,hirota,P006,C09,36.98,un,sim,Azeite De Oliva Gallo Extra Virgem 500ml,500ml,2026-11-21T10:40:21-0300
+2026-11-21,hirota,P007,C09,4.98,un,sim,Açucar Uniao 1kg,1kg,2026-11-21T10:40:26-0300
+2026-11-21,hirota,P008,C09,4.98,un,sim,Açúcar Cristalçúcar União 1kg,1kg,2026-11-21T10:40:32-0300
+2026-11-21,hirota,P009,C09,34.98,un,sim,Cafe Extra Forte Pilao 500gr,500gr,2026-11-21T10:40:38-0300
+2026-11-21,hirota,P010,C09,30.98,un,sim,Café Torrado E Moído Extra Forte 3 Corações Pacote 500g,500g,2026-11-21T10:40:43-0300
+2026-11-21,hirota,P011,C09,6.98,un,sim,Farinha De Trigo Dona Benta Tradicional 1kg,1kg,2026-11-21T10:40:49-0300
+2026-11-21,hirota,P012,C09,8.98,un,sim,Farinha De Mandioca Yoki 500g Crua,500g,2026-11-21T10:40:54-0300
+2026-11-21,hirota,P013,C09,4.28,un,sim,Massa Espaguete Renata Com Ovos Numero 8 500gr,500gr,2026-11-21T10:41:00-0300
+2026-11-21,hirota,P014,C09,6.28,un,sim,Macarrão Com Ovos Barilla Parafuso 500g,500g,2026-11-21T10:41:04-0300
+2026-11-21,hirota,P015,C09,3.98,un,sim,Molho Pomarola Trad Sache 300g,300g,2026-11-21T10:41:09-0300
+2026-11-21,hirota,P016,C09,10.98,un,sim,Extrato De Tomate Elefante Pote 300g,300g,2026-11-21T10:41:14-0300
+2026-11-21,hirota,P017,C09,4.28,kg,sim,Sal Refinado Tradicional Cisne 1kg,1kg,2026-11-21T10:41:20-0300
+2026-11-21,hirota,P018,C09,5.98,un,sim,Fubá Mimoso Yoki 500g,500g,2026-11-21T10:41:25-0300
+2026-11-21,hirota,P020,C09,12.98,un,sim,Achocolatado Em Pó Nestlé Nescau 350g,350g,2026-11-21T10:41:30-0300
+2026-11-21,hirota,P022,C09,3.48,un,sim,Biscoito Passatempo Recheado 130g Chocolate,130g,2026-11-21T10:41:34-0300
+2026-11-21,hirota,P024,C09,11.98,un,sim,Margarina Qualy Sadia Com Sal 500g,500g,2026-11-21T10:41:39-0300
+2026-11-21,hirota,P025,C09,12.88,un,sim,Maionese Hellmann`s Tradicional 500ml,500ml,2026-11-21T10:41:44-0300
+2026-11-21,hirota,P026,C09,14.98,un,sim,Ketchup Heinz Tradicional 397g,397g,2026-11-21T10:41:50-0300
+2026-11-21,hirota,P027,C09,8.98,un,sim,Sardinha Gomes Da Costa Com Óleo 125g,125g,2026-11-21T10:41:54-0300
+2026-11-21,hirota,P028,C09,10.98,un,sim,Atum Gomes Da Costa Ralado Em Óleo 170g,170g,2026-11-21T10:42:00-0300
+2026-11-21,hirota,P029,C09,5.48,un,sim,Milho Verde Quero Conserva Lt 170g,170g,2026-11-21T10:42:05-0300
+2026-11-21,hirota,P030,C09,5.48,un,sim,Ervilha Em Conserva Quero Lata 170g,170g,2026-11-21T10:42:10-0300
+2026-11-21,hirota,P031,C09,5.48,un,sim,Vinagre Castelo De Álcool 750ml,750ml,2026-11-21T10:42:16-0300
+2026-11-21,hirota,P032,C09,7.38,un,sim,Tempero Sazón Frango 60g,60g,2026-11-21T10:42:22-0300
+2026-11-21,hirota,P033,C09,,,nao,Caldo Knorr Galinha 6 Cubos,,2026-11-21T10:42:26-0300
+2026-11-21,hirota,P034,C09,10.98,un,sim,Leite Condensado Moça Tradicional Nestlé 395g,395g,2026-11-21T10:42:31-0300
+2026-11-21,hirota,P035,C09,5.48,un,sim,Creme De Leite Nestlé Tradicional 200g,200g,2026-11-21T10:42:35-0300
+2026-11-21,hirota,P036,C09,11.98,un,sim,Mistura Para Bolo De Chocolate Dona Benta 450g,450g,2026-11-21T10:42:41-0300
+2026-11-21,hirota,P037,C09,3.98,un,sim,"Água Mineral Crystal Sem Gás 1,5l","1,5l",2026-11-21T10:42:46-0300
+2026-11-21,hirota,P039,C09,5.98,un,sim,Leite Italac 1 Litro Integral,,2026-11-21T10:42:52-0300
+2026-11-21,hirota,P040,C09,5.98,un,sim,Leite Longa Vida Integral Piracanjuba 1l,1l,2026-11-21T10:42:57-0300
+2026-11-21,hirota,P041,C09,5.98,un,sim,Leite Longa Vida Piracanjuba Desnatado 1l,1l,2026-11-21T10:43:03-0300
+2026-11-21,hirota,P042,C09,26.98,un,sim,Leite Ninho Po Integral 380g,380g,2026-11-21T10:43:08-0300
+2026-11-21,hirota,P043,C09,17.48,un,sim,Manteiga Aviação Extra Com Sal 200g,200g,2026-11-21T10:43:12-0300
+2026-11-21,hirota,P046,C09,10.88,un,sim,Requeijão Vigor Cremoso Tradicional 200g,200g,2026-11-21T10:43:17-0300
+2026-11-21,hirota,P047,C09,4.98,un,sim,Iogurte Nestlé Natural Com Mel 170g,170g,2026-11-21T10:43:22-0300
+2026-11-21,hirota,P048,C09,22.98,un,sim,"Iogurte Batavo P.z. 1,150g Morango","1,150g",2026-11-21T10:43:27-0300
+2026-11-21,hirota,P049,C09,15.98,un,sim,Presunto Cozido Fatiado Soltíssimo Sadia 200g,200g,2026-11-21T10:43:32-0300
+2026-11-21,hirota,P066,C09,29.98,un,sim,"Sabao Omo 1,6kg Sanitizante","1,6kg",2026-11-21T10:43:37-0300
+2026-11-21,hirota,P067,C09,48.98,un,sim,Sabão Líquido Omo Lavagem Perfeita 3 Litros,,2026-11-21T10:43:42-0300
+2026-11-21,hirota,P068,C09,9.98,un,sim,Amaciante Comfort Conc 500ml Original,500ml,2026-11-21T10:43:48-0300
+2026-11-21,hirota,P069,C09,3.18,un,sim,Detergente Líquido Ypê Neutro 500ml,500ml,2026-11-21T10:43:53-0300
+2026-11-21,hirota,P070,C09,8.48,un,sim,Agua Sanitaria Super Candida 2l,2l,2026-11-21T10:43:57-0300
+2026-11-21,hirota,P071,C09,10.98,un,sim,Desinfetante Pinho Sol Original 500ml,500ml,2026-11-21T10:44:03-0300
+2026-11-21,hirota,P072,C09,6.48,un,sim,Limp Veja Multi-uso 500ml 10%off Floral,500ml,2026-11-21T10:44:08-0300
+2026-11-21,hirota,P077,C09,16.78,un,sim,Álcool Coperalcool 46° 1l,1l,2026-11-21T10:44:14-0300
+2026-11-21,hirota,P080,C09,,,nao,Sobrecoxas Congeladas De Frango Sadia 1kg,1kg,2026-11-21T10:44:18-0300
+2026-11-21,hirota,P081,C09,,,nao,Frango Inteiro Resfriado,,2026-11-21T10:44:23-0300
+2026-11-21,hirota,P082,C09,67.84,kg,sim,Carne Moída De Patinho Bovina Resfriada 500g,500g,2026-11-21T10:44:29-0300
+2026-11-21,hirota,P083,C09,57.48,kg,sim,Acém Bovino Resfriado Pedaço Bandeja 1kg,1kg,2026-11-21T10:44:35-0300
+2026-11-21,hirota,P084,C09,47.90,kg,sim,Contra Filé Bovino Resfriado Pct 500g,500g,2026-11-21T10:44:40-0300
+2026-11-21,hirota,P086,C09,,,nao,Salsicha Perdigão Hot-dog Resfriada 500g,500g,2026-11-21T10:44:45-0300
+2026-11-21,hirota,P087,C09,,,nao,File Tilapia Fresco 500g,500g,2026-11-21T10:44:52-0300
+2026-11-21,hirota,P088,C09,14.98,kg,sim,Banana Prata 800g ( Qt. Aprox. 6 Un ),6 Un,2026-11-21T10:44:57-0300
+2026-11-21,hirota,P089,C09,20.00,kg,sim,Maca Gala Nacional 250g,250g,2026-11-21T10:45:02-0300
+2026-11-21,hirota,P090,C09,7.98,kg,sim,"Laranja Pêra 1,5kg (qt. Aprox. 6 Un)",6 Un,2026-11-21T10:45:07-0300
+2026-11-21,hirota,P092,C09,25.00,kg,sim,Tomate Italiano 200g,200g,2026-11-21T10:45:12-0300
+2026-11-21,hirota,P093,C09,14.00,kg,sim,Cebola 250g (qt. Aprox. 1 Un),1 Un,2026-11-21T10:45:18-0300
+2026-11-21,hirota,P094,C09,50.00,kg,sim,Alho A Granel 100g,100g,2026-11-21T10:45:23-0300
+2026-11-21,hirota,P095,C09,11.98,kg,sim,Batata Lavada 500g,500g,2026-11-21T10:45:29-0300
+2026-11-21,hirota,P096,C09,8.97,kg,sim,Cenoura 300g,300g,2026-11-21T10:45:34-0300
+2026-11-21,hirota,P097,C09,6.98,un,sim,Alface Crespa Hid. Unid,,2026-11-21T10:45:39-0300
+2026-11-21,hirota,P098,C09,17.98,kg,sim,Mamao Formosa 2kg,2kg,2026-11-21T10:45:45-0300
+2026-11-21,hirota,P099,C09,10.98,kg,sim,Abobrinha Italiana 600g (aprox. 1 Un.),1 Un,2026-11-21T10:45:51-0300
+2026-11-21,hirota,P100,C09,19.00,kg,sim,Pimentão Verde 250g (qt. Aprox. 1 Un),1 Un,2026-11-21T10:46:08-0300
+2026-11-21,hirota,P001,C10,28.98,un,sim,Arroz Camil Tipo 1 5kg,5kg,2026-11-21T10:33:21-0300
+2026-11-21,hirota,P002,C10,35.98,un,sim,Arroz Tio Joao Tipo 1 5kg,5kg,2026-11-21T10:33:26-0300
+2026-11-21,hirota,P003,C10,9.98,un,sim,Feijão Carioca Camil 1kg,1kg,2026-11-21T10:33:31-0300
+2026-11-21,hirota,P004,C10,8.98,un,sim,Feijão Preto Camil 1kg,1kg,2026-11-21T10:33:36-0300
+2026-11-21,hirota,P005,C10,6.98,un,sim,Óleo Soja Soya Pet 900ml,900ml,2026-11-21T10:33:42-0300
+2026-11-21,hirota,P006,C10,36.98,un,sim,Azeite De Oliva Gallo Extra Virgem 500ml,500ml,2026-11-21T10:33:47-0300
+2026-11-21,hirota,P007,C10,4.98,un,sim,Açucar Uniao 1kg,1kg,2026-11-21T10:33:53-0300
+2026-11-21,hirota,P008,C10,4.98,un,sim,Açúcar Cristalçúcar União 1kg,1kg,2026-11-21T10:33:59-0300
+2026-11-21,hirota,P009,C10,34.98,un,sim,Cafe Extra Forte Pilao 500gr,500gr,2026-11-21T10:34:04-0300
+2026-11-21,hirota,P010,C10,30.98,un,sim,Café Torrado E Moído Extra Forte 3 Corações Pacote 500g,500g,2026-11-21T10:34:09-0300
+2026-11-21,hirota,P011,C10,6.98,un,sim,Farinha De Trigo Dona Benta Tradicional 1kg,1kg,2026-11-21T10:34:15-0300
+2026-11-21,hirota,P012,C10,8.98,un,sim,Farinha De Mandioca Yoki 500g Crua,500g,2026-11-21T10:34:21-0300
+2026-11-21,hirota,P013,C10,4.28,un,sim,Massa Espaguete Renata Com Ovos Numero 8 500gr,500gr,2026-11-21T10:34:26-0300
+2026-11-21,hirota,P014,C10,6.28,un,sim,Macarrão Com Ovos Barilla Parafuso 500g,500g,2026-11-21T10:34:32-0300
+2026-11-21,hirota,P015,C10,3.98,un,sim,Molho Pomarola Trad Sache 300g,300g,2026-11-21T10:34:38-0300
+2026-11-21,hirota,P016,C10,10.98,un,sim,Extrato De Tomate Elefante Pote 300g,300g,2026-11-21T10:34:43-0300
+2026-11-21,hirota,P017,C10,4.28,kg,sim,Sal Refinado Tradicional Cisne 1kg,1kg,2026-11-21T10:34:48-0300
+2026-11-21,hirota,P018,C10,5.98,un,sim,Fubá Mimoso Yoki 500g,500g,2026-11-21T10:34:54-0300
+2026-11-21,hirota,P020,C10,12.98,un,sim,Achocolatado Em Pó Nestlé Nescau 350g,350g,2026-11-21T10:34:59-0300
+2026-11-21,hirota,P022,C10,3.48,un,sim,Biscoito Passatempo Recheado 130g Chocolate,130g,2026-11-21T10:35:04-0300
+2026-11-21,hirota,P024,C10,11.98,un,sim,Margarina Qualy Sadia Com Sal 500g,500g,2026-11-21T10:35:10-0300
+2026-11-21,hirota,P025,C10,12.88,un,sim,Maionese Hellmann`s Tradicional 500ml,500ml,2026-11-21T10:35:16-0300
+2026-11-21,hirota,P026,C10,14.98,un,sim,Ketchup Heinz Tradicional 397g,397g,2026-11-21T10:35:22-0300
+2026-11-21,hirota,P027,C10,8.98,un,sim,Sardinha Gomes Da Costa Com Óleo 125g,125g,2026-11-21T10:35:28-0300
+2026-11-21,hirota,P028,C10,10.98,un,sim,Atum Gomes Da Costa Ralado Em Óleo 170g,170g,2026-11-21T10:35:33-0300
+2026-11-21,hirota,P029,C10,5.48,un,sim,Milho Verde Quero Conserva Lt 170g,170g,2026-11-21T10:35:39-0300
+2026-11-21,hirota,P030,C10,5.48,un,sim,Ervilha Em Conserva Quero Lata 170g,170g,2026-11-21T10:35:44-0300
+2026-11-21,hirota,P031,C10,5.48,un,sim,Vinagre Castelo De Álcool 750ml,750ml,2026-11-21T10:35:49-0300
+2026-11-21,hirota,P032,C10,7.38,un,sim,Tempero Sazón Frango 60g,60g,2026-11-21T10:35:53-0300
+2026-11-21,hirota,P033,C10,3.48,un,sim,Caldo Knorr Galinha 6 Cubos,,2026-11-21T10:35:59-0300
+2026-11-21,hirota,P034,C10,10.98,un,sim,Leite Condensado Moça Tradicional Nestlé 395g,395g,2026-11-21T10:36:05-0300
+2026-11-21,hirota,P035,C10,5.48,un,sim,Creme De Leite Nestlé Tradicional 200g,200g,2026-11-21T10:36:11-0300
+2026-11-21,hirota,P036,C10,11.98,un,sim,Mistura Para Bolo De Chocolate Dona Benta 450g,450g,2026-11-21T10:36:16-0300
+2026-11-21,hirota,P037,C10,3.98,un,sim,"Água Mineral Crystal Sem Gás 1,5l","1,5l",2026-11-21T10:36:21-0300
+2026-11-21,hirota,P039,C10,5.98,un,sim,Leite Italac 1 Litro Integral,,2026-11-21T10:36:28-0300
+2026-11-21,hirota,P040,C10,5.98,un,sim,Leite Longa Vida Integral Piracanjuba 1l,1l,2026-11-21T10:36:34-0300
+2026-11-21,hirota,P041,C10,5.98,un,sim,Leite Longa Vida Piracanjuba Desnatado 1l,1l,2026-11-21T10:36:39-0300
+2026-11-21,hirota,P042,C10,26.98,un,sim,Leite Ninho Po Integral 380g,380g,2026-11-21T10:36:45-0300
+2026-11-21,hirota,P043,C10,17.48,un,sim,Manteiga Aviação Extra Com Sal 200g,200g,2026-11-21T10:36:51-0300
+2026-11-21,hirota,P046,C10,10.88,un,sim,Requeijão Vigor Cremoso Tradicional 200g,200g,2026-11-21T10:36:56-0300
+2026-11-21,hirota,P047,C10,4.98,un,sim,Iogurte Nestlé Natural Com Mel 170g,170g,2026-11-21T10:37:02-0300
+2026-11-21,hirota,P048,C10,22.98,un,sim,"Iogurte Batavo P.z. 1,150g Morango","1,150g",2026-11-21T10:37:07-0300
+2026-11-21,hirota,P049,C10,15.98,un,sim,Presunto Cozido Fatiado Soltíssimo Sadia 200g,200g,2026-11-21T10:37:13-0300
+2026-11-21,hirota,P066,C10,29.98,un,sim,"Sabao Omo 1,6kg Sanitizante","1,6kg",2026-11-21T10:37:18-0300
+2026-11-21,hirota,P067,C10,48.98,un,sim,Sabão Líquido Omo Lavagem Perfeita 3 Litros,,2026-11-21T10:37:24-0300
+2026-11-21,hirota,P068,C10,9.98,un,sim,Amaciante Comfort Conc 500ml Original,500ml,2026-11-21T10:37:29-0300
+2026-11-21,hirota,P069,C10,3.18,un,sim,Detergente Líquido Ypê Neutro 500ml,500ml,2026-11-21T10:37:34-0300
+2026-11-21,hirota,P070,C10,8.48,un,sim,Agua Sanitaria Super Candida 2l,2l,2026-11-21T10:37:38-0300
+2026-11-21,hirota,P071,C10,10.98,un,sim,Desinfetante Pinho Sol Original 500ml,500ml,2026-11-21T10:37:43-0300
+2026-11-21,hirota,P072,C10,6.48,un,sim,Limp Veja Multi-uso 500ml 10%off Floral,500ml,2026-11-21T10:37:48-0300
+2026-11-21,hirota,P077,C10,16.78,un,sim,Álcool Coperalcool 46° 1l,1l,2026-11-21T10:37:54-0300
+2026-11-21,hirota,P080,C10,,,nao,Sobrecoxas Congeladas De Frango Sadia 1kg,1kg,2026-11-21T10:37:59-0300
+2026-11-21,hirota,P081,C10,10.98,kg,sim,Frango Inteiro Resfriado,,2026-11-21T10:38:04-0300
+2026-11-21,hirota,P082,C10,67.84,kg,sim,Carne Moída De Patinho Bovina Resfriada 500g,500g,2026-11-21T10:38:10-0300
+2026-11-21,hirota,P083,C10,56.33,kg,sim,Acém Bovino Resfriado Pedaço Bandeja 1kg,1kg,2026-11-21T10:38:15-0300
+2026-11-21,hirota,P084,C10,49.98,kg,sim,Contra Filé Bovino Resfriado Pct 500g,500g,2026-11-21T10:38:21-0300
+2026-11-21,hirota,P086,C10,15.98,un,sim,Salsicha Perdigão Hot-dog Resfriada 500g,500g,2026-11-21T10:38:26-0300
+2026-11-21,hirota,P087,C10,69.98,kg,sim,File Tilapia Fresco 500g,500g,2026-11-21T10:38:31-0300
+2026-11-21,hirota,P088,C10,14.98,kg,sim,Banana Prata 800g ( Qt. Aprox. 6 Un ),6 Un,2026-11-21T10:38:37-0300
+2026-11-21,hirota,P089,C10,20.00,kg,sim,Maca Gala Nacional 250g,250g,2026-11-21T10:38:43-0300
+2026-11-21,hirota,P090,C10,7.98,kg,sim,"Laranja Pêra 1,5kg (qt. Aprox. 6 Un)",6 Un,2026-11-21T10:38:48-0300
+2026-11-21,hirota,P092,C10,25.00,kg,sim,Tomate Italiano 200g,200g,2026-11-21T10:38:53-0300
+2026-11-21,hirota,P093,C10,14.00,kg,sim,Cebola 250g (qt. Aprox. 1 Un),1 Un,2026-11-21T10:38:59-0300
+2026-11-21,hirota,P094,C10,50.00,kg,sim,Alho A Granel 100g,100g,2026-11-21T10:39:05-0300
+2026-11-21,hirota,P095,C10,11.98,kg,sim,Batata Lavada 500g,500g,2026-11-21T10:39:09-0300
+2026-11-21,hirota,P096,C10,8.97,kg,sim,Cenoura 300g,300g,2026-11-21T10:39:15-0300
+2026-11-21,hirota,P097,C10,6.98,un,sim,Alface Crespa Hid. Unid,,2026-11-21T10:39:19-0300
+2026-11-21,hirota,P098,C10,17.98,kg,sim,Mamao Formosa 2kg,2kg,2026-11-21T10:39:25-0300
+2026-11-21,hirota,P099,C10,10.98,kg,sim,Abobrinha Italiana 600g (aprox. 1 Un.),1 Un,2026-11-21T10:39:30-0300
+2026-11-21,hirota,P100,C10,19.00,kg,sim,Pimentão Verde 250g (qt. Aprox. 1 Un),1 Un,2026-11-21T10:39:36-0300
 2026-11-21,hirota,P001,C11,28.98,un,sim,Arroz Camil Tipo 1 5kg,5kg,2026-11-21T05:22:40-0300
 2026-11-21,hirota,P002,C11,35.98,un,sim,Arroz Tio Joao Tipo 1 5kg,5kg,2026-11-21T05:22:45-0300
 2026-11-21,hirota,P003,C11,9.98,un,sim,Feijão Carioca Camil 1kg,1kg,2026-11-21T05:22:50-0300

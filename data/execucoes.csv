@@ -331,14 +331,16 @@ data,rede_id,cep_id,produtos_tentados,produtos_lidos,resultado,erro,loja
 2026-11-21,atacadao,C24,81,81,ok,,Taipas
 2026-11-21,atacadao,C25,81,81,ok,mesma loja do C24: precos repetidos,Taipas
 2026-11-21,carrefour,,88,87,parcial,P077: HTTP Error 404: Not Found,preco unico do site
-2026-11-21,hirota,C01,70,11,parcial,P012: pagina sem produto (pode nao existir mais); P013: pagina sem produto (pode nao existir mais); P014: pagina sem produto (pode nao existir mais); P015: pagina sem produto (pode nao existir mais); P016: pagina sem produto (pode nao existir mais); P017: pagina sem produto (pode nao existir mais); ,Santa Cecília (Av. Gen. Olímpio da Silveira; 39)
-2026-11-21,hirota,C02,70,11,parcial,mesma loja do C01: precos repetidos; P012: pagina sem produto (pode nao existir mais); P013: pagina sem produto (pode nao existir mais); P014: pagina sem produto (pode nao existir mais); P015: pagina sem produto (pode nao existir mais); P016: pagina sem produto (pode nao existir mais); P017: pagina ,Santa Cecília (Av. Gen. Olímpio da Silveira; 39)
-2026-11-21,hirota,C03,70,11,parcial,mesma loja do C01: precos repetidos; P012: pagina sem produto (pode nao existir mais); P013: pagina sem produto (pode nao existir mais); P014: pagina sem produto (pode nao existir mais); P015: pagina sem produto (pode nao existir mais); P016: pagina sem produto (pode nao existir mais); P017: pagina ,Santa Cecília (Av. Gen. Olímpio da Silveira; 39)
-2026-11-21,hirota,C04,70,11,parcial,mesma loja do C01: precos repetidos; P012: pagina sem produto (pode nao existir mais); P013: pagina sem produto (pode nao existir mais); P014: pagina sem produto (pode nao existir mais); P015: pagina sem produto (pode nao existir mais); P016: pagina sem produto (pode nao existir mais); P017: pagina ,Santa Cecília (Av. Gen. Olímpio da Silveira; 39)
-2026-11-21,hirota,C05,70,11,parcial,mesma loja do C01: precos repetidos; P012: pagina sem produto (pode nao existir mais); P013: pagina sem produto (pode nao existir mais); P014: pagina sem produto (pode nao existir mais); P015: pagina sem produto (pode nao existir mais); P016: pagina sem produto (pode nao existir mais); P017: pagina ,Santa Cecília (Av. Gen. Olímpio da Silveira; 39)
-2026-11-21,hirota,C06,70,0,falha,a primeira pagina falhou: P001: Locator.click: Timeout 30000ms exceeded.,
-2026-11-21,hirota,C07,70,0,falha,a primeira pagina falhou: P001: Locator.click: Timeout 30000ms exceeded.,
-2026-11-21,hirota,C08,70,0,falha,a primeira pagina falhou: P001: Locator.click: Timeout 30000ms exceeded.,
+2026-11-21,hirota,C01,70,70,ok,,Santa Cecília (Av. Gen. Olímpio da Silveira; 39)
+2026-11-21,hirota,C02,70,70,ok,mesma loja do C01: precos repetidos,Santa Cecília (Av. Gen. Olímpio da Silveira; 39)
+2026-11-21,hirota,C03,70,70,ok,mesma loja do C01: precos repetidos,Santa Cecília (Av. Gen. Olímpio da Silveira; 39)
+2026-11-21,hirota,C04,70,70,ok,mesma loja do C01: precos repetidos,Santa Cecília (Av. Gen. Olímpio da Silveira; 39)
+2026-11-21,hirota,C05,70,70,ok,mesma loja do C01: precos repetidos,Santa Cecília (Av. Gen. Olímpio da Silveira; 39)
+2026-11-21,hirota,C06,70,70,ok,,Santa Cecília (Av. Gen. Olímpio da Silveira; 39)
+2026-11-21,hirota,C07,70,70,ok,mesma loja do C06: precos repetidos,Santa Cecília (Av. Gen. Olímpio da Silveira; 39)
+2026-11-21,hirota,C08,70,70,ok,,Morumbi (Av. Dr. Guilherme Dumont Vilares; 1450)
+2026-11-21,hirota,C09,70,70,ok,mesma loja do C08: precos repetidos,Morumbi (Av. Dr. Guilherme Dumont Vilares; 1450)
+2026-11-21,hirota,C10,70,70,ok,mesma loja do C06: precos repetidos,Santa Cecília (Av. Gen. Olímpio da Silveira; 39)
 2026-11-21,hirota,C11,70,70,ok,,Campo Belo (R. Vieira de Morais; 263)
 2026-11-21,hirota,C12,70,70,ok,mesma loja do C11: precos repetidos,Campo Belo (R. Vieira de Morais; 263)
 2026-11-21,hirota,C13,70,70,ok,,Morumbi (Av. Dr. Guilherme Dumont Vilares; 1450)
