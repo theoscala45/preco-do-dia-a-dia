@@ -411,3 +411,109 @@ data,rede_id,cep_id,produtos_tentados,produtos_lidos,resultado,erro,loja
 2026-11-21,tenda,C23,80,80,ok,,
 2026-11-21,tenda,C24,80,80,ok,,
 2026-11-21,tenda,C25,80,80,ok,,
+2026-11-22,atacadao,C01,81,81,ok,,Pacaembu
+2026-11-22,atacadao,C02,81,81,ok,mesma loja do C01: precos repetidos,Pacaembu
+2026-11-22,atacadao,C03,81,81,ok,mesma loja do C01: precos repetidos,Pacaembu
+2026-11-22,atacadao,C04,81,81,ok,mesma loja do C01: precos repetidos,Pacaembu
+2026-11-22,atacadao,C05,81,81,ok,mesma loja do C01: precos repetidos,Pacaembu
+2026-11-22,atacadao,C06,81,81,ok,,Villa Lobos
+2026-11-22,atacadao,C07,81,81,ok,mesma loja do C06: precos repetidos,Villa Lobos
+2026-11-22,atacadao,C08,81,81,ok,,Osasco Centro
+2026-11-22,atacadao,C09,81,81,ok,mesma loja do C06: precos repetidos,Villa Lobos
+2026-11-22,atacadao,C10,81,81,ok,mesma loja do C06: precos repetidos,Villa Lobos
+2026-11-22,atacadao,C11,81,81,ok,,Ipiranga
+2026-11-22,atacadao,C12,81,81,ok,,Villa Lobos
+2026-11-22,atacadao,C13,81,81,ok,mesma loja do C12: precos repetidos,Villa Lobos
+2026-11-22,atacadao,C14,81,81,ok,mesma loja do C12: precos repetidos,Villa Lobos
+2026-11-22,atacadao,C15,81,81,ok,mesma loja do C12: precos repetidos,Villa Lobos
+2026-11-22,atacadao,C16,81,81,ok,,Vila Maria
+2026-11-22,atacadao,C17,81,81,ok,,Tatuapé
+2026-11-22,atacadao,C18,81,81,ok,,Aricanduva
+2026-11-22,atacadao,C19,81,81,ok,mesma loja do C16: precos repetidos,Vila Maria
+2026-11-22,atacadao,C20,81,81,ok,,Mauá João Ramalho
+2026-11-22,atacadao,C21,81,81,ok,,Pacaembu
+2026-11-22,atacadao,C22,81,81,ok,,Vila Maria
+2026-11-22,atacadao,C23,81,81,ok,mesma loja do C22: precos repetidos,Vila Maria
+2026-11-22,atacadao,C24,81,81,ok,,Taipas
+2026-11-22,atacadao,C25,81,81,ok,mesma loja do C24: precos repetidos,Taipas
+2026-11-22,carrefour,,88,87,parcial,P077: HTTP Error 404: Not Found,preco unico do site
+2026-11-22,hirota,C01,70,9,parcial,P003: pagina sem produto (pode nao existir mais); P004: pagina sem produto (pode nao existir mais); P005: pagina sem produto (pode nao existir mais); P006: pagina sem produto (pode nao existir mais); P007: pagina sem produto (pode nao existir mais); P008: pagina sem produto (pode nao existir mais); ,Santa Cecília (Av. Gen. Olímpio da Silveira; 39)
+2026-11-22,hirota,C02,70,9,parcial,mesma loja do C01: precos repetidos; P003: pagina sem produto (pode nao existir mais); P004: pagina sem produto (pode nao existir mais); P005: pagina sem produto (pode nao existir mais); P006: pagina sem produto (pode nao existir mais); P007: pagina sem produto (pode nao existir mais); P008: pagina ,Santa Cecília (Av. Gen. Olímpio da Silveira; 39)
+2026-11-22,hirota,C03,70,9,parcial,mesma loja do C01: precos repetidos; P003: pagina sem produto (pode nao existir mais); P004: pagina sem produto (pode nao existir mais); P005: pagina sem produto (pode nao existir mais); P006: pagina sem produto (pode nao existir mais); P007: pagina sem produto (pode nao existir mais); P008: pagina ,Santa Cecília (Av. Gen. Olímpio da Silveira; 39)
+2026-11-22,hirota,C04,70,9,parcial,mesma loja do C01: precos repetidos; P003: pagina sem produto (pode nao existir mais); P004: pagina sem produto (pode nao existir mais); P005: pagina sem produto (pode nao existir mais); P006: pagina sem produto (pode nao existir mais); P007: pagina sem produto (pode nao existir mais); P008: pagina ,Santa Cecília (Av. Gen. Olímpio da Silveira; 39)
+2026-11-22,hirota,C05,70,9,parcial,mesma loja do C01: precos repetidos; P003: pagina sem produto (pode nao existir mais); P004: pagina sem produto (pode nao existir mais); P005: pagina sem produto (pode nao existir mais); P006: pagina sem produto (pode nao existir mais); P007: pagina sem produto (pode nao existir mais); P008: pagina ,Santa Cecília (Av. Gen. Olímpio da Silveira; 39)
+2026-11-22,hirota,C06,70,0,falha,a primeira pagina falhou: P001: Locator.click: Timeout 30000ms exceeded.,
+2026-11-22,hirota,C07,70,70,ok,,Santa Cecília (Av. Gen. Olímpio da Silveira; 39)
+2026-11-22,hirota,C08,70,70,ok,,Morumbi (Av. Dr. Guilherme Dumont Vilares; 1450)
+2026-11-22,hirota,C09,70,70,ok,mesma loja do C08: precos repetidos,Morumbi (Av. Dr. Guilherme Dumont Vilares; 1450)
+2026-11-22,hirota,C10,70,70,ok,mesma loja do C07: precos repetidos,Santa Cecília (Av. Gen. Olímpio da Silveira; 39)
+2026-11-22,hirota,C11,70,70,ok,,Campo Belo (R. Vieira de Morais; 263)
+2026-11-22,hirota,C12,70,70,ok,mesma loja do C11: precos repetidos,Campo Belo (R. Vieira de Morais; 263)
+2026-11-22,hirota,C13,70,70,ok,,Morumbi (Av. Dr. Guilherme Dumont Vilares; 1450)
+2026-11-22,hirota,C14,70,70,ok,mesma loja do C11: precos repetidos,Campo Belo (R. Vieira de Morais; 263)
+2026-11-22,hirota,C15,70,70,ok,mesma loja do C13: precos repetidos,Morumbi (Av. Dr. Guilherme Dumont Vilares; 1450)
+2026-11-22,hirota,C16,70,70,ok,,Vila Formosa (Av. Dr. Eduardo Cotching; 1628)
+2026-11-22,hirota,C17,70,70,ok,mesma loja do C16: precos repetidos,Vila Formosa (Av. Dr. Eduardo Cotching; 1628)
+2026-11-22,hirota,C18,70,70,ok,mesma loja do C16: precos repetidos,Vila Formosa (Av. Dr. Eduardo Cotching; 1628)
+2026-11-22,hirota,C19,70,70,ok,mesma loja do C16: precos repetidos,Vila Formosa (Av. Dr. Eduardo Cotching; 1628)
+2026-11-22,hirota,C20,70,70,ok,mesma loja do C16: precos repetidos,Vila Formosa (Av. Dr. Eduardo Cotching; 1628)
+2026-11-22,hirota,C21,70,70,ok,,Santa Cecília (Av. Gen. Olímpio da Silveira; 39)
+2026-11-22,hirota,C22,70,70,ok,mesma loja do C21: precos repetidos,Santa Cecília (Av. Gen. Olímpio da Silveira; 39)
+2026-11-22,hirota,C23,70,70,ok,mesma loja do C21: precos repetidos,Santa Cecília (Av. Gen. Olímpio da Silveira; 39)
+2026-11-22,hirota,C24,70,70,ok,mesma loja do C21: precos repetidos,Santa Cecília (Av. Gen. Olímpio da Silveira; 39)
+2026-11-22,hirota,C25,70,70,ok,mesma loja do C21: precos repetidos,Santa Cecília (Av. Gen. Olímpio da Silveira; 39)
+2026-11-22,mambo,,94,94,ok,,preco unico do site
+2026-11-22,nagumo,C01,97,97,ok,,046-OSASCO (Rua Avestruz; 688; Osasco)
+2026-11-22,nagumo,C02,97,97,ok,,051-PQ CONTI (Avenida Joao Palma Aleman; 715; Guarulhos)
+2026-11-22,nagumo,C03,97,97,ok,mesma loja do C02: precos repetidos,051-PQ CONTI (Avenida Joao Palma Aleman; 715; Guarulhos)
+2026-11-22,nagumo,C04,97,97,ok,mesma loja do C02: precos repetidos,051-PQ CONTI (Avenida Joao Palma Aleman; 715; Guarulhos)
+2026-11-22,nagumo,C05,97,97,ok,,050-CAMILOPO (Rua Leonilda; 265; Santo Andre)
+2026-11-22,nagumo,C06,97,97,ok,,046-OSASCO (Rua Avestruz; 688; Osasco)
+2026-11-22,nagumo,C07,97,97,ok,mesma loja do C06: precos repetidos,046-OSASCO (Rua Avestruz; 688; Osasco)
+2026-11-22,nagumo,C08,97,97,ok,mesma loja do C06: precos repetidos,046-OSASCO (Rua Avestruz; 688; Osasco)
+2026-11-22,nagumo,C09,97,97,ok,mesma loja do C06: precos repetidos,046-OSASCO (Rua Avestruz; 688; Osasco)
+2026-11-22,nagumo,C10,97,97,ok,mesma loja do C06: precos repetidos,046-OSASCO (Rua Avestruz; 688; Osasco)
+2026-11-22,nagumo,C11,97,97,ok,,050-CAMILOPO (Rua Leonilda; 265; Santo Andre)
+2026-11-22,nagumo,C12,97,97,ok,,046-OSASCO (Rua Avestruz; 688; Osasco)
+2026-11-22,nagumo,C13,97,97,ok,mesma loja do C12: precos repetidos,046-OSASCO (Rua Avestruz; 688; Osasco)
+2026-11-22,nagumo,C14,97,97,ok,,026-STO AND2 (Rua Coronel Seabra; 321; Santo Andre)
+2026-11-22,nagumo,C15,97,97,ok,mesma loja do C12: precos repetidos,046-OSASCO (Rua Avestruz; 688; Osasco)
+2026-11-22,nagumo,C16,97,97,ok,,016-RAGUEB (João Maciel; 2500; São Paulo)
+2026-11-22,nagumo,C17,97,97,ok,,050-CAMILOPO (Rua Leonilda; 265; Santo Andre)
+2026-11-22,nagumo,C18,97,97,ok,,017-PIRES RIO (Avenida Pires Do Rio; 4342; Sao Paulo)
+2026-11-22,nagumo,C19,97,97,ok,mesma loja do C18: precos repetidos,017-PIRES RIO (Avenida Pires Do Rio; 4342; Sao Paulo)
+2026-11-22,nagumo,C20,97,97,ok,mesma loja do C17: precos repetidos,050-CAMILOPO (Rua Leonilda; 265; Santo Andre)
+2026-11-22,nagumo,C21,97,97,ok,,051-PQ CONTI (Avenida Joao Palma Aleman; 715; Guarulhos)
+2026-11-22,nagumo,C22,97,97,ok,,057-ANELVIAR (Av Pres Humberto De A. Castelo Bran; 3413; Guarulhos)
+2026-11-22,nagumo,C23,97,97,ok,mesma loja do C21: precos repetidos,051-PQ CONTI (Avenida Joao Palma Aleman; 715; Guarulhos)
+2026-11-22,nagumo,C24,97,97,ok,,046-OSASCO (Rua Avestruz; 688; Osasco)
+2026-11-22,nagumo,C25,97,97,ok,mesma loja do C24: precos repetidos,046-OSASCO (Rua Avestruz; 688; Osasco)
+2026-11-22,pao-de-acucar,,91,91,ok,,preco unico do site
+2026-11-22,santa-luzia,,46,46,ok,,preco unico do site
+2026-11-22,sonda,,74,74,ok,,preco unico do site
+2026-11-22,st-marche,,85,85,ok,,preco unico do site
+2026-11-22,tenda,C01,80,80,ok,,
+2026-11-22,tenda,C02,80,80,ok,,
+2026-11-22,tenda,C03,80,80,ok,,
+2026-11-22,tenda,C04,80,80,ok,,
+2026-11-22,tenda,C05,80,80,ok,,
+2026-11-22,tenda,C06,80,80,ok,,
+2026-11-22,tenda,C07,80,80,ok,,
+2026-11-22,tenda,C08,80,80,ok,,
+2026-11-22,tenda,C09,80,80,ok,,
+2026-11-22,tenda,C10,80,80,ok,,
+2026-11-22,tenda,C11,80,80,ok,,
+2026-11-22,tenda,C12,80,80,ok,,
+2026-11-22,tenda,C13,80,80,ok,,
+2026-11-22,tenda,C14,80,80,ok,,
+2026-11-22,tenda,C15,80,80,ok,,
+2026-11-22,tenda,C16,80,80,ok,,
+2026-11-22,tenda,C17,80,79,parcial,P020: Locator.wait_for: Timeout 15000ms exceeded.,
+2026-11-22,tenda,C18,80,80,ok,,
+2026-11-22,tenda,C19,80,80,ok,,
+2026-11-22,tenda,C20,80,80,ok,,
+2026-11-22,tenda,C21,80,80,ok,,
+2026-11-22,tenda,C22,80,80,ok,,
+2026-11-22,tenda,C23,80,80,ok,,
+2026-11-22,tenda,C24,80,80,ok,,
+2026-11-22,tenda,C25,80,80,ok,,
