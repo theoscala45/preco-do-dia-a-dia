@@ -109,9 +109,42 @@ export function iniciar(dados) {
     $('aviso').hidden = false;
     document.documentElement.style.setProperty('--aviso-h', $('aviso').offsetHeight + 'px');
   }
-  // marca a página atual no menu
-  const aqui = location.pathname.split('/').pop() || 'index.html';
-  document.querySelectorAll('.topo nav a').forEach(a => { if (a.getAttribute('href') === aqui) a.setAttribute('aria-current', 'page'); });
+  // marca a página atual no menu (a página de um produto conta como "Produtos")
+  const aqui0 = location.pathname.split('/').pop() || 'index.html';
+  const aqui = aqui0 === 'produto.html' ? 'produtos.html' : aqui0;
+  document.querySelectorAll('.topo nav a').forEach(a => { if (a.getAttribute('href').split('?')[0] === aqui) a.setAttribute('aria-current', 'page'); });
+
+  // linha laranja sob o link da página atual: ao trocar de página ela salta, como uma mola, do link anterior para o novo
+  const menuTopo = document.querySelector('.topo nav');
+  if (menuTopo && !matchMedia('(max-width: 860px)').matches) {
+    const linha = document.createElement('span');
+    linha.className = 'nav-linha'; linha.setAttribute('aria-hidden', 'true');
+    menuTopo.append(linha);
+    const atual = menuTopo.querySelector('a[aria-current]');
+    const medir = a => ({ x: a.offsetLeft + 14, y: a.offsetTop + a.offsetHeight - 7, w: a.offsetWidth - 28 });
+    const lerAntes = () => { try { return JSON.parse(sessionStorage.getItem('pdd:menu')); } catch { return null; } };
+    const gravar = v => { try { sessionStorage.setItem('pdd:menu', JSON.stringify(v)); } catch { /* sem armazenamento: segue sem a memória */ } };
+    document.fonts.ready.then(() => {
+      const antes = lerAntes();
+      if (atual) {
+        const f = medir(atual);
+        gsap.set(linha, { x: f.x, y: f.y, width: f.w, autoAlpha: 1 });
+        if (!calmo) {
+          if (antes && (Math.abs(antes.x - f.x) > 1 || Math.abs(antes.w - f.w) > 1)) gsap.from(linha, { x: antes.x, y: antes.y, width: antes.w, duration: 1.1, ease: 'elastic.out(1, 0.5)' });
+          else if (!antes) gsap.from(linha, { scaleX: 0, duration: 0.6, ease: 'power3.out' });
+        }
+        gravar(f);
+        addEventListener('resize', () => { const g = medir(atual); gsap.set(linha, { x: g.x, y: g.y, width: g.w }); gravar(g); });
+      } else {
+        // página que não está no menu: a linha encolhe e some
+        if (antes && !calmo) {
+          gsap.set(linha, { x: antes.x, y: antes.y, width: antes.w, autoAlpha: 1 });
+          gsap.to(linha, { width: 0, x: antes.x + antes.w / 2, autoAlpha: 0, duration: 0.45, ease: 'power2.in' });
+        }
+        gravar(null);
+      }
+    });
+  }
 
   // cabeçalho ganha fundo depois que a página rola
   ScrollTrigger.create({ start: 30, end: 'max', toggleClass: { targets: '.topo', className: 'rolou' } });
