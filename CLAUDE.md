@@ -7,6 +7,8 @@ roda sozinho toda noite pelo GitHub Actions.
 - Sempre em português do Brasil, simples e direto. Listas curtas; barras de progresso quando ele pedir o que falta.
 - Perguntas com opções clicáveis, com uma marcada "(Recomendado)".
 - O Theo instrui; quem edita o site e o código é o Claude, pelo Claude Code.
+- Toda mensagem sobre algo mudado no site leva o link da página mudada
+  (https://theoscala45.github.io/preco-do-dia-a-dia/... e, se fizer sentido, a versão com `?previa`).
 
 ## O que a coleta grava (não mexer à mão)
 A coleta da noite (02h17, reserva 05h17, até ~09h30) e o fluxo do IPCA fazem commits sozinhos em `main`. Ao mexer no
