@@ -26,11 +26,13 @@ Não passar senhas nem códigos no chat. Os segredos ficam no cron-job.org e nos
 ```
 Oi! Este é o meu projeto O Preço do Dia a Dia, que veio de outra conta do Claude. Antes de qualquer coisa, leia
 docs/PASSAGEM.md inteiro e depois CLAUDE.md, README.md, DESIGN.md, data/LEIAME.md e docs/lista-tecnica.md.
-Depois:
+Estou na etapa de mexer no site (o visual): eu digo o que quero mudar, muitas vezes com prints, e você faz as
+mudanças. O visual atual (branco com laranja e azul, início com os 3 capítulos do mapa) foi aprovado por mim; não
+desfaça nada sem me perguntar.
+Depois de ler:
 1) proponha o ambiente da nuvem com os sites da seção 4 do PASSAGEM.md (eu aprovo no botão);
 2) confira se a coleta de hoje rodou bem (data/execucoes.csv e as issues abertas no GitHub);
-3) me diga em poucas linhas o que entendeu e o que falta, com uma barra de progresso, e me pergunte com opções o que
-fazemos primeiro.
+3) me diga em poucas linhas o que entendeu, e fique pronto para os meus pedidos no site.
 Fale comigo sempre em português, simples e direto, e me mande o link do site a cada mudança.
 ```
 
