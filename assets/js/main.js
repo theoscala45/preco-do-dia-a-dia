@@ -13,8 +13,10 @@ const media = cestas.reduce((s, v) => s + v, 0) / cestas.length;
 const n = dados.itens_na_cesta;
 
 $('mediaRotulo').textContent = `Cesta de ${n} itens, média da cidade`;
-const iMax = cestas.indexOf(Math.max(...cestas));
+const iMin = cestas.indexOf(Math.min(...cestas)), iMax = cestas.indexOf(Math.max(...cestas));
 $('numLojas').dataset.conta = rotas.lojas.length;
+$('minNome').textContent = curto(geo.pontos[iMin].bairro); $('minVal').textContent = reais(cestas[iMin]);
+$('maxNome').textContent = curto(geo.pontos[iMax].bairro); $('maxVal').textContent = reais(cestas[iMax]);
 rolar($('etqInt'), $('etqCent'), media);
 
 // ---------- as redes em cada ponto: soma dos itens do índice que todas as redes têm ali
@@ -110,10 +112,10 @@ mapa?.aoMudar(({ fase }) => {
 
 // ---------- o scroll troca a cena do mapa
 const passos = [...document.querySelectorAll('#trilha li')];
-const cena = c => { mapa?.cena(c); passos.forEach((li, k) => li.classList.toggle('on', k === c - 2)); };   // as cenas do mapa são 2 (supermercados) e 3 (inflação); a trilha tem dois passos
+const cena = c => { mapa?.cena(c); passos.forEach((li, k) => li.classList.toggle('on', k === c - 1)); };
 ScrollTrigger.create({ trigger: '.abre', start: 'top top', end: 'bottom 50%', onToggle: s => s.isActive && cena(0) });
-gsap.utils.toArray('.cap').forEach(cap => {
-  ScrollTrigger.create({ trigger: cap, start: 'top 50%', end: 'bottom 50%', onToggle: s => s.isActive && cena(+cap.dataset.cap) });
+gsap.utils.toArray('.cap').forEach((cap, k) => {
+  ScrollTrigger.create({ trigger: cap, start: 'top 50%', end: 'bottom 50%', onToggle: s => s.isActive && cena(k + 1) });
 });
 ScrollTrigger.create({ trigger: '.cena', start: 'top bottom', end: 'bottom top', onToggle: s => mapa?.ativo(s.isActive) });
 
@@ -145,7 +147,7 @@ const mm = gsap.matchMedia();
 mm.add('(prefers-reduced-motion: no-preference)', () => {
   // o texto da abertura sobe e apaga enquanto o primeiro capítulo chega
   gsap.to('.abre > *', { y: -70, autoAlpha: 0, ease: 'none', stagger: 0.02, scrollTrigger: { trigger: '.abre', start: 'bottom 88%', end: 'bottom 38%', scrub: true } });
-  // trilha lateral: mostra em qual dos dois capítulos a leitura está
+  // trilha lateral: mostra em qual dos três capítulos a leitura está
   gsap.fromTo('#trilha', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.4, scrollTrigger: { trigger: '#como', start: 'top 70%', endTrigger: '#inflacao', end: 'bottom 60%', toggleActions: 'play reverse play reverse' } });
   gsap.fromTo('#trilha i', { scaleY: 0 }, { scaleY: 1, ease: 'none', scrollTrigger: { trigger: '#como', start: 'top 50%', endTrigger: '#inflacao', end: 'bottom 50%', scrub: 0.4 } });
   gsap.utils.toArray('.cap').forEach(cap => {

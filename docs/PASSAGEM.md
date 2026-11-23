@@ -163,7 +163,6 @@ está com `dados=exemplo`: o site mostra preços inventados com a faixa "Dados d
 - 23/11, visual:
   - Fundo claro, branco com laranja (#F26A0F), mais o azul #2448E0 nos botões e destaques.
   - O início completo, com os 3 capítulos do mapa (ele não quer o início cortado).
-  - Mais tarde no mesmo dia, o Theo pediu para tirar o capítulo "25 bairros, a mesma lista" (o cartão com a cesta mais barata e a mais cara). O início ficou com 2 capítulos: "10 supermercados por bairro" e "A inflação do bairro". Os extremos de bairro agora aparecem em "Hoje na cidade".
   - O mapa com estradas e cidades, botões + e −, a rodinha só rola a página.
   - Pontos do mapa chamados de "bairro", nunca "ponto de coleta".
   - Passar o mouse num bairro mostra o supermercado mais barato.
