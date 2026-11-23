@@ -65,11 +65,14 @@ const redesNoPonto = dados.pontos.map((pt, i) => {
   $('hojeZonas').innerHTML = zonas.map((z, pos) => `<li${pos ? '' : ' class="melhor"'}><span>${z.z}</span>${barra(z.v / maiorZ)}<span class="v">${reais(z.v)}</span></li>`).join('');
   const dia = new Date(dados.datas.at(-1) + 'T12:00').toLocaleDateString('pt-BR', { day: 'numeric', month: 'long', year: 'numeric' });
   $('hojeSub').textContent = `Preços lidos até ${dia}, na mesma cesta de ${n} itens.`;
-  if (!calmo) gsap.set('#hoje .barra i', { scaleX: 0 });
-  ScrollTrigger.create({ trigger: '#hoje', start: 'top 70%', once: true, onEnter: () => {
-    const b = gsap.utils.toArray('#hoje .barra i'), v = (k, el) => +el.style.getPropertyValue('--v');
-    if (calmo) gsap.set(b, { scaleX: v }); else gsap.to(b, { scaleX: v, duration: 0.8, ease: 'power3.out', stagger: 0.04 });
-  } });
+  // as barras crescem toda vez que a seção entra na tela e voltam a zero quando ela sai
+  const barrasHoje = gsap.utils.toArray('#hoje .barra i'), alvoBarra = (k, el) => +el.style.getPropertyValue('--v');
+  if (!calmo) {
+    gsap.set(barrasHoje, { scaleX: 0 });
+    const cresce = () => gsap.to(barrasHoje, { scaleX: alvoBarra, duration: 0.8, ease: 'power3.out', stagger: 0.04, overwrite: true });
+    const zera = () => gsap.set(barrasHoje, { scaleX: 0, overwrite: true });
+    ScrollTrigger.create({ trigger: '#hoje', start: 'top 70%', end: 'bottom top', onEnter: cresce, onEnterBack: cresce, onLeave: zera, onLeaveBack: zera });
+  } else gsap.set(barrasHoje, { scaleX: alvoBarra });
 }
 // rota e loja mais próxima de cada rede, por ponto (OpenStreetMap)
 const rotaDe = (i, k) => rotas.pontos.find(p => p.id === geo.pontos[i].id)?.redes[dados.redes[k].id];
@@ -180,18 +183,26 @@ mm.add('(prefers-reduced-motion: no-preference)', () => {
       .from(caixa.children, { autoAlpha: 0, y: 18, duration: 0.6, stagger: 0.07 }, '<0.12');
   });
   // as quatro etiquetas de números caem uma depois da outra: queda com quique, achatam ao bater (squash), o furo "estoura" e o texto chega depois.
-  // Só vertical, sem girar. Acontece toda vez que a página é aberta.
+  // Só vertical, sem girar. Acontece toda vez que a faixa entra na tela (ao abrir a página e ao rolar de volta até ela).
   const etiquetas = gsap.utils.toArray('.faixa-numeros > div');
   gsap.set(etiquetas, { autoAlpha: 0 });
   const faixa = document.querySelector('.faixa-numeros');
-  faixa.classList.add('entrando');
-  let faltam = etiquetas.length;
-  const terminou = () => { if (--faltam === 0) faixa.classList.remove('entrando'); };
-  ScrollTrigger.create({ trigger: '.faixa-numeros', start: 'top 88%', once: true, onEnter: () => {
+  const linhasDoTempo = [];
+  const zerarFaixa = () => {
+    linhasDoTempo.splice(0).forEach(t => t.kill());
+    etiquetas.forEach(el => { gsap.set([el, el.querySelector('span')], { clearProps: 'all' }); el.classList.remove('pousou'); });
+    gsap.set(etiquetas, { autoAlpha: 0 });
+    faixa.classList.add('entrando');
+  };
+  zerarFaixa();
+  const tocarFaixa = () => {
+    zerarFaixa();
+    let faltam = etiquetas.length;
     etiquetas.forEach((el, k) => {
       const rotulo = el.querySelector('span');
-      const limpar = () => { gsap.set([el, rotulo], { clearProps: 'all' }); el.classList.remove('pousou'); terminou(); };
+      const limpar = () => { gsap.set([el, rotulo], { clearProps: 'all' }); el.classList.remove('pousou'); if (--faltam === 0) faixa.classList.remove('entrando'); };
       const tl = gsap.timeline({ delay: 0.15 + k * 0.16, onComplete: limpar });
+      linhasDoTempo.push(tl);
       tl.fromTo(el, { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.2, ease: 'power1.out' }, 0)
         .fromTo(el, { y: -110 }, { y: 0, duration: 1.15, ease: 'bounce.out' }, 0)                                   // a queda: acelera e quica
         .fromTo(rotulo, { autoAlpha: 0, y: 10 }, { autoAlpha: 1, y: 0, duration: 0.45, ease: 'power2.out' }, 0.5)       // o texto chega depois (follow through)
@@ -199,7 +210,8 @@ mm.add('(prefers-reduced-motion: no-preference)', () => {
         .fromTo(el, { scaleY: 1, scaleX: 1, transformOrigin: '50% 100%' }, { scaleY: 0.9, scaleX: 1.04, duration: 0.07, ease: 'power2.out' }, 0.4)   // squash no primeiro impacto
         .to(el, { scaleY: 1, scaleX: 1, duration: 0.65, ease: 'elastic.out(1, 0.4)' }, 0.47);                         // e volta com mola
     });
-  } });
+  };
+  ScrollTrigger.create({ trigger: '.faixa-numeros', start: 'top 88%', end: 'bottom top', onEnter: tocarFaixa, onEnterBack: tocarFaixa, onLeave: zerarFaixa, onLeaveBack: zerarFaixa });
   // as linhas do gráfico se desenham com o scroll
   gsap.timeline({ scrollTrigger: { trigger: '#inflacao', start: 'top 55%', end: 'center 42%', scrub: 0.7 } })
     .fromTo('#grafico .tr', { strokeDashoffset: 1 }, { strokeDashoffset: 0, ease: 'none', duration: 1, stagger: 0.012 })

@@ -56,4 +56,10 @@ document.querySelectorAll('.bloco').forEach(sec => {
   const a = document.querySelector(`.indice a[href="#${sec.id}"]`);
   ScrollTrigger.create({ trigger: sec, start: 'top 45%', end: 'bottom 45%', onToggle: s => a?.classList.toggle('ativo', s.isActive) });
 });
-if (!calmo) gsap.from('.grupos li', { autoAlpha: 0, y: 20, duration: 0.7, stagger: 0.08, scrollTrigger: { trigger: '.grupos', start: 'top 88%', once: true } });
+// os quatro grupos entram toda vez que aparecem na tela
+if (!calmo) {
+  gsap.set('.grupos li', { autoAlpha: 0, y: 20 });
+  const entra = () => gsap.to('.grupos li', { autoAlpha: 1, y: 0, duration: 0.7, stagger: 0.08, overwrite: true, clearProps: 'transform,opacity,visibility' });
+  const sai = () => gsap.set('.grupos li', { autoAlpha: 0, y: 20, overwrite: true });
+  ScrollTrigger.create({ trigger: '.grupos', start: 'top 88%', end: 'bottom top', onEnter: entra, onEnterBack: entra, onLeave: sai, onLeaveBack: sai });
+}

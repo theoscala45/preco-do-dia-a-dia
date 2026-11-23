@@ -1,6 +1,7 @@
 // Página "Resultado da lista": loja única mais barata, economia, divisão em duas lojas, rota e tabela por produto.
 import { $, gsap, ScrollTrigger, calmo, reais, curto, rolar, carregar, guarda, ligarCep, iniciar, PREVIA } from './base.js';
 import { criarLista, calcular, ligarBusca, ligarItens, ECONOMIA_MINIMA } from './cesta.js';
+let gatilhoRanking = null;
 
 const [dados, geo, rotas] = await carregar('dados', 'geo', 'rotas');
 iniciar(dados);
@@ -78,7 +79,15 @@ function desenhar() {
   }).join('');
   const barras = gsap.utils.toArray('#ranking i');
   if (calmo) gsap.set(barras, { scaleX: (k, el) => +el.dataset.v });
-  else gsap.fromTo(barras, { scaleX: 0 }, { scaleX: (k, el) => +el.dataset.v, duration: 0.9, ease: 'power3.out', stagger: 0.05, overwrite: true });
+  else {
+    gsap.fromTo(barras, { scaleX: 0 }, { scaleX: (k, el) => +el.dataset.v, duration: 0.9, ease: 'power3.out', stagger: 0.05, overwrite: true });
+    // e de novo toda vez que o ranking volta a entrar na tela (as barras são lidas na hora, então valem para a lista de agora)
+    if (!gatilhoRanking) {
+      const cresce = () => gsap.to('#ranking i', { scaleX: (k, el) => +el.dataset.v, duration: 0.9, ease: 'power3.out', stagger: 0.05, overwrite: true });
+      const zera = () => gsap.set('#ranking i', { scaleX: 0, overwrite: true });
+      gatilhoRanking = ScrollTrigger.create({ trigger: '#ranking', start: 'top 88%', end: 'bottom top', onEnter: cresce, onEnterBack: cresce, onLeave: zera, onLeaveBack: zera });
+    }
+  }
 
   // produto por produto, na ordem das redes do total
   const ordem = porRede.map(r => r.k);

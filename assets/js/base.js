@@ -76,6 +76,13 @@ export function contar(el, alvo, formato = v => Math.round(v).toLocaleString('pt
   gsap.to(o, { v: alvo, duration: 1.1, ease: 'power3.out', overwrite: true, onUpdate: pinta, onComplete: pinta });
 }
 
+// volta um número que conta para o zero (para ele contar de novo quando reaparecer na tela)
+export function zerarContagem(el) {
+  const o = contando.get(el);
+  if (o) { gsap.killTweensOf(o); o.v = 0; }
+  el.textContent = '0';
+}
+
 let lenis = null;
 // rola a página até um ponto (número de pixels ou seletor)
 export function irPara(alvo, opcoes) {
@@ -92,7 +99,8 @@ export function subirTitulo(el, { atraso = 0, aoRolar = false } = {}) {
       gsap.set(el, { visibility: 'visible' });
       return gsap.from(self.lines, {
         yPercent: 108, duration: 1.05, ease: 'power4.out', stagger: 0.09, delay: atraso,
-        scrollTrigger: aoRolar ? { trigger: el, start: 'top 88%', once: true } : null,
+        // toca toda vez que o título entra na tela (de baixo ou de cima) e volta ao início ao sair
+        scrollTrigger: { trigger: el, start: 'top 88%', end: 'bottom top', toggleActions: 'play reset play reset' },
       });
     },
   });
@@ -196,7 +204,10 @@ export function iniciar(dados) {
     entradaDosCards();   // os cards têm entrada própria (em arco, com mola); o resto sobe em lote
     const blocos = gsap.utils.toArray('[data-surge]');
     gsap.set(blocos, { autoAlpha: 0, y: 26 });
-    ScrollTrigger.batch(blocos, { start: 'top 92%', once: true, onEnter: lote => gsap.to(lote, { autoAlpha: 1, y: 0, duration: 0.9, stagger: 0.08, overwrite: true }) });
+    // sobem toda vez que entram na tela e voltam a ficar escondidos quando saem dela
+    const sobe = lote => gsap.to(lote, { autoAlpha: 1, y: 0, duration: 0.9, stagger: 0.08, overwrite: true });
+    const some = lote => gsap.set(lote, { autoAlpha: 0, y: 26, overwrite: true });
+    ScrollTrigger.batch(blocos, { start: 'top 92%', end: 'bottom top', onEnter: sobe, onEnterBack: sobe, onLeave: some, onLeaveBack: some });
 
     // barra fina no topo: quanto da página já foi lida
     const barra = document.createElement('div');
@@ -206,7 +217,8 @@ export function iniciar(dados) {
     // números que contam ao entrar na tela
     document.querySelectorAll('[data-conta]').forEach(el => {
       el.textContent = '0';
-      ScrollTrigger.create({ trigger: el, start: 'top 92%', once: true, onEnter: () => contar(el, +el.dataset.conta) });
+      const conta = () => contar(el, +el.dataset.conta), zera = () => zerarContagem(el);
+      ScrollTrigger.create({ trigger: el, start: 'top 92%', end: 'bottom top', onEnter: conta, onEnterBack: conta, onLeave: zera, onLeaveBack: zera });
     });
     // elementos que andam um pouco mais devagar ou mais depressa que a página
     document.querySelectorAll('[data-desliza]').forEach(el => {
@@ -217,7 +229,9 @@ export function iniciar(dados) {
     document.querySelectorAll('[data-fila]').forEach(pai => {
       const filhos = [...pai.children];
       gsap.set(filhos, { autoAlpha: 0, y: 16 });
-      ScrollTrigger.batch(filhos, { start: 'top 94%', once: true, onEnter: lote => gsap.to(lote, { autoAlpha: 1, y: 0, duration: 0.6, stagger: 0.05, overwrite: true }) });
+      const entra = lote => gsap.to(lote, { autoAlpha: 1, y: 0, duration: 0.6, stagger: 0.05, overwrite: true });
+      const sai = lote => gsap.set(lote, { autoAlpha: 0, y: 16, overwrite: true });
+      ScrollTrigger.batch(filhos, { start: 'top 94%', end: 'bottom top', onEnter: entra, onEnterBack: entra, onLeave: sai, onLeaveBack: sai });
     });
     // linhas divisórias que se desenham com o scroll
     document.querySelectorAll('[data-risco]').forEach(el => {

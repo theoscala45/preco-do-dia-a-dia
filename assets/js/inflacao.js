@@ -80,7 +80,10 @@ function desenharGrafico(animar = true) {
   } else if (!visto && !calmo) gsap.set(['#corteR'], { attr: { width: 0 } }), gsap.set('#graf .pontas', { autoAlpha: 0 });
 }
 // a primeira vez, o gráfico se desenha quando entra na tela
-ScrollTrigger.create({ trigger: caixa, start: 'top 78%', once: true, onEnter: () => { visto = true; desenharGrafico(); } });
+// o gráfico se desenha toda vez que entra na tela e volta a ficar vazio quando sai
+const desenhaNaEntrada = () => { visto = true; primeira = true; desenharGrafico(); };
+const esvaziaNaSaida = () => { visto = false; desenharGrafico(); };
+ScrollTrigger.create({ trigger: caixa, start: 'top 78%', end: 'bottom top', onEnter: desenhaNaEntrada, onEnterBack: desenhaNaEntrada, onLeave: esvaziaNaSaida, onLeaveBack: esvaziaNaSaida });
 
 // passar o ponteiro: valores do mês
 caixa.addEventListener('pointermove', e => {
@@ -115,8 +118,13 @@ $('rankInfl').innerHTML = ordem.map((i, pos) => {
 }).join('');
 $('rankInfl').addEventListener('click', e => { const b = e.target.closest('button'); if (b) escolher(+b.dataset.i); });
 if (calmo) gsap.set('#rankInfl i', { scaleX: (k, el) => +el.style.getPropertyValue('--v') });
-else gsap.fromTo('#rankInfl i', { scaleX: 0 }, { scaleX: (k, el) => +el.style.getPropertyValue('--v'), duration: 0.9, ease: 'power3.out', stagger: 0.025,
-  scrollTrigger: { trigger: '#rankInfl', start: 'top 85%', once: true } });
+else {
+  // as barras do ranking crescem toda vez que o ranking entra na tela
+  gsap.set('#rankInfl i', { scaleX: 0 });
+  const cresce = () => gsap.to('#rankInfl i', { scaleX: (k, el) => +el.style.getPropertyValue('--v'), duration: 0.9, ease: 'power3.out', stagger: 0.025, overwrite: true });
+  const zera = () => gsap.set('#rankInfl i', { scaleX: 0, overwrite: true });
+  ScrollTrigger.create({ trigger: '#rankInfl', start: 'top 85%', end: 'bottom top', onEnter: cresce, onEnterBack: cresce, onLeave: zera, onLeaveBack: zera });
+}
 
 // ---------- mapa: distritos coloridos pela alta em 12 meses
 // os nomes dos distritos vêm do GeoSampa em maiúsculas e sem acento: "SAO MIGUEL" -> "São Miguel"

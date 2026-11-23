@@ -58,8 +58,16 @@ if (k < 0) {
       $('prodAviso').textContent = 'A diferença é grande, mais de duas vezes. Pode haver variação de embalagem ou de versão do produto entre as redes. Veja os limites em Método e fontes.';
     }
     const barras = [...document.querySelectorAll('#prodRank .barra i')];
-    const gsap = window.gsap;
-    if (gsap && !matchMedia('(prefers-reduced-motion: reduce)').matches) gsap.fromTo(barras, { scaleX: 0 }, { scaleX: (i, el) => +el.style.getPropertyValue('--v'), duration: 0.8, ease: 'power3.out', stagger: 0.04, delay: 0.3 });
+    // as barras crescem toda vez que o ranking entra na tela
+    const { gsap, ScrollTrigger } = window;
+    if (gsap && ScrollTrigger && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      gsap.registerPlugin(ScrollTrigger);
+      const alvo = (i, el) => +el.style.getPropertyValue('--v');
+      gsap.set(barras, { scaleX: 0 });
+      const cresce = () => gsap.to(barras, { scaleX: alvo, duration: 0.8, ease: 'power3.out', stagger: 0.04, overwrite: true });
+      const zera = () => gsap.set(barras, { scaleX: 0, overwrite: true });
+      ScrollTrigger.create({ trigger: '#prodRank', start: 'top 88%', end: 'bottom top', onEnter: cresce, onEnterBack: cresce, onLeave: zera, onLeaveBack: zera });
+    }
   } else {
     $('prodRank').innerHTML = '<li class="divisa">Nenhuma rede tem preço lido para este produto.</li>';
     $('tagBarato').textContent = 'sem preço'; $('tagCaro').textContent = 'sem preço'; $('tagDif').textContent = '-';
