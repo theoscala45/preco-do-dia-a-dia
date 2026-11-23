@@ -133,7 +133,7 @@ h3{font:700 19px/1.25 var(--titulo);letter-spacing:-.01em}
 .redes li > div{min-width:0}
 .redes li.melhor{background:var(--laranja-fundo)}
 .redes li.melhor .pos,.redes li.melhor .val{color:var(--laranja)}
-.redes li.melhor .val small{display:inline-block;color:#fff;background:var(--azul);padding:3px 8px;border-radius:999px;margin-top:4px}
+.redes li.melhor .val small{display:block;width:fit-content;margin:5px 0 0 auto;color:#fff;background:var(--azul);padding:3px 8px;border-radius:999px}
 .resultado .nota{margin-top:10px;padding-top:10px;font-size:12.5px;border-top:1px solid var(--linha);color:var(--texto-3)}
 .com-resultado .lide,.com-resultado .media{display:none}
 @media (min-width:861px){
@@ -299,7 +299,7 @@ h3{font:700 19px/1.25 var(--titulo);letter-spacing:-.01em}
 .editor #busca{height:46px}
 .editor .cupom-itens{margin-top:14px}
 .vazio p{color:var(--texto-1);max-width:34em;margin-bottom:22px}
-.vencedor{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(20px,3vw,48px);align-items:end;background:linear-gradient(135deg,rgba(242,106,15,.14),rgba(242,106,15,.03) 55%),var(--sup);border-color:rgba(242,106,15,.3)}
+.vencedor{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(20px,3vw,48px);align-items:center;background:linear-gradient(135deg,rgba(242,106,15,.14),rgba(242,106,15,.03) 55%),var(--sup);border-color:rgba(242,106,15,.3)}
 .vencedor h2{font-size:clamp(32px,3.4vw,50px);margin-bottom:10px}
 .preco.grande b{font-size:clamp(64px,7vw,104px)}
 .preco.grande sup{font-size:clamp(26px,2.6vw,38px);margin-top:8px}
@@ -311,6 +311,8 @@ h3{font:700 19px/1.25 var(--titulo);letter-spacing:-.01em}
 .fatos dd span{display:block;font:400 13.5px/1.4 var(--corpo);color:var(--texto-2)}
 .fatos > div:first-child dd b{color:var(--laranja)}
 .duas h2{font-size:clamp(24px,2.3vw,32px);margin-bottom:6px}
+#dNota{font:600 17px/1.4 var(--corpo);color:var(--azul)}
+.duas.nao #dNota{font:400 15px/1.5 var(--corpo);color:var(--texto-2)}
 .duas.nao h2{font-size:21px;color:var(--texto-1)}
 .duas.nao .passo{color:var(--texto-2)}
 .duas-colunas{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:18px}
