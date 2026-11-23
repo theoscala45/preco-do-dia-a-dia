@@ -43,6 +43,18 @@ export function novoMapa(el, extra = {}) {
     else if (!quer && mapa.scrollZoom.isEnabled()) mapa.scrollZoom.disable();
   };
   addEventListener('wheel', aproximar, { capture: true, passive: true });
+  // Safari não manda a pinça como rolagem com Ctrl, e sim como "gesto": aproxima o mapa direto
+  if ('GestureEvent' in window) {
+    const caixa = mapa.getContainer();
+    let z0 = 0;
+    caixa.addEventListener('gesturestart', e => { e.preventDefault(); z0 = mapa.getZoom(); });
+    caixa.addEventListener('gesturechange', e => {
+      e.preventDefault();
+      const r = caixa.getBoundingClientRect();
+      mapa.zoomTo(z0 + Math.log2(e.scale), { duration: 0, around: mapa.unproject([e.clientX - r.left, e.clientY - r.top]) });
+    });
+    caixa.addEventListener('gestureend', e => e.preventDefault());
+  }
   return mapa;
 }
 // uma rota que se desenha: fonte + três camadas (brilho, linha, ponto de luz)
