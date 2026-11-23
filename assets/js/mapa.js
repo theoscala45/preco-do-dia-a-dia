@@ -23,7 +23,8 @@ export const caixaDe = linhas => {
 };
 export const marcar = (classe, html) => { const e = document.createElement('div'); e.className = classe; e.innerHTML = html; return e; };
 // opções comuns a todos os mapas do site. No toque, o mapa só se move com dois dedos, para não prender o scroll.
-export function novoMapa(el, extra = {}) {
+// botoes: false tira o + e o - (no mapa do início o zoom é pela rodinha do mouse).
+export function novoMapa(el, { botoes = true, ...extra } = {}) {
   const ml = window.maplibregl;
   if (!ml) throw new Error('MapLibre não carregou');
   const toque = matchMedia('(pointer: coarse)').matches;
@@ -34,7 +35,7 @@ export function novoMapa(el, extra = {}) {
     ...extra,
   });
   mapa.addControl(new ml.AttributionControl({ compact: true }), 'bottom-right');
-  if (!toque) mapa.addControl(new ml.NavigationControl({ showCompass: false }), 'bottom-right');
+  if (!toque && botoes) mapa.addControl(new ml.NavigationControl({ showCompass: false }), 'bottom-right');
   mapa.touchZoomRotate.disableRotation();
   return mapa;
 }
@@ -86,7 +87,9 @@ export function criarMapa(el, geo, rotas, valores, { calmo = false } = {}) {
     return { top: 120, bottom: 80, left: Math.round(w * (est.cena === 0 ? 0.47 : 0.43)), right: 70 };
   }
 
-  const mapa = novoMapa(el, { bounds: cidade, fitBoundsOptions: { padding: margem() }, bearing: CAMERA[0][0], pitch: CAMERA[0][1] });
+  // a rodinha do mouse aproxima e afasta o mapa (o Lenis deixa passar por causa do data-lenis-prevent)
+  el.setAttribute('data-lenis-prevent', '');
+  const mapa = novoMapa(el, { bounds: cidade, fitBoundsOptions: { padding: margem() }, bearing: CAMERA[0][0], pitch: CAMERA[0][1], scrollZoom: true, botoes: false });
 
   // dados de cada ponto: rota e loja por rede, na ordem das redes do site
   const porPonto = geo.pontos.map(p => {
@@ -114,7 +117,7 @@ export function criarMapa(el, geo, rotas, valores, { calmo = false } = {}) {
     geo.distritos.features.forEach(f => { f.properties.v = valores.var[f.properties.ponto]; });
     mapa.addSource('distritos', { type: 'geojson', data: geo.distritos });
     mapa.addLayer({ id: 'distritos', type: 'fill-extrusion', source: 'distritos', paint: {
-      'fill-extrusion-color': corDistritos(), 'fill-extrusion-height': 1500, 'fill-extrusion-base': 0, 'fill-extrusion-opacity': OPACO,
+      'fill-extrusion-color': corDistritos(), 'fill-extrusion-height': 450, 'fill-extrusion-base': 0, 'fill-extrusion-opacity': OPACO,
       'fill-extrusion-color-transition': { duration: 350 }, 'fill-extrusion-opacity-transition': { duration: 900 },
     } }, antes);
     mapa.addSource('lojas', { type: 'geojson', data: { type: 'FeatureCollection', features: rotas.lojas.map(l => ({ type: 'Feature', properties: {}, geometry: { type: 'Point', coordinates: [l.lon, l.lat] } })) } });
