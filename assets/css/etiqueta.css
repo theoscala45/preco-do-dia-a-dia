@@ -254,9 +254,13 @@ a.seta.volta:hover::before{transform:translateX(-5px)}
   .p-seta{display:none}
 }
 
-/* ---------- primeiro capítulo (25 bairros): chega mais cedo, com menos rolagem até o seguinte ---------- */
-.cap[data-cap="1"]{margin-top:-25vh;min-height:85vh}
-@media (max-width:860px){.cap[data-cap="1"]{margin-top:-20svh;min-height:95svh}}
+/* ---------- capítulos do início: pouco espaço vazio entre um cartão e o seguinte ---------- */
+.cap{min-height:0;padding-top:12vh;padding-bottom:12vh}   /* o espaço entre cartões é só o respiro de cima e de baixo */
+.cap[data-cap="1"]{margin-top:-22vh;padding-top:0}   /* o primeiro chega mais cedo, colado no fim da abertura */
+@media (max-width:860px){
+  .cap{min-height:0;padding-top:9svh;padding-bottom:9svh}
+  .cap[data-cap="1"]{margin-top:-16svh;padding-top:0}
+}
 
 /* ---------- menu do topo: a linha laranja que salta de um link para outro ---------- */
 .topo nav{position:relative}
