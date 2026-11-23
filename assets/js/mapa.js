@@ -152,6 +152,7 @@ export function criarMapa(el, geo, rotas, valores, { calmo = false } = {}) {
     const P = geo.pontos[i], D = porPonto[i];
     const tem = k => D.linhas[k] && valores.preco(i, k) != null;   // rede sem preço neste ponto fica fora do mapa
     parar();
+    fecharRotulo();
     ordem = valores.ordem(i).slice().reverse();          // do mais caro ao mais barato
     melhor = ordem.at(-1);
     est.destaque = -1;
@@ -195,6 +196,7 @@ export function criarMapa(el, geo, rotas, valores, { calmo = false } = {}) {
   }
   function sair() {
     parar();
+    fecharRotulo();
     est.fase = 'geral';
     mapa.setPaintProperty('distritos', 'fill-extrusion-opacity', OPACO);
     redes.forEach((_, k) => { apagar(mapa, 'rota' + k); marcas[k].getElement().classList.remove('on', 'melhor', 'resto', 'ativo'); });
@@ -238,6 +240,29 @@ export function criarMapa(el, geo, rotas, valores, { calmo = false } = {}) {
     if (!est.pronto || est.dentro) return;
     const f = mapa.queryRenderedFeatures(e.point, { layers: ['distritos'] })[0];
     if (f) el.dispatchEvent(new CustomEvent('ponto', { detail: f.properties.ponto }));
+  });
+  // com a câmera dentro do bairro, os pontos laranja do mapa mostram o nome: ao passar o mouse e, no toque, ao tocar
+  const rotulo = new ml.Popup({ closeButton: false, closeOnClick: false, closeOnMove: false, offset: 11, maxWidth: 'none', className: 'rotulo-ponto' });
+  let fixo = false, rotuloDe = -1;
+  const pontoSob = pt => mapa.queryRenderedFeatures([[pt.x - 9, pt.y - 9], [pt.x + 9, pt.y + 9]], { layers: ['pontos'] })[0];
+  function mostrarRotulo(f) {
+    const i = f.properties.i;
+    if (i === rotuloDe && rotulo.isOpen()) return;
+    const p = geo.pontos[i];
+    rotuloDe = i;
+    rotulo.setLngLat([p.lon, p.lat]).setHTML(`<b>${p.bairro.split(' (')[0]}</b><small>Zona ${p.zona}</small>`).addTo(mapa);
+  }
+  const fecharRotulo = () => { fixo = false; rotuloDe = -1; rotulo.remove(); };
+  mapa.on('mousemove', e => {
+    if (!est.pronto || !est.dentro) return;
+    const f = pontoSob(e.point);
+    mapa.getCanvas().style.cursor = f ? 'pointer' : '';
+    if (f) mostrarRotulo(f); else if (!fixo) fecharRotulo();
+  });
+  mapa.on('click', e => {
+    if (!est.pronto || !est.dentro) return;
+    const f = pontoSob(e.point);
+    if (f) { fixo = true; mostrarRotulo(f); } else fecharRotulo();
   });
   let espera = 0;
   window.addEventListener('resize', () => { clearTimeout(espera); espera = setTimeout(() => { if (est.pronto && !est.dentro) aplicar(true); }, 200); });

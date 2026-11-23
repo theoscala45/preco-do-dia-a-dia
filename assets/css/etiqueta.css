@@ -124,6 +124,13 @@ input,select{border-radius:10px}
   .rodape-nav{gap:4px 22px}
 }
 
+/* ---------- nome do bairro ao tocar num ponto laranja do mapa: uma etiqueta ---------- */
+.rotulo-ponto{z-index:4;pointer-events:none}
+.rotulo-ponto .maplibregl-popup-content{padding:9px 13px 10px;border:var(--tag-borda);border-radius:8px;background:#fff;box-shadow:0 6px 18px rgba(22,22,26,.18);font:400 13px/1.25 var(--corpo);color:var(--texto);white-space:nowrap}
+.rotulo-ponto .maplibregl-popup-content b{display:block;font:700 15px/1.2 var(--titulo);letter-spacing:-.01em}
+.rotulo-ponto .maplibregl-popup-content small{display:block;margin-top:3px;font:500 12px/1.2 var(--mono);color:var(--texto-2)}
+.rotulo-ponto .maplibregl-popup-tip{display:none}
+
 /* ---------- movimento: a etiqueta da cesta balança uma vez, presa pelo furo ---------- */
 @media (prefers-reduced-motion:no-preference){
   .media{transform-origin:calc(100% - 16px) 16px;animation:balanca 1.7s var(--curva) 1.1s both}
