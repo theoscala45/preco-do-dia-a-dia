@@ -36,24 +36,33 @@ export function novoMapa(el, extra = {}) {
   mapa.addControl(new ml.AttributionControl({ compact: true }), 'bottom-right');
   if (!toque) mapa.addControl(new ml.NavigationControl({ showCompass: false }), 'bottom-right');
   mapa.touchZoomRotate.disableRotation();
-  // a rodinha sozinha rola a página (o mapa fica atrás do texto); com Ctrl ou ⌘ apertado, ou com o movimento de pinça do touchpad, ela aproxima o mapa
+  // a rodinha sozinha rola a página (o mapa fica atrás do texto); com Ctrl ou ⌘ apertado, ou com a pinça do touchpad, ela aproxima só o mapa.
+  // No início o mapa ocupa a tela toda, então a pinça vale em qualquer ponto da cena (também sobre o texto).
+  const regiao = el.closest('.cena') || mapa.getContainer();
   const aproximar = e => {
+    if (!(e.target instanceof Node) || !regiao.contains(e.target)) return;   // fora do mapa, a página se comporta como sempre
     const quer = e.ctrlKey || e.metaKey;
     if (quer && !mapa.scrollZoom.isEnabled()) mapa.scrollZoom.enable();
     else if (!quer && mapa.scrollZoom.isEnabled()) mapa.scrollZoom.disable();
+    if (!e.ctrlKey) return;
+    e.preventDefault();   // sem isto o navegador amplia a página inteira com a pinça
+    if (!mapa.getContainer().contains(e.target)) {   // pinça sobre o texto: entrega o gesto ao mapa
+      e.stopPropagation();
+      mapa.getCanvas().dispatchEvent(new WheelEvent('wheel', { bubbles: true, cancelable: true, deltaX: e.deltaX, deltaY: e.deltaY, deltaMode: e.deltaMode, ctrlKey: true, clientX: e.clientX, clientY: e.clientY }));
+    }
   };
-  addEventListener('wheel', aproximar, { capture: true, passive: true });
+  addEventListener('wheel', aproximar, { capture: true, passive: false });
   // Safari não manda a pinça como rolagem com Ctrl, e sim como "gesto": aproxima o mapa direto
   if ('GestureEvent' in window) {
     const caixa = mapa.getContainer();
     let z0 = 0;
-    caixa.addEventListener('gesturestart', e => { e.preventDefault(); z0 = mapa.getZoom(); });
-    caixa.addEventListener('gesturechange', e => {
+    regiao.addEventListener('gesturestart', e => { e.preventDefault(); z0 = mapa.getZoom(); });
+    regiao.addEventListener('gesturechange', e => {
       e.preventDefault();
       const r = caixa.getBoundingClientRect();
       mapa.zoomTo(z0 + Math.log2(e.scale), { duration: 0, around: mapa.unproject([e.clientX - r.left, e.clientY - r.top]) });
     });
-    caixa.addEventListener('gestureend', e => e.preventDefault());
+    regiao.addEventListener('gestureend', e => e.preventDefault());
   }
   return mapa;
 }
