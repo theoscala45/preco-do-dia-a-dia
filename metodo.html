@@ -37,7 +37,7 @@
   <dl class="resumo">
     <div class="cartao" data-surge><dd><b data-conta="100">100</b></dd><dt>produtos na cesta, com marca e tamanho fixos</dt></div>
     <div class="cartao" data-surge><dd><b data-conta="78">78</b></dd><dt>entram no índice. Carnes e hortifruti ficam fora</dt></div>
-    <div class="cartao" data-surge><dd><b data-conta="25">25</b></dd><dt>pontos de coleta na capital, cinco por zona</dt></div>
+    <div class="cartao" data-surge><dd><b data-conta="25">25</b></dd><dt>bairros da capital, cinco por zona</dt></div>
     <div class="cartao" data-surge><dd><b data-conta="10">10</b></dd><dt>redes de supermercado comparadas</dt></div>
   </dl>
 
@@ -46,7 +46,7 @@
       <p class="passo">Nesta página</p>
       <ol>
         <li><a href="#cesta">A cesta de 100 produtos</a></li>
-        <li><a href="#pontos">Os 25 pontos de coleta</a></li>
+        <li><a href="#pontos">Os 25 bairros</a></li>
         <li><a href="#redes">As redes e as regras de cada uma</a></li>
         <li><a href="#coleta">Como os preços são lidos</a></li>
         <li><a href="#contas">Como as contas são feitas</a></li>
@@ -73,19 +73,19 @@
 
       <section id="pontos" class="bloco">
         <p class="passo" data-surge>02</p>
-        <h2 data-titulo>Os 25 pontos de coleta</h2>
+        <h2 data-titulo>Os 25 bairros</h2>
         <div class="prosa" data-surge>
-          <p>Algumas redes mostram na internet um preço diferente para cada CEP. Por isso o site consulta os preços em 25 CEPs da capital, cinco por zona: centro, oeste, sul, leste e norte. Cada CEP é um ponto de coleta.</p>
-          <p>Quando você digita o seu CEP, o site usa o ponto de coleta de numeração mais próxima. É uma aproximação: o ponto pode ficar a alguns quilômetros da sua casa. Os 96 distritos da cidade usam o ponto mais próximo.</p>
+          <p>Algumas redes mostram na internet um preço diferente para cada CEP. Por isso o site consulta os preços em 25 CEPs da capital, cinco por zona: centro, oeste, sul, leste e norte. Cada CEP representa um bairro.</p>
+          <p>Quando você digita o seu CEP, o site usa o bairro de CEP mais próximo. É uma aproximação: ele pode ficar a alguns quilômetros da sua casa. Os 96 distritos da cidade usam o bairro mais perto.</p>
         </div>
         <details class="abre-lista" data-surge>
-          <summary>Como a renda de cada ponto foi definida</summary>
+          <summary>Como a renda de cada bairro foi definida</summary>
           <div class="prosa dentro">
           <p>Cada ponto tem uma faixa de renda: alta, média ou baixa. Ela vem do Censo 2022 do IBGE. É o rendimento médio da pessoa responsável pelo domicílio no distrito do ponto, comparado com os 96 distritos da cidade: o terço de baixo é renda baixa, o do meio renda média e o de cima renda alta. O Censo 2022 só divulga o rendimento do responsável pelo domicílio, não a renda da família inteira. Oito pontos caem na renda alta, nove na média e oito na baixa. Para chegar nesse equilíbrio, quatro pontos de renda alta da primeira lista foram trocados antes do início da série: Liberdade por Sé, Butantã por Raposo Tavares, Mooca por Cidade Tiradentes e Tucuruvi por Jaçanã.</p>
           </div>
         </details>
         <details class="abre-lista" data-surge>
-          <summary>Ver os 25 pontos</summary>
+          <summary>Ver os 25 bairros</summary>
           <div class="rolagem"><table class="tabela simples" id="tabPontos"></table></div>
         </details>
       </section>
@@ -124,7 +124,7 @@
         <p class="passo" data-surge>04</p>
         <h2 data-titulo>Como os preços são lidos</h2>
         <div class="prosa" data-surge>
-          <p>Um programa, o coletor, abre a página de cada produto no site da rede e anota o preço que a página mostra. Nas redes em que o preço muda por CEP ou por loja, ele antes informa o CEP do ponto de coleta ou escolhe a loja mais perto. Ele roda toda noite, de madrugada. As regras dele são estas:</p>
+          <p>Um programa, o coletor, abre a página de cada produto no site da rede e anota o preço que a página mostra. Nas redes em que o preço muda por CEP ou por loja, ele antes informa o CEP do bairro ou escolhe a loja mais perto. Ele roda toda noite, de madrugada. As regras dele são estas:</p>
         </div>
         <ul class="regras" data-fila>
           <li><b>Só páginas normais de produto.</b> As mesmas que qualquer pessoa abre no navegador.</li>
@@ -197,7 +197,7 @@
           <li><b>Promoções de cartão, clube e aplicativo.</b> Só entra o preço que a página mostra para qualquer pessoa.</li>
           <li><b>Frete e taxa de entrega.</b> O total da lista não inclui entrega.</li>
           <li><b>O que acontece fora da capital.</b> Por enquanto, só a cidade de São Paulo.</li>
-          <li><b>O seu endereço exato.</b> O CEP vira o ponto de coleta mais próximo, entre 25.</li>
+          <li><b>O seu endereço exato.</b> O CEP vira o bairro mais próximo, entre 25.</li>
           <li><b>Marcas e tamanhos fora da cesta.</b> Se você compra outra marca, o seu total é outro.</li>
           <li><b>A qualidade de carnes, frutas e verduras.</b> Por isso elas ficam fora do índice.</li>
           <li><b>A inflação oficial do bairro.</b> Ela não existe. O índice local é uma medida do projeto.</li>
@@ -225,9 +225,8 @@
 </main>
 
 <footer class="rodape">
-  <p>Projeto estudantil independente, em construção. Os preços desta versão são inventados para testar o site.</p>
-  <p>Mapa, lojas e ruas: © colaboradores do <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>. Imagem do mapa servida pelo <a href="https://openfreemap.org">OpenFreeMap</a>. Rotas calculadas com o OSRM. Contorno dos distritos: Prefeitura de São Paulo (GeoSampa).</p>
-  <p>Seu CEP e sua lista ficam só no seu navegador. Código e tabelas abertos no <a href="https://github.com/theoscala45/preco-do-dia-a-dia">GitHub</a>.</p>
+  <p>Projeto estudantil independente. Seu CEP e sua lista ficam só no seu navegador. Código aberto no <a href="https://github.com/theoscala45/preco-do-dia-a-dia">GitHub</a>.</p>
+  <p>Mapa © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>, <a href="https://openfreemap.org">OpenFreeMap</a>, OSRM e GeoSampa.</p>
 </footer>
 
 <script src="assets/vendor/gsap.min.js" defer></script>

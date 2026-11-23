@@ -70,7 +70,8 @@ mapa?.aoPassar((hover, pt) => {
     dica.classList.toggle('on', hover >= 0);
     if (hover >= 0) {
       const p = geo.pontos[hover], d = dados.pontos[hover];
-      dica.innerHTML = `<b>${p.bairro}</b>Cesta de ${n} itens: ${reais(d.cesta)}<br>Em 12 meses: ${pct(d.var)}%`;
+      const r = redesNoPonto[hover], k = r.melhor;
+      dica.innerHTML = `<b>${curto(p.bairro)}</b>${k == null ? '' : `Mais barato: <strong>${nomes[k]}</strong> ${reais(r.totais[k])}<br>`}<small>Clique para ver todos</small>`;
     }
   }
   if (hover >= 0 && pt) dica.style.transform = `translate(${pt.x + 16}px,calc(${pt.y - 14}px - 100%))`;
@@ -100,7 +101,6 @@ const mes = d => new Date(d + 'T12:00').toLocaleDateString('pt-BR', { month: 'sh
 let g = '';
 for (let v = Math.ceil(y0); v <= y1; v += 2) g += `<line x1="${L}" x2="${R}" y1="${Y(v)}" y2="${Y(v)}" stroke="rgba(22,22,26,.08)" stroke-width="1"/><text x="${R + 86}" y="${Y(v) + 4}" text-anchor="end">${v}</text>`;
 g += `<text x="${L}" y="${B + 24}">${mes(dados.datas[0])}</text><text x="${R}" y="${B + 24}" text-anchor="end">${mes(dados.datas.at(-1))}</text>`;
-g += series.map(s => `<path class="tr fino" d="${caminho(s)}" fill="none" stroke="#F26A0F" stroke-opacity=".2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" pathLength="1"/>`).join('');
 g += `<path class="tr" d="${caminho(dados.ipca)}" fill="none" stroke="#7C818B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" pathLength="1"/>`;
 g += `<path class="tr" id="trSel" d="${caminho(series[0])}" fill="none" stroke="#F26A0F" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" pathLength="1"/>`;
 g += `<g class="fim"><circle cx="${R}" cy="${Y(dados.ipca.at(-1))}" r="5" fill="#7C818B" stroke="#FFFFFF" stroke-width="2.5"/><circle id="bolaSel" cx="${R}" r="5" fill="#F26A0F" stroke="#FFFFFF" stroke-width="2.5"/><text class="rot" id="rotSel" x="${R + 12}" style="fill:#F26A0F"></text><text class="rot" x="${R + 12}" y="${Y(dados.ipca.at(-1)) + 5}" style="fill:#7C818B">IPCA</text></g>`;
@@ -140,13 +140,13 @@ function escolher(i, viaCep) {
   guarda.gravar('ponto', i);
   const p = geo.pontos[i], r = redesNoPonto[i];
   $('resBairro').textContent = curto(p.bairro);
-  $('resSub').textContent = 'Quanto a cesta do índice custaria em cada rede, comparando cada item com a mediana das redes neste ponto.';
+  $('resSub').textContent = 'Do mais barato ao mais caro, para a mesma cesta.';
   $('redesLista').innerHTML = r.ordem.map((k, pos) => {
     const rota = rotaDe(i, k), loja = rota && rotas.lojas[rota.loja], dif = r.totais[k] - r.totais[r.melhor];
-    const onde = (rota ? `<b>${rota.km.toLocaleString('pt-BR')} km</b> até a loja mais próxima${loja.end ? ', ' + loja.end.split(',')[0] : ''}` : 'Sem loja no mapa') + ` · ${r.itens[k]} itens`;
+    const onde = rota ? `<b>${rota.km.toLocaleString('pt-BR')} km</b>${loja.end ? ' · ' + loja.end.split(',')[0] : ''}` : 'Sem loja no mapa';
     return `<li class="${pos ? '' : 'melhor'}" data-k="${k}"><span class="pos">${String(pos + 1).padStart(2, '0')}</span><div><span class="nome">${nomes[k]}</span><span class="onde">${onde}</span></div><span class="val">${reais(r.totais[k])}<small>${pos ? '+ ' + reais(dif) : 'mais barata'}</small></span></li>`;
   }).join('');
-  $('resNota').textContent = `Ponto de coleta ${viaCep ? 'mais próximo, pela faixa do CEP' : 'escolhido no mapa'}: ${p.rua}, ${p.cep}. Preço do site de cada rede para esse CEP.`;
+  $('resNota').textContent = `${viaCep ? 'Bairro mais perto do seu CEP' : 'Bairro escolhido no mapa'}: ${p.rua}, ${p.cep}.`;
   const novo = $('resultado').hidden;
   $('resultado').hidden = false;
   document.documentElement.classList.add('com-resultado');
@@ -175,6 +175,18 @@ ligarCep(geo, $('cepForm'), $('cep'), $('cepMsg'), i => escolher(i, true));
 $('mapa').addEventListener('ponto', e => escolher(e.detail, false));
 
 // ---------- lista de compras (o resultado completo fica em lista.html)
+// a lista em cada supermercado, em barras, do mais barato ao mais caro
+function desenharRanking() {
+  // primeiro as redes que têm a lista inteira, do total menor ao maior; as que não têm tudo ficam embaixo, à parte
+  const redes = calc.porRede.filter(r => r.faltam < lista.itens.length), maior = Math.max(...redes.map(r => r.total));
+  const linha = r => `<li${r.faltam ? ' class="incompleta"' : ''}><span>${nomes[r.k]}</span><span class="barra"><i style="--v:${(r.total / maior).toFixed(3)}"></i></span><span class="v">${reais(r.total)}${r.faltam ? `<small>sem ${r.faltam} ${r.faltam > 1 ? 'itens' : 'item'}</small>` : ''}</span></li>`;
+  const cheias = redes.filter(r => !r.faltam).sort((a, b) => a.total - b.total), faltando = redes.filter(r => r.faltam).sort((a, b) => a.faltam - b.faltam || a.total - b.total);
+  $('rankLista').innerHTML = cheias.map(linha).join('') + (faltando.length ? `<li class="divisa">Não têm a lista inteira</li>${faltando.map(linha).join('')}` : '');
+  $('rankNota').textContent = '';
+  const barras = gsap.utils.toArray('#rankLista i'), v = (k, el) => +el.style.getPropertyValue('--v');
+  if (calmo) gsap.set(barras, { scaleX: v });
+  else gsap.fromTo(barras, { scaleX: 0 }, { scaleX: v, duration: 0.8, ease: 'power3.out', stagger: 0.04 });
+}
 const lista = criarLista(dados);
 let calc = null;
 function desenharCupom() {
@@ -182,8 +194,9 @@ function desenharCupom() {
   $('cupomVazio').hidden = tem;
   $('cupomTotal').hidden = !tem;
   $('cestaPonto').textContent = estado.cepDado
-    ? `Preços do ponto de coleta ${pt.bairro}, zona ${pt.zona.toLowerCase()}.`
-    : `Sem CEP, a conta usa o ponto ${pt.bairro}. Digite seu CEP no topo da página para trocar.`;
+    ? `Preços do bairro ${curto(pt.bairro)}.`
+    : `Sem CEP, a conta usa ${curto(pt.bairro)}. Digite seu CEP no topo para trocar.`;
+  $('rankRedes').hidden = !tem;
   if (!tem) { calc = null; return; }
   calc = calcular(dados, lista.itens, estado.ponto);
   const { melhor, dupla, vale } = calc;
@@ -191,6 +204,7 @@ function desenharCupom() {
   rolar($('totInt'), $('totCent'), melhor.total);
   $('totFalta').textContent = melhor.faltam ? `${melhor.faltam} ${melhor.faltam > 1 ? 'itens indisponíveis' : 'item indisponível'} nesta rede. O total não conta com ${melhor.faltam > 1 ? 'eles' : 'ele'}.` : '';
   $('totDuas').hidden = !vale;
+  desenharRanking();
   if (vale) $('totDuas').innerHTML = `<b>Em duas lojas: ${reais(dupla.total)}</b> ${dupla.a.rede.nome} e ${dupla.b.rede.nome}. ${dupla.faltam < melhor.faltam ? 'Assim você acha mais itens.' : `Economia de ${reais(melhor.total - dupla.total)}.`}`;
 }
 ligarBusca(dados, lista, $('busca'), $('sugestoes'));

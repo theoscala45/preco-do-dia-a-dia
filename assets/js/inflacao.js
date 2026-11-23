@@ -43,21 +43,19 @@ function desenharGrafico(animar = true) {
   const W = caixa.clientWidth, largo = W >= 720, H = Math.round(Math.min(500, Math.max(300, W * 0.48)));
   const L = 40, R = largo ? 150 : 14, T = 16, B = 38;
   linhas = [...linhasDaVista(), { nome: 'IPCA', serie: ipca, cor: COR_IPCA, larg: 2.4, traco: '2 7' }];
-  const fundo = estado.vista === 'ponto' ? series.filter((_, k) => k !== estado.ponto) : [];
-  const tudo = [...linhas.flatMap(l => l.serie), ...fundo.flat()];
+  const tudo = linhas.flatMap(l => l.serie);
   const y0 = Math.floor(Math.min(...tudo) - 0.2), y1 = Math.ceil(Math.max(...tudo) + 0.2);
   const X = t => L + (W - L - R) * t / Math.max(1, N - 1), Y = v => H - B - (H - B - T) * (v - y0) / (y1 - y0);
   const caminho = s => s.map((v, t) => `${t ? 'L' : 'M'}${X(t).toFixed(1)} ${Y(v).toFixed(1)}`).join('');
   geom = { W, H, L, R, T, B, X, Y };
   svg.setAttribute('viewBox', `0 0 ${W} ${H}`); svg.setAttribute('width', W); svg.setAttribute('height', H);
 
-  let g = `<title id="grafT">Índice da cesta comparado com o IPCA, mês a mês</title><defs><clipPath id="corte"><rect id="corteR" x="0" y="0" width="${W}" height="${H}"/></clipPath></defs>`;
+  let g = `<defs><clipPath id="corte"><rect id="corteR" x="0" y="0" width="${W}" height="${H}"/></clipPath></defs>`;
   const passo = y1 - y0 > 8 ? 2 : 1;
   for (let v = y0; v <= y1; v += passo) g += `<line x1="${L}" x2="${W - R}" y1="${Y(v)}" y2="${Y(v)}" class="${v === 100 ? 'base' : 'grade'}"/><text x="${L - 10}" y="${Y(v) + 4}" text-anchor="end">${v}</text>`;
   const cada = W < 560 ? 3 : W < 900 ? 2 : 1;
   dados.datas.forEach((d, t) => { if (t % cada === 0 || t === N - 1) g += `<text x="${X(t)}" y="${H - B + 22}" text-anchor="${t === 0 ? 'start' : t === N - 1 ? 'end' : 'middle'}">${mesCurto(d)}${t === 0 || d.slice(5, 7) === '01' ? ' ' + d.slice(2, 4) : ''}</text>`; });
   g += `<g clip-path="url(#corte)">`;
-  g += fundo.map(s => `<path d="${caminho(s)}" class="fundo"/>`).join('');
   g += linhas.map(l => `<path d="${caminho(l.serie)}" fill="none" stroke="${l.cor}" stroke-width="${l.larg}" stroke-linecap="round" stroke-linejoin="round"${l.traco ? ` stroke-dasharray="${l.traco}"` : ''}/>`).join('');
   g += `</g><g class="pontas">`;
   // rótulos na ponta das linhas, afastados para não bater um no outro
@@ -71,10 +69,9 @@ function desenharGrafico(animar = true) {
   g += `</g><g id="guia" visibility="hidden"><line y1="${T}" y2="${H - B}" class="guia"/>${linhas.map(l => `<circle r="4.5" fill="${l.cor}" stroke="#FFFFFF" stroke-width="2"/>`).join('')}</g>`;
   svg.innerHTML = g;
 
-  $('legenda').innerHTML = linhas.map(l => `<li><i style="background:${l.cor}"></i>${l.nome}<b>${sinal(l.serie.at(-1) - 100)}%</b></li>`).join('')
-    + (fundo.length ? '<li class="apagado"><i></i>os outros 24 pontos</li>' : '');
-  $('grafNota').textContent = `Base 100 em ${mesLongo(dados.datas[0])}. ` + (dados.pesos ? 'Cada produto pesa como o seu item no IPCA.' : 'Cada produto pesa igual.')
-    + (estado.vista === 'zona' ? ' Cada zona é a média dos seus 5 pontos.' : estado.vista === 'perfil' ? ' Cada faixa de renda é a média dos seus pontos. A faixa vem do Censo 2022 (IBGE), pela renda do distrito.' : '');
+  $('legenda').innerHTML = linhas.map(l => `<li><i style="background:${l.cor}"></i>${l.nome}<b>${sinal(l.serie.at(-1) - 100)}%</b></li>`).join('');
+  $('grafNota').textContent = `Começa em 100 em ${mesLongo(dados.datas[0])}.`
+    + (estado.vista === 'zona' ? ' Cada zona é a média dos seus 5 bairros.' : estado.vista === 'perfil' ? ' Renda do distrito pelo Censo 2022 (IBGE).' : '');
 
   if (animar && !calmo && visto) {
     gsap.fromTo('#corteR', { attr: { width: 0 } }, { attr: { width: W }, duration: primeira ? 1.8 : 1.1, ease: 'power2.inOut' });
@@ -122,6 +119,12 @@ else gsap.fromTo('#rankInfl i', { scaleX: 0 }, { scaleX: (k, el) => +el.style.ge
   scrollTrigger: { trigger: '#rankInfl', start: 'top 85%', once: true } });
 
 // ---------- mapa: distritos coloridos pela alta em 12 meses
+// os nomes dos distritos vêm do GeoSampa em maiúsculas e sem acento: "SAO MIGUEL" -> "São Miguel"
+const ACENTOS = { AGUA: 'Água', ANGELA: 'Ângela', BELEM: 'Belém', BONIFACIO: 'Bonifácio', BRAS: 'Brás', BRASILANDIA: 'Brasilândia', BUTANTA: 'Butantã',
+  CANGAIBA: 'Cangaíba', CAPAO: 'Capão', CARRAO: 'Carrão', CECILIA: 'Cecília', CONSOLACAO: 'Consolação', CURUCA: 'Curuçá', GRAJAU: 'Grajaú',
+  JACANA: 'Jaçanã', JACUI: 'Jacuí', JAGUARE: 'Jaguaré', JARAGUA: 'Jaraguá', JOSE: 'José', LIDER: 'Líder', LIMAO: 'Limão', LUIS: 'Luís',
+  REPUBLICA: 'República', SACOMA: 'Sacomã', SAO: 'São', SAUDE: 'Saúde', SE: 'Sé', SONIA: 'Sônia', TATUAPE: 'Tatuapé', TREMEMBE: 'Tremembé', O: 'Ó' };
+const bonito = nome => nome.split(' ').map((w, k) => ACENTOS[w] ?? (k && ['DE', 'DO', 'DA', 'DOS', 'DAS'].includes(w) ? w.toLowerCase() : w[0] + w.slice(1).toLowerCase())).join(' ');
 const mn = Math.min(...vars), mx = Math.max(...vars);
 $('escMin').textContent = sinal(mn) + '%'; $('escMax').textContent = sinal(mx) + '%';
 let mapa = null, mapaPronto = false;
@@ -136,8 +139,16 @@ try {
     mapa.addLayer({ id: 'distritos', type: 'fill', source: 'distritos', paint: { 'fill-color': ['interpolate', ['linear'], ['get', 'v'], 0, '#F1ECE6', 0.5, '#F7B27A', 1, LARANJA], 'fill-opacity': 0.9 } }, antes);
     mapa.addLayer({ id: 'escolhido', type: 'line', source: 'distritos', filter: ['==', ['get', 'ponto'], estado.ponto], paint: { 'line-color': '#16161A', 'line-width': 2 } });
     mapa.on('click', 'distritos', e => escolher(e.features[0].properties.ponto));
-    mapa.on('mousemove', 'distritos', () => { mapa.getCanvas().style.cursor = 'pointer'; });
-    mapa.on('mouseleave', 'distritos', () => { mapa.getCanvas().style.cursor = ''; });
+    // passar o mouse num distrito mostra o nome dele, o bairro de onde vem o preço e a alta
+    const nomeDica = $('mapaDica');
+    mapa.on('mousemove', 'distritos', e => {
+      mapa.getCanvas().style.cursor = 'pointer';
+      const f = e.features[0].properties, pt = geo.pontos[f.ponto];
+      nomeDica.innerHTML = `<b>${bonito(f.nome)}</b>${sinal(vars[f.ponto])}% em 12 meses<small>Preços de ${curto(pt.bairro)}</small>`;
+      nomeDica.style.transform = `translate(${e.point.x + 14}px,calc(${e.point.y - 12}px - 100%))`;
+      nomeDica.classList.add('on');
+    });
+    mapa.on('mouseleave', 'distritos', () => { mapa.getCanvas().style.cursor = ''; nomeDica.classList.remove('on'); });
     mapaPronto = true;
   });
 } catch (erro) {
@@ -155,7 +166,7 @@ function escolher(i, guardar = true) {
   contar($('nLocal'), vars[i], v => sinal(v));
   contar($('nIpca'), ipcaVar, v => sinal(v));
   contar($('nDif'), dif, v => sinal(v));
-  $('nCesta').textContent = `${dados.itens_na_cesta} itens. Hoje a cesta custa ${reais(dados.pontos[i].cesta)} neste ponto.`;
+  $('nCesta').textContent = `Hoje a cesta custa ${reais(dados.pontos[i].cesta)} aqui.`;
   $('nDifNota').textContent = Math.abs(dif) < 0.05 ? 'A cesta acompanhou o índice oficial.' : dif > 0 ? 'A cesta subiu mais que o índice oficial.' : 'A cesta subiu menos que o índice oficial.';
   document.querySelectorAll('#rankInfl button').forEach(b => b.classList.toggle('ativo', +b.dataset.i === i));
   if (mapaPronto) mapa.setFilter('escolhido', ['==', ['get', 'ponto'], i]);

@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#FFFFFF">
 <title>Inflação do seu bairro: O Preço do Dia a Dia</title>
-<meta name="description" content="A mesma cesta medida mês a mês em 25 pontos de São Paulo e comparada com o IPCA, por ponto, por zona e por faixa de renda.">
+<meta name="description" content="A mesma cesta, mês a mês, em 25 bairros de São Paulo, contra o IPCA.">
 <link rel="preload" href="assets/fonts/red-hat-display-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/red-hat-text-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%2316161A'/%3E%3Ccircle cx='16' cy='16' r='7' fill='%23F26A0F'/%3E%3C/svg%3E">
@@ -32,12 +32,12 @@
   <header class="pg-topo">
     <p class="sobre" data-surge>Índice local <i></i> <span id="periodo">12 meses</span></p>
     <h1 class="titulo" data-titulo>A inflação do seu bairro</h1>
-    <p class="lide" data-surge>O IPCA é uma média do país. Aqui a mesma cesta é medida em cada ponto de coleta de São Paulo, mês a mês, e comparada com o índice oficial do IBGE.</p>
+    <p class="lide" data-surge>A mesma cesta, mês a mês, em 25 bairros, contra o IPCA, a inflação oficial do país.</p>
   </header>
 
   <section class="infl-topo">
     <div class="cartao seletor" data-surge>
-      <label for="ponto">Ponto de coleta</label>
+      <label for="ponto">Bairro</label>
       <select id="ponto"></select>
       <form class="cep-form" id="cepForm" novalidate>
         <label for="cep">Ou digite seu CEP</label>
@@ -50,7 +50,7 @@
     </div>
     <dl class="numeros" aria-live="polite">
       <div class="cartao numero destaque" data-surge><dt id="nRotulo">Cesta em 12 meses</dt><dd><b id="nLocal">0</b><i>%</i></dd><dd class="nota" id="nCesta"></dd></div>
-      <div class="cartao numero" data-surge><dt>IPCA no mesmo período</dt><dd><b id="nIpca">0</b><i>%</i></dd><dd class="nota">Índice oficial do IBGE, média do país.</dd></div>
+      <div class="cartao numero" data-surge><dt>IPCA no mesmo período</dt><dd><b id="nIpca">0</b><i>%</i></dd><dd class="nota">Inflação oficial do país.</dd></div>
       <div class="cartao numero" data-surge><dt>Diferença</dt><dd><b id="nDif">0</b><i>p.p.</i></dd><dd class="nota" id="nDifNota"></dd></div>
     </dl>
   </section>
@@ -59,7 +59,7 @@
     <header>
       <h2>Mês a mês</h2>
       <div class="abas" role="group" aria-label="O que o gráfico compara">
-        <button type="button" class="aba" data-vista="ponto" aria-pressed="true">Meu ponto</button>
+        <button type="button" class="aba" data-vista="ponto" aria-pressed="true">Meu bairro</button>
         <button type="button" class="aba" data-vista="zona" aria-pressed="false">Por zona</button>
         <button type="button" class="aba" data-vista="perfil" aria-pressed="false">Por renda</button>
       </div>
@@ -77,11 +77,11 @@
   <section class="infl-dupla">
     <div class="cartao mapa-cartao" data-surge>
       <h2>Onde a cesta mais subiu</h2>
-      <div class="mapa-caixa"><div id="mapaInfl"></div></div>
+      <div class="mapa-caixa"><div id="mapaInfl"></div><div class="dica" id="mapaDica"></div></div>
       <div class="escala"><span id="escMin"></span><i></i><span id="escMax"></span></div>
-      <p class="nota">Cada distrito usa o ponto de coleta mais próximo. Clique num distrito para ver o ponto dele.</p>
+      <p class="nota">Passe o mouse para ver o nome; clique para escolher.</p>
       <details class="abre-lista">
-        <summary>Ver os 25 pontos em lista</summary>
+        <summary>Ver os 25 bairros em lista</summary>
         <div class="dentro">
           <p class="nota">Alta da cesta em 12 meses. A linha marca o IPCA.</p>
           <ol class="rank-infl" id="rankInfl"></ol>
@@ -96,8 +96,8 @@
       <li><b>Não é o IPCA do bairro.</b> O IBGE não publica IPCA por bairro. Este é um índice do projeto, com a cesta do projeto.</li>
       <li><b>Os pesos são do Brasil.</b> Cada produto pesa como o seu item no IPCA nacional. Seis produtos sem item parecido recebem o peso médio.</li>
       <li><b>Carnes, frutas e verduras ficam fora.</b> Cortes e qualidade variam entre lojas, e a comparação deixaria de ser do mesmo produto.</li>
-      <li><b>A renda é a do distrito inteiro.</b> A faixa vem do Censo 2022 do IBGE: o rendimento médio do responsável pelo domicílio no distrito do ponto, comparado com os outros distritos da cidade. Dentro de um distrito há ruas mais ricas e mais pobres.</li>
-      <li><b>Só a capital, em 25 pontos.</b> Um ponto representa os distritos em volta. Dois vizinhos podem pagar preços diferentes.</li>
+      <li><b>A renda é a do distrito inteiro.</b> A faixa vem do Censo 2022 do IBGE: o rendimento médio do responsável pelo domicílio no distrito do bairro, comparado com os outros distritos da cidade. Dentro de um distrito há ruas mais ricas e mais pobres.</li>
+      <li><b>Só a capital, em 25 bairros.</b> Cada bairro representa os distritos em volta.</li>
       <li><b>É o preço do site das redes.</b> O site consulta o preço que cada rede mostra na internet para o CEP. A prateleira pode ter outro preço.</li>
     </ul>
     <a class="seta dentro" href="metodo.html">Ver o método completo</a>
@@ -105,9 +105,8 @@
 </main>
 
 <footer class="rodape">
-  <p>Projeto estudantil independente, em construção. Os preços desta versão são inventados para testar o site.</p>
-  <p>Mapa, lojas e ruas: © colaboradores do <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>. Imagem do mapa servida pelo <a href="https://openfreemap.org">OpenFreeMap</a>. Rotas calculadas com o OSRM. Contorno dos distritos: Prefeitura de São Paulo (GeoSampa).</p>
-  <p>Seu CEP e sua lista ficam só no seu navegador. Código e tabelas abertos no <a href="https://github.com/theoscala45/preco-do-dia-a-dia">GitHub</a>.</p>
+  <p>Projeto estudantil independente. Seu CEP e sua lista ficam só no seu navegador. Código aberto no <a href="https://github.com/theoscala45/preco-do-dia-a-dia">GitHub</a>.</p>
+  <p>Mapa © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>, <a href="https://openfreemap.org">OpenFreeMap</a>, OSRM e GeoSampa.</p>
 </footer>
 
 <script src="assets/vendor/gsap.min.js" defer></script>

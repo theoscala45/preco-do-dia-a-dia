@@ -28,10 +28,10 @@ try {
 function desenhar() {
   const tem = lista.itens.length > 0, pt = geo.pontos[estado.ponto];
   $('contagem').textContent = tem ? plural(lista.itens.length, 'item', 'itens') : '';
-  $('ptRotulo').textContent = `ponto de coleta ${curto(pt.bairro)}`;
+  $('ptRotulo').textContent = `bairro ${curto(pt.bairro)}`;
   $('cestaPonto').textContent = estado.cepDado
-    ? `Preços do ponto de coleta ${pt.bairro}, zona ${pt.zona.toLowerCase()}.`
-    : `Sem CEP, a conta usa o ponto ${pt.bairro}. Digite seu CEP para trocar.`;
+    ? `Preços do bairro ${curto(pt.bairro)}.`
+    : `Sem CEP, a conta usa ${curto(pt.bairro)}. Digite seu CEP para trocar.`;
   $('vazio').hidden = tem;
   $('cheio').hidden = !tem;
   $('limpar').hidden = !tem;
@@ -95,8 +95,8 @@ function desenhar() {
     if (vale) for (const r of [dupla.a, dupla.b]) if (r.k !== melhor.k) mostra.push({ k: r.k, nome: nomes[r.k] });
     const feitas = mapaRota.mostrar(estado.ponto, mostra.map(m => ({ ...m, id: dados.redes[m.k].id })));
     $('mapaNota').textContent = feitas
-      ? `Caminho de carro do ponto de coleta até a loja mais próxima ${mostra.length > 1 ? 'de cada rede. Em laranja, a loja única mais barata' : `do ${melhor.rede.nome}`}. Lojas e ruas do OpenStreetMap. O preço é o do site da rede para o CEP, não o da prateleira dessa loja.`
-      : 'Não há loja dessa rede no mapa do OpenStreetMap perto deste ponto.';
+      ? `Caminho de carro do bairro até a loja mais perto ${mostra.length > 1 ? 'de cada rede. Em laranja, a loja única mais barata' : `do ${melhor.rede.nome}`}..`
+      : 'Não há loja dessa rede no mapa perto deste bairro.';
   }
   ScrollTrigger.refresh();
 }

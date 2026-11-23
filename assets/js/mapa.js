@@ -125,7 +125,7 @@ export function criarMapa(el, geo, rotas, valores, { calmo = false } = {}) {
     mapa.addSource('pontos', { type: 'geojson', data: { type: 'FeatureCollection', features: geo.pontos.map((p, i) => ({ type: 'Feature', id: i, properties: { i }, geometry: { type: 'Point', coordinates: [p.lon, p.lat] } })) } });
     mapa.addLayer({ id: 'pontos-halo', type: 'circle', source: 'pontos', maxzoom: 12, paint: { 'circle-radius': 9, 'circle-color': LARANJA, 'circle-opacity': 0, 'circle-opacity-transition': { duration: 500 }, 'circle-blur': 0.6 } });
     mapa.addLayer({ id: 'pontos', type: 'circle', source: 'pontos', maxzoom: 12, paint: {
-      'circle-radius': 3, 'circle-color': LARANJA, 'circle-stroke-color': '#FFFFFF', 'circle-stroke-width': 1.5,
+      'circle-radius': 4.5, 'circle-color': LARANJA, 'circle-stroke-color': '#FFFFFF', 'circle-stroke-width': 1.5,
       'circle-radius-transition': { duration: 500 }, 'circle-opacity': 0.9,
     } });
     est.pronto = true;
@@ -207,7 +207,7 @@ export function criarMapa(el, geo, rotas, valores, { calmo = false } = {}) {
     est.cenaAntes = est.cena;
     if (cenaMudou || mudou) {
       mapa.setPaintProperty('distritos', 'fill-extrusion-color', corDistritos());
-      mapa.setPaintProperty('pontos', 'circle-radius', est.cena === 1 ? 5.5 : 3);
+      mapa.setPaintProperty('pontos', 'circle-radius', est.cena === 1 ? 6 : 4.5);
       mapa.setPaintProperty('pontos-halo', 'circle-opacity', est.cena === 1 ? 0.35 : 0);
     }
     if (mudou) {

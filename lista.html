@@ -30,9 +30,9 @@
 
 <main class="pagina">
   <header class="pg-topo">
-    <p class="sobre" data-surge>Comparador <i></i> <span id="ptRotulo">ponto de coleta</span></p>
+    <p class="sobre" data-surge>Comparador <i></i> <span id="ptRotulo">bairro</span></p>
     <h1 class="titulo" data-titulo>Onde a sua lista sai mais barata</h1>
-    <p class="lide" data-surge>O site soma a sua lista em cada rede, com o preço do seu ponto de coleta. Mostra a loja única mais barata e, se compensar, a divisão em duas. Nunca mais que duas.</p>
+    <p class="lide" data-surge>A sua lista somada em cada supermercado do seu bairro.</p>
   </header>
 
   <div class="lista-grade">
@@ -78,7 +78,7 @@
           <dl class="fatos">
             <div><dt>Contra a rede mais cara</dt><dd id="vEco"></dd></div>
             <div><dt>Loja mais próxima</dt><dd id="vLoja"></dd></div>
-            <div><dt>Ponto de coleta</dt><dd id="vPonto"></dd></div>
+            <div><dt>Bairro</dt><dd id="vPonto"></dd></div>
           </dl>
         </section>
 
@@ -101,7 +101,7 @@
 
         <details class="abre-lista" data-surge>
           <summary>Produto por produto</summary>
-          <p class="nota dentro">O menor preço de cada linha fica em laranja. Um traço quer dizer indisponível nesta rede: o produto não tinha preço no site da rede para esse CEP. É dado, não erro.</p>
+          <p class="nota dentro">Em laranja, o menor preço de cada produto. Um traço: a rede não tinha o produto no site.</p>
           <div class="rolagem" tabindex="0" role="region" aria-label="Tabela de preços por produto e rede">
             <table class="tabela" id="tabela"></table>
           </div>
@@ -112,9 +112,8 @@
 </main>
 
 <footer class="rodape">
-  <p>Projeto estudantil independente, em construção. Os preços desta versão são inventados para testar o site.</p>
-  <p>Mapa, lojas e ruas: © colaboradores do <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>. Imagem do mapa servida pelo <a href="https://openfreemap.org">OpenFreeMap</a>. Rotas calculadas com o OSRM. Contorno dos distritos: Prefeitura de São Paulo (GeoSampa).</p>
-  <p>Seu CEP e sua lista ficam só no seu navegador. Código e tabelas abertos no <a href="https://github.com/theoscala45/preco-do-dia-a-dia">GitHub</a>.</p>
+  <p>Projeto estudantil independente. Seu CEP e sua lista ficam só no seu navegador. Código aberto no <a href="https://github.com/theoscala45/preco-do-dia-a-dia">GitHub</a>.</p>
+  <p>Mapa © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>, <a href="https://openfreemap.org">OpenFreeMap</a>, OSRM e GeoSampa.</p>
 </footer>
 
 <script src="assets/vendor/gsap.min.js" defer></script>
