@@ -129,11 +129,13 @@ const mn = Math.min(...vars), mx = Math.max(...vars);
 $('escMin').textContent = sinal(mn) + '%'; $('escMax').textContent = sinal(mx) + '%';
 let mapa = null, mapaPronto = false;
 try {
-  const { novoMapa, LARANJA } = await import('./mapa.js');
+  const { novoMapa, LARANJA, ruasSoDePerto } = await import('./mapa.js');
   const cid = geo.cidade;
   mapa = novoMapa($('mapaInfl'), { bounds: [[cid.oeste, cid.sul], [cid.leste, cid.norte]], fitBoundsOptions: { padding: 18 } });
   mapa.on('load', () => {
-    const antes = mapa.getStyle().layers.find(l => l.type === 'symbol')?.id;
+    ruasSoDePerto(mapa);
+    // a cor dos distritos fica por cima das ruas e por baixo dos nomes
+    const antes = mapa.getStyle().layers.find(l => l.id === 'highway_name_other')?.id || mapa.getStyle().layers.find(l => l.type === 'symbol')?.id;
     geo.distritos.features.forEach(f => { f.properties.v = (vars[f.properties.ponto] - mn) / (mx - mn || 1); });
     mapa.addSource('distritos', { type: 'geojson', data: geo.distritos });
     mapa.addLayer({ id: 'distritos', type: 'fill', source: 'distritos', paint: { 'fill-color': ['interpolate', ['linear'], ['get', 'v'], 0, '#F1ECE6', 0.5, '#F7B27A', 1, LARANJA], 'fill-opacity': 0.9 } }, antes);

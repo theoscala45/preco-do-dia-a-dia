@@ -66,6 +66,13 @@ export function novoMapa(el, extra = {}) {
   }
   return mapa;
 }
+// ruas e trilhos só aparecem de perto (a partir do zoom 10,4, inteiros em 11,6), quando os distritos coloridos já não cobrem a cidade
+export function ruasSoDePerto(mapa) {
+  mapa.getStyle().layers.filter(l => l.type === 'line' && l['source-layer'] === 'transportation').forEach(l => {
+    const base = mapa.getPaintProperty(l.id, 'line-opacity') ?? 1;
+    mapa.setPaintProperty(l.id, 'line-opacity', ['interpolate', ['linear'], ['zoom'], 10.4, 0, 11.6, base]);
+  });
+}
 // uma rota que se desenha: fonte + três camadas (brilho, linha, ponto de luz)
 export function camadasDeRota(mapa, id) {
   mapa.addSource(id, { type: 'geojson', lineMetrics: true, data: { type: 'Feature', properties: {}, geometry: { type: 'LineString', coordinates: [[0, 0], [0, 0.001]] } } });
@@ -138,11 +145,7 @@ export function criarMapa(el, geo, rotas, valores, { calmo = false } = {}) {
 
   mapa.on('load', () => {
     const antes = mapa.getStyle().layers.find(l => l.type === 'symbol')?.id;
-    // ruas e trilhos só aparecem quando os distritos 3D somem (mesma faixa de zoom); antes disso ficavam brancos por cima da cor
-    mapa.getStyle().layers.filter(l => l.type === 'line' && l['source-layer'] === 'transportation').forEach(l => {
-      const base = mapa.getPaintProperty(l.id, 'line-opacity') ?? 1;
-      mapa.setPaintProperty(l.id, 'line-opacity', ['interpolate', ['linear'], ['zoom'], 10.4, 0, 11.6, base]);
-    });
+    ruasSoDePerto(mapa);   // as ruas brancas não ficam por cima da cor dos distritos
     mapa.setLight({ anchor: 'viewport', color: '#ffffff', intensity: 0.5, position: [1.3, 215, 28] });
     geo.distritos.features.forEach(f => { f.properties.v = valores.var[f.properties.ponto]; });
     mapa.addSource('distritos', { type: 'geojson', data: geo.distritos });
