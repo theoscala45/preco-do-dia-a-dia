@@ -176,13 +176,6 @@ export function iniciar(dados) {
     gsap.ticker.add(bate);
     gsap.ticker.lagSmoothing(0);
 
-    // o cabeçalho sai ao rolar para baixo e volta ao rolar para cima
-    const some = gsap.to('.topo', { yPercent: -180, duration: 0.45, ease: 'power2.inOut', paused: true });
-    ScrollTrigger.create({ start: 0, end: 'max', onUpdate: self => {
-      if (document.documentElement.classList.contains('menu-aberto')) return;
-      if (self.direction === 1 && self.scroll() > 360) some.play(); else some.reverse();
-    } });
-
     document.querySelectorAll('[data-titulo]').forEach(el => {
       const naDobra = el.getBoundingClientRect().top < innerHeight * 0.95;
       subirTitulo(el, { atraso: naDobra ? 0.12 : 0, aoRolar: !naDobra });
