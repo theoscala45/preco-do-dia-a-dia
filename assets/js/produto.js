@@ -78,11 +78,7 @@ if (k < 0) {
   $('prodAdd').addEventListener('submit', e => { e.preventDefault(); if (lista.tem(k)) lista.tirar(k); else lista.adicionar(k); mostrar(); });
   mostrar();
 
-  // produto anterior e próximo
-  const n = dados.produtos.length, ant = dados.produtos[(k - 1 + n) % n], prox = dados.produtos[(k + 1) % n];
   $('prodTodos').href = 'produtos.html' + (PREVIA ? '?previa' : '');
-  $('prodAnt').href = href(ant.id); $('prodAnt').textContent = `Anterior: ${ant.nome}`;
-  $('prodProx').href = href(prox.id); $('prodProx').textContent = `Próximo: ${prox.nome}`;
   $('prodCorpo').hidden = false;
 }
 ligarBusca();

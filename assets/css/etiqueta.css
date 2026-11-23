@@ -222,7 +222,6 @@ button.quieto:active,.botao.quieto:active{
 .pg-produto .bloco > .nota{margin-top:14px}
 .prod-acoes{display:flex;flex-wrap:wrap;align-items:center;gap:16px 24px}
 #prodBusca{width:100%}
-.prod-vizinhos{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px 24px;margin-top:22px}
 .seta.volta::after{content:none}
 .seta.volta::before{content:"←";transition:transform .3s var(--curva)}
 a.seta.volta:hover::before{transform:translateX(-5px)}
