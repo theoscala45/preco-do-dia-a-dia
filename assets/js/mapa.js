@@ -36,6 +36,13 @@ export function novoMapa(el, extra = {}) {
   mapa.addControl(new ml.AttributionControl({ compact: true }), 'bottom-right');
   if (!toque) mapa.addControl(new ml.NavigationControl({ showCompass: false }), 'bottom-right');
   mapa.touchZoomRotate.disableRotation();
+  // a rodinha sozinha rola a página (o mapa fica atrás do texto); com Ctrl ou ⌘ apertado, ou com o movimento de pinça do touchpad, ela aproxima o mapa
+  const aproximar = e => {
+    const quer = e.ctrlKey || e.metaKey;
+    if (quer && !mapa.scrollZoom.isEnabled()) mapa.scrollZoom.enable();
+    else if (!quer && mapa.scrollZoom.isEnabled()) mapa.scrollZoom.disable();
+  };
+  addEventListener('wheel', aproximar, { capture: true, passive: true });
   return mapa;
 }
 // uma rota que se desenha: fonte + três camadas (brilho, linha, ponto de luz)

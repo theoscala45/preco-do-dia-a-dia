@@ -95,7 +95,7 @@ function desenhar() {
     if (vale) for (const r of [dupla.a, dupla.b]) if (r.k !== melhor.k) mostra.push({ k: r.k, nome: nomes[r.k] });
     const feitas = mapaRota.mostrar(estado.ponto, mostra.map(m => ({ ...m, id: dados.redes[m.k].id })));
     $('mapaNota').textContent = feitas
-      ? `Caminho de carro do bairro até a loja mais perto ${mostra.length > 1 ? 'de cada rede. Em laranja, a loja única mais barata' : `do ${melhor.rede.nome}`}..`
+      ? `Caminho de carro do bairro até a loja mais perto ${mostra.length > 1 ? 'de cada rede. Em laranja, a loja única mais barata' : `do ${melhor.rede.nome}`}.`
       : 'Não há loja dessa rede no mapa perto deste bairro.';
   }
   ScrollTrigger.refresh();
