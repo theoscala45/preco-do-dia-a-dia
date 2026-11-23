@@ -331,10 +331,10 @@ a.seta.volta:hover::before{transform:translateX(-5px)}
 
 /* ---------- capítulos do início: pouco espaço vazio entre um cartão e o seguinte ---------- */
 .cap{min-height:0;padding-top:12vh;padding-bottom:12vh}   /* o espaço entre cartões é só o respiro de cima e de baixo */
-.cap[data-cap="1"]{margin-top:-22vh;padding-top:0}   /* o primeiro chega mais cedo, colado no fim da abertura */
+.cap[data-cap="1"]{margin-top:0;padding-top:0}   /* o primeiro sobe pelo espaço vazio do fim da abertura (main.js mede esse espaço, para não cobrir nada) */
 @media (max-width:860px){
   .cap{min-height:0;padding-top:9svh;padding-bottom:9svh}
-  .cap[data-cap="1"]{margin-top:-16svh;padding-top:0}
+  .cap[data-cap="1"]{margin-top:0;padding-top:0}
 }
 
 /* ---------- menu do topo: a linha laranja que salta de um link para outro ---------- */

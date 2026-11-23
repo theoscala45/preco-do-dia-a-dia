@@ -111,6 +111,28 @@ mapa?.aoMudar(({ fase }) => {
   gsap.fromTo('#redesLista .melhor .val', { scale: 1 }, { scale: 1.12, duration: 0.25, ease: 'power2.out', yoyo: true, repeat: 1, transformOrigin: '100% 50%' });
 });
 
+// ---------- o primeiro capítulo sobe só pelo espaço vazio que sobra no fim da abertura (nunca cobre o que está lá)
+{
+  const abre = document.querySelector('.abre'), cap1 = document.querySelector('.cap[data-cap="1"]');
+  const medir = () => {
+    if (!abre || !cap1) return;
+    // posições de layout (offsetTop), que não mudam com os transforms da animação de saída da abertura
+    const fimDaAbertura = abre.offsetTop + abre.offsetHeight;
+    const fimDoConteudo = Math.max(...[...abre.children].filter(c => c.offsetParent !== null).map(c => c.offsetTop + c.offsetHeight));
+    const vazio = fimDaAbertura - fimDoConteudo - 56;           // 56 px é o respiro de baixo da própria abertura
+    const sobe = Math.max(0, Math.min(vazio - 28, innerHeight * 0.4));   // deixa 28 px de folga e nunca sobe mais que 40% da tela
+    const novo = '-' + Math.round(sobe) + 'px';
+    if (cap1.style.marginTop !== novo) { cap1.style.marginTop = novo; clearTimeout(medir.t); medir.t = setTimeout(() => ScrollTrigger.refresh(), 120); }
+  };
+  if (abre && cap1) {
+    const ro = new ResizeObserver(medir);
+    ro.observe(abre); [...abre.children].forEach(c => ro.observe(c));
+    addEventListener('resize', medir);
+    document.fonts.ready.then(medir);
+    medir();
+  }
+}
+
 // ---------- o scroll troca a cena do mapa
 const passos = [...document.querySelectorAll('#trilha li')];
 const cena = c => { mapa?.cena(c); passos.forEach((li, k) => li.classList.toggle('on', k === c - 1)); };
