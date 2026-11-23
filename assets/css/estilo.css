@@ -382,7 +382,7 @@ h3{font:700 19px/1.25 var(--titulo);letter-spacing:-.01em}
 .legenda b{font:600 13px/1 var(--mono);color:var(--texto-2)}
 .legenda .apagado{color:var(--texto-3)}
 .legenda .apagado i{background:rgba(242,106,15,.3)}
-.infl-dupla{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:16px;align-items:start}
+.infl-dupla{display:grid;grid-template-columns:minmax(0,1fr);gap:16px;align-items:start}
 .pagina .infl-dupla .cartao + .cartao{margin-top:0}
 .infl-dupla .mapa-cartao{padding:26px 28px}
 .infl-dupla .mapa-caixa{height:clamp(380px,48vw,640px);margin-top:6px}
@@ -451,6 +451,15 @@ code{font:500 .92em var(--mono);background:var(--sup-2);padding:2px 6px;border-r
 .abre-lista summary::after{content:"+";font:400 22px/1 var(--corpo);color:var(--laranja);transition:transform .3s var(--curva)}
 .abre-lista[open] summary::after{transform:rotate(45deg)}
 .abre-lista summary:hover{background:var(--sup-2)}
+details.abre-lista + details.abre-lista,.pagina .cartao + details.abre-lista,.pagina section + details.abre-lista,.pagina details.abre-lista + .cartao{margin-top:12px}
+.mapa-cartao details.abre-lista{margin-top:16px;background:var(--fundo)}
+.mapa-cartao .dentro .nota{padding:0 0 4px}
+.abre-lista > .dentro{padding:0 20px 18px}
+.bloco > ul + .prosa,.bloco > details + .prosa,.bloco > details + details{margin-top:12px}
+.bloco > ul + .prosa{margin-top:24px}
+.abre-lista > .lista-limites.dentro{margin:0 20px 18px;padding:0}
+.abre-lista > .seta.dentro{margin:0 20px 20px;padding:0}
+.abre-lista > .dentro + .rolagem{margin-top:0}
 .abre-lista .rolagem{margin:0;padding:0 12px 12px;max-height:520px;overflow:auto}
 .bloco > .rolagem{margin-left:0;margin-right:0;padding:6px 14px 10px;border:1px solid var(--linha);border-radius:18px;background:var(--sup)}
 .tabela.simples th,.tabela.simples td{text-align:left;white-space:normal;vertical-align:top}

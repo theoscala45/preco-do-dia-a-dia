@@ -189,4 +189,6 @@ export function iniciar(dados) {
 
   document.documentElement.classList.add('pronto');
   document.fonts.ready.then(() => ScrollTrigger.refresh());
+  // partes que abrem e fecham mudam a altura da página
+  document.querySelectorAll('details').forEach(d => d.addEventListener('toggle', () => ScrollTrigger.refresh()));
 }

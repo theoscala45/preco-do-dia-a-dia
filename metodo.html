@@ -77,9 +77,17 @@
         <div class="prosa" data-surge>
           <p>Algumas redes mostram na internet um preço diferente para cada CEP. Por isso o site consulta os preços em 25 CEPs da capital, cinco por zona: centro, oeste, sul, leste e norte. Cada CEP é um ponto de coleta.</p>
           <p>Quando você digita o seu CEP, o site usa o ponto de coleta de numeração mais próxima. É uma aproximação: o ponto pode ficar a alguns quilômetros da sua casa. Os 96 distritos da cidade usam o ponto mais próximo.</p>
-          <p>Cada ponto tem uma faixa de renda: alta, média ou baixa. Ela vem do Censo 2022 do IBGE. É o rendimento médio da pessoa responsável pelo domicílio no distrito do ponto, comparado com os 96 distritos da cidade: o terço de baixo é renda baixa, o do meio renda média e o de cima renda alta. O Censo 2022 só divulga o rendimento do responsável pelo domicílio, não a renda da família inteira. Oito pontos caem na renda alta, nove na média e oito na baixa. Para chegar nesse equilíbrio, quatro pontos de renda alta da primeira lista foram trocados antes do início da série: Liberdade por Sé, Butantã por Raposo Tavares, Mooca por Cidade Tiradentes e Tucuruvi por Jaçanã.</p>
         </div>
-        <div class="rolagem" data-surge><table class="tabela simples" id="tabPontos"></table></div>
+        <details class="abre-lista" data-surge>
+          <summary>Como a renda de cada ponto foi definida</summary>
+          <div class="prosa dentro">
+          <p>Cada ponto tem uma faixa de renda: alta, média ou baixa. Ela vem do Censo 2022 do IBGE. É o rendimento médio da pessoa responsável pelo domicílio no distrito do ponto, comparado com os 96 distritos da cidade: o terço de baixo é renda baixa, o do meio renda média e o de cima renda alta. O Censo 2022 só divulga o rendimento do responsável pelo domicílio, não a renda da família inteira. Oito pontos caem na renda alta, nove na média e oito na baixa. Para chegar nesse equilíbrio, quatro pontos de renda alta da primeira lista foram trocados antes do início da série: Liberdade por Sé, Butantã por Raposo Tavares, Mooca por Cidade Tiradentes e Tucuruvi por Jaçanã.</p>
+          </div>
+        </details>
+        <details class="abre-lista" data-surge>
+          <summary>Ver os 25 pontos</summary>
+          <div class="rolagem"><table class="tabela simples" id="tabPontos"></table></div>
+        </details>
       </section>
 
       <section id="redes" class="bloco">
@@ -89,24 +97,27 @@
           <p>Antes de ler qualquer preço de uma rede, o projeto leu o arquivo robots.txt e os termos de uso dela. O robots.txt é o arquivo em que um site diz o que programas automáticos podem ou não podem ler. O coletor obedece a esse arquivo e nunca contorna um bloqueio.</p>
           <p>As dez redes aparecem no site. A St Marche proíbe, nos termos de uso, copiar ou republicar conteúdo sem autorização por escrito. O projeto pediu essa autorização por e-mail e a St Marche autorizou, sem condições.</p>
         </div>
-        <div class="rolagem" data-surge>
-          <table class="tabela simples">
-            <thead><tr><th scope="col">Rede</th><th scope="col">Preço muda por</th><th scope="col">robots.txt</th><th scope="col">Termos de uso</th><th scope="col">Situação</th></tr></thead>
-            <tbody>
-              <tr><th scope="row">Tenda Atacado</th><td>CEP</td><td>Bloqueia a busca, libera páginas de produto</td><td>Não tem. Só política de privacidade</td><td><span class="selo ok">Liberado</span></td></tr>
-              <tr><th scope="row">Carrefour</th><td>CEP (o projeto lê o preço único do site)</td><td>Libera busca e produto</td><td>Não encontrados</td><td><span class="selo">Liberado com dúvida</span></td></tr>
-              <tr><th scope="row">Atacadão</th><td>Loja</td><td>Bloqueia a busca, libera produto</td><td>O conteúdo é do Atacadão. Uso não autorizado é vedado. Nada sobre programas automáticos</td><td><span class="selo">Liberado com cuidado</span></td></tr>
-              <tr><th scope="row">Pão de Açúcar</th><td>Preço único</td><td>Bloqueia a busca, libera produto</td><td>Não encontrados</td><td><span class="selo">Liberado com dúvida</span></td></tr>
-              <tr><th scope="row">Sonda</th><td>Preço único</td><td>Libera produto</td><td>Só falam de redes sociais</td><td><span class="selo ok">Liberado</span></td></tr>
-              <tr><th scope="row">St Marche</th><td>Preço único</td><td>Libera produto</td><td>Pedem autorização por escrito para copiar ou republicar</td><td><span class="selo ok">Autorizado por e-mail</span></td></tr>
-              <tr><th scope="row">Santa Luzia</th><td>Preço único (loja única)</td><td>Bloqueia a busca, libera produto</td><td>Não encontrados</td><td><span class="selo">Liberado com dúvida</span></td></tr>
-              <tr><th scope="row">Hirota</th><td>Loja</td><td>Bloqueia a busca, libera produto</td><td>Não tem</td><td><span class="selo">Liberado com dúvida</span></td></tr>
-              <tr><th scope="row">Mambo</th><td>Preço único (igual em todas as lojas)</td><td>Libera produto</td><td>Só regras de compra</td><td><span class="selo ok">Liberado</span></td></tr>
-              <tr><th scope="row">Nagumo</th><td>Loja</td><td>Não tem robots.txt</td><td>Só regras de compra</td><td><span class="selo ok">Liberado</span></td></tr>
-            </tbody>
-          </table>
-        </div>
-        <p class="nota" data-surge>"Liberado com dúvida" quer dizer que o robots.txt permite a leitura, mas os termos de uso não foram encontrados ou não foram confirmados.</p>
+        <details class="abre-lista" data-surge>
+          <summary>Ver a tabela das redes</summary>
+          <div class="rolagem">
+            <table class="tabela simples">
+              <thead><tr><th scope="col">Rede</th><th scope="col">Preço muda por</th><th scope="col">robots.txt</th><th scope="col">Termos de uso</th><th scope="col">Situação</th></tr></thead>
+              <tbody>
+                <tr><th scope="row">Tenda Atacado</th><td>CEP</td><td>Bloqueia a busca, libera páginas de produto</td><td>Não tem. Só política de privacidade</td><td><span class="selo ok">Liberado</span></td></tr>
+                <tr><th scope="row">Carrefour</th><td>CEP (o projeto lê o preço único do site)</td><td>Libera busca e produto</td><td>Não encontrados</td><td><span class="selo">Liberado com dúvida</span></td></tr>
+                <tr><th scope="row">Atacadão</th><td>Loja</td><td>Bloqueia a busca, libera produto</td><td>O conteúdo é do Atacadão. Uso não autorizado é vedado. Nada sobre programas automáticos</td><td><span class="selo">Liberado com cuidado</span></td></tr>
+                <tr><th scope="row">Pão de Açúcar</th><td>Preço único</td><td>Bloqueia a busca, libera produto</td><td>Não encontrados</td><td><span class="selo">Liberado com dúvida</span></td></tr>
+                <tr><th scope="row">Sonda</th><td>Preço único</td><td>Libera produto</td><td>Só falam de redes sociais</td><td><span class="selo ok">Liberado</span></td></tr>
+                <tr><th scope="row">St Marche</th><td>Preço único</td><td>Libera produto</td><td>Pedem autorização por escrito para copiar ou republicar</td><td><span class="selo ok">Autorizado por e-mail</span></td></tr>
+                <tr><th scope="row">Santa Luzia</th><td>Preço único (loja única)</td><td>Bloqueia a busca, libera produto</td><td>Não encontrados</td><td><span class="selo">Liberado com dúvida</span></td></tr>
+                <tr><th scope="row">Hirota</th><td>Loja</td><td>Bloqueia a busca, libera produto</td><td>Não tem</td><td><span class="selo">Liberado com dúvida</span></td></tr>
+                <tr><th scope="row">Mambo</th><td>Preço único (igual em todas as lojas)</td><td>Libera produto</td><td>Só regras de compra</td><td><span class="selo ok">Liberado</span></td></tr>
+                <tr><th scope="row">Nagumo</th><td>Loja</td><td>Não tem robots.txt</td><td>Só regras de compra</td><td><span class="selo ok">Liberado</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="nota dentro">"Liberado com dúvida" quer dizer que o robots.txt permite a leitura, mas os termos de uso não foram encontrados ou não foram confirmados.</p>
+        </details>
       </section>
 
       <section id="coleta" class="bloco">
@@ -125,17 +136,27 @@
         </ul>
         <div class="prosa" data-surge>
           <p>Produto sem preço no dia entra na tabela como indisponível. Isso é um dado, não um erro: quer dizer que a rede não vendia aquele produto para aquele CEP naquele dia.</p>
-          <p>No Atacadão o preço muda por loja. Para cada CEP, o coletor usa a loja de retirada mais perto que o próprio site oferece. Só algumas lojas fazem retirada pela internet, então essa loja pode ficar longe do bairro: para Capão Redondo, por exemplo, é a de Villa Lobos, a 14 km. O preço é o da internet para aquela loja, e o Atacadão não vende frutas e verduras pela internet.</p>
-          <p>No Carrefour, o site mostra uma verificação contra robôs (captcha) para o navegador automático que informaria o CEP. O projeto não contorna esse tipo de bloqueio. Por isso, no Carrefour, o coletor lê só a página normal de cada produto e guarda o preço padrão do site, o que aparece antes de alguém informar o CEP. É um preço único para a cidade. O projeto pediu ao Carrefour autorização para ler o preço por CEP.</p>
-          <p>No Pão de Açúcar, a página de produto mostra o preço sem pedir CEP, e o preço é o mesmo para a cidade. O site não tem lista pública de produtos (sitemap) e o robots.txt bloqueia a busca. Por isso os links foram achados percorrendo as páginas de categoria do site, como uma pessoa faria. Essas páginas só abrem em navegador, então o coletor usa o navegador automático também aqui.</p>
-          <p>O Sonda e o Santa Luzia também têm preço único. As páginas de produto dos dois abrem sem navegador e trazem o preço nos dados padronizados da página. No Sonda, os links foram achados percorrendo as páginas de categoria; no Santa Luzia, pela lista pública de produtos (sitemap). O site do Santa Luzia não vende carnes, frutas e verduras frescas pela internet, então esses produtos ficam de fora nessa rede.</p>
-          <p>A St Marche também tem preço único. A página de produto abre sem navegador e traz o preço e a disponibilidade nos dados da própria página. Os links vieram da lista pública de produtos do site (sitemap). Frutas, verduras e carnes aparecem com o preço do quilo.</p>
-          <p>No Nagumo, o preço muda de loja para loja: cerca de um produto em dez custa diferente, mais nas frutas e nas carnes. Para cada CEP, o coletor informa o CEP no próprio site e fica com a primeira loja de retirada que ele oferece. As lojas do Nagumo ficam quase todas na zona leste e em cidades vizinhas (Guarulhos, Santo André, Osasco), então a loja usada pode ficar longe do ponto: para a Bela Vista, por exemplo, é a de Osasco. O site não tem robots.txt, e os links foram achados pela busca do próprio site. Numa promoção, vale o preço que a página mostra (o "Por:").</p>
-          <p>No Mambo, o preço é o mesmo em todas as lojas: o projeto conferiu seis produtos em quatro lojas e só o estoque mudava. Por isso ele entra com preço único, lido na página de cada produto. Numa promoção, vale o preço atual, não o antigo riscado; nos produtos vendidos por peso, o do quilo. Os links vieram da lista pública de produtos do site (sitemap).</p>
-          <p>No Hirota, o preço muda um pouco de loja para loja: a maioria dos produtos custa o mesmo, mas carnes e alguns itens mudam. O site oferece cinco lojas de retirada (Nazaré, Morumbi, Santa Cecília, Vila Formosa e Campo Belo). Para cada CEP, o coletor escolhe a mais perto do ponto, em linha reta, e guarda o preço dela. Para Perus, por exemplo, é a de Santa Cecília, a 17 km.</p>
-          <p id="estadoColeta"></p>
-          <p id="estadoLinks"></p>
         </div>
+        <details class="abre-lista" data-surge>
+          <summary>Como funciona em cada rede</summary>
+          <div class="prosa dentro">
+            <p>No Atacadão o preço muda por loja. Para cada CEP, o coletor usa a loja de retirada mais perto que o próprio site oferece. Só algumas lojas fazem retirada pela internet, então essa loja pode ficar longe do bairro: para Capão Redondo, por exemplo, é a de Villa Lobos, a 14 km. O preço é o da internet para aquela loja, e o Atacadão não vende frutas e verduras pela internet.</p>
+            <p>No Carrefour, o site mostra uma verificação contra robôs (captcha) para o navegador automático que informaria o CEP. O projeto não contorna esse tipo de bloqueio. Por isso, no Carrefour, o coletor lê só a página normal de cada produto e guarda o preço padrão do site, o que aparece antes de alguém informar o CEP. É um preço único para a cidade. O projeto pediu ao Carrefour autorização para ler o preço por CEP.</p>
+            <p>No Pão de Açúcar, a página de produto mostra o preço sem pedir CEP, e o preço é o mesmo para a cidade. O site não tem lista pública de produtos (sitemap) e o robots.txt bloqueia a busca. Por isso os links foram achados percorrendo as páginas de categoria do site, como uma pessoa faria. Essas páginas só abrem em navegador, então o coletor usa o navegador automático também aqui.</p>
+            <p>O Sonda e o Santa Luzia também têm preço único. As páginas de produto dos dois abrem sem navegador e trazem o preço nos dados padronizados da página. No Sonda, os links foram achados percorrendo as páginas de categoria; no Santa Luzia, pela lista pública de produtos (sitemap). O site do Santa Luzia não vende carnes, frutas e verduras frescas pela internet, então esses produtos ficam de fora nessa rede.</p>
+            <p>A St Marche também tem preço único. A página de produto abre sem navegador e traz o preço e a disponibilidade nos dados da própria página. Os links vieram da lista pública de produtos do site (sitemap). Frutas, verduras e carnes aparecem com o preço do quilo.</p>
+            <p>No Nagumo, o preço muda de loja para loja: cerca de um produto em dez custa diferente, mais nas frutas e nas carnes. Para cada CEP, o coletor informa o CEP no próprio site e fica com a primeira loja de retirada que ele oferece. As lojas do Nagumo ficam quase todas na zona leste e em cidades vizinhas (Guarulhos, Santo André, Osasco), então a loja usada pode ficar longe do ponto: para a Bela Vista, por exemplo, é a de Osasco. O site não tem robots.txt, e os links foram achados pela busca do próprio site. Numa promoção, vale o preço que a página mostra (o "Por:").</p>
+            <p>No Mambo, o preço é o mesmo em todas as lojas: o projeto conferiu seis produtos em quatro lojas e só o estoque mudava. Por isso ele entra com preço único, lido na página de cada produto. Numa promoção, vale o preço atual, não o antigo riscado; nos produtos vendidos por peso, o do quilo. Os links vieram da lista pública de produtos do site (sitemap).</p>
+            <p>No Hirota, o preço muda um pouco de loja para loja: a maioria dos produtos custa o mesmo, mas carnes e alguns itens mudam. O site oferece cinco lojas de retirada (Nazaré, Morumbi, Santa Cecília, Vila Formosa e Campo Belo). Para cada CEP, o coletor escolhe a mais perto do ponto, em linha reta, e guarda o preço dela. Para Perus, por exemplo, é a de Santa Cecília, a 17 km.</p>
+          </div>
+        </details>
+        <div class="prosa" data-surge>
+          <p id="estadoColeta"></p>
+        </div>
+        <details class="abre-lista" data-surge>
+          <summary>Quantos produtos foram achados em cada rede</summary>
+          <div class="prosa dentro"><p id="estadoLinks"></p></div>
+        </details>
       </section>
 
       <section id="contas" class="bloco">
@@ -145,12 +166,17 @@
           <div><dt>Preço de referência</dt><dd>Para cada produto e cada ponto, o site usa a mediana dos preços das redes naquele ponto. A mediana é o valor do meio: metade das redes cobra mais, metade cobra menos. Uma rede muito cara ou muito barata não puxa o número.</dd></div>
           <div><dt>Cesta do ponto</dt><dd>É a soma dos preços de referência dos produtos do índice. Só entram produtos que têm preço em todos os pontos e em todas as datas. Hoje são <span id="nCesta">78</span>.</dd></div>
           <div><dt>Índice local</dt><dd>Para cada produto, o site calcula quanto o preço mudou desde o primeiro dia. A mudança é medida em cada rede contra ela mesma, e vale a mediana dessas mudanças: assim, uma rede que entra ou sai da coleta não aparece como inflação. O índice é a média das mudanças dos produtos, com os pesos do IPCA, vezes 100. O primeiro dia vale 100. Um índice de 105 quer dizer que a cesta ficou 5% mais cara.</dd></div>
-          <div><dt>Pesos</dt><dd>No IPCA, cada item pesa conforme o gasto das famílias. Aqui cada produto recebe o peso do seu item no IPCA do Brasil, publicado pelo IBGE. Quando dois produtos caem no mesmo item (arroz Camil e arroz Tio João), o peso é dividido entre eles. Aveia, ketchup, ervilha, creme de leite, álcool e inseticida não têm item parecido e recebem o peso médio. Os pesos do Brasil foram usados porque a região de São Paulo não publica peso para vários itens da cesta.</dd></div>
-          <div><dt>IPCA</dt><dd>É a inflação mensal oficial, do IBGE, acumulada a partir do mês seguinte ao primeiro dia, para ser comparada com o índice local. Cada mês entra uma vez. O IBGE divulga o IPCA de um mês no mês seguinte, então o mês corrente ainda não entra; o site baixa o número novo sozinho todo mês.</dd></div>
-          <div><dt>Comparador de lista</dt><dd>O site soma a sua lista em cada rede. Vence a rede com menos itens indisponíveis e, no empate, a de menor total. A economia é a diferença para a rede mais cara que tem os mesmos itens.</dd></div>
-          <div><dt>Divisão em duas lojas</dt><dd>O site testa todas as duplas de redes e compra cada item onde ele é mais barato. A divisão só aparece se economizar pelo menos R$ 2 ou achar mais itens. Nunca são mais de duas lojas: ir a três mercados custa tempo e transporte que o site não mede.</dd></div>
-          <div><dt>Redes no mapa do início</dt><dd>Nem toda rede vende todos os produtos (o Hirota não vende higiene pela internet, por exemplo). Por isso cada rede é comparada pelos itens do índice que ela vende no ponto: o preço de cada item é dividido pela mediana das redes ali, e a média dessas razões, com o peso de cada item no IPCA, diz quanto a rede cobra acima ou abaixo da mediana. O valor mostrado é a cesta do ponto vezes esse número, e a lista diz em quantos itens cada rede foi comparada. Só entram itens que pelo menos três redes vendem no ponto.</dd></div>
         </dl>
+        <details class="abre-lista" data-surge>
+          <summary>Pesos, comparador e mapa do início</summary>
+          <dl class="contas dentro">
+            <div><dt>Pesos</dt><dd>No IPCA, cada item pesa conforme o gasto das famílias. Aqui cada produto recebe o peso do seu item no IPCA do Brasil, publicado pelo IBGE. Quando dois produtos caem no mesmo item (arroz Camil e arroz Tio João), o peso é dividido entre eles. Aveia, ketchup, ervilha, creme de leite, álcool e inseticida não têm item parecido e recebem o peso médio. Os pesos do Brasil foram usados porque a região de São Paulo não publica peso para vários itens da cesta.</dd></div>
+            <div><dt>IPCA</dt><dd>É a inflação mensal oficial, do IBGE, acumulada a partir do mês seguinte ao primeiro dia, para ser comparada com o índice local. Cada mês entra uma vez. O IBGE divulga o IPCA de um mês no mês seguinte, então o mês corrente ainda não entra; o site baixa o número novo sozinho todo mês.</dd></div>
+            <div><dt>Comparador de lista</dt><dd>O site soma a sua lista em cada rede. Vence a rede com menos itens indisponíveis e, no empate, a de menor total. A economia é a diferença para a rede mais cara que tem os mesmos itens.</dd></div>
+            <div><dt>Divisão em duas lojas</dt><dd>O site testa todas as duplas de redes e compra cada item onde ele é mais barato. A divisão só aparece se economizar pelo menos R$ 2 ou achar mais itens. Nunca são mais de duas lojas: ir a três mercados custa tempo e transporte que o site não mede.</dd></div>
+            <div><dt>Redes no mapa do início</dt><dd>Nem toda rede vende todos os produtos (o Hirota não vende higiene pela internet, por exemplo). Por isso cada rede é comparada pelos itens do índice que ela vende no ponto: o preço de cada item é dividido pela mediana das redes ali, e a média dessas razões, com o peso de cada item no IPCA, diz quanto a rede cobra acima ou abaixo da mediana. O valor mostrado é a cesta do ponto vezes esse número, e a lista diz em quantos itens cada rede foi comparada. Só entram itens que pelo menos três redes vendem no ponto.</dd></div>
+          </dl>
+        </details>
       </section>
 
       <section id="mapa-e-rotas" class="bloco">

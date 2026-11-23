@@ -56,5 +56,4 @@ document.querySelectorAll('.bloco').forEach(sec => {
   const a = document.querySelector(`.indice a[href="#${sec.id}"]`);
   ScrollTrigger.create({ trigger: sec, start: 'top 45%', end: 'bottom 45%', onToggle: s => a?.classList.toggle('ativo', s.isActive) });
 });
-document.querySelector('.abre-lista')?.addEventListener('toggle', () => ScrollTrigger.refresh());
 if (!calmo) gsap.from('.grupos li', { autoAlpha: 0, y: 20, duration: 0.7, stagger: 0.08, scrollTrigger: { trigger: '.grupos', start: 'top 88%', once: true } });

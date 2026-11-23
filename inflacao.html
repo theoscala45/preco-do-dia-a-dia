@@ -80,18 +80,19 @@
       <div class="mapa-caixa"><div id="mapaInfl"></div></div>
       <div class="escala"><span id="escMin"></span><i></i><span id="escMax"></span></div>
       <p class="nota">Cada distrito usa o ponto de coleta mais próximo. Clique num distrito para ver o ponto dele.</p>
-    </div>
-    <div class="cartao" data-surge>
-      <h2>Os 25 pontos</h2>
-      <p class="nota">Alta da cesta em 12 meses. A linha marca o IPCA.</p>
-      <ol class="rank-infl" id="rankInfl"></ol>
+      <details class="abre-lista">
+        <summary>Ver os 25 pontos em lista</summary>
+        <div class="dentro">
+          <p class="nota">Alta da cesta em 12 meses. A linha marca o IPCA.</p>
+          <ol class="rank-infl" id="rankInfl"></ol>
+        </div>
+      </details>
     </div>
   </section>
 
-  <section class="cartao limites" data-surge>
-    <p class="passo">Para ler com cuidado</p>
-    <h2>O que este índice não é</h2>
-    <ul class="lista-limites" data-fila>
+  <details class="abre-lista limites" data-surge>
+    <summary>O que este índice não é</summary>
+    <ul class="lista-limites dentro">
       <li><b>Não é o IPCA do bairro.</b> O IBGE não publica IPCA por bairro. Este é um índice do projeto, com a cesta do projeto.</li>
       <li><b>Os pesos são do Brasil.</b> Cada produto pesa como o seu item no IPCA nacional. Seis produtos sem item parecido recebem o peso médio.</li>
       <li><b>Carnes, frutas e verduras ficam fora.</b> Cortes e qualidade variam entre lojas, e a comparação deixaria de ser do mesmo produto.</li>
@@ -99,8 +100,8 @@
       <li><b>Só a capital, em 25 pontos.</b> Um ponto representa os distritos em volta. Dois vizinhos podem pagar preços diferentes.</li>
       <li><b>É o preço do site das redes.</b> O site consulta o preço que cada rede mostra na internet para o CEP. A prateleira pode ter outro preço.</li>
     </ul>
-    <a class="seta" href="metodo.html">Ver o método completo</a>
-  </section>
+    <a class="seta dentro" href="metodo.html">Ver o método completo</a>
+  </details>
 </main>
 
 <footer class="rodape">

@@ -94,18 +94,18 @@
           <p class="nota" id="mapaNota"></p>
         </section>
 
-        <section class="cartao" data-surge>
-          <h3>Total em cada rede</h3>
-          <ol class="ranking" id="ranking" aria-label="Total da lista em cada rede"></ol>
-        </section>
+        <details class="abre-lista" data-surge>
+          <summary>Total em cada rede</summary>
+          <ol class="ranking dentro" id="ranking" aria-label="Total da lista em cada rede"></ol>
+        </details>
 
-        <section class="cartao" data-surge>
-          <h3>Produto por produto</h3>
-          <p class="nota">O menor preço de cada linha fica em laranja. Um traço quer dizer indisponível nesta rede: o produto não tinha preço no site da rede para esse CEP. É dado, não erro.</p>
+        <details class="abre-lista" data-surge>
+          <summary>Produto por produto</summary>
+          <p class="nota dentro">O menor preço de cada linha fica em laranja. Um traço quer dizer indisponível nesta rede: o produto não tinha preço no site da rede para esse CEP. É dado, não erro.</p>
           <div class="rolagem" tabindex="0" role="region" aria-label="Tabela de preços por produto e rede">
             <table class="tabela" id="tabela"></table>
           </div>
-        </section>
+        </details>
       </div>
     </div>
   </div>
