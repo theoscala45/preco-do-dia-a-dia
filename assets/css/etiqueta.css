@@ -131,6 +131,13 @@ input,select{border-radius:10px}
 .rotulo-ponto .maplibregl-popup-content small{display:block;margin-top:3px;font:500 12px/1.2 var(--mono);color:var(--texto-2)}
 .rotulo-ponto .maplibregl-popup-tip{display:none}
 
+/* ---------- comparador: as duas colunas se enchem, sem o vão branco no meio em telas largas ---------- */
+@media (min-width:861px){
+  .cesta{grid-template-columns:minmax(0,1fr) minmax(0,clamp(430px,36vw,600px));gap:clamp(32px,5vw,72px)}
+  .cesta-texto{max-width:none}
+  .cesta-texto > p:not(.passo){max-width:34em}
+}
+
 /* ---------- movimento: a etiqueta da cesta balança uma vez, presa pelo furo ---------- */
 @media (prefers-reduced-motion:no-preference){
   .media{transform-origin:calc(100% - 16px) 16px;animation:balanca 1.7s var(--curva) 1.1s both}
