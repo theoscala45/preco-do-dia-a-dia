@@ -17,8 +17,8 @@ const mesLongo = d => new Date(d + 'T12:00').toLocaleDateString('pt-BR', { month
 const media = idx => Array.from({ length: N }, (_, t) => idx.reduce((s, i) => s + series[i][t], 0) / idx.length);
 const grupos = campo => [...new Set(geo.pontos.map(p => p[campo]))].map(nome => ({ nome, serie: media(geo.pontos.map((p, i) => (p[campo] === nome ? i : -1)).filter(i => i >= 0)) }));
 const ZONAS = grupos('zona'), PERFIS = grupos('perfil');
-const CORES = ['#FF7A1A', '#FFC56B', '#F3F1EC', '#B98A5E', '#8E8B85'];
-const COR_IPCA = '#C9CCD3';
+const CORES = ['#F26A0F', '#E3A21A', '#16161A', '#9C6B3E', '#8A8A92'];
+const COR_IPCA = '#7C818B';
 
 $('periodo').textContent = `${mesLongo(dados.datas[0])} a ${mesLongo(dados.datas.at(-1))}`;
 
@@ -65,10 +65,10 @@ function desenharGrafico(animar = true) {
   for (let k = 1; k < pontas.length; k++) if (pontas[k].y - pontas[k - 1].y < 17) pontas[k].y = pontas[k - 1].y + 17;
   for (const p of pontas) {
     const l = linhas[p.k];
-    g += `<circle cx="${X(N - 1)}" cy="${Y(l.serie.at(-1))}" r="4.5" fill="${l.cor}" stroke="#151517" stroke-width="2"/>`;
+    g += `<circle cx="${X(N - 1)}" cy="${Y(l.serie.at(-1))}" r="4.5" fill="${l.cor}" stroke="#FFFFFF" stroke-width="2"/>`;
     if (largo) g += `<text class="rot" x="${X(N - 1) + 12}" y="${p.y + 4.5}" fill="${l.cor}">${l.nome}</text>`;
   }
-  g += `</g><g id="guia" visibility="hidden"><line y1="${T}" y2="${H - B}" class="guia"/>${linhas.map(l => `<circle r="4.5" fill="${l.cor}" stroke="#151517" stroke-width="2"/>`).join('')}</g>`;
+  g += `</g><g id="guia" visibility="hidden"><line y1="${T}" y2="${H - B}" class="guia"/>${linhas.map(l => `<circle r="4.5" fill="${l.cor}" stroke="#FFFFFF" stroke-width="2"/>`).join('')}</g>`;
   svg.innerHTML = g;
 
   $('legenda').innerHTML = linhas.map(l => `<li><i style="background:${l.cor}"></i>${l.nome}<b>${sinal(l.serie.at(-1) - 100)}%</b></li>`).join('')
@@ -133,8 +133,8 @@ try {
     const antes = mapa.getStyle().layers.find(l => l.type === 'symbol')?.id;
     geo.distritos.features.forEach(f => { f.properties.v = (vars[f.properties.ponto] - mn) / (mx - mn || 1); });
     mapa.addSource('distritos', { type: 'geojson', data: geo.distritos });
-    mapa.addLayer({ id: 'distritos', type: 'fill', source: 'distritos', paint: { 'fill-color': ['interpolate', ['linear'], ['get', 'v'], 0, '#2B2927', 0.5, '#8A4513', 1, LARANJA], 'fill-opacity': 0.9 } }, antes);
-    mapa.addLayer({ id: 'escolhido', type: 'line', source: 'distritos', filter: ['==', ['get', 'ponto'], estado.ponto], paint: { 'line-color': '#FFFFFF', 'line-width': 2 } });
+    mapa.addLayer({ id: 'distritos', type: 'fill', source: 'distritos', paint: { 'fill-color': ['interpolate', ['linear'], ['get', 'v'], 0, '#F1ECE6', 0.5, '#F7B27A', 1, LARANJA], 'fill-opacity': 0.9 } }, antes);
+    mapa.addLayer({ id: 'escolhido', type: 'line', source: 'distritos', filter: ['==', ['get', 'ponto'], estado.ponto], paint: { 'line-color': '#16161A', 'line-width': 2 } });
     mapa.on('click', 'distritos', e => escolher(e.features[0].properties.ponto));
     mapa.on('mousemove', 'distritos', () => { mapa.getCanvas().style.cursor = 'pointer'; });
     mapa.on('mouseleave', 'distritos', () => { mapa.getCanvas().style.cursor = ''; });

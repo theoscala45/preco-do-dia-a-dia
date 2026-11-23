@@ -2,7 +2,7 @@
 // desce até o ponto de coleta e desenha o caminho de carro até a loja mais próxima de cada rede (ver DESIGN.md, "Mapa").
 // A sequência das rotas é uma linha do tempo do GSAP.
 const { gsap } = window;
-export const LARANJA = '#FF7A1A', CLARO = '#ECE9E3', NADA = 'rgba(0,0,0,0)';
+export const LARANJA = '#F26A0F', CLARO = '#7A7A82', NADA = 'rgba(0,0,0,0)';
 export const ESTILO = 'assets/mapa-estilo.json';
 const DEMO = 5;   // sem CEP, a cena das redes mostra Pinheiros
 // câmera da cidade inteira em cada cena do scroll: [giro, inclinação]
@@ -104,8 +104,8 @@ export function criarMapa(el, geo, rotas, valores, { calmo = false } = {}) {
   let ordem = redes.map((_, k) => k), melhor = 0;
 
   function corDistritos() {
-    if (est.cena === 3) return ['interpolate', ['linear'], ['get', 'v'], 0, '#2B2927', 0.5, '#8A4513', 1, LARANJA];
-    return ['case', ['==', ['get', 'ponto'], est.sel], '#B5560F', ['==', ['get', 'ponto'], est.hover], '#4A4A52', '#2B2B30'];
+    if (est.cena === 3) return ['interpolate', ['linear'], ['get', 'v'], 0, '#F1ECE6', 0.5, '#F7B27A', 1, LARANJA];
+    return ['case', ['==', ['get', 'ponto'], est.sel], '#F7A464', ['==', ['get', 'ponto'], est.hover], '#D6D6D0', '#E6E6E1'];
   }
 
   mapa.on('load', () => {
@@ -119,13 +119,13 @@ export function criarMapa(el, geo, rotas, valores, { calmo = false } = {}) {
     } }, antes);
     mapa.addSource('lojas', { type: 'geojson', data: { type: 'FeatureCollection', features: rotas.lojas.map(l => ({ type: 'Feature', properties: {}, geometry: { type: 'Point', coordinates: [l.lon, l.lat] } })) } });
     mapa.addLayer({ id: 'lojas', type: 'circle', source: 'lojas', minzoom: 11.6, paint: {
-      'circle-radius': ['interpolate', ['linear'], ['zoom'], 11.6, 1.5, 15, 3.5], 'circle-color': '#8B8881', 'circle-opacity': ['interpolate', ['linear'], ['zoom'], 11.6, 0, 12.6, 0.8],
+      'circle-radius': ['interpolate', ['linear'], ['zoom'], 11.6, 1.5, 15, 3.5], 'circle-color': '#9A9AA2', 'circle-opacity': ['interpolate', ['linear'], ['zoom'], 11.6, 0, 12.6, 0.8],
     } });
     redes.forEach((_, k) => camadasDeRota(mapa, 'rota' + k));
     mapa.addSource('pontos', { type: 'geojson', data: { type: 'FeatureCollection', features: geo.pontos.map((p, i) => ({ type: 'Feature', id: i, properties: { i }, geometry: { type: 'Point', coordinates: [p.lon, p.lat] } })) } });
     mapa.addLayer({ id: 'pontos-halo', type: 'circle', source: 'pontos', maxzoom: 12, paint: { 'circle-radius': 9, 'circle-color': LARANJA, 'circle-opacity': 0, 'circle-opacity-transition': { duration: 500 }, 'circle-blur': 0.6 } });
     mapa.addLayer({ id: 'pontos', type: 'circle', source: 'pontos', maxzoom: 12, paint: {
-      'circle-radius': 3, 'circle-color': LARANJA, 'circle-stroke-color': '#0C0C0D', 'circle-stroke-width': 1.5,
+      'circle-radius': 3, 'circle-color': LARANJA, 'circle-stroke-color': '#FFFFFF', 'circle-stroke-width': 1.5,
       'circle-radius-transition': { duration: 500 }, 'circle-opacity': 0.9,
     } });
     est.pronto = true;
@@ -145,17 +145,18 @@ export function criarMapa(el, geo, rotas, valores, { calmo = false } = {}) {
   // entra no bairro: câmera, depois uma rota por vez, da mais cara à mais barata, e o veredito
   function entrar(i) {
     const P = geo.pontos[i], D = porPonto[i];
+    const tem = k => D.linhas[k] && valores.preco(i, k) != null;   // rede sem preço neste ponto fica fora do mapa
     parar();
     ordem = valores.ordem(i).slice().reverse();          // do mais caro ao mais barato
     melhor = ordem.at(-1);
     est.destaque = -1;
     mapa.setPaintProperty('distritos', 'fill-extrusion-opacity', 0);
     redes.forEach((_, k) => {
-      tracar(mapa, 'rota' + k, D.linhas[k]);
+      tracar(mapa, 'rota' + k, tem(k) ? D.linhas[k] : null);
       apagar(mapa, 'rota' + k);
       const m = marcas[k], e = m.getElement();
       e.classList.remove('on', 'melhor', 'resto', 'ativo');
-      if (D.linhas[k]) { m.setLngLat([D.lojas[k].lon, D.lojas[k].lat]).addTo(mapa); e.querySelector('i').textContent = valores.preco(i, k); } else m.remove();
+      if (tem(k)) { m.setLngLat([D.lojas[k].lon, D.lojas[k].lat]).addTo(mapa); e.querySelector('i').textContent = valores.preco(i, k); } else m.remove();
     });
     origem.setLngLat([P.lon, P.lat]).addTo(mapa);
     origem.getElement().querySelector('b').textContent = P.bairro.split(' (')[0];
@@ -168,7 +169,7 @@ export function criarMapa(el, geo, rotas, valores, { calmo = false } = {}) {
     tl = gsap.timeline({ defaults: { duration: 1.35, ease: 'power2.inOut' } });
     tl.add(() => origem.getElement().classList.add('on'), 1.1);
     ordem.forEach((k, r) => {
-      if (!D.linhas[k]) return;
+      if (!tem(k)) return;
       tl.to(p[k], { v: 1, onUpdate: () => degrade(mapa, 'rota' + k, CLARO, p[k].v), onComplete: () => marcas[k].getElement().classList.add('on') }, 1.5 + r * 0.24);
     });
     tl.add(veredito, '>0.3');
