@@ -156,16 +156,11 @@ mm.add('(prefers-reduced-motion: no-preference)', () => {
       .from(caixa, { autoAlpha: 0, y: 56, duration: 0.8 })
       .from(caixa.children, { autoAlpha: 0, y: 18, duration: 0.6, stagger: 0.07 }, '<0.12');
   });
-  // as quatro etiquetas de números caem e quicam quando aparecem pela primeira vez, cada uma com um balanço diferente
+  // as quatro etiquetas de números dão um pequeno quique quando aparecem pela primeira vez (só sobe e desce, sem girar)
   const etiquetas = gsap.utils.toArray('.faixa-numeros > div');
   gsap.set(etiquetas, { autoAlpha: 0 });
   ScrollTrigger.create({ trigger: '.faixa-numeros', start: 'top 88%', once: true, onEnter: () => {
-    etiquetas.forEach((el, k) => {
-      const atraso = k * 0.14, lado = k % 2 ? 1 : -1;
-      gsap.timeline({ delay: atraso })
-        .fromTo(el, { y: -190, autoAlpha: 0, rotation: lado * (7 + k) }, { y: 0, autoAlpha: 1, rotation: 0, duration: 1.25, ease: 'bounce.out' }, 0)
-        .fromTo(el, { scaleY: 1.06, scaleX: 0.97, transformOrigin: '50% 100%' }, { scaleY: 1, scaleX: 1, duration: 0.5, ease: 'elastic.out(1,0.45)' }, 0.34);
-    });
+    gsap.fromTo(etiquetas, { y: -34, autoAlpha: 0 }, { y: 0, autoAlpha: 1, duration: 0.9, ease: 'bounce.out', stagger: 0.1, overwrite: true });
   } });
   // as linhas do gráfico se desenham com o scroll
   gsap.timeline({ scrollTrigger: { trigger: '#inflacao', start: 'top 55%', end: 'center 42%', scrub: 0.7 } })
