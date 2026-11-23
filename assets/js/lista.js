@@ -1,5 +1,5 @@
 // Página "Resultado da lista": loja única mais barata, economia, divisão em duas lojas, rota e tabela por produto.
-import { $, gsap, ScrollTrigger, calmo, reais, curto, rolar, carregar, guarda, ligarCep, iniciar } from './base.js';
+import { $, gsap, ScrollTrigger, calmo, reais, curto, rolar, carregar, guarda, ligarCep, iniciar, PREVIA } from './base.js';
 import { criarLista, calcular, ligarBusca, ligarItens, ECONOMIA_MINIMA } from './cesta.js';
 
 const [dados, geo, rotas] = await carregar('dados', 'geo', 'rotas');
@@ -84,7 +84,7 @@ function desenhar() {
   const ordem = porRede.map(r => r.k);
   const linhas = lista.itens.map((i, q) => {
     const p = dados.produtos[i], v = ordem.map(k => porRede.find(r => r.k === k).v[q]), menor = Math.min(...v.filter(x => x != null));
-    return `<tr><th scope="row">${p.nome}<small>${p.marca}, ${p.tam}</small></th>${v.map(x => (x == null ? '<td class="sem" title="indisponível nesta rede">—<span class="so-leitor">indisponível nesta rede</span></td>' : `<td${x === menor ? ' class="menor"' : ''}>${reais(x).replace('R$', '').trim()}</td>`)).join('')}</tr>`;
+    return `<tr><th scope="row"><a class="nome-link" href="produto.html?p=${p.id}${PREVIA ? '&previa' : ''}">${p.nome}</a><small>${p.marca}, ${p.tam}</small></th>${v.map(x => (x == null ? '<td class="sem" title="indisponível nesta rede">—<span class="so-leitor">indisponível nesta rede</span></td>' : `<td${x === menor ? ' class="menor"' : ''}>${reais(x).replace('R$', '').trim()}</td>`)).join('')}</tr>`;
   }).join('');
   $('tabela').innerHTML = `<thead><tr><th scope="col">Produto</th>${ordem.map((k, c) => `<th scope="col"${c ? '' : ' class="menor"'}>${nomes[k]}</th>`).join('')}</tr></thead><tbody>${linhas}</tbody>
     <tfoot><tr><th scope="row">Total</th>${porRede.map((r, c) => `<td${c ? '' : ' class="menor"'}>${reais(r.total).replace('R$', '').trim()}${r.faltam ? `<small>${plural(r.faltam, 'falta', 'faltam')}</small>` : ''}</td>`).join('')}</tr></tfoot>`;

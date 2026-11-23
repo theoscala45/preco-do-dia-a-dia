@@ -1,6 +1,6 @@
 // Lista de compras e as contas do comparador. A lista fica guardada no navegador e vale para todas as páginas.
 // Regras: mais barato numa loja só e, se compensar, dividido em duas. Nunca mais que duas.
-import { guarda, semAcento } from './base.js';
+import { guarda, semAcento, PREVIA } from './base.js';
 
 export const BASICA = ['P001', 'P003', 'P005', 'P007', 'P009', 'P011', 'P013', 'P017', 'P040', 'P024', 'P051', 'P023'];
 export const ECONOMIA_MINIMA = 2;   // dividir em duas lojas só aparece se economizar pelo menos isso, em reais
@@ -74,7 +74,7 @@ export function ligarItens(dados, lista, ul, preencher = () => {}) {
       if (!li) {
         const p = dados.produtos[i];
         li = document.createElement('li');
-        li.innerHTML = `<div><div class="item"><span class="nome" title="${p.nome}, ${p.marca}, ${p.tam}">${p.nome}<small>${p.marca}, ${p.tam}</small></span><span class="preco-item"></span><button class="tirar" type="button" aria-label="Tirar ${p.nome} ${p.marca} da lista">×</button></div></div>`;
+        li.innerHTML = `<div><div class="item"><span class="nome" title="${p.nome}, ${p.marca}, ${p.tam}"><a class="nome-link" href="produto.html?p=${p.id}${PREVIA ? '&previa' : ''}">${p.nome}</a><small>${p.marca}, ${p.tam}</small></span><span class="preco-item"></span><button class="tirar" type="button" aria-label="Tirar ${p.nome} ${p.marca} da lista">×</button></div></div>`;
         li.querySelector('.tirar').onclick = () => lista.tirar(i);
         ul.append(li); linhas.set(i, li);
         requestAnimationFrame(() => requestAnimationFrame(() => li.classList.add('on')));

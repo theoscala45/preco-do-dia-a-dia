@@ -1,5 +1,5 @@
 // Página "Método e fontes": as tabelas vêm dos mesmos arquivos que o resto do site usa.
-import { $, gsap, ScrollTrigger, calmo, carregar, iniciar } from './base.js';
+import { $, gsap, ScrollTrigger, calmo, carregar, iniciar, PREVIA } from './base.js';
 
 const [dados, geo, rotas] = await carregar('dados', 'geo', 'rotas');
 // tabela CSV simples (sem vírgula dentro dos campos) -> lista de objetos
@@ -21,7 +21,7 @@ $('grupos').innerHTML = cats.map(c => {
   return `<li><b>${todos.length}</b><span>${c}</span><small>${noIndice ? 'no índice' : 'só no comparador'}</small></li>`;
 }).join('');
 $('tabProdutos').innerHTML = `<thead><tr><th scope="col">Produto</th><th scope="col">Marca</th><th scope="col">Tamanho</th><th scope="col">Grupo</th><th scope="col">Índice</th></tr></thead><tbody>${
-  dados.produtos.map(p => `<tr><th scope="row">${p.nome}</th><td>${p.marca}</td><td>${p.tam}</td><td>${p.cat}</td><td>${p.indice ? 'sim' : 'não'}</td></tr>`).join('')}</tbody>`;
+  dados.produtos.map(p => `<tr><th scope="row"><a href="produto.html?p=${p.id}${PREVIA ? '&previa' : ''}">${p.nome}</a></th><td>${p.marca}</td><td>${p.tam}</td><td>${p.cat}</td><td>${p.indice ? 'sim' : 'não'}</td></tr>`).join('')}</tbody>`;
 $('tabPontos').innerHTML = `<thead><tr><th scope="col">Bairro</th><th scope="col">Zona</th><th scope="col">CEP</th><th scope="col">Rua</th><th scope="col">Renda do distrito</th></tr></thead><tbody>${
   geo.pontos.map(p => `<tr><th scope="row">${p.bairro}</th><td>${p.zona}</td><td>${p.cep}</td><td>${p.rua}</td><td>${p.perfil} <small>(R$ ${p.renda.toLocaleString('pt-BR')})</small></td></tr>`).join('')}</tbody>`;
 $('nCesta').textContent = dados.itens_na_cesta;
