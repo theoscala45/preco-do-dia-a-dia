@@ -24,6 +24,7 @@ site:
 - Guardar só fatos (preço, nome, tamanho); nada de fotos ou descrições.
 - Na página Método não citar IA. O site não leva o nome do autor.
 - Textos: sem travessão (—), sem tom de propaganda.
+- Tenda: em 23/11/2026 pediu calma (429) num CEP; ficou mais lento. Se pedir de novo, pausar o Tenda e avisar o Theo.
 - Push em `main` está autorizado. Commits terminam com as linhas de coautoria e da sessão.
 
 ## Regras da cesta de produtos (decididas pelo Theo em 20/11/2026)

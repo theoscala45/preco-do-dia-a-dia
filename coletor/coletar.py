@@ -79,6 +79,9 @@ class Tenda:
     O preco vem em um de dois blocos: o comum (SimplePriceComponent) ou o de promocao (PriceDiscountComponent),
     que mostra o preco antigo riscado e o novo. O coletor guarda o novo: e o que a pessoa paga."""
     rede_id = "tenda"
+    # em 23/11/2026 o site respondeu 429 (pedidos demais) num CEP: a pausa entre paginas e maior que nas outras redes.
+    # Se acontecer de novo, a combinacao com o Theo e pausar o Tenda e avisar.
+    pausa = (5.0, 8.0)
     site = "https://www.tendaatacado.com.br"
     hosts = ("tendaatacado.com.br",)   # enderecos que a pagina precisa para mostrar o preco; o resto e bloqueado
     loja = ""
