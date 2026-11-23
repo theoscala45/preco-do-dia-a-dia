@@ -1,0 +1,38 @@
+// Página "Produtos": os 100 da cesta, com busca e filtro por grupo. Cada linha leva à página do produto.
+import { $, carregar, iniciar, reais, guarda, semAcento, PREVIA } from './base.js';
+import { precosDoProduto } from './cesta.js';
+
+const [dados, geo] = await carregar('dados', 'geo');
+const q = PREVIA ? '&previa' : '';
+const ponto = guarda.ler('ponto', -1);
+const pontoValido = ponto >= 0 && ponto < geo.pontos.length ? ponto : -1;
+
+// o mais barato de cada produto (com o bairro da pessoa, se ela já deu o CEP)
+const itens = dados.produtos.map((p, k) => {
+  const tem = precosDoProduto(dados, k, pontoValido).filter(l => l.v != null).sort((a, b) => a.v - b.v);
+  return { p, barato: tem[0] || null, redes: tem.length, busca: semAcento(`${p.nome} ${p.marca} ${p.cat}`) };
+});
+const grupos = ['Todos', ...new Set(dados.produtos.map(p => p.cat))];
+let grupo = 'Todos', termo = '';
+
+$('pGrupos').innerHTML = grupos.map(g => `<button type="button" class="aba" data-g="${g}" aria-pressed="${g === 'Todos'}">${g}</button>`).join('');
+function desenhar() {
+  const t = semAcento(termo.trim());
+  const ver = itens.filter(i => (grupo === 'Todos' || i.p.cat === grupo) && (!t || i.busca.includes(t)));
+  $('pLista').innerHTML = ver.map(({ p, barato, redes }) => `<li><a href="produto.html?p=${p.id}${q}">
+    <span class="p-nome">${p.nome}<small>${p.marca}, ${p.tam}</small></span>
+    <span class="p-preco">${barato ? `<b>${reais(barato.v)}</b><small>mais barato no ${barato.nome}</small>` : '<small>sem preço lido</small>'}</span>
+    <span class="p-seta" aria-hidden="true">→</span></a></li>`).join('');
+  $('pVazio').hidden = ver.length > 0;
+  $('pContagem').textContent = `${ver.length} de ${itens.length} produtos${pontoValido >= 0 ? `. Preços do bairro ${geo.pontos[pontoValido].bairro.split(' (')[0]}` : ''}.`;
+}
+$('pBusca').addEventListener('input', e => { termo = e.target.value; desenhar(); });
+$('pGrupos').addEventListener('click', e => {
+  const b = e.target.closest('button'); if (!b) return;
+  grupo = b.dataset.g;
+  $('pGrupos').querySelectorAll('button').forEach(x => x.setAttribute('aria-pressed', x === b));
+  desenhar();
+});
+desenhar();
+// as animações comuns começam depois que a lista está na página
+iniciar(dados);

@@ -1,6 +1,6 @@
 // Página de um produto: o preço dele em cada rede. O produto vem do endereço (produto.html?p=P001).
 import { $, carregar, iniciar, reais, guarda, semAcento, PREVIA } from './base.js';
-import { criarLista } from './cesta.js';
+import { criarLista, precosDoProduto } from './cesta.js';
 
 const [dados, geo] = await carregar('dados', 'geo');
 
@@ -37,15 +37,7 @@ if (k < 0) {
   $('prodSub').textContent = `${p.marca}, ${p.tam}. Preços lidos em ${dia}.`;
 
   // preço de cada rede: nas que mudam com o CEP, o do bairro da pessoa ou, sem CEP, a mediana dos bairros
-  const mediana = v => { const s = [...v].sort((a, b) => a - b), m = s.length >> 1; return s.length % 2 ? s[m] : (s[m - 1] + s[m]) / 2; };
-  const nomes = dados.redes.map(r => r.nome.replace(' Atacado', ''));
-  const linhas = dados.redes.map((r, j) => {
-    const t = dados.precos[r.id];
-    let v;
-    if (r.por_cep) v = bairro ? t[ponto][k] : (() => { const a = t.map(x => x[k]).filter(x => x != null); return a.length ? mediana(a) : null; })();
-    else v = t[k];
-    return { j, nome: nomes[j], v, variaPorBairro: !!r.por_cep };
-  });
+  const linhas = precosDoProduto(dados, k, bairro ? ponto : -1);
   const tem = linhas.filter(l => l.v != null).sort((a, b) => a.v - b.v);
   const sem = linhas.filter(l => l.v == null);
 
@@ -88,6 +80,7 @@ if (k < 0) {
 
   // produto anterior e próximo
   const n = dados.produtos.length, ant = dados.produtos[(k - 1 + n) % n], prox = dados.produtos[(k + 1) % n];
+  $('prodTodos').href = 'produtos.html' + (PREVIA ? '?previa' : '');
   $('prodAnt').href = href(ant.id); $('prodAnt').textContent = `Anterior: ${ant.nome}`;
   $('prodProx').href = href(prox.id); $('prodProx').textContent = `Próximo: ${prox.nome}`;
   $('prodCorpo').hidden = false;

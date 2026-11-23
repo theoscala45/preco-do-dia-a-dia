@@ -86,3 +86,15 @@ export function ligarItens(dados, lista, ul, preencher = () => {}) {
   desenhar();
   return desenhar;
 }
+
+// preço de um produto em cada rede. Nas redes que mudam com o CEP vale o do ponto (se houver) ou, sem ponto, a mediana dos bairros.
+export function precosDoProduto(dados, k, ponto = -1) {
+  const mediana = v => { const s = [...v].sort((a, b) => a - b), m = s.length >> 1; return s.length % 2 ? s[m] : (s[m - 1] + s[m]) / 2; };
+  return dados.redes.map((r, j) => {
+    const t = dados.precos[r.id];
+    let v;
+    if (r.por_cep) v = ponto >= 0 ? t[ponto][k] : (() => { const a = t.map(x => x[k]).filter(x => x != null); return a.length ? mediana(a) : null; })();
+    else v = t[k];
+    return { j, nome: r.nome.replace(' Atacado', ''), v, variaPorBairro: !!r.por_cep };
+  });
+}
