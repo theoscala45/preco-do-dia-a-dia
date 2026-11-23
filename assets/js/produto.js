@@ -1,4 +1,5 @@
 // Página de um produto: o preço dele em cada rede. O produto vem do endereço (produto.html?p=P001).
+import { aoAparecer } from './aparecer.js';
 import { $, carregar, iniciar, reais, guarda, semAcento, PREVIA } from './base.js';
 import { criarLista, precosDoProduto } from './cesta.js';
 
@@ -59,14 +60,13 @@ if (k < 0) {
     }
     const barras = [...document.querySelectorAll('#prodRank .barra i')];
     // as barras crescem toda vez que o ranking entra na tela
-    const { gsap, ScrollTrigger } = window;
-    if (gsap && ScrollTrigger && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
-      gsap.registerPlugin(ScrollTrigger);
+    const { gsap } = window;
+    if (gsap && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
       const alvo = (i, el) => +el.style.getPropertyValue('--v');
       gsap.set(barras, { scaleX: 0 });
       const cresce = () => gsap.to(barras, { scaleX: alvo, duration: 0.8, ease: 'power3.out', stagger: 0.04, overwrite: true });
       const zera = () => gsap.set(barras, { scaleX: 0, overwrite: true });
-      ScrollTrigger.create({ trigger: '#prodRank', start: 'top 88%', end: 'bottom top', onEnter: cresce, onEnterBack: cresce, onLeave: zera, onLeaveBack: zera });
+      aoAparecer($('prodRank'), cresce, zera, { margem: '0px 0px -12% 0px' });
     }
   } else {
     $('prodRank').innerHTML = '<li class="divisa">Nenhuma rede tem preço lido para este produto.</li>';

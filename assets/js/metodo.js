@@ -1,4 +1,5 @@
 // Página "Método e fontes": as tabelas vêm dos mesmos arquivos que o resto do site usa.
+import { aoAparecer } from './aparecer.js';
 import { $, gsap, ScrollTrigger, calmo, carregar, iniciar, PREVIA } from './base.js';
 
 const [dados, geo, rotas] = await carregar('dados', 'geo', 'rotas');
@@ -61,5 +62,5 @@ if (!calmo) {
   gsap.set('.grupos li', { autoAlpha: 0, y: 20 });
   const entra = () => gsap.to('.grupos li', { autoAlpha: 1, y: 0, duration: 0.7, stagger: 0.08, overwrite: true, clearProps: 'transform,opacity,visibility' });
   const sai = () => gsap.set('.grupos li', { autoAlpha: 0, y: 20, overwrite: true });
-  ScrollTrigger.create({ trigger: '.grupos', start: 'top 88%', end: 'bottom top', onEnter: entra, onEnterBack: entra, onLeave: sai, onLeaveBack: sai });
+  aoAparecer(document.querySelector('.grupos'), entra, sai, { margem: '0px 0px -12% 0px' });
 }

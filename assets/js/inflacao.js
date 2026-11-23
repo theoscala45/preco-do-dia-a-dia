@@ -1,4 +1,5 @@
 // Página "Inflação por bairro": índice local contra o IPCA, por ponto, por zona e por faixa de renda.
+import { aoAparecer } from './aparecer.js';
 import { $, gsap, ScrollTrigger, calmo, reais, pct, curto, contar, carregar, guarda, ligarCep, iniciar } from './base.js';
 
 const [dados, geo] = await carregar('dados', 'geo');
@@ -83,7 +84,7 @@ function desenharGrafico(animar = true) {
 // o gráfico se desenha toda vez que entra na tela e volta a ficar vazio quando sai
 const desenhaNaEntrada = () => { visto = true; primeira = true; desenharGrafico(); };
 const esvaziaNaSaida = () => { visto = false; desenharGrafico(); };
-ScrollTrigger.create({ trigger: caixa, start: 'top 78%', end: 'bottom top', onEnter: desenhaNaEntrada, onEnterBack: desenhaNaEntrada, onLeave: esvaziaNaSaida, onLeaveBack: esvaziaNaSaida });
+aoAparecer(caixa, desenhaNaEntrada, esvaziaNaSaida, { margem: '0px 0px -22% 0px' });
 
 // passar o ponteiro: valores do mês
 caixa.addEventListener('pointermove', e => {
@@ -123,7 +124,7 @@ else {
   gsap.set('#rankInfl i', { scaleX: 0 });
   const cresce = () => gsap.to('#rankInfl i', { scaleX: (k, el) => +el.style.getPropertyValue('--v'), duration: 0.9, ease: 'power3.out', stagger: 0.025, overwrite: true });
   const zera = () => gsap.set('#rankInfl i', { scaleX: 0, overwrite: true });
-  ScrollTrigger.create({ trigger: '#rankInfl', start: 'top 85%', end: 'bottom top', onEnter: cresce, onEnterBack: cresce, onLeave: zera, onLeaveBack: zera });
+  aoAparecer($('rankInfl'), cresce, zera, { margem: '0px 0px -15% 0px' });
 }
 
 // ---------- mapa: distritos coloridos pela alta em 12 meses

@@ -2,6 +2,7 @@
 import { $, gsap, ScrollTrigger, calmo, reais, pct, curto, rolar, carregar, guarda, ligarCep, iniciar, irPara } from './base.js';
 import { criarLista, calcular, ligarBusca, ligarItens } from './cesta.js';
 import { pulo } from './cards.js';
+import { aoAparecer } from './aparecer.js';
 
 const [dados, geo, rotas] = await carregar('dados', 'geo', 'rotas');
 iniciar(dados);
@@ -71,7 +72,7 @@ const redesNoPonto = dados.pontos.map((pt, i) => {
     gsap.set(barrasHoje, { scaleX: 0 });
     const cresce = () => gsap.to(barrasHoje, { scaleX: alvoBarra, duration: 0.8, ease: 'power3.out', stagger: 0.04, overwrite: true });
     const zera = () => gsap.set(barrasHoje, { scaleX: 0, overwrite: true });
-    ScrollTrigger.create({ trigger: '#hoje', start: 'top 70%', end: 'bottom top', onEnter: cresce, onEnterBack: cresce, onLeave: zera, onLeaveBack: zera });
+    aoAparecer($('hoje'), cresce, zera, { margem: '0px 0px -30% 0px' });
   } else gsap.set(barrasHoje, { scaleX: alvoBarra });
 }
 // rota e loja mais próxima de cada rede, por ponto (OpenStreetMap)
@@ -211,7 +212,7 @@ mm.add('(prefers-reduced-motion: no-preference)', () => {
         .to(el, { scaleY: 1, scaleX: 1, duration: 0.65, ease: 'elastic.out(1, 0.4)' }, 0.47);                         // e volta com mola
     });
   };
-  ScrollTrigger.create({ trigger: '.faixa-numeros', start: 'top 88%', end: 'bottom top', onEnter: tocarFaixa, onEnterBack: tocarFaixa, onLeave: zerarFaixa, onLeaveBack: zerarFaixa });
+  aoAparecer(faixa, tocarFaixa, zerarFaixa, { margem: '0px 0px -12% 0px' });
   // as linhas do gráfico se desenham com o scroll
   gsap.timeline({ scrollTrigger: { trigger: '#inflacao', start: 'top 55%', end: 'center 42%', scrub: 0.7 } })
     .fromTo('#grafico .tr', { strokeDashoffset: 1 }, { strokeDashoffset: 0, ease: 'none', duration: 1, stagger: 0.012 })

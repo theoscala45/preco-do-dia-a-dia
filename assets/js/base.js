@@ -1,6 +1,7 @@
 // O que todas as páginas usam: dados, CEP e lista guardados no navegador, scroll suave (Lenis)
 // e as animações comuns (GSAP): cabeçalho, títulos que sobem por linha e blocos que surgem ao rolar.
-import { entradaDosCards } from './cards.js';
+import { ligarCards } from './cards.js';
+import { aoAparecer } from './aparecer.js';
 const { gsap, ScrollTrigger, SplitText, Lenis } = window;
 export { gsap, ScrollTrigger };
 
@@ -201,37 +202,37 @@ export function iniciar(dados) {
       const naDobra = el.getBoundingClientRect().top < innerHeight * 0.95;
       subirTitulo(el, { atraso: naDobra ? 0.12 : 0, aoRolar: !naDobra });
     });
-    entradaDosCards();   // os cards têm entrada própria (em arco, com mola); o resto sobe em lote
-    const blocos = gsap.utils.toArray('[data-surge]');
-    gsap.set(blocos, { autoAlpha: 0, y: 26 });
-    // sobem toda vez que entram na tela e voltam a ficar escondidos quando saem dela
+    // Revelações ao rolar: o elemento sobe quando aparece na tela e volta a ficar escondido quando sai dela, então toca toda vez.
+    // O observador (aparecer.js) também vê o que começa escondido (hidden) e aparece depois, como o resultado da lista.
     const sobe = lote => gsap.to(lote, { autoAlpha: 1, y: 0, duration: 0.9, stagger: 0.08, overwrite: true });
     const some = lote => gsap.set(lote, { autoAlpha: 0, y: 26, overwrite: true });
-    ScrollTrigger.batch(blocos, { start: 'top 92%', end: 'bottom top', onEnter: sobe, onEnterBack: sobe, onLeave: some, onLeaveBack: some });
+    const entraFila = lote => gsap.to(lote, { autoAlpha: 1, y: 0, duration: 0.6, stagger: 0.05, overwrite: true });
+    const saiFila = lote => gsap.set(lote, { autoAlpha: 0, y: 16, overwrite: true });
+    ligarCards();   // os cards têm entrada própria (em arco, com mola); o resto sobe em lote
+    const blocos = gsap.utils.toArray('[data-surge]');
+    gsap.set(blocos, { autoAlpha: 0, y: 26 });
+    aoAparecer(blocos, sobe, some);
+    // números que contam ao aparecer (e voltam a zero ao sair)
+    document.querySelectorAll('[data-conta]').forEach(el => {
+      el.textContent = '0';
+      aoAparecer(el, () => contar(el, +el.dataset.conta), () => zerarContagem(el));
+    });
+    // filhos que entram um depois do outro (linhas de lista e de tabela)
+    document.querySelectorAll('[data-fila]').forEach(pai => {
+      const filhos = [...pai.children];
+      gsap.set(filhos, { autoAlpha: 0, y: 16 });
+      aoAparecer(filhos, entraFila, saiFila, { margem: '0px 0px -6% 0px' });
+    });
 
     // barra fina no topo: quanto da página já foi lida
     const barra = document.createElement('div');
     barra.className = 'progresso';
     document.body.append(barra);
     gsap.fromTo(barra, { scaleX: 0 }, { scaleX: 1, ease: 'none', scrollTrigger: { start: 0, end: 'max', scrub: 0.3 } });
-    // números que contam ao entrar na tela
-    document.querySelectorAll('[data-conta]').forEach(el => {
-      el.textContent = '0';
-      const conta = () => contar(el, +el.dataset.conta), zera = () => zerarContagem(el);
-      ScrollTrigger.create({ trigger: el, start: 'top 92%', end: 'bottom top', onEnter: conta, onEnterBack: conta, onLeave: zera, onLeaveBack: zera });
-    });
     // elementos que andam um pouco mais devagar ou mais depressa que a página
     document.querySelectorAll('[data-desliza]').forEach(el => {
       const v = +el.dataset.desliza;
       gsap.fromTo(el, { y: v }, { y: -v, ease: 'none', scrollTrigger: { trigger: el, start: 'top bottom', end: 'bottom top', scrub: true } });
-    });
-    // filhos que entram um depois do outro (linhas de lista e de tabela)
-    document.querySelectorAll('[data-fila]').forEach(pai => {
-      const filhos = [...pai.children];
-      gsap.set(filhos, { autoAlpha: 0, y: 16 });
-      const entra = lote => gsap.to(lote, { autoAlpha: 1, y: 0, duration: 0.6, stagger: 0.05, overwrite: true });
-      const sai = lote => gsap.set(lote, { autoAlpha: 0, y: 16, overwrite: true });
-      ScrollTrigger.batch(filhos, { start: 'top 94%', end: 'bottom top', onEnter: entra, onEnterBack: entra, onLeave: sai, onLeaveBack: sai });
     });
     // linhas divisórias que se desenham com o scroll
     document.querySelectorAll('[data-risco]').forEach(el => {

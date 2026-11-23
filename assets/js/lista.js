@@ -1,6 +1,7 @@
 // Página "Resultado da lista": loja única mais barata, economia, divisão em duas lojas, rota e tabela por produto.
 import { $, gsap, ScrollTrigger, calmo, reais, curto, rolar, carregar, guarda, ligarCep, iniciar, PREVIA } from './base.js';
 import { criarLista, calcular, ligarBusca, ligarItens, ECONOMIA_MINIMA } from './cesta.js';
+import { aoAparecer } from './aparecer.js';
 let gatilhoRanking = null;
 
 const [dados, geo, rotas] = await carregar('dados', 'geo', 'rotas');
@@ -85,7 +86,7 @@ function desenhar() {
     if (!gatilhoRanking) {
       const cresce = () => gsap.to('#ranking i', { scaleX: (k, el) => +el.dataset.v, duration: 0.9, ease: 'power3.out', stagger: 0.05, overwrite: true });
       const zera = () => gsap.set('#ranking i', { scaleX: 0, overwrite: true });
-      gatilhoRanking = ScrollTrigger.create({ trigger: '#ranking', start: 'top 88%', end: 'bottom top', onEnter: cresce, onEnterBack: cresce, onLeave: zera, onLeaveBack: zera });
+      gatilhoRanking = aoAparecer($('ranking'), cresce, zera, { margem: '0px 0px -12% 0px' });
     }
   }
 
