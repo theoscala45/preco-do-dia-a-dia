@@ -125,32 +125,13 @@ button.quieto:active,.botao.quieto:active{
 .hoje-bloco,.cupom{box-shadow:var(--prof-forte),var(--topo-luz)}
 .cartao.numero.destaque{box-shadow:0 4px 0 var(--laranja),0 10px 22px rgba(242,106,15,.14),var(--topo-luz)}
 
+/* Só o que é clicável reage ao mouse. Cards de dados (etiquetas de números, "Hoje na cidade", resultados) não são botões:
+   eles só têm a animação de entrada. */
 @media (hover:hover) and (pointer:fine){
-  /* cards de dados: sobem 3 px e a parede de baixo cresce junto (anticipation leve: a mola passa um pouco do ponto ao subir) */
-  .hoje-bloco,.cartao.numero,.cartao.vencedor,.cartao.duas,.cartao.graf-grande,.resumo .cartao,.faixa-numeros > div,.grupos li{
-    transition:transform .22s var(--ease-mola),box-shadow .18s var(--ease-forte),opacity .2s var(--ease-forte);
-  }
-  .hoje-bloco:hover,.cartao.numero:hover,.cartao.vencedor:hover,.cartao.duas:hover,.cartao.graf-grande:hover,.grupos li:hover{
-    transform:translateY(-3px);
-    box-shadow:0 7px 0 var(--regua),0 16px 26px rgba(22,22,26,.12),var(--topo-luz);
-  }
-  .resumo .cartao:hover,.faixa-numeros > div:hover{transform:translateY(-4px);box-shadow:0 6px 0 var(--regua)}
-  .resumo .cartao:first-child:hover,.faixa-numeros > div:first-child:hover{box-shadow:0 6px 0 var(--tecla)}
-  /* secondary action: o furo da etiqueta balança quando o mouse chega */
-  .resumo .cartao:hover::before,.faixa-numeros > div:hover::before{animation:anel .55s var(--ease-forte)}
-
-  /* staging the focus: quem não está sob o mouse recua e fica mais discreto */
-  .hoje-grade:has(.hoje-bloco:hover) .hoje-bloco:not(:hover),
-  .portas:has(.porta:hover) .porta:not(:hover),
-  .resumo:has(.cartao:hover) .cartao:not(:hover),
-  .faixa-numeros:has(> div:hover) > div:not(:hover){opacity:.6;transform:scale(.985)}
+  /* staging the focus: entre os cartões-porta (que são links), quem não está sob o mouse recua */
+  .portas:has(.porta:hover) .porta:not(:hover){opacity:.6;transform:scale(.985)}
   .portas .porta{transition-property:transform,box-shadow,border-color,background,opacity}
 }
-@keyframes anel{
-  0%{transform:translateY(0) scale(1)}
-  30%{transform:translateY(-3px) scale(1.22)}
-  65%{transform:translateY(1px) scale(.92)}
-  100%{transform:none}
 }
 
 /* Cards clicáveis: o toque afunda (anticipation) e, ao soltar, voltam com mola (follow through) */
