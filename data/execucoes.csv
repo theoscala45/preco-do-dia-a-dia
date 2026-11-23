@@ -573,7 +573,7 @@ data,rede_id,cep_id,produtos_tentados,produtos_lidos,resultado,erro,loja
 2026-11-23,nagumo,C02,97,97,ok,,051-PQ CONTI (Avenida Joao Palma Aleman; 715; Guarulhos)
 2026-11-23,nagumo,C03,97,97,ok,mesma loja do C02: precos repetidos,051-PQ CONTI (Avenida Joao Palma Aleman; 715; Guarulhos)
 2026-11-23,nagumo,C04,97,97,ok,mesma loja do C02: precos repetidos,051-PQ CONTI (Avenida Joao Palma Aleman; 715; Guarulhos)
-2026-11-23,nagumo,C05,97,0,falha,a primeira pagina falhou: P001: Locator.wait_for: Timeout 15000ms exceeded.,
+2026-11-23,nagumo,C05,97,97,ok,,050-CAMILOPO (Rua Leonilda; 265; Santo Andre)
 2026-11-23,nagumo,C06,97,97,ok,,046-OSASCO (Rua Avestruz; 688; Osasco)
 2026-11-23,nagumo,C07,97,97,ok,mesma loja do C06: precos repetidos,046-OSASCO (Rua Avestruz; 688; Osasco)
 2026-11-23,nagumo,C08,97,97,ok,mesma loja do C06: precos repetidos,046-OSASCO (Rua Avestruz; 688; Osasco)
