@@ -219,6 +219,13 @@ mm.add('(prefers-reduced-motion: no-preference)', () => {
     .fromTo('#grafico .fim', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.12, ease: 'none' });
 });
 
+// ---------- botão "Ver meu bairro": ao clicar, um anel laranja sai do botão (o brilho de vez em quando está no CSS)
+{
+  const botaoCep = document.querySelector('#cepForm button[type="submit"]');
+  botaoCep?.addEventListener('click', () => { botaoCep.classList.remove('pulsa'); void botaoCep.offsetWidth; botaoCep.classList.add('pulsa'); });
+  botaoCep?.addEventListener('animationend', e => { if (e.animationName === 'anel-botao') botaoCep.classList.remove('pulsa'); });
+}
+
 // ---------- CEP
 function escolher(i, viaCep) {
   estado.ponto = i; estado.cepDado = true;
