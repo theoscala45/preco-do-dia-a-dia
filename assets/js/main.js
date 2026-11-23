@@ -1,6 +1,7 @@
 // Página inicial: o mapa, o CEP, as cenas do scroll e a lista de compras.
 import { $, gsap, ScrollTrigger, calmo, reais, pct, curto, rolar, carregar, guarda, ligarCep, iniciar, irPara } from './base.js';
 import { criarLista, calcular, ligarBusca, ligarItens } from './cesta.js';
+import { pulo } from './cards.js';
 
 const [dados, geo, rotas] = await carregar('dados', 'geo', 'rotas');
 iniciar(dados);
@@ -160,7 +161,7 @@ mm.add('(prefers-reduced-motion: no-preference)', () => {
   const etiquetas = gsap.utils.toArray('.faixa-numeros > div');
   gsap.set(etiquetas, { autoAlpha: 0 });
   ScrollTrigger.create({ trigger: '.faixa-numeros', start: 'top 88%', once: true, onEnter: () => {
-    gsap.fromTo(etiquetas, { y: -34, autoAlpha: 0 }, { y: 0, autoAlpha: 1, duration: 0.9, ease: 'bounce.out', stagger: 0.1, overwrite: true });
+    gsap.fromTo(etiquetas, { y: -34, autoAlpha: 0 }, { y: 0, autoAlpha: 1, duration: 0.9, ease: 'bounce.out', stagger: 0.1, overwrite: true, onComplete: () => gsap.set(etiquetas, { clearProps: 'all' }) });
   } });
   // as linhas do gráfico se desenham com o scroll
   gsap.timeline({ scrollTrigger: { trigger: '#inflacao', start: 'top 55%', end: 'center 42%', scrub: 0.7 } })
@@ -236,6 +237,7 @@ function desenharCupom() {
   const { melhor, dupla, vale } = calc;
   $('totLoja').textContent = melhor.rede.nome;
   rolar($('totInt'), $('totCent'), melhor.total);
+  pulo($('totInt').parentElement);   // o total "pula" quando a conta muda: feedback que mostra o que mudou
   $('totFalta').textContent = melhor.faltam ? `${melhor.faltam} ${melhor.faltam > 1 ? 'itens indisponíveis' : 'item indisponível'} nesta rede. O total não conta com ${melhor.faltam > 1 ? 'eles' : 'ele'}.` : '';
   $('totDuas').hidden = !vale;
   desenharRanking();

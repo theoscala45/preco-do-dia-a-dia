@@ -19,10 +19,18 @@ $('pGrupos').innerHTML = grupos.map(g => `<button type="button" class="aba" data
 function desenhar() {
   const t = semAcento(termo.trim());
   const ver = itens.filter(i => (grupo === 'Todos' || i.p.cat === grupo) && (!t || i.busca.includes(t)));
-  $('pLista').innerHTML = ver.map(({ p, barato, redes }) => `<li><a href="produto.html?p=${p.id}${q}">
+  const linha = ({ p, barato }) => `<li><a href="produto.html?p=${p.id}${q}">
     <span class="p-nome">${p.nome}<small>${p.marca}, ${p.tam}</small></span>
     <span class="p-preco">${barato ? `<b>${reais(barato.v)}</b><small>mais barato no ${barato.nome}</small>` : '<small>sem preço lido</small>'}</span>
-    <span class="p-seta" aria-hidden="true">→</span></a></li>`).join('');
+    <span class="p-seta" aria-hidden="true">→</span></a></li>`;
+  // Lei de Miller: sem filtro nem busca, os 100 aparecem em 4 grupos com título, em vez de uma fila única
+  if (grupo === 'Todos' && !t) {
+    const porGrupo = new Map();
+    ver.forEach(i => { if (!porGrupo.has(i.p.cat)) porGrupo.set(i.p.cat, []); porGrupo.get(i.p.cat).push(i); });
+    $('pLista').innerHTML = [...porGrupo].map(([cat, lista]) => `<li class="prods-grupo" role="presentation"><h2>${cat}</h2><span>${lista.length} produtos</span></li>${lista.map(linha).join('')}`).join('');
+  } else {
+    $('pLista').innerHTML = ver.map(linha).join('');
+  }
   $('pVazio').hidden = ver.length > 0;
   $('pContagem').textContent = `${ver.length} de ${itens.length} produtos${pontoValido >= 0 ? `. Preços do bairro ${geo.pontos[pontoValido].bairro.split(' (')[0]}` : ''}.`;
 }

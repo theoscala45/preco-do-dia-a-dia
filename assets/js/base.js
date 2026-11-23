@@ -1,5 +1,6 @@
 // O que todas as páginas usam: dados, CEP e lista guardados no navegador, scroll suave (Lenis)
 // e as animações comuns (GSAP): cabeçalho, títulos que sobem por linha e blocos que surgem ao rolar.
+import { entradaDosCards } from './cards.js';
 const { gsap, ScrollTrigger, SplitText, Lenis } = window;
 export { gsap, ScrollTrigger };
 
@@ -43,10 +44,13 @@ export function ligarCep(geo, form, campo, msg, aoEscolher) {
     e.preventDefault();
     const d = campo.value.replace(/\D/g, '');
     msg.className = 'cep-msg erro';
-    if (d.length !== 8) { msg.textContent = 'O CEP tem 8 números. Confira e tente de novo.'; return; }
-    const i = pontoDoCep(geo, d);
+    // seja liberal no que aceita: CEP de São Paulo digitado sem o zero do começo (5422-000) também vale
+    const cep8 = d.length === 7 ? '0' + d : d;
+    if (cep8.length !== 8) { msg.textContent = 'O CEP tem 8 números. Confira e tente de novo.'; return; }
+    const i = pontoDoCep(geo, cep8);
     if (i < 0) { msg.textContent = 'Esse CEP fica fora da capital. Por enquanto o site cobre só a cidade de São Paulo.'; return; }
     msg.className = 'cep-msg'; msg.textContent = '';
+    if (d.length === 7) campo.value = cep8.slice(0, 5) + '-' + cep8.slice(5);
     guarda.gravar('cep', campo.value); guarda.gravar('ponto', i);
     aoEscolher(i, campo.value);
   });
@@ -130,7 +134,11 @@ export function iniciar(dados) {
         const f = medir(atual);
         gsap.set(linha, { x: f.x, y: f.y, width: f.w, autoAlpha: 1 });
         if (!calmo) {
-          if (antes && (Math.abs(antes.x - f.x) > 1 || Math.abs(antes.w - f.w) > 1)) gsap.from(linha, { x: antes.x, y: antes.y, width: antes.w, duration: 1.1, ease: 'elastic.out(1, 0.5)' });
+          if (antes && (Math.abs(antes.x - f.x) > 1 || Math.abs(antes.w - f.w) > 1)) {
+            // em x a mola; em y um pulinho (sobe e cai): juntos desenham um arco
+            gsap.fromTo(linha, { x: antes.x, width: antes.w }, { x: f.x, width: f.w, duration: 1.1, ease: 'elastic.out(1, 0.5)' });
+            gsap.fromTo(linha, { y: antes.y }, { keyframes: [{ y: f.y - 8, duration: 0.2, ease: 'power2.out' }, { y: f.y, duration: 0.55, ease: 'bounce.out' }] });
+          }
           else if (!antes) gsap.from(linha, { scaleX: 0, duration: 0.6, ease: 'power3.out' });
         }
         gravar(f);
@@ -180,6 +188,7 @@ export function iniciar(dados) {
       const naDobra = el.getBoundingClientRect().top < innerHeight * 0.95;
       subirTitulo(el, { atraso: naDobra ? 0.12 : 0, aoRolar: !naDobra });
     });
+    entradaDosCards();   // os cards têm entrada própria (em arco, com mola); o resto sobe em lote
     const blocos = gsap.utils.toArray('[data-surge]');
     gsap.set(blocos, { autoAlpha: 0, y: 26 });
     ScrollTrigger.batch(blocos, { start: 'top 92%', once: true, onEnter: lote => gsap.to(lote, { autoAlpha: 1, y: 0, duration: 0.9, stagger: 0.08, overwrite: true }) });

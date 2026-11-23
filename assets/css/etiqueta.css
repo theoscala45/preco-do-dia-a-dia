@@ -98,9 +98,80 @@ button.quieto:active,.botao.quieto:active{
 
 /* ---------- cartões: borda de baixo grossa, como o fundo de uma prateleira ---------- */
 .cartao,.hoje-bloco,.porta,.cupom,.resultado{border-radius:14px}
-.hoje-bloco{border-bottom:4px solid var(--regua)}
-.cupom{border-bottom:4px solid var(--regua)}
 .cap-caixa{border-radius:14px}
+
+/* =====================================================================================
+   Movimento e profundidade dos cards (um sistema só)
+   - Profundidade (desenho sólido em 3D): luz de cima, uma "parede" de baixo e uma sombra suave. Duas alturas:
+     cards de leitura (--prof-leve) e cards que parecem peças (--prof-forte).
+   - Hover só com mouse de verdade (hover: hover) e só nos cards que mostram dados; cards clicáveis têm o seu próprio gesto.
+   - Foco em cena: ao passar o mouse num card, os irmãos dele recuam.
+   - Feedback exagerado onde o clique importa; pequeno onde é frequente (hover).
+   ===================================================================================== */
+:root{
+  --ease-forte:cubic-bezier(0.23,1,0.32,1);
+  --ease-mola:cubic-bezier(0.34,1.56,0.64,1);
+  --prof-leve:0 4px 0 var(--linha-2),0 10px 22px rgba(22,22,26,.07);
+  --prof-forte:0 5px 0 var(--regua),0 12px 22px rgba(22,22,26,.10);
+  --topo-luz:inset 0 1px 0 rgba(255,255,255,.9);
+}
+/* o card ainda não entrou: fica escondido até o movimento assumir (se o script falhar, o .mostra libera depois de 5 s) */
+.anima [data-card]{visibility:hidden}
+.mostra [data-card]{visibility:visible}
+
+.cartao:not(.resumo .cartao),.cap-caixa,.resultado{box-shadow:var(--prof-leve),var(--topo-luz)}
+.hoje-bloco,.cupom{box-shadow:var(--prof-forte),var(--topo-luz)}
+.cartao.numero.destaque{box-shadow:0 4px 0 var(--laranja),0 10px 22px rgba(242,106,15,.14),var(--topo-luz)}
+
+@media (hover:hover) and (pointer:fine){
+  /* cards de dados: sobem 3 px e a parede de baixo cresce junto (anticipation leve: a mola passa um pouco do ponto ao subir) */
+  .hoje-bloco,.cartao.numero,.cartao.vencedor,.cartao.duas,.cartao.graf-grande,.resumo .cartao,.faixa-numeros > div,.grupos li{
+    transition:transform .22s var(--ease-mola),box-shadow .18s var(--ease-forte),opacity .2s var(--ease-forte);
+  }
+  .hoje-bloco:hover,.cartao.numero:hover,.cartao.vencedor:hover,.cartao.duas:hover,.cartao.graf-grande:hover,.grupos li:hover{
+    transform:translateY(-3px);
+    box-shadow:0 7px 0 var(--regua),0 16px 26px rgba(22,22,26,.12),var(--topo-luz);
+  }
+  .resumo .cartao:hover,.faixa-numeros > div:hover{transform:translateY(-4px);box-shadow:0 6px 0 var(--regua)}
+  .resumo .cartao:first-child:hover,.faixa-numeros > div:first-child:hover{box-shadow:0 6px 0 var(--tecla)}
+  /* secondary action: o furo da etiqueta balança quando o mouse chega */
+  .resumo .cartao:hover::before,.faixa-numeros > div:hover::before{animation:anel .55s var(--ease-forte)}
+
+  /* staging the focus: quem não está sob o mouse recua e fica mais discreto */
+  .hoje-grade:has(.hoje-bloco:hover) .hoje-bloco:not(:hover),
+  .portas:has(.porta:hover) .porta:not(:hover),
+  .resumo:has(.cartao:hover) .cartao:not(:hover),
+  .faixa-numeros:has(> div:hover) > div:not(:hover){opacity:.6;transform:scale(.985)}
+  .portas .porta{transition-property:transform,box-shadow,border-color,background,opacity}
+}
+@keyframes anel{
+  0%{transform:translateY(0) scale(1)}
+  30%{transform:translateY(-3px) scale(1.22)}
+  65%{transform:translateY(1px) scale(.92)}
+  100%{transform:none}
+}
+
+/* Cards clicáveis: o toque afunda (anticipation) e, ao soltar, voltam com mola (follow through) */
+.prods-lista a:active{transform:scale(.992);transition-duration:.06s}
+.porta:active{transform:translateY(5px) scale(1.01,.985)}
+
+/* Botões: ao apertar, achatam (squash); ao soltar, a mola passa um pouco do ponto */
+button[type="submit"]:not(.quieto),.botao,#basica2{transition:transform .26s var(--ease-mola),box-shadow .16s var(--ease-forte),background .16s}
+button[type="submit"]:not(.quieto):active,.botao:active,#basica2:active{transform:translateY(4px) scale(1.018,.97);transition-duration:.06s}
+button.quieto,.botao.quieto{transition:transform .24s var(--ease-mola),box-shadow .16s var(--ease-forte),background .16s,border-color .16s,color .16s}
+button.quieto:active,.botao.quieto:active{transform:translateY(3px) scale(1.015,.975);transition-duration:.06s}
+
+/* Lei de Fitts: alvos maiores onde se clica com frequência */
+.item .tirar{position:relative}
+.item .tirar::after{content:"";position:absolute;inset:-9px}
+.cap .seta{padding:12px 0;margin-top:6px}
+.topo nav a{padding-top:12px;padding-bottom:12px}
+@media (pointer:coarse){
+  button.quieto,.botao.quieto,.aba,.menu-botao{min-height:44px}
+  .topo nav a{padding:14px 16px}
+  .sugestoes button{min-height:48px}
+  .prods-lista a{padding-top:18px;padding-bottom:18px}
+}
 
 /* ---------- cartões-porta (Inflação e Método): peças em relevo que sobem no hover e afundam ao clicar ---------- */
 .portas{padding-bottom:clamp(72px,8vw,128px)}
@@ -247,6 +318,10 @@ a.seta.volta:hover::before{transform:translateX(-5px)}
 .p-preco b{font:800 17px/1.1 var(--titulo);font-variant-numeric:tabular-nums}
 .p-seta{color:var(--azul);transition:transform .25s var(--curva)}
 .prods-lista a:hover .p-seta{transform:translateX(4px)}
+.prods-lista .prods-grupo{display:flex;align-items:baseline;justify-content:space-between;gap:16px;padding:30px 0 10px;border-bottom:2px solid var(--regua)}
+.prods-lista .prods-grupo:first-child{padding-top:14px}
+.prods-grupo h2{font:800 clamp(24px,2.4vw,32px)/1 var(--letreiro);letter-spacing:0;margin:0}
+.prods-grupo span{font:500 12px/1 var(--mono);color:var(--texto-2)}
 .prods-vazio{margin-top:24px;color:var(--texto-2)}
 .prod-todos{margin-top:22px}
 @media (max-width:860px){
