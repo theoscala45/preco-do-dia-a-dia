@@ -218,3 +218,36 @@ está com `dados=exemplo`: o site mostra preços inventados com a faixa "Dados d
   pedido, perguntar quando houver duas leituras e não repetir o erro.
 - Textos do site: sem travessão (—), sem tom de propaganda, sem citar IA na página Método, sem o nome do autor.
 - Push em `main` está autorizado. Commits com as linhas de coautoria e da sessão da conta nova.
+
+## 12. Como fazer o projeto crescer
+
+Os passos já existem no código; o que muda é o cuidado com o tempo da coleta e com as regras do Theo.
+
+**Mais bairros (hoje 25, cinco por zona).**
+1. Nova linha em `data/ceps.csv` (próximo código, C26...), com bairro, zona, CEP e rua.
+2. `python3 tools/baixar_renda.py` (faixa de renda; o nome do bairro precisa bater com um dos 96 distritos).
+3. Pôr o código e o distrito em `PONTO_DISTRITO` de `tools/preparar_mapa.py` e rodar `python3 tools/preparar_mapa.py --pontos`.
+4. `python3 tools/buscar_lojas_e_rotas.py pontos`, depois `rotas`, depois `python3 tools/preparar_geo.py`.
+5. Trocar os "25" fixos nos textos do site e do método.
+6. Custo: cada bairro novo soma uns 10 a 20 minutos de coleta por noite (o Tenda lê bairro por bairro, devagar; Atacadão,
+   Hirota e Nagumo só se cair numa loja nova). A coleta já vai até umas 09h30 com as reservas, e cada parte do fluxo
+   tem limite de 5 horas. Mais de 5 a 10 bairros pede rever as partes do `coleta.yml`.
+7. O bairro novo começa sem histórico; o índice dele só compara a partir do primeiro dia coletado.
+
+**Mais produtos.** O Theo decidiu que a cesta fica com 100: produto fraco é trocado, não somado. Para trocar ou, se ele
+mudar de ideia, somar:
+1. Linha em `data/produtos.csv` (marca e tamanho fixos, `compara_por`, `entra_no_indice`).
+2. O link do produto em cada uma das 10 redes em `data/links.csv`, com o `status` certo (ver `data/LEIAME.md`). Achar
+   os links é o trabalho grande: sitemap ou busca do próprio site, página por página, respeitando o robots.txt.
+3. O subitem do IPCA em `SUBITEM` de `tools/baixar_ibge.py`, e rodar o script.
+4. Regra: o produto tem que existir em pelo menos 8 das 10 redes.
+
+**Mais redes.**
+1. Ler o robots.txt e os termos de uso antes de tudo. Se os termos pedirem autorização, escrever o e-mail (o Theo
+   prefere redes que não pedem).
+2. Uma classe nova em `coletor/coletar.py`, no molde da rede mais parecida (por CEP, por loja ou preço único), e
+   entrar em `REDES`.
+3. Linha em `data/redes.csv` e os 100 links em `data/links.csv`.
+4. Liberar o site da rede no ambiente da nuvem, para testar.
+5. Testar numa cópia com `--limite` e `--redes`, depois rodar o fluxo `coleta.yml` só para ela.
+6. Atualizar a tabela de redes e os textos da página Método.
