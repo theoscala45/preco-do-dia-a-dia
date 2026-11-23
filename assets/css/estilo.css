@@ -525,12 +525,6 @@ details.abre-lista + details.abre-lista,.pagina .cartao + details.abre-lista,.pa
 .cap p + p{margin-top:12px}
 .cap-caixa > p:not(.passo):not(.nota){color:var(--texto-1)}
 .cap .seta{margin-top:18px}
-.extremos{margin-top:20px;display:grid;gap:1px;background:var(--linha);border:1px solid var(--linha);border-radius:14px;overflow:hidden}
-.extremos > div{display:flex;justify-content:space-between;gap:16px;align-items:center;padding:13px 16px;background:var(--sup)}
-.extremos dt{white-space:nowrap;font:500 13px/1.2 var(--corpo);color:var(--texto-2)}
-.extremos dd{font:500 14px/1.2 var(--corpo);text-align:right}
-.extremos b{font:700 17px/1 var(--titulo);font-variant-numeric:tabular-nums;margin-left:8px}
-.extremos > div:first-child b{color:var(--laranja)}
 .grafico{margin-top:20px}
 .grafico svg{display:block;width:100%;height:auto;overflow:visible}
 .grafico figcaption{margin-top:10px}
