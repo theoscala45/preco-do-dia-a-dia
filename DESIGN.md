@@ -2,7 +2,7 @@
 
 > **Atualização de 23/11/2026.** O visual de hoje é claro (branco, laranja `#F26A0F` e azul `#2448E0`) e a identidade é a **etiqueta de gôndola**, em `assets/css/etiqueta.css` (carregado depois do `estilo.css`). O texto abaixo, de 17/11, descreve o tema escuro antigo e vale só como histórico.
 >
-> - O preço é a marca: números pesados (peso 800 a 900) e letras apertadas.
+> - O preço é a marca: títulos e números grandes em **Big Shoulders Display** (letreiro de mercado, licença OFL, `assets/fonts`); texto corrido e números pequenos em Red Hat.
 > - Seções separadas por uma **régua de prateleira** (linha grossa com marcas) e uma presilha laranja.
 > - Números e a cesta média viram **etiquetas** (borda de 2 px, furo no canto); a primeira, em laranja.
 > - A etiqueta da cesta no início balança uma vez ao carregar (só com movimento liberado).

@@ -2,18 +2,27 @@
    o preço é a marca do site, as seções ficam sobre uma régua de prateleira e os números viram etiquetas.
    Para voltar ao visual anterior, é só tirar o link deste arquivo das páginas. */
 
+@font-face{font-family:"Big Shoulders Display";font-style:normal;font-weight:100 900;font-display:swap;src:url(../fonts/big-shoulders-display-latin-wght-normal.woff2) format("woff2")}
 :root{
+  --letreiro:"Big Shoulders Display","Red Hat Display",system-ui,sans-serif;
   --regua:var(--texto);
   --tag-borda:2px solid var(--texto);
 }
 
 /* ---------- letras: números e títulos mais pesados, como preço de prateleira ---------- */
-.titulo,h2{font-weight:800;letter-spacing:-.04em}
-.titulo{letter-spacing:-.042em}
+/* letreiro de mercado (Big Shoulders Display) nos títulos e nos números grandes; o texto e os números pequenos ficam em Red Hat */
+.titulo,h2,.preco,.preco b,.preco sup,.faixa-numeros b,.resumo b,.grupos b,.resultado h2{font-family:var(--letreiro)}
+.titulo{font-weight:800;font-size:clamp(44px,5.2vw,78px);line-height:.98;letter-spacing:-.005em}
+h2{font-weight:800;letter-spacing:0;font-size:clamp(34px,3.4vw,48px);line-height:1}
+.resultado h2{font-size:30px}
+.hoje h2{font-family:var(--letreiro);font-weight:800;letter-spacing:0;font-size:clamp(40px,4.4vw,64px);line-height:1}
 h3{font-weight:800}
-.preco{font-weight:800;letter-spacing:-.045em}
+.preco{font-weight:800;letter-spacing:0}
 .preco b{font-weight:800}
 .redes .val,.hoje-lista .v,.rank-redes .v,.tot-linha b{font-weight:800}
+
+.abre .titulo{max-width:8.6em}
+@media (min-width:861px){.com-resultado .abre .titulo{font-size:clamp(34px,3.4vw,46px);max-width:none}}
 
 /* ---------- marca: uma etiqueta com furo no lugar da bolinha ---------- */
 .marca::before{
@@ -59,7 +68,7 @@ input,select{border-radius:10px}
   border:var(--tag-borda);background:var(--fundo);
 }
 .media > span:first-child{padding-right:26px}
-.media .preco b{font-size:68px}
+.media .preco b{font-size:88px}
 
 /* ---------- faixa de números: quatro etiquetas ---------- */
 .faixa-numeros{gap:clamp(14px,1.8vw,26px)}
@@ -70,7 +79,7 @@ input,select{border-radius:10px}
   content:"";position:absolute;right:12px;top:12px;width:11px;height:11px;border-radius:50%;
   border:var(--tag-borda);background:var(--fundo);
 }
-.faixa-numeros b{font-weight:900;font-size:clamp(48px,6vw,96px);letter-spacing:-.06em}
+.faixa-numeros b{font-weight:800;font-size:clamp(64px,8vw,128px);line-height:.85;letter-spacing:0}
 .faixa-numeros span{margin-top:12px}
 .faixa-numeros > div:first-child{background:var(--laranja);border-color:var(--laranja)}
 .faixa-numeros > div:first-child b,.faixa-numeros > div:first-child span{color:#fff}
@@ -90,12 +99,12 @@ input,select{border-radius:10px}
 /* ---------- página Método: o resumo e os grupos também são etiquetas ---------- */
 .resumo .cartao{position:relative;border:var(--tag-borda);border-radius:8px;background:var(--fundo);padding:24px 24px 22px}
 .resumo .cartao::before{content:"";position:absolute;right:12px;top:12px;width:11px;height:11px;border-radius:50%;border:var(--tag-borda);background:var(--fundo)}
-.resumo b{font-weight:900;letter-spacing:-.06em}
+.resumo b{font-weight:800;font-size:clamp(68px,8vw,120px);line-height:.85;letter-spacing:0}
 .resumo .cartao:first-child{background:var(--laranja);border-color:var(--laranja)}
 .resumo .cartao:first-child b,.resumo .cartao:first-child dt{color:#fff}
 .resumo .cartao:first-child::before{border-color:#fff;background:var(--laranja)}
 .grupos li{border-radius:8px;border-bottom:4px solid var(--regua)}
-.grupos b{font-weight:900;letter-spacing:-.05em}
+.grupos b{font-weight:800;font-size:54px;line-height:.9;letter-spacing:0}
 
 /* ---------- movimento: a etiqueta da cesta balança uma vez, presa pelo furo ---------- */
 @media (prefers-reduced-motion:no-preference){
@@ -111,5 +120,5 @@ input,select{border-radius:10px}
 
 @media (max-width:860px){
   .media{margin-top:20px}
-  .media .preco b{font-size:56px}
+  .media .preco b{font-size:72px}
 }
