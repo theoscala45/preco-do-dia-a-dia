@@ -98,10 +98,37 @@ button.quieto:active,.botao.quieto:active{
 
 /* ---------- cartões: borda de baixo grossa, como o fundo de uma prateleira ---------- */
 .cartao,.hoje-bloco,.porta,.cupom,.resultado{border-radius:14px}
-.hoje-bloco,.porta{border-bottom:4px solid var(--regua)}
-.porta:hover{border-color:var(--linha);border-bottom-color:var(--laranja)}
+.hoje-bloco{border-bottom:4px solid var(--regua)}
 .cupom{border-bottom:4px solid var(--regua)}
 .cap-caixa{border-radius:14px}
+
+/* ---------- cartões-porta (Inflação e Método): peças em relevo que sobem no hover e afundam ao clicar ---------- */
+.portas{padding-bottom:clamp(72px,8vw,128px)}
+.porta{
+  position:relative;overflow:hidden;isolation:isolate;background:var(--sup);
+  border:1px solid var(--linha-2);border-bottom-width:1px;
+  box-shadow:0 7px 0 var(--regua),0 10px 16px rgba(22,22,26,.10),inset 0 1px 0 rgba(255,255,255,.9);
+  transition:transform .18s var(--curva),box-shadow .18s var(--curva),border-color .18s,background .18s;
+}
+.porta::after{
+  content:"";position:absolute;z-index:-1;top:0;bottom:0;left:-40%;width:30%;
+  background:linear-gradient(100deg,transparent,rgba(242,106,15,.14),transparent);
+  transform:skewX(-18deg) translateX(-120%);pointer-events:none;
+}
+.porta:hover{
+  background:#fff;border-color:var(--laranja);
+  transform:translateY(-5px);
+  box-shadow:0 12px 0 var(--laranja),0 18px 26px rgba(242,106,15,.20),inset 0 1px 0 #fff;
+}
+.porta:hover::after{transform:skewX(-18deg) translateX(560%);transition:transform .8s var(--curva)}
+.porta:active{
+  transform:translateY(5px);transition-duration:.06s;
+  box-shadow:0 1px 0 var(--laranja),0 2px 4px rgba(242,106,15,.2),inset 0 1px 0 #fff;
+}
+@media (prefers-reduced-motion:reduce){
+  .porta:hover,.porta:active{transform:none}
+  .porta::after{display:none}
+}
 
 /* ---------- a cesta média do início: uma etiqueta pendurada ---------- */
 .media{
