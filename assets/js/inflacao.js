@@ -1,4 +1,4 @@
-// Página "Inflação do seu bairro": índice local contra o IPCA, por ponto, por zona e por faixa de renda.
+// Página "Inflação por bairro": índice local contra o IPCA, por ponto, por zona e por faixa de renda.
 import { $, gsap, ScrollTrigger, calmo, reais, pct, curto, contar, carregar, guarda, ligarCep, iniciar } from './base.js';
 
 const [dados, geo] = await carregar('dados', 'geo');

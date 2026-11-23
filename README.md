@@ -8,7 +8,7 @@ Projeto em construção. **Os preços que o site mostra hoje são de exemplo (in
 
 | Pasta ou arquivo | O que é |
 |---|---|
-| `index.html`, `lista.html`, `inflacao.html`, `metodo.html`, `assets/` | O site: início com o mapa real, resultado da lista, inflação do bairro, método e fontes. |
+| `index.html`, `lista.html`, `inflacao.html`, `metodo.html`, `assets/` | O site: início com o mapa real, resultado da lista, inflação por bairro, método e fontes. |
 | `.claude/skills/` | Skills de animação (GSAP e Lenis) usadas ao escrever o site. Não fazem parte do site. |
 | `DESIGN.md` | Direção visual: cores, tipografia, regras de movimento. |
 | `data/` | As tabelas do projeto (ver `data/LEIAME.md`). `data/exemplo/` tem os preços inventados. |

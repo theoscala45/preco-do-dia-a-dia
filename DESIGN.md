@@ -67,7 +67,7 @@ Feito com GSAP (linhas do tempo, ScrollTrigger, SplitText) e Lenis (scroll suave
 
 - **Início** (`index.html`): mapa, CEP, três capítulos, números, montagem da lista.
 - **Sua lista** (`lista.html`): loja única mais barata, economia, divisão em duas lojas, rota no mapa, total por rede e tabela produto por produto.
-- **Inflação do bairro** (`inflacao.html`): três números, gráfico por ponto, zona ou perfil, mapa dos distritos e os 25 pontos em ordem.
+- **Inflação por bairro** (`inflacao.html`): três números, gráfico por ponto, zona ou perfil, mapa dos distritos e os 25 pontos em ordem.
 - **Método e fontes** (`metodo.html`): cesta, pontos, redes, coleta, contas, limites e fontes.
 
 O CEP e a lista ficam no `localStorage` e valem para todas as páginas. No celular, o menu abre em tela cheia.
