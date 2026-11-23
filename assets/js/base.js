@@ -155,7 +155,12 @@ export function iniciar(dados) {
   }
 
   // cabeçalho ganha fundo depois que a página rola
-  ScrollTrigger.create({ start: 30, end: 'max', toggleClass: { targets: '.topo', className: 'rolou' } });
+  // (um ouvinte de rolagem simples, que também roda ao abrir a página: assim o fundo aparece mesmo quando a página abre já no meio, por exemplo num link com #)
+  const topoEl = document.querySelector('.topo');
+  const marcarRolou = () => topoEl?.classList.toggle('rolou', scrollY > 30);
+  addEventListener('scroll', marcarRolou, { passive: true });
+  marcarRolou();
+  addEventListener('load', marcarRolou);
 
   // menu do celular
   const botao = $('menuBotao'), menu = document.querySelector('.topo nav');
