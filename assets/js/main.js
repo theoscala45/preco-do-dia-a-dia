@@ -180,11 +180,9 @@ mm.add('(prefers-reduced-motion: no-preference)', () => {
       .from(caixa.children, { autoAlpha: 0, y: 18, duration: 0.6, stagger: 0.07 }, '<0.12');
   });
   // as quatro etiquetas de números caem uma depois da outra: queda com quique, achatam ao bater (squash), o furo "estoura" e o texto chega depois.
-  // Só vertical, sem girar. Na segunda vez que a pessoa vê a página nesta sessão, é só um respiro curto.
+  // Só vertical, sem girar. Acontece toda vez que a página é aberta.
   const etiquetas = gsap.utils.toArray('.faixa-numeros > div');
   gsap.set(etiquetas, { autoAlpha: 0 });
-  let faixaVista = false;
-  try { faixaVista = !!sessionStorage.getItem('pdd:faixa'); sessionStorage.setItem('pdd:faixa', '1'); } catch { /* sem armazenamento: toca sempre */ }
   const faixa = document.querySelector('.faixa-numeros');
   faixa.classList.add('entrando');
   let faltam = etiquetas.length;
@@ -193,7 +191,6 @@ mm.add('(prefers-reduced-motion: no-preference)', () => {
     etiquetas.forEach((el, k) => {
       const rotulo = el.querySelector('span');
       const limpar = () => { gsap.set([el, rotulo], { clearProps: 'all' }); el.classList.remove('pousou'); terminou(); };
-      if (faixaVista) { gsap.fromTo(el, { autoAlpha: 0, y: 14 }, { autoAlpha: 1, y: 0, duration: 0.3, ease: 'power2.out', delay: k * 0.05, onComplete: limpar }); return; }
       const tl = gsap.timeline({ delay: 0.15 + k * 0.16, onComplete: limpar });
       tl.fromTo(el, { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.2, ease: 'power1.out' }, 0)
         .fromTo(el, { y: -110 }, { y: 0, duration: 1.15, ease: 'bounce.out' }, 0)                                   // a queda: acelera e quica
