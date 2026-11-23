@@ -179,11 +179,29 @@ mm.add('(prefers-reduced-motion: no-preference)', () => {
       .from(caixa, { autoAlpha: 0, y: 56, duration: 0.8 })
       .from(caixa.children, { autoAlpha: 0, y: 18, duration: 0.6, stagger: 0.07 }, '<0.12');
   });
-  // as quatro etiquetas de números dão um pequeno quique quando aparecem pela primeira vez (só sobe e desce, sem girar)
+  // as quatro etiquetas de números caem uma depois da outra: queda com quique, achatam ao bater (squash), o furo "estoura" e o texto chega depois.
+  // Só vertical, sem girar. Na segunda vez que a pessoa vê a página nesta sessão, é só um respiro curto.
   const etiquetas = gsap.utils.toArray('.faixa-numeros > div');
   gsap.set(etiquetas, { autoAlpha: 0 });
+  let faixaVista = false;
+  try { faixaVista = !!sessionStorage.getItem('pdd:faixa'); sessionStorage.setItem('pdd:faixa', '1'); } catch { /* sem armazenamento: toca sempre */ }
+  const faixa = document.querySelector('.faixa-numeros');
+  faixa.classList.add('entrando');
+  let faltam = etiquetas.length;
+  const terminou = () => { if (--faltam === 0) faixa.classList.remove('entrando'); };
   ScrollTrigger.create({ trigger: '.faixa-numeros', start: 'top 88%', once: true, onEnter: () => {
-    gsap.fromTo(etiquetas, { y: -34, autoAlpha: 0 }, { y: 0, autoAlpha: 1, duration: 0.9, ease: 'bounce.out', stagger: 0.1, overwrite: true, onComplete: () => gsap.set(etiquetas, { clearProps: 'all' }) });
+    etiquetas.forEach((el, k) => {
+      const rotulo = el.querySelector('span');
+      const limpar = () => { gsap.set([el, rotulo], { clearProps: 'all' }); el.classList.remove('pousou'); terminou(); };
+      if (faixaVista) { gsap.fromTo(el, { autoAlpha: 0, y: 14 }, { autoAlpha: 1, y: 0, duration: 0.3, ease: 'power2.out', delay: k * 0.05, onComplete: limpar }); return; }
+      const tl = gsap.timeline({ delay: 0.15 + k * 0.16, onComplete: limpar });
+      tl.fromTo(el, { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.2, ease: 'power1.out' }, 0)
+        .fromTo(el, { y: -110 }, { y: 0, duration: 1.15, ease: 'bounce.out' }, 0)                                   // a queda: acelera e quica
+        .fromTo(rotulo, { autoAlpha: 0, y: 10 }, { autoAlpha: 1, y: 0, duration: 0.45, ease: 'power2.out' }, 0.5)       // o texto chega depois (follow through)
+        .add(() => el.classList.add('pousou'), 0.4)                                                                      // furo estoura e o brilho cruza
+        .fromTo(el, { scaleY: 1, scaleX: 1, transformOrigin: '50% 100%' }, { scaleY: 0.9, scaleX: 1.04, duration: 0.07, ease: 'power2.out' }, 0.4)   // squash no primeiro impacto
+        .to(el, { scaleY: 1, scaleX: 1, duration: 0.65, ease: 'elastic.out(1, 0.4)' }, 0.47);                         // e volta com mola
+    });
   } });
   // as linhas do gráfico se desenham com o scroll
   gsap.timeline({ scrollTrigger: { trigger: '#inflacao', start: 'top 55%', end: 'center 42%', scrub: 0.7 } })
