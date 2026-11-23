@@ -87,9 +87,25 @@ export function criarMapa(el, geo, rotas, valores, { calmo = false } = {}) {
     return { top: 120, bottom: 80, left: Math.round(w * (est.cena === 0 ? 0.47 : 0.43)), right: 70 };
   }
 
-  // a rodinha do mouse aproxima e afasta o mapa (o Lenis deixa passar por causa do data-lenis-prevent)
-  el.setAttribute('data-lenis-prevent', '');
-  const mapa = novoMapa(el, { bounds: cidade, fitBoundsOptions: { padding: margem() }, bearing: CAMERA[0][0], pitch: CAMERA[0][1], scrollZoom: true, botoes: false });
+  const mapa = novoMapa(el, { bounds: cidade, fitBoundsOptions: { padding: margem() }, bearing: CAMERA[0][0], pitch: CAMERA[0][1], botoes: false });
+
+  // zoom pela rodinha: a rodinha rola a página; um clique no mapa liga o zoom, e ele desliga quando o ponteiro
+  // sai do mapa (vai para o texto) ou com Esc. Enquanto está ligado, o Lenis deixa a rodinha para o mapa.
+  const aviso = marcar('zoom-aviso', '');
+  el.parentElement.appendChild(aviso);
+  let avisoAte = 0;
+  const avisar = (txt, ms) => { aviso.textContent = txt; aviso.classList.add('on'); clearTimeout(avisoAte); avisoAte = setTimeout(() => aviso.classList.remove('on'), ms); };
+  const rodinha = v => {
+    if (v === mapa.scrollZoom.isEnabled()) return;
+    if (v) { mapa.scrollZoom.enable(); el.setAttribute('data-lenis-prevent', ''); avisar('Zoom ligado. A rodinha aproxima e afasta o mapa.', 1800); }
+    else { mapa.scrollZoom.disable(); el.removeAttribute('data-lenis-prevent'); aviso.classList.remove('on'); }
+  };
+  if (!matchMedia('(pointer: coarse)').matches) {
+    mapa.on('mousedown', () => rodinha(true));
+    mapa.getCanvasContainer().addEventListener('mouseleave', () => rodinha(false));
+    window.addEventListener('keydown', e => { if (e.key === 'Escape') rodinha(false); });
+    el.addEventListener('wheel', () => { if (!mapa.scrollZoom.isEnabled()) avisar('Clique no mapa para dar zoom com a rodinha', 1600); }, { passive: true });
+  }
 
   // dados de cada ponto: rota e loja por rede, na ordem das redes do site
   const porPonto = geo.pontos.map(p => {
@@ -125,12 +141,17 @@ export function criarMapa(el, geo, rotas, valores, { calmo = false } = {}) {
       'circle-radius': ['interpolate', ['linear'], ['zoom'], 11.6, 1.5, 15, 3.5], 'circle-color': '#9A9AA2', 'circle-opacity': ['interpolate', ['linear'], ['zoom'], 11.6, 0, 12.6, 0.8],
     } });
     redes.forEach((_, k) => camadasDeRota(mapa, 'rota' + k));
-    mapa.addSource('pontos', { type: 'geojson', data: { type: 'FeatureCollection', features: geo.pontos.map((p, i) => ({ type: 'Feature', id: i, properties: { i }, geometry: { type: 'Point', coordinates: [p.lon, p.lat] } })) } });
+    mapa.addSource('pontos', { type: 'geojson', data: { type: 'FeatureCollection', features: geo.pontos.map((p, i) => ({ type: 'Feature', id: i, properties: { i, nome: p.bairro.split(' (')[0] }, geometry: { type: 'Point', coordinates: [p.lon, p.lat] } })) } });
     mapa.addLayer({ id: 'pontos-halo', type: 'circle', source: 'pontos', maxzoom: 12, paint: { 'circle-radius': 9, 'circle-color': LARANJA, 'circle-opacity': 0, 'circle-opacity-transition': { duration: 500 }, 'circle-blur': 0.6 } });
     mapa.addLayer({ id: 'pontos', type: 'circle', source: 'pontos', maxzoom: 12, paint: {
       'circle-radius': 3, 'circle-color': LARANJA, 'circle-stroke-color': '#FFFFFF', 'circle-stroke-width': 1.5,
       'circle-radius-transition': { duration: 500 }, 'circle-opacity': 0.9,
     } });
+    // nome de cada bairro de coleta ao lado do ponto (some quando dois nomes se encostam)
+    mapa.addLayer({ id: 'pontos-nome', type: 'symbol', source: 'pontos', maxzoom: 12, layout: {
+      'text-field': ['get', 'nome'], 'text-font': ['Noto Sans Regular'], 'text-size': 11.5,
+      'text-variable-anchor': ['left', 'right', 'top', 'bottom'], 'text-radial-offset': 0.7, 'text-justify': 'auto', 'text-padding': 3,
+    }, paint: { 'text-color': '#3A3A40', 'text-halo-color': 'rgba(255,255,255,.92)', 'text-halo-width': 1.6 } });
     est.pronto = true;
     aplicar(true);
     aoPronto();
