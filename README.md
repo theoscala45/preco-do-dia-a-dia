@@ -18,6 +18,8 @@ Projeto em construção. **Os preços que o site mostra hoje são de exemplo (in
 | `agente/` | Agente que acha a página de cada produto no site de uma rede nova (ainda sem chave da API). |
 | `docs/emails-para-as-redes.md` | Rascunhos dos e-mails às redes. |
 | `docs/briefing-site.md` | O que o site precisa ser. |
+| `docs/PASSAGEM.md` | Passagem do projeto: estado, decisões, pendências e como continuar em outra conta do Claude. |
+| `docs/lista-tecnica.md` | Lista técnica: GitHub, publicação, chaves, custos, manutenção. |
 
 ## Ver o site no computador
 

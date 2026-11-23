@@ -22,7 +22,7 @@ A tabela de preços é a grande. Cada linha é um preço de um produto, numa red
 
 **renda.csv** (25 linhas). O distrito de cada ponto, o código do IBGE e o rendimento médio e mediano mensal da pessoa responsável pelo domicílio (IBGE, Censo 2022, por distrito). A `faixa` compara o rendimento médio com os 96 distritos da cidade, em terços. O Censo 2022 só divulga o rendimento do responsável, não a renda da família. Refazer com `python3 tools/baixar_renda.py` e depois `python3 tools/preparar_geo.py`.
 
-**redes.csv** (9 linhas). `tipo_preco` diz se o preço muda por CEP, por loja, se é único ou se ainda falta confirmar. `situacao` resume o que a leitura das regras do site permitiu.
+**redes.csv** (10 linhas). `tipo_preco` diz se o preço muda por CEP, por loja, se é único ou se ainda falta confirmar. `situacao` resume o que a leitura das regras do site permitiu.
 
 **links.csv**. Uma linha por produto e rede. Hoje tem o Tenda, o Atacadão, o Carrefour, o Pão de Açúcar, o Sonda, o Santa Luzia, a St Marche, o Hirota, o Nagumo e o Mambo. A coluna `observacao` explica cada decisão. `status` vale:
 - `achado`: a página confirma marca, tamanho e tipo. O coletor lê.

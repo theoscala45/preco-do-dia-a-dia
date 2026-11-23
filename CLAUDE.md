@@ -3,6 +3,8 @@
 O Preço do Dia a Dia, do Theo, aluno do ensino médio em São Paulo. Site estático (GitHub Pages) + coletor de preços que
 roda sozinho toda noite pelo GitHub Actions.
 
+Projeto vindo de outra conta do Claude? Ler primeiro `docs/PASSAGEM.md` (estado, decisões, pendências, ambiente).
+
 ## Como falar com o Theo
 - Sempre em português do Brasil, simples e direto. Listas curtas; barras de progresso quando ele pedir o que falta.
 - Perguntas com opções clicáveis, com uma marcada "(Recomendado)".
