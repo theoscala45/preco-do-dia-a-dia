@@ -42,6 +42,34 @@ const redesNoPonto = dados.pontos.map((pt, i) => {
   const ordem = totais.map((_, k) => k).filter(k => totais[k] != null).sort((a, b) => totais[a] - totais[b]);
   return { itens: itens.map(x => x.length), fatores, totais, ordem, melhor: ordem[0] };
 });
+// ---------- "Hoje na cidade": redes, bairros e zonas (só contas que o resto da página já faz)
+{
+  const barra = v => `<span class="barra"><i style="--v:${v.toFixed(3)}"></i></span>`;
+  const mediaDe = a => a.reduce((s, x) => s + x, 0) / a.length;
+  const sinal = f => { const d = Math.round((f - 1) * 100); return d === 0 ? '0%' : `${d > 0 ? '+' : '−'}${Math.abs(d)}%`; };
+  const porRede = dados.redes.map((r, j) => {
+    const f = redesNoPonto.map(x => x.fatores[j]).filter(x => x != null);
+    return { j, f: f.length ? mediaDe(f) : null, bairros: redesNoPonto.filter(x => x.melhor === j).length };
+  }).filter(r => r.f != null).sort((a, b) => a.f - b.f);
+  const maiorF = Math.max(...porRede.map(r => r.f));
+  $('hojeRedes').innerHTML = porRede.map((r, pos) => `<li${pos ? '' : ' class="melhor"'}><span>${nomes[r.j]}</span>${barra(r.f / maiorF)}<span class="v">${sinal(r.f)}${r.bairros ? `<small>${r.bairros} ${r.bairros === 1 ? 'bairro' : 'bairros'}</small>` : ''}</span></li>`).join('');
+
+  const porBairro = cestas.map((v, i) => ({ i, v })).sort((a, b) => a.v - b.v);
+  const linhaBairro = ({ i, v }) => `<li><span>${curto(geo.pontos[i].bairro)}<small>${geo.pontos[i].zona}</small></span><span class="v">${reais(v)}</span></li>`;
+  $('hojeBarato').innerHTML = porBairro.slice(0, 3).map(linhaBairro).join('');
+  $('hojeCaro').innerHTML = porBairro.slice(-3).reverse().map(linhaBairro).join('');
+
+  const zonas = [...new Set(geo.pontos.map(p => p.zona))].map(z => ({ z, v: mediaDe(cestas.filter((_, i) => geo.pontos[i].zona === z)) })).sort((a, b) => a.v - b.v);
+  const maiorZ = Math.max(...zonas.map(z => z.v));
+  $('hojeZonas').innerHTML = zonas.map((z, pos) => `<li${pos ? '' : ' class="melhor"'}><span>${z.z}</span>${barra(z.v / maiorZ)}<span class="v">${reais(z.v)}</span></li>`).join('');
+  const dia = new Date(dados.datas.at(-1) + 'T12:00').toLocaleDateString('pt-BR', { day: 'numeric', month: 'long', year: 'numeric' });
+  $('hojeSub').textContent = `Preços lidos até ${dia}, na mesma cesta de ${n} itens.`;
+  if (!calmo) gsap.set('#hoje .barra i', { scaleX: 0 });
+  ScrollTrigger.create({ trigger: '#hoje', start: 'top 70%', once: true, onEnter: () => {
+    const b = gsap.utils.toArray('#hoje .barra i'), v = (k, el) => +el.style.getPropertyValue('--v');
+    if (calmo) gsap.set(b, { scaleX: v }); else gsap.to(b, { scaleX: v, duration: 0.8, ease: 'power3.out', stagger: 0.04 });
+  } });
+}
 // rota e loja mais próxima de cada rede, por ponto (OpenStreetMap)
 const rotaDe = (i, k) => rotas.pontos.find(p => p.id === geo.pontos[i].id)?.redes[dados.redes[k].id];
 
