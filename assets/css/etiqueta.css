@@ -51,6 +51,51 @@ button,.botao{border-radius:10px;letter-spacing:-.005em}
 input,select{border-radius:10px}
 .cesta-ponto,.sugestoes,.tot-duas{border-radius:10px}
 
+/* ---------- botões em relevo: o principal é uma tecla laranja, o secundário uma tecla clara ---------- */
+:root{--tecla:#B84A04;--tecla-azul:rgba(36,72,224,.34)}
+button[type="submit"]:not(.quieto),.botao,#basica2{
+  position:relative;overflow:hidden;isolation:isolate;
+  background:var(--laranja);
+  box-shadow:0 5px 0 var(--tecla),0 8px 14px rgba(184,74,4,.22),inset 0 1px 0 rgba(255,255,255,.38);
+  transition:transform .16s var(--curva),box-shadow .16s var(--curva),background .16s;
+}
+/* o brilho que cruza o botão quando o mouse chega */
+button[type="submit"]:not(.quieto)::after,.botao::after,#basica2::after{
+  content:"";position:absolute;z-index:-1;top:0;bottom:0;left:-60%;width:40%;
+  background:linear-gradient(100deg,transparent,rgba(255,255,255,.42),transparent);
+  transform:skewX(-18deg) translateX(-120%);pointer-events:none;
+}
+button[type="submit"]:not(.quieto):hover,.botao:hover,#basica2:hover{
+  background:#F77512;color:var(--sobre-laranja);
+  transform:translateY(-3px);
+  box-shadow:0 8px 0 var(--tecla),0 14px 20px rgba(184,74,4,.28),inset 0 1px 0 rgba(255,255,255,.45);
+}
+button[type="submit"]:not(.quieto):hover::after,.botao:hover::after,#basica2:hover::after{
+  transform:skewX(-18deg) translateX(520%);transition:transform .7s var(--curva);
+}
+button[type="submit"]:not(.quieto):active,.botao:active,#basica2:active{
+  transform:translateY(4px);transition-duration:.06s;
+  box-shadow:0 1px 0 var(--tecla),0 2px 4px rgba(184,74,4,.2),inset 0 1px 0 rgba(255,255,255,.3);
+}
+/* secundário: tecla clara com a borda de baixo grossa */
+button.quieto,.botao.quieto{
+  background:#fff;border:1px solid var(--azul-linha);
+  box-shadow:0 3px 0 var(--tecla-azul);
+  transition:transform .16s var(--curva),box-shadow .16s var(--curva),background .16s,border-color .16s,color .16s;
+}
+button.quieto:hover,.botao.quieto:hover{
+  background:var(--azul-fundo);border-color:var(--azul);color:var(--azul-2);
+  transform:translateY(-2px);box-shadow:0 5px 0 var(--azul),0 8px 14px rgba(36,72,224,.16);
+}
+button.quieto:active,.botao.quieto:active{
+  transform:translateY(3px);transition-duration:.06s;box-shadow:0 0 0 var(--azul);
+}
+@media (prefers-reduced-motion:reduce){
+  button[type="submit"]:not(.quieto):hover,.botao:hover,#basica2:hover,button.quieto:hover,.botao.quieto:hover,
+  button[type="submit"]:not(.quieto):active,.botao:active,#basica2:active,button.quieto:active,.botao.quieto:active{transform:none}
+  button[type="submit"]:not(.quieto)::after,.botao::after,#basica2::after{display:none}
+}
+
 /* ---------- cartões: borda de baixo grossa, como o fundo de uma prateleira ---------- */
 .cartao,.hoje-bloco,.porta,.cupom,.resultado{border-radius:14px}
 .hoje-bloco,.porta{border-bottom:4px solid var(--regua)}
