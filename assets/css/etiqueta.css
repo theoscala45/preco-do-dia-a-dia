@@ -872,3 +872,7 @@ html:not([data-teclado]) :focus-visible{outline:none}
 
 /* ---------- frases que entram desfocadas, palavra por palavra (desfoque.js) ---------- */
 .dw{display:inline-block}
+
+/* Produtos: botão no fim de cada grupo da aba "Todos" */
+.prods-lista .prods-mais{display:flex;padding:16px 0 4px}
+.prods-mais button{height:44px}
