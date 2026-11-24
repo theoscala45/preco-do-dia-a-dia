@@ -219,11 +219,81 @@ mm.add('(prefers-reduced-motion: no-preference)', () => {
     .fromTo('#grafico .fim', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.12, ease: 'none' });
 });
 
-// ---------- botão "Ver meu bairro": ao clicar, um anel laranja sai do botão (o brilho de vez em quando está no CSS)
+// ---------- botão "Ver meu bairro": ao clicar, o botão salta, um anel grande sai dele e faíscas voam em arco
 {
   const botaoCep = document.querySelector('#cepForm button[type="submit"]');
-  botaoCep?.addEventListener('click', () => { botaoCep.classList.remove('pulsa'); void botaoCep.offsetWidth; botaoCep.classList.add('pulsa'); });
+  const rand = (a, b) => a + Math.random() * (b - a);
+  function faiscas() {
+    const host = botaoCep.closest('.cep-linha'); if (!host) return;
+    const hb = host.getBoundingClientRect(), bb = botaoCep.getBoundingClientRect();
+    const cx = bb.left - hb.left + bb.width / 2, cy = bb.top - hb.top + bb.height / 2, n = 16;
+    const cores = ['#F26A0F', '#2448E0', '#FFB27A', '#16161A'];
+    for (let k = 0; k < n; k++) {
+      const f = document.createElement('i');
+      f.className = 'faisca'; f.style.left = cx + 'px'; f.style.top = cy + 'px';
+      f.style.background = cores[k % cores.length]; f.style.borderRadius = k % 3 ? '50%' : '2px';
+      f.style.width = f.style.height = rand(6, 10) + 'px';
+      host.append(f);
+      const ang = (k / n) * Math.PI * 2 + rand(-0.25, 0.25), dist = rand(70, 150);
+      // em x a faísca desacelera; em y sobe e depois cai com gravidade: juntos fazem um arco
+      gsap.timeline({ onComplete: () => f.remove() })
+        .fromTo(f, { scale: 0, autoAlpha: 1 }, { scale: 1, duration: 0.15, ease: 'power2.out' }, 0)
+        .to(f, { x: Math.cos(ang) * dist, duration: 0.85, ease: 'power2.out' }, 0)
+        .to(f, { y: Math.sin(ang) * dist * 0.7 - 34, duration: 0.32, ease: 'power2.out' }, 0)
+        .to(f, { y: '+=' + rand(70, 110), duration: 0.55, ease: 'power2.in' }, 0.32)
+        .to(f, { autoAlpha: 0, scale: 0.3, duration: 0.3, ease: 'power1.in' }, 0.6);
+    }
+  }
+  botaoCep?.addEventListener('click', () => {
+    botaoCep.classList.remove('pulsa'); void botaoCep.offsetWidth; botaoCep.classList.add('pulsa');
+    if (calmo) return;
+    gsap.fromTo(botaoCep, { scale: 0.93 }, { scale: 1, duration: 0.7, ease: 'elastic.out(1, 0.35)', clearProps: 'transform' });   // aperta e volta com mola
+    faiscas();
+  });
   botaoCep?.addEventListener('animationend', e => { if (e.animationName === 'anel-botao') botaoCep.classList.remove('pulsa'); });
+}
+
+// ---------- a troca da tela de abertura para a tela do resultado
+// Antes o texto e a etiqueta sumiam de uma vez e tudo pulava de lugar. Agora é uma coreografia:
+//  1. saída: a etiqueta da cesta cai para fora (squash) e o texto sobe e some (ease-out: sai rápido)
+//  2. troca de layout com FLIP: o formulário e o título começam onde estavam e deslizam (slow in, slow out) até o novo lugar
+//  3. entrada: o card do resultado sobe de baixo com mola (follow through), as linhas chegam em fila e o selo "mais barata" estoura (secondary action)
+function flip(elementos, mudar) {
+  const antes = elementos.map(el => el.getBoundingClientRect().top);
+  mudar();
+  elementos.forEach((el, k) => {
+    const dy = antes[k] - el.getBoundingClientRect().top;
+    if (Math.abs(dy) > 1) gsap.fromTo(el, { y: dy }, { y: 0, duration: 0.75, ease: 'power3.inOut', clearProps: 'transform' });
+  });
+}
+function transicaoParaResultado() {
+  const res = $('resultado'), tit = document.querySelector('.abre .titulo'), form = $('cepForm'), lide = $('lide'), media = $('media');
+  if (scrollY > innerHeight * 0.3) irPara(0);
+  gsap.timeline()
+    .to(media, { y: 52, scaleY: 0.9, scaleX: 1.03, autoAlpha: 0, duration: 0.36, ease: 'power2.out', transformOrigin: '50% 100%' }, 0)
+    .to(lide, { y: -16, autoAlpha: 0, duration: 0.28, ease: 'power2.out' }, 0.04)
+    .add(() => {
+      flip([tit, form], () => { res.hidden = false; document.documentElement.classList.add('com-resultado'); });
+      gsap.from(tit, { autoAlpha: 0.15, duration: 0.5, ease: 'power2.out', clearProps: 'opacity,visibility' });
+      gsap.fromTo(res, { autoAlpha: 0, y: 90, scaleY: 0.93, transformOrigin: '50% 0%' }, { autoAlpha: 1, y: 0, scaleY: 1, duration: 0.85, ease: 'back.out(1.4)', delay: 0.1, clearProps: 'transform,opacity,visibility' });
+      gsap.from(res.querySelector('header'), { autoAlpha: 0, y: 12, duration: 0.45, ease: 'power2.out', delay: 0.35, clearProps: 'all' });
+      gsap.from('#redesLista li', { autoAlpha: 0, x: -20, duration: 0.5, stagger: 0.05, ease: 'power2.out', delay: 0.45, clearProps: 'transform,opacity,visibility' });
+      gsap.from('#redesLista .melhor .val small', { scale: 0, duration: 0.7, ease: 'elastic.out(1, 0.5)', delay: 1.0, transformOrigin: '100% 50%', clearProps: 'transform' });
+    }, 0.3);
+}
+function transicaoDeVolta() {
+  const res = $('resultado'), tit = document.querySelector('.abre .titulo'), form = $('cepForm'), lide = $('lide'), media = $('media');
+  gsap.timeline()
+    .to(res, { autoAlpha: 0, y: 40, duration: 0.28, ease: 'power2.out' }, 0)
+    .add(() => {
+      flip([tit, form], () => {
+        res.hidden = true; gsap.set(res, { clearProps: 'all' });
+        document.documentElement.classList.remove('com-resultado');
+        gsap.set([media, lide], { clearProps: 'all' });
+      });
+      gsap.fromTo(lide, { autoAlpha: 0, y: 14 }, { autoAlpha: 1, y: 0, duration: 0.45, ease: 'power2.out', delay: 0.25, clearProps: 'all' });
+      gsap.fromTo(media, { y: -70, autoAlpha: 0 }, { y: 0, autoAlpha: 1, duration: 1.0, ease: 'bounce.out', delay: 0.3, clearProps: 'all' });   // a etiqueta volta caindo e quicando
+    }, 0.26);
 }
 
 // ---------- CEP
@@ -240,12 +310,11 @@ function escolher(i, viaCep) {
   }).join('');
   $('resNota').textContent = `${viaCep ? 'Bairro mais perto do seu CEP' : 'Bairro escolhido no mapa'}: ${p.rua}, ${p.cep}.`;
   const novo = $('resultado').hidden;
-  $('resultado').hidden = false;
-  document.documentElement.classList.add('com-resultado');
-  if (!calmo) {
-    const tl = gsap.timeline();
-    if (novo) tl.from('#resultado', { autoAlpha: 0, y: 22, duration: 0.6 });
-    tl.from('#redesLista li', { autoAlpha: 0, x: -14, duration: 0.5, stagger: 0.05 }, novo ? 0.15 : 0);
+  if (novo && !calmo) transicaoParaResultado();
+  else {
+    $('resultado').hidden = false;
+    document.documentElement.classList.add('com-resultado');
+    if (!calmo) gsap.from('#redesLista li', { autoAlpha: 0, x: -14, duration: 0.5, stagger: 0.05 });
   }
   mapa?.selecionar(i);
   destacar(i);
@@ -256,8 +325,8 @@ function escolher(i, viaCep) {
 $('voltar').addEventListener('click', () => {
   mapa?.selecionar(-1);
   estado.cepDado = false;
-  $('resultado').hidden = true;
-  document.documentElement.classList.remove('com-resultado');
+  if (calmo) { $('resultado').hidden = true; document.documentElement.classList.remove('com-resultado'); }
+  else transicaoDeVolta();
   atualizarCupom();
   ScrollTrigger.refresh();
 });
