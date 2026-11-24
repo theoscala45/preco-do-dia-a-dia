@@ -1,10 +1,10 @@
-// Frases que entram palavra por palavra, saindo do desfoque e descendo um pouco (BlurText, do React Bits, em JavaScript puro).
-// Uso: marque o texto com data-desfoque e chame desfocarFrases(gsap, calmo). Roda toda vez que o texto aparece na tela.
+// Texto que entra palavra por palavra, saindo do desfoque e descendo um pouco (BlurText, do React Bits, em JavaScript puro).
+// Hoje vale para os títulos grandes (data-titulo). Roda toda vez que o título aparece na tela e volta ao início quando ele sai.
 import { aoAparecer } from './aparecer.js';
 
-export function desfocarFrases(gsap, calmo, seletor = '[data-desfoque]') {
+export function desfocarFrases(gsap, calmo, seletor = '[data-titulo]', { y = -30, blur = 12, duracao = 0.85, passo = 0.09, atraso = 0.1, margem = '0px 0px -10% 0px' } = {}) {
   const toque = matchMedia('(pointer: coarse)').matches;
-  const de = { autoAlpha: 0, y: -16, filter: `blur(${toque ? 4 : 8}px)` };
+  const de = { autoAlpha: 0, y: toque ? y * 0.6 : y, filter: `blur(${toque ? blur * 0.5 : blur}px)` };
   const mapa = new WeakMap();
   const alvos = [...document.querySelectorAll(seletor)].filter(p => p.textContent.trim());
   alvos.forEach(p => {
@@ -16,14 +16,14 @@ export function desfocarFrases(gsap, calmo, seletor = '[data-desfoque]') {
       return s;
     });
     mapa.set(p, spans);
-    p.style.visibility = 'visible';   // o texto inteiro já pode aparecer: quem some são as palavras
+    p.style.visibility = 'visible';   // o título inteiro já pode aparecer: quem some são as palavras
     if (!calmo) gsap.set(spans, de);
   });
   if (calmo) return;
   const entra = lote => lote.forEach(p => gsap.fromTo(mapa.get(p), de, {
-    autoAlpha: 1, y: 0, filter: 'blur(0px)', duration: 0.7, ease: 'power3.out', stagger: 0.07, overwrite: true,
+    autoAlpha: 1, y: 0, filter: 'blur(0px)', duration: duracao, ease: 'power3.out', stagger: passo, delay: atraso, overwrite: true,
     clearProps: 'transform,filter,opacity,visibility',
   }));
   const sai = lote => lote.forEach(p => gsap.set(mapa.get(p), { ...de, overwrite: true }));
-  aoAparecer(alvos, entra, sai);
+  aoAparecer(alvos, entra, sai, { margem });
 }

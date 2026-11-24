@@ -1,7 +1,7 @@
 // O que todas as páginas usam: dados, CEP e lista guardados no navegador, scroll suave (Lenis)
 // e as animações comuns (GSAP): cabeçalho, títulos que sobem por linha e blocos que surgem ao rolar.
 import { ligarCards } from './cards.js?v=20261124f';
-import { desfocarFrases } from './desfoque.js?v=20261124x';
+import { desfocarFrases } from './desfoque.js?v=20261124y';
 
 // o anel laranja de foco só aparece para quem navega com o teclado (Tab). Clique do mouse, toque e foco dado por código
 // (depois de digitar o CEP, por exemplo) não deixam mais um contorno solto em botões e painéis.
@@ -215,10 +215,7 @@ export function iniciar(dados) {
       gsap.ticker.lagSmoothing(0);
     }
 
-    document.querySelectorAll('[data-titulo]').forEach(el => {
-      const naDobra = el.getBoundingClientRect().top < innerHeight * 0.95;
-      subirTitulo(el, { atraso: naDobra ? 0.12 : 0, aoRolar: !naDobra });
-    });
+    desfocarFrases(gsap, calmo);   // os títulos grandes (data-titulo) entram palavra por palavra, saindo do desfoque
     // Revelações ao rolar: o elemento sobe quando aparece na tela e volta a ficar escondido quando sai dela, então toca toda vez.
     // O observador (aparecer.js) também vê o que começa escondido (hidden) e aparece depois, como o resultado da lista.
     const sobe = lote => gsap.to(lote, { autoAlpha: 1, y: 0, duration: 0.9, stagger: 0.08, overwrite: true });
@@ -226,7 +223,6 @@ export function iniciar(dados) {
     const entraFila = lote => gsap.to(lote, { autoAlpha: 1, y: 0, duration: 0.6, stagger: 0.05, overwrite: true });
     const saiFila = lote => gsap.set(lote, { autoAlpha: 0, y: 16, overwrite: true });
     ligarCards();   // os cards têm entrada própria (em arco, com mola); o resto sobe em lote
-    desfocarFrases(gsap, calmo);   // as frases de apoio dos títulos (data-desfoque)
     const blocos = gsap.utils.toArray('[data-surge]');
     gsap.set(blocos, { autoAlpha: 0, y: 26 });
     aoAparecer(blocos, sobe, some);

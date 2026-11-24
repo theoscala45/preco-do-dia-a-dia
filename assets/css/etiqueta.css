@@ -417,21 +417,7 @@ a.seta.volta:hover::before{transform:translateX(-5px)}
   .abre .media{flex-direction:row;align-items:center;justify-content:space-between;min-width:0;width:min(100%,420px);margin-top:10px;padding-top:6px}
   .abre .media .preco b{font-size:44px}
 }
-.tech-text {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  touch-action: pan-y;
-  user-select: none;
-}
-
-.tech-text-canvas {
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-.tech-faixa{height:clamp(150px,22vw,280px);margin:8px 0 28px;color:var(--texto)}
-.tech-faixa .tech-text{cursor:crosshair}
+.nome-grande{font:800 clamp(64px,13vw,200px)/.9 var(--letreiro);letter-spacing:0;color:var(--texto);margin:8px 0 28px;white-space:nowrap}   /* o nome grande da página Sobre (parado) */
 
 /* ---------- seletor elástico (segmento.js): o destaque azul estica, encolhe e pode ser arrastado ---------- */
 .abas.elastico{position:relative;display:inline-grid;grid-auto-flow:column;gap:0;touch-action:pan-y;user-select:none;-webkit-user-select:none;-webkit-tap-highlight-color:transparent}
