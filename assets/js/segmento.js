@@ -5,7 +5,7 @@
 
 const MOLA_UI = { dur: 0.3, bounce: 0 }, MOLA_IMPULSO = { dur: 0.4, bounce: 0.2 }, MOLA_SOLTA = { dur: 0.16, bounce: 0 };
 const DILATA = 0.19, REPASSE = 0.15, TOQUE = 110, VEL_MAX = 2000, ZONA_MORTA = 4, FOLGA = 10, ELASTICO = 0.55;
-const ESTICA = 100, ACHATA = 3, VELOCIDADE = 1.25, DESLIZE = 75;
+const ESTICA = 100, ACHATA = 3, VELOCIDADE = 1.55, DESLIZE = 75;
 
 const limite = (v, a, b) => Math.min(b, Math.max(a, v));
 const borracha = (alem, dim) => (alem * dim * ELASTICO) / (dim + ELASTICO * Math.abs(alem));
