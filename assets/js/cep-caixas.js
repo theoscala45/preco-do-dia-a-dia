@@ -2,8 +2,8 @@
 // e guarda o valor: assim ligarCep, o CEP salvo e o preenchimento automático funcionam como antes.
 import { criarCodigo } from './codigo.js?v=20261124t';
 
-// Depois de uma animação do botão ou do campo, a próxima só vem 10 segundos depois. Dá para clicar quantas vezes quiser:
-// o CEP é conferido sempre, só a festa (faíscas, balanço, ✓, números que afundam) espera.
+// Depois da festa do CEP certo (faíscas, anel, ✓), a próxima só vem 10 segundos depois. Dá para clicar quantas vezes quiser:
+// o CEP é conferido sempre. O balanço do CEP errado não espera: acontece em todo clique.
 export const espera = {
   ms: 10000, ultimo: -1e9,
   livre() { return performance.now() - this.ultimo >= this.ms; },
@@ -29,10 +29,16 @@ export function caixasDoCep({ form, campo, msg, aoAcertar, aoErrar }) {
   campo.addEventListener('input', () => { if (!sinc) cod.definir(campo.value); });
   campo.addEventListener('focus', () => cod.foco());
   form.addEventListener('submit', () => {   // roda depois da checagem de ligarCep (que escreve a mensagem de erro)
-    const festa = espera.livre();
-    if (festa) espera.marcar();
-    if (!msg.classList.contains('erro')) { if (!festa) return; aoAcertar?.(); cod.status('success'); setTimeout(() => cod.status('idle'), 1300); }
-    else { if (!festa) return; aoErrar?.(); if (campo.value.replace(/\D/g, '').length >= 8) cod.status('error'); }
+    if (msg.classList.contains('erro')) {
+      // CEP inválido: o botão balança e os números afundam TODA vez que clica; a espera de 10 s não vale para o erro
+      aoErrar?.();
+      if (campo.value.replace(/\D/g, '').length >= 8) cod.status('error');
+      return;
+    }
+    // CEP certo: a festa (faíscas, ✓) só volta 10 s depois da última
+    if (!espera.livre()) return;
+    espera.marcar();
+    aoAcertar?.(); cod.status('success'); setTimeout(() => cod.status('idle'), 1300);
   });
   if (campo.value) cod.definir(campo.value);
   return cod;

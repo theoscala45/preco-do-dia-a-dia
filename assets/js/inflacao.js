@@ -2,7 +2,7 @@
 import { aoAparecer } from './aparecer.js';
 import { segmentoElastico } from './segmento.js?v=20261124h';
 import { $, gsap, ScrollTrigger, calmo, reais, pct, curto, contar, carregar, guarda, ligarCep, iniciar } from './base.js';
-import { caixasDoCep } from './cep-caixas.js?v=20261124t';
+import { caixasDoCep } from './cep-caixas.js?v=20261124z';
 
 const [dados, geo] = await carregar('dados', 'geo');
 iniciar(dados);

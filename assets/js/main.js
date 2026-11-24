@@ -2,7 +2,7 @@
 import { $, gsap, ScrollTrigger, calmo, reais, pct, curto, rolar, carregar, guarda, ligarCep, iniciar, irPara, semAcento } from './base.js';
 import { criarLista, calcular, ligarBusca, ligarItens } from './cesta.js';
 import { pulo } from './cards.js?v=20261124f';
-import { caixasDoCep, espera } from './cep-caixas.js?v=20261124t';
+import { caixasDoCep, espera } from './cep-caixas.js?v=20261124z';
 import { criarPlacar } from './placar.js?v=20261124v';
 import { aoAparecer } from './aparecer.js';
 import { compartilhar, salvarFoto } from './compartilhar.js';
@@ -295,18 +295,19 @@ const efeitoBotao = {};   // preenchido logo abaixo: ok() = salto, anel e faísc
     if (calmo) return;
     faiscas();
   };
-  efeitoBotao.erro = () => {   // CEP inválido: nada de festa, o botão balança dizendo "não"
+  efeitoBotao.erro = () => {   // CEP inválido: nada de festa, o botão chacoalha forte dizendo "não" (em todo clique)
     if (!botaoCep || calmo) return;
     gsap.killTweensOf(botaoCep);
-    gsap.set(botaoCep, { scale: 1 });
+    gsap.set(botaoCep, { scale: 1, x: 0, rotation: 0 });
     gsap.timeline({ onComplete: () => gsap.set(botaoCep, { clearProps: 'transform' }) })
-      .to(botaoCep, { x: -11, duration: 0.07, ease: 'sine.out' })
-      .to(botaoCep, { x: 11, duration: 0.11, ease: 'sine.inOut' })
-      .to(botaoCep, { x: -9, duration: 0.11, ease: 'sine.inOut' })
-      .to(botaoCep, { x: 9, duration: 0.11, ease: 'sine.inOut' })
-      .to(botaoCep, { x: -5, duration: 0.1, ease: 'sine.inOut' })
-      .to(botaoCep, { x: 5, duration: 0.09, ease: 'sine.inOut' })
-      .to(botaoCep, { x: 0, duration: 0.08, ease: 'sine.out' });
+      .to(botaoCep, { x: -16, rotation: -2.5, duration: 0.06, ease: 'sine.out' })
+      .to(botaoCep, { x: 16, rotation: 2.5, duration: 0.1, ease: 'sine.inOut' })
+      .to(botaoCep, { x: -13, rotation: -2, duration: 0.1, ease: 'sine.inOut' })
+      .to(botaoCep, { x: 13, rotation: 2, duration: 0.1, ease: 'sine.inOut' })
+      .to(botaoCep, { x: -8, rotation: -1, duration: 0.09, ease: 'sine.inOut' })
+      .to(botaoCep, { x: 8, rotation: 1, duration: 0.09, ease: 'sine.inOut' })
+      .to(botaoCep, { x: -3, rotation: 0, duration: 0.08, ease: 'sine.inOut' })
+      .to(botaoCep, { x: 0, duration: 0.07, ease: 'sine.out' });
   };
   botaoCep?.addEventListener('click', () => {   // aperta e volta com mola (só quando a espera de 10 s acabou)
     if (calmo || !espera.livre()) return;
