@@ -2,7 +2,7 @@
 import { $, gsap, ScrollTrigger, calmo, reais, pct, curto, rolar, carregar, guarda, ligarCep, iniciar, irPara, semAcento } from './base.js';
 import { criarLista, calcular, ligarBusca, ligarItens } from './cesta.js';
 import { pulo } from './cards.js?v=20261124f';
-import { caixasDoCep } from './cep-caixas.js?v=20261124r';
+import { caixasDoCep, espera } from './cep-caixas.js?v=20261124t';
 import { aoAparecer } from './aparecer.js';
 import { compartilhar, salvarFoto } from './compartilhar.js';
 
@@ -293,8 +293,8 @@ const efeitoBotao = {};   // preenchido logo abaixo: ok() = salto, anel e faísc
       .to(botaoCep, { x: 5, duration: 0.09, ease: 'sine.inOut' })
       .to(botaoCep, { x: 0, duration: 0.08, ease: 'sine.out' });
   };
-  botaoCep?.addEventListener('click', () => {   // aperta e volta com mola (vale para qualquer clique)
-    if (calmo) return;
+  botaoCep?.addEventListener('click', () => {   // aperta e volta com mola (só quando a espera de 10 s acabou)
+    if (calmo || !espera.livre()) return;
     gsap.fromTo(botaoCep, { scale: 0.93 }, { scale: 1, duration: 0.7, ease: 'elastic.out(1, 0.35)', clearProps: 'transform' });
   });
   botaoCep?.addEventListener('animationend', e => { if (e.animationName === 'anel-botao') botaoCep.classList.remove('pulsa'); });
