@@ -108,7 +108,7 @@ const rotaDe = (i, k) => rotas.pontos.find(p => p.id === geo.pontos[i].id)?.rede
 // ---------- mapa
 let mapa = null;
 try {
-  const { criarMapa } = await import('./mapa.js');
+  const { criarMapa } = await import('./mapa.js?v=20261124b');
   mapa = criarMapa($('mapa'), geo, rotas, {
     redes: dados.redes.map((r, k) => ({ id: r.id, nome: nomes[k] })),
     var: normal(vars), ordem: i => redesNoPonto[i].ordem, preco: (i, k) => (redesNoPonto[i].totais[k] == null ? null : reais(redesNoPonto[i].totais[k])),
@@ -167,7 +167,7 @@ mapa?.aoMudar(({ fase }) => {
 // ---------- o scroll troca a cena do mapa
 const passos = [...document.querySelectorAll('#trilha li')];
 const cena = c => { mapa?.cena(c); passos.forEach((li, k) => li.classList.toggle('on', k === c - 1)); };
-ScrollTrigger.create({ trigger: '.abre', start: 'top top', end: 'bottom 50%', onToggle: s => s.isActive && cena(0) });
+ScrollTrigger.create({ trigger: '.abre', start: 'top bottom', end: 'bottom 50%', onToggle: s => s.isActive && cena(0) });
 gsap.utils.toArray('.cap').forEach((cap, k) => {
   ScrollTrigger.create({ trigger: cap, start: 'top 50%', end: 'bottom 50%', onToggle: s => s.isActive && cena(k + 1) });
 });

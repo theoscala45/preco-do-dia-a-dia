@@ -160,9 +160,11 @@ export function criarMapa(el, geo, rotas, valores, { calmo = false } = {}) {
     redes.forEach((_, k) => camadasDeRota(mapa, 'rota' + k));
     mapa.addSource('pontos', { type: 'geojson', data: { type: 'FeatureCollection', features: geo.pontos.map((p, i) => ({ type: 'Feature', id: i, properties: { i }, geometry: { type: 'Point', coordinates: [p.lon, p.lat] } })) } });
     mapa.addLayer({ id: 'pontos-halo', type: 'circle', source: 'pontos', maxzoom: 12, paint: { 'circle-radius': 9, 'circle-color': LARANJA, 'circle-opacity': 0, 'circle-opacity-transition': { duration: 500 }, 'circle-blur': 0.6 } });
+    // o raio de cada ponto vem do estado dele (feature-state "r"): 0 = escondido; os pontos nascem um a um (ver mostrarPontos)
     mapa.addLayer({ id: 'pontos', type: 'circle', source: 'pontos', maxzoom: 12, paint: {
-      'circle-radius': 4.5, 'circle-color': LARANJA, 'circle-stroke-color': '#FFFFFF', 'circle-stroke-width': 1.5,
-      'circle-radius-transition': { duration: 500 }, 'circle-opacity': 0.9,
+      'circle-radius': ['coalesce', ['feature-state', 'r'], 0], 'circle-color': LARANJA, 'circle-stroke-color': '#FFFFFF',
+      'circle-stroke-width': ['case', ['>', ['coalesce', ['feature-state', 'r'], 0], 0], 1.5, 0],
+      'circle-radius-transition': { duration: 220 }, 'circle-opacity': 0.9,
     } });
     est.pronto = true;
     aplicar(true);
@@ -235,6 +237,23 @@ export function criarMapa(el, geo, rotas, valores, { calmo = false } = {}) {
     aoMudar({ fase: 'geral', foco: -1, melhor: -1 });
   }
 
+  // os pontos laranja só existem a partir do primeiro capítulo: ao rolar, nascem um a um (de oeste para leste) com um salto; ao voltar à abertura, somem
+  let pontosOn = null, pontosT = [];
+  function mostrarPontos(ligar, raio, direto) {
+    if (!est.pronto) return;
+    const mudou = ligar !== pontosOn; pontosOn = ligar;
+    pontosT.forEach(clearTimeout); pontosT = [];
+    const ordem = geo.pontos.map((p, i) => i).sort((a, b) => geo.pontos[a].lon - geo.pontos[b].lon);
+    const por = (i, r) => mapa.setFeatureState({ source: 'pontos', id: i }, { r });
+    ordem.forEach((i, k) => {
+      if (!ligar) return por(i, 0);
+      if (direto || calmo) return por(i, raio);
+      if (!mudou) return por(i, raio);   // só o tamanho mudou (cena 1 para cena 3): sem refazer a entrada
+      por(i, 0);
+      pontosT.push(setTimeout(() => por(i, raio * 1.7), 60 + k * 28), setTimeout(() => por(i, raio), 60 + k * 28 + 190));
+    });
+  }
+
   // decide o que o mapa mostra: cidade inteira ou o bairro em foco
   function aplicar(forcar) {
     if (!est.pronto) return;
@@ -245,7 +264,7 @@ export function criarMapa(el, geo, rotas, valores, { calmo = false } = {}) {
     est.cenaAntes = est.cena;
     if (cenaMudou || mudou) {
       mapa.setPaintProperty('distritos', 'fill-extrusion-color', corDistritos());
-      mapa.setPaintProperty('pontos', 'circle-radius', est.cena === 1 ? 6 : 4.5);
+      mostrarPontos(est.cena > 0, est.cena === 1 ? 6 : 4.5, forcar);
       mapa.setPaintProperty('pontos-halo', 'circle-opacity', est.cena === 1 ? 0.35 : 0);
     }
     if (mudou) {
