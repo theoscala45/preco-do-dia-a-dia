@@ -295,4 +295,4 @@ O projeto passou de "O Preço do Dia a Dia" para **Preço Aberto** (escolha do T
 
 ## 20. Títulos que entram desfocados, palavra por palavra (24/11/2026)
 - `BlurText` do React Bits convertido para JS puro: `assets/js/desfoque.js` (`desfocarFrases`, chamada em `iniciar()` de `base.js`). Vale para todo `[data-titulo]` (os títulos grandes, h1 e os h2 de seção), no lugar da subida linha por linha com SplitText. Roda toda vez que o título aparece na tela e volta ao início ao sair; no celular o desfoque é mais leve. As frases de apoio (`.lide`) ficaram com a entrada antiga (`data-surge`).
-- O efeito de mouse do TechText na página Sobre foi tirado (arquivos `techtext.js` e `sobre-nome.js` apagados). O nome "Preço Aberto" grande continua na página, parado (`.nome-grande`).
+- O efeito de mouse do TechText na página Sobre foi tirado (arquivos `techtext.js` e `sobre-nome.js` apagados). O nome grande "Preço Aberto" que ficou parado depois foi tirado também.
