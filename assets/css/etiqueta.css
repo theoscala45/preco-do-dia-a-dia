@@ -328,8 +328,8 @@ a.seta.volta:hover::before{transform:translateX(-5px)}
 .topo nav a[aria-current]{background:transparent;color:var(--texto)}
 @media (max-width:860px){.nav-linha{display:none}}
 
-/* ---------- cabeçalho depois que a página rola: fundo de vidro, um pouco mais translúcido ---------- */
-.topo.rolou{background:rgba(255,255,255,.62);-webkit-backdrop-filter:blur(18px) saturate(1.15);backdrop-filter:blur(18px) saturate(1.15)}
+/* ---------- cabeçalho: fundo de vidro, um pouco translúcido, sempre (no topo da página também, nunca 100% transparente) ---------- */
+.topo,.topo.rolou{background:rgba(255,255,255,.62);-webkit-backdrop-filter:blur(18px) saturate(1.15);backdrop-filter:blur(18px) saturate(1.15);border-bottom-color:var(--linha)}
 
 /* ---------- as etiquetas de números pousam: furo que estoura e brilho que cruza ---------- */
 .faixa-numeros > div{overflow:hidden}
