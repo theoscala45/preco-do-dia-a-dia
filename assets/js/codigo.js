@@ -212,7 +212,9 @@ export function criarCodigo(host, opcoes = {}) {
 
   // ---------- tamanho: cabe na largura disponível (celular)
   const ajustar = () => {
-    const disp = Math.min(host.parentElement?.clientWidth || 380, innerWidth - 40, 400), gap = 6, sep = o.separador ? 14 : 0;
+    const pai = host.parentElement; let livre = pai?.clientWidth || 380;
+    if (pai && getComputedStyle(pai).flexWrap === 'nowrap') livre -= [...pai.children].filter(c => c !== host && getComputedStyle(c).position !== 'absolute').reduce((t, c) => t + c.offsetWidth + 10, 0);   // botão ao lado, na mesma linha
+    const disp = Math.min(livre, innerWidth - 40, 400), gap = 6, sep = o.separador ? 14 : 0;
     tamanho = Math.max(28, Math.min(44, Math.floor((disp - gap * (n - 1) - sep) / n)));
     host.style.setProperty('--cs-size', tamanho + 'px'); host.style.setProperty('--cs-height', Math.round(tamanho * 1.18) + 'px');
     host.style.setProperty('--cs-gap', gap + 'px'); host.style.setProperty('--cs-font', Math.round(tamanho * 0.5) + 'px');

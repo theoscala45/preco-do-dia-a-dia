@@ -2,7 +2,7 @@
 import { $, gsap, ScrollTrigger, calmo, reais, pct, curto, rolar, carregar, guarda, ligarCep, iniciar, irPara, semAcento } from './base.js';
 import { criarLista, calcular, ligarBusca, ligarItens } from './cesta.js';
 import { pulo } from './cards.js?v=20261124f';
-import { criarCodigo } from './codigo.js?v=20261124n';
+import { caixasDoCep } from './cep-caixas.js?v=20261124r';
 import { aoAparecer } from './aparecer.js';
 import { compartilhar, salvarFoto } from './compartilhar.js';
 
@@ -382,30 +382,8 @@ $('redesLista').addEventListener('pointerover', e => { const li = e.target.close
 $('redesLista').addEventListener('pointerleave', () => mapa?.destacar(-1));
 ligarCep(geo, $('cepForm'), $('cep'), $('cepMsg'), i => escolher(i, true));
 
-// o campo de CEP vira 8 caixinhas; o campo de texto de verdade (#cep) continua por baixo e guarda o valor
-const cepCampo = $('cep'), cepMsg = $('cepMsg'), cepForm = $('cepForm');
-let cepSinc = false;
-const cepHost = document.createElement('div');
-cepForm.querySelector('.cep-linha').prepend(cepHost);
-cepCampo.classList.add('cep-oculto'); cepCampo.tabIndex = -1; cepCampo.setAttribute('aria-hidden', 'true');
-const cepCodigo = criarCodigo(cepHost, {
-  length: 8, separador: 5, rotulo: 'Seu CEP, 8 números',
-  aoMudar: cod => {
-    cepSinc = true;
-    cepCampo.value = cod.includes(' ') ? '' : (cod.length > 5 ? cod.slice(0, 5) + '-' + cod.slice(5) : cod);   // com buraco no meio o CEP vale como incompleto
-    cepCampo.dispatchEvent(new Event('input', { bubbles: true }));
-    cepSinc = false;
-    if (cod) { cepMsg.textContent = ''; cepMsg.className = 'cep-msg'; }
-    cepCodigo.status('idle');
-  },
-});
-cepCampo.addEventListener('input', () => { if (!cepSinc) cepCodigo.definir(cepCampo.value); });
-cepCampo.addEventListener('focus', () => cepCodigo.foco());
-cepForm.addEventListener('submit', () => {   // roda depois da checagem de ligarCep
-  if (!cepMsg.classList.contains('erro')) { efeitoBotao.ok(); cepCodigo.status('success'); setTimeout(() => cepCodigo.status('idle'), 1300); }
-  else { efeitoBotao.erro(); }
-  if (cepMsg.classList.contains('erro') && cepCampo.value.replace(/\D/g, '').length >= 8) cepCodigo.status('error');
-});
+// o campo de CEP vira 8 caixinhas (cep-caixas.js); o #cep de verdade continua por baixo
+const cepCodigo = caixasDoCep({ form: $('cepForm'), campo: $('cep'), msg: $('cepMsg'), aoAcertar: () => efeitoBotao.ok(), aoErrar: () => efeitoBotao.erro() });
 $('mapa').addEventListener('ponto', e => escolher(e.detail, false));
 
 // ---------- compartilhar o resultado do CEP e salvar como foto

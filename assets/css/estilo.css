@@ -292,7 +292,7 @@ h3{font:700 19px/1.25 var(--titulo);letter-spacing:-.01em}
 .editor h2{font-size:26px;display:flex;align-items:baseline;justify-content:space-between;gap:12px}
 .conta{font:500 12.5px/1 var(--mono);letter-spacing:0;color:var(--texto-2)}
 .editor .cep-form{margin-top:16px}
-.editor .cep-linha{flex-wrap:nowrap}
+.editor .cep-linha{flex-wrap:wrap}   /* com as 8 caixinhas, o botão Trocar desce para a linha de baixo */
 .editor #cep{flex:1;min-width:0;width:auto;height:46px}
 .editor .cep-linha button{height:46px}
 .editor .cesta-ponto{margin:10px 0 20px}

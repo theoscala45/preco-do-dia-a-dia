@@ -1,5 +1,6 @@
 // Página "Resultado da lista": loja única mais barata, economia, divisão em duas lojas, rota e tabela por produto.
 import { $, gsap, ScrollTrigger, calmo, reais, curto, rolar, carregar, guarda, ligarCep, iniciar, PREVIA, semAcento } from './base.js';
+import { caixasDoCep } from './cep-caixas.js?v=20261124r';
 import { criarLista, calcular, ligarBusca, ligarItens, ECONOMIA_MINIMA } from './cesta.js';
 import { aoAparecer } from './aparecer.js';
 import { compartilhar, salvarFoto } from './compartilhar.js';
@@ -120,6 +121,7 @@ $('basica').addEventListener('click', () => lista.basica());
 $('basica2').addEventListener('click', () => lista.basica());
 $('limpar').addEventListener('click', () => lista.limpar());
 ligarCep(geo, $('cepForm'), $('cep'), $('cepMsg'), i => { estado.ponto = i; estado.cepDado = true; desenhar(); });
+caixasDoCep({ form: $('cepForm'), campo: $('cep'), msg: $('cepMsg') });
 desenhar();
 
 // ---------- compartilhar a lista e salvar como foto

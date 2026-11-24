@@ -286,3 +286,4 @@ O projeto passou de "O Preço do Dia a Dia" para **Preço Aberto** (escolha do T
 
 ## 18. CEP em caixinhas na página inicial (24/11/2026)
 - `CodeSlots` do React Bits convertido para JS puro: `assets/js/codigo.js` (`criarCodigo`; molas calculadas ali). Usado só no CEP da página inicial (`main.js`): 8 caixas com o hífen depois da 5ª; o `#cep` de verdade continua no HTML (escondido com `.cep-oculto`) e guarda o valor, então `ligarCep` e o CEP salvo funcionam como antes. Acerto mostra a faixa com ✓ por ~1,3 s; CEP completo fora da capital faz os números afundarem e a mensagem de erro continua na tela. Lista e Inflação ainda usam o campo de texto comum.
+- (24/11/2026) O CEP em caixinhas agora também está na Sua lista. A ligação ficou em `assets/js/cep-caixas.js` (`caixasDoCep`), usada por `main.js` e `lista.js`. Na Sua lista o botão Trocar desce para a linha de baixo (`.editor .cep-linha{flex-wrap:wrap}`). Inflação por bairro ainda usa o campo comum.
