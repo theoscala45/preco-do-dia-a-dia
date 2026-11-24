@@ -276,6 +276,7 @@ const efeitoBotao = {};   // preenchido logo abaixo: ok() = salto, anel e faísc
   efeitoBotao.ok = () => {
     if (!botaoCep) return;
     botaoCep.classList.remove('pulsa'); void botaoCep.offsetWidth; botaoCep.classList.add('pulsa');
+    setTimeout(() => botaoCep.classList.remove('pulsa'), 900);   // garante que o anel não fica preso se a animação for interrompida
     if (calmo) return;
     faiscas();
   };
@@ -297,6 +298,7 @@ const efeitoBotao = {};   // preenchido logo abaixo: ok() = salto, anel e faísc
     gsap.fromTo(botaoCep, { scale: 0.93 }, { scale: 1, duration: 0.7, ease: 'elastic.out(1, 0.35)', clearProps: 'transform' });
   });
   botaoCep?.addEventListener('animationend', e => { if (e.animationName === 'anel-botao') botaoCep.classList.remove('pulsa'); });
+  botaoCep?.addEventListener('animationcancel', () => botaoCep.classList.remove('pulsa'));
 }
 
 // ---------- a troca da tela de abertura para a tela do resultado

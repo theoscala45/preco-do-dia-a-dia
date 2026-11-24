@@ -468,3 +468,6 @@ a.seta.volta:hover::before{transform:translateX(-5px)}
 @keyframes code-slots-pisca{0%,49.9%{opacity:1}50%,100%{opacity:0}}
 .code-slots__sr{position:absolute;width:1px;height:1px;margin:-1px;padding:0;border:0;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 @media (prefers-reduced-motion:reduce){.code-slots__caret-line{animation:none}}
+
+/* ---------- anel de foco só para o teclado (a regra do data-teclado está em base.js) ---------- */
+html:not([data-teclado]) :focus-visible{outline:none}
