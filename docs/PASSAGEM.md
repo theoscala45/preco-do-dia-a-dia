@@ -277,3 +277,6 @@ O projeto passou de "O Preço do Dia a Dia" para **Preço Aberto** (escolha do T
 ## 15. Logo e endereço (23/11/2026)
 - Logo escolhido pelo Theo: a cesta (opção D). Arquivos em `assets/logo/` (`cesta.svg`, `cesta-escuro.svg`, `icone.svg`, `apple-touch-icon.png`). As folhas de opções ficam em `docs/logo/` (não versionadas).
 - Decisão: o endereço e o repositório continuam `preco-do-dia-a-dia` até o Theo registrar o domínio próprio (ex.: precoaberto.com.br). Trocar só uma vez, junto com o domínio. Ao trocar: renomear o repositório, atualizar o link do cron-job.org, o `<base>` do 404.html, `assets/js/compartilhar.js`, `coletor/coletar.py`, `tools/*.py`, `agente/casar.py`, `CLAUDE.md` e os links do rodapé (GitHub).
+
+## 16. TechText na página Sobre (24/11/2026)
+- Componente `TechText` do React Bits (nome em linhas tracejadas sob o cursor), convertido de React para JS puro: `assets/js/techtext.js` (função `criarTechText`). CSS no fim de `assets/css/etiqueta.css`. Usado só em `sobre.html` (`assets/js/sobre-nome.js`, faixa `#techNome`).

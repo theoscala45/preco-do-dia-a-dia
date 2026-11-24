@@ -416,3 +416,18 @@ a.seta.volta:hover::before{transform:translateX(-5px)}
   .abre .media{flex-direction:row;align-items:center;justify-content:space-between;min-width:0;width:min(100%,420px);margin-top:10px;padding-top:6px}
   .abre .media .preco b{font-size:44px}
 }
+.tech-text {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  touch-action: pan-y;
+  user-select: none;
+}
+
+.tech-text-canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.tech-faixa{height:clamp(150px,22vw,280px);margin:8px 0 28px;color:var(--texto)}
+.tech-faixa .tech-text{cursor:crosshair}
