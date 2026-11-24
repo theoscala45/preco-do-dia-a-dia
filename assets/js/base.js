@@ -1,7 +1,7 @@
 // O que todas as páginas usam: dados, CEP e lista guardados no navegador, scroll suave (Lenis)
 // e as animações comuns (GSAP): cabeçalho, títulos que sobem por linha e blocos que surgem ao rolar.
 import { ligarCards } from './cards.js?v=20261124f';
-import { desfocarFrases, desfocarJunto } from './desfoque.js?v=20261124w7';
+import { desfocarFrases, desfocarJunto } from './desfoque.js?v=20261124wc';
 import { esticarBordas } from './mola.js?v=20261124wa';
 
 // o anel laranja de foco só aparece para quem navega com o teclado (Tab). Clique do mouse, toque e foco dado por código

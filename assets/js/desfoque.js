@@ -29,16 +29,27 @@ export function desfocarFrases(gsap, calmo, seletor = '[data-titulo]:not([data-j
 }
 
 // Um título que entra inteiro, com todas as palavras juntas: sai do desfoque, sobe um pouco e assenta (data-junto).
+// A animação roda num invólucro por dentro do título, não no título: na página inicial o próprio título já é movido pelo scroll
+// (a abertura sobe e apaga) e as duas animações brigavam, deixando o título invisível depois de um segundo.
 export function desfocarJunto(gsap, calmo, seletor = '[data-junto]') {
   const toque = matchMedia('(pointer: coarse)').matches;
   const de = { autoAlpha: 0, y: 34, scale: 0.97, filter: `blur(${toque ? 6 : 14}px)`, transformOrigin: '0% 60%' };
+  const mapa = new WeakMap();
   const alvos = [...document.querySelectorAll(seletor)];
-  alvos.forEach(el => { el.style.visibility = 'visible'; if (!calmo) gsap.set(el, de); });
+  alvos.forEach(el => {
+    const miolo = document.createElement('span');
+    miolo.className = 'junto'; miolo.style.display = 'block';
+    while (el.firstChild) miolo.appendChild(el.firstChild);
+    el.appendChild(miolo);
+    mapa.set(el, miolo);
+    el.style.visibility = 'visible';
+    if (!calmo) gsap.set(miolo, de);
+  });
   if (calmo) return;
-  const entra = lote => lote.forEach(el => gsap.fromTo(el, de, {
+  const entra = lote => lote.forEach(el => gsap.fromTo(mapa.get(el), de, {
     autoAlpha: 1, y: 0, scale: 1, filter: 'blur(0px)', duration: 0.95, ease: 'power3.out', delay: 0.08, overwrite: true,
     clearProps: 'transform,filter,opacity,visibility,transformOrigin',
   }));
-  const sai = lote => lote.forEach(el => gsap.set(el, { ...de, overwrite: true }));
+  const sai = lote => lote.forEach(el => gsap.set(mapa.get(el), { ...de, overwrite: true }));
   aoAparecer(alvos, entra, sai, { margem: '0px 0px -10% 0px' });
 }
