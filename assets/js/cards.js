@@ -24,12 +24,12 @@ function entrar(c, i) {
   linhas.get(c)?.kill();
   const tl = gsap.timeline({ delay: i * 0.09, onComplete: () => liberar(c) });
   linhas.set(c, tl);
-  tl.fromTo(c, { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.3, ease: 'power1.out' }, 0)
-    .fromTo(c, { x: lado * ladoPx }, { x: 0, duration: 0.75, ease: 'power3.out' }, 0)            // em x: freia no fim
-    .fromTo(c, { y: 36 }, { y: 0, duration: 0.8, ease: 'back.out(1.7)' }, 0)                     // em y: passa do ponto e volta (curva o caminho)
-    .fromTo(c, { scaleX: 1.02, scaleY: 0.955, transformOrigin: '50% 100%' }, { scaleX: 1, scaleY: 1, duration: 0.6, ease: 'elastic.out(1, 0.5)' }, 0.3);   // squash ao pousar
+  tl.fromTo(c, { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.36, ease: 'power1.out' }, 0)
+    .fromTo(c, { x: lado * ladoPx }, { x: 0, duration: 0.9, ease: 'power3.out' }, 0)            // em x: freia no fim
+    .fromTo(c, { y: 36 }, { y: 0, duration: 0.96, ease: 'back.out(1.7)' }, 0)                     // em y: passa do ponto e volta (curva o caminho)
+    .fromTo(c, { scaleX: 1.02, scaleY: 0.955, transformOrigin: '50% 100%' }, { scaleX: 1, scaleY: 1, duration: 0.72, ease: 'elastic.out(1, 0.5)' }, 0.36);   // squash ao pousar
   const filhos = [...c.children].slice(0, 10);
-  if (filhos.length) tl.from(filhos, { autoAlpha: 0, y: 10, duration: 0.45, stagger: 0.05, ease: 'power2.out', clearProps: 'all' }, 0.18);   // o conteúdo chega depois do card
+  if (filhos.length) tl.from(filhos, { autoAlpha: 0, y: 10, duration: 0.55, stagger: 0.06, ease: 'power2.out', clearProps: 'all' }, 0.22);   // o conteúdo chega depois do card
 }
 
 // volta o card ao estado "ainda não entrou" (para ele entrar de novo na próxima vez que aparecer)

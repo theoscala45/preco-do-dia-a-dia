@@ -1,6 +1,6 @@
 // O que todas as páginas usam: dados, CEP e lista guardados no navegador, scroll suave (Lenis)
 // e as animações comuns (GSAP): cabeçalho, títulos que sobem por linha e blocos que surgem ao rolar.
-import { ligarCards } from './cards.js';
+import { ligarCards } from './cards.js?v=20261124f';
 import { aoAparecer } from './aparecer.js';
 const { gsap, ScrollTrigger, SplitText, Lenis } = window;
 export { gsap, ScrollTrigger };

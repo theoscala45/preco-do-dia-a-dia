@@ -1,7 +1,7 @@
 // Página inicial: o mapa, o CEP, as cenas do scroll e a lista de compras.
 import { $, gsap, ScrollTrigger, calmo, reais, pct, curto, rolar, carregar, guarda, ligarCep, iniciar, irPara, semAcento } from './base.js';
 import { criarLista, calcular, ligarBusca, ligarItens } from './cesta.js';
-import { pulo } from './cards.js';
+import { pulo } from './cards.js?v=20261124f';
 import { aoAparecer } from './aparecer.js';
 import { compartilhar, salvarFoto } from './compartilhar.js';
 
@@ -108,7 +108,7 @@ const rotaDe = (i, k) => rotas.pontos.find(p => p.id === geo.pontos[i].id)?.rede
 // ---------- mapa
 let mapa = null;
 try {
-  const { criarMapa } = await import('./mapa.js?v=20261124e');
+  const { criarMapa } = await import('./mapa.js?v=20261124f');
   mapa = criarMapa($('mapa'), geo, rotas, {
     redes: dados.redes.map((r, k) => ({ id: r.id, nome: nomes[k] })),
     var: normal(vars), ordem: i => redesNoPonto[i].ordem, preco: (i, k) => (redesNoPonto[i].totais[k] == null ? null : reais(redesNoPonto[i].totais[k])),

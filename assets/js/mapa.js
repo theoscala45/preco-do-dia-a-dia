@@ -248,7 +248,7 @@ export function criarMapa(el, geo, rotas, valores, { calmo = false } = {}) {
     cancelAnimationFrame(pontosRaf);
     const por = (r, o) => geo.pontos.forEach((_, i) => mapa.setFeatureState({ source: 'pontos', id: i }, { r, o }));
     if (direto || calmo || (ligar && !mudou)) { pontosT = ligar ? 1 : 0; por(ligar ? raio : 0, ligar ? 0.9 : 0); return; }
-    const de = pontosT, alvo = ligar ? 1 : 0, t0 = performance.now(), DUR = ligar ? 700 : 300;
+    const de = pontosT, alvo = ligar ? 1 : 0, t0 = performance.now(), DUR = ligar ? 850 : 360;
     const quadro = agora => {
       const t = Math.min(1, (agora - t0) / DUR);
       pontosT = de + (alvo - de) * suave(t);                      // 0 a 1, parte de onde estava (sem pulo se for interrompido)
