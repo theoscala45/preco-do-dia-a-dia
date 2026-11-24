@@ -273,3 +273,7 @@ O projeto passou de "O Preço do Dia a Dia" para **Preço Aberto** (escolha do T
 - O **endereço** continua `theoscala45.github.io/preco-do-dia-a-dia` e o repositório continua com o nome antigo: renomear o repositório mudaria o
   endereço do site e quebraria o link que o cron-job.org chama toda noite. Fazer isso junto com um domínio próprio.
 - O documento "O Preço do Dia a Dia: lista técnica" (Google Docs, fora do repositório) continua com o nome antigo.
+
+## 15. Logo e endereço (23/11/2026)
+- Logo escolhido pelo Theo: a cesta (opção D). Arquivos em `assets/logo/` (`cesta.svg`, `cesta-escuro.svg`, `icone.svg`, `apple-touch-icon.png`). As folhas de opções ficam em `docs/logo/` (não versionadas).
+- Decisão: o endereço e o repositório continuam `preco-do-dia-a-dia` até o Theo registrar o domínio próprio (ex.: precoaberto.com.br). Trocar só uma vez, junto com o domínio. Ao trocar: renomear o repositório, atualizar o link do cron-job.org, o `<base>` do 404.html, `assets/js/compartilhar.js`, `coletor/coletar.py`, `tools/*.py`, `agente/casar.py`, `CLAUDE.md` e os links do rodapé (GitHub).
