@@ -1,7 +1,7 @@
 // O que todas as páginas usam: dados, CEP e lista guardados no navegador, scroll suave (Lenis)
 // e as animações comuns (GSAP): cabeçalho, títulos que sobem por linha e blocos que surgem ao rolar.
 import { ligarCards } from './cards.js?v=20261124f';
-import { desfocarFrases } from './desfoque.js?v=20261124w5';
+import { desfocarFrases, desfocarJunto } from './desfoque.js?v=20261124w7';
 
 // o anel laranja de foco só aparece para quem navega com o teclado (Tab). Clique do mouse, toque e foco dado por código
 // (depois de digitar o CEP, por exemplo) não deixam mais um contorno solto em botões e painéis.
@@ -215,6 +215,7 @@ export function iniciar(dados) {
       gsap.ticker.lagSmoothing(0);
     }
 
+    desfocarJunto(gsap, calmo);    // o título da página inicial entra inteiro, com todas as palavras juntas (data-junto)
     desfocarFrases(gsap, calmo);   // os títulos grandes (data-titulo) entram palavra por palavra, saindo do desfoque
     // os subtítulos (data-subtitulo) sobem linha por linha, de trás de uma máscara, logo depois do título
     document.querySelectorAll('[data-subtitulo]').forEach(el => subirTitulo(el, { atraso: el.getBoundingClientRect().top < innerHeight * 0.95 ? 0.3 : 0, duracao: 0.85, passo: 0.08 }));
