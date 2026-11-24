@@ -881,3 +881,6 @@ html:not([data-teclado]) :focus-visible{outline:none}
 .placar .split-flap-text{max-width:100%}
 /* placar: peças um pouco mais altas, para caber o til, o acento e o cedilha de letras como Ã, Â, Ú e Ç sem cortar */
 .placar .split-flap-text__tile{height:1.34em}
+
+/* ---------- frases que entram desfocadas, palavra por palavra (desfoque.js) ---------- */
+.dw{display:inline-block}
