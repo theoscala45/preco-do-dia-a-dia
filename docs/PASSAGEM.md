@@ -280,3 +280,6 @@ O projeto passou de "O Preço do Dia a Dia" para **Preço Aberto** (escolha do T
 
 ## 16. TechText na página Sobre (24/11/2026)
 - Componente `TechText` do React Bits (nome em linhas tracejadas sob o cursor), convertido de React para JS puro: `assets/js/techtext.js` (função `criarTechText`). CSS no fim de `assets/css/etiqueta.css`. Usado só em `sobre.html` (`assets/js/sobre-nome.js`, faixa `#techNome`).
+
+## 17. Seletor elástico no gráfico (24/11/2026)
+- `RubberSegment` do React Bits convertido para JS puro: `assets/js/segmento.js` (`segmentoElastico`; as molas são calculadas ali, sem a biblioteca motion). Usado no seletor "Meu bairro / Por zona / Por renda" de `inflacao.html`; avisa a mudança pelo evento `segmento`. CSS no fim de `assets/css/etiqueta.css`.

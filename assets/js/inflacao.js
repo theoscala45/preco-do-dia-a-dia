@@ -1,5 +1,6 @@
 // Página "Inflação por bairro": índice local contra o IPCA, por ponto, por zona e por faixa de renda.
 import { aoAparecer } from './aparecer.js';
+import { segmentoElastico } from './segmento.js?v=20261124h';
 import { $, gsap, ScrollTrigger, calmo, reais, pct, curto, contar, carregar, guarda, ligarCep, iniciar } from './base.js';
 
 const [dados, geo] = await carregar('dados', 'geo');
@@ -102,11 +103,12 @@ caixa.addEventListener('pointermove', e => {
 });
 caixa.addEventListener('pointerleave', () => { dica.classList.remove('on'); svg.querySelector('#guia')?.setAttribute('visibility', 'hidden'); });
 
-document.querySelectorAll('.aba').forEach(b => b.addEventListener('click', () => {
-  estado.vista = b.dataset.vista;
-  document.querySelectorAll('.aba').forEach(o => o.setAttribute('aria-pressed', o === b));
+const abasGraf = document.querySelector('.graf-grande .abas');
+abasGraf.addEventListener('segmento', e => {
+  estado.vista = e.detail.botao.dataset.vista;
   desenharGrafico();
-}));
+});
+segmentoElastico(abasGraf);
 let espera = 0, larguraAntes = caixa.clientWidth;
 addEventListener('resize', () => { clearTimeout(espera); espera = setTimeout(() => { if (caixa.clientWidth !== larguraAntes) { larguraAntes = caixa.clientWidth; desenharGrafico(false); } }, 150); });
 
