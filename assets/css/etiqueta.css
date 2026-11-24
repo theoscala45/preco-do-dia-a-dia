@@ -286,7 +286,10 @@ a.seta.volta:hover::before{transform:translateX(-5px)}
 .pg-produtos .pg-topo,.pg-produtos .texto{max-width:980px}
 .prods-barra{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:18px 24px}
 .prods-busca{flex:1 1 280px;max-width:420px}
-.prods-barra .abas{flex-wrap:wrap;border-radius:18px}
+.prods-barra .abas{border-radius:999px}
+.abas-rolagem{max-width:100%;overflow-x:auto;scrollbar-width:none;border-radius:999px}   /* em tela estreita a fileira de grupos rola de lado */
+.abas-rolagem::-webkit-scrollbar{display:none}
+@media (pointer:coarse){.abas-rolagem .abas.elastico{touch-action:pan-x pan-y}}   /* no toque, deslizar rola a fileira; tocar escolhe o grupo */
 #pBusca{width:100%}
 .pg-produtos #pContagem{margin:16px 0 8px}
 .prods-lista{border-top:2px solid var(--regua)}

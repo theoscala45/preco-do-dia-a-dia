@@ -1,5 +1,6 @@
 // Página "Produtos": os 100 da cesta, com busca e filtro por grupo. Cada linha leva à página do produto.
 import { $, carregar, iniciar, reais, guarda, semAcento, PREVIA } from './base.js';
+import { segmentoElastico } from './segmento.js?v=20261124w6';
 import { precosDoProduto } from './cesta.js';
 
 const [dados, geo] = await carregar('dados', 'geo');
@@ -35,10 +36,10 @@ function desenhar() {
   $('pContagem').textContent = `${ver.length} de ${itens.length} produtos${pontoValido >= 0 ? `. Preços do bairro ${geo.pontos[pontoValido].bairro.split(' (')[0]}` : ''}.`;
 }
 $('pBusca').addEventListener('input', e => { termo = e.target.value; desenhar(); });
-$('pGrupos').addEventListener('click', e => {
-  const b = e.target.closest('button'); if (!b) return;
-  grupo = b.dataset.g;
-  $('pGrupos').querySelectorAll('button').forEach(x => x.setAttribute('aria-pressed', x === b));
+segmentoElastico($('pGrupos'));   // o destaque azul estica até o grupo escolhido (e dá para arrastar)
+$('pGrupos').addEventListener('segmento', e => {
+  grupo = e.detail.botao.dataset.g;
+  e.detail.botao.scrollIntoView({ inline: 'nearest', block: 'nearest', behavior: 'smooth' });   // em tela estreita a fileira rola
   desenhar();
 });
 desenhar();
