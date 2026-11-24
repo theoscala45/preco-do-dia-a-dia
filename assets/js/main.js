@@ -19,7 +19,7 @@ const iMin = cestas.indexOf(Math.min(...cestas)), iMax = cestas.indexOf(Math.max
 $('numLojas').dataset.conta = rotas.lojas.length;
 $('minNome').textContent = curto(geo.pontos[iMin].bairro); $('minVal').textContent = reais(cestas[iMin]);
 $('maxNome').textContent = curto(geo.pontos[iMax].bairro); $('maxVal').textContent = reais(cestas[iMax]);
-// A etiqueta da cesta média: cai pendurada pelo furo, passa do ponto, balança como um pêndulo que vai parando, o furo estoura,
+// A etiqueta da cesta média: cai pendurada pelo furo, passa só um pouco do ponto, dá um balanço curto, o furo estoura,
 // o brilho cruza e o preço rola até o valor. Toca toda vez que ela aparece na tela (inclusive na volta do resultado do CEP).
 {
   const tag = $('media'), legenda = tag.querySelector('span:first-child');
@@ -36,14 +36,13 @@ $('maxNome').textContent = curto(geo.pontos[iMax].bairro); $('maxVal').textConte
     zerarTag();
     tl = gsap.timeline({ onComplete: () => gsap.set([tag, legenda], { clearProps: 'all' }) });
     tl.fromTo(tag, { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.25, ease: 'power1.out' }, 0)
-      .fromTo(tag, { y: -170 }, { y: 0, duration: 1.0, ease: 'back.out(1.9)' }, 0)                                    // cai e passa do ponto (a corda estica)
-      .add(() => tag.classList.add('pousou'), 0.45)                                                                   // o furo estoura e o brilho cruza
+      .fromTo(tag, { y: -80 }, { y: 0, duration: 0.8, ease: 'back.out(1.1)' }, 0)                                     // cai e passa só um pouco do ponto
+      .add(() => tag.classList.add('pousou'), 0.4)                                                                   // o furo estoura e o brilho cruza
       .fromTo(legenda, { autoAlpha: 0, y: 8 }, { autoAlpha: 1, y: 0, duration: 0.45, ease: 'power2.out' }, 0.5)       // o texto chega depois
-      .add(() => rolar($('etqInt'), $('etqCent'), media), 0.55)                                                       // o preço rola
-      .fromTo(tag, { rotation: 0, transformOrigin: 'calc(100% - 16px) 16px' }, { keyframes: [                         // pêndulo preso no furo, cada ida menor que a anterior
-        { rotation: -9, duration: 0.3, ease: 'power2.out' }, { rotation: 6.5, duration: 0.34, ease: 'sine.inOut' },
-        { rotation: -4, duration: 0.34, ease: 'sine.inOut' }, { rotation: 2, duration: 0.34, ease: 'sine.inOut' },
-        { rotation: -0.8, duration: 0.3, ease: 'sine.inOut' }, { rotation: 0, duration: 0.3, ease: 'sine.out' }] }, 0.6);
+      .add(() => rolar($('etqInt'), $('etqCent'), media), 0.5)                                                       // o preço rola
+      .fromTo(tag, { rotation: 0, transformOrigin: 'calc(100% - 16px) 16px' }, { keyframes: [                         // um balanço curto no furo, que para logo
+        { rotation: -4, duration: 0.24, ease: 'power2.out' }, { rotation: 2.2, duration: 0.28, ease: 'sine.inOut' },
+        { rotation: -0.8, duration: 0.26, ease: 'sine.inOut' }, { rotation: 0, duration: 0.24, ease: 'sine.out' }] }, 0.5);
   };
   if (!aoAparecer(tag, tocarTag, zerarTag, { margem: '0px 0px -6% 0px' })) tocarTag();
 }
