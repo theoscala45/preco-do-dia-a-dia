@@ -99,7 +99,7 @@ export function subirTitulo(el, { atraso = 0, aoRolar = false } = {}) {
     onSplit(self) {
       gsap.set(el, { visibility: 'visible' });
       return gsap.from(self.lines, {
-        yPercent: 108, duration: 1.05, ease: 'power4.out', stagger: 0.09, delay: atraso,
+        yPercent: 130, duration: 1.05, ease: 'power4.out', stagger: 0.09, delay: atraso,
         // toca toda vez que o título entra na tela (de baixo ou de cima) e volta ao início ao sair
         scrollTrigger: { trigger: el, start: 'top 88%', end: 'bottom top', toggleActions: 'play reset play reset' },
       });

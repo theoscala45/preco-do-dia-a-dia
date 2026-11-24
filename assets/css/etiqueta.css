@@ -397,3 +397,8 @@ a.seta.volta:hover::before{transform:translateX(-5px)}
 /* textos que só fazem sentido com mouse ou com toque */
 .so-toque{display:none}
 @media (pointer:coarse){.so-mouse{display:none}.so-toque{display:inline}}
+
+/* Títulos que sobem por linha ficam atrás de uma máscara do tamanho da linha. Como a fonte de letreiro tem entrelinha menor que 1,
+   a máscara cortava a perna do "g", do "p" e do "ç" e o topo dos acentos. O respiro entra como padding e sai como margem negativa,
+   então a posição do texto na página não muda. */
+[data-titulo] > div{padding:.16em 0 .22em;margin:-.16em 0 -.22em}
