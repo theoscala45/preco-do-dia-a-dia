@@ -343,6 +343,7 @@ function transicaoParaResultado() {
       gsap.from(res.querySelector('header'), { autoAlpha: 0, y: 12, duration: 0.45, ease: 'power2.out', delay: 0.35, clearProps: 'all' });
       gsap.from('#redesLista li', { autoAlpha: 0, x: -20, duration: 0.5, stagger: 0.05, ease: 'power2.out', delay: 0.45, clearProps: 'transform,opacity,visibility' });
       gsap.from('#redesLista .melhor .val small', { scale: 0, duration: 0.7, ease: 'elastic.out(1, 0.5)', delay: 1.0, transformOrigin: '100% 50%', clearProps: 'transform' });
+      setTimeout(() => ScrollTrigger.refresh(), 1400);
     }, 0.3);
 }
 function transicaoDeVolta() {
@@ -350,13 +351,17 @@ function transicaoDeVolta() {
   gsap.timeline()
     .to(res, { autoAlpha: 0, y: 40, duration: 0.28, ease: 'power2.out' }, 0)
     .add(() => {
-      flip([tit, form], () => {
+      // só o título desliza; o formulário não passa por cima dele (ele ficaria sobre o título que cresce): some e volta já no lugar
+      gsap.set(form, { autoAlpha: 0 });
+      flip([tit], () => {
         res.hidden = true; gsap.set(res, { clearProps: 'all' });
         document.documentElement.classList.remove('com-resultado');
         gsap.set(lide, { clearProps: 'all' });
         gsap.set(media, { autoAlpha: 0 });   // a etiqueta volta sozinha: o observador de tela dispara a queda dela
       });
       gsap.fromTo(lide, { autoAlpha: 0, y: 14 }, { autoAlpha: 1, y: 0, duration: 0.45, ease: 'power2.out', delay: 0.25, clearProps: 'all' });
+      gsap.fromTo(form, { autoAlpha: 0, y: 14 }, { autoAlpha: 1, y: 0, duration: 0.45, ease: 'power2.out', delay: 0.55, clearProps: 'transform,opacity,visibility' });
+      setTimeout(() => ScrollTrigger.refresh(), 1200);   // a abertura mudou de altura: os gatilhos do scroll medem de novo
     }, 0.26);
 }
 
