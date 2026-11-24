@@ -1,8 +1,9 @@
 // Página inicial: o mapa, o CEP, as cenas do scroll e a lista de compras.
-import { $, gsap, ScrollTrigger, calmo, reais, pct, curto, rolar, carregar, guarda, ligarCep, iniciar, irPara } from './base.js';
+import { $, gsap, ScrollTrigger, calmo, reais, pct, curto, rolar, carregar, guarda, ligarCep, iniciar, irPara, semAcento } from './base.js';
 import { criarLista, calcular, ligarBusca, ligarItens } from './cesta.js';
 import { pulo } from './cards.js';
 import { aoAparecer } from './aparecer.js';
+import { compartilhar, salvarFoto } from './compartilhar.js';
 
 const [dados, geo, rotas] = await carregar('dados', 'geo', 'rotas');
 iniciar(dados);
@@ -360,6 +361,29 @@ $('redesLista').addEventListener('pointerover', e => { const li = e.target.close
 $('redesLista').addEventListener('pointerleave', () => mapa?.destacar(-1));
 ligarCep(geo, $('cepForm'), $('cep'), $('cepMsg'), i => escolher(i, true));
 $('mapa').addEventListener('ponto', e => escolher(e.detail, false));
+
+// ---------- compartilhar o resultado do CEP e salvar como foto
+{
+  const resumo = () => {
+    const i = estado.ponto, r = redesNoPonto[i], bairro = curto(geo.pontos[i].bairro), k = r.melhor;
+    const maior = Math.max(...r.ordem.map(j => r.totais[j]));
+    const dia = new Date(dados.datas.at(-1) + 'T12:00').toLocaleDateString('pt-BR');
+    return { i, r, bairro, k, maior, dia };
+  };
+  $('resCompartilhar')?.addEventListener('click', () => {
+    const { r, bairro, k } = resumo();
+    compartilhar({ titulo: `Onde é mais barato em ${bairro}`, texto: `Em ${bairro}, o ${nomes[k]} é o supermercado mais barato para a mesma cesta de ${n} itens (${reais(r.totais[k])}). Veja o seu bairro:` });
+  });
+  $('resFoto')?.addEventListener('click', () => {
+    const { r, bairro, k, maior, dia } = resumo();
+    salvarFoto({
+      titulo: bairro, subtitulo: `Cesta de ${n} itens, preços de ${dia}`,
+      destaque: { rotulo: 'Mais barato', nome: nomes[k], valor: reais(r.totais[k]) },
+      linhas: r.ordem.map((j, pos) => ({ nome: nomes[j], valor: reais(r.totais[j]), v: r.totais[j] / maior, melhor: pos === 0 })),
+      rodape: 'A mesma lista de 100 produtos em 10 supermercados',
+    }, `preco-do-dia-a-dia-${semAcento(bairro).replace(/[^a-z0-9]+/g, '-')}.png`);
+  });
+}
 
 // ---------- lista de compras (o resultado completo fica em lista.html)
 // a lista em cada supermercado, em barras, do mais barato ao mais caro

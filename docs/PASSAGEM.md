@@ -251,3 +251,15 @@ mudar de ideia, somar:
 4. Liberar o site da rede no ambiente da nuvem, para testar.
 5. Testar numa cópia com `--limite` e `--redes`, depois rodar o fluxo `coleta.yml` só para ela.
 6. Atualizar a tabela de redes e os textos da página Método.
+
+## 13. Lançamento: imagem de prévia, 404 e compartilhar (23/11/2026)
+
+- **Imagem de prévia:** `assets/og.png` (1200 x 630), citada nas meta tags `og:` e `twitter:` de todas as páginas. A fonte da imagem é
+  `docs/og-fonte.html`. Para refazer: no Chrome sem janela,
+  `"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless=new --hide-scrollbars --force-device-scale-factor=1 --window-size=1200,630 --virtual-time-budget=4000 --allow-file-access-from-files --screenshot=assets/og.png file://$PWD/docs/og-fonte.html`.
+  As meta tags usam o endereço `https://theoscala45.github.io/preco-do-dia-a-dia/`; se um dia houver domínio próprio, trocar nas páginas.
+- **404:** `404.html` na raiz (o GitHub Pages usa esse arquivo para endereços que não existem). Ela define um `<base>` por script, que vale
+  `/preco-do-dia-a-dia/` no GitHub Pages e `/` em outros lugares, para os caminhos funcionarem em qualquer endereço errado.
+- **Compartilhar e salvar como foto:** `assets/js/compartilhar.js`. A imagem (1080 x 1350) é desenhada num canvas no navegador, sem servidor.
+  No celular abre o menu de compartilhar do sistema; no computador copia o texto com o link ou baixa o PNG. Botões no resultado do CEP
+  (início) e no resultado da lista.

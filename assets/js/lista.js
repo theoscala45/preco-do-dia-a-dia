@@ -1,8 +1,9 @@
 // Página "Resultado da lista": loja única mais barata, economia, divisão em duas lojas, rota e tabela por produto.
-import { $, gsap, ScrollTrigger, calmo, reais, curto, rolar, carregar, guarda, ligarCep, iniciar, PREVIA } from './base.js';
+import { $, gsap, ScrollTrigger, calmo, reais, curto, rolar, carregar, guarda, ligarCep, iniciar, PREVIA, semAcento } from './base.js';
 import { criarLista, calcular, ligarBusca, ligarItens, ECONOMIA_MINIMA } from './cesta.js';
 import { aoAparecer } from './aparecer.js';
-let gatilhoRanking = null;
+import { compartilhar, salvarFoto } from './compartilhar.js';
+let gatilhoRanking = null, ultimo = null;
 
 const [dados, geo, rotas] = await carregar('dados', 'geo', 'rotas');
 iniciar(dados);
@@ -40,6 +41,7 @@ function desenhar() {
   if (!tem) return;
 
   const { porRede, melhor, pior, completas, dupla, vale } = calcular(dados, lista.itens, estado.ponto);
+  ultimo = { porRede, melhor, itens: lista.itens.length, bairro: curto(pt.bairro) };   // o que os botões de compartilhar usam
 
   // loja única
   $('vNome').textContent = melhor.rede.nome;
@@ -119,3 +121,22 @@ $('basica2').addEventListener('click', () => lista.basica());
 $('limpar').addEventListener('click', () => lista.limpar());
 ligarCep(geo, $('cepForm'), $('cep'), $('cepMsg'), i => { estado.ponto = i; estado.cepDado = true; desenhar(); });
 desenhar();
+
+// ---------- compartilhar a lista e salvar como foto
+$('vCompartilhar')?.addEventListener('click', () => {
+  if (!ultimo) return;
+  const { melhor, itens, bairro } = ultimo;
+  compartilhar({ titulo: 'Minha lista de compras', texto: `Minha lista de ${itens} ${itens === 1 ? 'item' : 'itens'} sai por ${reais(melhor.total)} no ${melhor.rede.nome.replace(' Atacado', '')} (${bairro}). Compare a sua:` });
+});
+$('vFoto')?.addEventListener('click', () => {
+  if (!ultimo) return;
+  const { porRede, melhor, itens, bairro } = ultimo;
+  const completas = porRede.filter(r => r.faltam === melhor.faltam), maior = Math.max(...completas.map(r => r.total));
+  const dia = new Date(dados.datas.at(-1) + 'T12:00').toLocaleDateString('pt-BR');
+  salvarFoto({
+    titulo: `Minha lista de ${itens} ${itens === 1 ? 'item' : 'itens'}`, subtitulo: `${bairro}, preços de ${dia}`,
+    destaque: { rotulo: 'Mais barato numa loja só', nome: nomes[melhor.k], valor: reais(melhor.total) },
+    linhas: completas.map((r, pos) => ({ nome: nomes[r.k], valor: reais(r.total), v: r.total / maior, melhor: pos === 0 })),
+    rodape: melhor.faltam ? `${melhor.faltam} ${melhor.faltam === 1 ? 'item' : 'itens'} sem preço nesta rede` : 'A mesma lista em cada supermercado',
+  }, `minha-lista-${semAcento(bairro).replace(/[^a-z0-9]+/g, '-')}.png`);
+});
