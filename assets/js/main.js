@@ -247,7 +247,8 @@ mm.add('(prefers-reduced-motion: no-preference)', () => {
     .fromTo('#grafico .fim', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.12, ease: 'none' });
 });
 
-// ---------- botão "Ver meu bairro": ao clicar, o botão salta, um anel grande sai dele e faíscas voam em arco
+const efeitoBotao = {};   // preenchido logo abaixo: ok() = salto, anel e faíscas; erro() = o botão balança de um lado para o outro ("uh, uh")
+// ---------- botão "Ver meu bairro": com o CEP certo, o botão salta, um anel grande sai dele e faíscas voam em arco
 {
   const botaoCep = document.querySelector('#cepForm button[type="submit"]');
   const rand = (a, b) => a + Math.random() * (b - a);
@@ -272,11 +273,28 @@ mm.add('(prefers-reduced-motion: no-preference)', () => {
         .to(f, { autoAlpha: 0, scale: 0.3, duration: 0.3, ease: 'power1.in' }, 0.6);
     }
   }
-  botaoCep?.addEventListener('click', () => {
+  efeitoBotao.ok = () => {
+    if (!botaoCep) return;
     botaoCep.classList.remove('pulsa'); void botaoCep.offsetWidth; botaoCep.classList.add('pulsa');
     if (calmo) return;
-    gsap.fromTo(botaoCep, { scale: 0.93 }, { scale: 1, duration: 0.7, ease: 'elastic.out(1, 0.35)', clearProps: 'transform' });   // aperta e volta com mola
     faiscas();
+  };
+  efeitoBotao.erro = () => {   // CEP inválido: nada de festa, o botão balança dizendo "não"
+    if (!botaoCep || calmo) return;
+    gsap.killTweensOf(botaoCep);
+    gsap.set(botaoCep, { scale: 1 });
+    gsap.timeline({ onComplete: () => gsap.set(botaoCep, { clearProps: 'transform' }) })
+      .to(botaoCep, { x: -11, duration: 0.07, ease: 'sine.out' })
+      .to(botaoCep, { x: 11, duration: 0.11, ease: 'sine.inOut' })
+      .to(botaoCep, { x: -9, duration: 0.11, ease: 'sine.inOut' })
+      .to(botaoCep, { x: 9, duration: 0.11, ease: 'sine.inOut' })
+      .to(botaoCep, { x: -5, duration: 0.1, ease: 'sine.inOut' })
+      .to(botaoCep, { x: 5, duration: 0.09, ease: 'sine.inOut' })
+      .to(botaoCep, { x: 0, duration: 0.08, ease: 'sine.out' });
+  };
+  botaoCep?.addEventListener('click', () => {   // aperta e volta com mola (vale para qualquer clique)
+    if (calmo) return;
+    gsap.fromTo(botaoCep, { scale: 0.93 }, { scale: 1, duration: 0.7, ease: 'elastic.out(1, 0.35)', clearProps: 'transform' });
   });
   botaoCep?.addEventListener('animationend', e => { if (e.animationName === 'anel-botao') botaoCep.classList.remove('pulsa'); });
 }
@@ -382,8 +400,9 @@ const cepCodigo = criarCodigo(cepHost, {
 cepCampo.addEventListener('input', () => { if (!cepSinc) cepCodigo.definir(cepCampo.value); });
 cepCampo.addEventListener('focus', () => cepCodigo.foco());
 cepForm.addEventListener('submit', () => {   // roda depois da checagem de ligarCep
-  if (!cepMsg.classList.contains('erro')) { cepCodigo.status('success'); setTimeout(() => cepCodigo.status('idle'), 1300); }
-  else if (cepCampo.value.replace(/\D/g, '').length >= 8) cepCodigo.status('error');
+  if (!cepMsg.classList.contains('erro')) { efeitoBotao.ok(); cepCodigo.status('success'); setTimeout(() => cepCodigo.status('idle'), 1300); }
+  else { efeitoBotao.erro(); }
+  if (cepMsg.classList.contains('erro') && cepCampo.value.replace(/\D/g, '').length >= 8) cepCodigo.status('error');
 });
 $('mapa').addEventListener('ponto', e => escolher(e.detail, false));
 
