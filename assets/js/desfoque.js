@@ -2,7 +2,7 @@
 // Hoje vale para os títulos grandes (data-titulo). Roda toda vez que o título aparece na tela e volta ao início quando ele sai.
 import { aoAparecer } from './aparecer.js';
 
-export function desfocarFrases(gsap, calmo, seletor = '[data-titulo]', { y = -30, blur = 12, duracao = 0.5, passo = 0.05, atraso = 0.03, margem = '0px 0px -10% 0px' } = {}) {
+export function desfocarFrases(gsap, calmo, seletor = '[data-titulo]', { y = -30, blur = 12, duracao = 0.65, passo = 0.07, atraso = 0.05, margem = '0px 0px -10% 0px' } = {}) {
   const toque = matchMedia('(pointer: coarse)').matches;
   const de = { autoAlpha: 0, y: toque ? y * 0.6 : y, filter: `blur(${toque ? blur * 0.5 : blur}px)` };
   const mapa = new WeakMap();
