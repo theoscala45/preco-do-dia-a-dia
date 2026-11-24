@@ -61,9 +61,10 @@ export async function desenharCartao(dados) {
   c.fillStyle = LARANJA; rr(c, L, 0, 120, 16, 0); c.fill();
 
   // marca
-  c.save(); c.translate(L + 4, 78); c.rotate(-0.14);
-  c.fillStyle = LARANJA; c.beginPath(); c.moveTo(0, 0); c.lineTo(34, 0); c.lineTo(34, 24); c.lineTo(17, 40); c.lineTo(0, 24); c.closePath(); c.fill();
-  c.fillStyle = '#fff'; c.beginPath(); c.arc(24, 10, 4.6, 0, Math.PI * 2); c.fill(); c.restore();
+  c.save(); c.translate(L, 66); c.scale(0.66, 0.66); c.lineCap = 'round'; c.lineJoin = 'round';
+  c.strokeStyle = TINTA; c.lineWidth = 5; c.stroke(new Path2D('M20 26V18a12 12 0 0 1 24 0v8'));
+  const cesta = new Path2D('M4 26H60L52 58H12Z'); c.fillStyle = LARANJA; c.fill(cesta); c.strokeStyle = LARANJA; c.lineWidth = 3; c.stroke(cesta);
+  c.strokeStyle = '#fff'; c.lineWidth = 3.6; c.stroke(new Path2D('M21 33V51M32 33V51M43 33V51')); c.restore();
   c.fillStyle = TINTA; c.font = '700 40px "Red Hat Display"'; c.textBaseline = 'alphabetic'; c.fillText('Preço Aberto', L + 56, 108);
 
   // título (nome do bairro ou da lista), até 2 linhas
