@@ -25,6 +25,7 @@ $('maxNome').textContent = curto(geo.pontos[iMax].bairro); $('maxVal').textConte
   const tag = $('media'), legenda = tag.querySelector('span:first-child');
   let tl = null;
   const zerarTag = () => {
+    tag.classList.add('visivel');   // daqui em diante quem esconde e mostra a etiqueta é o JS (estilo no próprio elemento), não o CSS da abertura
     tl?.kill();
     gsap.set([tag, legenda], { clearProps: 'all' });
     tag.classList.remove('pousou');
