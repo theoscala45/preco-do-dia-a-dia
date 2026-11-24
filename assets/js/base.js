@@ -2,6 +2,7 @@
 // e as animações comuns (GSAP): cabeçalho, títulos que sobem por linha e blocos que surgem ao rolar.
 import { ligarCards } from './cards.js?v=20261124f';
 import { desfocarFrases, desfocarJunto } from './desfoque.js?v=20261124w7';
+import { esticarBordas } from './mola.js?v=20261124wa';
 
 // o anel laranja de foco só aparece para quem navega com o teclado (Tab). Clique do mouse, toque e foco dado por código
 // (depois de digitar o CEP, por exemplo) não deixam mais um contorno solto em botões e painéis.
@@ -138,7 +139,7 @@ export function iniciar(dados) {
   const aqui = aqui0 === 'produto.html' ? 'produtos.html' : aqui0;
   document.querySelectorAll('.topo nav a').forEach(a => { if (a.getAttribute('href').split('?')[0] === aqui) a.setAttribute('aria-current', 'page'); });
 
-  // linha laranja sob o link da página atual: ao trocar de página ela salta, como uma mola, do link anterior para o novo
+  // linha laranja sob o link da página atual: ao trocar de página ela estica e junta (mola.js) do link anterior para o novo
   const menuTopo = document.querySelector('.topo nav');
   if (menuTopo && !matchMedia('(max-width: 860px)').matches) {
     const linha = document.createElement('span');
@@ -155,9 +156,8 @@ export function iniciar(dados) {
         gsap.set(linha, { x: f.x, y: f.y, width: f.w, autoAlpha: 1 });
         if (!calmo) {
           if (antes && (Math.abs(antes.x - f.x) > 1 || Math.abs(antes.w - f.w) > 1)) {
-            // em x a mola; em y um pulinho (sobe e cai): juntos desenham um arco
-            gsap.fromTo(linha, { x: antes.x, width: antes.w }, { x: f.x, width: f.w, duration: 1.1, ease: 'elastic.out(1, 0.5)' });
-            gsap.fromTo(linha, { y: antes.y }, { keyframes: [{ y: f.y - 8, duration: 0.2, ease: 'power2.out' }, { y: f.y, duration: 0.55, ease: 'bounce.out' }] });
+            // o mesmo esticar-e-juntar do seletor elástico: a linha estica até cobrir o link antigo e o novo, e junta no novo
+            esticarBordas(({ l, r }) => gsap.set(linha, { x: l, width: Math.max(0, r - l) }), { l: antes.x, r: antes.x + antes.w }, { l: f.x, r: f.x + f.w });
           }
           else if (!antes) gsap.from(linha, { scaleX: 0, duration: 0.6, ease: 'power3.out' });
         }
