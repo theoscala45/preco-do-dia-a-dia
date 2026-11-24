@@ -148,10 +148,9 @@ button.quieto:active,.botao.quieto:active{transform:translateY(3px) scale(1.015,
 .item .tirar{position:relative}
 .item .tirar::after{content:"";position:absolute;inset:-9px}
 .cap .seta{padding:12px 0;margin-top:6px}
-.topo nav a{padding-top:12px;padding-bottom:12px}
+@media (min-width:861px){.topo nav a{padding-top:12px;padding-bottom:12px}}
 @media (pointer:coarse){
   button.quieto,.botao.quieto,.aba,.menu-botao{min-height:44px}
-  .topo nav a{padding:14px 16px}
   .sugestoes button{min-height:48px}
   .prods-lista a{padding-top:18px;padding-bottom:18px}
 }
@@ -321,7 +320,8 @@ a.seta.volta:hover::before{transform:translateX(-5px)}
 }
 
 /* ---------- menu do topo: a linha laranja que salta de um link para outro ---------- */
-.topo nav{position:relative}
+/* só no computador: no celular o menu é uma tela cheia (position:absolute no estilo.css) e não pode virar um item do cabeçalho */
+@media (min-width:861px){.topo nav{position:relative}}
 .nav-linha{position:absolute;left:0;top:0;height:3px;border-radius:999px;background:var(--laranja);pointer-events:none;will-change:transform,width;visibility:hidden}
 .topo nav a[aria-current]{background:transparent;color:var(--texto)}
 @media (max-width:860px){.nav-linha{display:none}}
