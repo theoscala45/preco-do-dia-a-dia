@@ -2,6 +2,7 @@
 import { $, gsap, ScrollTrigger, calmo, reais, pct, curto, rolar, carregar, guarda, ligarCep, iniciar, irPara, semAcento } from './base.js';
 import { criarLista, calcular, ligarBusca, ligarItens } from './cesta.js';
 import { pulo } from './cards.js?v=20261124f';
+import { criarCodigo } from './codigo.js?v=20261124k';
 import { aoAparecer } from './aparecer.js';
 import { compartilhar, salvarFoto } from './compartilhar.js';
 
@@ -360,6 +361,30 @@ $('voltar').addEventListener('click', () => {
 $('redesLista').addEventListener('pointerover', e => { const li = e.target.closest('li'); if (li) mapa?.destacar(+li.dataset.k); });
 $('redesLista').addEventListener('pointerleave', () => mapa?.destacar(-1));
 ligarCep(geo, $('cepForm'), $('cep'), $('cepMsg'), i => escolher(i, true));
+
+// o campo de CEP vira 8 caixinhas; o campo de texto de verdade (#cep) continua por baixo e guarda o valor
+const cepCampo = $('cep'), cepMsg = $('cepMsg'), cepForm = $('cepForm');
+let cepSinc = false;
+const cepHost = document.createElement('div');
+cepForm.querySelector('.cep-linha').prepend(cepHost);
+cepCampo.classList.add('cep-oculto'); cepCampo.tabIndex = -1; cepCampo.setAttribute('aria-hidden', 'true');
+const cepCodigo = criarCodigo(cepHost, {
+  length: 8, separador: 5, rotulo: 'Seu CEP, 8 números',
+  aoMudar: cod => {
+    cepSinc = true;
+    cepCampo.value = cod.length > 5 ? cod.slice(0, 5) + '-' + cod.slice(5) : cod;
+    cepCampo.dispatchEvent(new Event('input', { bubbles: true }));
+    cepSinc = false;
+    if (cod) { cepMsg.textContent = ''; cepMsg.className = 'cep-msg'; }
+    cepCodigo.status('idle');
+  },
+});
+cepCampo.addEventListener('input', () => { if (!cepSinc) cepCodigo.definir(cepCampo.value); });
+cepCampo.addEventListener('focus', () => cepCodigo.foco());
+cepForm.addEventListener('submit', () => {   // roda depois da checagem de ligarCep
+  if (!cepMsg.classList.contains('erro')) { cepCodigo.status('success'); setTimeout(() => cepCodigo.status('idle'), 1300); }
+  else if (cepCampo.value.replace(/\D/g, '').length >= 8) cepCodigo.status('error');
+});
 $('mapa').addEventListener('ponto', e => escolher(e.detail, false));
 
 // ---------- compartilhar o resultado do CEP e salvar como foto
@@ -432,7 +457,7 @@ $('cupomData').textContent = new Date(dados.datas.at(-1) + 'T12:00').toLocaleDat
 
 // ---------- partida: se a pessoa já deu o CEP numa visita anterior, o campo volta preenchido
 const cepSalvo = guarda.ler('cep', ''), pontoSalvo = guarda.ler('ponto', -1);
-if (cepSalvo) $('cep').value = cepSalvo;
+if (cepSalvo) { $('cep').value = cepSalvo; cepCodigo.definir(cepSalvo); }
 if (pontoSalvo >= 0 && pontoSalvo < geo.pontos.length) { estado.ponto = pontoSalvo; estado.cepDado = true; }
 destacar(estado.cepDado ? estado.ponto : iMax);
 atualizarCupom();
