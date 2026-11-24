@@ -114,7 +114,9 @@ export function iniciar(dados) {
   // faixa de aviso: aparece sempre que os dados forem de exemplo, ou na prévia dos preços reais
   if (PREVIA) {
     const dia = dados?.datas?.at(-1) ? new Date(dados.datas.at(-1) + 'T12:00').toLocaleDateString('pt-BR') : '';
-    $('aviso').textContent = `Prévia com os preços reais coletados em ${dia}. Ainda não é a versão oficial do site, e a inflação só aparece depois de alguns meses de coleta.`;
+    $('aviso').textContent = matchMedia('(max-width: 860px)').matches
+      ? `Prévia com preços reais de ${dia}. Não é a versão oficial.`
+      : `Prévia com os preços reais coletados em ${dia}. Ainda não é a versão oficial do site, e a inflação só aparece depois de alguns meses de coleta.`;
     // os links entre as páginas continuam na prévia
     document.querySelectorAll('a[href$=".html"]').forEach(a => { a.href = a.getAttribute('href') + '?previa'; });
   }
@@ -192,11 +194,16 @@ export function iniciar(dados) {
   // tudo que é movimento só existe para quem não pediu "reduzir movimento"
   const mm = gsap.matchMedia();
   mm.add('(prefers-reduced-motion: no-preference)', () => {
-    lenis = new Lenis({ anchors: true, autoRaf: false, lerp: 0.11 });
-    lenis.on('scroll', ScrollTrigger.update);
-    const bate = t => lenis.raf(t * 1000);
-    gsap.ticker.add(bate);
-    gsap.ticker.lagSmoothing(0);
+    // rolagem suave só com mouse; no celular a rolagem é a nativa (mais leve, e é o que a pessoa espera no toque)
+    const toque = matchMedia('(pointer: coarse)').matches;
+    let bate = null;
+    if (!toque) {
+      lenis = new Lenis({ anchors: true, autoRaf: false, lerp: 0.11 });
+      lenis.on('scroll', ScrollTrigger.update);
+      bate = t => lenis.raf(t * 1000);
+      gsap.ticker.add(bate);
+      gsap.ticker.lagSmoothing(0);
+    }
 
     document.querySelectorAll('[data-titulo]').forEach(el => {
       const naDobra = el.getBoundingClientRect().top < innerHeight * 0.95;
@@ -230,7 +237,7 @@ export function iniciar(dados) {
     document.body.append(barra);
     gsap.fromTo(barra, { scaleX: 0 }, { scaleX: 1, ease: 'none', scrollTrigger: { start: 0, end: 'max', scrub: 0.3 } });
     // elementos que andam um pouco mais devagar ou mais depressa que a página
-    document.querySelectorAll('[data-desliza]').forEach(el => {
+    if (!toque) document.querySelectorAll('[data-desliza]').forEach(el => {
       const v = +el.dataset.desliza;
       gsap.fromTo(el, { y: v }, { y: -v, ease: 'none', scrollTrigger: { trigger: el, start: 'top bottom', end: 'bottom top', scrub: true } });
     });
@@ -239,7 +246,7 @@ export function iniciar(dados) {
       gsap.fromTo(el, { '--risco': 0 }, { '--risco': 1, ease: 'none', scrollTrigger: { trigger: el, start: 'top 95%', end: 'top 55%', scrub: 0.5 } });
     });
 
-    return () => { gsap.ticker.remove(bate); lenis.destroy(); lenis = null; barra.remove(); };
+    return () => { if (bate) gsap.ticker.remove(bate); lenis?.destroy(); lenis = null; barra.remove(); };
   });
 
   document.documentElement.classList.add('pronto');
