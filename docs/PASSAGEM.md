@@ -289,7 +289,7 @@ O projeto passou de "O Preço do Dia a Dia" para **Preço Aberto** (escolha do T
 - (24/11/2026) O CEP em caixinhas agora também está na Sua lista. A ligação ficou em `assets/js/cep-caixas.js` (`caixasDoCep`), usada por `main.js` e `lista.js`. Na Sua lista o botão Trocar desce para a linha de baixo (`.editor .cep-linha{flex-wrap:wrap}`). Inflação por bairro também usa (o botão Ver desce para a linha de baixo).
 - (24/11/2026) Espera de 10 s só na festa do CEP certo (faíscas, anel, ✓): `espera` em `assets/js/cep-caixas.js`. O balanço do botão e os números que afundam quando o CEP é inválido acontecem em todo clique, sem espera. O CEP é conferido sempre.
 
-## 19. Placar de letras em "Quanto cada um cobra" (antes "Quem cobra menos") (24/11/2026)
+## 19. Placar de letras em "Quanto cada lugar cobra" (antes "Quem cobra menos") (24/11/2026)
 - `SplitFlapText` do React Bits convertido para JS puro: `assets/js/placar.js` (`criarPlacar`, aceita várias linhas que trocam juntas). CSS do componente no fim de `assets/css/etiqueta.css`. Usado só na seção `#hoje` de `index.html` (`#placar`, montado em `main.js`): linha 1 = bairro, linha 2 = preço da cesta, em ordem do mais barato ao mais caro. Só gira quando está na tela.
 - Por que o preço e não o mercado mais barato: nos dados de prévia o Atacadão é o mais barato em 24 dos 25 bairros, então o placar repetiria o mesmo nome. Se isso mudar com os dados reais, dá para trocar a segunda linha.
 
