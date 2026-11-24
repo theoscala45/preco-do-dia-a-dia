@@ -2,7 +2,7 @@
 import { $, gsap, ScrollTrigger, calmo, reais, pct, curto, rolar, carregar, guarda, ligarCep, iniciar, irPara, semAcento } from './base.js';
 import { criarLista, calcular, ligarBusca, ligarItens } from './cesta.js';
 import { pulo } from './cards.js?v=20261124f';
-import { criarCodigo } from './codigo.js?v=20261124k';
+import { criarCodigo } from './codigo.js?v=20261124n';
 import { aoAparecer } from './aparecer.js';
 import { compartilhar, salvarFoto } from './compartilhar.js';
 
@@ -372,7 +372,7 @@ const cepCodigo = criarCodigo(cepHost, {
   length: 8, separador: 5, rotulo: 'Seu CEP, 8 números',
   aoMudar: cod => {
     cepSinc = true;
-    cepCampo.value = cod.length > 5 ? cod.slice(0, 5) + '-' + cod.slice(5) : cod;
+    cepCampo.value = cod.includes(' ') ? '' : (cod.length > 5 ? cod.slice(0, 5) + '-' + cod.slice(5) : cod);   // com buraco no meio o CEP vale como incompleto
     cepCampo.dispatchEvent(new Event('input', { bubbles: true }));
     cepSinc = false;
     if (cod) { cepMsg.textContent = ''; cepMsg.className = 'cep-msg'; }

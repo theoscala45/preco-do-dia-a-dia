@@ -111,7 +111,7 @@ export function criarCodigo(host, opcoes = {}) {
   const comprometer = prox => {
     const antes = chars; chars = prox;
     const codigo = chars.join('');
-    o.aoMudar?.(codigo);
+    o.aoMudar?.(chars.map(c => c || ' ').join('').trimEnd());   // caixa vazia no meio aparece como espaço
     if (!antes.every(Boolean) && cheio()) o.aoCompletar?.(codigo);
     anunciar();
   };
@@ -142,11 +142,19 @@ export function criarCodigo(host, opcoes = {}) {
     else if (k === 'End') { e.preventDefault(); pularAtiva(n - 1); }
   };
   entrada.addEventListener('keydown', aoTeclar);
-  entrada.addEventListener('paste', e => { if (ocupado()) return; e.preventDefault(); inserir(e.clipboardData.getData('text')); });
-  entrada.addEventListener('input', () => { // teclados de celular que não mandam keydown com o número
-    const ds = soDigitos(entrada.value); entrada.value = '';
-    if (ocupado() || !ds) return;
-    inserir(ds, ds.length === 1 ? ativa : 0);
+  entrada.addEventListener('paste', e => { if (ocupado()) return; e.preventDefault(); const ds = soDigitos(e.clipboardData.getData('text')); inserir(ds, ds.length >= n ? 0 : ativa); });
+  // O campo escondido guarda sempre um caractere invisível. Assim o teclado do celular (Android) também avisa quando o Backspace é
+  // apertado (sem isso, apagar não faz nada) e os números digitados chegam inteiros, sem depender da tecla.
+  const SENTINELA = '\u200b';
+  const rearmar = () => { entrada.value = SENTINELA; try { entrada.setSelectionRange(1, 1); } catch {} };
+  rearmar();
+  entrada.addEventListener('input', e => {
+    const v = entrada.value, apagou = (e.inputType || '').startsWith('delete') || v.indexOf(SENTINELA) === -1;
+    const ds = soDigitos(v);
+    rearmar();
+    if (ocupado()) return;
+    if (apagou && !ds) { if (chars[ativa]) limparCaixa(ativa); else if (ativa > 0) limparCaixa(ativa - 1, true); return; }
+    if (ds) inserir(ds, ds.length >= n ? 0 : ativa);   // um código inteiro (preenchimento automático) começa da 1ª caixa
   });
   entrada.addEventListener('focus', () => { foco = true; mostrarCursor(); marcarAtiva(); });
   entrada.addEventListener('blur', () => { foco = false; mostrarCursor(); marcarAtiva(); });
@@ -155,7 +163,7 @@ export function criarCodigo(host, opcoes = {}) {
     if (!ocupado()) {
       let i = caixas.findIndex(c => { const r = c.getBoundingClientRect(); return e.clientX < r.right + 3; });
       if (i < 0) i = n - 1;
-      pularAtiva(Math.max(0, Math.min(i, primeiraVazia())));
+      pularAtiva(Math.max(0, Math.min(i, n - 1)));
     }
     entrada.focus();
   });
