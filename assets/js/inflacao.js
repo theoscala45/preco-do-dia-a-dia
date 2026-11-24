@@ -2,6 +2,7 @@
 import { aoAparecer } from './aparecer.js';
 import { segmentoElastico } from './segmento.js?v=20261124h';
 import { $, gsap, ScrollTrigger, calmo, reais, pct, curto, contar, carregar, guarda, ligarCep, iniciar } from './base.js';
+import { caixasDoCep } from './cep-caixas.js?v=20261124r';
 
 const [dados, geo] = await carregar('dados', 'geo');
 iniciar(dados);
@@ -29,6 +30,7 @@ $('ponto').innerHTML = [...new Set(geo.pontos.map(p => p.zona))].map(z =>
   `<optgroup label="Zona ${z.toLowerCase()}">${geo.pontos.map((p, i) => (p.zona === z ? `<option value="${i}">${p.bairro}</option>` : '')).join('')}</optgroup>`).join('');
 $('ponto').addEventListener('change', e => escolher(+e.target.value));
 ligarCep(geo, $('cepForm'), $('cep'), $('cepMsg'), i => escolher(i));
+caixasDoCep({ form: $('cepForm'), campo: $('cep'), msg: $('cepMsg') });
 
 // ---------- gráfico (desenhado no tamanho real da caixa, para o texto não encolher no celular)
 const svg = $('graf'), caixa = $('grafCaixa'), dica = $('grafDica');

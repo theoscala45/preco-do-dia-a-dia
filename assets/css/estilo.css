@@ -369,7 +369,7 @@ h3{font:700 19px/1.25 var(--titulo);letter-spacing:-.01em}
 .seletor select{width:100%;appearance:none;-webkit-appearance:none;padding-right:44px;background-image:linear-gradient(45deg,transparent 50%,var(--texto-2) 50%),linear-gradient(135deg,var(--texto-2) 50%,transparent 50%);background-position:calc(100% - 22px) 24px,calc(100% - 16px) 24px;background-size:6px 6px;background-repeat:no-repeat;cursor:pointer}
 .seletor select option,.seletor select optgroup{background:var(--sup-2);color:var(--texto)}
 .seletor .cep-form{margin-top:18px}
-.seletor .cep-linha{flex-wrap:nowrap}
+.seletor .cep-linha{flex-wrap:wrap}   /* com as 8 caixinhas, o botão Ver desce para a linha de baixo */
 .seletor #cep{flex:1;min-width:0;width:auto;height:46px}
 .seletor .cep-linha button{height:46px}
 .numeros{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin:0}
