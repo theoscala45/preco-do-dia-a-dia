@@ -182,7 +182,8 @@ export function iniciar(dados) {
       if (botao.getAttribute('aria-expanded') === 'true') return fechar();
       botao.setAttribute('aria-expanded', 'true'); botao.textContent = 'Fechar';
       document.documentElement.classList.add('menu-aberto'); lenis?.stop();
-      abre = abre || gsap.timeline({ paused: true }).fromTo(menu, { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.3 })
+      // quando a entrada termina, o estilo de movimento sai dos links: assim o efeito de toque e de hover (CSS) pode mexer neles
+      abre = abre || gsap.timeline({ paused: true, onComplete: () => gsap.set(menu.children, { clearProps: 'transform,translate,rotate,scale' }) }).fromTo(menu, { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.3 })
         .fromTo(menu.children, { y: 26, autoAlpha: 0 }, { y: 0, autoAlpha: 1, duration: 0.5, stagger: 0.06 }, 0.05);
       if (calmo) abre.progress(1); else abre.play(0);
     });
