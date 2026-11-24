@@ -3,6 +3,7 @@ import { $, gsap, ScrollTrigger, calmo, reais, pct, curto, rolar, carregar, guar
 import { criarLista, calcular, ligarBusca, ligarItens } from './cesta.js';
 import { pulo } from './cards.js?v=20261124f';
 import { caixasDoCep, espera } from './cep-caixas.js?v=20261124t';
+import { criarPlacar } from './placar.js?v=20261124v';
 import { aoAparecer } from './aparecer.js';
 import { compartilhar, salvarFoto } from './compartilhar.js';
 
@@ -94,6 +95,20 @@ const redesNoPonto = dados.pontos.map((pt, i) => {
   $('hojeZonas').innerHTML = zonas.map((z, pos) => `<li${pos ? '' : ' class="melhor"'}><span>${z.z}</span>${barra(z.v / maiorZ)}<span class="v">${reais(z.v)}</span></li>`).join('');
   const dia = new Date(dados.datas.at(-1) + 'T12:00').toLocaleDateString('pt-BR', { day: 'numeric', month: 'long', year: 'numeric' });
   $('hojeSub').textContent = `Preços lidos até ${dia}, na mesma cesta de ${n} itens.`;
+  // placar: de bairro em bairro, do mais barato ao mais caro, vira o nome do bairro e o preço da cesta dali (os mesmos números do resto da página)
+  const placarEl = $('placar');
+  if (placarEl) {
+    const ordemBairros = dados.pontos.map((_, i) => i).sort((a, b) => dados.pontos[a].cesta - dados.pontos[b].cesta);
+    const tam = () => Math.round(Math.min(46, Math.max(15, (placarEl.clientWidth / 17 - 4) / 0.78)));
+    const placar = criarPlacar(placarEl, {
+      gap: 4, fontSize: tam(), tileColor: '#16161A', textColor: '#FFFFFF', tileRadius: 6, flipDuration: 0.1, stagger: 0.05, cycleDelay: 2600, flipsPerChar: 7, depth: 0.55,
+      linhas: [
+        { rotulo: 'Bairro', padTo: 17, palavras: ordemBairros.map(i => curto(geo.pontos[i].bairro)) },
+        { rotulo: `Cesta de ${n} itens`, padTo: 11, charset: 'numeric', textColor: '#FF7A1F', palavras: ordemBairros.map(i => reais(dados.pontos[i].cesta)) },
+      ],
+    });
+    addEventListener('resize', () => placar.tamanho(tam()));
+  }
   // as barras crescem toda vez que a seção entra na tela e voltam a zero quando ela sai
   const barrasHoje = gsap.utils.toArray('#hoje .barra i'), alvoBarra = (k, el) => +el.style.getPropertyValue('--v');
   if (!calmo) {
