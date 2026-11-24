@@ -163,8 +163,9 @@ export function criarMapa(el, geo, rotas, valores, { calmo = false } = {}) {
     // o raio de cada ponto vem do estado dele (feature-state "r"): 0 = escondido; os pontos nascem um a um (ver mostrarPontos)
     mapa.addLayer({ id: 'pontos', type: 'circle', source: 'pontos', maxzoom: 12, paint: {
       'circle-radius': ['coalesce', ['feature-state', 'r'], 0], 'circle-color': LARANJA, 'circle-stroke-color': '#FFFFFF',
-      'circle-stroke-width': ['case', ['>', ['coalesce', ['feature-state', 'r'], 0], 0], 1.5, 0],
-      'circle-radius-transition': { duration: 220 }, 'circle-opacity': 0.9,
+      'circle-stroke-width': ['case', ['>', ['coalesce', ['feature-state', 'r'], 0], 0.05], 1.5, 0],
+      'circle-radius-transition': { duration: 0 }, 'circle-opacity-transition': { duration: 0 },
+      'circle-opacity': ['coalesce', ['feature-state', 'o'], 0], 'circle-stroke-opacity': ['coalesce', ['feature-state', 'o'], 0],
     } });
     est.pronto = true;
     aplicar(true);
@@ -237,21 +238,32 @@ export function criarMapa(el, geo, rotas, valores, { calmo = false } = {}) {
     aoMudar({ fase: 'geral', foco: -1, melhor: -1 });
   }
 
-  // os pontos laranja só existem a partir do primeiro capítulo: ao rolar, nascem um a um (de oeste para leste) com um salto; ao voltar à abertura, somem
-  let pontosOn = null, pontosT = [];
+  // os pontos laranja só existem a partir do primeiro capítulo: ao rolar, nascem um a um (de oeste para leste), crescendo
+  // com um leve salto e aparecendo junto; ao voltar à abertura, encolhem e somem. Cada quadro é calculado aqui (sem saltos de CSS).
+  let pontosOn = null, pontosRaf = 0;
+  const pontosAtual = geo.pontos.map(() => ({ r: 0, o: 0 }));
+  const suave = t => 1 - Math.pow(1 - t, 3);
+  const salto = t => { const c1 = 1.1, c3 = c1 + 1; return 1 + c3 * Math.pow(t - 1, 3) + c1 * Math.pow(t - 1, 2); };
   function mostrarPontos(ligar, raio, direto) {
     if (!est.pronto) return;
     const mudou = ligar !== pontosOn; pontosOn = ligar;
-    pontosT.forEach(clearTimeout); pontosT = [];
+    cancelAnimationFrame(pontosRaf);
     const ordem = geo.pontos.map((p, i) => i).sort((a, b) => geo.pontos[a].lon - geo.pontos[b].lon);
-    const por = (i, r) => mapa.setFeatureState({ source: 'pontos', id: i }, { r });
-    ordem.forEach((i, k) => {
-      if (!ligar) return por(i, 0);
-      if (direto || calmo) return por(i, raio);
-      if (!mudou) return por(i, raio);   // só o tamanho mudou (cena 1 para cena 3): sem refazer a entrada
-      por(i, 0);
-      pontosT.push(setTimeout(() => por(i, raio * 1.7), 60 + k * 28), setTimeout(() => por(i, raio), 60 + k * 28 + 190));
-    });
+    const por = (i, r, o) => { pontosAtual[i].r = r; pontosAtual[i].o = o; mapa.setFeatureState({ source: 'pontos', id: i }, { r, o }); };
+    if (direto || calmo || (ligar && !mudou)) { ordem.forEach(i => por(i, ligar ? raio : 0, ligar ? 0.9 : 0)); return; }
+    const de = pontosAtual.map(q => ({ ...q })), t0 = performance.now();
+    const DUR = ligar ? 650 : 260, ESC = ligar ? 38 : 0;
+    const quadro = agora => {
+      let fim = true;
+      ordem.forEach((i, k) => {
+        const t = Math.min(1, Math.max(0, (agora - t0 - k * ESC) / DUR));
+        if (t < 1) fim = false;
+        if (ligar) por(i, raio * salto(t), 0.9 * Math.min(1, t * 2.5));
+        else por(i, de[i].r * (1 - suave(t)), de[i].o * (1 - suave(t)));
+      });
+      if (!fim) pontosRaf = requestAnimationFrame(quadro);
+    };
+    pontosRaf = requestAnimationFrame(quadro);
   }
 
   // decide o que o mapa mostra: cidade inteira ou o bairro em foco
