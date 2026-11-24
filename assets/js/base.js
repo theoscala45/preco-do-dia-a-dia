@@ -1,7 +1,7 @@
 // O que todas as páginas usam: dados, CEP e lista guardados no navegador, scroll suave (Lenis)
 // e as animações comuns (GSAP): cabeçalho, títulos que sobem por linha e blocos que surgem ao rolar.
 import { ligarCards } from './cards.js?v=20261124f';
-import { desfocarFrases } from './desfoque.js?v=20261124y';
+import { desfocarFrases } from './desfoque.js?v=20261124w2';
 
 // o anel laranja de foco só aparece para quem navega com o teclado (Tab). Clique do mouse, toque e foco dado por código
 // (depois de digitar o CEP, por exemplo) não deixam mais um contorno solto em botões e painéis.
@@ -102,15 +102,15 @@ export function irPara(alvo, opcoes) {
 }
 
 // um título que sobe linha por linha, de trás de uma máscara
-export function subirTitulo(el, { atraso = 0, aoRolar = false } = {}) {
+export function subirTitulo(el, { atraso = 0, duracao = 1.05, passo = 0.09, inicio = 'top 88%' } = {}) {
   return SplitText.create(el, {
     type: 'lines', mask: 'lines', autoSplit: true,
     onSplit(self) {
       gsap.set(el, { visibility: 'visible' });
       return gsap.from(self.lines, {
-        yPercent: 130, duration: 1.05, ease: 'power4.out', stagger: 0.09, delay: atraso,
+        yPercent: 130, duration: duracao, ease: 'power4.out', stagger: passo, delay: atraso,
         // toca toda vez que o título entra na tela (de baixo ou de cima) e volta ao início ao sair
-        scrollTrigger: { trigger: el, start: 'top 88%', end: 'bottom top', toggleActions: 'play reset play reset' },
+        scrollTrigger: { trigger: el, start: inicio, end: 'bottom top', toggleActions: 'play reset play reset' },
       });
     },
   });
@@ -216,6 +216,8 @@ export function iniciar(dados) {
     }
 
     desfocarFrases(gsap, calmo);   // os títulos grandes (data-titulo) entram palavra por palavra, saindo do desfoque
+    // os subtítulos (data-subtitulo) sobem linha por linha, de trás de uma máscara, logo depois do título
+    document.querySelectorAll('[data-subtitulo]').forEach(el => subirTitulo(el, { atraso: el.getBoundingClientRect().top < innerHeight * 0.95 ? 0.3 : 0, duracao: 0.85, passo: 0.08 }));
     // Revelações ao rolar: o elemento sobe quando aparece na tela e volta a ficar escondido quando sai dela, então toca toda vez.
     // O observador (aparecer.js) também vê o que começa escondido (hidden) e aparece depois, como o resultado da lista.
     const sobe = lote => gsap.to(lote, { autoAlpha: 1, y: 0, duration: 0.9, stagger: 0.08, overwrite: true });

@@ -35,8 +35,8 @@ html.lenis,html.lenis body{height:auto}
 .lenis [data-lenis-prevent]{overscroll-behavior:contain}
 
 /* o que o GSAP faz surgir fica escondido até ele assumir. Se o script falhar, tudo aparece depois de 5 s. */
-.anima [data-surge],.anima [data-titulo]{visibility:hidden}
-.mostra [data-surge],.mostra [data-titulo],.mostra .pg-inicio #mapa{visibility:visible}
+.anima [data-surge],.anima [data-titulo],.anima [data-subtitulo]{visibility:hidden}
+.mostra [data-surge],.mostra [data-titulo],.mostra [data-subtitulo],.mostra .pg-inicio #mapa{visibility:visible}
 
 /* barra de leitura e riscos que se desenham com o scroll */
 .progresso{position:fixed;left:0;right:0;top:var(--aviso-h);height:2px;z-index:35;background:var(--laranja);transform-origin:left;transform:scaleX(0);pointer-events:none}
