@@ -367,9 +367,8 @@ a.seta.volta:hover::before{transform:translateX(-5px)}
 }
 
 /* ---------- a etiqueta da cesta média (início): a coreografia está em main.js; aqui ficam o furo que estoura e o brilho ---------- */
-/* escondida só até o JS assumir (a classe .visivel entra assim que ele assume); sem isso, ao fim da animação o CSS voltava a esconder a etiqueta até o .mostra chegar, 5 s depois da abertura */
-.anima .media:not(.visivel){visibility:hidden}
-.mostra .media:not(.visivel){visibility:visible}
+/* a etiqueta nasce escondida no HTML (style="visibility:hidden"); o JS mostra e esconde. Se o JS falhar, o .mostra libera depois de 5 s. */
+.mostra .media{visibility:visible!important}
 .media{overflow:hidden}
 .media.pousou::before{animation:furo-leve .5s var(--ease-forte)}
 @keyframes furo-leve{0%{transform:scale(.4)}60%{transform:scale(1.2)}100%{transform:scale(1)}}

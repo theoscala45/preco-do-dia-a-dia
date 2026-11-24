@@ -25,7 +25,6 @@ $('maxNome').textContent = curto(geo.pontos[iMax].bairro); $('maxVal').textConte
   const tag = $('media'), legenda = tag.querySelector('span:first-child');
   let tl = null;
   const zerarTag = () => {
-    tag.classList.add('visivel');   // daqui em diante quem esconde e mostra a etiqueta é o JS (estilo no próprio elemento), não o CSS da abertura
     tl?.kill();
     gsap.set([tag, legenda], { clearProps: 'all' });
     tag.classList.remove('pousou');
@@ -33,7 +32,7 @@ $('maxNome').textContent = curto(geo.pontos[iMax].bairro); $('maxVal').textConte
   };
   const tocarTag = () => {
     if (document.documentElement.classList.contains('com-resultado')) return;   // na tela do resultado a etiqueta nem aparece
-    if (calmo) { rolar($('etqInt'), $('etqCent'), media); return; }
+    if (calmo) { tag.style.removeProperty('visibility'); rolar($('etqInt'), $('etqCent'), media); return; }   // sem movimento: só mostra e põe o preço
     zerarTag();
     tl = gsap.timeline({ onComplete: () => gsap.set([tag, legenda], { clearProps: 'all' }) });
     tl.fromTo(tag, { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.25, ease: 'power1.out' }, 0)
@@ -45,7 +44,7 @@ $('maxNome').textContent = curto(geo.pontos[iMax].bairro); $('maxVal').textConte
         { rotation: -4, duration: 0.24, ease: 'power2.out' }, { rotation: 2.2, duration: 0.28, ease: 'sine.inOut' },
         { rotation: -0.8, duration: 0.26, ease: 'sine.inOut' }, { rotation: 0, duration: 0.24, ease: 'sine.out' }] }, 0.5);
   };
-  if (!aoAparecer(tag, tocarTag, zerarTag, { margem: '0px 0px -6% 0px' })) tocarTag();
+  if (!aoAparecer(tag, tocarTag, zerarTag, { margem: '0px' })) tocarTag();
 }
 
 // ---------- as redes em cada ponto: soma dos itens do índice que todas as redes têm ali
@@ -200,7 +199,7 @@ gsap.set('#grafico .tr', { strokeDasharray: '1 2' });
 const mm = gsap.matchMedia();
 mm.add('(prefers-reduced-motion: no-preference)', () => {
   // o texto da abertura sobe e apaga enquanto o primeiro capítulo chega
-  gsap.to('.abre > *', { y: -70, autoAlpha: 0, ease: 'none', stagger: 0.02, scrollTrigger: { trigger: '.abre', start: 'bottom 88%', end: 'bottom 38%', scrub: true } });
+  gsap.to('.abre > *:not(.media)', { y: -70, autoAlpha: 0, ease: 'none', stagger: 0.02, scrollTrigger: { trigger: '.abre', start: 'bottom 88%', end: 'bottom 38%', scrub: true } });
   // trilha lateral: mostra em qual dos três capítulos a leitura está
   gsap.fromTo('#trilha', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.4, scrollTrigger: { trigger: '#como', start: 'top 70%', endTrigger: '#inflacao', end: 'bottom 60%', toggleActions: 'play reverse play reverse' } });
   gsap.fromTo('#trilha i', { scaleY: 0 }, { scaleY: 1, ease: 'none', scrollTrigger: { trigger: '#como', start: 'top 50%', endTrigger: '#inflacao', end: 'bottom 50%', scrub: 0.4 } });
