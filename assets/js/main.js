@@ -387,12 +387,16 @@ function escolher(i, viaCep) {
   if (scrollY > innerHeight * 0.3) irPara(0);
 }
 $('voltar').addEventListener('click', () => {
+  // volta ao topo antes de tudo: com a página rolada, o texto da abertura (que sobe e apaga ao rolar) ficava num meio-termo
+  // e o título e o formulário terminavam um em cima do outro
+  if (scrollY > 2) irPara(0, { immediate: true, force: true });
   mapa?.selecionar(-1);
   estado.cepDado = false;
   if (calmo) { $('resultado').hidden = true; document.documentElement.classList.remove('com-resultado'); }
   else transicaoDeVolta();
   atualizarCupom();
   ScrollTrigger.refresh();
+  setTimeout(() => ScrollTrigger.refresh(), 1100);   // de novo depois que o layout da abertura voltou
 });
 $('redesLista').addEventListener('pointerover', e => { const li = e.target.closest('li'); if (li) mapa?.destacar(+li.dataset.k); });
 $('redesLista').addEventListener('pointerleave', () => mapa?.destacar(-1));
