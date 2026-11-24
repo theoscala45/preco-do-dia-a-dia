@@ -151,7 +151,7 @@ mapa?.aoMudar(({ fase }) => {
     const fimDaAbertura = abre.offsetTop + abre.offsetHeight;
     const fimDoConteudo = Math.max(...[...abre.children].filter(c => c.offsetParent !== null).map(c => c.offsetTop + c.offsetHeight));
     const vazio = fimDaAbertura - fimDoConteudo - 56;           // 56 px é o respiro de baixo da própria abertura
-    const sobe = Math.max(0, Math.min(vazio - 28, innerHeight * 0.4));   // deixa 28 px de folga e nunca sobe mais que 40% da tela
+    const sobe = Math.max(0, Math.min(vazio - 56, innerHeight * 0.4));   // deixa 56 px de folga e nunca sobe mais que 40% da tela
     const novo = '-' + Math.round(sobe) + 'px';
     if (cap1.style.marginTop !== novo) { cap1.style.marginTop = novo; clearTimeout(medir.t); medir.t = setTimeout(() => ScrollTrigger.refresh(), 120); }
   };
