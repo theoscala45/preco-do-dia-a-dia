@@ -17,7 +17,7 @@ Onde achar o contato: o rodapé do site de cada rede costuma ter "Fale conosco" 
 
 Olá,
 
-Meu nome é [nome], sou aluno do ensino médio em São Paulo. Estou fazendo um projeto estudantil sem fins lucrativos chamado O Preço do Dia a Dia. Ele compara quanto custa a mesma lista de 100 produtos de supermercado em diferentes bairros da cidade e mede a variação desses preços ao longo do tempo, comparando com o IPCA.
+Meu nome é [nome], sou aluno do ensino médio em São Paulo. Estou fazendo um projeto estudantil sem fins lucrativos chamado Preço Aberto. Ele compara quanto custa a mesma lista de 100 produtos de supermercado em diferentes bairros da cidade e mede a variação desses preços ao longo do tempo, comparando com o IPCA.
 
 Li os termos de uso do site do St Marche. Eles pedem autorização por escrito para copiar ou republicar conteúdo. Por isso, antes de incluir o St Marche no projeto, peço essa autorização.
 
@@ -48,7 +48,7 @@ Olá,
 
 Peço, por favor, que esta mensagem seja encaminhada ao setor responsável pelo site do Carrefour Mercado.
 
-Meu nome é [nome], sou aluno do ensino médio em São Paulo. Faço um projeto estudantil sem fins lucrativos chamado O Preço do Dia a Dia. Ele compara quanto custa a mesma lista de 100 produtos de supermercado em sete redes e em 25 bairros da cidade, e mede a variação desses preços contra o IPCA.
+Meu nome é [nome], sou aluno do ensino médio em São Paulo. Faço um projeto estudantil sem fins lucrativos chamado Preço Aberto. Ele compara quanto custa a mesma lista de 100 produtos de supermercado em sete redes e em 25 bairros da cidade, e mede a variação desses preços contra o IPCA.
 
 Hoje o projeto lê, uma vez por dia, de madrugada e devagar (uma página por vez, com alguns segundos entre elas), a página normal de 83 produtos no site do Carrefour Mercado. Guarda só o preço padrão, o nome e o tamanho. Não copia fotos nem descrições, e publica apenas o preço de cada produto e a soma da lista, com a data e a fonte.
 
@@ -87,7 +87,7 @@ Estes sites não têm termos de uso que falem do assunto (ou o projeto não os e
 
 Olá,
 
-Meu nome é [nome], sou aluno do ensino médio em São Paulo. Faço um projeto estudantil sem fins lucrativos chamado O Preço do Dia a Dia, que compara quanto custa a mesma lista de 100 produtos de supermercado em diferentes bairros da cidade e mede a variação desses preços contra o IPCA.
+Meu nome é [nome], sou aluno do ensino médio em São Paulo. Faço um projeto estudantil sem fins lucrativos chamado Preço Aberto, que compara quanto custa a mesma lista de 100 produtos de supermercado em diferentes bairros da cidade e mede a variação desses preços contra o IPCA.
 
 Escrevo para avisar que o projeto pretende incluir o [Pão de Açúcar / Santa Luzia]. Ele leria o preço, o nome e o tamanho de cerca de 100 produtos, uma vez por dia, devagar, só nas páginas normais de produto e respeitando o robots.txt do site. Não copiaria fotos nem descrições. Publicaria apenas o preço de cada produto e a soma da lista, com a data e a fonte.
 

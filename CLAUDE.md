@@ -1,6 +1,6 @@
 # Regras para trabalhar neste projeto
 
-O Preço do Dia a Dia, do Theo, aluno do ensino médio em São Paulo. Site estático (GitHub Pages) + coletor de preços que
+Preço Aberto (antes "O Preço do Dia a Dia"), do Theo, aluno do ensino médio em São Paulo. Site estático (GitHub Pages) + coletor de preços que
 roda sozinho toda noite pelo GitHub Actions.
 
 Projeto vindo de outra conta do Claude? Ler primeiro `docs/PASSAGEM.md` (estado, decisões, pendências, ambiente).

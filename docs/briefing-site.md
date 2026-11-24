@@ -1,4 +1,4 @@
-# Briefing do site: O Preço do Dia a Dia
+# Briefing do site: Preço Aberto
 
 Para quem for construir o site (começando pelo Fable, terminando pelo Opus). Leia este arquivo e `data/LEIAME.md` antes de escrever código.
 

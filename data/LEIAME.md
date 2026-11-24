@@ -1,4 +1,4 @@
-# Banco de dados: O Preço do Dia a Dia
+# Banco de dados: Preço Aberto
 
 Cada tabela é um arquivo CSV (UTF-8, vírgula como separador). O coletor escreve nelas toda noite. O site lê delas.
 

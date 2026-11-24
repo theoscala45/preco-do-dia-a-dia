@@ -24,7 +24,7 @@ Não passar senhas nem códigos no chat. Os segredos ficam no cron-job.org e nos
 ## 2. Primeira mensagem para colar na conta nova
 
 ```
-Oi! Este é o meu projeto O Preço do Dia a Dia, que veio de outra conta do Claude. Antes de qualquer coisa, leia
+Oi! Este é o meu projeto Preço Aberto, que veio de outra conta do Claude. Antes de qualquer coisa, leia
 docs/PASSAGEM.md inteiro e depois CLAUDE.md, README.md, DESIGN.md, data/LEIAME.md e docs/lista-tecnica.md.
 Estou na etapa de mexer no site (o visual): eu digo o que quero mudar, muitas vezes com prints, e você faz as
 mudanças. O visual atual (branco com laranja e azul, início com os 3 capítulos do mapa) foi aprovado por mim; não
@@ -263,3 +263,13 @@ mudar de ideia, somar:
 - **Compartilhar e salvar como foto:** `assets/js/compartilhar.js`. A imagem (1080 x 1350) é desenhada num canvas no navegador, sem servidor.
   No celular abre o menu de compartilhar do sistema; no computador copia o texto com o link ou baixa o PNG. Botões no resultado do CEP
   (início) e no resultado da lista.
+
+## 14. Novo nome: Preço Aberto (23/11/2026)
+
+O projeto passou de "O Preço do Dia a Dia" para **Preço Aberto** (escolha do Theo). Domínios conferidos em 23/11/2026 nos cadastros oficiais
+(Registro.br e Verisign): `precoaberto.com.br` e `precoaberto.com` estavam livres. Nada com esse nome na busca da web; o mais parecido é o
+"Prato Aberto" (cardápios das escolas municipais de SP), de outra área. Ainda falta consultar a marca no INPI e as redes sociais.
+- O nome mudou no site, nos textos, na imagem de prévia, na imagem de compartilhar e nos documentos.
+- O **endereço** continua `theoscala45.github.io/preco-do-dia-a-dia` e o repositório continua com o nome antigo: renomear o repositório mudaria o
+  endereço do site e quebraria o link que o cron-job.org chama toda noite. Fazer isso junto com um domínio próprio.
+- O documento "O Preço do Dia a Dia: lista técnica" (Google Docs, fora do repositório) continua com o nome antigo.

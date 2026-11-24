@@ -64,7 +64,7 @@ export async function desenharCartao(dados) {
   c.save(); c.translate(L + 4, 78); c.rotate(-0.14);
   c.fillStyle = LARANJA; c.beginPath(); c.moveTo(0, 0); c.lineTo(34, 0); c.lineTo(34, 24); c.lineTo(17, 40); c.lineTo(0, 24); c.closePath(); c.fill();
   c.fillStyle = '#fff'; c.beginPath(); c.arc(24, 10, 4.6, 0, Math.PI * 2); c.fill(); c.restore();
-  c.fillStyle = TINTA; c.font = '700 40px "Red Hat Display"'; c.textBaseline = 'alphabetic'; c.fillText('O Preço do Dia a Dia', L + 56, 108);
+  c.fillStyle = TINTA; c.font = '700 40px "Red Hat Display"'; c.textBaseline = 'alphabetic'; c.fillText('Preço Aberto', L + 56, 108);
 
   // título (nome do bairro ou da lista), até 2 linhas
   c.font = '800 150px "Big Shoulders Display"'; c.fillStyle = TINTA;

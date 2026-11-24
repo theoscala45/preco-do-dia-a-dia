@@ -1,4 +1,4 @@
-# O Preço do Dia a Dia
+# Preço Aberto
 
 Quanto custa a mesma compra em cada bairro de São Paulo, e quanto ela subiu contra o IPCA.
 

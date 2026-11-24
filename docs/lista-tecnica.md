@@ -1,6 +1,6 @@
-# O Preço do Dia a Dia: lista técnica
+# Preço Aberto: lista técnica
 
-Cópia do documento "O Preço do Dia a Dia: lista técnica" (Claude Docs, 19/11/2026), atualizada em 23/11/2026, para
+Cópia do documento "Preço Aberto: lista técnica" (Claude Docs, 19/11/2026), atualizada em 23/11/2026, para
 que ele continue junto do projeto em qualquer conta.
 
 ## Resumo

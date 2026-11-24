@@ -1,4 +1,4 @@
-# Direção visual: O Preço do Dia a Dia
+# Direção visual: Preço Aberto
 
 > **Atualização de 23/11/2026.** O visual de hoje é claro (branco, laranja `#F26A0F` e azul `#2448E0`) e a identidade é a **etiqueta de gôndola**, em `assets/css/etiqueta.css` (carregado depois do `estilo.css`). O texto abaixo, de 17/11, descreve o tema escuro antigo e vale só como histórico.
 >

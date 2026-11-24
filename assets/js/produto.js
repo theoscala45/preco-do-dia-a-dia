@@ -30,7 +30,7 @@ if (k < 0) {
   $('prodVazio').hidden = false;
 } else {
   const p = dados.produtos[k];
-  document.title = `${p.nome}, ${p.marca}: O Preço do Dia a Dia`;
+  document.title = `${p.nome}, ${p.marca}: Preço Aberto`;
   $('prodNome').textContent = p.nome;
   const ponto = guarda.ler('ponto', -1);
   const bairro = ponto >= 0 && ponto < geo.pontos.length ? geo.pontos[ponto].bairro.split(' (')[0] : null;
