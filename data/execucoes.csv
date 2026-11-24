@@ -648,10 +648,12 @@ data,rede_id,cep_id,produtos_tentados,produtos_lidos,resultado,erro,loja
 2026-11-24,atacadao,C23,81,81,ok,mesma loja do C22: precos repetidos,Vila Maria
 2026-11-24,atacadao,C24,81,81,ok,,Taipas
 2026-11-24,atacadao,C25,81,81,ok,mesma loja do C24: precos repetidos,Taipas
-2026-11-24,carrefour,,88,87,parcial,P051: HTTP Error 404: Not Found,preco unico do site
-2026-11-24,hirota,C01,70,0,falha,a primeira pagina falhou: P001: Locator.click: Timeout 30000ms exceeded.,
-2026-11-24,hirota,C02,70,0,falha,a primeira pagina falhou: P001: Locator.click: Timeout 30000ms exceeded.,
-2026-11-24,hirota,C03,70,0,falha,a primeira pagina falhou: P001: Locator.click: Timeout 30000ms exceeded.,
+2026-11-24,carrefour,,88,88,ok,,preco unico do site
+2026-11-24,hirota,C01,70,70,ok,,Santa Cecília (Av. Gen. Olímpio da Silveira; 39)
+2026-11-24,hirota,C02,70,70,ok,mesma loja do C01: precos repetidos,Santa Cecília (Av. Gen. Olímpio da Silveira; 39)
+2026-11-24,hirota,C03,70,70,ok,mesma loja do C01: precos repetidos,Santa Cecília (Av. Gen. Olímpio da Silveira; 39)
+2026-11-24,hirota,C04,70,70,ok,mesma loja do C01: precos repetidos,Santa Cecília (Av. Gen. Olímpio da Silveira; 39)
+2026-11-24,hirota,C05,70,70,ok,mesma loja do C01: precos repetidos,Santa Cecília (Av. Gen. Olímpio da Silveira; 39)
 2026-11-24,hirota,C06,70,70,ok,,Santa Cecília (Av. Gen. Olímpio da Silveira; 39)
 2026-11-24,hirota,C07,70,70,ok,mesma loja do C06: precos repetidos,Santa Cecília (Av. Gen. Olímpio da Silveira; 39)
 2026-11-24,hirota,C08,70,70,ok,,Morumbi (Av. Dr. Guilherme Dumont Vilares; 1450)
@@ -699,7 +701,7 @@ data,rede_id,cep_id,produtos_tentados,produtos_lidos,resultado,erro,loja
 2026-11-24,nagumo,C24,97,97,ok,,046-OSASCO (Rua Avestruz; 688; Osasco)
 2026-11-24,nagumo,C25,97,97,ok,mesma loja do C24: precos repetidos,046-OSASCO (Rua Avestruz; 688; Osasco)
 2026-11-24,pao-de-acucar,,91,91,ok,,preco unico do site
-2026-11-24,santa-luzia,,46,45,parcial,P064: pagina sem dados de produto,preco unico do site
+2026-11-24,santa-luzia,,46,46,ok,,preco unico do site
 2026-11-24,sonda,,74,74,ok,,preco unico do site
 2026-11-24,st-marche,,85,85,ok,,preco unico do site
 2026-11-24,tenda,C01,80,80,ok,,
