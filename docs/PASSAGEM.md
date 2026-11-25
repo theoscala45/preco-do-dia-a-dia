@@ -322,3 +322,4 @@ O projeto passou de "O Preço do Dia a Dia" para **Preço Aberto** (escolha do T
 - Sua lista: total na foto centralizado na vertical da faixa laranja; aviso na página ('Salve a lista como foto no celular...') abaixo dos botões.
 - Sua lista: o aviso da foto fica dentro da linha dos botões (espaço menor).
 - Páginas internas (.pagina): menos espaço entre o cabeçalho e o título e entre o título e os cartões (etiqueta.css, no fim), para ver mais ao entrar. No celular vale o espaço do celular.css.
+- Celular (até 860 px ou toque): os cards e as revelações ao rolar entram mais rápido e um pouco antes de chegar à tela (cards.js e base.js). No computador não mudou.

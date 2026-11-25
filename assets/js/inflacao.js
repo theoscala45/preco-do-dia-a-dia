@@ -1,7 +1,7 @@
 // Página "Inflação por bairro": índice local contra o IPCA, por ponto, por zona e por faixa de renda.
 import { aoAparecer } from './aparecer.js';
 import { segmentoElastico } from './segmento.js?v=20261124w9';
-import { $, gsap, ScrollTrigger, calmo, reais, pct, curto, contar, carregar, guarda, ligarCep, iniciar } from './base.js?v=20261124wt';
+import { $, gsap, ScrollTrigger, calmo, reais, pct, curto, contar, carregar, guarda, ligarCep, iniciar } from './base.js?v=20261124xd';
 import { caixasDoCep } from './cep-caixas.js?v=20261124z';
 
 const [dados, geo] = await carregar('dados', 'geo');

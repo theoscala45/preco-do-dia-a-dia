@@ -1,5 +1,5 @@
 // Página "Produtos": os 100 da cesta, com busca e filtro por grupo. Cada linha leva à página do produto.
-import { $, carregar, iniciar, reais, guarda, semAcento, PREVIA } from './base.js?v=20261124wt';
+import { $, carregar, iniciar, reais, guarda, semAcento, PREVIA } from './base.js?v=20261124xd';
 import { segmentoElastico } from './segmento.js?v=20261124w9';
 import { precosDoProduto } from './cesta.js';
 

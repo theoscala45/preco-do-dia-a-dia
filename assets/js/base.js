@@ -1,6 +1,6 @@
 // O que todas as páginas usam: dados, CEP e lista guardados no navegador, scroll suave (Lenis)
 // e as animações comuns (GSAP): cabeçalho, títulos que sobem por linha e blocos que surgem ao rolar.
-import { ligarCards } from './cards.js?v=20261124f';
+import { ligarCards } from './cards.js?v=20261124xd';
 import { desfocarFrases, desfocarJunto } from './desfoque.js?v=20261124wc';
 import { esticarBordas } from './mola.js?v=20261124wa';
 import { proximidade } from './proximidade.js?v=20261124wt';
@@ -223,14 +223,16 @@ export function iniciar(dados) {
     document.querySelectorAll('[data-subtitulo]').forEach(el => subirTitulo(el, { atraso: el.getBoundingClientRect().top < innerHeight * 0.95 ? 0.3 : 0, duracao: 0.85, passo: 0.08 }));
     // Revelações ao rolar: o elemento sobe quando aparece na tela e volta a ficar escondido quando sai dela, então toca toda vez.
     // O observador (aparecer.js) também vê o que começa escondido (hidden) e aparece depois, como o resultado da lista.
-    const sobe = lote => gsap.to(lote, { autoAlpha: 1, y: 0, duration: 0.9, stagger: 0.08, overwrite: true });
+    // no celular as entradas são mais curtas e começam um pouco antes (a pessoa rola depressa)
+    const cel = matchMedia('(max-width: 860px), (pointer: coarse)').matches;
+    const sobe = lote => gsap.to(lote, { autoAlpha: 1, y: 0, duration: cel ? 0.5 : 0.9, stagger: cel ? 0.04 : 0.08, overwrite: true });
     const some = lote => gsap.set(lote, { autoAlpha: 0, y: 26, overwrite: true });
-    const entraFila = lote => gsap.to(lote, { autoAlpha: 1, y: 0, duration: 0.6, stagger: 0.05, overwrite: true });
+    const entraFila = lote => gsap.to(lote, { autoAlpha: 1, y: 0, duration: cel ? 0.35 : 0.6, stagger: cel ? 0.025 : 0.05, overwrite: true });
     const saiFila = lote => gsap.set(lote, { autoAlpha: 0, y: 16, overwrite: true });
     ligarCards();   // os cards têm entrada própria (em arco, com mola); o resto sobe em lote
     const blocos = gsap.utils.toArray('[data-surge]');
     gsap.set(blocos, { autoAlpha: 0, y: 26 });
-    aoAparecer(blocos, sobe, some);
+    aoAparecer(blocos, sobe, some, cel ? { margem: '0px 0px 4% 0px' } : undefined);
     // números que contam ao aparecer (e voltam a zero ao sair)
     document.querySelectorAll('[data-conta]').forEach(el => {
       el.textContent = '0';
@@ -240,7 +242,7 @@ export function iniciar(dados) {
     document.querySelectorAll('[data-fila]').forEach(pai => {
       const filhos = [...pai.children];
       gsap.set(filhos, { autoAlpha: 0, y: 16 });
-      aoAparecer(filhos, entraFila, saiFila, { margem: '0px 0px -6% 0px' });
+      aoAparecer(filhos, entraFila, saiFila, { margem: cel ? '0px 0px 4% 0px' : '0px 0px -6% 0px' });
     });
 
     // barra fina no topo: quanto da página já foi lida
