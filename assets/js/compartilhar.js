@@ -126,9 +126,12 @@ export async function desenharLista(dados) {
   // total na loja mais barata
   const ty = 342, th = 150;
   c.fillStyle = LARANJA; rr(c, L, ty, W - 2 * L, th, 22); c.fill();
-  c.fillStyle = 'rgba(255,255,255,.95)'; c.font = '600 32px "Red Hat Text"'; c.fillText('Mais barato em uma loja só', L + 40, ty + 62);
-  c.font = '800 44px "Red Hat Display"'; c.fillText(dados.loja, L + 40, ty + 112);
-  c.fillStyle = '#fff'; c.font = '800 120px "Big Shoulders Display"'; c.textAlign = 'right'; c.fillText(dados.total, W - L - 40, ty + 112); c.textAlign = 'left';
+  c.fillStyle = 'rgba(255,255,255,.95)'; c.font = '600 32px "Red Hat Text"'; c.fillText('Mais barato em uma loja só', L + 44, ty + 62);
+  c.font = '800 44px "Red Hat Display"'; c.fillText(dados.loja, L + 44, ty + 112);
+  // o total fica no meio da faixa, na vertical (a altura dos números vem da própria fonte)
+  c.fillStyle = '#fff'; c.font = '800 108px "Big Shoulders Display"';
+  const alto = c.measureText('0').actualBoundingBoxAscent;
+  c.textAlign = 'right'; c.fillText(dados.total, W - L - 44, ty + th / 2 + alto / 2); c.textAlign = 'left';
 
   // a lista da pessoa
   const topo = ty + th + 36, fim = H - 150, maxLinhas = 15;
