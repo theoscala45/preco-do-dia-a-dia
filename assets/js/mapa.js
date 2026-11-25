@@ -215,7 +215,7 @@ export function criarMapa(el, geo, rotas, valores, { calmo = false } = {}) {
       await tirar('3', () => { est.cena = 3; aplicar(true); });
       est.cena = 0; aplicar(true);
       fotoPronta = true;
-      mostrarFoto(cenaFoto);
+      if (est.sel < 0) { el.classList.add('guardado'); mostrarFoto(cenaFoto); }
     } catch (erro) {
       // sem foto (navegador não deixou ler o desenho): volta ao mapa ao vivo
       console.warn('Sem fotos do mapa; segue ao vivo.', erro);
@@ -223,9 +223,12 @@ export function criarMapa(el, geo, rotas, valores, { calmo = false } = {}) {
     }
   }
   // no resultado do CEP o mapa ao vivo aparece; fora dele, as fotos
+  // Fora do resultado o mapa ao vivo sai da página de vez (display:none): no iPhone, a área dele segurava a rolagem
+  // mesmo invisível e sem receber toque, porque ele escuta o dedo para arrastar.
   function aoVivo(v) {
     if (!caixaFotos) return;
     el.classList.toggle('so-foto', !v);
+    el.classList.toggle('guardado', !v);
     caixaFotos.classList.toggle('fora', v);
     if (v) mapa.resize();
   }
@@ -392,7 +395,11 @@ export function criarMapa(el, geo, rotas, valores, { calmo = false } = {}) {
 
   return {
     cena(c) {
-      if (FOTO && caixaFotos) { if (est.sel < 0) mostrarFoto(c); else cenaFoto = c; return; }   // celular: só troca a foto
+      if (FOTO && caixaFotos) {   // celular: só troca a foto; com o resultado do CEP, o mapa ao vivo fica só na abertura
+        if (est.sel >= 0 && fotoPronta) aoVivo(c === 0);
+        mostrarFoto(c);
+        return;
+      }
       if (c !== est.cena) { est.cena = c; aplicar(); }
     },
     selecionar(i) {

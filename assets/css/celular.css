@@ -69,3 +69,7 @@
 /* nos capítulos o dedo também rola a página em cima do mapa: a seção inteira (transparente, com o mapa aparecendo por trás)
    recebe o toque, em vez do palco do mapa, que prendia a rolagem no iPhone */
 .trilho > .cap{pointer-events:auto}
+
+/* o palco do mapa nunca recebe o toque no celular (a rolagem passa direto para a página); o mapa guardado sai da página */
+.palco{pointer-events:none}
+#mapa.guardado{display:none}
