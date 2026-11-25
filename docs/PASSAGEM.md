@@ -320,3 +320,4 @@ O projeto passou de "O Preço do Dia a Dia" para **Preço Aberto** (escolha do T
 - Sua lista: o botão Compartilhar agora manda um link com os itens (lista.html?l=P001,P002,...). Quem abre soma os itens à própria lista, sem apagar o que tinha, e vê um aviso. O bairro e o CEP não vão no link.
 - Sua lista, Salvar como foto: a imagem agora mostra a lista da pessoa (item, marca, tamanho e preço na loja mais barata) e o total, no lugar do ranking de lojas (desenharLista em compartilhar.js). Até 15 linhas; acima disso aparece 'e mais N itens'.
 - Sua lista: total na foto centralizado na vertical da faixa laranja; aviso na página ('Salve a lista como foto no celular...') abaixo dos botões.
+- Sua lista: o aviso da foto fica dentro da linha dos botões (espaço menor).

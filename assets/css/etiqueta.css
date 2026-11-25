@@ -877,3 +877,4 @@ html:not([data-teclado]) :focus-visible{outline:none}
 .prods-lista .prods-mais{display:flex;padding:16px 0 4px}
 .prods-mais button{height:44px}
 .nota-foto{margin-top:12px;font-size:13.5px;line-height:1.45;color:var(--texto-3)}
+.acoes-resultado .nota-foto{flex-basis:100%;margin:0}
