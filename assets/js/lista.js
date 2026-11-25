@@ -1,15 +1,24 @@
 // Página "Resultado da lista": loja única mais barata, economia, divisão em duas lojas, rota e tabela por produto.
 import { $, gsap, ScrollTrigger, calmo, reais, curto, rolar, carregar, guarda, ligarCep, iniciar, PREVIA, semAcento } from './base.js?v=20261124wt';
 import { caixasDoCep } from './cep-caixas.js?v=20261124z';
-import { criarLista, calcular, ligarBusca, ligarItens, ECONOMIA_MINIMA } from './cesta.js';
+import { criarLista, calcular, ligarBusca, ligarItens, ECONOMIA_MINIMA } from './cesta.js?v=20261124wx';
 import { aoAparecer } from './aparecer.js';
-import { compartilhar, salvarFoto } from './compartilhar.js';
+import { compartilhar, salvarFoto, toast, SITE } from './compartilhar.js';
 let gatilhoRanking = null, ultimo = null;
 
 const [dados, geo, rotas] = await carregar('dados', 'geo', 'rotas');
 iniciar(dados);
 
 const lista = criarLista(dados);
+// link recebido (lista.html?l=id,id,...): os itens entram na lista da pessoa, sem apagar o que ela já tinha
+{
+  const url = new URL(location.href), recebidos = (url.searchParams.get('l') || '').split(',').map(x => x.trim()).filter(Boolean).slice(0, 120);
+  if (recebidos.length) {
+    const n = lista.somar(recebidos);
+    url.searchParams.delete('l'); history.replaceState(null, '', url);
+    setTimeout(() => toast(n ? `${plural(n, 'item entrou', 'itens entraram')} na sua lista, vindos do link` : 'Esses itens já estavam na sua lista'), 600);
+  }
+}
 const nomes = dados.redes.map(r => r.nome.replace(' Atacado', ''));
 const estado = { ponto: 0, cepDado: false };
 const salvo = guarda.ler('ponto', -1);
@@ -128,7 +137,7 @@ desenhar();
 $('vCompartilhar')?.addEventListener('click', () => {
   if (!ultimo) return;
   const { melhor, itens, bairro } = ultimo;
-  compartilhar({ titulo: 'Minha lista de compras', texto: `Minha lista de ${itens} ${itens === 1 ? 'item' : 'itens'} sai por ${reais(melhor.total)} no ${melhor.rede.nome.replace(' Atacado', '')} (${bairro}). Compare a sua:` });
+  compartilhar({ titulo: 'Minha lista de compras', url: `${SITE}lista.html?l=${lista.ids().join(',')}`, texto: `Minha lista de ${itens} ${itens === 1 ? 'item' : 'itens'} sai por ${reais(melhor.total)} no ${melhor.rede.nome.replace(' Atacado', '')} (${bairro}). Compare a sua:` });
 });
 $('vFoto')?.addEventListener('click', () => {
   if (!ultimo) return;

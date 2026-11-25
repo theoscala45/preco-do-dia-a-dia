@@ -16,6 +16,9 @@ export function criarLista(dados) {
     adicionar(i) { if (!itens.includes(i)) { itens.push(i); avisar(); } },
     tirar(i) { const k = itens.indexOf(i); if (k >= 0) { itens.splice(k, 1); avisar(); } },
     limpar() { itens.length = 0; avisar(); },
+    // soma à lista os produtos de um link recebido (só ids que existem); devolve quantos entraram
+    somar(ids) { let n = 0; ids.forEach(id => { const i = idx[id]; if (i != null && !itens.includes(i)) { itens.push(i); n++; } }); if (n) avisar(); return n; },
+    ids: () => itens.map(i => dados.produtos[i].id),
     basica() { BASICA.forEach(id => { if (!itens.includes(idx[id])) itens.push(idx[id]); }); avisar(); },
     aoMudar(f) { ouvintes.push(f); },
   };
