@@ -1,6 +1,6 @@
 // Texto que muda de peso conforme o mouse (ou o dedo) chega perto de cada letra (VariableProximity, do React Bits, em JavaScript puro).
-// Usa o eixo de peso (wght) da própria fonte do título. As quebras de linha ficam travadas no peso de repouso, para o texto não pular.
-export function proximidade(alvo, { de = 800, para = 560, raio = 150, queda = 'linear', suavizacao = 0.2 } = {}) {
+// Perto do mouse a letra fica mais pesada: o peso (wght) vai até o máximo da fonte e um contorno fino da mesma cor engorda o desenho. As quebras de linha ficam travadas no peso de repouso, para o texto não pular.
+export function proximidade(alvo, { de = 800, para = 900, reforco = 0.03, raio = 150, queda = 'linear', suavizacao = 0.2 } = {}) {
   if (!alvo || matchMedia('(prefers-reduced-motion: reduce)').matches) return null;
   const texto = alvo.textContent.trim();
   const palavras = texto.split(/\s+/);
@@ -43,7 +43,7 @@ export function proximidade(alvo, { de = 800, para = 560, raio = 150, queda = 'l
     livre();
     letras.forEach(l => { l.style.width = ''; l.style.fontVariationSettings = `'wght' ${de}`; });
     const larguras = letras.map(l => l.getBoundingClientRect().width);
-    letras.forEach((l, i) => { l.style.width = larguras[i] + 'px'; l.style.textAlign = 'center'; escrito[i] = de; nivel[i] = 0; });
+    letras.forEach((l, i) => { l.style.width = larguras[i] + 'px'; l.style.textAlign = 'center'; escrito[i] = ''; nivel[i] = 0; l.style.webkitTextStroke = ''; });
     travar();
   };
   let largura = -1;
@@ -63,7 +63,7 @@ export function proximidade(alvo, { de = 800, para = 560, raio = 150, queda = 'l
     return n;
   };
   const ponteiro = { x: 0, y: 0, ativo: false };
-  const nivel = letras.map(() => 0), meta = letras.map(() => 0), escrito = letras.map(() => de);
+  const nivel = letras.map(() => 0), meta = letras.map(() => 0), escrito = letras.map(() => '');
   let quadro = 0, antes = 0, sujo = true;
   refazer();
   const passo = agora => {
@@ -88,7 +88,11 @@ export function proximidade(alvo, { de = 800, para = 560, raio = 150, queda = 'l
       if (Math.abs(meta[i] - n) < 0.002) n = meta[i]; else mexendo = true;
       nivel[i] = n;
       const w = Math.round(de + (para - de) * n);
-      if (escrito[i] !== w) { escrito[i] = w; l.style.fontVariationSettings = `'wght' ${w}`; }
+      if (escrito[i] !== w + ':' + n.toFixed(2)) {
+        escrito[i] = w + ':' + n.toFixed(2);
+        l.style.fontVariationSettings = `'wght' ${w}`;
+        l.style.webkitTextStroke = n ? `${(reforco * n).toFixed(4)}em currentColor` : '';
+      }
     });
     if (mexendo) quadro = requestAnimationFrame(passo); else antes = 0;
   };
