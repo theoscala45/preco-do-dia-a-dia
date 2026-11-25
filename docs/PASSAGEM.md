@@ -323,3 +323,4 @@ O projeto passou de "O Preço do Dia a Dia" para **Preço Aberto** (escolha do T
 - Sua lista: o aviso da foto fica dentro da linha dos botões (espaço menor).
 - Páginas internas (.pagina): menos espaço entre o cabeçalho e o título e entre o título e os cartões (etiqueta.css, no fim), para ver mais ao entrar. No celular vale o espaço do celular.css.
 - Celular (até 860 px ou toque): os cards e as revelações ao rolar entram mais rápido e um pouco antes de chegar à tela (cards.js e base.js). No computador não mudou.
+- Menu do celular: o marca-texto laranja virou um só (.menu-marca em base.js): desenha-se sob a página atual ao abrir e desliza até o link tocado; ao tocar noutra página ele chega nela e a página troca 280 ms depois.

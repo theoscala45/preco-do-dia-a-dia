@@ -187,14 +187,49 @@ export function iniciar(dados) {
   const botao = $('menuBotao'), menu = document.querySelector('.topo nav');
   let abre = null;
   if (botao && menu) {
+    // o marca-texto laranja do menu do celular é um só: ele desliza de um link para outro (ao encostar o dedo) em vez de piscar em cada link
+    const marca = document.createElement('span');
+    marca.className = 'menu-marca'; marca.setAttribute('aria-hidden', 'true');
+    menu.prepend(marca);
+    const links = [...menu.querySelectorAll('a')];
+    const medirLink = a => {
+      const r = document.createRange(); r.selectNodeContents(a);
+      const h = Math.round(parseFloat(getComputedStyle(a).fontSize) * 0.5);
+      return { x: a.offsetLeft - 6, y: a.offsetTop + a.offsetHeight - 7 - h, width: r.getBoundingClientRect().width + 18, height: h };
+    };
+    const irPara = a => {
+      const f = medirLink(a);
+      if (calmo) gsap.set(marca, { ...f, scaleX: 1, autoAlpha: 1 });
+      else gsap.to(marca, { ...f, scaleX: 1, autoAlpha: 1, duration: 0.5, ease: 'power4.out', overwrite: 'auto' });
+    };
+    const mostrarMarca = () => {
+      const atual = menu.querySelector('a[aria-current]');
+      if (!atual) { gsap.set(marca, { autoAlpha: 0 }); return; }
+      gsap.set(marca, { ...medirLink(atual), autoAlpha: 1, scaleX: calmo ? 1 : 0, transformOrigin: '0% 50%' });
+      if (!calmo) gsap.to(marca, { scaleX: 1, duration: 0.6, ease: 'power3.out', delay: 0.4, overwrite: 'auto' });
+    };
+    links.forEach(a => {
+      a.addEventListener('pointerdown', () => irPara(a));
+      a.addEventListener('pointerenter', e => { if (e.pointerType === 'mouse') irPara(a); });
+      a.addEventListener('focus', () => irPara(a));
+    });
+    // tocar noutra página: o marca-texto chega até ela e só então a página troca (um instante, para a pessoa ver)
+    menu.addEventListener('click', e => {
+      const a = e.target.closest('a');
+      if (!a || calmo || a.hasAttribute('aria-current') || e.metaKey || e.ctrlKey || e.shiftKey || a.target) return;
+      e.preventDefault(); e.stopPropagation(); irPara(a);
+      setTimeout(() => { location.href = a.href; }, 280);
+    }, true);
+    addEventListener('pageshow', e => { if (e.persisted && botao.getAttribute('aria-expanded') === 'true') fechar(); });
     const fechar = () => { botao.setAttribute('aria-expanded', 'false'); botao.textContent = 'Menu'; document.documentElement.classList.remove('menu-aberto'); lenis?.start(); abre?.reverse(); };
     botao.addEventListener('click', () => {
       if (botao.getAttribute('aria-expanded') === 'true') return fechar();
       botao.setAttribute('aria-expanded', 'true'); botao.textContent = 'Fechar';
       document.documentElement.classList.add('menu-aberto'); lenis?.stop();
+      mostrarMarca();
       // quando a entrada termina, o estilo de movimento sai dos links: assim o efeito de toque e de hover (CSS) pode mexer neles
-      abre = abre || gsap.timeline({ paused: true, onComplete: () => gsap.set(menu.children, { clearProps: 'transform,translate,rotate,scale' }) }).fromTo(menu, { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.3 })
-        .fromTo(menu.children, { y: 26, autoAlpha: 0 }, { y: 0, autoAlpha: 1, duration: 0.5, stagger: 0.06 }, 0.05);
+      abre = abre || gsap.timeline({ paused: true, onComplete: () => gsap.set(links, { clearProps: 'transform,translate,rotate,scale' }) }).fromTo(menu, { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.3 })
+        .fromTo(links, { y: 26, autoAlpha: 0 }, { y: 0, autoAlpha: 1, duration: 0.5, stagger: 0.06 }, 0.05);
       if (calmo) abre.progress(1); else abre.play(0);
     });
     menu.addEventListener('click', e => { if (e.target.closest('a')) fechar(); });

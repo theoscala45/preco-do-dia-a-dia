@@ -882,3 +882,4 @@ html:not([data-teclado]) :focus-visible{outline:none}
 .pagina{padding-top:calc(var(--aviso-h) + clamp(84px,10.5vh,104px))}
 .pg-topo{margin-bottom:clamp(22px,2.6vw,34px)}
 .pg-topo .lide{margin-top:12px}
+.menu-marca{display:none}
