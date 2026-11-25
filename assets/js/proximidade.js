@@ -1,6 +1,6 @@
 // Texto que muda de peso conforme o mouse (ou o dedo) chega perto de cada letra (VariableProximity, do React Bits, em JavaScript puro).
 // Usa o eixo de peso (wght) da própria fonte do título. As quebras de linha ficam travadas no peso de repouso, para o texto não pular.
-export function proximidade(alvo, { de = 800, para = 380, raio = 150, queda = 'linear', suavizacao = 0.2 } = {}) {
+export function proximidade(alvo, { de = 800, para = 560, raio = 150, queda = 'linear', suavizacao = 0.2 } = {}) {
   if (!alvo || matchMedia('(prefers-reduced-motion: reduce)').matches) return null;
   const texto = alvo.textContent.trim();
   const palavras = texto.split(/\s+/);
@@ -38,8 +38,14 @@ export function proximidade(alvo, { de = 800, para = 380, raio = 150, queda = 'l
     alvo.style.whiteSpace = quebras.length ? 'nowrap' : '';
   };
   const livre = () => { quebras.splice(0).forEach(br => br.remove()); alvo.style.whiteSpace = ''; };
-  const refazer = () => { livre(); letras.forEach(l => l.style.fontVariationSettings = `'wght' ${de}`); travar(); };
-  refazer();
+  // cada letra guarda a largura do peso de repouso e centraliza o desenho dentro dela: o texto não balança quando o peso muda
+  const refazer = () => {
+    livre();
+    letras.forEach(l => { l.style.width = ''; l.style.fontVariationSettings = `'wght' ${de}`; });
+    const larguras = letras.map(l => l.getBoundingClientRect().width);
+    letras.forEach((l, i) => { l.style.width = larguras[i] + 'px'; l.style.textAlign = 'center'; escrito[i] = de; nivel[i] = 0; });
+    travar();
+  };
   let largura = -1;
   const ro = new ResizeObserver(([e]) => {
     const w = e.contentRect.width;
@@ -59,6 +65,7 @@ export function proximidade(alvo, { de = 800, para = 380, raio = 150, queda = 'l
   const ponteiro = { x: 0, y: 0, ativo: false };
   const nivel = letras.map(() => 0), meta = letras.map(() => 0), escrito = letras.map(() => de);
   let quadro = 0, antes = 0, sujo = true;
+  refazer();
   const passo = agora => {
     quadro = 0;
     const dt = antes ? Math.min(agora - antes, 64) : 16; antes = agora;
