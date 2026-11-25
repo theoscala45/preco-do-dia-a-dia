@@ -225,7 +225,7 @@ h3{font:700 19px/1.25 var(--titulo);letter-spacing:-.01em}
 .tot-duas{margin-top:12px;background:var(--azul-fundo);border:1px solid var(--azul-linha);padding:12px 14px;border-radius:14px;font-size:14px;line-height:1.45}
 .tot-duas b{display:block;font:700 15.5px/1.3 var(--titulo);color:var(--azul)}
 .cupom .botao{width:100%;margin-top:18px}
-/* sua lista em cada rede, embaixo da busca */
+/* minha lista em cada rede, embaixo da busca */
 .rank-redes{margin-top:30px;padding-top:22px;border-top:1px solid var(--linha)}
 .rank-redes h3{font:700 18px/1.2 var(--titulo);margin-bottom:14px}
 .rank-redes ol{display:grid;gap:9px}

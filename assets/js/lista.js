@@ -16,7 +16,7 @@ const lista = criarLista(dados);
   if (recebidos.length) {
     const n = lista.somar(recebidos);
     url.searchParams.delete('l'); history.replaceState(null, '', url);
-    setTimeout(() => toast(n ? `${plural(n, 'item entrou', 'itens entraram')} na sua lista, vindos do link` : 'Esses itens já estavam na sua lista'), 600);
+    setTimeout(() => toast(n ? `${plural(n, 'item entrou', 'itens entraram')} na minha lista, vindos do link` : 'Esses itens já estavam na minha lista'), 600);
   }
 }
 const nomes = dados.redes.map(r => r.nome.replace(' Atacado', ''));
