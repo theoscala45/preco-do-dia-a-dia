@@ -101,10 +101,68 @@ export async function desenharCartao(dados) {
   return new Promise(res => cv.toBlob(res, 'image/png'));
 }
 
+// A imagem da lista da pessoa: o que ela escolheu, item por item, com o preço na loja mais barata, e o total.
+// dados: { titulo, subtitulo, loja, total, itens:[{nome, tam, valor|null}], rodape }
+export async function desenharLista(dados) {
+  await fontes();
+  const cv = document.createElement('canvas'); cv.width = W; cv.height = H;
+  const c = cv.getContext('2d');
+  const TINTA = '#16161A', LARANJA = '#F26A0F', CINZA = '#5C5C64', CLARO = '#8A8A92';
+  c.fillStyle = '#fff'; c.fillRect(0, 0, W, H);
+  c.fillStyle = TINTA; c.fillRect(L, 0, W - 2 * L, 6);
+  c.fillStyle = 'rgba(22,22,26,.18)'; for (let x = L; x < W - L; x += 16) c.fillRect(x, 10, 2, 8);
+  c.fillStyle = LARANJA; rr(c, L, 0, 120, 16, 0); c.fill();
+
+  c.save(); c.translate(L, 62); c.scale(0.66, 0.66); c.lineCap = 'round'; c.lineJoin = 'round';
+  c.strokeStyle = TINTA; c.lineWidth = 5; c.stroke(new Path2D('M20 26V18a12 12 0 0 1 24 0v8'));
+  const cesta = new Path2D('M4 26H60L52 58H12Z'); c.fillStyle = LARANJA; c.fill(cesta); c.strokeStyle = LARANJA; c.lineWidth = 3; c.stroke(cesta);
+  c.strokeStyle = '#fff'; c.lineWidth = 3.6; c.stroke(new Path2D('M21 33V51M32 33V51M43 33V51')); c.restore();
+  c.fillStyle = TINTA; c.font = '700 40px "Red Hat Display"'; c.textBaseline = 'alphabetic'; c.fillText('Preço Aberto', L + 56, 104);
+
+  // título numa linha só, com espaço de sobra acima e abaixo
+  c.font = '800 132px "Big Shoulders Display"'; c.fillText(dados.titulo, L, 252);
+  c.font = '500 30px "Red Hat Mono"'; c.fillStyle = CINZA; c.fillText(dados.subtitulo, L, 306);
+
+  // total na loja mais barata
+  const ty = 342, th = 150;
+  c.fillStyle = LARANJA; rr(c, L, ty, W - 2 * L, th, 22); c.fill();
+  c.fillStyle = 'rgba(255,255,255,.95)'; c.font = '600 32px "Red Hat Text"'; c.fillText('Mais barato em uma loja só', L + 40, ty + 62);
+  c.font = '800 44px "Red Hat Display"'; c.fillText(dados.loja, L + 40, ty + 112);
+  c.fillStyle = '#fff'; c.font = '800 120px "Big Shoulders Display"'; c.textAlign = 'right'; c.fillText(dados.total, W - L - 40, ty + 112); c.textAlign = 'left';
+
+  // a lista da pessoa
+  const topo = ty + th + 36, fim = H - 150, maxLinhas = 15;
+  let itens = dados.itens;
+  let resto = 0;
+  if (itens.length > maxLinhas) { resto = itens.length - (maxLinhas - 1); itens = itens.slice(0, maxLinhas - 1); }
+  const n = itens.length + (resto ? 1 : 0);
+  const passo = Math.min(62, Math.floor((fim - topo) / Math.max(1, n))), fonte = Math.max(26, Math.min(34, Math.round(passo * 0.55)));
+  itens.forEach((it, k) => {
+    const y = topo + k * passo + passo * 0.68;
+    c.fillStyle = TINTA; c.font = `600 ${fonte}px "Red Hat Text"`;
+    let nome = it.nome; const livre = W - 2 * L - 250;
+    while (c.measureText(nome).width > livre && nome.length > 4) nome = nome.slice(0, -2);
+    if (nome !== it.nome) nome = nome.trimEnd() + '…';
+    c.fillText(nome, L, y);
+    const larguraNome = c.measureText(nome).width;
+    if (it.tam) { c.fillStyle = CLARO; c.font = `500 ${Math.round(fonte * 0.8)}px "Red Hat Mono"`; if (larguraNome + 24 < livre) c.fillText(it.tam, L + larguraNome + 18, y); }
+    c.textAlign = 'right'; c.font = `800 ${fonte}px "Red Hat Display"`; c.fillStyle = it.valor ? TINTA : CLARO;
+    c.fillText(it.valor || 'sem preço', W - L, y); c.textAlign = 'left';
+    c.fillStyle = 'rgba(22,22,26,.10)'; c.fillRect(L, topo + (k + 1) * passo - 1, W - 2 * L, 2);
+  });
+  if (resto) { c.fillStyle = CINZA; c.font = `600 ${fonte}px "Red Hat Text"`; c.fillText(`e mais ${resto} ${resto === 1 ? 'item' : 'itens'}`, L, topo + itens.length * passo + passo * 0.68); }
+
+  // rodapé
+  c.fillStyle = TINTA; c.fillRect(L, H - 112, W - 2 * L, 3);
+  c.fillStyle = CINZA; c.font = '500 26px "Red Hat Mono"'; c.fillText(dados.rodape, L, H - 66);
+  c.fillStyle = TINTA; c.font = '600 28px "Red Hat Mono"'; c.textAlign = 'right'; c.fillText('theoscala45.github.io/preco-do-dia-a-dia', W - L, H - 28); c.textAlign = 'left';
+  return new Promise(res => cv.toBlob(res, 'image/png'));
+}
+
 // no celular, abre o menu do sistema com a imagem (que tem "Salvar imagem"); no computador, baixa o arquivo
-export async function salvarFoto(dados, nomeArquivo) {
+export async function salvarFoto(dados, nomeArquivo, desenhar = desenharCartao) {
   toast('Preparando a imagem...');
-  const blob = await desenharCartao(dados);
+  const blob = await desenhar(dados);
   if (!blob) { toast('Não deu para criar a imagem neste navegador.'); return; }
   const arquivo = new File([blob], nomeArquivo, { type: 'image/png' });
   const toque = matchMedia('(pointer: coarse)').matches;

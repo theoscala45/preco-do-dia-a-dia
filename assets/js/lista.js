@@ -3,7 +3,7 @@ import { $, gsap, ScrollTrigger, calmo, reais, curto, rolar, carregar, guarda, l
 import { caixasDoCep } from './cep-caixas.js?v=20261124z';
 import { criarLista, calcular, ligarBusca, ligarItens, ECONOMIA_MINIMA } from './cesta.js?v=20261124wx';
 import { aoAparecer } from './aparecer.js';
-import { compartilhar, salvarFoto, toast, SITE } from './compartilhar.js';
+import { compartilhar, salvarFoto, desenharLista, toast, SITE } from './compartilhar.js?v=20261124wz';
 let gatilhoRanking = null, ultimo = null;
 
 const [dados, geo, rotas] = await carregar('dados', 'geo', 'rotas');
@@ -51,7 +51,7 @@ function desenhar() {
   if (!tem) return;
 
   const { porRede, melhor, pior, completas, dupla, vale } = calcular(dados, lista.itens, estado.ponto);
-  ultimo = { porRede, melhor, itens: lista.itens.length, bairro: curto(pt.bairro) };   // o que os botões de compartilhar usam
+  ultimo = { porRede, melhor, itens: lista.itens.length, bairro: curto(pt.bairro), produtos: lista.itens.map((i, n) => ({ nome: dados.produtos[i].nome, tam: `${dados.produtos[i].marca}, ${dados.produtos[i].tam}`, v: melhor.v[n] })) };   // o que os botões de compartilhar usam
 
   // loja única
   $('vNome').textContent = melhor.rede.nome;
@@ -141,13 +141,12 @@ $('vCompartilhar')?.addEventListener('click', () => {
 });
 $('vFoto')?.addEventListener('click', () => {
   if (!ultimo) return;
-  const { porRede, melhor, itens, bairro } = ultimo;
-  const completas = porRede.filter(r => r.faltam === melhor.faltam), maior = Math.max(...completas.map(r => r.total));
+  const { melhor, itens, bairro, produtos } = ultimo;
   const dia = new Date(dados.datas.at(-1) + 'T12:00').toLocaleDateString('pt-BR');
   salvarFoto({
-    titulo: `Minha lista de ${itens} ${itens === 1 ? 'item' : 'itens'}`, subtitulo: `${bairro}, preços de ${dia}`,
-    destaque: { rotulo: 'Mais barato numa loja só', nome: nomes[melhor.k], valor: reais(melhor.total) },
-    linhas: completas.map((r, pos) => ({ nome: nomes[r.k], valor: reais(r.total), v: r.total / maior, melhor: pos === 0 })),
-    rodape: melhor.faltam ? `${melhor.faltam} ${melhor.faltam === 1 ? 'item' : 'itens'} sem preço nesta rede` : 'A mesma lista em cada supermercado',
-  }, `minha-lista-${semAcento(bairro).replace(/[^a-z0-9]+/g, '-')}.png`);
+    titulo: 'Minha lista', subtitulo: `${itens} ${itens === 1 ? 'item' : 'itens'}  ·  ${bairro}  ·  preços de ${dia}`,
+    loja: nomes[melhor.k], total: reais(melhor.total),
+    itens: produtos.map(p => ({ nome: p.nome, tam: p.tam, valor: p.v == null ? null : reais(p.v) })),
+    rodape: melhor.faltam ? `${melhor.faltam} ${melhor.faltam === 1 ? 'item' : 'itens'} sem preço nesta rede` : `Preços no ${nomes[melhor.k]}`,
+  }, `minha-lista-${semAcento(bairro).replace(/[^a-z0-9]+/g, '-')}.png`, desenharLista);
 });

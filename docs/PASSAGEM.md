@@ -318,3 +318,4 @@ O projeto passou de "O Preço do Dia a Dia" para **Preço Aberto** (escolha do T
 - Título inicial (proximidade): intensidade menor, peso até 800 e contorno de 0,006em.
 - Ideia para o futuro (não está no site): ao escolher o CEP, a câmera mergulha no bairro, o distrito pisca em laranja e sobe do chão e só depois seguem as rotas. Foi feita e desfeita em 25/11/2026; o código está no commit 6ea413d (camada 'bairro-foco' em mapa.js).
 - Sua lista: o botão Compartilhar agora manda um link com os itens (lista.html?l=P001,P002,...). Quem abre soma os itens à própria lista, sem apagar o que tinha, e vê um aviso. O bairro e o CEP não vão no link.
+- Sua lista, Salvar como foto: a imagem agora mostra a lista da pessoa (item, marca, tamanho e preço na loja mais barata) e o total, no lugar do ranking de lojas (desenharLista em compartilhar.js). Até 15 linhas; acima disso aparece 'e mais N itens'.
