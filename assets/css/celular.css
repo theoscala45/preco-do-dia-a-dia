@@ -26,7 +26,13 @@
 .media .preco b{font-size:64px}
 
 /* a abertura é uma folha branca que desliza por cima do mapa: o texto nunca fica em cima dos pontos e dos nomes do mapa */
-.abre{background:linear-gradient(180deg,rgba(255,255,255,0) 0,rgba(255,255,255,0) 36svh,rgba(255,255,255,.97) 44svh,rgba(255,255,255,.97) 100%)}
+/* primeira tela: o mapa ocupa só uma faixa curta em cima, e o título, o CEP e o botão cabem na tela sem rolar */
+.abre{padding-top:27svh;padding-bottom:36px;background:linear-gradient(180deg,rgba(255,255,255,0) 0,rgba(255,255,255,0) 17svh,rgba(255,255,255,.97) 27svh,rgba(255,255,255,.97) 100%)}
+
+/* cartões: cada um sobe de baixo e fica preso no pé da tela enquanto o mapa muda em cima (antes passavam pelo alto e escondiam o mapa) */
+.cap{min-height:112svh;display:flex;align-items:flex-end;padding-top:0;padding-bottom:0}
+.cap[data-cap="1"]{margin-top:0!important;padding-top:0}
+.cap-caixa{position:sticky;bottom:14px;width:100%}
 
 /* ---------- menu em tela cheia: efeito ao passar o dedo (:active) ou o mouse (hover) ---------- */
 /* um marca-texto laranja varre por trás do link, o texto desliza para a direita e fica laranja; a página atual já vem marcada */
