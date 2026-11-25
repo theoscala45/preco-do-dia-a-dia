@@ -124,7 +124,7 @@ const rotaDe = (i, k) => rotas.pontos.find(p => p.id === geo.pontos[i].id)?.rede
 // ---------- mapa
 let mapa = null;
 try {
-  const { criarMapa } = await import('./mapa.js?v=20261125e');
+  const { criarMapa } = await import('./mapa.js?v=20261125g');
   mapa = criarMapa($('mapa'), geo, rotas, {
     redes: dados.redes.map((r, k) => ({ id: r.id, nome: nomes[k] })),
     var: normal(vars), ordem: i => redesNoPonto[i].ordem, preco: (i, k) => (redesNoPonto[i].totais[k] == null ? null : reais(redesNoPonto[i].totais[k])),
@@ -222,7 +222,7 @@ mm.add('(prefers-reduced-motion: no-preference)', () => {
   // trilha lateral: mostra em qual dos três capítulos a leitura está
   gsap.fromTo('#trilha', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.4, scrollTrigger: { trigger: '#como', start: 'top 70%', endTrigger: '#inflacao', end: 'bottom 60%', toggleActions: 'play reverse play reverse' } });
   gsap.fromTo('#trilha i', { scaleY: 0 }, { scaleY: 1, ease: 'none', scrollTrigger: { trigger: '#como', start: 'top 50%', endTrigger: '#inflacao', end: 'bottom 50%', scrub: 0.4 } });
-  gsap.utils.toArray('.cap').forEach(cap => {
+  if (!leve) gsap.utils.toArray('.cap').forEach(cap => {   // no celular o cartão já entra pela revelação comum (uma animação só)
     const caixa = cap.querySelector('.cap-caixa');
     gsap.timeline({ scrollTrigger: { trigger: cap, start: 'top 68%', end: 'bottom 30%', toggleActions: 'play reverse play reverse' } })
       .from(caixa, { autoAlpha: 0, y: 56, duration: 0.8 })

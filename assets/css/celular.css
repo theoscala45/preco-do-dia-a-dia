@@ -59,3 +59,10 @@
 /* no mapa do resultado, deslizar para cima ou para baixo rola a página (o navegador cuida, sem travar);
    arrastar para os lados move o mapa e dois dedos aproximam */
 .com-resultado #mapa .maplibregl-canvas-container,.com-resultado #mapa .maplibregl-canvas{touch-action:pan-y!important}
+
+/* fotos do mapa (celular): a rolagem só troca uma imagem por outra; o mapa ao vivo fica escondido até o resultado do CEP */
+#mapa.so-foto .maplibregl-canvas-container,#mapa.so-foto .maplibregl-marker{visibility:hidden}
+.mapa-fotos{position:absolute;inset:0;pointer-events:none}
+.mapa-fotos.fora{display:none}
+.mapa-foto{position:absolute;inset:0;width:100%;height:100%;opacity:0;transition:opacity .45s ease}
+.mapa-foto.on{opacity:1}

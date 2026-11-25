@@ -126,7 +126,13 @@ export function criarMapa(el, geo, rotas, valores, { calmo = false } = {}) {
     return { top: 120, bottom: 80, left: Math.round(w * (est.cena === 0 ? 0.47 : 0.43)), right: 70 };
   }
 
-  const mapa = novoMapa(el, { bounds: cidade, fitBoundsOptions: { padding: margem() }, bearing: CAMERA[0][0], pitch: CAMERA[0][1] });
+  // Celular: o mapa ao vivo pesava demais com a rolagem (a página travava nos capítulos). Lá ele é fotografado uma vez por cena
+  // (cidade, pontos, inflação) e a rolagem só troca fotos; o mapa ao vivo volta só para o resultado do CEP.
+  const FOTO = celular() && !calmo;
+  let fotoPronta = false, cenaFoto = 0, caixaFotos = null;
+  const mapa = novoMapa(el, { bounds: cidade, fitBoundsOptions: { padding: margem() }, bearing: CAMERA[0][0], pitch: CAMERA[0][1],
+    ...(FOTO ? { canvasContextAttributes: { antialias: false, preserveDrawingBuffer: true } } : {}) });
+  if (FOTO) el.classList.add('so-foto');
 
   // dados de cada ponto: rota e loja por rede, na ordem das redes do site
   const porPonto = geo.pontos.map(p => {
@@ -175,7 +181,54 @@ export function criarMapa(el, geo, rotas, valores, { calmo = false } = {}) {
     est.pronto = true;
     aplicar(true);
     aoPronto();
+    if (FOTO) fotografar();
   });
+
+  // ---------- fotos do mapa (celular)
+  const ociosa = () => new Promise(r => { let feito = false; const fim = () => { if (!feito) { feito = true; r(); } }; mapa.once('idle', fim); setTimeout(fim, 7000); });
+  async function tirar(nome, mudar) {
+    const pronto = ociosa();
+    mudar(); mapa.triggerRepaint();
+    await pronto;
+    const img = new Image();
+    img.className = 'mapa-foto'; img.alt = ''; img.dataset.cena = nome;
+    img.src = mapa.getCanvas().toDataURL('image/jpeg', 0.86);
+    caixaFotos.append(img);
+  }
+  function mostrarFoto(c) {
+    cenaFoto = c;
+    if (!caixaFotos) return;
+    const nome = c === 3 ? '3' : c >= 1 ? '1' : '0';
+    caixaFotos.querySelectorAll('.mapa-foto').forEach(f => f.classList.toggle('on', f.dataset.cena === nome));
+  }
+  async function fotografar() {
+    try {
+      caixaFotos?.remove();
+      caixaFotos = document.createElement('div'); caixaFotos.className = 'mapa-fotos'; caixaFotos.setAttribute('aria-hidden', 'true');
+      el.after(caixaFotos);
+      fotoPronta = false;
+      const pedida = cenaFoto;
+      await tirar('0', () => { est.cena = 0; aplicar(true); });
+      mostrarFoto(pedida);
+      await tirar('1', () => { est.cena = 1; aplicar(true); });
+      mostrarFoto(cenaFoto);
+      await tirar('3', () => { est.cena = 3; aplicar(true); });
+      est.cena = 0; aplicar(true);
+      fotoPronta = true;
+      mostrarFoto(cenaFoto);
+    } catch (erro) {
+      // sem foto (navegador não deixou ler o desenho): volta ao mapa ao vivo
+      console.warn('Sem fotos do mapa; segue ao vivo.', erro);
+      caixaFotos?.remove(); caixaFotos = null; el.classList.remove('so-foto');
+    }
+  }
+  // no resultado do CEP o mapa ao vivo aparece; fora dele, as fotos
+  function aoVivo(v) {
+    if (!caixaFotos) return;
+    el.classList.toggle('so-foto', !v);
+    caixaFotos.classList.toggle('fora', v);
+    if (v) mapa.resize();
+  }
 
   const parar = () => { tl?.kill(); luz?.kill(); tl = luz = null; };
 
@@ -331,11 +384,27 @@ export function criarMapa(el, geo, rotas, valores, { calmo = false } = {}) {
     if (f) { fixo = true; mostrarRotulo(f); } else fecharRotulo();
   });
   let espera = 0;
-  window.addEventListener('resize', () => { clearTimeout(espera); espera = setTimeout(() => { if (est.pronto && !est.dentro) aplicar(true); }, 200); });
+  let larguraFoto = el.clientWidth;
+  window.addEventListener('resize', () => { clearTimeout(espera); espera = setTimeout(() => {
+    if (FOTO && caixaFotos) { if (el.clientWidth !== larguraFoto && est.sel < 0 && fotoPronta) { larguraFoto = el.clientWidth; mapa.resize(); fotografar(); } return; }
+    if (est.pronto && !est.dentro) aplicar(true);
+  }, 200); });
 
   return {
-    cena(c) { if (c !== est.cena) { est.cena = c; aplicar(); } },
-    selecionar(i) { est.sel = i; aplicar(); if (est.pronto) mapa.setPaintProperty('distritos', 'fill-extrusion-color', corDistritos()); },
+    cena(c) {
+      if (FOTO && caixaFotos) { if (est.sel < 0) mostrarFoto(c); else cenaFoto = c; return; }   // celular: só troca a foto
+      if (c !== est.cena) { est.cena = c; aplicar(); }
+    },
+    selecionar(i) {
+      if (FOTO && caixaFotos) {
+        est.sel = i; est.cena = 0;
+        if (i >= 0) { aoVivo(true); aplicar(); }
+        else { aplicar(); aoVivo(false); mostrarFoto(cenaFoto); }
+        if (est.pronto) mapa.setPaintProperty('distritos', 'fill-extrusion-color', corDistritos());
+        return;
+      }
+      est.sel = i; aplicar(); if (est.pronto) mapa.setPaintProperty('distritos', 'fill-extrusion-color', corDistritos());
+    },
     // destaca a rota de uma rede (ao passar o ponteiro na lista)
     destacar(k) {
       if (!est.pronto || est.fase !== 'veredito' || k === est.destaque) return;

@@ -1,6 +1,6 @@
 // Mapa pequeno da página da lista: o caminho de carro do ponto de coleta até a loja mais próxima de uma ou duas redes.
 // A primeira rede da lista é o destaque (laranja). A rota se desenha quando o mapa entra na tela.
-import { novoMapa, camadasDeRota, tracar, degrade, acender, apagar, correrLuz, abrir, caixaDe, marcar, CLARO } from './mapa.js?v=20261125e';
+import { novoMapa, camadasDeRota, tracar, degrade, acender, apagar, correrLuz, abrir, caixaDe, marcar, CLARO } from './mapa.js?v=20261125g';
 const { gsap, ScrollTrigger } = window;
 
 export function criarMapaDeRota(el, geo, rotas, { calmo = false } = {}) {
