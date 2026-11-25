@@ -30,9 +30,7 @@
 .abre{padding-top:27svh;padding-bottom:36px;background:linear-gradient(180deg,rgba(255,255,255,0) 0,rgba(255,255,255,0) 17svh,rgba(255,255,255,.97) 27svh,rgba(255,255,255,.97) 100%)}
 
 /* cartões: cada um sobe de baixo e fica preso no pé da tela enquanto o mapa muda em cima (antes passavam pelo alto e escondiam o mapa) */
-.cap{min-height:170svh;display:flex;align-items:flex-end;padding-top:0;padding-bottom:0}
 .cap[data-cap="1"]{margin-top:0!important;padding-top:0}
-.cap-caixa{position:sticky;bottom:14px;width:100%}
 
 /* ---------- menu em tela cheia: efeito ao passar o dedo (:active) ou o mouse (hover) ---------- */
 /* um marca-texto laranja varre por trás do link, o texto desliza para a direita e fica laranja; a página atual já vem marcada */
@@ -56,9 +54,6 @@
    Só o mapa do resultado do CEP, no início, recebe o toque (arrastar e pinça). */
 .maplibregl-map{pointer-events:none}
 .com-resultado #mapa{pointer-events:auto}
-/* no mapa do resultado, deslizar para cima ou para baixo rola a página (o navegador cuida, sem travar);
-   arrastar para os lados move o mapa e dois dedos aproximam */
-.com-resultado #mapa .maplibregl-canvas-container,.com-resultado #mapa .maplibregl-canvas{touch-action:pan-y!important}
 
 /* fotos do mapa (celular): a rolagem só troca uma imagem por outra; o mapa ao vivo fica escondido até o resultado do CEP */
 #mapa.so-foto .maplibregl-canvas-container,#mapa.so-foto .maplibregl-marker{visibility:hidden}
@@ -73,3 +68,13 @@
 /* o palco do mapa nunca recebe o toque no celular (a rolagem passa direto para a página); o mapa guardado sai da página */
 .palco{pointer-events:none}
 #mapa.guardado{display:none}
+
+/* ---------- capítulos no celular (25/11/2026): nada fica preso atrás da página.
+   O palco do mapa rola junto com a abertura (não é mais "sticky") e cada capítulo traz a foto do mapa em cima do cartão,
+   no fluxo da página. No iPhone, o mapa preso atrás segurava a rolagem quando o dedo encostava nele. */
+.palco{position:relative}
+.cap{min-height:0;display:block;padding:8px var(--margem) 40px;width:100%}
+.cap-caixa{position:static;width:100%}
+.cap-foto{display:block;width:calc(100% + 2 * var(--margem));max-width:none;margin:0 calc(-1 * var(--margem)) 4px;aspect-ratio:100 / 86;
+  background:var(--fundo);opacity:0;transition:opacity .5s ease;pointer-events:none;-webkit-user-select:none;user-select:none}
+.cap-foto.pronta{opacity:1}
