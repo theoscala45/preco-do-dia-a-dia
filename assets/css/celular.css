@@ -56,3 +56,6 @@
    Só o mapa do resultado do CEP, no início, recebe o toque (arrastar e pinça). */
 .maplibregl-map{pointer-events:none}
 .com-resultado #mapa{pointer-events:auto}
+/* no mapa do resultado, deslizar para cima ou para baixo rola a página (o navegador cuida, sem travar);
+   arrastar para os lados move o mapa e dois dedos aproximam */
+.com-resultado #mapa .maplibregl-canvas-container,.com-resultado #mapa .maplibregl-canvas{touch-action:pan-y!important}
