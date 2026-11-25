@@ -18,23 +18,12 @@ const linhas = new WeakMap();    // a linha do tempo de entrada de cada card, pa
 // quando termina, o card volta ao CSS: sem estilo preso no elemento, o hover e o foco (que usam transform e opacity) funcionam
 function liberar(c) { c.removeAttribute('data-card'); gsap.set(c, { clearProps: 'all' }); }
 
-// no celular tudo é mais curto e começa mais cedo: a pessoa rola depressa e não deve esperar o card
-const NO_CELULAR = '(max-width: 860px), (pointer: coarse)';
 function entrar(c, i) {
-  const estreito = matchMedia('(max-width: 860px)').matches, cel = matchMedia(NO_CELULAR).matches;
+  const estreito = matchMedia('(max-width: 860px)').matches;
   const lado = i % 2 ? 1 : -1, ladoPx = estreito ? 10 : 28;
   linhas.get(c)?.kill();
-  const tl = gsap.timeline({ delay: cel ? i * 0.03 : i * 0.09, onComplete: () => liberar(c) });
+  const tl = gsap.timeline({ delay: i * 0.09, onComplete: () => liberar(c) });
   linhas.set(c, tl);
-  if (cel) {
-    tl.fromTo(c, { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.2, ease: 'power1.out' }, 0)
-      .fromTo(c, { x: lado * ladoPx }, { x: 0, duration: 0.45, ease: 'power3.out' }, 0)
-      .fromTo(c, { y: 26 }, { y: 0, duration: 0.5, ease: 'back.out(1.4)' }, 0)
-      .fromTo(c, { scaleX: 1.015, scaleY: 0.97, transformOrigin: '50% 100%' }, { scaleX: 1, scaleY: 1, duration: 0.4, ease: 'elastic.out(1, 0.5)' }, 0.18);
-    const poucos = [...c.children].slice(0, 10);
-    if (poucos.length) tl.from(poucos, { autoAlpha: 0, y: 8, duration: 0.3, stagger: 0.03, ease: 'power2.out', clearProps: 'all' }, 0.1);
-    return;
-  }
   tl.fromTo(c, { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.36, ease: 'power1.out' }, 0)
     .fromTo(c, { x: lado * ladoPx }, { x: 0, duration: 0.9, ease: 'power3.out' }, 0)            // em x: freia no fim
     .fromTo(c, { y: 36 }, { y: 0, duration: 0.96, ease: 'back.out(1.7)' }, 0)                     // em y: passa do ponto e volta (curva o caminho)
@@ -59,9 +48,7 @@ export function ligarCards() {
   if (!cards.length) return;
   cards.forEach(c => { ligados.add(c); c.removeAttribute('data-surge'); c.setAttribute('data-card', ''); });
   gsap.set(cards, { autoAlpha: 0 });
-  // no celular o card começa a entrar um pouco antes de chegar à borda da tela
-  const margem = matchMedia(NO_CELULAR).matches ? '0px 0px 6% 0px' : '0px 0px -8% 0px';
-  aoAparecer(cards, lote => lote.forEach(entrar), lote => lote.forEach(zerar), { margem });
+  aoAparecer(cards, lote => lote.forEach(entrar), lote => lote.forEach(zerar));
 }
 
 // um "pulo" de feedback: o elemento cresce de repente e volta com mola. Serve para totais que mudam e botões que confirmam.

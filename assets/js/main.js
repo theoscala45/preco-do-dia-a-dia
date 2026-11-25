@@ -1,5 +1,5 @@
 // Página inicial: o mapa, o CEP, as cenas do scroll e a lista de compras.
-import { $, gsap, ScrollTrigger, calmo, reais, pct, curto, rolar, carregar, guarda, ligarCep, iniciar, irPara, semAcento } from './base.js?v=20261124xf';
+import { $, gsap, ScrollTrigger, calmo, reais, pct, curto, rolar, carregar, guarda, ligarCep, iniciar, irPara, semAcento } from './base.js?v=20261124xj';
 import { criarLista, calcular, ligarBusca, ligarItens } from './cesta.js';
 import { pulo } from './cards.js?v=20261124f';
 import { caixasDoCep, espera } from './cep-caixas.js?v=20261124z';
@@ -124,7 +124,7 @@ const rotaDe = (i, k) => rotas.pontos.find(p => p.id === geo.pontos[i].id)?.rede
 // ---------- mapa
 let mapa = null;
 try {
-  const { criarMapa } = await import('./mapa.js?v=20261124xi');
+  const { criarMapa } = await import('./mapa.js?v=20261124xj');
   mapa = criarMapa($('mapa'), geo, rotas, {
     redes: dados.redes.map((r, k) => ({ id: r.id, nome: nomes[k] })),
     var: normal(vars), ordem: i => redesNoPonto[i].ordem, preco: (i, k) => (redesNoPonto[i].totais[k] == null ? null : reais(redesNoPonto[i].totais[k])),
@@ -332,13 +332,19 @@ function flip(elementos, mudar) {
 }
 function transicaoParaResultado() {
   const res = $('resultado'), tit = document.querySelector('.abre .titulo'), form = $('cepForm'), lide = $('lide'), media = $('media');
-  if (scrollY > innerHeight * 0.3) irPara(0);
+  // no celular o resultado ocupa a tela com o mapa: o título, o CEP e a etiqueta somem (ver celular.css) e a página volta ao topo
+  const movel = matchMedia('(max-width: 860px)').matches, sobre = document.querySelector('.abre .sobre');
+  if (movel) irPara(0, { immediate: true, force: true }); else if (scrollY > innerHeight * 0.3) irPara(0);
   gsap.timeline()
     .to(media, { y: 52, scaleY: 0.9, scaleX: 1.03, autoAlpha: 0, duration: 0.36, ease: 'power2.out', transformOrigin: '50% 100%' }, 0)
     .to(lide, { y: -16, autoAlpha: 0, duration: 0.28, ease: 'power2.out' }, 0.04)
     .add(() => {
-      flip([tit, form], () => { res.hidden = false; document.documentElement.classList.add('com-resultado'); });
-      gsap.from(tit, { autoAlpha: 0.15, duration: 0.5, ease: 'power2.out', clearProps: 'opacity,visibility' });
+      const mudar = () => { res.hidden = false; document.documentElement.classList.add('com-resultado'); };
+      if (movel) { mudar(); gsap.set([tit, form, sobre], { clearProps: 'transform,opacity' }); }
+      else {
+        flip([tit, form], mudar);
+        gsap.from(tit, { autoAlpha: 0.15, duration: 0.5, ease: 'power2.out', clearProps: 'opacity,visibility' });
+      }
       gsap.fromTo(res, { autoAlpha: 0, y: 90, scaleY: 0.93, transformOrigin: '50% 0%' }, { autoAlpha: 1, y: 0, scaleY: 1, duration: 0.85, ease: 'back.out(1.4)', delay: 0.1, clearProps: 'transform,opacity,visibility' });
       gsap.from(res.querySelector('header'), { autoAlpha: 0, y: 12, duration: 0.45, ease: 'power2.out', delay: 0.35, clearProps: 'all' });
       gsap.from('#redesLista li', { autoAlpha: 0, x: -20, duration: 0.5, stagger: 0.05, ease: 'power2.out', delay: 0.45, clearProps: 'transform,opacity,visibility' });
@@ -348,6 +354,19 @@ function transicaoParaResultado() {
 }
 function transicaoDeVolta() {
   const res = $('resultado'), tit = document.querySelector('.abre .titulo'), form = $('cepForm'), lide = $('lide'), media = $('media');
+  if (matchMedia('(max-width: 860px)').matches) {
+    // celular: o resultado sai e o título, o CEP e a frase voltam, um depois do outro
+    const sobre = document.querySelector('.abre .sobre');
+    gsap.to(res, { autoAlpha: 0, y: 30, duration: 0.25, ease: 'power2.out', onComplete: () => {
+      res.hidden = true; gsap.set(res, { clearProps: 'all' });
+      document.documentElement.classList.remove('com-resultado');
+      gsap.set(lide, { clearProps: 'all' }); gsap.set(media, { autoAlpha: 0 });
+      gsap.fromTo([sobre, tit, lide, form], { autoAlpha: 0, y: 14 }, { autoAlpha: 1, y: 0, duration: 0.45, stagger: 0.08, ease: 'power2.out', clearProps: 'transform,opacity,visibility' });
+      gsap.fromTo(media, { autoAlpha: 0, y: 24 }, { autoAlpha: 1, y: 0, duration: 0.5, ease: 'power2.out', delay: 0.5 });
+      setTimeout(() => ScrollTrigger.refresh(), 1200);
+    } });
+    return;
+  }
   gsap.timeline()
     .to(res, { autoAlpha: 0, y: 40, duration: 0.28, ease: 'power2.out' }, 0)
     .add(() => {

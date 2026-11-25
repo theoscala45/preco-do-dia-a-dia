@@ -31,6 +31,8 @@ export function novoMapa(el, extra = {}) {
     container: el, style: ESTILO, attributionControl: false, cooperativeGestures: toque, scrollZoom: false,
     dragRotate: false, pitchWithRotate: false, touchPitch: false, minZoom: 8, maxZoom: 17, maxPitch: 60,
     locale: { 'CooperativeGesturesHandler.MobileHelpText': 'Use dois dedos para mover o mapa', 'NavigationControl.ZoomIn': 'Aproximar', 'NavigationControl.ZoomOut': 'Afastar' },
+    // no celular o mapa é só para olhar: sem arrastar, zoom nem toque (a página rola por cima dele)
+    interactive: !matchMedia('(max-width: 860px)').matches,
     ...extra,
   });
   mapa.addControl(new ml.AttributionControl({ compact: true }), 'bottom-right');
@@ -117,7 +119,7 @@ export function criarMapa(el, geo, rotas, valores, { calmo = false } = {}) {
   // espaço da tela que o texto ocupa: o mapa enquadra o que sobra
   function margem() {
     const w = el.clientWidth, h = el.clientHeight;
-    if (celular()) return { top: 96, bottom: Math.round(h * (est.cena === 0 ? 0.68 : 0.56)), left: 36, right: 78 };
+    if (celular()) return { top: 96, bottom: Math.round(h * (est.dentro && est.cena === 0 ? 0.46 : est.cena === 0 ? 0.68 : 0.56)), left: 36, right: 78 };
     return { top: 120, bottom: 80, left: Math.round(w * (est.cena === 0 ? 0.47 : 0.43)), right: 70 };
   }
 

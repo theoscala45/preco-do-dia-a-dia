@@ -30,7 +30,7 @@
 .abre{padding-top:27svh;padding-bottom:36px;background:linear-gradient(180deg,rgba(255,255,255,0) 0,rgba(255,255,255,0) 17svh,rgba(255,255,255,.97) 27svh,rgba(255,255,255,.97) 100%)}
 
 /* cartões: cada um sobe de baixo e fica preso no pé da tela enquanto o mapa muda em cima (antes passavam pelo alto e escondiam o mapa) */
-.cap{min-height:112svh;display:flex;align-items:flex-end;padding-top:0;padding-bottom:0}
+.cap{min-height:170svh;display:flex;align-items:flex-end;padding-top:0;padding-bottom:0}
 .cap[data-cap="1"]{margin-top:0!important;padding-top:0}
 .cap-caixa{position:sticky;bottom:14px;width:100%}
 
@@ -47,3 +47,7 @@
   .topo nav a,.topo nav a::after{transition:color .15s}
   .topo nav a:hover,.topo nav a:active{transform:none}
 }
+
+/* com o resultado do CEP: some tudo que é da abertura (título, frase, CEP, botão, etiqueta) e fica o mapa em cima e a lista embaixo */
+.com-resultado .abre > :not(#resultado){display:none}
+.com-resultado .abre{padding-top:42svh;background:linear-gradient(180deg,rgba(255,255,255,0) 0,rgba(255,255,255,0) 32svh,rgba(255,255,255,.97) 42svh,rgba(255,255,255,.97) 100%)}
