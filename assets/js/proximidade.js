@@ -1,6 +1,6 @@
 // Texto que muda de peso conforme o mouse (ou o dedo) chega perto de cada letra (VariableProximity, do React Bits, em JavaScript puro).
 // Perto do mouse a letra fica mais pesada: o peso (wght) vai até o máximo da fonte e um contorno fino da mesma cor engorda o desenho. As quebras de linha ficam travadas no peso de repouso, para o texto não pular.
-export function proximidade(alvo, { de = 560, para = 800, reforco = 0.01, raio = 150, queda = 'linear', suavizacao = 0.2 } = {}) {
+export function proximidade(alvo, { de = 680, para = 860, reforco = 0.008, raio = 150, queda = 'linear', suavizacao = 0.2 } = {}) {
   if (!alvo || matchMedia('(prefers-reduced-motion: reduce)').matches) return null;
   const texto = alvo.textContent.trim();
   const palavras = texto.split(/\s+/);
@@ -12,7 +12,7 @@ export function proximidade(alvo, { de = 560, para = 800, reforco = 0.01, raio =
     [...p].forEach(c => {
       const l = document.createElement('span');
       l.textContent = c; l.setAttribute('aria-hidden', 'true');
-      l.style.cssText = `display:inline-block;font-variation-settings:'wght' ${de}`;
+      l.style.cssText = `display:inline-block;font-family:inherit;font-weight:${de}`;
       b.append(l); letras.push(l);
     });
     blocos.push(b); alvo.append(b);
@@ -41,7 +41,7 @@ export function proximidade(alvo, { de = 560, para = 800, reforco = 0.01, raio =
   // as quebras de linha ficam travadas no peso de repouso; as letras podem alargar ao engordar, como no original
   const refazer = () => {
     livre();
-    letras.forEach(l => { l.style.width = ''; l.style.fontVariationSettings = `'wght' ${de}`; });
+    letras.forEach(l => { l.style.width = ''; l.style.fontWeight = de; });
     letras.forEach((l, i) => { l.style.width = ''; escrito[i] = ''; nivel[i] = 0; l.style.webkitTextStroke = ''; });
     travar();
   };
@@ -89,13 +89,14 @@ export function proximidade(alvo, { de = 560, para = 800, reforco = 0.01, raio =
       const w = Math.round(de + (para - de) * n);
       if (escrito[i] !== w + ':' + n.toFixed(2)) {
         escrito[i] = w + ':' + n.toFixed(2);
-        l.style.fontVariationSettings = `'wght' ${w}`;
+        l.style.fontWeight = w;
         l.style.webkitTextStroke = n ? `${(reforco * n).toFixed(4)}em currentColor` : '';
       }
     });
     if (mexendo) quadro = requestAnimationFrame(passo); else antes = 0;
   };
-  const agendar = () => { sujo = true; if (!quadro) quadro = requestAnimationFrame(passo); };
+  let pedido = 0;
+  const agendar = () => { sujo = true; const t = performance.now(); if (!quadro || t - pedido > 300) { quadro = requestAnimationFrame(passo); pedido = t; } };
   const mover = (x, y) => { ponteiro.x = x; ponteiro.y = y; ponteiro.ativo = true; agendar(); };
   const sair = () => { ponteiro.ativo = false; agendar(); };
   addEventListener('mousemove', e => mover(e.clientX, e.clientY), { passive: true });

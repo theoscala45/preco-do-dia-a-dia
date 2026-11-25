@@ -313,3 +313,4 @@ O projeto passou de "O Preço do Dia a Dia" para **Preço Aberto** (escolha do T
 - Título inicial (proximidade): agora engorda perto do mouse (peso 800 a 900 mais contorno fino de 0,03em), sem afinar.
 - Título inicial (proximidade): repouso em peso 560 e perto do mouse vai a 900 com contorno de 0,025em (como no exemplo do React Bits); largura das letras livre.
 - Título inicial (proximidade): efeito mais suave, peso até 800 e contorno de 0,01em.
+- Título inicial (proximidade): usa font-weight (não font-variation-settings) com a fonte do título herdada; repouso 680, perto do mouse 860 e contorno de 0,008em.
