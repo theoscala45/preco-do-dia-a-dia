@@ -311,3 +311,4 @@ O projeto passou de "O Preço do Dia a Dia" para **Preço Aberto** (escolha do T
 - Título da página inicial: efeito VariableProximity (React Bits) em JavaScript puro, `assets/js/proximidade.js`. Cada letra vai de peso 800 a 380 conforme a distância do mouse/dedo (raio 150 px); quebras de linha travadas no peso de repouso; desligado com movimento reduzido. Ligado em base.js para `[data-junto] .junto`.
 - Título inicial (proximidade): cada letra mantém a largura do peso de repouso (o texto não balança) e o peso vai de 800 a 560, mais suave.
 - Título inicial (proximidade): agora engorda perto do mouse (peso 800 a 900 mais contorno fino de 0,03em), sem afinar.
+- Título inicial (proximidade): repouso em peso 560 e perto do mouse vai a 900 com contorno de 0,025em (como no exemplo do React Bits); largura das letras livre.

@@ -1,6 +1,6 @@
 // Texto que muda de peso conforme o mouse (ou o dedo) chega perto de cada letra (VariableProximity, do React Bits, em JavaScript puro).
 // Perto do mouse a letra fica mais pesada: o peso (wght) vai até o máximo da fonte e um contorno fino da mesma cor engorda o desenho. As quebras de linha ficam travadas no peso de repouso, para o texto não pular.
-export function proximidade(alvo, { de = 800, para = 900, reforco = 0.03, raio = 150, queda = 'linear', suavizacao = 0.2 } = {}) {
+export function proximidade(alvo, { de = 560, para = 900, reforco = 0.025, raio = 150, queda = 'linear', suavizacao = 0.2 } = {}) {
   if (!alvo || matchMedia('(prefers-reduced-motion: reduce)').matches) return null;
   const texto = alvo.textContent.trim();
   const palavras = texto.split(/\s+/);
@@ -38,12 +38,11 @@ export function proximidade(alvo, { de = 800, para = 900, reforco = 0.03, raio =
     alvo.style.whiteSpace = quebras.length ? 'nowrap' : '';
   };
   const livre = () => { quebras.splice(0).forEach(br => br.remove()); alvo.style.whiteSpace = ''; };
-  // cada letra guarda a largura do peso de repouso e centraliza o desenho dentro dela: o texto não balança quando o peso muda
+  // as quebras de linha ficam travadas no peso de repouso; as letras podem alargar ao engordar, como no original
   const refazer = () => {
     livre();
     letras.forEach(l => { l.style.width = ''; l.style.fontVariationSettings = `'wght' ${de}`; });
-    const larguras = letras.map(l => l.getBoundingClientRect().width);
-    letras.forEach((l, i) => { l.style.width = larguras[i] + 'px'; l.style.textAlign = 'center'; escrito[i] = ''; nivel[i] = 0; l.style.webkitTextStroke = ''; });
+    letras.forEach((l, i) => { l.style.width = ''; escrito[i] = ''; nivel[i] = 0; l.style.webkitTextStroke = ''; });
     travar();
   };
   let largura = -1;
