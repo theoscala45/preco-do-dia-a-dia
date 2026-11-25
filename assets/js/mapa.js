@@ -32,9 +32,11 @@ export function novoMapa(el, extra = {}) {
     dragRotate: false, pitchWithRotate: false, touchPitch: false, minZoom: 8, maxZoom: 17, maxPitch: 60,
     locale: { 'CooperativeGesturesHandler.MobileHelpText': 'Use dois dedos para mover o mapa', 'NavigationControl.ZoomIn': 'Aproximar', 'NavigationControl.ZoomOut': 'Afastar' },
     // no celular: menos pixels por ponto e sem esmaecer os nomes (o mapa pesa menos e a rolagem fica leve)
-    ...(pequeno ? { pixelRatio: Math.min(devicePixelRatio || 1, 1.5), fadeDuration: 0 } : {}),
+    ...(pequeno ? { pixelRatio: Math.min(devicePixelRatio || 1, 1.5), fadeDuration: 0, cooperativeGestures: false } : {}),
     ...extra,
   });
+  // no celular todo mapa começa só para olhar: o dedo rola a página por cima dele. Só o mapa do resultado do CEP liga os gestos (ver gestos)
+  if (pequeno) ['dragPan', 'touchZoomRotate', 'doubleClickZoom', 'keyboard', 'boxZoom', 'scrollZoom'].forEach(h => mapa[h]?.disable());
   mapa.addControl(new ml.AttributionControl({ compact: true }), 'bottom-right');
   if (!toque) mapa.addControl(new ml.NavigationControl({ showCompass: false }), 'bottom-right');
   mapa.touchZoomRotate.disableRotation();
@@ -124,9 +126,7 @@ export function criarMapa(el, geo, rotas, valores, { calmo = false } = {}) {
     return { top: 120, bottom: 80, left: Math.round(w * (est.cena === 0 ? 0.47 : 0.43)), right: 70 };
   }
 
-  const mapa = novoMapa(el, { bounds: cidade, fitBoundsOptions: { padding: margem() }, bearing: CAMERA[0][0], pitch: CAMERA[0][1], ...(celular() ? { cooperativeGestures: false } : {}) });
-  // no celular os gestos começam desligados (a página rola por cima do mapa); o resultado do CEP liga arrastar e pinça (ver gestos)
-  if (celular()) ['dragPan', 'touchZoomRotate', 'doubleClickZoom', 'keyboard', 'boxZoom', 'scrollZoom'].forEach(h => mapa[h]?.disable());
+  const mapa = novoMapa(el, { bounds: cidade, fitBoundsOptions: { padding: margem() }, bearing: CAMERA[0][0], pitch: CAMERA[0][1] });
 
   // dados de cada ponto: rota e loja por rede, na ordem das redes do site
   const porPonto = geo.pontos.map(p => {

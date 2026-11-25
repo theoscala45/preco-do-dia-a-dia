@@ -142,7 +142,7 @@ const mn = Math.min(...vars), mx = Math.max(...vars);
 $('escMin').textContent = sinal(mn) + '%'; $('escMax').textContent = sinal(mx) + '%';
 let mapa = null, mapaPronto = false;
 try {
-  const { novoMapa, LARANJA, ruasSoDePerto } = await import('./mapa.js');
+  const { novoMapa, LARANJA, ruasSoDePerto } = await import('./mapa.js?v=20261125d');
   const cid = geo.cidade;
   mapa = novoMapa($('mapaInfl'), { bounds: [[cid.oeste, cid.sul], [cid.leste, cid.norte]], fitBoundsOptions: { padding: 18 } });
   mapa.on('load', () => {
