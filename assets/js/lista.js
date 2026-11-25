@@ -1,5 +1,5 @@
 // Página "Resultado da lista": loja única mais barata, economia, divisão em duas lojas, rota e tabela por produto.
-import { $, gsap, ScrollTrigger, calmo, reais, curto, rolar, carregar, guarda, ligarCep, iniciar, PREVIA, semAcento } from './base.js?v=20261124wq';
+import { $, gsap, ScrollTrigger, calmo, reais, curto, rolar, carregar, guarda, ligarCep, iniciar, PREVIA, semAcento } from './base.js?v=20261124ws';
 import { caixasDoCep } from './cep-caixas.js?v=20261124z';
 import { criarLista, calcular, ligarBusca, ligarItens, ECONOMIA_MINIMA } from './cesta.js';
 import { aoAparecer } from './aparecer.js';

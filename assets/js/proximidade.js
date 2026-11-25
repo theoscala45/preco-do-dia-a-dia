@@ -1,6 +1,6 @@
 // Texto que muda de peso conforme o mouse (ou o dedo) chega perto de cada letra (VariableProximity, do React Bits, em JavaScript puro).
 // Perto do mouse a letra fica mais pesada: o peso (wght) vai até o máximo da fonte e um contorno fino da mesma cor engorda o desenho. As quebras de linha ficam travadas no peso de repouso, para o texto não pular.
-export function proximidade(alvo, { de = 680, para = 860, reforco = 0.008, raio = 150, queda = 'linear', suavizacao = 0.2 } = {}) {
+export function proximidade(alvo, { de = 650, para = 880, reforco = 0.012, raio = 150, queda = 'linear', suavizacao = 0.2 } = {}) {
   if (!alvo || matchMedia('(prefers-reduced-motion: reduce)').matches) return null;
   const texto = alvo.textContent.trim();
   const palavras = texto.split(/\s+/);
@@ -41,9 +41,10 @@ export function proximidade(alvo, { de = 680, para = 860, reforco = 0.008, raio 
   // as quebras de linha ficam travadas no peso de repouso; as letras podem alargar ao engordar, como no original
   const refazer = () => {
     livre();
-    letras.forEach(l => { l.style.width = ''; l.style.fontWeight = de; });
-    letras.forEach((l, i) => { l.style.width = ''; escrito[i] = ''; nivel[i] = 0; l.style.webkitTextStroke = ''; });
+    const pesos = letras.map(l => l.style.fontWeight), vars = letras.map(l => l.style.fontVariationSettings);
+    letras.forEach(l => { l.style.fontWeight = de; l.style.fontVariationSettings = `'wght' ${de}`; });
     travar();
+    letras.forEach((l, i) => { l.style.fontWeight = pesos[i]; l.style.fontVariationSettings = vars[i]; });
   };
   let largura = -1;
   const ro = new ResizeObserver(([e]) => {
@@ -51,7 +52,7 @@ export function proximidade(alvo, { de = 680, para = 860, reforco = 0.008, raio 
     if (Math.abs(w - largura) < 1) return;
     largura = w; refazer();
   });
-  ro.observe(alvo.parentElement || alvo);
+  ro.observe(alvo.closest('section') || document.body);   // uma caixa cuja largura não depende do peso das letras
   document.fonts?.ready.then(refazer);
 
   const forca = d => {
@@ -89,7 +90,7 @@ export function proximidade(alvo, { de = 680, para = 860, reforco = 0.008, raio 
       const w = Math.round(de + (para - de) * n);
       if (escrito[i] !== w + ':' + n.toFixed(2)) {
         escrito[i] = w + ':' + n.toFixed(2);
-        l.style.fontWeight = w;
+        l.style.fontWeight = w; l.style.fontVariationSettings = `'wght' ${w}`;
         l.style.webkitTextStroke = n ? `${(reforco * n).toFixed(4)}em currentColor` : '';
       }
     });

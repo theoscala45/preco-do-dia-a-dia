@@ -1,6 +1,6 @@
 // Página "Método e fontes": as tabelas vêm dos mesmos arquivos que o resto do site usa.
 import { aoAparecer } from './aparecer.js';
-import { $, gsap, ScrollTrigger, calmo, carregar, iniciar, PREVIA } from './base.js?v=20261124wq';
+import { $, gsap, ScrollTrigger, calmo, carregar, iniciar, PREVIA } from './base.js?v=20261124ws';
 
 const [dados, geo, rotas] = await carregar('dados', 'geo', 'rotas');
 // tabela CSV simples (sem vírgula dentro dos campos) -> lista de objetos
