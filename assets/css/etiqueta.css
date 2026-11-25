@@ -878,3 +878,7 @@ html:not([data-teclado]) :focus-visible{outline:none}
 .prods-mais button{height:44px}
 .nota-foto{margin-top:12px;font-size:13.5px;line-height:1.45;color:var(--texto-3)}
 .acoes-resultado .nota-foto{flex-basis:100%;margin:0}
+/* páginas internas: o conteúdo começa logo abaixo do cabeçalho, para a pessoa ver tudo ao entrar */
+.pagina{padding-top:calc(var(--aviso-h) + clamp(84px,10.5vh,104px))}
+.pg-topo{margin-bottom:clamp(22px,2.6vw,34px)}
+.pg-topo .lide{margin-top:12px}

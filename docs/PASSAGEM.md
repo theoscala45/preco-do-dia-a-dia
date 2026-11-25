@@ -321,3 +321,4 @@ O projeto passou de "O Preço do Dia a Dia" para **Preço Aberto** (escolha do T
 - Sua lista, Salvar como foto: a imagem agora mostra a lista da pessoa (item, marca, tamanho e preço na loja mais barata) e o total, no lugar do ranking de lojas (desenharLista em compartilhar.js). Até 15 linhas; acima disso aparece 'e mais N itens'.
 - Sua lista: total na foto centralizado na vertical da faixa laranja; aviso na página ('Salve a lista como foto no celular...') abaixo dos botões.
 - Sua lista: o aviso da foto fica dentro da linha dos botões (espaço menor).
+- Páginas internas (.pagina): menos espaço entre o cabeçalho e o título e entre o título e os cartões (etiqueta.css, no fim), para ver mais ao entrar. No celular vale o espaço do celular.css.
