@@ -3,7 +3,7 @@
 import { ligarCards } from './cards.js?v=20261124f';
 import { desfocarFrases, desfocarJunto } from './desfoque.js?v=20261124wc';
 import { esticarBordas } from './mola.js?v=20261124wa';
-import { proximidade } from './proximidade.js?v=20261124wn';
+import { proximidade } from './proximidade.js?v=20261124wo';
 
 // o anel laranja de foco só aparece para quem navega com o teclado (Tab). Clique do mouse, toque e foco dado por código
 // (depois de digitar o CEP, por exemplo) não deixam mais um contorno solto em botões e painéis.
