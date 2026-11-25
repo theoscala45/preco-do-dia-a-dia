@@ -187,6 +187,18 @@ export function iniciar(dados) {
   const botao = $('menuBotao'), menu = document.querySelector('.topo nav');
   let abre = null;
   if (botao && menu) {
+    // o texto do botão (Menu / Fechar) rola: o antigo sobe e some, o novo chega por baixo
+    botao.textContent = botao.textContent.trim();
+    const texto = document.createElement('span');
+    texto.className = 'menu-rotulo'; texto.textContent = botao.textContent; botao.textContent = ''; botao.append(texto);
+    const rotulo = novo => {
+      if (calmo) { texto.textContent = novo; return; }
+      gsap.killTweensOf(texto);
+      gsap.timeline()
+        .to(texto, { y: -10, autoAlpha: 0, duration: 0.14, ease: 'power2.in' })
+        .add(() => { texto.textContent = novo; })
+        .fromTo(texto, { y: 10, autoAlpha: 0 }, { y: 0, autoAlpha: 1, duration: 0.3, ease: 'power3.out' });
+    };
     // o marca-texto laranja do menu do celular é um só: ele desliza de um link para outro (ao encostar o dedo) em vez de piscar em cada link
     const marca = document.createElement('span');
     marca.className = 'menu-marca'; marca.setAttribute('aria-hidden', 'true');
@@ -221,16 +233,18 @@ export function iniciar(dados) {
       setTimeout(() => { location.href = a.href; }, 280);
     }, true);
     addEventListener('pageshow', e => { if (e.persisted && botao.getAttribute('aria-expanded') === 'true') fechar(); });
-    const fechar = () => { botao.setAttribute('aria-expanded', 'false'); botao.textContent = 'Menu'; document.documentElement.classList.remove('menu-aberto'); lenis?.start(); abre?.reverse(); };
+    const fechar = () => { botao.setAttribute('aria-expanded', 'false'); rotulo('Menu'); document.documentElement.classList.remove('menu-aberto'); lenis?.start(); abre?.timeScale(1.7).reverse(); };
     botao.addEventListener('click', () => {
       if (botao.getAttribute('aria-expanded') === 'true') return fechar();
-      botao.setAttribute('aria-expanded', 'true'); botao.textContent = 'Fechar';
+      botao.setAttribute('aria-expanded', 'true'); rotulo('Fechar');
       document.documentElement.classList.add('menu-aberto'); lenis?.stop();
       mostrarMarca();
       // quando a entrada termina, o estilo de movimento sai dos links: assim o efeito de toque e de hover (CSS) pode mexer neles
-      abre = abre || gsap.timeline({ paused: true, onComplete: () => gsap.set(links, { clearProps: 'transform,translate,rotate,scale' }) }).fromTo(menu, { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.3 })
-        .fromTo(links, { y: 26, autoAlpha: 0 }, { y: 0, autoAlpha: 1, duration: 0.5, stagger: 0.06 }, 0.05);
-      if (calmo) abre.progress(1); else abre.play(0);
+      abre = abre || gsap.timeline({ paused: true, onComplete: () => { gsap.set(links, { clearProps: 'transform,translate,rotate,scale' }); gsap.set(menu, { clearProps: 'clipPath' }); } })
+        // a folha do menu desce do alto da tela, como uma cortina, e os links sobem um depois do outro
+        .fromTo(menu, { autoAlpha: 0, clipPath: 'inset(0 0 100% 0)' }, { autoAlpha: 1, clipPath: 'inset(0 0 0% 0)', duration: 0.55, ease: 'power4.out' })
+        .fromTo(links, { y: 26, autoAlpha: 0 }, { y: 0, autoAlpha: 1, duration: 0.5, stagger: 0.06, ease: 'power3.out' }, 0.12);
+      if (calmo) abre.progress(1); else abre.timeScale(1).play(0);
     });
     menu.addEventListener('click', e => { if (e.target.closest('a')) fechar(); });
     addEventListener('keydown', e => { if (e.key === 'Escape' && botao.getAttribute('aria-expanded') === 'true') fechar(); });

@@ -883,3 +883,12 @@ html:not([data-teclado]) :focus-visible{outline:none}
 .pg-topo{margin-bottom:clamp(22px,2.6vw,34px)}
 .pg-topo .lide{margin-top:12px}
 .menu-marca{display:none}
+
+/* toque no celular: sem a caixa cinza do iOS sobre links e botões, e o texto deles não é selecionado ao segurar */
+*{-webkit-tap-highlight-color:transparent}
+a,button,summary,label,[role="button"],.aba,.quieto,.botao,.menu-botao{-webkit-tap-highlight-color:transparent;-webkit-touch-callout:none}
+button,.quieto,.botao,.menu-botao,.topo nav a,.aba,summary{-webkit-user-select:none;user-select:none}
+/* botão de menu: o rótulo rola e o botão afunda um pouco ao tocar */
+.menu-botao{overflow:hidden;transition:transform .16s var(--curva),background .2s,border-color .2s}
+.menu-botao:active{transform:scale(.94)}
+.menu-rotulo{display:inline-block}

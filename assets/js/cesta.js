@@ -1,6 +1,6 @@
 // Lista de compras e as contas do comparador. A lista fica guardada no navegador e vale para todas as páginas.
 // Regras: mais barato numa loja só e, se compensar, dividido em duas. Nunca mais que duas.
-import { guarda, semAcento, PREVIA } from './base.js?v=20261124xe';
+import { guarda, semAcento, PREVIA } from './base.js?v=20261124xf';
 
 export const BASICA = ['P001', 'P003', 'P005', 'P007', 'P009', 'P011', 'P013', 'P017', 'P040', 'P024', 'P051', 'P023'];
 export const ECONOMIA_MINIMA = 2;   // dividir em duas lojas só aparece se economizar pelo menos isso, em reais
