@@ -213,7 +213,7 @@ export function criarMapa(el, geo, rotas, valores, { calmo = false } = {}) {
     origem.setLngLat([P.lon, P.lat]).addTo(mapa);
     origem.getElement().querySelector('b').textContent = P.bairro.split(' (')[0];
     origem.getElement().classList.remove('on');
-    mapa.fitBounds(emVolta(caixaDoBairro(i), P), { padding: margem(), ...(celular() ? { pitch: 0, bearing: 0 } : { pitch: 44, bearing: -14 }), maxZoom: 14.4, duration: calmo ? 0 : 2600, essential: true });
+    mapa.fitBounds(emVolta(caixaDoBairro(i), P), { padding: margem(), ...(celular() ? { pitch: 0, bearing: 0 } : { pitch: 44, bearing: -14 }), maxZoom: 14.4, duration: calmo ? 0 : celular() ? 900 : 2600, essential: true });
     est.fase = 'rotas';
     aoMudar({ fase: 'rotas', foco: i, melhor });
 
@@ -236,7 +236,7 @@ export function criarMapa(el, geo, rotas, valores, { calmo = false } = {}) {
       if (k !== melhor) mapa.setPaintProperty('rota' + k, 'line-opacity', 0.3);
     });
     acender(mapa, 'rota' + melhor);
-    if (D.linhas[melhor]) mapa.fitBounds(emVolta(caixaDe([D.linhas[melhor]]), geo.pontos[i]), { padding: margem(), ...(celular() ? { pitch: 0, bearing: 0 } : { pitch: 50, bearing: 10 }), maxZoom: 15.2, duration: calmo ? 0 : 2600, essential: true });
+    if (D.linhas[melhor]) mapa.fitBounds(emVolta(caixaDe([D.linhas[melhor]]), geo.pontos[i]), { padding: margem(), ...(celular() ? { pitch: 0, bearing: 0 } : { pitch: 50, bearing: 10 }), maxZoom: 15.2, duration: calmo ? 0 : celular() ? 900 : 2600, essential: true });
     if (!calmo && !celular()) { luz = correrLuz(mapa, 'rota' + melhor); luz.paused(!est.ativo); }
     aoMudar({ fase: 'veredito', foco: i, melhor });
   }
@@ -289,7 +289,7 @@ export function criarMapa(el, geo, rotas, valores, { calmo = false } = {}) {
     }
     if (!dentro && (mudou || cenaMudou)) {
       const [giro, incl] = CAMERA[est.cena];
-      mapa.fitBounds(cidade, { padding: margem(), bearing: giro, pitch: incl, duration: calmo || forcar ? 0 : 2000, essential: true });
+      mapa.fitBounds(cidade, { padding: margem(), bearing: giro, pitch: incl, duration: calmo || forcar || celular() ? 0 : 2000, essential: true });   // no celular a cidade já está no lugar: sem voo
     }
   }
 

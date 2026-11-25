@@ -51,3 +51,8 @@
 /* com o resultado do CEP: some tudo que é da abertura (título, frase, CEP, botão, etiqueta) e fica o mapa em cima e a lista embaixo */
 .com-resultado .abre > :not(#resultado){display:none}
 .com-resultado .abre{padding-top:42svh;background:linear-gradient(180deg,rgba(255,255,255,0) 0,rgba(255,255,255,0) 32svh,rgba(255,255,255,.97) 42svh,rgba(255,255,255,.97) 100%)}
+
+/* mapas no celular: o dedo nunca fica preso neles, a rolagem da página é a nativa do navegador (sem esperar o mapa).
+   Só o mapa do resultado do CEP, no início, recebe o toque (arrastar e pinça). */
+.maplibregl-map{pointer-events:none}
+.com-resultado #mapa{pointer-events:auto}
