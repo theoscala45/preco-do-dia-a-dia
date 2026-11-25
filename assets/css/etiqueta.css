@@ -329,7 +329,7 @@ a.seta.volta:hover::before{transform:translateX(-5px)}
 @media (max-width:860px){.nav-linha{display:none}}
 
 /* ---------- cabeçalho: fundo de vidro, um pouco translúcido, sempre (no topo da página também, nunca 100% transparente) ---------- */
-.topo,.topo.rolou{background:rgba(255,255,255,.38);-webkit-backdrop-filter:blur(18px) saturate(1.15);backdrop-filter:blur(18px) saturate(1.15);border-bottom-color:var(--linha)}
+.topo.rolou{background:rgba(255,255,255,.38);-webkit-backdrop-filter:blur(18px) saturate(1.15);backdrop-filter:blur(18px) saturate(1.15)}
 
 /* ---------- as etiquetas de números pousam: furo que estoura e brilho que cruza ---------- */
 .faixa-numeros > div{overflow:hidden}
