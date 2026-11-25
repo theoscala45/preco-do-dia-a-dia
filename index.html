@@ -24,8 +24,8 @@
 <link rel="apple-touch-icon" href="assets/logo/apple-touch-icon.png">
 <link rel="stylesheet" href="assets/vendor/maplibre-gl.css">
 <link rel="stylesheet" href="assets/css/estilo.css?v=20261124w6">
-<link rel="stylesheet" href="assets/css/etiqueta.css?v=20261125p">
-<link rel="stylesheet" href="assets/css/celular.css?v=20261125p" media="(max-width:860px)">
+<link rel="stylesheet" href="assets/css/etiqueta.css?v=20261125q">
+<link rel="stylesheet" href="assets/css/celular.css?v=20261125q" media="(max-width:860px)">
 <script>if(!matchMedia('(prefers-reduced-motion: reduce)').matches){document.documentElement.classList.add('anima');setTimeout(function(){document.documentElement.classList.add('mostra')},5000)}</script>
 </head>
 <body class="pg-inicio">
@@ -92,11 +92,10 @@
       </section>
 
       <section class="cap" id="como" data-cap="1">
-        <img class="cap-foto" src="assets/mapa/celular-pontos.jpg" alt="" width="585" height="503" loading="lazy" decoding="async">
         <div class="cap-caixa">
           <p class="passo">01</p>
           <h2>25 bairros, a mesma lista</h2>
-          <p>Cada ponto laranja é um bairro. <span class="so-mouse">Passe o mouse para ver o supermercado mais barato; clique para ver os 10.</span><span class="so-toque">Digite seu CEP no início da página para ver os 10 supermercados do seu bairro.</span></p>
+          <p><span class="so-largo">Cada ponto laranja é um bairro. <span class="so-mouse">Passe o mouse para ver o supermercado mais barato; clique para ver os 10.</span><span class="so-toque">Digite seu CEP no início da página para ver os 10 supermercados do seu bairro.</span></span><span class="so-estreito">A mesma cesta, somada em cada um dos 25 bairros. Digite seu CEP no início da página para ver os 10 supermercados do seu bairro.</span></p>
           <dl class="extremos">
             <div><dt>Cesta mais barata</dt><dd><span id="minNome"></span> <b id="minVal"></b></dd></div>
             <div><dt>Cesta mais cara</dt><dd><span id="maxNome"></span> <b id="maxVal"></b></dd></div>
@@ -105,20 +104,18 @@
       </section>
 
       <section class="cap" data-cap="2">
-        <img class="cap-foto" src="assets/mapa/celular-pontos.jpg" alt="" width="585" height="503" loading="lazy" decoding="async">
         <div class="cap-caixa">
           <p class="passo">02</p>
           <h2>10 supermercados por bairro</h2>
-          <p>O mapa traça o caminho até a loja mais perto de cada rede. O laranja leva à mais barata.</p>
+          <p><span class="so-largo">O mapa traça o caminho até a loja mais perto de cada rede. O laranja leva à mais barata.</span><span class="so-estreito">Com o seu CEP, o mapa traça o caminho até a loja mais perto de cada rede. O laranja leva à mais barata.</span></p>
         </div>
       </section>
 
       <section class="cap" id="inflacao" data-cap="3">
-        <img class="cap-foto" src="assets/mapa/celular-inflacao.jpg" alt="" width="585" height="503" loading="lazy" decoding="async">
         <div class="cap-caixa">
           <p class="passo">03</p>
           <h2>A inflação por bairro</h2>
-          <p>A mesma cesta, mês a mês, contra o IPCA. Quanto mais laranja o bairro no mapa, mais ela subiu.</p>
+          <p>A mesma cesta, mês a mês, contra o IPCA.<span class="so-largo"> Quanto mais laranja o bairro no mapa, mais ela subiu.</span></p>
           <figure class="grafico">
             <svg id="grafico" viewBox="0 0 520 300" role="img" aria-label="Cesta do bairro comparada com o IPCA, mês a mês"></svg>
           </figure>
@@ -237,6 +234,6 @@
 <script src="assets/vendor/SplitText.min.js" defer></script>
 <script src="assets/vendor/lenis.min.js" defer></script>
 <script src="assets/vendor/maplibre-gl.js" defer></script>
-<script type="module" src="assets/js/main.js?v=20261125p"></script>
+<script type="module" src="assets/js/main.js?v=20261125q"></script>
 </body>
 </html>

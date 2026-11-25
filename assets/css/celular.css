@@ -69,11 +69,12 @@
 .palco{pointer-events:none}
 #mapa.guardado{display:none}
 
-/* ---------- capítulos no celular (25/11/2026): nada fica preso atrás da página.
-   O palco do mapa rola junto com a abertura (não é mais "sticky") e cada capítulo traz a foto do mapa em cima do cartão,
-   no fluxo da página. No iPhone, o mapa preso atrás segurava a rolagem quando o dedo encostava nele. */
+/* ---------- capítulos no celular (25/11/2026): sem mapa e sem nada preso atrás da página.
+   O palco do mapa rola junto com a abertura (não é "sticky") e os capítulos são cartões comuns, um embaixo do outro. */
 .palco{position:relative}
-.cap{min-height:0;display:block;padding:8px var(--margem) 40px;width:100%}
+.cap{min-height:0;display:block;padding:0 var(--margem) 16px;width:100%}
 .cap-caixa{position:static;width:100%}
-.cap-foto{display:block;width:calc(100% + 2 * var(--margem));max-width:none;height:auto;margin:0 calc(-1 * var(--margem)) 4px;aspect-ratio:100 / 86;
-  object-fit:cover;background:var(--sup);pointer-events:none;-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}
+.so-largo{display:none}
+.so-estreito{display:inline}
+/* sem entradas animadas ao rolar no celular: o que esperava a animação para aparecer já aparece (ver base.js, "leve") */
+.anima [data-surge],.anima [data-titulo],.anima [data-subtitulo]{visibility:visible}

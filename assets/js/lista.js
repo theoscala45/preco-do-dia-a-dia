@@ -1,5 +1,5 @@
 // Página "Resultado da lista": loja única mais barata, economia, divisão em duas lojas, rota e tabela por produto.
-import { $, gsap, ScrollTrigger, calmo, reais, curto, rolar, carregar, guarda, ligarCep, iniciar, PREVIA, semAcento } from './base.js?v=20261125a';
+import { $, gsap, ScrollTrigger, calmo, reais, curto, rolar, carregar, guarda, ligarCep, iniciar, PREVIA, semAcento } from './base.js?v=20261125q';
 import { caixasDoCep } from './cep-caixas.js?v=20261124z';
 import { criarLista, calcular, ligarBusca, ligarItens, ECONOMIA_MINIMA } from './cesta.js?v=20261124wx';
 import { aoAparecer } from './aparecer.js';
@@ -31,7 +31,7 @@ const plural = (n, um, varios) => `${n} ${n === 1 ? um : varios}`;
 // ---------- mapa da rota até a loja (aparece quando o cartão entra na tela)
 let mapaRota = null;
 try {
-  const { criarMapaDeRota } = await import('./mapa-rota.js?v=20261125p');
+  const { criarMapaDeRota } = await import('./mapa-rota.js?v=20261125q');
   mapaRota = criarMapaDeRota($('mapaRota'), geo, rotas, { calmo });
 } catch (erro) {
   console.warn('Mapa indisponível neste navegador.', erro);

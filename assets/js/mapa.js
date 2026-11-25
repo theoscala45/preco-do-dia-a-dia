@@ -121,25 +121,16 @@ export function criarMapa(el, geo, rotas, valores, { calmo = false } = {}) {
   // espaço da tela que o texto ocupa: o mapa enquadra o que sobra
   function margem() {
     const w = el.clientWidth, h = el.clientHeight;
-    if (est.foto) return { top: 16, bottom: Math.max(0, h - corte() + 16), left: 16, right: 16 };   // foto de capítulo (celular): a cidade cabe no recorte
     if (celular() && est.dentro && est.cena === 0) return { top: 20, bottom: Math.round(h * 0.62), left: 24, right: 24 };   // a faixa de mapa acima da lista
     if (celular()) return { top: 96, bottom: Math.round(h * (est.cena === 0 ? 0.68 : 0.56)), left: 36, right: 78 };
     return { top: 120, bottom: 80, left: Math.round(w * (est.cena === 0 ? 0.47 : 0.43)), right: 70 };
   }
 
-  // Celular: o mapa ao vivo pesava demais com a rolagem (a página travava nos capítulos). Lá ele é fotografado uma vez por cena
-  // (cidade, pontos, inflação) e a rolagem só troca fotos; o mapa ao vivo volta só para o resultado do CEP.
+  // Celular: o mapa ao vivo pesava demais com a rolagem e, no iPhone, segurava o dedo. Lá a abertura mostra uma foto do mapa
+  // (fixa no HTML, trocada por uma foto do dia quando o mapa carrega) e o mapa ao vivo aparece só no resultado do CEP.
+  // Os capítulos, no celular, não têm mapa (pedido do Theo em 25/11/2026: a rolagem tem de ser lisa).
   const FOTO = celular() && !calmo;
   let fotoPronta = false, cenaFoto = 0, caixaFotos = null;
-  const corte = () => Math.round(el.clientWidth * 0.86);   // altura do recorte das fotos dos capítulos (proporção 100 x 86)
-  // Nos capítulos do celular a foto do mapa fica no fluxo da página, em cima de cada cartão (é uma imagem comum: a rolagem
-  // passa por cima dela como em qualquer página). As fotos fixas já vêm no HTML (assets/mapa/celular-*.jpg) e aparecem na hora;
-  // quando o mapa ao vivo carrega, ele tira fotos novas (com os dados do dia) e troca as fixas. Se não der, ficam as fixas.
-  const fotosCap = FOTO ? [...document.querySelectorAll('.cap')].map(cap => {
-    let img = cap.querySelector('.cap-foto');
-    if (!img) { img = new Image(); img.className = 'cap-foto'; img.alt = ''; cap.prepend(img); }
-    return { img, cena: cap.dataset.cap === '3' ? '3' : '1' };
-  }) : [];
   if (FOTO) {
     caixaFotos = el.parentElement.querySelector('.mapa-fotos');
     if (!caixaFotos) { caixaFotos = document.createElement('div'); caixaFotos.className = 'mapa-fotos'; caixaFotos.setAttribute('aria-hidden', 'true'); el.after(caixaFotos); }
@@ -222,40 +213,6 @@ export function criarMapa(el, geo, rotas, valores, { calmo = false } = {}) {
     if (!img) { img = new Image(); img.className = 'mapa-foto on'; img.alt = ''; img.dataset.cena = '0'; caixaFotos.append(img); }
     img.src = cv.toDataURL('image/jpeg', 0.86);
   }
-  // Enquadra a cidade inteira num retângulo da tela, mesmo com o mapa inclinado (o fitBounds do MapLibre não conta a inclinação
-  // e a ponta sul da cidade saía da foto). Mede o contorno dos distritos já projetado na tela e ajusta zoom e posição.
-  const contorno = [];
-  geo.distritos.features.forEach(f => {
-    const g = f.geometry, aneis = g.type === 'Polygon' ? g.coordinates : g.coordinates.flat();
-    aneis.forEach(anel => anel.forEach((c, k) => { if (k % 3 === 0) contorno.push(c); }));
-  });
-  function encaixar(x0, y0, x1, y1) {
-    // jumpTo muda a câmera na hora (sem animação), então cada medida já vê o passo anterior
-    for (let n = 0; n < 8; n++) {
-      let a = Infinity, b = Infinity, c = -Infinity, d = -Infinity;
-      contorno.forEach(pt => { const p = mapa.project(pt); a = Math.min(a, p.x); c = Math.max(c, p.x); b = Math.min(b, p.y); d = Math.max(d, p.y); });
-      if (n % 2 === 0) {
-        const k = Math.min((x1 - x0) / (c - a), (y1 - y0) / (d - b));
-        mapa.jumpTo({ zoom: mapa.getZoom() + Math.log2(k) });
-      } else {
-        const meio = mapa.project(mapa.getCenter());
-        mapa.jumpTo({ center: mapa.unproject([meio.x + (a + c) / 2 - (x0 + x1) / 2, meio.y + (b + d) / 2 - (y0 + y1) / 2]) });
-      }
-    }
-  }
-  // foto de capítulo: só o recorte de cima do mapa, onde a cidade foi enquadrada
-  async function recortar(nome, mudar) {
-    const pronto = ociosa();
-    mudar(); mapa.triggerRepaint();
-    await pronto;
-    semCep();
-    const cv = mapa.getCanvas(), k = cv.width / el.clientWidth, out = document.createElement('canvas');
-    out.width = cv.width; out.height = Math.round(corte() * k);
-    out.getContext('2d').drawImage(cv, 0, 0, out.width, out.height, 0, 0, out.width, out.height);
-    if (!temDesenho(out, out.width, out.height)) throw new Error('foto vazia');
-    const url = out.toDataURL('image/jpeg', 0.86);
-    fotosCap.filter(f => f.cena === nome).forEach(f => { f.img.src = url; });
-  }
   function mostrarFoto(c) {
     cenaFoto = c;
     if (!caixaFotos) return;
@@ -265,14 +222,11 @@ export function criarMapa(el, geo, rotas, valores, { calmo = false } = {}) {
   async function fotografar() {
     if (fotografando || est.sel >= 0) return;
     fotografando = true;
-    const voltar = () => { est.foto = false; if (est.sel < 0) { est.cena = 0; aplicar(true); } };
+    const voltar = () => { if (est.sel < 0) { est.cena = 0; aplicar(true); } };
     try {
       // para desenhar, o mapa precisa estar na página (fica invisível pelo so-foto); depois sai de novo (guardado)
       el.classList.remove('guardado'); mapa.resize();
       await tirar(() => { est.cena = 0; aplicar(true); });
-      const caber = () => encaixar(20, 34, el.clientWidth - 20, corte() - 18);   // folga em cima para o relevo dos distritos
-      await recortar('1', () => { est.foto = true; est.cena = 1; aplicar(true); caber(); });
-      await recortar('3', () => { est.cena = 3; aplicar(true); caber(); });
       voltar();
       fotoPronta = true;
     } catch (erro) {
@@ -466,7 +420,7 @@ export function criarMapa(el, geo, rotas, valores, { calmo = false } = {}) {
     },
     selecionar(i) {
       if (FOTO && caixaFotos) {
-        est.sel = i; est.cena = 0; est.foto = false;
+        est.sel = i; est.cena = 0;
         if (i >= 0) { aoVivo(true); aplicar(); }
         else { aplicar(); aoVivo(false); mostrarFoto(cenaFoto); }
         if (est.pronto) mapa.setPaintProperty('distritos', 'fill-extrusion-color', corDistritos());

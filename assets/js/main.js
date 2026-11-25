@@ -1,11 +1,13 @@
 // Página inicial: o mapa, o CEP, as cenas do scroll e a lista de compras.
-import { $, gsap, ScrollTrigger, calmo, reais, pct, curto, rolar, carregar, guarda, ligarCep, iniciar, irPara, semAcento } from './base.js?v=20261125a';
+import { $, gsap, ScrollTrigger, calmo, reais, pct, curto, rolar, carregar, guarda, ligarCep, iniciar, irPara, semAcento } from './base.js?v=20261125q';
 import { criarLista, calcular, ligarBusca, ligarItens } from './cesta.js';
 import { pulo } from './cards.js?v=20261124f';
 import { caixasDoCep, espera } from './cep-caixas.js?v=20261124z';
 import { criarPlacar } from './placar.js?v=20261124v';
 import { aoAparecer } from './aparecer.js';
 import { compartilhar, salvarFoto } from './compartilhar.js';
+// celular (até 860 px): a rolagem tem de ser lisa, então nada entra animado ao rolar (ver base.js, "leve")
+const celularLeve = matchMedia('(max-width: 860px)').matches;
 
 const [dados, geo, rotas] = await carregar('dados', 'geo', 'rotas');
 iniciar(dados);
@@ -111,7 +113,7 @@ const redesNoPonto = dados.pontos.map((pt, i) => {
   }
   // as barras crescem toda vez que a seção entra na tela e voltam a zero quando ela sai
   const barrasHoje = gsap.utils.toArray('#hoje .barra i'), alvoBarra = (k, el) => +el.style.getPropertyValue('--v');
-  if (!calmo) {
+  if (!calmo && !celularLeve) {   // no celular as barras já vêm cheias
     gsap.set(barrasHoje, { scaleX: 0 });
     const cresce = () => gsap.to(barrasHoje, { scaleX: alvoBarra, duration: 0.8, ease: 'power3.out', stagger: 0.04, overwrite: true });
     const zera = () => gsap.set(barrasHoje, { scaleX: 0, overwrite: true });
@@ -124,7 +126,7 @@ const rotaDe = (i, k) => rotas.pontos.find(p => p.id === geo.pontos[i].id)?.rede
 // ---------- mapa
 let mapa = null;
 try {
-  const { criarMapa } = await import('./mapa.js?v=20261125p');
+  const { criarMapa } = await import('./mapa.js?v=20261125q');
   mapa = criarMapa($('mapa'), geo, rotas, {
     redes: dados.redes.map((r, k) => ({ id: r.id, nome: nomes[k] })),
     var: normal(vars), ordem: i => redesNoPonto[i].ordem, preco: (i, k) => (redesNoPonto[i].totais[k] == null ? null : reais(redesNoPonto[i].totais[k])),
@@ -210,7 +212,8 @@ function destacar(i) {
   rot.setAttribute('y', Math.abs(yv - yi) < 16 ? yi + (yv <= yi ? -13 : 23) : yv + 5);
   $('bolaSel').setAttribute('cy', yv);
 }
-gsap.set('#grafico .tr', { strokeDasharray: '1 2' });
+// no celular o gráfico já vem desenhado (nada se mexe ao rolar)
+if (!celularLeve) gsap.set('#grafico .tr', { strokeDasharray: '1 2' });
 
 // ---------- movimento dos capítulos (só para quem não pediu "reduzir movimento")
 const mm = gsap.matchMedia();
@@ -220,8 +223,8 @@ mm.add('(prefers-reduced-motion: no-preference)', () => {
   // o texto da abertura sobe e apaga enquanto o primeiro capítulo chega
   if (!leve) gsap.to('.abre > *:not(.media)', { y: -70, autoAlpha: 0, ease: 'none', stagger: 0.02, scrollTrigger: { trigger: '.abre', start: 'bottom 88%', end: 'bottom 38%', scrub: true } });
   // trilha lateral: mostra em qual dos três capítulos a leitura está
-  gsap.fromTo('#trilha', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.4, scrollTrigger: { trigger: '#como', start: 'top 70%', endTrigger: '#inflacao', end: 'bottom 60%', toggleActions: 'play reverse play reverse' } });
-  gsap.fromTo('#trilha i', { scaleY: 0 }, { scaleY: 1, ease: 'none', scrollTrigger: { trigger: '#como', start: 'top 50%', endTrigger: '#inflacao', end: 'bottom 50%', scrub: 0.4 } });
+  if (!leve) gsap.fromTo('#trilha', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.4, scrollTrigger: { trigger: '#como', start: 'top 70%', endTrigger: '#inflacao', end: 'bottom 60%', toggleActions: 'play reverse play reverse' } });
+  if (!leve) gsap.fromTo('#trilha i', { scaleY: 0 }, { scaleY: 1, ease: 'none', scrollTrigger: { trigger: '#como', start: 'top 50%', endTrigger: '#inflacao', end: 'bottom 50%', scrub: 0.4 } });
   if (!leve) gsap.utils.toArray('.cap').forEach(cap => {   // no celular o cartão já entra pela revelação comum (uma animação só)
     const caixa = cap.querySelector('.cap-caixa');
     gsap.timeline({ scrollTrigger: { trigger: cap, start: 'top 68%', end: 'bottom 30%', toggleActions: 'play reverse play reverse' } })
@@ -231,7 +234,7 @@ mm.add('(prefers-reduced-motion: no-preference)', () => {
   // as quatro etiquetas de números caem uma depois da outra: queda com quique, achatam ao bater (squash), o furo "estoura" e o texto chega depois.
   // Só vertical, sem girar. Acontece toda vez que a faixa entra na tela (ao abrir a página e ao rolar de volta até ela).
   const etiquetas = gsap.utils.toArray('.faixa-numeros > div');
-  gsap.set(etiquetas, { autoAlpha: 0 });
+  if (!leve) gsap.set(etiquetas, { autoAlpha: 0 });
   const faixa = document.querySelector('.faixa-numeros');
   const linhasDoTempo = [];
   const zerarFaixa = () => {
@@ -240,7 +243,7 @@ mm.add('(prefers-reduced-motion: no-preference)', () => {
     gsap.set(etiquetas, { autoAlpha: 0 });
     faixa.classList.add('entrando');
   };
-  zerarFaixa();
+  if (!leve) zerarFaixa();
   const tocarFaixa = () => {
     zerarFaixa();
     let faltam = etiquetas.length;
@@ -257,9 +260,9 @@ mm.add('(prefers-reduced-motion: no-preference)', () => {
         .to(el, { scaleY: 1, scaleX: 1, duration: 0.65, ease: 'elastic.out(1, 0.4)' }, 0.47);                         // e volta com mola
     });
   };
-  aoAparecer(faixa, tocarFaixa, zerarFaixa, { margem: '0px 0px -12% 0px' });
+  if (!leve) aoAparecer(faixa, tocarFaixa, zerarFaixa, { margem: '0px 0px -12% 0px' });   // no celular as etiquetas já estão no lugar
   // as linhas do gráfico se desenham com o scroll
-  gsap.timeline({ scrollTrigger: leve ? { trigger: '#inflacao', start: 'top 70%', toggleActions: 'play none none none' } : { trigger: '#inflacao', start: 'top 55%', end: 'center 42%', scrub: 0.7 } })
+  if (!leve) gsap.timeline({ scrollTrigger: { trigger: '#inflacao', start: 'top 55%', end: 'center 42%', scrub: 0.7 } })
     .fromTo('#grafico .tr', { strokeDashoffset: 1 }, { strokeDashoffset: 0, ease: 'none', duration: 1, stagger: 0.012 })
     .fromTo('#grafico .fim', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.12, ease: 'none' });
 });

@@ -1,7 +1,7 @@
 // Página "Inflação por bairro": índice local contra o IPCA, por ponto, por zona e por faixa de renda.
 import { aoAparecer } from './aparecer.js';
 import { segmentoElastico } from './segmento.js?v=20261124w9';
-import { $, gsap, ScrollTrigger, calmo, reais, pct, curto, contar, carregar, guarda, ligarCep, iniciar } from './base.js?v=20261125a';
+import { $, gsap, ScrollTrigger, calmo, reais, pct, curto, contar, carregar, guarda, ligarCep, iniciar } from './base.js?v=20261125q';
 import { caixasDoCep } from './cep-caixas.js?v=20261124z';
 
 const [dados, geo] = await carregar('dados', 'geo');
@@ -142,7 +142,7 @@ const mn = Math.min(...vars), mx = Math.max(...vars);
 $('escMin').textContent = sinal(mn) + '%'; $('escMax').textContent = sinal(mx) + '%';
 let mapa = null, mapaPronto = false;
 try {
-  const { novoMapa, LARANJA, ruasSoDePerto } = await import('./mapa.js?v=20261125p');
+  const { novoMapa, LARANJA, ruasSoDePerto } = await import('./mapa.js?v=20261125q');
   const cid = geo.cidade;
   mapa = novoMapa($('mapaInfl'), { bounds: [[cid.oeste, cid.sul], [cid.leste, cid.norte]], fitBoundsOptions: { padding: 18 } });
   mapa.on('load', () => {

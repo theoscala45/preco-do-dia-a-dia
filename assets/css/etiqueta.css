@@ -893,5 +893,7 @@ button,.quieto,.botao,.menu-botao,.topo nav a,.aba,summary{-webkit-user-select:n
 .menu-botao:active{transform:scale(.94)}
 .menu-rotulo{display:inline-block}
 
-/* fotos do mapa: só existem no celular (ver celular.css) */
-.mapa-fotos,.cap-foto{display:none}
+/* foto do mapa da abertura: só existe no celular (ver celular.css) */
+.mapa-fotos{display:none}
+/* textos que mudam entre o computador (com mapa nos capítulos) e o celular (sem mapa) */
+.so-estreito{display:none}

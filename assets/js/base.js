@@ -265,38 +265,45 @@ export function iniciar(dados) {
       gsap.ticker.lagSmoothing(0);
     }
 
+    // Celular (até 860 px): a rolagem tem de ser lisa (pedido do Theo, 25/11/2026). Lá nada entra animado ao rolar: títulos,
+    // blocos, cartões, linhas e números já estão no lugar. Fica só a entrada da abertura (título e frase), que toca uma vez no topo.
+    const leve = matchMedia('(max-width: 860px)').matches;
     desfocarJunto(gsap, calmo);    // o título da página inicial entra inteiro, com todas as palavras juntas (data-junto)
     document.querySelectorAll('[data-junto] .junto').forEach(el => proximidade(el));   // e muda de peso perto do mouse
-    desfocarFrases(gsap, calmo);   // os títulos grandes (data-titulo) entram palavra por palavra, saindo do desfoque
-    // os subtítulos (data-subtitulo) sobem linha por linha, de trás de uma máscara, logo depois do título
-    document.querySelectorAll('[data-subtitulo]').forEach(el => subirTitulo(el, { atraso: el.getBoundingClientRect().top < innerHeight * 0.95 ? 0.3 : 0, duracao: 0.85, passo: 0.08 }));
+    if (!leve) desfocarFrases(gsap, calmo);   // os títulos grandes (data-titulo) entram palavra por palavra, saindo do desfoque
+    // os subtítulos (data-subtitulo) sobem linha por linha, de trás de uma máscara, logo depois do título (no celular, só o da abertura)
+    document.querySelectorAll('[data-subtitulo]').forEach(el => {
+      if (leve && !el.closest('.abre, .pg-topo')) return;
+      subirTitulo(el, { atraso: el.getBoundingClientRect().top < innerHeight * 0.95 ? 0.3 : 0, duracao: 0.85, passo: 0.08 });
+    });
     // Revelações ao rolar: o elemento sobe quando aparece na tela e volta a ficar escondido quando sai dela, então toca toda vez.
     // O observador (aparecer.js) também vê o que começa escondido (hidden) e aparece depois, como o resultado da lista.
     const sobe = lote => gsap.to(lote, { autoAlpha: 1, y: 0, duration: 0.9, stagger: 0.08, overwrite: true });
     const some = lote => gsap.set(lote, { autoAlpha: 0, y: 26, overwrite: true });
     const entraFila = lote => gsap.to(lote, { autoAlpha: 1, y: 0, duration: 0.6, stagger: 0.05, overwrite: true });
     const saiFila = lote => gsap.set(lote, { autoAlpha: 0, y: 16, overwrite: true });
-    ligarCards();   // os cards têm entrada própria (em arco, com mola); o resto sobe em lote
-    const blocos = gsap.utils.toArray('[data-surge]');
-    gsap.set(blocos, { autoAlpha: 0, y: 26 });
-    aoAparecer(blocos, sobe, some);
-    // números que contam ao aparecer (e voltam a zero ao sair)
-    document.querySelectorAll('[data-conta]').forEach(el => {
-      el.textContent = '0';
-      aoAparecer(el, () => contar(el, +el.dataset.conta), () => zerarContagem(el));
-    });
-    // filhos que entram um depois do outro (linhas de lista e de tabela)
-    document.querySelectorAll('[data-fila]').forEach(pai => {
-      const filhos = [...pai.children];
-      gsap.set(filhos, { autoAlpha: 0, y: 16 });
-      aoAparecer(filhos, entraFila, saiFila, { margem: '0px 0px -6% 0px' });
-    });
+    if (!leve) {
+      ligarCards();   // os cards têm entrada própria (em arco, com mola); o resto sobe em lote
+      const blocos = gsap.utils.toArray('[data-surge]');
+      gsap.set(blocos, { autoAlpha: 0, y: 26 });
+      aoAparecer(blocos, sobe, some);
+      // números que contam ao aparecer (e voltam a zero ao sair)
+      document.querySelectorAll('[data-conta]').forEach(el => {
+        el.textContent = '0';
+        aoAparecer(el, () => contar(el, +el.dataset.conta), () => zerarContagem(el));
+      });
+      // filhos que entram um depois do outro (linhas de lista e de tabela)
+      document.querySelectorAll('[data-fila]').forEach(pai => {
+        const filhos = [...pai.children];
+        gsap.set(filhos, { autoAlpha: 0, y: 16 });
+        aoAparecer(filhos, entraFila, saiFila, { margem: '0px 0px -6% 0px' });
+      });
+    }
 
     // barra fina no topo: quanto da página já foi lida
     const barra = document.createElement('div');
     barra.className = 'progresso';
     document.body.append(barra);
-    const leve = matchMedia('(max-width: 860px)').matches;   // no celular nada fica preso à rolagem quadro a quadro
     if (!leve) gsap.fromTo(barra, { scaleX: 0 }, { scaleX: 1, ease: 'none', scrollTrigger: { start: 0, end: 'max', scrub: 0.3 } });
     // elementos que andam um pouco mais devagar ou mais depressa que a página
     if (!toque) document.querySelectorAll('[data-desliza]').forEach(el => {
