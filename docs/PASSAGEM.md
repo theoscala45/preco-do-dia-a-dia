@@ -316,3 +316,4 @@ O projeto passou de "O Preço do Dia a Dia" para **Preço Aberto** (escolha do T
 - Título inicial (proximidade): usa font-weight (não font-variation-settings) com a fonte do título herdada; repouso 680, perto do mouse 860 e contorno de 0,008em.
 - Título inicial (proximidade): corrigido o efeito que não acontecia. A medição das quebras de linha reiniciava o peso das letras a cada mudança de largura do título; agora ela observa a seção (largura fixa) e devolve os pesos depois de medir.
 - Título inicial (proximidade): intensidade menor, peso até 800 e contorno de 0,006em.
+- Ideia para o futuro (não está no site): ao escolher o CEP, a câmera mergulha no bairro, o distrito pisca em laranja e sobe do chão e só depois seguem as rotas. Foi feita e desfeita em 25/11/2026; o código está no commit 6ea413d (camada 'bairro-foco' em mapa.js).
