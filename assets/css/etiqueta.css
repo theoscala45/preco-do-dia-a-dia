@@ -892,3 +892,6 @@ button,.quieto,.botao,.menu-botao,.topo nav a,.aba,summary{-webkit-user-select:n
 .menu-botao{overflow:hidden;transition:transform .16s var(--curva),background .2s,border-color .2s}
 .menu-botao:active{transform:scale(.94)}
 .menu-rotulo{display:inline-block}
+
+/* fotos do mapa: só existem no celular (ver celular.css) */
+.mapa-fotos,.cap-foto{display:none}

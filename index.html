@@ -24,8 +24,8 @@
 <link rel="apple-touch-icon" href="assets/logo/apple-touch-icon.png">
 <link rel="stylesheet" href="assets/vendor/maplibre-gl.css">
 <link rel="stylesheet" href="assets/css/estilo.css?v=20261124w6">
-<link rel="stylesheet" href="assets/css/etiqueta.css?v=20261124xf">
-<link rel="stylesheet" href="assets/css/celular.css?v=20261125o" media="(max-width:860px)">
+<link rel="stylesheet" href="assets/css/etiqueta.css?v=20261125p">
+<link rel="stylesheet" href="assets/css/celular.css?v=20261125p" media="(max-width:860px)">
 <script>if(!matchMedia('(prefers-reduced-motion: reduce)').matches){document.documentElement.classList.add('anima');setTimeout(function(){document.documentElement.classList.add('mostra')},5000)}</script>
 </head>
 <body class="pg-inicio">
@@ -48,6 +48,8 @@
   <div class="cena" id="inicio">
     <div class="palco" id="palco" aria-hidden="true">
       <div id="mapa"></div>
+      <!-- celular: fotos do mapa (fixas; o mapa ao vivo troca por fotos do dia quando carrega). No computador ficam escondidas. -->
+      <div class="mapa-fotos" aria-hidden="true"><img class="mapa-foto on" data-cena="0" src="assets/mapa/celular-cidade.jpg" alt="" loading="lazy" decoding="async"></div>
       <div class="dica" id="dica"></div>
       <ol class="trilha" id="trilha"><li>01</li><li>02</li><li>03</li><i></i></ol>
     </div>
@@ -90,6 +92,7 @@
       </section>
 
       <section class="cap" id="como" data-cap="1">
+        <img class="cap-foto" src="assets/mapa/celular-pontos.jpg" alt="" width="585" height="503" loading="lazy" decoding="async">
         <div class="cap-caixa">
           <p class="passo">01</p>
           <h2>25 bairros, a mesma lista</h2>
@@ -102,6 +105,7 @@
       </section>
 
       <section class="cap" data-cap="2">
+        <img class="cap-foto" src="assets/mapa/celular-pontos.jpg" alt="" width="585" height="503" loading="lazy" decoding="async">
         <div class="cap-caixa">
           <p class="passo">02</p>
           <h2>10 supermercados por bairro</h2>
@@ -110,6 +114,7 @@
       </section>
 
       <section class="cap" id="inflacao" data-cap="3">
+        <img class="cap-foto" src="assets/mapa/celular-inflacao.jpg" alt="" width="585" height="503" loading="lazy" decoding="async">
         <div class="cap-caixa">
           <p class="passo">03</p>
           <h2>A inflação por bairro</h2>
@@ -232,6 +237,6 @@
 <script src="assets/vendor/SplitText.min.js" defer></script>
 <script src="assets/vendor/lenis.min.js" defer></script>
 <script src="assets/vendor/maplibre-gl.js" defer></script>
-<script type="module" src="assets/js/main.js?v=20261125n"></script>
+<script type="module" src="assets/js/main.js?v=20261125p"></script>
 </body>
 </html>
