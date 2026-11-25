@@ -315,3 +315,4 @@ O projeto passou de "O Preço do Dia a Dia" para **Preço Aberto** (escolha do T
 - Título inicial (proximidade): efeito mais suave, peso até 800 e contorno de 0,01em.
 - Título inicial (proximidade): usa font-weight (não font-variation-settings) com a fonte do título herdada; repouso 680, perto do mouse 860 e contorno de 0,008em.
 - Título inicial (proximidade): corrigido o efeito que não acontecia. A medição das quebras de linha reiniciava o peso das letras a cada mudança de largura do título; agora ela observa a seção (largura fixa) e devolve os pesos depois de medir.
+- Título inicial (proximidade): intensidade menor, peso até 800 e contorno de 0,006em.
