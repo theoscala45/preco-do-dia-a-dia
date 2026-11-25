@@ -26,13 +26,13 @@ export const marcar = (classe, html) => { const e = document.createElement('div'
 export function novoMapa(el, extra = {}) {
   const ml = window.maplibregl;
   if (!ml) throw new Error('MapLibre não carregou');
-  const toque = matchMedia('(pointer: coarse)').matches;
+  const toque = matchMedia('(pointer: coarse)').matches, pequeno = matchMedia('(max-width: 860px)').matches;
   const mapa = new ml.Map({
     container: el, style: ESTILO, attributionControl: false, cooperativeGestures: toque, scrollZoom: false,
     dragRotate: false, pitchWithRotate: false, touchPitch: false, minZoom: 8, maxZoom: 17, maxPitch: 60,
     locale: { 'CooperativeGesturesHandler.MobileHelpText': 'Use dois dedos para mover o mapa', 'NavigationControl.ZoomIn': 'Aproximar', 'NavigationControl.ZoomOut': 'Afastar' },
-    // no celular o mapa é só para olhar: sem arrastar, zoom nem toque (a página rola por cima dele)
-    interactive: !matchMedia('(max-width: 860px)').matches,
+    // no celular: menos pixels por ponto e sem esmaecer os nomes (o mapa pesa menos e a rolagem fica leve)
+    ...(pequeno ? { pixelRatio: Math.min(devicePixelRatio || 1, 1.5), fadeDuration: 0 } : {}),
     ...extra,
   });
   mapa.addControl(new ml.AttributionControl({ compact: true }), 'bottom-right');
@@ -119,11 +119,14 @@ export function criarMapa(el, geo, rotas, valores, { calmo = false } = {}) {
   // espaço da tela que o texto ocupa: o mapa enquadra o que sobra
   function margem() {
     const w = el.clientWidth, h = el.clientHeight;
-    if (celular()) return { top: 96, bottom: Math.round(h * (est.dentro && est.cena === 0 ? 0.46 : est.cena === 0 ? 0.68 : 0.56)), left: 36, right: 78 };
+    if (celular() && est.dentro && est.cena === 0) return { top: 20, bottom: Math.round(h * 0.62), left: 24, right: 24 };   // a faixa de mapa acima da lista
+    if (celular()) return { top: 96, bottom: Math.round(h * (est.cena === 0 ? 0.68 : 0.56)), left: 36, right: 78 };
     return { top: 120, bottom: 80, left: Math.round(w * (est.cena === 0 ? 0.47 : 0.43)), right: 70 };
   }
 
-  const mapa = novoMapa(el, { bounds: cidade, fitBoundsOptions: { padding: margem() }, bearing: CAMERA[0][0], pitch: CAMERA[0][1] });
+  const mapa = novoMapa(el, { bounds: cidade, fitBoundsOptions: { padding: margem() }, bearing: CAMERA[0][0], pitch: CAMERA[0][1], ...(celular() ? { cooperativeGestures: false } : {}) });
+  // no celular os gestos começam desligados (a página rola por cima do mapa); o resultado do CEP liga arrastar e pinça (ver gestos)
+  if (celular()) ['dragPan', 'touchZoomRotate', 'doubleClickZoom', 'keyboard', 'boxZoom', 'scrollZoom'].forEach(h => mapa[h]?.disable());
 
   // dados de cada ponto: rota e loja por rede, na ordem das redes do site
   const porPonto = geo.pontos.map(p => {
@@ -183,6 +186,13 @@ export function criarMapa(el, geo, rotas, valores, { calmo = false } = {}) {
     return caixaDe(D.linhas.filter((l, k) => l && (D.km[k] <= limite || k === melhor)).concat([[[P.lon, P.lat]]]));
   }
 
+  // no celular a origem (o bairro) fica no meio do mapa: a caixa é espelhada em volta dela, então tudo cabe e o ponto laranja fica centrado
+  function emVolta(caixa, P) {
+    if (!celular()) return caixa;
+    const [[o, s], [l, n]] = caixa, dx = Math.max(P.lon - o, l - P.lon), dy = Math.max(P.lat - s, n - P.lat);
+    return [[P.lon - dx, P.lat - dy], [P.lon + dx, P.lat + dy]];
+  }
+
   // entra no bairro: câmera, depois uma rota por vez, da mais cara à mais barata, e o veredito
   function entrar(i) {
     const P = geo.pontos[i], D = porPonto[i];
@@ -203,7 +213,7 @@ export function criarMapa(el, geo, rotas, valores, { calmo = false } = {}) {
     origem.setLngLat([P.lon, P.lat]).addTo(mapa);
     origem.getElement().querySelector('b').textContent = P.bairro.split(' (')[0];
     origem.getElement().classList.remove('on');
-    mapa.fitBounds(caixaDoBairro(i), { padding: margem(), pitch: 44, bearing: -14, maxZoom: 14.4, duration: calmo ? 0 : 2600, essential: true });
+    mapa.fitBounds(emVolta(caixaDoBairro(i), P), { padding: margem(), ...(celular() ? { pitch: 0, bearing: 0 } : { pitch: 44, bearing: -14 }), maxZoom: 14.4, duration: calmo ? 0 : 2600, essential: true });
     est.fase = 'rotas';
     aoMudar({ fase: 'rotas', foco: i, melhor });
 
@@ -226,8 +236,8 @@ export function criarMapa(el, geo, rotas, valores, { calmo = false } = {}) {
       if (k !== melhor) mapa.setPaintProperty('rota' + k, 'line-opacity', 0.3);
     });
     acender(mapa, 'rota' + melhor);
-    if (D.linhas[melhor]) mapa.fitBounds(caixaDe([D.linhas[melhor]]), { padding: margem(), pitch: 50, bearing: 10, maxZoom: 15.2, duration: calmo ? 0 : 2600, essential: true });
-    if (!calmo) { luz = correrLuz(mapa, 'rota' + melhor); luz.paused(!est.ativo); }
+    if (D.linhas[melhor]) mapa.fitBounds(emVolta(caixaDe([D.linhas[melhor]]), geo.pontos[i]), { padding: margem(), ...(celular() ? { pitch: 0, bearing: 0 } : { pitch: 50, bearing: 10 }), maxZoom: 15.2, duration: calmo ? 0 : 2600, essential: true });
+    if (!calmo && !celular()) { luz = correrLuz(mapa, 'rota' + melhor); luz.paused(!est.ativo); }
     aoMudar({ fase: 'veredito', foco: i, melhor });
   }
   function sair() {
@@ -285,7 +295,7 @@ export function criarMapa(el, geo, rotas, valores, { calmo = false } = {}) {
 
   // passar o ponteiro e clicar nos distritos (só na visão da cidade)
   mapa.on('mousemove', e => {
-    if (!est.pronto || est.dentro) return;
+    if (!est.pronto || est.dentro || celular()) return;
     const f = mapa.queryRenderedFeatures(e.point, { layers: ['distritos'] })[0];
     const novo = f ? f.properties.ponto : -1;
     if (novo !== est.hover) { est.hover = novo; mapa.getCanvas().style.cursor = novo >= 0 ? 'pointer' : ''; mapa.setPaintProperty('distritos', 'fill-extrusion-color', corDistritos()); }
@@ -338,6 +348,8 @@ export function criarMapa(el, geo, rotas, valores, { calmo = false } = {}) {
       });
     },
     ativo(v) { est.ativo = v; luz?.paused(!v); },
+    // celular: liga ou desliga arrastar e pinça (ligado só com o resultado do CEP na tela)
+    gestos(v) { if (!celular()) return; ['dragPan', 'touchZoomRotate'].forEach(h => mapa[h]?.[v ? 'enable' : 'disable']()); mapa.touchZoomRotate.disableRotation(); },
     aoMudar(fn) { aoMudar = fn; },
     aoPassar(fn) { aoPassar = fn; },
     aoPronto(fn) { aoPronto = fn; if (est.pronto) fn(); },

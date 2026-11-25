@@ -1,5 +1,5 @@
 // Página inicial: o mapa, o CEP, as cenas do scroll e a lista de compras.
-import { $, gsap, ScrollTrigger, calmo, reais, pct, curto, rolar, carregar, guarda, ligarCep, iniciar, irPara, semAcento } from './base.js?v=20261124xj';
+import { $, gsap, ScrollTrigger, calmo, reais, pct, curto, rolar, carregar, guarda, ligarCep, iniciar, irPara, semAcento } from './base.js?v=20261125a';
 import { criarLista, calcular, ligarBusca, ligarItens } from './cesta.js';
 import { pulo } from './cards.js?v=20261124f';
 import { caixasDoCep, espera } from './cep-caixas.js?v=20261124z';
@@ -124,7 +124,7 @@ const rotaDe = (i, k) => rotas.pontos.find(p => p.id === geo.pontos[i].id)?.rede
 // ---------- mapa
 let mapa = null;
 try {
-  const { criarMapa } = await import('./mapa.js?v=20261124xj');
+  const { criarMapa } = await import('./mapa.js?v=20261125c');
   mapa = criarMapa($('mapa'), geo, rotas, {
     redes: dados.redes.map((r, k) => ({ id: r.id, nome: nomes[k] })),
     var: normal(vars), ordem: i => redesNoPonto[i].ordem, preco: (i, k) => (redesNoPonto[i].totais[k] == null ? null : reais(redesNoPonto[i].totais[k])),
@@ -215,8 +215,10 @@ gsap.set('#grafico .tr', { strokeDasharray: '1 2' });
 // ---------- movimento dos capítulos (só para quem não pediu "reduzir movimento")
 const mm = gsap.matchMedia();
 mm.add('(prefers-reduced-motion: no-preference)', () => {
+  // no celular a rolagem tem prioridade: nada fica preso a ela quadro a quadro (scrub)
+  const leve = matchMedia('(max-width: 860px)').matches;
   // o texto da abertura sobe e apaga enquanto o primeiro capítulo chega
-  gsap.to('.abre > *:not(.media)', { y: -70, autoAlpha: 0, ease: 'none', stagger: 0.02, scrollTrigger: { trigger: '.abre', start: 'bottom 88%', end: 'bottom 38%', scrub: true } });
+  if (!leve) gsap.to('.abre > *:not(.media)', { y: -70, autoAlpha: 0, ease: 'none', stagger: 0.02, scrollTrigger: { trigger: '.abre', start: 'bottom 88%', end: 'bottom 38%', scrub: true } });
   // trilha lateral: mostra em qual dos três capítulos a leitura está
   gsap.fromTo('#trilha', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.4, scrollTrigger: { trigger: '#como', start: 'top 70%', endTrigger: '#inflacao', end: 'bottom 60%', toggleActions: 'play reverse play reverse' } });
   gsap.fromTo('#trilha i', { scaleY: 0 }, { scaleY: 1, ease: 'none', scrollTrigger: { trigger: '#como', start: 'top 50%', endTrigger: '#inflacao', end: 'bottom 50%', scrub: 0.4 } });
@@ -257,7 +259,7 @@ mm.add('(prefers-reduced-motion: no-preference)', () => {
   };
   aoAparecer(faixa, tocarFaixa, zerarFaixa, { margem: '0px 0px -12% 0px' });
   // as linhas do gráfico se desenham com o scroll
-  gsap.timeline({ scrollTrigger: { trigger: '#inflacao', start: 'top 55%', end: 'center 42%', scrub: 0.7 } })
+  gsap.timeline({ scrollTrigger: leve ? { trigger: '#inflacao', start: 'top 70%', toggleActions: 'play none none none' } : { trigger: '#inflacao', start: 'top 55%', end: 'center 42%', scrub: 0.7 } })
     .fromTo('#grafico .tr', { strokeDashoffset: 1 }, { strokeDashoffset: 0, ease: 'none', duration: 1, stagger: 0.012 })
     .fromTo('#grafico .fim', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.12, ease: 'none' });
 });
@@ -339,7 +341,7 @@ function transicaoParaResultado() {
     .to(media, { y: 52, scaleY: 0.9, scaleX: 1.03, autoAlpha: 0, duration: 0.36, ease: 'power2.out', transformOrigin: '50% 100%' }, 0)
     .to(lide, { y: -16, autoAlpha: 0, duration: 0.28, ease: 'power2.out' }, 0.04)
     .add(() => {
-      const mudar = () => { res.hidden = false; document.documentElement.classList.add('com-resultado'); };
+      const mudar = () => { res.hidden = false; document.documentElement.classList.add('com-resultado'); mapa?.gestos(true); };
       if (movel) { mudar(); gsap.set([tit, form, sobre], { clearProps: 'transform,opacity' }); }
       else {
         flip([tit, form], mudar);
@@ -359,7 +361,7 @@ function transicaoDeVolta() {
     const sobre = document.querySelector('.abre .sobre');
     gsap.to(res, { autoAlpha: 0, y: 30, duration: 0.25, ease: 'power2.out', onComplete: () => {
       res.hidden = true; gsap.set(res, { clearProps: 'all' });
-      document.documentElement.classList.remove('com-resultado');
+      document.documentElement.classList.remove('com-resultado'); mapa?.gestos(false);
       gsap.set(lide, { clearProps: 'all' }); gsap.set(media, { autoAlpha: 0 });
       gsap.fromTo([sobre, tit, lide, form], { autoAlpha: 0, y: 14 }, { autoAlpha: 1, y: 0, duration: 0.45, stagger: 0.08, ease: 'power2.out', clearProps: 'transform,opacity,visibility' });
       gsap.fromTo(media, { autoAlpha: 0, y: 24 }, { autoAlpha: 1, y: 0, duration: 0.5, ease: 'power2.out', delay: 0.5 });

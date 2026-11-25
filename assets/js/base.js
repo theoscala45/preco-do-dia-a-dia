@@ -3,7 +3,7 @@
 import { ligarCards } from './cards.js?v=20261124xj';
 import { desfocarFrases, desfocarJunto } from './desfoque.js?v=20261124wc';
 import { esticarBordas } from './mola.js?v=20261124wa';
-import { proximidade } from './proximidade.js?v=20261124wt';
+import { proximidade } from './proximidade.js?v=20261125a';
 
 // o anel laranja de foco só aparece para quem navega com o teclado (Tab). Clique do mouse, toque e foco dado por código
 // (depois de digitar o CEP, por exemplo) não deixam mais um contorno solto em botões e painéis.
@@ -296,7 +296,8 @@ export function iniciar(dados) {
     const barra = document.createElement('div');
     barra.className = 'progresso';
     document.body.append(barra);
-    gsap.fromTo(barra, { scaleX: 0 }, { scaleX: 1, ease: 'none', scrollTrigger: { start: 0, end: 'max', scrub: 0.3 } });
+    const leve = matchMedia('(max-width: 860px)').matches;   // no celular nada fica preso à rolagem quadro a quadro
+    if (!leve) gsap.fromTo(barra, { scaleX: 0 }, { scaleX: 1, ease: 'none', scrollTrigger: { start: 0, end: 'max', scrub: 0.3 } });
     // elementos que andam um pouco mais devagar ou mais depressa que a página
     if (!toque) document.querySelectorAll('[data-desliza]').forEach(el => {
       const v = +el.dataset.desliza;
@@ -304,6 +305,7 @@ export function iniciar(dados) {
     });
     // linhas divisórias que se desenham com o scroll
     document.querySelectorAll('[data-risco]').forEach(el => {
+      if (leve) { gsap.set(el, { '--risco': 1 }); return; }
       gsap.fromTo(el, { '--risco': 0 }, { '--risco': 1, ease: 'none', scrollTrigger: { trigger: el, start: 'top 95%', end: 'top 55%', scrub: 0.5 } });
     });
 
