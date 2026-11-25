@@ -316,4 +316,3 @@ O projeto passou de "O Preço do Dia a Dia" para **Preço Aberto** (escolha do T
 - Título inicial (proximidade): usa font-weight (não font-variation-settings) com a fonte do título herdada; repouso 680, perto do mouse 860 e contorno de 0,008em.
 - Título inicial (proximidade): corrigido o efeito que não acontecia. A medição das quebras de linha reiniciava o peso das letras a cada mudança de largura do título; agora ela observa a seção (largura fixa) e devolve os pesos depois de medir.
 - Título inicial (proximidade): intensidade menor, peso até 800 e contorno de 0,006em.
-- Ao escolher o CEP: a câmera mergulha no bairro (flyTo em curva, inclinação 58, giro -26), o distrito pisca em laranja três vezes e sobe do chão (camada 'bairro-foco' em mapa.js), e só depois a câmera segue para as rotas (+2,5 s no cronograma de entrar).

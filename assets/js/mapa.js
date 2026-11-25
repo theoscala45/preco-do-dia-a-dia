@@ -153,11 +153,6 @@ export function criarMapa(el, geo, rotas, valores, { calmo = false } = {}) {
       'fill-extrusion-color': corDistritos(), 'fill-extrusion-height': 1500, 'fill-extrusion-base': 0, 'fill-extrusion-opacity': OPACO,
       'fill-extrusion-color-transition': { duration: 350 }, 'fill-extrusion-opacity-transition': { duration: 900 },
     } }, antes);
-    // o bairro escolhido pisca em laranja e sobe do chão quando a câmera mergulha nele (ver entrar)
-    mapa.addLayer({ id: 'bairro-foco', type: 'fill-extrusion', source: 'distritos', filter: ['==', ['get', 'ponto'], -1], paint: {
-      'fill-extrusion-color': LARANJA, 'fill-extrusion-height': 0, 'fill-extrusion-base': 0, 'fill-extrusion-opacity': 0,
-      'fill-extrusion-opacity-transition': { duration: 0 }, 'fill-extrusion-height-transition': { duration: 0 },
-    } }, antes);
     mapa.addSource('lojas', { type: 'geojson', data: { type: 'FeatureCollection', features: rotas.lojas.map(l => ({ type: 'Feature', properties: {}, geometry: { type: 'Point', coordinates: [l.lon, l.lat] } })) } });
     mapa.addLayer({ id: 'lojas', type: 'circle', source: 'lojas', minzoom: 11.6, paint: {
       'circle-radius': ['interpolate', ['linear'], ['zoom'], 11.6, 1.5, 15, 3.5], 'circle-color': '#9A9AA2', 'circle-opacity': ['interpolate', ['linear'], ['zoom'], 11.6, 0, 12.6, 0.8],
@@ -186,19 +181,6 @@ export function criarMapa(el, geo, rotas, valores, { calmo = false } = {}) {
     return caixaDe(D.linhas.filter((l, k) => l && (D.km[k] <= limite || k === melhor)).concat([[[P.lon, P.lat]]]));
   }
 
-  // caixa do distrito do ponto i (todos os anéis do polígono)
-  function caixaDoDistrito(i) {
-    const f = geo.distritos.features.find(q => q.properties.ponto === i);
-    if (!f) return null;
-    const g = f.geometry, aneis = g.type === 'Polygon' ? g.coordinates : g.coordinates.flat();
-    return caixaDe(aneis);
-  }
-  const brilho = (v) => {
-    if (!mapa.getLayer('bairro-foco')) return;
-    mapa.setPaintProperty('bairro-foco', 'fill-extrusion-opacity', v ? 0.1 + 0.5 * v : 0);
-    mapa.setPaintProperty('bairro-foco', 'fill-extrusion-height', 260 * v);
-  };
-
   // entra no bairro: câmera, depois uma rota por vez, da mais cara à mais barata, e o veredito
   function entrar(i) {
     const P = geo.pontos[i], D = porPonto[i];
@@ -208,6 +190,7 @@ export function criarMapa(el, geo, rotas, valores, { calmo = false } = {}) {
     ordem = valores.ordem(i).slice().reverse();          // do mais caro ao mais barato
     melhor = ordem.at(-1);
     est.destaque = -1;
+    mapa.setPaintProperty('distritos', 'fill-extrusion-opacity', 0);
     redes.forEach((_, k) => {
       tracar(mapa, 'rota' + k, tem(k) ? D.linhas[k] : null);
       apagar(mapa, 'rota' + k);
@@ -218,37 +201,16 @@ export function criarMapa(el, geo, rotas, valores, { calmo = false } = {}) {
     origem.setLngLat([P.lon, P.lat]).addTo(mapa);
     origem.getElement().querySelector('b').textContent = P.bairro.split(' (')[0];
     origem.getElement().classList.remove('on');
-    // quando a pessoa escolheu o CEP: a câmera mergulha no bairro, ele pisca em laranja e sobe do chão, e só depois as rotas
-    const mergulho = !calmo && est.sel === i && est.cena === 0 && caixaDoDistrito(i);
-    const D0 = mergulho ? 2.5 : 0;
-    if (mergulho) {
-      const cam = mapa.cameraForBounds(mergulho, { padding: margem(), maxZoom: 13.3 });
-      mapa.setFilter('bairro-foco', ['==', ['get', 'ponto'], i]);
-      brilho(0);
-      if (cam) mapa.flyTo({ center: cam.center, zoom: cam.zoom, pitch: 58, bearing: -26, duration: 2100, curve: 1.5, speed: 0.9, essential: true });
-    } else {
-      mapa.setFilter('bairro-foco', ['==', ['get', 'ponto'], -1]);
-      mapa.setPaintProperty('distritos', 'fill-extrusion-opacity', 0);
-      mapa.fitBounds(caixaDoBairro(i), { padding: margem(), pitch: 44, bearing: -14, maxZoom: 14.4, duration: calmo ? 0 : 2600, essential: true });
-    }
+    mapa.fitBounds(caixaDoBairro(i), { padding: margem(), pitch: 44, bearing: -14, maxZoom: 14.4, duration: calmo ? 0 : 2600, essential: true });
     est.fase = 'rotas';
     aoMudar({ fase: 'rotas', foco: i, melhor });
 
     const p = redes.map(() => ({ v: 0 }));
     tl = gsap.timeline({ defaults: { duration: 1.35, ease: 'power2.inOut' } });
-    if (mergulho) {
-      const o = { v: 0 };
-      const mexe = () => brilho(o.v);
-      // três piscadas rápidas enquanto a câmera chega, depois o laranja assenta e se apaga quando a câmera segue para as rotas
-      tl.to(o, { v: 1, duration: 0.2, ease: 'power2.out', repeat: 5, yoyo: true, onUpdate: mexe }, 0.55)
-        .to(o, { v: 1, duration: 0.22, ease: 'power2.out', onUpdate: mexe }, '>')
-        .add(() => { mapa.setPaintProperty('distritos', 'fill-extrusion-opacity', 0); mapa.fitBounds(caixaDoBairro(i), { padding: margem(), pitch: 44, bearing: -14, maxZoom: 14.4, duration: 2600, essential: true }); }, D0)
-        .to(o, { v: 0, duration: 0.9, ease: 'power2.inOut', onUpdate: mexe, onComplete: () => mapa.setFilter('bairro-foco', ['==', ['get', 'ponto'], -1]) }, D0);
-    }
-    tl.add(() => origem.getElement().classList.add('on'), D0 + 1.1);
+    tl.add(() => origem.getElement().classList.add('on'), 1.1);
     ordem.forEach((k, r) => {
       if (!tem(k)) return;
-      tl.to(p[k], { v: 1, onUpdate: () => degrade(mapa, 'rota' + k, CLARO, p[k].v), onComplete: () => marcas[k].getElement().classList.add('on') }, D0 + 1.5 + r * 0.24);
+      tl.to(p[k], { v: 1, onUpdate: () => degrade(mapa, 'rota' + k, CLARO, p[k].v), onComplete: () => marcas[k].getElement().classList.add('on') }, 1.5 + r * 0.24);
     });
     tl.add(veredito, '>0.3');
     if (calmo) tl.progress(1);
@@ -270,7 +232,6 @@ export function criarMapa(el, geo, rotas, valores, { calmo = false } = {}) {
     parar();
     fecharRotulo();
     est.fase = 'geral';
-    mapa.setFilter('bairro-foco', ['==', ['get', 'ponto'], -1]); brilho(0);
     mapa.setPaintProperty('distritos', 'fill-extrusion-opacity', OPACO);
     redes.forEach((_, k) => { apagar(mapa, 'rota' + k); marcas[k].getElement().classList.remove('on', 'melhor', 'resto', 'ativo'); });
     origem.getElement().classList.remove('on');
