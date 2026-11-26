@@ -120,7 +120,7 @@ function desenhar() {
       ? `Caminho de carro do bairro até a loja mais perto ${mostra.length > 1 ? 'de cada rede. Em laranja, a loja única mais barata' : `do ${melhor.rede.nome}`}.`
       : 'Não há loja dessa rede no mapa perto deste bairro.';
   }
-  ScrollTrigger.refresh();
+  if (!matchMedia('(max-width: 860px)').matches || scrollY < 2) ScrollTrigger.refresh();   // no celular, remedir no meio da rolagem fazia a página parar
 }
 
 ligarBusca(dados, lista, $('busca'), $('sugestoes'));

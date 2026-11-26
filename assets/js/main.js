@@ -8,6 +8,9 @@ import { aoAparecer } from './aparecer.js';
 import { compartilhar, salvarFoto } from './compartilhar.js';
 // celular (até 860 px): a rolagem tem de ser lisa, então nada entra animado ao rolar (ver base.js, "leve")
 const celularLeve = matchMedia('(max-width: 860px)').matches;
+// Remede as posições do scroll (depois que a abertura muda de altura). No celular, só se a pessoa ainda não começou a rolar:
+// remedir no meio da rolagem faz o iPhone perder o embalo e a página parar (era o que acontecia logo depois do CEP).
+const remedir = () => { if (!celularLeve || scrollY < 2) ScrollTrigger.refresh(); };
 
 const [dados, geo, rotas] = await carregar('dados', 'geo', 'rotas');
 iniciar(dados);
@@ -356,7 +359,7 @@ function transicaoParaResultado() {
       gsap.from(res.querySelector('header'), { autoAlpha: 0, y: 12, duration: 0.45, ease: 'power2.out', delay: 0.35, clearProps: 'all' });
       gsap.from('#redesLista li', { autoAlpha: 0, x: -20, duration: 0.5, stagger: 0.05, ease: 'power2.out', delay: 0.45, clearProps: 'transform,opacity,visibility' });
       gsap.from('#redesLista .melhor .val small', { scale: 0, duration: 0.7, ease: 'elastic.out(1, 0.5)', delay: 1.0, transformOrigin: '100% 50%', clearProps: 'transform' });
-      setTimeout(() => ScrollTrigger.refresh(), 1400);
+      setTimeout(remedir, 1400);
     }, 0.3);
 }
 function transicaoDeVolta() {
@@ -370,7 +373,7 @@ function transicaoDeVolta() {
       gsap.set(lide, { clearProps: 'all' }); gsap.set(media, { autoAlpha: 0 });
       gsap.fromTo([sobre, tit, lide, form], { autoAlpha: 0, y: 14 }, { autoAlpha: 1, y: 0, duration: 0.45, stagger: 0.08, ease: 'power2.out', clearProps: 'transform,opacity,visibility' });
       gsap.fromTo(media, { autoAlpha: 0, y: 24 }, { autoAlpha: 1, y: 0, duration: 0.5, ease: 'power2.out', delay: 0.5 });
-      setTimeout(() => ScrollTrigger.refresh(), 1200);
+      setTimeout(remedir, 1200);
     } });
     return;
   }
@@ -387,7 +390,7 @@ function transicaoDeVolta() {
       });
       gsap.fromTo(lide, { autoAlpha: 0, y: 14 }, { autoAlpha: 1, y: 0, duration: 0.45, ease: 'power2.out', delay: 0.25, clearProps: 'all' });
       gsap.fromTo(form, { autoAlpha: 0, y: 14 }, { autoAlpha: 1, y: 0, duration: 0.45, ease: 'power2.out', delay: 0.55, clearProps: 'transform,opacity,visibility' });
-      setTimeout(() => ScrollTrigger.refresh(), 1200);   // a abertura mudou de altura: os gatilhos do scroll medem de novo
+      setTimeout(remedir, 1200);   // a abertura mudou de altura: os gatilhos do scroll medem de novo
     }, 0.26);
 }
 
@@ -414,7 +417,7 @@ function escolher(i, viaCep) {
   mapa?.selecionar(i);
   destacar(i);
   atualizarCupom();
-  ScrollTrigger.refresh();
+  remedir();
   if (scrollY > innerHeight * 0.3) irPara(0);
 }
 $('voltar').addEventListener('click', () => {
@@ -426,8 +429,8 @@ $('voltar').addEventListener('click', () => {
   if (calmo) { $('resultado').hidden = true; document.documentElement.classList.remove('com-resultado'); }
   else transicaoDeVolta();
   atualizarCupom();
-  ScrollTrigger.refresh();
-  setTimeout(() => ScrollTrigger.refresh(), 1100);   // de novo depois que o layout da abertura voltou
+  remedir();
+  setTimeout(remedir, 1100);   // de novo depois que o layout da abertura voltou
 });
 $('redesLista').addEventListener('pointerover', e => { const li = e.target.closest('li'); if (li) mapa?.destacar(+li.dataset.k); });
 $('redesLista').addEventListener('pointerleave', () => mapa?.destacar(-1));
