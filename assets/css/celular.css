@@ -57,7 +57,8 @@
 
 /* fotos do mapa (celular): a rolagem só troca uma imagem por outra; o mapa ao vivo fica escondido até o resultado do CEP */
 #mapa.so-foto .maplibregl-canvas-container,#mapa.so-foto .maplibregl-marker{visibility:hidden}
-.mapa-fotos{display:block;position:absolute;inset:0;pointer-events:none}
+/* a cidade fica no meio, na faixa de cima: a imagem cobre a largura e se prende ao alto da tela, em qualquer celular */
+.mapa-fotos{display:block;position:absolute;inset:0;pointer-events:none;background:var(--fundo) url(../mapa/celular-cidade.jpg) 50% 0 / cover no-repeat}
 .mapa-fotos.fora{display:none}
 .mapa-foto{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 0;opacity:0;transition:opacity .45s ease}
 .mapa-foto.on{opacity:1}

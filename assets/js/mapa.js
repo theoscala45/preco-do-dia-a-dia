@@ -126,8 +126,9 @@ export function criarMapa(el, geo, rotas, valores, { calmo = false } = {}) {
     return { top: 120, bottom: 80, left: Math.round(w * (est.cena === 0 ? 0.47 : 0.43)), right: 70 };
   }
 
-  // Celular: o mapa ao vivo pesava demais com a rolagem e, no iPhone, segurava o dedo. Lá a abertura mostra uma foto do mapa
-  // (fixa no HTML, trocada por uma foto do dia quando o mapa carrega) e o mapa ao vivo aparece só no resultado do CEP.
+  // Celular: o mapa ao vivo pesava demais com a rolagem e, no iPhone, segurava o dedo. Lá a abertura mostra uma foto fixa do mapa
+  // (assets/mapa/celular-cidade.jpg, pelo CSS, com a cidade no meio) e o mapa ao vivo aparece só no resultado do CEP.
+  // A foto não é mais trocada por uma tirada na hora: a troca fazia a cidade pular de lugar ao abrir o site (26/11/2026).
   // Os capítulos, no celular, não têm mapa (pedido do Theo em 25/11/2026: a rolagem tem de ser lisa).
   const FOTO = celular() && !calmo;
   let fotoPronta = false, cenaFoto = 0, caixaFotos = null;
@@ -135,8 +136,7 @@ export function criarMapa(el, geo, rotas, valores, { calmo = false } = {}) {
     caixaFotos = el.parentElement.querySelector('.mapa-fotos');
     if (!caixaFotos) { caixaFotos = document.createElement('div'); caixaFotos.className = 'mapa-fotos'; caixaFotos.setAttribute('aria-hidden', 'true'); el.after(caixaFotos); }
   }
-  const mapa = novoMapa(el, { bounds: cidade, fitBoundsOptions: { padding: margem() }, bearing: CAMERA[0][0], pitch: CAMERA[0][1],
-    ...(FOTO ? { canvasContextAttributes: { antialias: false, preserveDrawingBuffer: true } } : {}) });
+  const mapa = novoMapa(el, { bounds: cidade, fitBoundsOptions: { padding: margem() }, bearing: CAMERA[0][0], pitch: CAMERA[0][1] });
   if (FOTO) el.classList.add('so-foto');
 
   // dados de cada ponto: rota e loja por rede, na ordem das redes do site
@@ -191,52 +191,15 @@ export function criarMapa(el, geo, rotas, valores, { calmo = false } = {}) {
 
   // ---------- fotos do mapa (celular)
   const ociosa = () => new Promise(r => { let feito = false; const fim = () => { if (!feito) { feito = true; r(); } }; mapa.once('idle', fim); setTimeout(fim, 7000); });
-  // a foto só vale se o desenho veio de verdade (alguns navegadores devolvem um quadro vazio)
-  function temDesenho(fonte, w, h) {
-    const t = document.createElement('canvas'); t.width = 24; t.height = 24;
-    const c = t.getContext('2d', { willReadFrequently: true });
-    c.drawImage(fonte, 0, 0, w, h, 0, 0, 24, 24);
-    const d = c.getImageData(0, 0, 24, 24).data;
-    let menor = 765, maior = 0, opaco = 0;
-    for (let i = 0; i < d.length; i += 4) { const v = d[i] + d[i + 1] + d[i + 2]; menor = Math.min(menor, v); maior = Math.max(maior, v); opaco = Math.max(opaco, d[i + 3]); }
-    return opaco > 0 && maior - menor > 30;
-  }
-  const semCep = () => { if (est.sel >= 0) throw new Error('cep'); };   // a pessoa pôs um CEP no meio das fotos: para tudo
-  async function tirar(mudar) {
-    const pronto = ociosa();
-    mudar(); mapa.triggerRepaint();
-    await pronto;
-    semCep();
-    const cv = mapa.getCanvas();
-    if (!temDesenho(cv, cv.width, cv.height)) throw new Error('foto vazia');
-    let img = caixaFotos.querySelector('.mapa-foto[data-cena="0"]');
-    if (!img) { img = new Image(); img.className = 'mapa-foto on'; img.alt = ''; img.dataset.cena = '0'; caixaFotos.append(img); }
-    img.src = cv.toDataURL('image/jpeg', 0.86);
-  }
   function mostrarFoto(c) {
     cenaFoto = c;
     if (!caixaFotos) return;
     caixaFotos.querySelectorAll('.mapa-foto').forEach(f => f.classList.toggle('on', f.dataset.cena === '0'));
   }
-  let fotografando = false;
+  // depois do primeiro desenho, o mapa ao vivo sai da página (fica só a foto) até alguém pôr um CEP
   async function fotografar() {
-    if (fotografando || est.sel >= 0) return;
-    fotografando = true;
-    const voltar = () => { if (est.sel < 0) { est.cena = 0; aplicar(true); } };
-    try {
-      // para desenhar, o mapa precisa estar na página (fica invisível pelo so-foto); depois sai de novo (guardado)
-      el.classList.remove('guardado'); mapa.resize();
-      await tirar(() => { est.cena = 0; aplicar(true); });
-      voltar();
-      fotoPronta = true;
-    } catch (erro) {
-      // sem foto nova: ficam as fotos fixas (nunca some o mapa)
-      if (erro?.message !== 'cep') console.warn('Fotos do mapa: seguem as fotos fixas.', erro);
-      voltar();
-    } finally {
-      fotografando = false;
-      if (est.sel < 0) { el.classList.add('so-foto', 'guardado'); mostrarFoto(cenaFoto); }
-    }
+    await ociosa();
+    if (est.sel < 0) { el.classList.add('so-foto', 'guardado'); mostrarFoto(cenaFoto); }
   }
   // no resultado do CEP o mapa ao vivo aparece; fora dele, as fotos
   // Fora do resultado o mapa ao vivo sai da página de vez (display:none): no iPhone, a área dele segurava a rolagem
@@ -403,9 +366,8 @@ export function criarMapa(el, geo, rotas, valores, { calmo = false } = {}) {
     if (f) { fixo = true; mostrarRotulo(f); } else fecharRotulo();
   });
   let espera = 0;
-  let larguraFoto = innerWidth;   // a largura da janela: o mapa guardado (fora da página) mede 0
   window.addEventListener('resize', () => { clearTimeout(espera); espera = setTimeout(() => {
-    if (FOTO && caixaFotos) { if (innerWidth !== larguraFoto && est.sel < 0) { larguraFoto = innerWidth; fotografar(); } return; }   // no iPhone a barra do navegador muda só a altura: não refaz
+    if (FOTO && caixaFotos) return;   // celular: a abertura é uma foto fixa, nada a refazer
     if (est.pronto && !est.dentro) aplicar(true);
   }, 200); });
 
