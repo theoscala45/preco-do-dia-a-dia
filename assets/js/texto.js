@@ -1,5 +1,5 @@
 // Páginas de texto (Sobre, Privacidade, Termos de uso e Contato): só o cabeçalho, o rodapé e as animações comuns.
-import { carregar, iniciar } from './base.js?v=20261125q';
+import { carregar, iniciar } from './base.js?v=20261126a';
 
 const [dados] = await carregar('dados');
 iniciar(dados);

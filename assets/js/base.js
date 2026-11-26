@@ -120,6 +120,10 @@ export function subirTitulo(el, { atraso = 0, duracao = 1.05, passo = 0.09, inic
 
 export function iniciar(dados) {
   gsap.registerPlugin(ScrollTrigger, SplitText);
+  // Celular: o ScrollTrigger remede a página quando ela termina de carregar e quando as fontes chegam. Se isso acontece
+  // enquanto a pessoa já está rolando (a primeira rolagem), o iPhone perde o embalo e a página para. Lá ele só mede no começo.
+  const celular = matchMedia('(max-width: 860px)').matches;
+  if (celular) ScrollTrigger.config({ autoRefreshEvents: 'visibilitychange,DOMContentLoaded', ignoreMobileResize: true });
   gsap.defaults({ ease: 'power3.out', duration: 0.8 });
 
   // faixa de aviso: aparece sempre que os dados forem de exemplo, ou na prévia dos preços reais
@@ -320,7 +324,7 @@ export function iniciar(dados) {
   });
 
   document.documentElement.classList.add('pronto');
-  document.fonts.ready.then(() => ScrollTrigger.refresh());
+  document.fonts.ready.then(() => { if (!celular || scrollY < 2) ScrollTrigger.refresh(); });   // no celular, só se a pessoa ainda não rolou
   // partes que abrem e fecham mudam a altura da página
   document.querySelectorAll('details').forEach(d => d.addEventListener('toggle', () => ScrollTrigger.refresh()));
 }

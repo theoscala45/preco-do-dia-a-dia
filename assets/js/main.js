@@ -1,5 +1,5 @@
 // Página inicial: o mapa, o CEP, as cenas do scroll e a lista de compras.
-import { $, gsap, ScrollTrigger, calmo, reais, pct, curto, rolar, carregar, guarda, ligarCep, iniciar, irPara, semAcento } from './base.js?v=20261125q';
+import { $, gsap, ScrollTrigger, calmo, reais, pct, curto, rolar, carregar, guarda, ligarCep, iniciar, irPara, semAcento } from './base.js?v=20261126a';
 import { criarLista, calcular, ligarBusca, ligarItens } from './cesta.js';
 import { pulo } from './cards.js?v=20261124f';
 import { caixasDoCep, espera } from './cep-caixas.js?v=20261124z';
@@ -173,7 +173,9 @@ mapa?.aoMudar(({ fase }) => {
     const novo = '-' + Math.round(sobe) + 'px';
     if (cap1.style.marginTop !== novo) { cap1.style.marginTop = novo; clearTimeout(medir.t); medir.t = setTimeout(() => ScrollTrigger.refresh(), 120); }
   };
-  if (abre && cap1) {
+  // no celular o capítulo não sobe (celular.css zera essa margem) e medir aqui recalculava o scroll no meio da primeira
+  // rolagem (quando a barra do navegador some), o que fazia a página parar
+  if (abre && cap1 && !celularLeve) {
     const ro = new ResizeObserver(medir);
     ro.observe(abre); [...abre.children].forEach(c => ro.observe(c));
     addEventListener('resize', medir);

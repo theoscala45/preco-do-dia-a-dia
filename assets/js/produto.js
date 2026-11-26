@@ -1,6 +1,6 @@
 // Página de um produto: o preço dele em cada rede. O produto vem do endereço (produto.html?p=P001).
 import { aoAparecer } from './aparecer.js';
-import { $, carregar, iniciar, reais, guarda, semAcento, PREVIA } from './base.js?v=20261125q';
+import { $, carregar, iniciar, reais, guarda, semAcento, PREVIA } from './base.js?v=20261126a';
 import { criarLista, precosDoProduto } from './cesta.js';
 
 const [dados, geo] = await carregar('dados', 'geo');
