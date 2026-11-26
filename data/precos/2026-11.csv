@@ -68788,93 +68788,93 @@ data,rede_id,produto_id,cep_id,preco_reais,unidade_de_venda,disponivel,nome_na_p
 2026-11-26,atacadao,P090,C25,,,nao,Laranja-pera Quilo,,2026-11-26T08:13:30-0300
 2026-11-26,atacadao,P097,C25,,,nao,Alface Crespa un,,2026-11-26T08:13:34-0300
 2026-11-26,atacadao,P098,C25,,,nao,Mamão Formosa Quilo,,2026-11-26T08:13:39-0300
-2026-11-26,carrefour,P001,,23.99,un,sim,Arroz Branco Camil Tipo 1 5kg,5kg,2026-11-26T15:24:34-0300
-2026-11-26,carrefour,P002,,29.99,un,sim,Arroz Branco Longo-fino Tipo 1 Tio João 5 Kg,5 Kg,2026-11-26T15:24:37-0300
-2026-11-26,carrefour,P003,,7.99,un,sim,Feijão Carioca Camil 1kg,1kg,2026-11-26T15:24:41-0300
-2026-11-26,carrefour,P005,,6.59,un,sim,Óleo de Soja Soya 900ml,900ml,2026-11-26T15:24:45-0300
-2026-11-26,carrefour,P006,,29.99,un,sim,Azeite Português Extra Virgem Tradicional Gallo 500ml,500ml,2026-11-26T15:24:49-0300
-2026-11-26,carrefour,P007,,3.79,un,sim,Açúcar Refinado União 1kg,1kg,2026-11-26T15:24:52-0300
-2026-11-26,carrefour,P008,,3.48,un,sim,Açúcar Cristal União 1Kg,1Kg,2026-11-26T15:24:56-0300
-2026-11-26,carrefour,P009,,23.99,un,sim,Café Torrado e Moído Extraforte Pilão Pacote 500g,500g,2026-11-26T15:25:00-0300
-2026-11-26,carrefour,P010,,23.90,un,sim,Café em Pó Tradicional 3 Corações 500g,500g,2026-11-26T15:25:04-0300
-2026-11-26,carrefour,P011,,4.99,un,sim,Farinha de Trigo Tradicional Dona Benta 1kg,1kg,2026-11-26T15:25:08-0300
-2026-11-26,carrefour,P012,,8.89,un,sim,Farinha de Mandioca Tipo 1 Fina Yoki Pacote 500g,500g,2026-11-26T15:25:12-0300
-2026-11-26,carrefour,P013,,2.79,un,sim,Macarrão Espaguete Renata com Ovos Nº 9 500g,500g,2026-11-26T15:25:15-0300
-2026-11-26,carrefour,P015,,3.59,un,sim,Molho de Tomate Tradicional Pomarola Sachê 300g,300g,2026-11-26T15:25:19-0300
-2026-11-26,carrefour,P016,,8.39,un,sim,Extrato de Tomate Tradicional Elefante Pote 300g,300g,2026-11-26T15:25:23-0300
-2026-11-26,carrefour,P019,,14.69,un,sim,Aveia em Flocos Regulares Quaker Embalagem Econômica 450g,450g,2026-11-26T15:25:26-0300
-2026-11-26,carrefour,P020,,16.19,un,sim,Achocolatado em Pó Nescau 350g,350g,2026-11-26T15:25:29-0300
-2026-11-26,carrefour,P021,,10.39,un,sim,Biscoito Cream Cracker Amanteigado Vitarella 350g,350g,2026-11-26T15:25:33-0300
-2026-11-26,carrefour,P022,,4.39,un,sim,Biscoito Passatempo Recheado Chocolate 130g,130g,2026-11-26T15:25:36-0300
-2026-11-26,carrefour,P023,,7.59,un,sim,Pão de Forma Pullman 480g,480g,2026-11-26T15:25:40-0300
-2026-11-26,carrefour,P024,,5.99,un,sim,Margarina Cremosa com Sal Qualy 500g,500g,2026-11-26T15:25:43-0300
-2026-11-26,carrefour,P025,,9.90,un,sim,Maionese Hellmann's Tradicional 500g,500g,2026-11-26T15:25:46-0300
-2026-11-26,carrefour,P026,,10.99,un,sim,Ketchup Heinz Tradicional 397g,397g,2026-11-26T15:25:50-0300
-2026-11-26,carrefour,P028,,10.99,un,sim,Atum Ralado em Óleo Gomes da Costa 170g,170g,2026-11-26T15:25:53-0300
-2026-11-26,carrefour,P029,,3.79,un,sim,Milho Verde Quero Lata 170g,170g,2026-11-26T15:25:57-0300
-2026-11-26,carrefour,P030,,5.19,un,sim,Ervilha Quero Lata 170g,170g,2026-11-26T15:26:02-0300
-2026-11-26,carrefour,P031,,5.39,un,sim,Vinagre de Álcool Castelo 750ml,750ml,2026-11-26T15:26:04-0300
-2026-11-26,carrefour,P032,,7.39,un,sim,Tempero Pronto para Frango com Sal Sazon 60g,60g,2026-11-26T15:26:07-0300
-2026-11-26,carrefour,P033,,3.45,un,sim,Caldo Knorr Galinha 57g 6 cubos,57g,2026-11-26T15:26:11-0300
-2026-11-26,carrefour,P034,,11.69,un,sim,Leite Condensado Moça Tradicional Lata Abre Fácil 395g,395g,2026-11-26T15:26:14-0300
-2026-11-26,carrefour,P035,,4.59,un,sim,Creme de Leite NESTLÉ 200g,200g,2026-11-26T15:26:18-0300
-2026-11-26,carrefour,P036,,12.59,un,sim,Mistura para Bolo de Chocolate Dona Benta 450g,450g,2026-11-26T15:26:21-0300
-2026-11-26,carrefour,P037,,3.78,un,sim,"Água Mineral Crystal Sem Gás 1,5L","1,5L",2026-11-26T15:26:25-0300
-2026-11-26,carrefour,P038,,11.99,un,sim,Refrigerante Coca-Cola Garrafa 2 L,2 L,2026-11-26T15:26:28-0300
-2026-11-26,carrefour,P039,,5.48,un,sim,Leite Integral UHT Italac 1 Litro,,2026-11-26T15:26:31-0300
-2026-11-26,carrefour,P040,,4.79,un,sim,Leite Integral Piracanjuba 1 Litro,,2026-11-26T15:26:34-0300
-2026-11-26,carrefour,P041,,4.79,un,sim,Leite Desnatado Piracanjuba 1 Litro,,2026-11-26T15:26:37-0300
-2026-11-26,carrefour,P042,,22.89,un,sim,Leite em Pó Ninho Integral Lata 380g,380g,2026-11-26T15:26:40-0300
-2026-11-26,carrefour,P043,,12.29,un,sim,Manteiga com Sal Aviação 200g,200g,2026-11-26T15:26:43-0300
-2026-11-26,carrefour,P044,,11.69,un,sim,Queijo Muçarela Fatiada Tirolez 150g,150g,2026-11-26T15:26:46-0300
-2026-11-26,carrefour,P045,,13.79,un,sim,Queijo Muçarela Fatiada Light sem Lactose Tirolez 150g,150g,2026-11-26T15:26:50-0300
-2026-11-26,carrefour,P046,,7.99,un,sim,Requeijão Cremoso Vigor 200g,200g,2026-11-26T15:26:54-0300
-2026-11-26,carrefour,P047,,4.29,un,sim,Iogurte Integral Nestlé Tradicional 170g,170g,2026-11-26T15:26:58-0300
-2026-11-26,carrefour,P048,,18.49,un,sim,"Iogurte Parcialmente Desnatado Morango Batavo Probio2 Garrafa 1,15kg Embalagem Econômica","1,15kg",2026-11-26T15:27:02-0300
-2026-11-26,carrefour,P049,,15.09,un,sim,Presunto Cozido Fatiado Soltíssimo Sadia 200 g,200 g,2026-11-26T15:27:05-0300
-2026-11-26,carrefour,P051,,9.99,un,sim,Ovos Brancos Carrefour 20 Unidades,20 Unidades,2026-11-26T15:27:09-0300
-2026-11-26,carrefour,P052,,14.69,un,sim,Ovos Vermelhos Carrefour 20 Unidades,20 Unidades,2026-11-26T15:27:12-0300
-2026-11-26,carrefour,P053,,34.59,un,sim,Papel Higiênico Folha Dupla Neutro Neve Toque da Seda 30 Metros Leve 12 Pague 11 Unidades,11 Unidades,2026-11-26T15:27:16-0300
-2026-11-26,carrefour,P055,,5.98,un,sim,Sabonete em Barra Dove Original 90g,90g,2026-11-26T15:27:19-0300
-2026-11-26,carrefour,P056,,2.39,un,sim,Sabonete em Barra Corporal Lux Botanicals Lavanda 85g,85g,2026-11-26T15:27:22-0300
-2026-11-26,carrefour,P057,,15.39,un,sim,Creme Dental Original Mint Colgate Total Prevenção Ativa Caixa 90g,90g,2026-11-26T15:27:26-0300
-2026-11-26,carrefour,P058,,7.19,un,sim,Creme Dental Colgate Máxima Proteção Anticáries 90g,90g,2026-11-26T15:27:29-0300
-2026-11-26,carrefour,P059,,6.79,un,sim,Escova Dental Colgate Classic Clean,,2026-11-26T15:27:34-0300
-2026-11-26,carrefour,P060,,19.49,un,sim,Shampoo Seda Ceramidas Infusão Ativa Retinol e Colágeno 325ml,325ml,2026-11-26T15:27:38-0300
-2026-11-26,carrefour,P061,,20.99,un,sim,Condicionador Seda Ceramidas Infusão Ativa Retinol e Colágeno 325ml,325ml,2026-11-26T15:27:41-0300
-2026-11-26,carrefour,P062,,21.19,un,sim,Desodorante Antitranspirante Aerosol Rexona Clinical Invisible 96h 150ml,150ml,2026-11-26T15:27:44-0300
-2026-11-26,carrefour,P063,,21.99,un,sim,Fio Dental Oral-B Essential Floss Sabor Menta 50m,50m,2026-11-26T15:27:47-0300
-2026-11-26,carrefour,P064,,6.39,un,sim,Absorvente Always Dia Ultra Suave com Abas 8 Unidades,8 Unidades,2026-11-26T15:27:51-0300
-2026-11-26,carrefour,P065,,125.59,un,sim,"Fralda Descartável Infantil Huggies Máxima Proteção M 5,5 a 9,5kg Pacote 66 Unidades Leve Mais Pague Menos",66 Unidades,2026-11-26T15:27:54-0300
-2026-11-26,carrefour,P067,,63.39,un,sim,Lava-Roupas Líquido Omo Lavagem Perfeita Galão 3L,3L,2026-11-26T15:27:58-0300
-2026-11-26,carrefour,P068,,28.49,un,sim,Amaciante Concentrado Comfort Frescor Intenso 500 ml,500 ml,2026-11-26T15:28:01-0300
-2026-11-26,carrefour,P069,,2.19,un,sim,Detergente Ypê Clear 500ml,500ml,2026-11-26T15:28:07-0300
-2026-11-26,carrefour,P070,,4.99,un,sim,Água Sanitária Super Candida 2L,2L,2026-11-26T15:28:10-0300
-2026-11-26,carrefour,P071,,10.39,un,sim,Desinfetante Pinho Sol Original Refil Leve 500ml Pague 450ml,500ml Pague 450ml,2026-11-26T15:28:13-0300
-2026-11-26,carrefour,P072,,8.39,un,sim,Limpador Multiuso Veja O Original Clássico 500ml Oferta,500ml,2026-11-26T15:28:17-0300
-2026-11-26,carrefour,P074,,39.99,un,sim,Saco de Lixo Dover Roll Super Forte Azul com 20 Unidades de 50 Litros,20 Unidades,2026-11-26T15:28:20-0300
-2026-11-26,carrefour,P077,,15.99,un,sim,Álcool Coperalcool Bacfree 1 Litro,,2026-11-26T15:28:24-0300
-2026-11-26,carrefour,P078,,31.59,un,sim,Inseticida Multi Insetos SBP Aerosol Ultra 360ml,360ml,2026-11-26T15:28:28-0300
-2026-11-26,carrefour,P079,,21.19,un,sim,Filé de Frango Peito Congelado sem Osso Sadia 1Kg,1Kg,2026-11-26T15:28:32-0300
-2026-11-26,carrefour,P080,,15.19,un,sim,Pedaços de Sobrecoxa de Frango Congelado Sadia 1Kg,1Kg,2026-11-26T15:28:35-0300
-2026-11-26,carrefour,P082,,50.29,un,sim,Carne Moída de Patinho Swift 1Kg,1Kg,2026-11-26T15:28:47-0300
-2026-11-26,carrefour,P083,,45.44,un,sim,Acém Bovina Carrefour Aproximadamente 900 g,900 g,2026-11-26T15:28:51-0300
-2026-11-26,carrefour,P084,,69.90,un,sim,Bife de Contra Filé Swift 1Kg,1Kg,2026-11-26T15:28:54-0300
-2026-11-26,carrefour,P086,,11.69,un,sim,Salsicha Tradicional Perdigão Hot Dog 500 g,500 g,2026-11-26T15:28:57-0300
-2026-11-26,carrefour,P087,,21.49,un,sim,Filé De Tilápia Sem Pele Congelado Carrefour Classic 400g,400g,2026-11-26T15:29:03-0300
-2026-11-26,carrefour,P088,,6.83,un,sim,Banana Prata Carrefour  600g,600g,2026-11-26T15:29:07-0300
-2026-11-26,carrefour,P089,,10.99,un,sim,Maca Gala Carrefour Mercado 1kg,1kg,2026-11-26T15:29:10-0300
-2026-11-26,carrefour,P090,,2.39,un,sim,Laranja Pêra Carrefour Aprox. 600g,600g,2026-11-26T15:29:14-0300
-2026-11-26,carrefour,P091,,12.00,un,sim,Limão Tahiti Único 700g,700g,2026-11-26T15:29:18-0300
-2026-11-26,carrefour,P092,,15.29,un,sim,Tomate Salada Único 1Kg,1Kg,2026-11-26T15:29:22-0300
+2026-11-26,carrefour,P001,,23.99,un,sim,Arroz Branco Camil Tipo 1 5kg,5kg,2026-11-26T17:31:31-0300
+2026-11-26,carrefour,P002,,29.99,un,sim,Arroz Branco Longo-fino Tipo 1 Tio João 5 Kg,5 Kg,2026-11-26T17:31:35-0300
+2026-11-26,carrefour,P003,,7.99,un,sim,Feijão Carioca Camil 1kg,1kg,2026-11-26T17:31:40-0300
+2026-11-26,carrefour,P005,,6.59,un,sim,Óleo de Soja Soya 900ml,900ml,2026-11-26T17:31:44-0300
+2026-11-26,carrefour,P006,,29.99,un,sim,Azeite Português Extra Virgem Tradicional Gallo 500ml,500ml,2026-11-26T17:31:48-0300
+2026-11-26,carrefour,P007,,3.79,un,sim,Açúcar Refinado União 1kg,1kg,2026-11-26T17:31:52-0300
+2026-11-26,carrefour,P008,,3.48,un,sim,Açúcar Cristal União 1Kg,1Kg,2026-11-26T17:31:55-0300
+2026-11-26,carrefour,P009,,23.99,un,sim,Café Torrado e Moído Extraforte Pilão Pacote 500g,500g,2026-11-26T17:32:00-0300
+2026-11-26,carrefour,P010,,23.90,un,sim,Café em Pó Tradicional 3 Corações 500g,500g,2026-11-26T17:32:03-0300
+2026-11-26,carrefour,P011,,4.99,un,sim,Farinha de Trigo Tradicional Dona Benta 1kg,1kg,2026-11-26T17:32:06-0300
+2026-11-26,carrefour,P012,,8.89,un,sim,Farinha de Mandioca Tipo 1 Fina Yoki Pacote 500g,500g,2026-11-26T17:32:10-0300
+2026-11-26,carrefour,P013,,2.79,un,sim,Macarrão Espaguete Renata com Ovos Nº 9 500g,500g,2026-11-26T17:32:13-0300
+2026-11-26,carrefour,P015,,3.59,un,sim,Molho de Tomate Tradicional Pomarola Sachê 300g,300g,2026-11-26T17:32:16-0300
+2026-11-26,carrefour,P016,,8.39,un,sim,Extrato de Tomate Tradicional Elefante Pote 300g,300g,2026-11-26T17:32:20-0300
+2026-11-26,carrefour,P019,,14.69,un,sim,Aveia em Flocos Regulares Quaker Embalagem Econômica 450g,450g,2026-11-26T17:32:23-0300
+2026-11-26,carrefour,P020,,16.19,un,sim,Achocolatado em Pó Nescau 350g,350g,2026-11-26T17:32:27-0300
+2026-11-26,carrefour,P021,,10.39,un,sim,Biscoito Cream Cracker Amanteigado Vitarella 350g,350g,2026-11-26T17:32:31-0300
+2026-11-26,carrefour,P022,,4.39,un,sim,Biscoito Passatempo Recheado Chocolate 130g,130g,2026-11-26T17:32:34-0300
+2026-11-26,carrefour,P023,,7.59,un,sim,Pão de Forma Pullman 480g,480g,2026-11-26T17:32:37-0300
+2026-11-26,carrefour,P024,,5.99,un,sim,Margarina Cremosa com Sal Qualy 500g,500g,2026-11-26T17:32:41-0300
+2026-11-26,carrefour,P025,,9.90,un,sim,Maionese Hellmann's Tradicional 500g,500g,2026-11-26T17:32:45-0300
+2026-11-26,carrefour,P026,,10.99,un,sim,Ketchup Heinz Tradicional 397g,397g,2026-11-26T17:32:51-0300
+2026-11-26,carrefour,P028,,10.99,un,sim,Atum Ralado em Óleo Gomes da Costa 170g,170g,2026-11-26T17:32:55-0300
+2026-11-26,carrefour,P029,,3.79,un,sim,Milho Verde Quero Lata 170g,170g,2026-11-26T17:32:58-0300
+2026-11-26,carrefour,P030,,5.19,un,sim,Ervilha Quero Lata 170g,170g,2026-11-26T17:33:02-0300
+2026-11-26,carrefour,P031,,5.39,un,sim,Vinagre de Álcool Castelo 750ml,750ml,2026-11-26T17:33:05-0300
+2026-11-26,carrefour,P032,,7.39,un,sim,Tempero Pronto para Frango com Sal Sazon 60g,60g,2026-11-26T17:33:10-0300
+2026-11-26,carrefour,P033,,3.45,un,sim,Caldo Knorr Galinha 57g 6 cubos,57g,2026-11-26T17:33:13-0300
+2026-11-26,carrefour,P034,,11.69,un,sim,Leite Condensado Moça Tradicional Lata Abre Fácil 395g,395g,2026-11-26T17:33:17-0300
+2026-11-26,carrefour,P035,,4.59,un,sim,Creme de Leite NESTLÉ 200g,200g,2026-11-26T17:33:21-0300
+2026-11-26,carrefour,P036,,12.59,un,sim,Mistura para Bolo de Chocolate Dona Benta 450g,450g,2026-11-26T17:33:24-0300
+2026-11-26,carrefour,P037,,3.78,un,sim,"Água Mineral Crystal Sem Gás 1,5L","1,5L",2026-11-26T17:33:28-0300
+2026-11-26,carrefour,P038,,11.99,un,sim,Refrigerante Coca-Cola Garrafa 2 L,2 L,2026-11-26T17:33:32-0300
+2026-11-26,carrefour,P039,,5.48,un,sim,Leite Integral UHT Italac 1 Litro,,2026-11-26T17:33:36-0300
+2026-11-26,carrefour,P040,,4.79,un,sim,Leite Integral Piracanjuba 1 Litro,,2026-11-26T17:33:41-0300
+2026-11-26,carrefour,P041,,4.79,un,sim,Leite Desnatado Piracanjuba 1 Litro,,2026-11-26T17:33:45-0300
+2026-11-26,carrefour,P042,,22.89,un,sim,Leite em Pó Ninho Integral Lata 380g,380g,2026-11-26T17:33:49-0300
+2026-11-26,carrefour,P043,,12.29,un,sim,Manteiga com Sal Aviação 200g,200g,2026-11-26T17:33:53-0300
+2026-11-26,carrefour,P044,,11.69,un,sim,Queijo Muçarela Fatiada Tirolez 150g,150g,2026-11-26T17:33:56-0300
+2026-11-26,carrefour,P045,,13.79,un,sim,Queijo Muçarela Fatiada Light sem Lactose Tirolez 150g,150g,2026-11-26T17:34:00-0300
+2026-11-26,carrefour,P046,,7.99,un,sim,Requeijão Cremoso Vigor 200g,200g,2026-11-26T17:34:04-0300
+2026-11-26,carrefour,P047,,4.29,un,sim,Iogurte Integral Nestlé Tradicional 170g,170g,2026-11-26T17:34:09-0300
+2026-11-26,carrefour,P048,,18.49,un,sim,"Iogurte Parcialmente Desnatado Morango Batavo Probio2 Garrafa 1,15kg Embalagem Econômica","1,15kg",2026-11-26T17:34:14-0300
+2026-11-26,carrefour,P049,,15.09,un,sim,Presunto Cozido Fatiado Soltíssimo Sadia 200 g,200 g,2026-11-26T17:34:17-0300
+2026-11-26,carrefour,P051,,9.99,un,sim,Ovos Brancos Carrefour 20 Unidades,20 Unidades,2026-11-26T17:34:21-0300
+2026-11-26,carrefour,P052,,14.69,un,sim,Ovos Vermelhos Carrefour 20 Unidades,20 Unidades,2026-11-26T17:34:24-0300
+2026-11-26,carrefour,P053,,34.59,un,sim,Papel Higiênico Folha Dupla Neutro Neve Toque da Seda 30 Metros Leve 12 Pague 11 Unidades,11 Unidades,2026-11-26T17:34:28-0300
+2026-11-26,carrefour,P055,,5.98,un,sim,Sabonete em Barra Dove Original 90g,90g,2026-11-26T17:34:31-0300
+2026-11-26,carrefour,P056,,2.39,un,sim,Sabonete em Barra Corporal Lux Botanicals Lavanda 85g,85g,2026-11-26T17:34:36-0300
+2026-11-26,carrefour,P057,,15.39,un,sim,Creme Dental Original Mint Colgate Total Prevenção Ativa Caixa 90g,90g,2026-11-26T17:34:38-0300
+2026-11-26,carrefour,P058,,7.19,un,sim,Creme Dental Colgate Máxima Proteção Anticáries 90g,90g,2026-11-26T17:34:42-0300
+2026-11-26,carrefour,P059,,6.79,un,sim,Escova Dental Colgate Classic Clean,,2026-11-26T17:34:45-0300
+2026-11-26,carrefour,P060,,19.49,un,sim,Shampoo Seda Ceramidas Infusão Ativa Retinol e Colágeno 325ml,325ml,2026-11-26T17:34:50-0300
+2026-11-26,carrefour,P061,,20.99,un,sim,Condicionador Seda Ceramidas Infusão Ativa Retinol e Colágeno 325ml,325ml,2026-11-26T17:34:54-0300
+2026-11-26,carrefour,P062,,21.19,un,sim,Desodorante Antitranspirante Aerosol Rexona Clinical Invisible 96h 150ml,150ml,2026-11-26T17:34:58-0300
+2026-11-26,carrefour,P063,,21.99,un,sim,Fio Dental Oral-B Essential Floss Sabor Menta 50m,50m,2026-11-26T17:35:01-0300
+2026-11-26,carrefour,P064,,6.39,un,sim,Absorvente Always Dia Ultra Suave com Abas 8 Unidades,8 Unidades,2026-11-26T17:35:05-0300
+2026-11-26,carrefour,P065,,125.59,un,sim,"Fralda Descartável Infantil Huggies Máxima Proteção M 5,5 a 9,5kg Pacote 66 Unidades Leve Mais Pague Menos",66 Unidades,2026-11-26T17:35:09-0300
+2026-11-26,carrefour,P067,,48.42,un,sim,Lava-Roupas Líquido Omo Lavagem Perfeita Galão 3L,3L,2026-11-26T17:35:13-0300
+2026-11-26,carrefour,P068,,28.49,un,sim,Amaciante Concentrado Comfort Frescor Intenso 500 ml,500 ml,2026-11-26T17:35:16-0300
+2026-11-26,carrefour,P069,,2.19,un,sim,Detergente Ypê Clear 500ml,500ml,2026-11-26T17:35:20-0300
+2026-11-26,carrefour,P070,,4.99,un,sim,Água Sanitária Super Candida 2L,2L,2026-11-26T17:35:23-0300
+2026-11-26,carrefour,P071,,10.39,un,sim,Desinfetante Pinho Sol Original Refil Leve 500ml Pague 450ml,500ml Pague 450ml,2026-11-26T17:35:27-0300
+2026-11-26,carrefour,P072,,8.39,un,sim,Limpador Multiuso Veja O Original Clássico 500ml Oferta,500ml,2026-11-26T17:35:31-0300
+2026-11-26,carrefour,P074,,39.99,un,sim,Saco de Lixo Dover Roll Super Forte Azul com 20 Unidades de 50 Litros,20 Unidades,2026-11-26T17:35:34-0300
+2026-11-26,carrefour,P077,,15.99,un,sim,Álcool Coperalcool Bacfree 1 Litro,,2026-11-26T17:35:38-0300
+2026-11-26,carrefour,P078,,31.59,un,sim,Inseticida Multi Insetos SBP Aerosol Ultra 360ml,360ml,2026-11-26T17:35:42-0300
+2026-11-26,carrefour,P079,,21.19,un,sim,Filé de Frango Peito Congelado sem Osso Sadia 1Kg,1Kg,2026-11-26T17:35:45-0300
+2026-11-26,carrefour,P080,,15.19,un,sim,Pedaços de Sobrecoxa de Frango Congelado Sadia 1Kg,1Kg,2026-11-26T17:35:49-0300
+2026-11-26,carrefour,P082,,50.29,un,sim,Carne Moída de Patinho Swift 1Kg,1Kg,2026-11-26T17:36:02-0300
+2026-11-26,carrefour,P083,,45.44,un,sim,Acém Bovina Carrefour Aproximadamente 900 g,900 g,2026-11-26T17:36:06-0300
+2026-11-26,carrefour,P084,,69.90,un,sim,Bife de Contra Filé Swift 1Kg,1Kg,2026-11-26T17:36:10-0300
+2026-11-26,carrefour,P086,,11.69,un,sim,Salsicha Tradicional Perdigão Hot Dog 500 g,500 g,2026-11-26T17:36:13-0300
+2026-11-26,carrefour,P087,,21.49,un,sim,Filé De Tilápia Sem Pele Congelado Carrefour Classic 400g,400g,2026-11-26T17:36:17-0300
+2026-11-26,carrefour,P088,,6.83,un,sim,Banana Prata Carrefour  600g,600g,2026-11-26T17:36:21-0300
+2026-11-26,carrefour,P089,,10.99,un,sim,Maca Gala Carrefour Mercado 1kg,1kg,2026-11-26T17:36:24-0300
+2026-11-26,carrefour,P090,,2.39,un,sim,Laranja Pêra Carrefour Aprox. 600g,600g,2026-11-26T17:36:27-0300
+2026-11-26,carrefour,P091,,12.00,un,sim,Limão Tahiti Único 700g,700g,2026-11-26T17:36:31-0300
+2026-11-26,carrefour,P092,,15.29,un,sim,Tomate Salada Único 1Kg,1Kg,2026-11-26T17:36:35-0300
 2026-11-26,carrefour,P093,,6.79,un,sim,Cebola Único Carrefour 1Kg,1Kg,2026-11-26T15:29:26-0300
-2026-11-26,carrefour,P094,,,,nao,Alho Granel Carrefour Aprox. 75g,75g,2026-11-26T15:29:29-0300
+2026-11-26,carrefour,P094,,,,nao,Alho Granel Carrefour Aprox. 75g,75g,2026-11-26T17:36:46-0300
 2026-11-26,carrefour,P095,,4.79,un,sim,Batata Lavada Único Carrefour 1Kg,1Kg,2026-11-26T15:29:33-0300
 2026-11-26,carrefour,P096,,4.00,un,sim,Cenoura Único 1Kg,1Kg,2026-11-26T12:15:57-0300
-2026-11-26,carrefour,P097,,4.99,un,sim,Alface Crespa Carrefour Mercado Em Unidade,,2026-11-26T15:29:43-0300
-2026-11-26,carrefour,P098,,18.86,un,sim,"Mamão Formosa Garantia de Origem Aprox. 1,6 Kg","1,6 Kg",2026-11-26T15:29:48-0300
+2026-11-26,carrefour,P097,,4.99,un,sim,Alface Crespa Carrefour Mercado Em Unidade,,2026-11-26T17:37:07-0300
+2026-11-26,carrefour,P098,,18.86,un,sim,"Mamão Formosa Garantia de Origem Aprox. 1,6 Kg","1,6 Kg",2026-11-26T17:37:11-0300
 2026-11-26,carrefour,P099,,3.31,un,sim,Abobrinha Italiana Carrefour Aprox. 400g,400g,2026-11-26T15:29:51-0300
-2026-11-26,carrefour,P100,,4.42,un,sim,Pimentão Verde Carrefour Aprox. 250g,250g,2026-11-26T15:29:54-0300
+2026-11-26,carrefour,P100,,4.42,un,sim,Pimentão Verde Carrefour Aprox. 250g,250g,2026-11-26T17:37:24-0300
 2026-11-26,hirota,P001,C01,28.98,un,sim,Arroz Camil Tipo 1 5kg,5kg,2026-11-26T12:10:58-0300
 2026-11-26,hirota,P002,C01,35.98,un,sim,Arroz Tio Joao Tipo 1 5kg,5kg,2026-11-26T12:11:03-0300
 2026-11-26,hirota,P003,C01,9.98,un,sim,Feijão Carioca Camil 1kg,1kg,2026-11-26T12:11:08-0300
