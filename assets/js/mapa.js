@@ -1,6 +1,7 @@
 // Mapa real de São Paulo (MapLibre + OpenStreetMap). A cidade inteira aparece primeiro; com um CEP a câmera
 // desce até o ponto de coleta e desenha o caminho de carro até a loja mais próxima de cada rede (ver DESIGN.md, "Mapa").
 // A sequência das rotas é uma linha do tempo do GSAP.
+import { aguardar } from './espera.js?v=20261126f';
 const { gsap } = window;
 export const LARANJA = '#F26A0F', CLARO = '#7A7A82', NADA = 'rgba(0,0,0,0)';
 export const ESTILO = 'assets/mapa-estilo.json';
@@ -26,6 +27,9 @@ export const marcar = (classe, html) => { const e = document.createElement('div'
 export function novoMapa(el, extra = {}) {
   const ml = window.maplibregl;
   if (!ml) throw new Error('MapLibre não carregou');
+  // enquanto o mapa não termina o primeiro desenho, o selo de espera (só aparece se demorar mais de meio segundo)
+  const { espera = {}, ...opcoes } = extra;
+  extra = opcoes;
   const toque = matchMedia('(pointer: coarse)').matches, pequeno = matchMedia('(max-width: 860px)').matches;
   const mapa = new ml.Map({
     container: el, style: ESTILO, attributionControl: false, cooperativeGestures: toque, scrollZoom: false,
@@ -37,6 +41,7 @@ export function novoMapa(el, extra = {}) {
   });
   // no celular todo mapa começa só para olhar: o dedo rola a página por cima dele. Só o mapa do resultado do CEP liga os gestos (ver gestos)
   if (pequeno) ['dragPan', 'touchZoomRotate', 'doubleClickZoom', 'keyboard', 'boxZoom', 'scrollZoom'].forEach(h => mapa[h]?.disable());
+  if (espera !== false) { const fim = aguardar(el, { texto: 'Carregando o mapa', ...espera }); mapa.once('idle', fim); mapa.once('error', fim); }
   mapa.addControl(new ml.AttributionControl({ compact: true }), 'bottom-right');
   if (!toque) mapa.addControl(new ml.NavigationControl({ showCompass: false }), 'bottom-right');
   mapa.touchZoomRotate.disableRotation();
@@ -136,7 +141,7 @@ export function criarMapa(el, geo, rotas, valores, { calmo = false } = {}) {
     caixaFotos = el.parentElement.querySelector('.mapa-fotos');
     if (!caixaFotos) { caixaFotos = document.createElement('div'); caixaFotos.className = 'mapa-fotos'; caixaFotos.setAttribute('aria-hidden', 'true'); el.after(caixaFotos); }
   }
-  const mapa = novoMapa(el, { bounds: cidade, fitBoundsOptions: { padding: margem() }, bearing: CAMERA[0][0], pitch: CAMERA[0][1] });
+  const mapa = novoMapa(el, { bounds: cidade, fitBoundsOptions: { padding: margem() }, bearing: CAMERA[0][0], pitch: CAMERA[0][1], espera: FOTO ? false : { classe: 'a-direita' } });
   if (FOTO) el.classList.add('so-foto');
 
   // dados de cada ponto: rota e loja por rede, na ordem das redes do site
@@ -250,6 +255,13 @@ export function criarMapa(el, geo, rotas, valores, { calmo = false } = {}) {
     origem.getElement().classList.remove('on');
     mapa.fitBounds(emVolta(caixaDoBairro(i), P), { padding: margem(), ...(celular() ? { pitch: 0, bearing: 0 } : { pitch: 44, bearing: -14 }), maxZoom: 14.4, duration: calmo ? 0 : celular() ? 900 : 2600, essential: true });
     est.fase = 'rotas';
+    // selo de espera só se, quando a câmera chega, as ruas do bairro ainda não chegaram (internet lenta)
+    // (conta pelo tempo do voo: o "moveend" também dispara quando o mapa muda de tamanho, antes de a câmera chegar)
+    if (!calmo) setTimeout(() => {
+      if (est.foco !== i || mapa.areTilesLoaded()) return;
+      const fim = aguardar(el, { texto: 'Carregando o mapa do bairro', classe: 'a-direita no-bairro', atraso: 250 });
+      mapa.once('idle', fim); setTimeout(fim, 15000);
+    }, (celular() ? 900 : 2600) + 80);
     aoMudar({ fase: 'rotas', foco: i, melhor });
 
     const p = redes.map(() => ({ v: 0 }));

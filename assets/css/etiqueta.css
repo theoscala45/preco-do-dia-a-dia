@@ -897,3 +897,47 @@ button,.quieto,.botao,.menu-botao,.topo nav a,.aba,summary{-webkit-user-select:n
 .mapa-fotos{display:none}
 /* textos que mudam entre o computador (com mapa nos capítulos) e o celular (sem mapa) */
 .so-estreito{display:none}
+
+/* ---------- espera (opção B, 26/11/2026): a etiqueta de gôndola balança e os números do preço giram ---------- */
+/* tela inteira ao abrir a página: invisível nos primeiros 0,8 s (se a página abre rápido, ninguém vê) e some quando ela fica pronta.
+   Se o script falhar, ela some sozinha depois de 30 s. */
+.espera-tela{position:fixed;inset:0;z-index:90;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:26px;
+  background:var(--fundo);opacity:0;visibility:hidden;pointer-events:none;animation:espera-entra .3s ease .8s forwards,espera-sai .3s ease 30s forwards}
+html.pronto .espera-tela{display:none}
+@keyframes espera-entra{from{opacity:0;visibility:visible}to{opacity:1;visibility:visible}}
+@keyframes espera-sai{from{opacity:1;visibility:visible}to{opacity:0;visibility:hidden}}
+.espera-texto{margin:0;font:500 15px/1.3 var(--corpo);color:var(--texto-2);letter-spacing:.01em}
+.espera-etq-fio{width:2px;height:34px;background:var(--texto);margin:0 auto -2px;border-radius:2px}
+.espera-etq{position:relative;width:208px;padding:20px 22px 18px;border:2px solid var(--texto);border-radius:14px;background:#fff;
+  transform-origin:50% -34px;animation:espera-balanca 2.4s infinite ease-in-out;box-shadow:0 10px 24px rgba(22,22,26,.08)}
+.espera-etq::before{content:"";position:absolute;top:-8px;left:50%;width:14px;height:14px;margin-left:-7px;border:2px solid var(--texto);border-radius:50%;background:#fff}
+.espera-etq small{display:block;font:500 11px var(--mono);color:var(--texto-3);letter-spacing:.06em;margin-bottom:6px}
+.espera-preco{display:flex;align-items:flex-start;font-family:var(--letreiro);font-weight:800;color:var(--texto)}
+.espera-rs{font-size:18px;margin:6px 6px 0 0}
+.espera-virgula{font-size:64px;line-height:64px}
+.espera-dig{display:block;height:64px;overflow:hidden;font-size:64px;line-height:64px}
+.espera-dig i{display:block;font-style:normal;animation:espera-rola 2.4s infinite cubic-bezier(.65,0,.35,1)}
+.espera-dig.c{font-size:28px;height:32px;line-height:32px;margin-top:4px;color:var(--laranja)}
+.espera-dig.c i{animation-name:espera-rola-c}
+.espera-dig.d2 i{animation-delay:.12s}.espera-dig.d3 i{animation-delay:.24s}.espera-dig.d4 i{animation-delay:.36s}.espera-dig.d5 i{animation-delay:.48s}
+@keyframes espera-balanca{0%,100%{transform:rotate(-4deg)}50%{transform:rotate(4deg)}}
+@keyframes espera-rola{0%{transform:translateY(0)}40%,100%{transform:translateY(-576px)}}
+@keyframes espera-rola-c{0%{transform:translateY(0)}40%,100%{transform:translateY(-288px)}}
+.espera-pts i{display:inline-block;width:3px;height:3px;border-radius:50%;background:currentColor;margin-left:3px;animation:espera-pt 1.2s infinite ease-in-out}
+.espera-pts i:nth-child(2){animation-delay:.15s}.espera-pts i:nth-child(3){animation-delay:.3s}
+@keyframes espera-pt{0%,60%,100%{opacity:.25;transform:translateY(0)}30%{opacity:1;transform:translateY(-3px)}}
+/* símbolo pequeno: um selo branco com a etiqueta mínima (a barra laranja enche e esvazia) e o texto */
+.espera-selo{position:absolute;z-index:6;left:50%;top:50%;display:flex;align-items:center;gap:12px;padding:12px 18px 12px 14px;border-radius:999px;
+  background:#fff;border:1px solid var(--linha);box-shadow:0 8px 24px rgba(22,22,26,.10);font:500 14px/1.2 var(--corpo);color:var(--texto-2);
+  transform:translate(-50%,-50%) translateY(6px);opacity:0;transition:opacity .25s ease,transform .25s var(--curva);pointer-events:none;white-space:nowrap}
+.espera-selo.on{opacity:1;transform:translate(-50%,-50%)}
+.espera-etq-mini{position:relative;flex:none;width:30px;height:22px;border:2px solid var(--texto);border-radius:5px;background:#fff;overflow:hidden;
+  transform-origin:50% -6px;animation:espera-balanca 2.4s infinite ease-in-out}
+.espera-etq-mini::after{content:"";position:absolute;left:5px;right:5px;top:7px;height:4px;border-radius:2px;background:var(--laranja);transform-origin:left;animation:espera-barra 1.2s infinite ease-in-out}
+@keyframes espera-barra{0%,100%{transform:scaleX(.25)}50%{transform:scaleX(1)}}
+@media (prefers-reduced-motion:reduce){
+  .espera-etq,.espera-etq-mini,.espera-dig i,.espera-pts i,.espera-etq-mini::after{animation:none}
+  .espera-tela{animation:espera-entra .01s linear .8s forwards,espera-sai .01s linear 30s forwards}
+}
+.espera-selo.a-direita{left:73%}   /* página inicial no computador: o mapa fica à direita do texto */
+@media (max-width:860px){.espera-selo.a-direita{left:50%}.espera-selo.no-bairro{top:19svh}}   /* celular: no meio da faixa de mapa acima da lista */
