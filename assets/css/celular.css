@@ -57,8 +57,11 @@
 
 /* fotos do mapa (celular): a rolagem só troca uma imagem por outra; o mapa ao vivo fica escondido até o resultado do CEP */
 #mapa.so-foto .maplibregl-canvas-container,#mapa.so-foto .maplibregl-marker{visibility:hidden}
-/* a cidade fica no meio, na faixa de cima: a imagem cobre a largura e se prende ao alto da tela, em qualquer celular */
-.mapa-fotos{display:block;position:absolute;inset:0;pointer-events:none;background:var(--fundo) url(../mapa/celular-cidade.jpg) 50% 0 / cover no-repeat}
+/* A cidade fica no meio da faixa de mapa que aparece acima do texto (do alto da tela até uns 24% da altura), em qualquer celular.
+   A foto ocupa a largura toda; o centro da cidade está a 81 px do alto numa foto de 390 px de largura (20,77vw),
+   então a foto sobe ou desce para esse centro cair a 13% da altura da tela. A cor de fundo é a do mapa. */
+.mapa-fotos{display:block;position:absolute;inset:0;pointer-events:none;
+  background:#F4F4F1 url(../mapa/celular-cidade.jpg) no-repeat;background-size:100% auto;background-position:50% calc(13svh - 20.77vw)}
 .mapa-fotos.fora{display:none}
 .mapa-foto{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 0;opacity:0;transition:opacity .45s ease}
 .mapa-foto.on{opacity:1}

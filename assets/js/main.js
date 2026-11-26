@@ -129,7 +129,7 @@ const rotaDe = (i, k) => rotas.pontos.find(p => p.id === geo.pontos[i].id)?.rede
 // ---------- mapa
 let mapa = null;
 try {
-  const { criarMapa } = await import('./mapa.js?v=20261126c');
+  const { criarMapa } = await import('./mapa.js?v=20261126d');
   mapa = criarMapa($('mapa'), geo, rotas, {
     redes: dados.redes.map((r, k) => ({ id: r.id, nome: nomes[k] })),
     var: normal(vars), ordem: i => redesNoPonto[i].ordem, preco: (i, k) => (redesNoPonto[i].totais[k] == null ? null : reais(redesNoPonto[i].totais[k])),
