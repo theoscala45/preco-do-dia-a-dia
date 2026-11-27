@@ -131,25 +131,12 @@ function desenharTrocas(melhor) {
   $('tLista').hidden = !tem;
   $('tTodas').hidden = trocasAtuais.length < 2;
 }
-// Animação da troca: o botão vira "Trocado", o valor economizado sobe da linha, a linha fecha e só então a troca acontece;
-// na lista da esquerda, o produto novo entra no lugar do antigo e pisca em laranja. O total rola até o valor novo.
+// Animação da troca (discreta, escolha do Theo em 27/11/2026): a linha some com um esmaecer rápido e só então a troca acontece;
+// na lista, o produto novo entra no lugar do antigo com um leve destaque. O total desce até o valor novo.
 function animarTroca(linhas, aoFim) {
   if (calmo || !linhas.length) { aoFim(); return; }
   linhas.forEach(li => li.querySelector('button')?.setAttribute('disabled', ''));
-  const tl = gsap.timeline({ onComplete: aoFim });
-  linhas.forEach((li, n) => {
-    const b = li.querySelector('button'), eco = li.querySelector('.t-eco'), t = n * 0.08;
-    tl.add(() => { b.textContent = 'Trocado'; b.classList.add('feito'); li.classList.add('saindo'); }, t)
-      .fromTo(b, { scale: 0.88 }, { scale: 1, duration: 0.45, ease: 'back.out(3)' }, t);
-    if (eco && /a menos/.test(eco.textContent)) {
-      const r = eco.getBoundingClientRect(), voa = document.createElement('span');
-      voa.className = 'eco-voa'; voa.textContent = '−' + eco.textContent.replace(' a menos', '');
-      voa.style.left = r.left + 'px'; voa.style.top = r.top + 'px';
-      tl.add(() => document.body.append(voa), t)
-        .fromTo(voa, { y: 0, autoAlpha: 1, scale: 1 }, { y: -46, autoAlpha: 0, scale: 1.15, duration: 0.9, ease: 'power2.out', onComplete: () => voa.remove() }, t + 0.05);
-    }
-    tl.to(li, { height: 0, paddingTop: 0, paddingBottom: 0, autoAlpha: 0, x: 18, duration: 0.38, ease: 'power3.in' }, t + 0.42);
-  });
+  gsap.to(linhas, { autoAlpha: 0, duration: 0.22, ease: 'power1.out', stagger: 0.04, onComplete: aoFim });
 }
 function piscarNovos(js) {
   if (calmo) return;

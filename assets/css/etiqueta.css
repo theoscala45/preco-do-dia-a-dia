@@ -957,9 +957,6 @@ html.pronto .espera-tela{display:none}
 }
 /* animação da troca */
 .trocas-lista li{overflow:hidden}
-.trocas-lista li.saindo{background:linear-gradient(90deg,rgba(242,106,15,.10),rgba(242,106,15,0))}
-.trocas-lista button.feito{background:var(--laranja);border-color:var(--laranja);color:#fff}
-.eco-voa{position:fixed;z-index:60;font:800 20px/1 var(--letreiro);color:var(--laranja);pointer-events:none;white-space:nowrap}
-.cupom-itens li.trocado > div{animation:item-trocado 1.6s ease-out}
-@keyframes item-trocado{0%,25%{background:rgba(242,106,15,.20)}100%{background:rgba(242,106,15,0)}}
+.cupom-itens li.trocado > div{animation:item-trocado 1.2s ease-out}
+@keyframes item-trocado{0%{background:rgba(242,106,15,.12)}100%{background:rgba(242,106,15,0)}}
 @media (prefers-reduced-motion:reduce){.cupom-itens li.trocado > div{animation:none}}
