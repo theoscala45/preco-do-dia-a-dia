@@ -1,7 +1,7 @@
-// Página "Resultado da lista": loja única mais barata, economia, divisão em duas lojas, rota e tabela por produto.
+// Página "Minha lista": loja única mais barata, economia, trocas por produtos mais baratos, rota e tabela por produto.
 import { $, gsap, ScrollTrigger, calmo, reais, curto, rolar, carregar, guarda, ligarCep, iniciar, PREVIA, semAcento } from './base.js?v=20261126a';
 import { caixasDoCep } from './cep-caixas.js?v=20261124z';
-import { criarLista, calcular, ligarBusca, ligarItens, ECONOMIA_MINIMA, trocas } from './cesta.js?v=20261127a';
+import { criarLista, calcular, ligarBusca, ligarItens, trocas } from './cesta.js?v=20261127a';
 import { aoAparecer } from './aparecer.js';
 import { compartilhar, salvarFoto, desenharLista, toast, SITE } from './compartilhar.js?v=20261124xa';
 let gatilhoRanking = null, ultimo = null, trocasAtuais = [];
@@ -50,7 +50,7 @@ function desenhar() {
   $('limpar').hidden = !tem;
   if (!tem) return;
 
-  const { porRede, melhor, pior, completas, dupla, vale } = calcular(dados, lista.itens, estado.ponto);
+  const { porRede, melhor, pior, completas } = calcular(dados, lista.itens, estado.ponto);
   ultimo = { porRede, melhor, itens: lista.itens.length, bairro: curto(pt.bairro), produtos: lista.itens.map((i, n) => ({ nome: dados.produtos[i].nome, tam: `${dados.produtos[i].marca}, ${dados.produtos[i].tam}`, v: melhor.v[n] })) };   // o que os botões de compartilhar usam
 
   // loja única
@@ -65,27 +65,7 @@ function desenhar() {
   $('vPonto').innerHTML = `<b>${curto(pt.bairro)}</b><span>${pt.rua}, ${pt.cep}</span>`;
 
   // trocas que baixam a conta (na loja única mais barata)
-  desenharTrocas(melhor, pt);
-
-  // divisão em duas lojas
-  $('duas').classList.toggle('nao', !vale);
-  if (vale) {
-    const achaMais = dupla.faltam < melhor.faltam;
-    $('dTitulo').textContent = `${reais(dupla.total)} em duas lojas`;
-    $('dNota').textContent = achaMais
-      ? `Assim você acha ${plural(melhor.faltam - dupla.faltam, 'item', 'itens')} a mais do que numa loja só.`
-      : `Economia de ${reais(melhor.total - dupla.total)} contra a loja única.`;
-    $('dColunas').innerHTML = [[dupla.a, 0, dupla.ta, dupla.na], [dupla.b, 1, dupla.tb, dupla.nb]].map(([r, lado, sub, n]) => {
-      const itens = lista.itens.map((i, q) => (dupla.lado[q] === lado ? `<li><span>${dados.produtos[i].nome}<small>${dados.produtos[i].marca}</small></span><b>${reais(r.v[q])}</b></li>` : '')).join('');
-      return `<div><header><strong>${r.rede.nome}</strong><span>${plural(n, 'item', 'itens')}</span><b>${reais(sub)}</b></header><ul>${itens}</ul></div>`;
-    }).join('');
-  } else {
-    $('dTitulo').textContent = 'Não compensa nesta lista';
-    $('dNota').textContent = lista.itens.length < 2
-      ? 'Com um item só não há o que dividir.'
-      : `A melhor dupla de lojas economizaria menos de ${reais(ECONOMIA_MINIMA)} contra a loja única. O site só sugere dividir acima disso, ou quando a divisão acha mais itens.`;
-    $('dColunas').innerHTML = '';
-  }
+  desenharTrocas(melhor);
 
   // total em cada rede
   const maior = Math.max(...porRede.map(r => r.total));
@@ -114,10 +94,9 @@ function desenhar() {
   $('tabela').innerHTML = `<thead><tr><th scope="col">Produto</th>${ordem.map((k, c) => `<th scope="col"${c ? '' : ' class="menor"'}>${nomes[k]}</th>`).join('')}</tr></thead><tbody>${linhas}</tbody>
     <tfoot><tr><th scope="row">Total</th>${porRede.map((r, c) => `<td${c ? '' : ' class="menor"'}>${reais(r.total).replace('R$', '').trim()}${r.faltam ? `<small>${plural(r.faltam, 'falta', 'faltam')}</small>` : ''}</td>`).join('')}</tr></tfoot>`;
 
-  // mapa: a loja única em laranja; se a divisão compensa e usa outra rede, ela entra em branco
+  // mapa: o caminho até a loja única mais barata
   if (mapaRota) {
     const mostra = [{ k: melhor.k, nome: nomes[melhor.k] }];
-    if (vale) for (const r of [dupla.a, dupla.b]) if (r.k !== melhor.k) mostra.push({ k: r.k, nome: nomes[r.k] });
     const feitas = mapaRota.mostrar(estado.ponto, mostra.map(m => ({ ...m, id: dados.redes[m.k].id })));
     $('mapaNota').textContent = feitas
       ? `Caminho de carro do bairro até a loja mais perto ${mostra.length > 1 ? 'de cada rede. Em laranja, a loja única mais barata' : `do ${melhor.rede.nome}`}.`
@@ -137,20 +116,19 @@ caixasDoCep({ form: $('cepForm'), campo: $('cep'), msg: $('cepMsg') });
 desenhar();
 
 // ---------- trocas que baixam a conta: um produto parecido da cesta, mais barato na mesma loja
-function desenharTrocas(melhor, pt) {
+function desenharTrocas(melhor) {
   trocasAtuais = trocas(dados, lista.itens, melhor.k, estado.ponto);
-  $('trocas').hidden = !trocasAtuais.length;
-  if (!trocasAtuais.length) return;
-  const nome = nomes[melhor.k], soma = trocasAtuais.reduce((t, x) => t + (x.economia || 0), 0), faltas = trocasAtuais.filter(x => x.economia == null).length;
-  $('tTitulo').textContent = soma > 0 ? `${reais(soma)} a menos no ${nome}` : `${plural(faltas, 'item volta', 'itens voltam')} para a conta`;
-  $('tNota').textContent = `Produtos parecidos da cesta que custam menos no ${nome} do bairro ${curto(pt.bairro)}.`
-    + (faltas ? ` ${faltas === 1 ? 'Um deles troca' : 'Alguns trocam'} um item que o ${nome} não tem.` : '');
+  const nome = nomes[melhor.k], soma = trocasAtuais.reduce((t, x) => t + (x.economia || 0), 0);
+  const tem = trocasAtuais.length > 0;
+  $('tTitulo').textContent = !tem ? 'Não tem trocas' : soma > 0 ? `Troque e pague ${reais(soma)} a menos` : 'Troque e ache tudo no ' + nome;
+  $('tNota').textContent = !tem ? 'Esta já é a lista mais barata.' : `Produtos parecidos, mais baratos no ${nome}.`;
   $('tLista').innerHTML = trocasAtuais.map(({ i, j, economia }) => {
     const de = dados.produtos[i], para = dados.produtos[j];
-    return `<li><span class="t-nome"><b>${para.nome}</b><small>${para.marca}, ${para.tam}, no lugar de ${de.marca}${de.nome !== para.nome ? ` (${de.nome.toLowerCase()})` : ''}</small></span>`
-      + `<span class="t-eco">${economia == null ? `o ${nome} não tem ${de.marca}` : `${reais(economia)} a menos`}</span>`
+    const qual = de.nome === para.nome ? `${para.marca} no lugar de ${de.marca}` : `${para.nome} no lugar de ${de.nome.toLowerCase()}`;
+    return `<li><span class="t-nome">${qual}</span><span class="t-eco">${economia == null ? `o ${nome} não tem` : `${reais(economia)} a menos`}</span>`
       + `<button type="button" class="quieto" data-i="${i}" data-j="${j}">Trocar</button></li>`;
   }).join('');
+  $('tLista').hidden = !tem;
   $('tTodas').hidden = trocasAtuais.length < 2;
 }
 $('tLista').addEventListener('click', e => {

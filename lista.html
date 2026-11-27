@@ -5,13 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#FFFFFF">
 <title>Resultado da lista: Preço Aberto</title>
-<meta name="description" content="Onde a minha lista de compras sai mais barata em São Paulo: numa loja só ou dividida em duas.">
+<meta name="description" content="Onde a minha lista de compras sai mais barata em São Paulo, e o que trocar para pagar menos.">
 <link rel="canonical" href="https://theoscala45.github.io/preco-do-dia-a-dia/lista.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Preço Aberto">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:title" content="Resultado da lista: Preço Aberto">
-<meta property="og:description" content="Onde a minha lista de compras sai mais barata em São Paulo: numa loja só ou dividida em duas.">
+<meta property="og:description" content="Onde a minha lista de compras sai mais barata em São Paulo, e o que trocar para pagar menos.">
 <meta property="og:url" content="https://theoscala45.github.io/preco-do-dia-a-dia/lista.html">
 <meta property="og:image" content="https://theoscala45.github.io/preco-do-dia-a-dia/assets/og.png">
 <meta property="og:image:width" content="1200">
@@ -24,7 +24,7 @@
 <link rel="apple-touch-icon" href="assets/logo/apple-touch-icon.png">
 <link rel="stylesheet" href="assets/vendor/maplibre-gl.css">
 <link rel="stylesheet" href="assets/css/estilo.css?v=20261124w6">
-<link rel="stylesheet" href="assets/css/etiqueta.css?v=20261127a">
+<link rel="stylesheet" href="assets/css/etiqueta.css?v=20261127b">
 <link rel="stylesheet" href="assets/css/celular.css?v=20261126e" media="(max-width:860px)">
 <script>if(!matchMedia('(prefers-reduced-motion: reduce)').matches){document.documentElement.classList.add('anima');setTimeout(function(){document.documentElement.classList.add('mostra')},5000)}</script>
 </head>
@@ -105,19 +105,12 @@
           </div>
         </section>
 
-        <section class="cartao trocas" id="trocas" data-surge hidden>
-          <p class="passo">Trocas que baixam a conta</p>
+        <section class="cartao trocas" id="trocas" data-surge>
+          <p class="passo">Trocar por mais barato</p>
           <h2 id="tTitulo"></h2>
           <p class="nota" id="tNota"></p>
           <ul class="trocas-lista" id="tLista"></ul>
           <button type="button" class="quieto" id="tTodas">Trocar todas</button>
-        </section>
-
-        <section class="cartao duas" id="duas" data-surge>
-          <p class="passo">Dividindo em duas lojas</p>
-          <h2 id="dTitulo"></h2>
-          <p class="nota" id="dNota"></p>
-          <div class="duas-colunas" id="dColunas"></div>
         </section>
 
         <section class="cartao mapa-cartao" data-surge>
@@ -163,6 +156,6 @@
 <script src="assets/vendor/SplitText.min.js" defer></script>
 <script src="assets/vendor/lenis.min.js" defer></script>
 <script src="assets/vendor/maplibre-gl.js" defer></script>
-<script type="module" src="assets/js/lista.js?v=20261127a"></script>
+<script type="module" src="assets/js/lista.js?v=20261127b"></script>
 </body>
 </html>
