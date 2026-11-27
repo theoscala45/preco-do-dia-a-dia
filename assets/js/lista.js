@@ -34,7 +34,7 @@ const plural = (n, um, varios) => `${n} ${n === 1 ? um : varios}`;
 // ---------- mapa da rota até a loja (aparece quando o cartão entra na tela)
 let mapaRota = null;
 try {
-  const { criarMapaDeRota } = await import('./mapa-rota.js?v=20261126g');
+  const { criarMapaDeRota } = await import('./mapa-rota.js?v=20261127l');
   mapaRota = criarMapaDeRota($('mapaRota'), geo, rotas, { calmo });
 } catch (erro) {
   console.warn('Mapa indisponível neste navegador.', erro);

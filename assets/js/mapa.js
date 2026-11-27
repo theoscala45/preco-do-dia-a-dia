@@ -1,7 +1,7 @@
 // Mapa real de São Paulo (MapLibre + OpenStreetMap). A cidade inteira aparece primeiro; com um CEP a câmera
 // desce até o ponto de coleta e desenha o caminho de carro até a loja mais próxima de cada rede (ver DESIGN.md, "Mapa").
 // A sequência das rotas é uma linha do tempo do GSAP.
-import { aguardar } from './espera.js?v=20261126f';
+import { aguardar } from './espera.js?v=20261127l';
 const { gsap } = window;
 export const LARANJA = '#F26A0F', CLARO = '#7A7A82', NADA = 'rgba(0,0,0,0)';
 export const ESTILO = 'assets/mapa-estilo.json';

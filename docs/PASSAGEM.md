@@ -355,3 +355,4 @@ O projeto passou de "O Preço do Dia a Dia" para **Preço Aberto** (escolha do T
 - Página de produto: a mesma linha curta de data dos preços (#prodDataAviso) embaixo dos preços em cada mercado.
 - Minha lista, cartão do mercado mais barato (27/11/2026): nome do mercado menor, preço como destaque com R$ e centavos na mesma cor do número, espaços regulares e a coluna centrada na altura do cartão (só .vencedor, no fim de etiqueta.css).
 - Aviso de data (resultado do CEP, Minha lista, produto): texto mais completo, 'Preços lidos no site de cada mercado em DD/MM. Na loja o preço pode ser diferente: confira antes de comprar.'
+- Espera trocada (27/11/2026, opção A): anel laranja girando em volta da cesta do logo, na tela de espera ('Carregando os preços') e no selo dos mapas. Saiu a etiqueta com números. Vídeos das opções em docs/carregando (fora do Git).
