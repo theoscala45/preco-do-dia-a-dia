@@ -44,7 +44,7 @@ function desenhar() {
   $('ptRotulo').textContent = `bairro ${curto(pt.bairro)}`;
   $('cestaPonto').textContent = estado.cepDado
     ? `Preços do bairro ${curto(pt.bairro)}.`
-    : `Sem CEP, a conta usa ${curto(pt.bairro)}. Digite seu CEP para trocar.`;
+    : `Sem CEP, a conta usa ${curto(pt.bairro)}. Digite seu CEP para ver os preços do seu bairro.`;
   $('vazio').hidden = tem;
   $('cheio').hidden = !tem;
   $('limpar').hidden = !tem;
@@ -136,7 +136,17 @@ function desenharTrocas(melhor) {
 function animarTroca(linhas, aoFim) {
   if (calmo || !linhas.length) { aoFim(); return; }
   linhas.forEach(li => li.querySelector('button')?.setAttribute('disabled', ''));
-  gsap.to(linhas, { autoAlpha: 0, duration: 0.22, ease: 'power1.out', stagger: 0.04, onComplete: aoFim });
+  const card = $('trocas');
+  gsap.timeline({ onComplete: () => {
+    // a troca muda o título e, se era a última, mostra "Não tem trocas": o cartão vai suave da altura de antes para a nova
+    const antes = card.offsetHeight;
+    aoFim();
+    const depois = card.offsetHeight;
+    if (Math.abs(antes - depois) > 1) gsap.fromTo(card, { height: antes, overflow: 'hidden' }, { height: depois, duration: 0.35, ease: 'power2.inOut', clearProps: 'height,overflow' });
+  } })
+    .to(linhas, { autoAlpha: 0, duration: 0.18, ease: 'power1.out', stagger: 0.04 })
+    // a linha fecha devagar: o cartão encolhe junto, sem pulo
+    .to(linhas, { height: 0, paddingTop: 0, paddingBottom: 0, marginTop: 0, marginBottom: 0, borderBottomWidth: 0, duration: 0.32, ease: 'power2.inOut' }, '>-0.04');
 }
 function piscarNovos(js) {
   if (calmo) return;
