@@ -54,7 +54,7 @@
   </header>
 
   <div class="lista-grade">
-    <aside class="editor cartao" data-surge>
+    <aside class="editor cartao" data-surge data-lenis-prevent>
       <h2>Minha lista <span class="conta" id="contagem"></span></h2>
 
       <form class="cep-form" id="cepForm" novalidate>
@@ -71,11 +71,11 @@
       <input id="busca" type="search" placeholder="arroz, leite, sabão em pó" autocomplete="off" aria-controls="sugestoes">
       <ul class="sugestoes" id="sugestoes"></ul>
 
-      <ul class="cupom-itens" id="itens"></ul>
       <div class="acoes">
         <button type="button" class="quieto" id="basica">Usar a lista básica</button>
         <button type="button" class="quieto" id="limpar">Limpar</button>
       </div>
+      <ul class="cupom-itens" id="itens"></ul>
     </aside>
 
     <div class="saida" aria-live="polite">
@@ -156,6 +156,6 @@
 <script src="assets/vendor/SplitText.min.js" defer></script>
 <script src="assets/vendor/lenis.min.js" defer></script>
 <script src="assets/vendor/maplibre-gl.js" defer></script>
-<script type="module" src="assets/js/lista.js?v=20261127d"></script>
+<script type="module" src="assets/js/lista.js?v=20261127e"></script>
 </body>
 </html>
