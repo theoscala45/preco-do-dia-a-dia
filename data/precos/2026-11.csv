@@ -77465,91 +77465,91 @@ data,rede_id,produto_id,cep_id,preco_reais,unidade_de_venda,disponivel,nome_na_p
 2026-11-27,atacadao,P090,C25,,,nao,Laranja-pera Quilo,,2026-11-27T08:38:23-0300
 2026-11-27,atacadao,P097,C25,,,nao,Alface Crespa un,,2026-11-27T08:38:27-0300
 2026-11-27,atacadao,P098,C25,,,nao,Mamão Formosa Quilo,,2026-11-27T08:38:32-0300
-2026-11-27,carrefour,P001,,23.99,un,sim,Arroz Branco Camil Tipo 1 5kg,5kg,2026-11-27T15:10:10-0300
-2026-11-27,carrefour,P002,,29.99,un,sim,Arroz Branco Longo-fino Tipo 1 Tio João 5 Kg,5 Kg,2026-11-27T15:10:14-0300
-2026-11-27,carrefour,P003,,9.38,un,sim,Feijão Carioca Camil 1kg,1kg,2026-11-27T15:10:17-0300
-2026-11-27,carrefour,P005,,7.79,un,sim,Óleo de Soja Soya 900ml,900ml,2026-11-27T15:10:21-0300
-2026-11-27,carrefour,P006,,29.99,un,sim,Azeite Português Extra Virgem Tradicional Gallo 500ml,500ml,2026-11-27T15:10:25-0300
-2026-11-27,carrefour,P007,,3.79,un,sim,Açúcar Refinado União 1kg,1kg,2026-11-27T15:10:28-0300
-2026-11-27,carrefour,P008,,3.48,un,sim,Açúcar Cristal União 1Kg,1Kg,2026-11-27T15:10:32-0300
-2026-11-27,carrefour,P009,,23.99,un,sim,Café Torrado e Moído Extraforte Pilão Pacote 500g,500g,2026-11-27T15:10:36-0300
-2026-11-27,carrefour,P010,,19.90,un,sim,Café em Pó Tradicional 3 Corações 500g,500g,2026-11-27T15:10:40-0300
-2026-11-27,carrefour,P011,,4.99,un,sim,Farinha de Trigo Tradicional Dona Benta 1kg,1kg,2026-11-27T15:10:44-0300
-2026-11-27,carrefour,P012,,8.89,un,sim,Farinha de Mandioca Tipo 1 Fina Yoki Pacote 500g,500g,2026-11-27T15:10:47-0300
-2026-11-27,carrefour,P013,,2.79,un,sim,Macarrão Espaguete Renata com Ovos Nº 9 500g,500g,2026-11-27T15:10:51-0300
-2026-11-27,carrefour,P015,,3.59,un,sim,Molho de Tomate Tradicional Pomarola Sachê 300g,300g,2026-11-27T15:10:55-0300
-2026-11-27,carrefour,P016,,9.99,un,sim,Extrato de Tomate Tradicional Elefante Pote 300g,300g,2026-11-27T15:10:58-0300
-2026-11-27,carrefour,P019,,14.69,un,sim,Aveia em Flocos Regulares Quaker Embalagem Econômica 450g,450g,2026-11-27T15:11:02-0300
-2026-11-27,carrefour,P020,,16.19,un,sim,Achocolatado em Pó Nescau 350g,350g,2026-11-27T15:11:05-0300
-2026-11-27,carrefour,P021,,10.39,un,sim,Biscoito Cream Cracker Amanteigado Vitarella 350g,350g,2026-11-27T15:11:09-0300
-2026-11-27,carrefour,P022,,4.39,un,sim,Biscoito Passatempo Recheado Chocolate 130g,130g,2026-11-27T15:11:14-0300
-2026-11-27,carrefour,P023,,8.98,un,sim,Pão de Forma Pullman 480g,480g,2026-11-27T15:11:18-0300
-2026-11-27,carrefour,P024,,5.98,un,sim,Margarina Cremosa com Sal Qualy 500g,500g,2026-11-27T15:11:21-0300
-2026-11-27,carrefour,P025,,9.90,un,sim,Maionese Hellmann's Tradicional 500g,500g,2026-11-27T15:11:24-0300
-2026-11-27,carrefour,P026,,12.99,un,sim,Ketchup Heinz Tradicional 397g,397g,2026-11-27T15:11:28-0300
-2026-11-27,carrefour,P028,,6.98,un,sim,Atum Ralado em Óleo Gomes da Costa 170g,170g,2026-11-27T15:11:31-0300
-2026-11-27,carrefour,P029,,4.69,un,sim,Milho Verde Quero Lata 170g,170g,2026-11-27T15:11:35-0300
-2026-11-27,carrefour,P030,,5.19,un,sim,Ervilha Quero Lata 170g,170g,2026-11-27T15:11:38-0300
-2026-11-27,carrefour,P031,,5.39,un,sim,Vinagre de Álcool Castelo 750ml,750ml,2026-11-27T15:11:42-0300
-2026-11-27,carrefour,P032,,7.09,un,sim,Tempero Pronto para Frango com Sal Sazon 60g,60g,2026-11-27T15:11:46-0300
-2026-11-27,carrefour,P033,,3.45,un,sim,Caldo Knorr Galinha 57g 6 cubos,57g,2026-11-27T15:11:50-0300
-2026-11-27,carrefour,P034,,11.69,un,sim,Leite Condensado Moça Tradicional Lata Abre Fácil 395g,395g,2026-11-27T15:11:54-0300
-2026-11-27,carrefour,P035,,5.79,un,sim,Creme de Leite NESTLÉ 200g,200g,2026-11-27T15:11:58-0300
-2026-11-27,carrefour,P036,,12.59,un,sim,Mistura para Bolo de Chocolate Dona Benta 450g,450g,2026-11-27T15:12:01-0300
-2026-11-27,carrefour,P037,,3.78,un,sim,"Água Mineral Crystal Sem Gás 1,5L","1,5L",2026-11-27T15:12:05-0300
-2026-11-27,carrefour,P038,,11.99,un,sim,Refrigerante Coca-Cola Garrafa 2 L,2 L,2026-11-27T15:12:08-0300
-2026-11-27,carrefour,P039,,5.19,un,sim,Leite Integral UHT Italac 1 Litro,,2026-11-27T15:12:11-0300
-2026-11-27,carrefour,P040,,5.59,un,sim,Leite Integral Piracanjuba 1 Litro,,2026-11-27T15:12:15-0300
-2026-11-27,carrefour,P041,,5.59,un,sim,Leite Desnatado Piracanjuba 1 Litro,,2026-11-27T15:12:19-0300
-2026-11-27,carrefour,P042,,26.89,un,sim,Leite em Pó Ninho Integral Lata 380g,380g,2026-11-27T15:12:26-0300
-2026-11-27,carrefour,P043,,15.19,un,sim,Manteiga com Sal Aviação 200g,200g,2026-11-27T15:12:30-0300
-2026-11-27,carrefour,P044,,14.59,un,sim,Queijo Muçarela Fatiada Tirolez 150g,150g,2026-11-27T15:12:32-0300
-2026-11-27,carrefour,P045,,17.29,un,sim,Queijo Muçarela Fatiada Light sem Lactose Tirolez 150g,150g,2026-11-27T15:12:37-0300
-2026-11-27,carrefour,P046,,9.99,un,sim,Requeijão Cremoso Vigor 200g,200g,2026-11-27T15:12:40-0300
-2026-11-27,carrefour,P047,,4.29,un,sim,Iogurte Integral Nestlé Tradicional 170g,170g,2026-11-27T15:12:43-0300
-2026-11-27,carrefour,P048,,18.49,un,sim,"Iogurte Parcialmente Desnatado Morango Batavo Probio2 Garrafa 1,15kg Embalagem Econômica","1,15kg",2026-11-27T15:12:48-0300
-2026-11-27,carrefour,P049,,18.89,un,sim,Presunto Cozido Fatiado Soltíssimo Sadia 200 g,200 g,2026-11-27T15:12:52-0300
+2026-11-27,carrefour,P001,,23.99,un,sim,Arroz Branco Camil Tipo 1 5kg,5kg,2026-11-27T17:17:42-0300
+2026-11-27,carrefour,P002,,29.99,un,sim,Arroz Branco Longo-fino Tipo 1 Tio João 5 Kg,5 Kg,2026-11-27T17:17:47-0300
+2026-11-27,carrefour,P003,,9.38,un,sim,Feijão Carioca Camil 1kg,1kg,2026-11-27T17:17:50-0300
+2026-11-27,carrefour,P005,,7.79,un,sim,Óleo de Soja Soya 900ml,900ml,2026-11-27T17:17:55-0300
+2026-11-27,carrefour,P006,,29.99,un,sim,Azeite Português Extra Virgem Tradicional Gallo 500ml,500ml,2026-11-27T17:17:58-0300
+2026-11-27,carrefour,P007,,3.79,un,sim,Açúcar Refinado União 1kg,1kg,2026-11-27T17:18:03-0300
+2026-11-27,carrefour,P008,,3.48,un,sim,Açúcar Cristal União 1Kg,1Kg,2026-11-27T17:18:07-0300
+2026-11-27,carrefour,P009,,23.99,un,sim,Café Torrado e Moído Extraforte Pilão Pacote 500g,500g,2026-11-27T17:18:11-0300
+2026-11-27,carrefour,P010,,19.90,un,sim,Café em Pó Tradicional 3 Corações 500g,500g,2026-11-27T17:18:14-0300
+2026-11-27,carrefour,P011,,4.99,un,sim,Farinha de Trigo Tradicional Dona Benta 1kg,1kg,2026-11-27T17:18:18-0300
+2026-11-27,carrefour,P012,,8.89,un,sim,Farinha de Mandioca Tipo 1 Fina Yoki Pacote 500g,500g,2026-11-27T17:18:22-0300
+2026-11-27,carrefour,P013,,2.79,un,sim,Macarrão Espaguete Renata com Ovos Nº 9 500g,500g,2026-11-27T17:18:25-0300
+2026-11-27,carrefour,P015,,3.59,un,sim,Molho de Tomate Tradicional Pomarola Sachê 300g,300g,2026-11-27T17:18:28-0300
+2026-11-27,carrefour,P016,,9.99,un,sim,Extrato de Tomate Tradicional Elefante Pote 300g,300g,2026-11-27T17:18:32-0300
+2026-11-27,carrefour,P019,,14.69,un,sim,Aveia em Flocos Regulares Quaker Embalagem Econômica 450g,450g,2026-11-27T17:18:36-0300
+2026-11-27,carrefour,P020,,16.19,un,sim,Achocolatado em Pó Nescau 350g,350g,2026-11-27T17:18:40-0300
+2026-11-27,carrefour,P021,,10.39,un,sim,Biscoito Cream Cracker Amanteigado Vitarella 350g,350g,2026-11-27T17:18:43-0300
+2026-11-27,carrefour,P022,,4.39,un,sim,Biscoito Passatempo Recheado Chocolate 130g,130g,2026-11-27T17:18:47-0300
+2026-11-27,carrefour,P023,,8.98,un,sim,Pão de Forma Pullman 480g,480g,2026-11-27T17:18:51-0300
+2026-11-27,carrefour,P024,,5.98,un,sim,Margarina Cremosa com Sal Qualy 500g,500g,2026-11-27T17:18:54-0300
+2026-11-27,carrefour,P025,,9.90,un,sim,Maionese Hellmann's Tradicional 500g,500g,2026-11-27T17:18:58-0300
+2026-11-27,carrefour,P026,,12.99,un,sim,Ketchup Heinz Tradicional 397g,397g,2026-11-27T17:19:02-0300
+2026-11-27,carrefour,P028,,6.98,un,sim,Atum Ralado em Óleo Gomes da Costa 170g,170g,2026-11-27T17:19:05-0300
+2026-11-27,carrefour,P029,,4.69,un,sim,Milho Verde Quero Lata 170g,170g,2026-11-27T17:19:08-0300
+2026-11-27,carrefour,P030,,5.19,un,sim,Ervilha Quero Lata 170g,170g,2026-11-27T17:19:11-0300
+2026-11-27,carrefour,P031,,5.39,un,sim,Vinagre de Álcool Castelo 750ml,750ml,2026-11-27T17:19:14-0300
+2026-11-27,carrefour,P032,,7.09,un,sim,Tempero Pronto para Frango com Sal Sazon 60g,60g,2026-11-27T17:19:17-0300
+2026-11-27,carrefour,P033,,3.45,un,sim,Caldo Knorr Galinha 57g 6 cubos,57g,2026-11-27T17:19:20-0300
+2026-11-27,carrefour,P034,,11.69,un,sim,Leite Condensado Moça Tradicional Lata Abre Fácil 395g,395g,2026-11-27T17:19:24-0300
+2026-11-27,carrefour,P035,,5.79,un,sim,Creme de Leite NESTLÉ 200g,200g,2026-11-27T17:19:27-0300
+2026-11-27,carrefour,P036,,12.59,un,sim,Mistura para Bolo de Chocolate Dona Benta 450g,450g,2026-11-27T17:19:30-0300
+2026-11-27,carrefour,P037,,3.78,un,sim,"Água Mineral Crystal Sem Gás 1,5L","1,5L",2026-11-27T17:19:33-0300
+2026-11-27,carrefour,P038,,11.99,un,sim,Refrigerante Coca-Cola Garrafa 2 L,2 L,2026-11-27T17:19:37-0300
+2026-11-27,carrefour,P039,,5.19,un,sim,Leite Integral UHT Italac 1 Litro,,2026-11-27T17:19:40-0300
+2026-11-27,carrefour,P040,,5.59,un,sim,Leite Integral Piracanjuba 1 Litro,,2026-11-27T17:19:43-0300
+2026-11-27,carrefour,P041,,5.59,un,sim,Leite Desnatado Piracanjuba 1 Litro,,2026-11-27T17:19:47-0300
+2026-11-27,carrefour,P042,,26.89,un,sim,Leite em Pó Ninho Integral Lata 380g,380g,2026-11-27T17:19:50-0300
+2026-11-27,carrefour,P043,,15.19,un,sim,Manteiga com Sal Aviação 200g,200g,2026-11-27T17:19:53-0300
+2026-11-27,carrefour,P044,,14.59,un,sim,Queijo Muçarela Fatiada Tirolez 150g,150g,2026-11-27T17:19:56-0300
+2026-11-27,carrefour,P045,,17.29,un,sim,Queijo Muçarela Fatiada Light sem Lactose Tirolez 150g,150g,2026-11-27T17:20:00-0300
+2026-11-27,carrefour,P046,,9.99,un,sim,Requeijão Cremoso Vigor 200g,200g,2026-11-27T17:20:04-0300
+2026-11-27,carrefour,P047,,4.29,un,sim,Iogurte Integral Nestlé Tradicional 170g,170g,2026-11-27T17:20:07-0300
+2026-11-27,carrefour,P048,,18.49,un,sim,"Iogurte Parcialmente Desnatado Morango Batavo Probio2 Garrafa 1,15kg Embalagem Econômica","1,15kg",2026-11-27T17:20:10-0300
+2026-11-27,carrefour,P049,,18.89,un,sim,Presunto Cozido Fatiado Soltíssimo Sadia 200 g,200 g,2026-11-27T17:20:15-0300
 2026-11-27,carrefour,P051,,9.99,un,sim,Ovos Brancos Carrefour 20 Unidades,20 Unidades,2026-11-27T02:20:38-0300
 2026-11-27,carrefour,P052,,14.69,un,sim,Ovos Vermelhos Carrefour 20 Unidades,20 Unidades,2026-11-27T15:13:03-0300
-2026-11-27,carrefour,P053,,34.59,un,sim,Papel Higiênico Folha Dupla Neutro Neve Toque da Seda 30 Metros Leve 12 Pague 11 Unidades,11 Unidades,2026-11-27T15:13:11-0300
-2026-11-27,carrefour,P055,,5.98,un,sim,Sabonete em Barra Dove Original 90g,90g,2026-11-27T15:13:13-0300
-2026-11-27,carrefour,P056,,2.39,un,sim,Sabonete em Barra Corporal Lux Botanicals Lavanda 85g,85g,2026-11-27T15:13:18-0300
-2026-11-27,carrefour,P057,,15.39,un,sim,Creme Dental Original Mint Colgate Total Prevenção Ativa Caixa 90g,90g,2026-11-27T15:13:22-0300
-2026-11-27,carrefour,P058,,7.19,un,sim,Creme Dental Colgate Máxima Proteção Anticáries 90g,90g,2026-11-27T15:13:25-0300
+2026-11-27,carrefour,P053,,34.59,un,sim,Papel Higiênico Folha Dupla Neutro Neve Toque da Seda 30 Metros Leve 12 Pague 11 Unidades,11 Unidades,2026-11-27T17:20:35-0300
+2026-11-27,carrefour,P055,,5.98,un,sim,Sabonete em Barra Dove Original 90g,90g,2026-11-27T17:20:37-0300
+2026-11-27,carrefour,P056,,2.39,un,sim,Sabonete em Barra Corporal Lux Botanicals Lavanda 85g,85g,2026-11-27T17:20:40-0300
+2026-11-27,carrefour,P057,,15.39,un,sim,Creme Dental Original Mint Colgate Total Prevenção Ativa Caixa 90g,90g,2026-11-27T17:20:43-0300
+2026-11-27,carrefour,P058,,7.19,un,sim,Creme Dental Colgate Máxima Proteção Anticáries 90g,90g,2026-11-27T17:20:48-0300
 2026-11-27,carrefour,P059,,6.79,un,sim,Escova Dental Colgate Classic Clean,,2026-11-27T12:05:42-0300
-2026-11-27,carrefour,P060,,12.90,un,sim,Shampoo Seda Ceramidas Infusão Ativa Retinol e Colágeno 325ml,325ml,2026-11-27T15:13:37-0300
-2026-11-27,carrefour,P061,,20.99,un,sim,Condicionador Seda Ceramidas Infusão Ativa Retinol e Colágeno 325ml,325ml,2026-11-27T15:13:41-0300
-2026-11-27,carrefour,P062,,21.90,un,sim,Desodorante Antitranspirante Aerosol Rexona Clinical Invisible 96h 150ml,150ml,2026-11-27T15:13:44-0300
-2026-11-27,carrefour,P063,,21.99,un,sim,Fio Dental Oral-B Essential Floss Sabor Menta 50m,50m,2026-11-27T15:13:48-0300
-2026-11-27,carrefour,P064,,6.39,un,sim,Absorvente Always Dia Ultra Suave com Abas 8 Unidades,8 Unidades,2026-11-27T15:13:51-0300
-2026-11-27,carrefour,P065,,125.59,un,sim,"Fralda Descartável Infantil Huggies Máxima Proteção M 5,5 a 9,5kg Pacote 66 Unidades Leve Mais Pague Menos",66 Unidades,2026-11-27T15:13:55-0300
-2026-11-27,carrefour,P067,,48.42,un,sim,Lava-Roupas Líquido Omo Lavagem Perfeita Galão 3L,3L,2026-11-27T15:13:59-0300
-2026-11-27,carrefour,P068,,28.49,un,sim,Amaciante Concentrado Comfort Frescor Intenso 500 ml,500 ml,2026-11-27T15:14:02-0300
-2026-11-27,carrefour,P069,,2.19,un,sim,Detergente Ypê Clear 500ml,500ml,2026-11-27T15:14:06-0300
-2026-11-27,carrefour,P070,,4.99,un,sim,Água Sanitária Super Candida 2L,2L,2026-11-27T15:14:10-0300
-2026-11-27,carrefour,P071,,10.39,un,sim,Desinfetante Pinho Sol Original Refil Leve 500ml Pague 450ml,500ml Pague 450ml,2026-11-27T15:14:14-0300
-2026-11-27,carrefour,P072,,8.39,un,sim,Limpador Multiuso Veja O Original Clássico 500ml Oferta,500ml,2026-11-27T15:14:17-0300
-2026-11-27,carrefour,P074,,39.99,un,sim,Saco de Lixo Dover Roll Super Forte Azul com 20 Unidades de 50 Litros,20 Unidades,2026-11-27T15:14:21-0300
+2026-11-27,carrefour,P060,,12.90,un,sim,Shampoo Seda Ceramidas Infusão Ativa Retinol e Colágeno 325ml,325ml,2026-11-27T17:20:59-0300
+2026-11-27,carrefour,P061,,20.99,un,sim,Condicionador Seda Ceramidas Infusão Ativa Retinol e Colágeno 325ml,325ml,2026-11-27T17:21:03-0300
+2026-11-27,carrefour,P062,,21.90,un,sim,Desodorante Antitranspirante Aerosol Rexona Clinical Invisible 96h 150ml,150ml,2026-11-27T17:21:07-0300
+2026-11-27,carrefour,P063,,21.99,un,sim,Fio Dental Oral-B Essential Floss Sabor Menta 50m,50m,2026-11-27T17:21:10-0300
+2026-11-27,carrefour,P064,,6.39,un,sim,Absorvente Always Dia Ultra Suave com Abas 8 Unidades,8 Unidades,2026-11-27T17:21:15-0300
+2026-11-27,carrefour,P065,,125.59,un,sim,"Fralda Descartável Infantil Huggies Máxima Proteção M 5,5 a 9,5kg Pacote 66 Unidades Leve Mais Pague Menos",66 Unidades,2026-11-27T17:21:18-0300
+2026-11-27,carrefour,P067,,48.42,un,sim,Lava-Roupas Líquido Omo Lavagem Perfeita Galão 3L,3L,2026-11-27T17:21:23-0300
+2026-11-27,carrefour,P068,,28.49,un,sim,Amaciante Concentrado Comfort Frescor Intenso 500 ml,500 ml,2026-11-27T17:21:27-0300
+2026-11-27,carrefour,P069,,2.19,un,sim,Detergente Ypê Clear 500ml,500ml,2026-11-27T17:21:31-0300
+2026-11-27,carrefour,P070,,4.99,un,sim,Água Sanitária Super Candida 2L,2L,2026-11-27T17:21:34-0300
+2026-11-27,carrefour,P071,,10.39,un,sim,Desinfetante Pinho Sol Original Refil Leve 500ml Pague 450ml,500ml Pague 450ml,2026-11-27T17:21:38-0300
+2026-11-27,carrefour,P072,,8.39,un,sim,Limpador Multiuso Veja O Original Clássico 500ml Oferta,500ml,2026-11-27T17:21:42-0300
+2026-11-27,carrefour,P074,,39.99,un,sim,Saco de Lixo Dover Roll Super Forte Azul com 20 Unidades de 50 Litros,20 Unidades,2026-11-27T17:21:46-0300
 2026-11-27,carrefour,P077,,15.99,un,sim,Álcool Coperalcool Bacfree 1 Litro,,2026-11-27T02:21:58-0300
-2026-11-27,carrefour,P078,,31.59,un,sim,Inseticida Multi Insetos SBP Aerosol Ultra 360ml,360ml,2026-11-27T15:14:33-0300
-2026-11-27,carrefour,P079,,24.89,un,sim,Filé de Frango Peito Congelado sem Osso Sadia 1Kg,1Kg,2026-11-27T15:14:37-0300
-2026-11-27,carrefour,P080,,17.89,un,sim,Pedaços de Sobrecoxa de Frango Congelado Sadia 1Kg,1Kg,2026-11-27T15:14:40-0300
-2026-11-27,carrefour,P082,,55.90,un,sim,Carne Moída de Patinho Swift 1Kg,1Kg,2026-11-27T15:14:52-0300
-2026-11-27,carrefour,P083,,45.44,un,sim,Acém Bovina Carrefour Aproximadamente 900 g,900 g,2026-11-27T15:14:56-0300
-2026-11-27,carrefour,P086,,14.59,un,sim,Salsicha Tradicional Perdigão Hot Dog 500 g,500 g,2026-11-27T15:15:09-0300
-2026-11-27,carrefour,P087,,26.88,un,sim,Filé De Tilápia Sem Pele Congelado Carrefour Classic 400g,400g,2026-11-27T15:15:12-0300
-2026-11-27,carrefour,P088,,6.83,un,sim,Banana Prata Carrefour  600g,600g,2026-11-27T15:15:16-0300
-2026-11-27,carrefour,P089,,10.99,un,sim,Maca Gala Carrefour Mercado 1kg,1kg,2026-11-27T15:15:19-0300
-2026-11-27,carrefour,P090,,2.99,un,sim,Laranja Pêra Carrefour Aprox. 600g,600g,2026-11-27T15:15:22-0300
-2026-11-27,carrefour,P091,,12.00,un,sim,Limão Tahiti Único 700g,700g,2026-11-27T15:15:26-0300
-2026-11-27,carrefour,P092,,18.00,un,sim,Tomate Salada Único 1Kg,1Kg,2026-11-27T15:15:30-0300
-2026-11-27,carrefour,P093,,8.00,un,sim,Cebola Único Carrefour 1Kg,1Kg,2026-11-27T15:15:33-0300
-2026-11-27,carrefour,P094,,,,nao,Alho Granel Carrefour Aprox. 75g,75g,2026-11-27T15:15:37-0300
+2026-11-27,carrefour,P078,,31.59,un,sim,Inseticida Multi Insetos SBP Aerosol Ultra 360ml,360ml,2026-11-27T17:21:58-0300
+2026-11-27,carrefour,P079,,21.19,un,sim,Filé de Frango Peito Congelado sem Osso Sadia 1Kg,1Kg,2026-11-27T17:22:02-0300
+2026-11-27,carrefour,P080,,15.19,un,sim,Pedaços de Sobrecoxa de Frango Congelado Sadia 1Kg,1Kg,2026-11-27T17:22:04-0300
+2026-11-27,carrefour,P082,,47.49,un,sim,Carne Moída de Patinho Swift 1Kg,1Kg,2026-11-27T17:22:17-0300
+2026-11-27,carrefour,P083,,45.44,un,sim,Acém Bovina Carrefour Aproximadamente 900 g,900 g,2026-11-27T17:22:21-0300
+2026-11-27,carrefour,P086,,14.59,un,sim,Salsicha Tradicional Perdigão Hot Dog 500 g,500 g,2026-11-27T17:22:31-0300
+2026-11-27,carrefour,P087,,21.49,un,sim,Filé De Tilápia Sem Pele Congelado Carrefour Classic 400g,400g,2026-11-27T17:22:36-0300
+2026-11-27,carrefour,P088,,6.83,un,sim,Banana Prata Carrefour  600g,600g,2026-11-27T17:22:40-0300
+2026-11-27,carrefour,P089,,10.99,un,sim,Maca Gala Carrefour Mercado 1kg,1kg,2026-11-27T17:22:43-0300
+2026-11-27,carrefour,P090,,2.99,un,sim,Laranja Pêra Carrefour Aprox. 600g,600g,2026-11-27T17:22:47-0300
+2026-11-27,carrefour,P091,,12.00,un,sim,Limão Tahiti Único 700g,700g,2026-11-27T17:22:51-0300
+2026-11-27,carrefour,P092,,18.00,un,sim,Tomate Salada Único 1Kg,1Kg,2026-11-27T17:22:55-0300
+2026-11-27,carrefour,P093,,8.00,un,sim,Cebola Único Carrefour 1Kg,1Kg,2026-11-27T17:22:58-0300
+2026-11-27,carrefour,P094,,,,nao,Alho Granel Carrefour Aprox. 75g,75g,2026-11-27T17:23:02-0300
 2026-11-27,carrefour,P095,,6.00,un,sim,Batata Lavada Único Carrefour 1Kg,1Kg,2026-11-27T12:07:50-0300
 2026-11-27,carrefour,P096,,4.00,un,sim,Cenoura Único 1Kg,1Kg,2026-11-27T02:23:19-0300
 2026-11-27,carrefour,P097,,4.99,un,sim,Alface Crespa Carrefour Mercado Em Unidade,,2026-11-27T15:16:00-0300
-2026-11-27,carrefour,P098,,22.22,un,sim,"Mamão Formosa Garantia de Origem Aprox. 1,6 Kg","1,6 Kg",2026-11-27T15:16:03-0300
-2026-11-27,carrefour,P099,,3.31,un,sim,Abobrinha Italiana Carrefour Aprox. 400g,400g,2026-11-27T15:16:06-0300
+2026-11-27,carrefour,P098,,22.22,un,sim,"Mamão Formosa Garantia de Origem Aprox. 1,6 Kg","1,6 Kg",2026-11-27T17:23:31-0300
+2026-11-27,carrefour,P099,,3.31,un,sim,Abobrinha Italiana Carrefour Aprox. 400g,400g,2026-11-27T17:23:34-0300
 2026-11-27,carrefour,P100,,4.42,un,sim,Pimentão Verde Carrefour Aprox. 250g,250g,2026-11-27T12:08:15-0300
 2026-11-27,hirota,P001,C01,28.98,un,sim,Arroz Camil Tipo 1 5kg,5kg,2026-11-27T12:02:38-0300
 2026-11-27,hirota,P002,C01,35.98,un,sim,Arroz Tio Joao Tipo 1 5kg,5kg,2026-11-27T12:02:43-0300
@@ -80171,74 +80171,103 @@ data,rede_id,produto_id,cep_id,preco_reais,unidade_de_venda,disponivel,nome_na_p
 2026-11-27,nagumo,P098,C08,13.98,kg,sim,Mamão Formosa,,2026-11-27T12:44:23-0300
 2026-11-27,nagumo,P099,C08,2.98,kg,sim,Abóbora Italiana,,2026-11-27T12:44:44-0300
 2026-11-27,nagumo,P100,C08,15.98,kg,sim,Pimentão Verde,,2026-11-27T12:45:05-0300
-2026-11-27,nagumo,P001,C09,19.70,un,sim,Arroz Branco Tipo 1 Camil 5Kg,5Kg,2026-11-27T15:12:02-0300
-2026-11-27,nagumo,P002,C09,,,nao,Arroz Branco Tio João T1 5Kg,5Kg,2026-11-27T15:12:33-0300
-2026-11-27,nagumo,P003,C09,8.95,un,sim,Feijao Carioca Tipo 1 Camil 1Kg,1Kg,2026-11-27T15:12:43-0300
-2026-11-27,nagumo,P004,C09,7.98,un,sim,Feijao Preto Tipo 1 Camil 1Kg,1Kg,2026-11-27T15:13:14-0300
-2026-11-27,nagumo,P005,C09,6.95,un,sim,Óleo Soja Soya 900Ml,900Ml,2026-11-27T15:13:38-0300
-2026-11-27,nagumo,P006,C09,24.90,un,sim,Azeite Oliva Extra Virgem Gallo 500Ml,500Ml,2026-11-27T15:14:00-0300
-2026-11-27,nagumo,P007,C09,3.25,un,sim,Açúcar União Refinado 1Kg,1Kg,2026-11-27T15:14:23-0300
-2026-11-27,nagumo,P008,C09,3.79,un,sim,Açúcar Cristalçúcar União 1Kg,1Kg,2026-11-27T15:14:45-0300
-2026-11-27,nagumo,P009,C09,28.50,un,sim,Café Torrado E Moído Extra Forte Vácuo Pilão 500G,500G,2026-11-27T15:15:08-0300
-2026-11-27,nagumo,P010,C09,18.50,un,sim,Café Tradicional 3 Corações 500g,500g,2026-11-27T15:15:41-0300
-2026-11-27,nagumo,P011,C09,4.25,un,sim,Farinha De Trigo Tradicional Dona Benta 1Kg,1Kg,2026-11-27T15:15:51-0300
-2026-11-27,nagumo,P012,C09,8.49,un,sim,Farinha De Mandioca Tipo 1 Yoki Pacote 500G,500G,2026-11-27T15:16:03-0300
-2026-11-27,nagumo,P013,C09,,,nao,Massa Espaguete Renata Com Ovos Numero 8  500G,500G,2026-11-27T15:16:34-0300
-2026-11-27,nagumo,P014,C09,5.49,un,sim,Massa Com Ovos Parafuso Barilla 500G,500G,2026-11-27T15:16:45-0300
-2026-11-27,nagumo,P015,C09,3.49,un,sim,Molho De Tomate Pomarola Sache 300 Tradicional,,2026-11-27T15:17:22-0300
-2026-11-27,nagumo,P016,C09,8.98,un,sim,Extrato De Tomate Elefante 300G,300G,2026-11-27T15:17:32-0300
-2026-11-27,nagumo,P017,C09,3.39,un,sim,Sal De Cozinha Refinado Cisne 1Kg,1Kg,2026-11-27T15:17:50-0300
-2026-11-27,nagumo,P018,C09,4.79,un,sim,Fubá Mimoso Yoki 500G,500G,2026-11-27T15:18:01-0300
-2026-11-27,nagumo,P019,C09,15.90,un,sim,Aveia Em Flocos Regulares Econômica Quaker 450G,450G,2026-11-27T15:18:12-0300
-2026-11-27,nagumo,P020,C09,10.58,un,sim,Nescau Lata 350G.Alimento Achocolatado Em Pó Instantâneo,350G,2026-11-27T15:18:23-0300
-2026-11-27,nagumo,P021,C09,6.98,un,sim,Biscoito Cream Cracker Tradicional Vitarella 350G,350G,2026-11-27T15:18:39-0300
-2026-11-27,nagumo,P022,C09,,,nao,Biscoito Recheado De Chocolate Passatempo 130G,130G,2026-11-27T15:18:52-0300
-2026-11-27,nagumo,P023,C09,7.98,un,sim,Pão De Forma Pullman 480G,480G,2026-11-27T15:19:08-0300
-2026-11-27,nagumo,P024,C09,4.98,un,sim,Margarina Cremosa Com Sal Qualy 500G,500G,2026-11-27T15:19:18-0300
-2026-11-27,nagumo,P025,C09,7.75,un,sim,Maionese Hellmann'S Tradicional 500G,500G,2026-11-27T15:19:50-0300
-2026-11-27,nagumo,P026,C09,11.98,un,sim,Ketchup Tradicional Heinz 397G,397G,2026-11-27T15:20:01-0300
-2026-11-27,nagumo,P028,C09,11.49,un,sim,Atum Ralado Em Óleo Gomes Da Costa 170G,170G,2026-11-27T15:20:19-0300
-2026-11-27,nagumo,P029,C09,2.98,un,sim,Milho Verde Quero 170G.,170G,2026-11-27T15:20:31-0300
-2026-11-27,nagumo,P030,C09,4.79,un,sim,Ervilha Quero Lata 170G,170G,2026-11-27T15:21:01-0300
-2026-11-27,nagumo,P031,C09,4.79,un,sim,Vinagre Álcool Castelo 750Ml,750Ml,2026-11-27T15:21:23-0300
-2026-11-27,nagumo,P032,C09,4.98,un,sim,Sazón De Frango 60G,60G,2026-11-27T15:21:45-0300
-2026-11-27,nagumo,P033,C09,3.29,un,sim,Caldo De Galinha Knorr 57G,57G,2026-11-27T15:22:06-0300
-2026-11-27,nagumo,P034,C09,6.49,un,sim,Leite Condensado Moça Nestle 395G Lata,395G,2026-11-27T15:22:28-0300
-2026-11-27,nagumo,P035,C09,2.98,un,sim,Creme De Leite Nestlé Caixa 200G,200G,2026-11-27T15:22:59-0300
-2026-11-27,nagumo,P036,C09,10.98,un,sim,Mistura Para Bolo De Chocolate Dona Benta 450G,450G,2026-11-27T15:23:13-0300
-2026-11-27,nagumo,P037,C09,3.69,un,sim,Agua Sem Gas Crystal 1.5L,1.5L,2026-11-27T15:23:25-0300
-2026-11-27,nagumo,P038,C09,12.59,un,sim,Refrigerante Original Coca Cola 2L,2L,2026-11-27T15:23:39-0300
-2026-11-27,nagumo,P039,C09,,,nao,Leite Uht Integral Italac 1L,1L,2026-11-27T15:23:49-0300
-2026-11-27,nagumo,P040,C09,,,nao,Leite Integral Uht Piracanjuba 1L,1L,2026-11-27T15:23:59-0300
-2026-11-27,nagumo,P041,C09,,,nao,Leite Desnatado Piracanjuba 1L,1L,2026-11-27T15:24:29-0300
-2026-11-27,nagumo,P042,C09,15.59,un,sim,Leite Em Pó Integral Instantâneo Ninho 380G,380G,2026-11-27T15:24:52-0300
-2026-11-27,nagumo,P043,C09,16.98,un,sim,Manteiga Com Sal Aviação Pote 200G,200G,2026-11-27T15:25:13-0300
-2026-11-27,nagumo,P044,C09,,,nao,Queijo Mussarela Fatiado Tirolez 150G,150G,2026-11-27T15:25:37-0300
-2026-11-27,nagumo,P045,C09,,,nao,Queijo Prato Fatiado Tirolez 150G,150G,2026-11-27T15:25:58-0300
-2026-11-27,nagumo,P046,C09,9.98,un,sim,Requeijão Cremoso Tradicional Vigor Copo 200G,200G,2026-11-27T15:26:23-0300
-2026-11-27,nagumo,P047,C09,4.39,un,sim,Iogurte Integral Natural Nestlé Copo 170g,170g,2026-11-27T15:26:51-0300
-2026-11-27,nagumo,P048,C09,19.98,un,sim,"Iogurte De Morango Pense Zero Batavo Garrafa 1,15Kg","1,15Kg",2026-11-27T15:27:17-0300
-2026-11-27,nagumo,P049,C09,12.08,un,sim,Presunto Cozido Fatiado Soltíssimo Sadia 200G,200G,2026-11-27T15:27:48-0300
-2026-11-27,nagumo,P050,C09,,,nao,Queijo De Minas Frescal Tirolez,,2026-11-27T15:27:58-0300
-2026-11-27,nagumo,P051,C09,8.98,un,sim,Ovos Branco Grande com 20,,2026-11-27T15:28:17-0300
-2026-11-27,nagumo,P052,C09,10.98,un,sim,Ovos Vermelho Grande 20Un,20Un,2026-11-27T15:28:31-0300
-2026-11-27,nagumo,P053,C09,,,nao,Papel Higiênico Folha Dupla Neutro Neve Toque Da Seda 30m Pacote Leve 12 Pague 11 unidades,11 unidades,2026-11-27T15:29:01-0300
-2026-11-27,nagumo,P054,C09,,,nao,Papel Higiênico Neutro Folha Dupla Personal VIP LV12PG11 30M,30M,2026-11-27T15:29:31-0300
-2026-11-27,nagumo,P055,C09,2.98,un,sim,Sabonete Em Barra Original Dove 90G,90G,2026-11-27T15:29:43-0300
-2026-11-27,nagumo,P056,C09,2.49,un,sim,Sabonete Em Barra Botanicals Lavanda Lux 85G,85G,2026-11-27T15:30:13-0300
-2026-11-27,nagumo,P057,C09,13.98,un,sim,Creme Dental Colgate Total 12 Advanced Fresh 90G,90G,2026-11-27T15:30:47-0300
-2026-11-27,nagumo,P058,C09,6.49,un,sim,Creme Dental Máxima Proteção Anticáries Colgate 90 G,90 G,2026-11-27T15:30:59-0300
-2026-11-27,nagumo,P059,C09,6.49,un,sim,Escova Dental Classic Clean Macia Colgate,,2026-11-27T15:31:11-0300
-2026-11-27,nagumo,P060,C09,9.98,un,sim,Shampoo Ceramidas Seda 325Ml,325Ml,2026-11-27T15:31:28-0300
-2026-11-27,nagumo,P061,C09,15.98,un,sim,Tratamento Condicionador Seda Ceramidas Frasco 325Ml,325Ml,2026-11-27T15:32:02-0300
-2026-11-27,nagumo,P062,C09,16.90,un,sim,Antitranspirante Aerossol Rexona Clinical Invisible 150ml Spray,150ml,2026-11-27T15:32:15-0300
-2026-11-27,nagumo,P063,C09,,,nao,Fio Dental Essential De Menta Oral B 50M,50M,2026-11-27T15:32:30-0300
-2026-11-27,nagumo,P064,C09,5.98,un,sim,Absorvente Super Proteção Suave Com Abas Always 8Un,8Un,2026-11-27T15:32:41-0300
-2026-11-27,nagumo,P065,C09,19.98,un,sim,"Fralda Descartável Infantil Huggies Tripla Proteção M 5,5 a 9,5kg Pacote 36 Unidades Grátis 2 Fraldas",36 Unidades,2026-11-27T15:32:59-0300
-2026-11-27,nagumo,P067,C09,42.98,un,sim,Sabão Líquido Lavagem Perfeita Omo 3L,3L,2026-11-27T15:33:30-0300
-2026-11-27,nagumo,P068,C09,14.98,un,sim,Amaciante Comfort Concentrado Frescor Intenso 500Ml,500Ml,2026-11-27T15:33:47-0300
-2026-11-27,nagumo,P069,C09,2.75,un,sim,Detergente Ypê Neutro 500Ml,500Ml,2026-11-27T15:34:00-0300
-2026-11-27,nagumo,P070,C09,,,nao,Água Sanitaria Super Candida 2L,2L,2026-11-27T15:34:11-0300
+2026-11-27,nagumo,P001,C09,19.70,un,sim,Arroz Branco Tipo 1 Camil 5Kg,5Kg,2026-11-27T17:18:43-0300
+2026-11-27,nagumo,P002,C09,,,nao,Arroz Branco Tio João T1 5Kg,5Kg,2026-11-27T17:19:03-0300
+2026-11-27,nagumo,P003,C09,8.95,un,sim,Feijao Carioca Tipo 1 Camil 1Kg,1Kg,2026-11-27T17:19:25-0300
+2026-11-27,nagumo,P004,C09,7.98,un,sim,Feijao Preto Tipo 1 Camil 1Kg,1Kg,2026-11-27T17:19:46-0300
+2026-11-27,nagumo,P005,C09,6.95,un,sim,Óleo Soja Soya 900Ml,900Ml,2026-11-27T17:20:06-0300
+2026-11-27,nagumo,P006,C09,24.90,un,sim,Azeite Oliva Extra Virgem Gallo 500Ml,500Ml,2026-11-27T17:20:27-0300
+2026-11-27,nagumo,P007,C09,3.25,un,sim,Açúcar União Refinado 1Kg,1Kg,2026-11-27T17:20:47-0300
+2026-11-27,nagumo,P008,C09,3.79,un,sim,Açúcar Cristalçúcar União 1Kg,1Kg,2026-11-27T17:21:08-0300
+2026-11-27,nagumo,P009,C09,28.50,un,sim,Café Torrado E Moído Extra Forte Vácuo Pilão 500G,500G,2026-11-27T17:21:30-0300
+2026-11-27,nagumo,P010,C09,18.50,un,sim,Café Tradicional 3 Corações 500g,500g,2026-11-27T17:21:52-0300
+2026-11-27,nagumo,P011,C09,4.25,un,sim,Farinha De Trigo Tradicional Dona Benta 1Kg,1Kg,2026-11-27T17:22:13-0300
+2026-11-27,nagumo,P012,C09,8.49,un,sim,Farinha De Mandioca Tipo 1 Yoki Pacote 500G,500G,2026-11-27T17:22:34-0300
+2026-11-27,nagumo,P013,C09,,,nao,Massa Espaguete Renata Com Ovos Numero 8  500G,500G,2026-11-27T17:22:55-0300
+2026-11-27,nagumo,P014,C09,5.49,un,sim,Massa Com Ovos Parafuso Barilla 500G,500G,2026-11-27T17:23:17-0300
+2026-11-27,nagumo,P015,C09,3.49,un,sim,Molho De Tomate Pomarola Sache 300 Tradicional,,2026-11-27T17:23:37-0300
+2026-11-27,nagumo,P016,C09,8.98,un,sim,Extrato De Tomate Elefante 300G,300G,2026-11-27T17:23:58-0300
+2026-11-27,nagumo,P017,C09,3.39,un,sim,Sal De Cozinha Refinado Cisne 1Kg,1Kg,2026-11-27T17:24:20-0300
+2026-11-27,nagumo,P018,C09,4.79,un,sim,Fubá Mimoso Yoki 500G,500G,2026-11-27T17:24:41-0300
+2026-11-27,nagumo,P019,C09,15.90,un,sim,Aveia Em Flocos Regulares Econômica Quaker 450G,450G,2026-11-27T17:25:01-0300
+2026-11-27,nagumo,P020,C09,10.58,un,sim,Nescau Lata 350G.Alimento Achocolatado Em Pó Instantâneo,350G,2026-11-27T17:25:22-0300
+2026-11-27,nagumo,P021,C09,6.98,un,sim,Biscoito Cream Cracker Tradicional Vitarella 350G,350G,2026-11-27T17:25:43-0300
+2026-11-27,nagumo,P022,C09,,,nao,Biscoito Recheado De Chocolate Passatempo 130G,130G,2026-11-27T17:26:05-0300
+2026-11-27,nagumo,P023,C09,7.98,un,sim,Pão De Forma Pullman 480G,480G,2026-11-27T17:26:27-0300
+2026-11-27,nagumo,P024,C09,4.98,un,sim,Margarina Cremosa Com Sal Qualy 500G,500G,2026-11-27T17:26:48-0300
+2026-11-27,nagumo,P025,C09,7.75,un,sim,Maionese Hellmann'S Tradicional 500G,500G,2026-11-27T17:27:09-0300
+2026-11-27,nagumo,P026,C09,11.98,un,sim,Ketchup Tradicional Heinz 397G,397G,2026-11-27T17:27:30-0300
+2026-11-27,nagumo,P028,C09,11.49,un,sim,Atum Ralado Em Óleo Gomes Da Costa 170G,170G,2026-11-27T17:27:50-0300
+2026-11-27,nagumo,P029,C09,2.98,un,sim,Milho Verde Quero 170G.,170G,2026-11-27T17:28:10-0300
+2026-11-27,nagumo,P030,C09,4.79,un,sim,Ervilha Quero Lata 170G,170G,2026-11-27T17:28:31-0300
+2026-11-27,nagumo,P031,C09,4.79,un,sim,Vinagre Álcool Castelo 750Ml,750Ml,2026-11-27T17:28:52-0300
+2026-11-27,nagumo,P032,C09,4.98,un,sim,Sazón De Frango 60G,60G,2026-11-27T17:29:13-0300
+2026-11-27,nagumo,P033,C09,3.29,un,sim,Caldo De Galinha Knorr 57G,57G,2026-11-27T17:29:34-0300
+2026-11-27,nagumo,P034,C09,6.49,un,sim,Leite Condensado Moça Nestle 395G Lata,395G,2026-11-27T17:29:55-0300
+2026-11-27,nagumo,P035,C09,2.98,un,sim,Creme De Leite Nestlé Caixa 200G,200G,2026-11-27T17:30:15-0300
+2026-11-27,nagumo,P036,C09,10.98,un,sim,Mistura Para Bolo De Chocolate Dona Benta 450G,450G,2026-11-27T17:30:36-0300
+2026-11-27,nagumo,P037,C09,3.69,un,sim,Agua Sem Gas Crystal 1.5L,1.5L,2026-11-27T17:30:57-0300
+2026-11-27,nagumo,P038,C09,12.59,un,sim,Refrigerante Original Coca Cola 2L,2L,2026-11-27T17:31:18-0300
+2026-11-27,nagumo,P039,C09,,,nao,Leite Uht Integral Italac 1L,1L,2026-11-27T17:31:39-0300
+2026-11-27,nagumo,P040,C09,,,nao,Leite Integral Uht Piracanjuba 1L,1L,2026-11-27T17:32:01-0300
+2026-11-27,nagumo,P041,C09,,,nao,Leite Desnatado Piracanjuba 1L,1L,2026-11-27T17:32:22-0300
+2026-11-27,nagumo,P042,C09,15.59,un,sim,Leite Em Pó Integral Instantâneo Ninho 380G,380G,2026-11-27T17:32:43-0300
+2026-11-27,nagumo,P043,C09,16.98,un,sim,Manteiga Com Sal Aviação Pote 200G,200G,2026-11-27T17:33:04-0300
+2026-11-27,nagumo,P044,C09,,,nao,Queijo Mussarela Fatiado Tirolez 150G,150G,2026-11-27T17:33:36-0300
+2026-11-27,nagumo,P045,C09,,,nao,Queijo Prato Fatiado Tirolez 150G,150G,2026-11-27T17:33:45-0300
+2026-11-27,nagumo,P046,C09,9.98,un,sim,Requeijão Cremoso Tradicional Vigor Copo 200G,200G,2026-11-27T17:34:18-0300
+2026-11-27,nagumo,P047,C09,4.39,un,sim,Iogurte Integral Natural Nestlé Copo 170g,170g,2026-11-27T17:34:31-0300
+2026-11-27,nagumo,P048,C09,19.98,un,sim,"Iogurte De Morango Pense Zero Batavo Garrafa 1,15Kg","1,15Kg",2026-11-27T17:34:41-0300
+2026-11-27,nagumo,P049,C09,12.08,un,sim,Presunto Cozido Fatiado Soltíssimo Sadia 200G,200G,2026-11-27T17:34:57-0300
+2026-11-27,nagumo,P050,C09,,,nao,Queijo De Minas Frescal Tirolez,,2026-11-27T17:35:07-0300
+2026-11-27,nagumo,P051,C09,8.98,un,sim,Ovos Branco Grande com 20,,2026-11-27T17:35:39-0300
+2026-11-27,nagumo,P052,C09,10.98,un,sim,Ovos Vermelho Grande 20Un,20Un,2026-11-27T17:35:52-0300
+2026-11-27,nagumo,P053,C09,,,nao,Papel Higiênico Folha Dupla Neutro Neve Toque Da Seda 30m Pacote Leve 12 Pague 11 unidades,11 unidades,2026-11-27T17:36:06-0300
+2026-11-27,nagumo,P054,C09,,,nao,Papel Higiênico Neutro Folha Dupla Personal VIP LV12PG11 30M,30M,2026-11-27T17:36:19-0300
+2026-11-27,nagumo,P055,C09,2.98,un,sim,Sabonete Em Barra Original Dove 90G,90G,2026-11-27T17:36:31-0300
+2026-11-27,nagumo,P056,C09,2.49,un,sim,Sabonete Em Barra Botanicals Lavanda Lux 85G,85G,2026-11-27T17:36:44-0300
+2026-11-27,nagumo,P057,C09,13.98,un,sim,Creme Dental Colgate Total 12 Advanced Fresh 90G,90G,2026-11-27T17:36:56-0300
+2026-11-27,nagumo,P058,C09,6.49,un,sim,Creme Dental Máxima Proteção Anticáries Colgate 90 G,90 G,2026-11-27T17:37:09-0300
+2026-11-27,nagumo,P059,C09,6.49,un,sim,Escova Dental Classic Clean Macia Colgate,,2026-11-27T17:37:22-0300
+2026-11-27,nagumo,P060,C09,9.98,un,sim,Shampoo Ceramidas Seda 325Ml,325Ml,2026-11-27T17:37:34-0300
+2026-11-27,nagumo,P061,C09,15.98,un,sim,Tratamento Condicionador Seda Ceramidas Frasco 325Ml,325Ml,2026-11-27T17:37:48-0300
+2026-11-27,nagumo,P062,C09,16.90,un,sim,Antitranspirante Aerossol Rexona Clinical Invisible 150ml Spray,150ml,2026-11-27T17:38:01-0300
+2026-11-27,nagumo,P063,C09,,,nao,Fio Dental Essential De Menta Oral B 50M,50M,2026-11-27T17:38:10-0300
+2026-11-27,nagumo,P064,C09,5.98,un,sim,Absorvente Super Proteção Suave Com Abas Always 8Un,8Un,2026-11-27T17:38:21-0300
+2026-11-27,nagumo,P065,C09,19.98,un,sim,"Fralda Descartável Infantil Huggies Tripla Proteção M 5,5 a 9,5kg Pacote 36 Unidades Grátis 2 Fraldas",36 Unidades,2026-11-27T17:38:33-0300
+2026-11-27,nagumo,P067,C09,42.98,un,sim,Sabão Líquido Lavagem Perfeita Omo 3L,3L,2026-11-27T17:38:45-0300
+2026-11-27,nagumo,P068,C09,14.98,un,sim,Amaciante Comfort Concentrado Frescor Intenso 500Ml,500Ml,2026-11-27T17:38:58-0300
+2026-11-27,nagumo,P069,C09,2.75,un,sim,Detergente Ypê Neutro 500Ml,500Ml,2026-11-27T17:39:10-0300
+2026-11-27,nagumo,P070,C09,,,nao,Água Sanitaria Super Candida 2L,2L,2026-11-27T17:39:21-0300
+2026-11-27,nagumo,P071,C09,5.98,un,sim,Desinfetante Original Pinho Sol Leve 500Ml Pague 450Ml,500Ml Pague 450Ml,2026-11-27T17:39:34-0300
+2026-11-27,nagumo,P072,C09,4.39,un,sim,Limpador Multiuso Original Gold Veja 500Ml,500Ml,2026-11-27T17:39:48-0300
+2026-11-27,nagumo,P073,C09,11.98,un,sim,Esponja Laranja Loucas Delicadas Scotch Brite 3 Unidades,3 Unidades,2026-11-27T17:40:01-0300
+2026-11-27,nagumo,P075,C09,7.98,un,sim,Toalha De Papel Folha Dupla Clássica 19X20Cm Snob 2Un,2Un,2026-11-27T17:40:11-0300
+2026-11-27,nagumo,P076,C09,16.98,un,sim,Sabão Barra Glicerinado Neutro Original Ypê 800g 5 Unidades,5 Unidades,2026-11-27T17:40:41-0300
+2026-11-27,nagumo,P077,C09,12.95,un,sim,Alcool Coperalcool Liquido Tradicional 46 Inpm 1Lt,1Lt,2026-11-27T17:40:52-0300
+2026-11-27,nagumo,P078,C09,22.90,un,sim,Inseticida Aerossol Ação Magnética Base Água Sbp 360Ml,360Ml,2026-11-27T17:41:06-0300
+2026-11-27,nagumo,P079,C09,17.98,un,sim,File De Peito De Frango Congelado Pacote Sadia 1kg,1kg,2026-11-27T17:41:19-0300
+2026-11-27,nagumo,P080,C09,14.98,kg,sim,Coxa E Sobrecoxa De Frango Resfriado,,2026-11-27T17:41:29-0300
+2026-11-27,nagumo,P081,C09,,,nao,Frango Inteiro Congelado Sadia,,2026-11-27T17:41:38-0300
+2026-11-27,nagumo,P082,C09,62.98,kg,sim,Carne Patinho Moido,,2026-11-27T17:42:08-0300
+2026-11-27,nagumo,P083,C09,44.98,kg,sim,Carne Acém Picado,,2026-11-27T17:42:29-0300
+2026-11-27,nagumo,P084,C09,67.98,kg,sim,Carne Contra File Bife,,2026-11-27T17:42:50-0300
+2026-11-27,nagumo,P085,C09,19.98,un,sim,Linguiça Carne Suína Toscana Seara 600g,600g,2026-11-27T17:43:13-0300
+2026-11-27,nagumo,P086,C09,14.98,un,sim,Salsicha Hot Dog Perdigão 500g,500g,2026-11-27T17:43:35-0300
+2026-11-27,nagumo,P087,C09,,,nao,Filé de Tilápia Congelado sem Pele Oceani Pacote 400g,400g,2026-11-27T17:43:56-0300
+2026-11-27,nagumo,P088,C09,5.98,kg,sim,Banana Prata KG,,2026-11-27T17:44:17-0300
+2026-11-27,nagumo,P089,C09,12.98,kg,sim,Maça Gala,,2026-11-27T17:44:38-0300
+2026-11-27,nagumo,P090,C09,2.49,kg,sim,Laranja Pera,,2026-11-27T17:44:59-0300
+2026-11-27,nagumo,P091,C09,10.98,kg,sim,Limão Thaiti,,2026-11-27T17:45:20-0300
+2026-11-27,nagumo,P092,C09,14.98,kg,sim,Tomate Salada,,2026-11-27T17:45:41-0300
+2026-11-27,nagumo,P093,C09,8.98,kg,sim,Cebola,,2026-11-27T17:46:14-0300
+2026-11-27,nagumo,P094,C09,17.98,kg,sim,Alho,,2026-11-27T17:46:26-0300
+2026-11-27,nagumo,P095,C09,6.98,kg,sim,Batata Lavada,,2026-11-27T17:46:36-0300
+2026-11-27,nagumo,P096,C09,2.49,kg,sim,Cenoura,,2026-11-27T17:47:07-0300
+2026-11-27,nagumo,P097,C09,,,nao,Alface Crespa J.Watanabe Unidade,,2026-11-27T17:47:27-0300
+2026-11-27,nagumo,P098,C09,13.98,kg,sim,Mamão Formosa,,2026-11-27T17:47:48-0300
+2026-11-27,nagumo,P099,C09,2.98,kg,sim,Abóbora Italiana,,2026-11-27T17:48:09-0300
+2026-11-27,nagumo,P100,C09,15.98,kg,sim,Pimentão Verde,,2026-11-27T17:48:30-0300
 2026-11-27,nagumo,P001,C10,19.70,un,sim,Arroz Branco Tipo 1 Camil 5Kg,5Kg,2026-11-27T12:10:46-0300
 2026-11-27,nagumo,P002,C10,,,nao,Arroz Branco Tio João T1 5Kg,5Kg,2026-11-27T12:11:10-0300
 2026-11-27,nagumo,P003,C10,8.95,un,sim,Feijao Carioca Tipo 1 Camil 1Kg,1Kg,2026-11-27T12:11:32-0300
@@ -80627,49 +80656,103 @@ data,rede_id,produto_id,cep_id,preco_reais,unidade_de_venda,disponivel,nome_na_p
 2026-11-27,nagumo,P098,C13,13.98,kg,sim,Mamão Formosa,,2026-11-27T13:00:51-0300
 2026-11-27,nagumo,P099,C13,2.98,kg,sim,Abóbora Italiana,,2026-11-27T13:01:11-0300
 2026-11-27,nagumo,P100,C13,15.98,kg,sim,Pimentão Verde,,2026-11-27T13:01:32-0300
-2026-11-27,nagumo,P001,C14,19.70,un,sim,Arroz Branco Tipo 1 Camil 5Kg,5Kg,2026-11-27T13:04:10-0300
-2026-11-27,nagumo,P002,C14,,,nao,Arroz Branco Tio João T1 5Kg,5Kg,2026-11-27T13:04:33-0300
-2026-11-27,nagumo,P003,C14,8.95,un,sim,Feijao Carioca Tipo 1 Camil 1Kg,1Kg,2026-11-27T13:04:57-0300
-2026-11-27,nagumo,P004,C14,7.98,un,sim,Feijao Preto Tipo 1 Camil 1Kg,1Kg,2026-11-27T13:05:20-0300
-2026-11-27,nagumo,P005,C14,,,nao,Óleo Soja Soya 900Ml,900Ml,2026-11-27T13:05:42-0300
-2026-11-27,nagumo,P006,C14,24.90,un,sim,Azeite Oliva Extra Virgem Gallo 500Ml,500Ml,2026-11-27T13:06:06-0300
-2026-11-27,nagumo,P007,C14,3.25,un,sim,Açúcar União Refinado 1Kg,1Kg,2026-11-27T13:06:31-0300
-2026-11-27,nagumo,P008,C14,3.79,un,sim,Açúcar Cristalçúcar União 1Kg,1Kg,2026-11-27T13:06:55-0300
-2026-11-27,nagumo,P009,C14,28.50,un,sim,Café Torrado E Moído Extra Forte Vácuo Pilão 500G,500G,2026-11-27T13:07:19-0300
-2026-11-27,nagumo,P010,C14,18.50,un,sim,Café Tradicional 3 Corações 500g,500g,2026-11-27T13:07:43-0300
-2026-11-27,nagumo,P011,C14,4.25,un,sim,Farinha De Trigo Tradicional Dona Benta 1Kg,1Kg,2026-11-27T13:08:09-0300
-2026-11-27,nagumo,P012,C14,8.98,un,sim,Farinha De Mandioca Tipo 1 Yoki Pacote 500G,500G,2026-11-27T13:08:41-0300
-2026-11-27,nagumo,P013,C14,1.99,un,sim,Massa Espaguete Renata Com Ovos Numero 8  500G,500G,2026-11-27T13:08:55-0300
-2026-11-27,nagumo,P014,C14,5.49,un,sim,Massa Com Ovos Parafuso Barilla 500G,500G,2026-11-27T13:09:10-0300
-2026-11-27,nagumo,P015,C14,3.49,un,sim,Molho De Tomate Pomarola Sache 300 Tradicional,,2026-11-27T13:09:25-0300
-2026-11-27,nagumo,P016,C14,8.98,un,sim,Extrato De Tomate Elefante 300G,300G,2026-11-27T13:09:38-0300
-2026-11-27,nagumo,P017,C14,3.39,un,sim,Sal De Cozinha Refinado Cisne 1Kg,1Kg,2026-11-27T13:09:55-0300
-2026-11-27,nagumo,P018,C14,4.98,un,sim,Fubá Mimoso Yoki 500G,500G,2026-11-27T13:10:07-0300
-2026-11-27,nagumo,P019,C14,15.90,un,sim,Aveia Em Flocos Regulares Econômica Quaker 450G,450G,2026-11-27T13:10:27-0300
-2026-11-27,nagumo,P020,C14,10.58,un,sim,Nescau Lata 350G.Alimento Achocolatado Em Pó Instantâneo,350G,2026-11-27T13:10:44-0300
-2026-11-27,nagumo,P021,C14,6.98,un,sim,Biscoito Cream Cracker Tradicional Vitarella 350G,350G,2026-11-27T13:11:11-0300
-2026-11-27,nagumo,P022,C14,3.49,un,sim,Biscoito Recheado De Chocolate Passatempo 130G,130G,2026-11-27T13:11:26-0300
-2026-11-27,nagumo,P023,C14,7.98,un,sim,Pão De Forma Pullman 480G,480G,2026-11-27T13:11:59-0300
-2026-11-27,nagumo,P024,C14,4.98,un,sim,Margarina Cremosa Com Sal Qualy 500G,500G,2026-11-27T13:12:13-0300
-2026-11-27,nagumo,P025,C14,7.75,un,sim,Maionese Hellmann'S Tradicional 500G,500G,2026-11-27T13:12:28-0300
-2026-11-27,nagumo,P026,C14,11.98,un,sim,Ketchup Tradicional Heinz 397G,397G,2026-11-27T13:12:48-0300
-2026-11-27,nagumo,P028,C14,11.98,un,sim,Atum Ralado Em Óleo Gomes Da Costa 170G,170G,2026-11-27T13:13:02-0300
-2026-11-27,nagumo,P029,C14,2.98,un,sim,Milho Verde Quero 170G.,170G,2026-11-27T13:13:19-0300
-2026-11-27,nagumo,P030,C14,4.79,un,sim,Ervilha Quero Lata 170G,170G,2026-11-27T13:13:49-0300
-2026-11-27,nagumo,P031,C14,4.79,un,sim,Vinagre Álcool Castelo 750Ml,750Ml,2026-11-27T13:14:03-0300
-2026-11-27,nagumo,P032,C14,4.98,un,sim,Sazón De Frango 60G,60G,2026-11-27T13:14:37-0300
-2026-11-27,nagumo,P033,C14,3.29,un,sim,Caldo De Galinha Knorr 57G,57G,2026-11-27T13:15:01-0300
-2026-11-27,nagumo,P034,C14,6.49,un,sim,Leite Condensado Moça Nestle 395G Lata,395G,2026-11-27T13:15:25-0300
-2026-11-27,nagumo,P035,C14,2.98,un,sim,Creme De Leite Nestlé Caixa 200G,200G,2026-11-27T13:15:49-0300
-2026-11-27,nagumo,P036,C14,10.98,un,sim,Mistura Para Bolo De Chocolate Dona Benta 450G,450G,2026-11-27T13:16:21-0300
-2026-11-27,nagumo,P037,C14,3.69,un,sim,Agua Sem Gas Crystal 1.5L,1.5L,2026-11-27T13:16:35-0300
-2026-11-27,nagumo,P038,C14,12.59,un,sim,Refrigerante Original Coca Cola 2L,2L,2026-11-27T13:16:48-0300
-2026-11-27,nagumo,P039,C14,,,nao,Leite Uht Integral Italac 1L,1L,2026-11-27T13:17:03-0300
-2026-11-27,nagumo,P040,C14,,,nao,Leite Integral Uht Piracanjuba 1L,1L,2026-11-27T13:17:12-0300
-2026-11-27,nagumo,P041,C14,,,nao,Leite Desnatado Piracanjuba 1L,1L,2026-11-27T13:17:44-0300
-2026-11-27,nagumo,P042,C14,,,nao,Leite Em Pó Integral Instantâneo Ninho 380G,380G,2026-11-27T13:18:17-0300
-2026-11-27,nagumo,P043,C14,16.98,un,sim,Manteiga Com Sal Aviação Pote 200G,200G,2026-11-27T13:18:29-0300
-2026-11-27,nagumo,P044,C14,,,nao,Queijo Mussarela Fatiado Tirolez 150G,150G,2026-11-27T13:18:42-0300
+2026-11-27,nagumo,P001,C14,19.70,un,sim,Arroz Branco Tipo 1 Camil 5Kg,5Kg,2026-11-27T17:26:12-0300
+2026-11-27,nagumo,P002,C14,,,nao,Arroz Branco Tio João T1 5Kg,5Kg,2026-11-27T17:26:32-0300
+2026-11-27,nagumo,P003,C14,8.95,un,sim,Feijao Carioca Tipo 1 Camil 1Kg,1Kg,2026-11-27T17:27:03-0300
+2026-11-27,nagumo,P004,C14,7.98,un,sim,Feijao Preto Tipo 1 Camil 1Kg,1Kg,2026-11-27T17:27:12-0300
+2026-11-27,nagumo,P005,C14,,,nao,Óleo Soja Soya 900Ml,900Ml,2026-11-27T17:27:24-0300
+2026-11-27,nagumo,P006,C14,24.90,un,sim,Azeite Oliva Extra Virgem Gallo 500Ml,500Ml,2026-11-27T17:27:35-0300
+2026-11-27,nagumo,P007,C14,3.25,un,sim,Açúcar União Refinado 1Kg,1Kg,2026-11-27T17:27:46-0300
+2026-11-27,nagumo,P008,C14,3.79,un,sim,Açúcar Cristalçúcar União 1Kg,1Kg,2026-11-27T17:28:16-0300
+2026-11-27,nagumo,P009,C14,28.50,un,sim,Café Torrado E Moído Extra Forte Vácuo Pilão 500G,500G,2026-11-27T17:28:38-0300
+2026-11-27,nagumo,P010,C14,18.50,un,sim,Café Tradicional 3 Corações 500g,500g,2026-11-27T17:29:00-0300
+2026-11-27,nagumo,P011,C14,4.25,un,sim,Farinha De Trigo Tradicional Dona Benta 1Kg,1Kg,2026-11-27T17:29:21-0300
+2026-11-27,nagumo,P012,C14,8.98,un,sim,Farinha De Mandioca Tipo 1 Yoki Pacote 500G,500G,2026-11-27T17:29:42-0300
+2026-11-27,nagumo,P013,C14,1.99,un,sim,Massa Espaguete Renata Com Ovos Numero 8  500G,500G,2026-11-27T17:30:04-0300
+2026-11-27,nagumo,P014,C14,5.49,un,sim,Massa Com Ovos Parafuso Barilla 500G,500G,2026-11-27T17:30:26-0300
+2026-11-27,nagumo,P015,C14,3.49,un,sim,Molho De Tomate Pomarola Sache 300 Tradicional,,2026-11-27T17:30:48-0300
+2026-11-27,nagumo,P016,C14,8.98,un,sim,Extrato De Tomate Elefante 300G,300G,2026-11-27T17:31:09-0300
+2026-11-27,nagumo,P017,C14,3.39,un,sim,Sal De Cozinha Refinado Cisne 1Kg,1Kg,2026-11-27T17:31:30-0300
+2026-11-27,nagumo,P018,C14,4.98,un,sim,Fubá Mimoso Yoki 500G,500G,2026-11-27T17:31:52-0300
+2026-11-27,nagumo,P019,C14,15.90,un,sim,Aveia Em Flocos Regulares Econômica Quaker 450G,450G,2026-11-27T17:32:12-0300
+2026-11-27,nagumo,P020,C14,10.58,un,sim,Nescau Lata 350G.Alimento Achocolatado Em Pó Instantâneo,350G,2026-11-27T17:32:34-0300
+2026-11-27,nagumo,P021,C14,6.98,un,sim,Biscoito Cream Cracker Tradicional Vitarella 350G,350G,2026-11-27T17:32:59-0300
+2026-11-27,nagumo,P022,C14,3.49,un,sim,Biscoito Recheado De Chocolate Passatempo 130G,130G,2026-11-27T17:33:24-0300
+2026-11-27,nagumo,P023,C14,7.98,un,sim,Pão De Forma Pullman 480G,480G,2026-11-27T17:33:45-0300
+2026-11-27,nagumo,P024,C14,4.98,un,sim,Margarina Cremosa Com Sal Qualy 500G,500G,2026-11-27T17:34:06-0300
+2026-11-27,nagumo,P025,C14,7.75,un,sim,Maionese Hellmann'S Tradicional 500G,500G,2026-11-27T17:34:28-0300
+2026-11-27,nagumo,P026,C14,11.98,un,sim,Ketchup Tradicional Heinz 397G,397G,2026-11-27T17:34:49-0300
+2026-11-27,nagumo,P028,C14,11.98,un,sim,Atum Ralado Em Óleo Gomes Da Costa 170G,170G,2026-11-27T17:35:10-0300
+2026-11-27,nagumo,P029,C14,2.98,un,sim,Milho Verde Quero 170G.,170G,2026-11-27T17:35:31-0300
+2026-11-27,nagumo,P030,C14,4.79,un,sim,Ervilha Quero Lata 170G,170G,2026-11-27T17:35:52-0300
+2026-11-27,nagumo,P031,C14,4.79,un,sim,Vinagre Álcool Castelo 750Ml,750Ml,2026-11-27T17:36:13-0300
+2026-11-27,nagumo,P032,C14,4.98,un,sim,Sazón De Frango 60G,60G,2026-11-27T17:36:34-0300
+2026-11-27,nagumo,P033,C14,3.29,un,sim,Caldo De Galinha Knorr 57G,57G,2026-11-27T17:36:57-0300
+2026-11-27,nagumo,P034,C14,6.49,un,sim,Leite Condensado Moça Nestle 395G Lata,395G,2026-11-27T17:37:17-0300
+2026-11-27,nagumo,P035,C14,2.98,un,sim,Creme De Leite Nestlé Caixa 200G,200G,2026-11-27T17:37:38-0300
+2026-11-27,nagumo,P036,C14,10.98,un,sim,Mistura Para Bolo De Chocolate Dona Benta 450G,450G,2026-11-27T17:37:59-0300
+2026-11-27,nagumo,P037,C14,3.69,un,sim,Agua Sem Gas Crystal 1.5L,1.5L,2026-11-27T17:38:21-0300
+2026-11-27,nagumo,P038,C14,12.59,un,sim,Refrigerante Original Coca Cola 2L,2L,2026-11-27T17:38:43-0300
+2026-11-27,nagumo,P039,C14,,,nao,Leite Uht Integral Italac 1L,1L,2026-11-27T17:39:03-0300
+2026-11-27,nagumo,P040,C14,,,nao,Leite Integral Uht Piracanjuba 1L,1L,2026-11-27T17:39:25-0300
+2026-11-27,nagumo,P041,C14,,,nao,Leite Desnatado Piracanjuba 1L,1L,2026-11-27T17:39:54-0300
+2026-11-27,nagumo,P042,C14,,,nao,Leite Em Pó Integral Instantâneo Ninho 380G,380G,2026-11-27T17:40:06-0300
+2026-11-27,nagumo,P043,C14,16.98,un,sim,Manteiga Com Sal Aviação Pote 200G,200G,2026-11-27T17:40:26-0300
+2026-11-27,nagumo,P044,C14,,,nao,Queijo Mussarela Fatiado Tirolez 150G,150G,2026-11-27T17:40:52-0300
+2026-11-27,nagumo,P045,C14,,,nao,Queijo Prato Fatiado Tirolez 150G,150G,2026-11-27T17:41:04-0300
+2026-11-27,nagumo,P046,C14,,,nao,Requeijão Cremoso Tradicional Vigor Copo 200G,200G,2026-11-27T17:41:15-0300
+2026-11-27,nagumo,P047,C14,3.78,un,sim,Iogurte Integral Natural Nestlé Copo 170g,170g,2026-11-27T17:41:48-0300
+2026-11-27,nagumo,P048,C14,19.98,un,sim,"Iogurte De Morango Pense Zero Batavo Garrafa 1,15Kg","1,15Kg",2026-11-27T17:41:59-0300
+2026-11-27,nagumo,P049,C14,14.98,un,sim,Presunto Cozido Fatiado Soltíssimo Sadia 200G,200G,2026-11-27T17:42:13-0300
+2026-11-27,nagumo,P050,C14,69.90,kg,sim,Queijo De Minas Frescal Tirolez,,2026-11-27T17:42:44-0300
+2026-11-27,nagumo,P051,C14,8.98,un,sim,Ovos Branco Grande com 20,,2026-11-27T17:43:06-0300
+2026-11-27,nagumo,P052,C14,10.98,un,sim,Ovos Vermelho Grande 20Un,20Un,2026-11-27T17:43:27-0300
+2026-11-27,nagumo,P053,C14,,,nao,Papel Higiênico Folha Dupla Neutro Neve Toque Da Seda 30m Pacote Leve 12 Pague 11 unidades,11 unidades,2026-11-27T17:43:47-0300
+2026-11-27,nagumo,P054,C14,,,nao,Papel Higiênico Neutro Folha Dupla Personal VIP LV12PG11 30M,30M,2026-11-27T17:44:08-0300
+2026-11-27,nagumo,P055,C14,2.98,un,sim,Sabonete Em Barra Original Dove 90G,90G,2026-11-27T17:44:30-0300
+2026-11-27,nagumo,P056,C14,2.49,un,sim,Sabonete Em Barra Botanicals Lavanda Lux 85G,85G,2026-11-27T17:44:51-0300
+2026-11-27,nagumo,P057,C14,13.98,un,sim,Creme Dental Colgate Total 12 Advanced Fresh 90G,90G,2026-11-27T17:45:13-0300
+2026-11-27,nagumo,P058,C14,6.49,un,sim,Creme Dental Máxima Proteção Anticáries Colgate 90 G,90 G,2026-11-27T17:45:34-0300
+2026-11-27,nagumo,P059,C14,6.49,un,sim,Escova Dental Classic Clean Macia Colgate,,2026-11-27T17:45:54-0300
+2026-11-27,nagumo,P060,C14,9.98,un,sim,Shampoo Ceramidas Seda 325Ml,325Ml,2026-11-27T17:46:17-0300
+2026-11-27,nagumo,P061,C14,15.98,un,sim,Tratamento Condicionador Seda Ceramidas Frasco 325Ml,325Ml,2026-11-27T17:46:40-0300
+2026-11-27,nagumo,P062,C14,,,nao,Antitranspirante Aerossol Rexona Clinical Invisible 150ml Spray,150ml,2026-11-27T17:47:04-0300
+2026-11-27,nagumo,P063,C14,,,nao,Fio Dental Essential De Menta Oral B 50M,50M,2026-11-27T17:47:26-0300
+2026-11-27,nagumo,P064,C14,5.98,un,sim,Absorvente Super Proteção Suave Com Abas Always 8Un,8Un,2026-11-27T17:47:49-0300
+2026-11-27,nagumo,P065,C14,19.98,un,sim,"Fralda Descartável Infantil Huggies Tripla Proteção M 5,5 a 9,5kg Pacote 36 Unidades Grátis 2 Fraldas",36 Unidades,2026-11-27T17:48:10-0300
+2026-11-27,nagumo,P067,C14,42.98,un,sim,Sabão Líquido Lavagem Perfeita Omo 3L,3L,2026-11-27T17:48:32-0300
+2026-11-27,nagumo,P068,C14,14.98,un,sim,Amaciante Comfort Concentrado Frescor Intenso 500Ml,500Ml,2026-11-27T17:48:54-0300
+2026-11-27,nagumo,P069,C14,2.75,un,sim,Detergente Ypê Neutro 500Ml,500Ml,2026-11-27T17:49:16-0300
+2026-11-27,nagumo,P070,C14,,,nao,Água Sanitaria Super Candida 2L,2L,2026-11-27T17:49:36-0300
+2026-11-27,nagumo,P071,C14,5.98,un,sim,Desinfetante Original Pinho Sol Leve 500Ml Pague 450Ml,500Ml Pague 450Ml,2026-11-27T17:49:58-0300
+2026-11-27,nagumo,P072,C14,4.39,un,sim,Limpador Multiuso Original Gold Veja 500Ml,500Ml,2026-11-27T17:50:20-0300
+2026-11-27,nagumo,P073,C14,11.98,un,sim,Esponja Laranja Loucas Delicadas Scotch Brite 3 Unidades,3 Unidades,2026-11-27T17:50:52-0300
+2026-11-27,nagumo,P075,C14,7.98,un,sim,Toalha De Papel Folha Dupla Clássica 19X20Cm Snob 2Un,2Un,2026-11-27T17:51:05-0300
+2026-11-27,nagumo,P076,C14,16.98,un,sim,Sabão Barra Glicerinado Neutro Original Ypê 800g 5 Unidades,5 Unidades,2026-11-27T17:51:20-0300
+2026-11-27,nagumo,P077,C14,12.95,un,sim,Alcool Coperalcool Liquido Tradicional 46 Inpm 1Lt,1Lt,2026-11-27T17:51:52-0300
+2026-11-27,nagumo,P078,C14,22.90,un,sim,Inseticida Aerossol Ação Magnética Base Água Sbp 360Ml,360Ml,2026-11-27T17:52:04-0300
+2026-11-27,nagumo,P079,C14,17.98,un,sim,File De Peito De Frango Congelado Pacote Sadia 1kg,1kg,2026-11-27T17:52:14-0300
+2026-11-27,nagumo,P080,C14,14.98,kg,sim,Coxa E Sobrecoxa De Frango Resfriado,,2026-11-27T17:52:26-0300
+2026-11-27,nagumo,P081,C14,,,nao,Frango Inteiro Congelado Sadia,,2026-11-27T17:52:41-0300
+2026-11-27,nagumo,P082,C14,65.98,kg,sim,Carne Patinho Moido,,2026-11-27T17:52:54-0300
+2026-11-27,nagumo,P083,C14,44.98,kg,sim,Carne Acém Picado,,2026-11-27T17:53:26-0300
+2026-11-27,nagumo,P084,C14,67.98,kg,sim,Carne Contra File Bife,,2026-11-27T17:53:47-0300
+2026-11-27,nagumo,P085,C14,19.98,un,sim,Linguiça Carne Suína Toscana Seara 600g,600g,2026-11-27T17:54:10-0300
+2026-11-27,nagumo,P086,C14,14.98,un,sim,Salsicha Hot Dog Perdigão 500g,500g,2026-11-27T17:54:33-0300
+2026-11-27,nagumo,P087,C14,,,nao,Filé de Tilápia Congelado sem Pele Oceani Pacote 400g,400g,2026-11-27T17:54:54-0300
+2026-11-27,nagumo,P088,C14,5.98,kg,sim,Banana Prata KG,,2026-11-27T17:55:17-0300
+2026-11-27,nagumo,P089,C14,14.98,kg,sim,Maça Gala,,2026-11-27T17:55:38-0300
+2026-11-27,nagumo,P090,C14,2.49,kg,sim,Laranja Pera,,2026-11-27T17:56:00-0300
+2026-11-27,nagumo,P091,C14,10.98,kg,sim,Limão Thaiti,,2026-11-27T17:56:22-0300
+2026-11-27,nagumo,P092,C14,14.98,kg,sim,Tomate Salada,,2026-11-27T17:56:43-0300
+2026-11-27,nagumo,P093,C14,8.98,kg,sim,Cebola,,2026-11-27T17:57:06-0300
+2026-11-27,nagumo,P094,C14,17.98,kg,sim,Alho,,2026-11-27T17:57:27-0300
+2026-11-27,nagumo,P095,C14,6.98,kg,sim,Batata Lavada,,2026-11-27T17:57:47-0300
+2026-11-27,nagumo,P096,C14,2.49,kg,sim,Cenoura,,2026-11-27T17:58:07-0300
+2026-11-27,nagumo,P097,C14,3.98,un,sim,Alface Crespa J.Watanabe Unidade,,2026-11-27T17:58:29-0300
+2026-11-27,nagumo,P098,C14,13.98,kg,sim,Mamão Formosa,,2026-11-27T17:59:01-0300
+2026-11-27,nagumo,P099,C14,2.98,kg,sim,Abóbora Italiana,,2026-11-27T17:59:12-0300
+2026-11-27,nagumo,P100,C14,15.98,kg,sim,Pimentão Verde,,2026-11-27T17:59:29-0300
 2026-11-27,nagumo,P001,C15,23.70,un,sim,Arroz Branco Tipo 1 Camil 5Kg,5Kg,2026-11-27T06:27:02-0300
 2026-11-27,nagumo,P002,C15,,,nao,Arroz Branco Tio João T1 5Kg,5Kg,2026-11-27T06:27:14-0300
 2026-11-27,nagumo,P003,C15,8.95,un,sim,Feijao Carioca Tipo 1 Camil 1Kg,1Kg,2026-11-27T06:27:28-0300
@@ -81543,43 +81626,103 @@ data,rede_id,produto_id,cep_id,preco_reais,unidade_de_venda,disponivel,nome_na_p
 2026-11-27,nagumo,P098,C24,13.98,kg,sim,Mamão Formosa,,2026-11-27T13:42:17-0300
 2026-11-27,nagumo,P099,C24,2.98,kg,sim,Abóbora Italiana,,2026-11-27T13:42:38-0300
 2026-11-27,nagumo,P100,C24,15.98,kg,sim,Pimentão Verde,,2026-11-27T13:42:59-0300
-2026-11-27,nagumo,P001,C25,19.70,un,sim,Arroz Branco Tipo 1 Camil 5Kg,5Kg,2026-11-27T15:27:15-0300
-2026-11-27,nagumo,P002,C25,,,nao,Arroz Branco Tio João T1 5Kg,5Kg,2026-11-27T15:27:35-0300
-2026-11-27,nagumo,P003,C25,8.95,un,sim,Feijao Carioca Tipo 1 Camil 1Kg,1Kg,2026-11-27T15:27:57-0300
-2026-11-27,nagumo,P004,C25,7.98,un,sim,Feijao Preto Tipo 1 Camil 1Kg,1Kg,2026-11-27T15:28:17-0300
-2026-11-27,nagumo,P005,C25,6.95,un,sim,Óleo Soja Soya 900Ml,900Ml,2026-11-27T15:28:37-0300
-2026-11-27,nagumo,P006,C25,24.90,un,sim,Azeite Oliva Extra Virgem Gallo 500Ml,500Ml,2026-11-27T15:28:58-0300
-2026-11-27,nagumo,P007,C25,3.25,un,sim,Açúcar União Refinado 1Kg,1Kg,2026-11-27T15:29:18-0300
-2026-11-27,nagumo,P008,C25,3.79,un,sim,Açúcar Cristalçúcar União 1Kg,1Kg,2026-11-27T15:29:52-0300
-2026-11-27,nagumo,P009,C25,28.50,un,sim,Café Torrado E Moído Extra Forte Vácuo Pilão 500G,500G,2026-11-27T15:30:13-0300
-2026-11-27,nagumo,P010,C25,18.50,un,sim,Café Tradicional 3 Corações 500g,500g,2026-11-27T15:30:34-0300
-2026-11-27,nagumo,P011,C25,4.25,un,sim,Farinha De Trigo Tradicional Dona Benta 1Kg,1Kg,2026-11-27T15:30:55-0300
-2026-11-27,nagumo,P012,C25,8.49,un,sim,Farinha De Mandioca Tipo 1 Yoki Pacote 500G,500G,2026-11-27T15:31:15-0300
-2026-11-27,nagumo,P013,C25,,,nao,Massa Espaguete Renata Com Ovos Numero 8  500G,500G,2026-11-27T15:31:35-0300
-2026-11-27,nagumo,P014,C25,5.49,un,sim,Massa Com Ovos Parafuso Barilla 500G,500G,2026-11-27T15:31:57-0300
-2026-11-27,nagumo,P015,C25,3.49,un,sim,Molho De Tomate Pomarola Sache 300 Tradicional,,2026-11-27T15:32:19-0300
-2026-11-27,nagumo,P016,C25,8.98,un,sim,Extrato De Tomate Elefante 300G,300G,2026-11-27T15:32:40-0300
-2026-11-27,nagumo,P017,C25,3.39,un,sim,Sal De Cozinha Refinado Cisne 1Kg,1Kg,2026-11-27T15:33:01-0300
-2026-11-27,nagumo,P018,C25,4.79,un,sim,Fubá Mimoso Yoki 500G,500G,2026-11-27T15:33:22-0300
-2026-11-27,nagumo,P019,C25,15.90,un,sim,Aveia Em Flocos Regulares Econômica Quaker 450G,450G,2026-11-27T15:33:43-0300
-2026-11-27,nagumo,P020,C25,10.58,un,sim,Nescau Lata 350G.Alimento Achocolatado Em Pó Instantâneo,350G,2026-11-27T15:34:04-0300
-2026-11-27,nagumo,P021,C25,6.98,un,sim,Biscoito Cream Cracker Tradicional Vitarella 350G,350G,2026-11-27T15:34:29-0300
-2026-11-27,nagumo,P022,C25,,,nao,Biscoito Recheado De Chocolate Passatempo 130G,130G,2026-11-27T15:34:52-0300
-2026-11-27,nagumo,P023,C25,7.98,un,sim,Pão De Forma Pullman 480G,480G,2026-11-27T15:35:14-0300
-2026-11-27,nagumo,P024,C25,4.98,un,sim,Margarina Cremosa Com Sal Qualy 500G,500G,2026-11-27T15:35:35-0300
-2026-11-27,nagumo,P025,C25,7.75,un,sim,Maionese Hellmann'S Tradicional 500G,500G,2026-11-27T15:35:56-0300
-2026-11-27,nagumo,P026,C25,11.98,un,sim,Ketchup Tradicional Heinz 397G,397G,2026-11-27T15:36:17-0300
-2026-11-27,nagumo,P028,C25,11.49,un,sim,Atum Ralado Em Óleo Gomes Da Costa 170G,170G,2026-11-27T15:36:37-0300
-2026-11-27,nagumo,P029,C25,2.98,un,sim,Milho Verde Quero 170G.,170G,2026-11-27T15:36:58-0300
-2026-11-27,nagumo,P030,C25,4.79,un,sim,Ervilha Quero Lata 170G,170G,2026-11-27T15:37:18-0300
-2026-11-27,nagumo,P031,C25,4.79,un,sim,Vinagre Álcool Castelo 750Ml,750Ml,2026-11-27T15:37:40-0300
-2026-11-27,nagumo,P032,C25,4.98,un,sim,Sazón De Frango 60G,60G,2026-11-27T15:38:00-0300
-2026-11-27,nagumo,P033,C25,3.29,un,sim,Caldo De Galinha Knorr 57G,57G,2026-11-27T15:38:22-0300
-2026-11-27,nagumo,P034,C25,6.49,un,sim,Leite Condensado Moça Nestle 395G Lata,395G,2026-11-27T15:38:42-0300
-2026-11-27,nagumo,P035,C25,2.98,un,sim,Creme De Leite Nestlé Caixa 200G,200G,2026-11-27T15:39:04-0300
-2026-11-27,nagumo,P036,C25,10.98,un,sim,Mistura Para Bolo De Chocolate Dona Benta 450G,450G,2026-11-27T15:39:35-0300
-2026-11-27,nagumo,P037,C25,3.69,un,sim,Agua Sem Gas Crystal 1.5L,1.5L,2026-11-27T15:39:48-0300
-2026-11-27,nagumo,P038,C25,12.59,un,sim,Refrigerante Original Coca Cola 2L,2L,2026-11-27T15:40:00-0300
+2026-11-27,nagumo,P001,C25,19.70,un,sim,Arroz Branco Tipo 1 Camil 5Kg,5Kg,2026-11-27T17:57:39-0300
+2026-11-27,nagumo,P002,C25,,,nao,Arroz Branco Tio João T1 5Kg,5Kg,2026-11-27T17:57:50-0300
+2026-11-27,nagumo,P003,C25,8.95,un,sim,Feijao Carioca Tipo 1 Camil 1Kg,1Kg,2026-11-27T17:58:01-0300
+2026-11-27,nagumo,P004,C25,7.98,un,sim,Feijao Preto Tipo 1 Camil 1Kg,1Kg,2026-11-27T17:58:31-0300
+2026-11-27,nagumo,P005,C25,6.95,un,sim,Óleo Soja Soya 900Ml,900Ml,2026-11-27T17:58:53-0300
+2026-11-27,nagumo,P006,C25,24.90,un,sim,Azeite Oliva Extra Virgem Gallo 500Ml,500Ml,2026-11-27T17:59:15-0300
+2026-11-27,nagumo,P007,C25,3.25,un,sim,Açúcar União Refinado 1Kg,1Kg,2026-11-27T17:59:49-0300
+2026-11-27,nagumo,P008,C25,3.79,un,sim,Açúcar Cristalçúcar União 1Kg,1Kg,2026-11-27T18:00:00-0300
+2026-11-27,nagumo,P009,C25,28.50,un,sim,Café Torrado E Moído Extra Forte Vácuo Pilão 500G,500G,2026-11-27T18:00:32-0300
+2026-11-27,nagumo,P010,C25,18.50,un,sim,Café Tradicional 3 Corações 500g,500g,2026-11-27T18:00:43-0300
+2026-11-27,nagumo,P011,C25,4.25,un,sim,Farinha De Trigo Tradicional Dona Benta 1Kg,1Kg,2026-11-27T18:00:56-0300
+2026-11-27,nagumo,P012,C25,8.49,un,sim,Farinha De Mandioca Tipo 1 Yoki Pacote 500G,500G,2026-11-27T18:01:08-0300
+2026-11-27,nagumo,P013,C25,,,nao,Massa Espaguete Renata Com Ovos Numero 8  500G,500G,2026-11-27T18:01:21-0300
+2026-11-27,nagumo,P014,C25,5.49,un,sim,Massa Com Ovos Parafuso Barilla 500G,500G,2026-11-27T18:01:31-0300
+2026-11-27,nagumo,P015,C25,3.49,un,sim,Molho De Tomate Pomarola Sache 300 Tradicional,,2026-11-27T18:02:03-0300
+2026-11-27,nagumo,P016,C25,8.98,un,sim,Extrato De Tomate Elefante 300G,300G,2026-11-27T18:02:13-0300
+2026-11-27,nagumo,P017,C25,3.39,un,sim,Sal De Cozinha Refinado Cisne 1Kg,1Kg,2026-11-27T18:02:23-0300
+2026-11-27,nagumo,P018,C25,4.79,un,sim,Fubá Mimoso Yoki 500G,500G,2026-11-27T18:02:35-0300
+2026-11-27,nagumo,P019,C25,15.90,un,sim,Aveia Em Flocos Regulares Econômica Quaker 450G,450G,2026-11-27T18:02:48-0300
+2026-11-27,nagumo,P020,C25,10.58,un,sim,Nescau Lata 350G.Alimento Achocolatado Em Pó Instantâneo,350G,2026-11-27T18:03:18-0300
+2026-11-27,nagumo,P021,C25,6.98,un,sim,Biscoito Cream Cracker Tradicional Vitarella 350G,350G,2026-11-27T18:03:35-0300
+2026-11-27,nagumo,P022,C25,,,nao,Biscoito Recheado De Chocolate Passatempo 130G,130G,2026-11-27T18:03:47-0300
+2026-11-27,nagumo,P023,C25,7.98,un,sim,Pão De Forma Pullman 480G,480G,2026-11-27T18:04:00-0300
+2026-11-27,nagumo,P024,C25,4.98,un,sim,Margarina Cremosa Com Sal Qualy 500G,500G,2026-11-27T18:04:56-0300
+2026-11-27,nagumo,P025,C25,7.75,un,sim,Maionese Hellmann'S Tradicional 500G,500G,2026-11-27T18:05:26-0300
+2026-11-27,nagumo,P026,C25,11.98,un,sim,Ketchup Tradicional Heinz 397G,397G,2026-11-27T18:05:37-0300
+2026-11-27,nagumo,P028,C25,11.49,un,sim,Atum Ralado Em Óleo Gomes Da Costa 170G,170G,2026-11-27T18:05:55-0300
+2026-11-27,nagumo,P029,C25,2.98,un,sim,Milho Verde Quero 170G.,170G,2026-11-27T18:06:08-0300
+2026-11-27,nagumo,P030,C25,4.79,un,sim,Ervilha Quero Lata 170G,170G,2026-11-27T18:06:18-0300
+2026-11-27,nagumo,P031,C25,4.79,un,sim,Vinagre Álcool Castelo 750Ml,750Ml,2026-11-27T18:06:29-0300
+2026-11-27,nagumo,P032,C25,4.98,un,sim,Sazón De Frango 60G,60G,2026-11-27T18:06:40-0300
+2026-11-27,nagumo,P033,C25,3.29,un,sim,Caldo De Galinha Knorr 57G,57G,2026-11-27T18:06:52-0300
+2026-11-27,nagumo,P034,C25,6.49,un,sim,Leite Condensado Moça Nestle 395G Lata,395G,2026-11-27T18:07:02-0300
+2026-11-27,nagumo,P035,C25,2.98,un,sim,Creme De Leite Nestlé Caixa 200G,200G,2026-11-27T18:07:35-0300
+2026-11-27,nagumo,P036,C25,10.98,un,sim,Mistura Para Bolo De Chocolate Dona Benta 450G,450G,2026-11-27T18:08:06-0300
+2026-11-27,nagumo,P037,C25,3.69,un,sim,Agua Sem Gas Crystal 1.5L,1.5L,2026-11-27T18:08:19-0300
+2026-11-27,nagumo,P038,C25,12.59,un,sim,Refrigerante Original Coca Cola 2L,2L,2026-11-27T18:08:36-0300
+2026-11-27,nagumo,P039,C25,,,nao,Leite Uht Integral Italac 1L,1L,2026-11-27T18:08:47-0300
+2026-11-27,nagumo,P040,C25,,,nao,Leite Integral Uht Piracanjuba 1L,1L,2026-11-27T18:08:59-0300
+2026-11-27,nagumo,P041,C25,,,nao,Leite Desnatado Piracanjuba 1L,1L,2026-11-27T18:09:28-0300
+2026-11-27,nagumo,P042,C25,15.59,un,sim,Leite Em Pó Integral Instantâneo Ninho 380G,380G,2026-11-27T18:09:56-0300
+2026-11-27,nagumo,P043,C25,16.98,un,sim,Manteiga Com Sal Aviação Pote 200G,200G,2026-11-27T18:10:20-0300
+2026-11-27,nagumo,P044,C25,,,nao,Queijo Mussarela Fatiado Tirolez 150G,150G,2026-11-27T18:10:50-0300
+2026-11-27,nagumo,P045,C25,,,nao,Queijo Prato Fatiado Tirolez 150G,150G,2026-11-27T18:11:22-0300
+2026-11-27,nagumo,P046,C25,9.98,un,sim,Requeijão Cremoso Tradicional Vigor Copo 200G,200G,2026-11-27T18:11:34-0300
+2026-11-27,nagumo,P047,C25,4.39,un,sim,Iogurte Integral Natural Nestlé Copo 170g,170g,2026-11-27T18:11:48-0300
+2026-11-27,nagumo,P048,C25,19.98,un,sim,"Iogurte De Morango Pense Zero Batavo Garrafa 1,15Kg","1,15Kg",2026-11-27T18:12:00-0300
+2026-11-27,nagumo,P049,C25,12.08,un,sim,Presunto Cozido Fatiado Soltíssimo Sadia 200G,200G,2026-11-27T18:12:34-0300
+2026-11-27,nagumo,P050,C25,,,nao,Queijo De Minas Frescal Tirolez,,2026-11-27T18:12:45-0300
+2026-11-27,nagumo,P051,C25,8.98,un,sim,Ovos Branco Grande com 20,,2026-11-27T18:12:58-0300
+2026-11-27,nagumo,P052,C25,10.98,un,sim,Ovos Vermelho Grande 20Un,20Un,2026-11-27T18:13:10-0300
+2026-11-27,nagumo,P053,C25,,,nao,Papel Higiênico Folha Dupla Neutro Neve Toque Da Seda 30m Pacote Leve 12 Pague 11 unidades,11 unidades,2026-11-27T18:13:19-0300
+2026-11-27,nagumo,P054,C25,,,nao,Papel Higiênico Neutro Folha Dupla Personal VIP LV12PG11 30M,30M,2026-11-27T18:13:28-0300
+2026-11-27,nagumo,P055,C25,2.98,un,sim,Sabonete Em Barra Original Dove 90G,90G,2026-11-27T18:13:41-0300
+2026-11-27,nagumo,P056,C25,2.49,un,sim,Sabonete Em Barra Botanicals Lavanda Lux 85G,85G,2026-11-27T18:13:52-0300
+2026-11-27,nagumo,P057,C25,13.98,un,sim,Creme Dental Colgate Total 12 Advanced Fresh 90G,90G,2026-11-27T18:14:04-0300
+2026-11-27,nagumo,P058,C25,6.49,un,sim,Creme Dental Máxima Proteção Anticáries Colgate 90 G,90 G,2026-11-27T18:14:15-0300
+2026-11-27,nagumo,P059,C25,6.49,un,sim,Escova Dental Classic Clean Macia Colgate,,2026-11-27T18:14:26-0300
+2026-11-27,nagumo,P060,C25,9.98,un,sim,Shampoo Ceramidas Seda 325Ml,325Ml,2026-11-27T18:14:46-0300
+2026-11-27,nagumo,P061,C25,15.98,un,sim,Tratamento Condicionador Seda Ceramidas Frasco 325Ml,325Ml,2026-11-27T18:14:59-0300
+2026-11-27,nagumo,P062,C25,16.90,un,sim,Antitranspirante Aerossol Rexona Clinical Invisible 150ml Spray,150ml,2026-11-27T18:15:34-0300
+2026-11-27,nagumo,P063,C25,,,nao,Fio Dental Essential De Menta Oral B 50M,50M,2026-11-27T18:16:06-0300
+2026-11-27,nagumo,P064,C25,5.98,un,sim,Absorvente Super Proteção Suave Com Abas Always 8Un,8Un,2026-11-27T18:16:18-0300
+2026-11-27,nagumo,P065,C25,19.98,un,sim,"Fralda Descartável Infantil Huggies Tripla Proteção M 5,5 a 9,5kg Pacote 36 Unidades Grátis 2 Fraldas",36 Unidades,2026-11-27T18:16:31-0300
+2026-11-27,nagumo,P067,C25,42.98,un,sim,Sabão Líquido Lavagem Perfeita Omo 3L,3L,2026-11-27T18:16:44-0300
+2026-11-27,nagumo,P068,C25,14.98,un,sim,Amaciante Comfort Concentrado Frescor Intenso 500Ml,500Ml,2026-11-27T18:16:56-0300
+2026-11-27,nagumo,P069,C25,2.75,un,sim,Detergente Ypê Neutro 500Ml,500Ml,2026-11-27T18:17:26-0300
+2026-11-27,nagumo,P070,C25,,,nao,Água Sanitaria Super Candida 2L,2L,2026-11-27T18:17:58-0300
+2026-11-27,nagumo,P071,C25,5.98,un,sim,Desinfetante Original Pinho Sol Leve 500Ml Pague 450Ml,500Ml Pague 450Ml,2026-11-27T18:18:11-0300
+2026-11-27,nagumo,P072,C25,4.39,un,sim,Limpador Multiuso Original Gold Veja 500Ml,500Ml,2026-11-27T18:18:24-0300
+2026-11-27,nagumo,P073,C25,11.98,un,sim,Esponja Laranja Loucas Delicadas Scotch Brite 3 Unidades,3 Unidades,2026-11-27T18:18:37-0300
+2026-11-27,nagumo,P075,C25,7.98,un,sim,Toalha De Papel Folha Dupla Clássica 19X20Cm Snob 2Un,2Un,2026-11-27T18:18:48-0300
+2026-11-27,nagumo,P076,C25,16.98,un,sim,Sabão Barra Glicerinado Neutro Original Ypê 800g 5 Unidades,5 Unidades,2026-11-27T18:19:18-0300
+2026-11-27,nagumo,P077,C25,12.95,un,sim,Alcool Coperalcool Liquido Tradicional 46 Inpm 1Lt,1Lt,2026-11-27T18:19:30-0300
+2026-11-27,nagumo,P078,C25,22.90,un,sim,Inseticida Aerossol Ação Magnética Base Água Sbp 360Ml,360Ml,2026-11-27T18:19:40-0300
+2026-11-27,nagumo,P079,C25,17.98,un,sim,File De Peito De Frango Congelado Pacote Sadia 1kg,1kg,2026-11-27T18:19:53-0300
+2026-11-27,nagumo,P080,C25,14.98,kg,sim,Coxa E Sobrecoxa De Frango Resfriado,,2026-11-27T18:20:03-0300
+2026-11-27,nagumo,P081,C25,,,nao,Frango Inteiro Congelado Sadia,,2026-11-27T18:20:34-0300
+2026-11-27,nagumo,P082,C25,62.98,kg,sim,Carne Patinho Moido,,2026-11-27T18:21:06-0300
+2026-11-27,nagumo,P083,C25,44.98,kg,sim,Carne Acém Picado,,2026-11-27T18:21:19-0300
+2026-11-27,nagumo,P084,C25,67.98,kg,sim,Carne Contra File Bife,,2026-11-27T18:21:35-0300
+2026-11-27,nagumo,P085,C25,19.98,un,sim,Linguiça Carne Suína Toscana Seara 600g,600g,2026-11-27T18:21:50-0300
+2026-11-27,nagumo,P086,C25,14.98,un,sim,Salsicha Hot Dog Perdigão 500g,500g,2026-11-27T18:22:01-0300
+2026-11-27,nagumo,P087,C25,,,nao,Filé de Tilápia Congelado sem Pele Oceani Pacote 400g,400g,2026-11-27T18:22:14-0300
+2026-11-27,nagumo,P088,C25,5.98,kg,sim,Banana Prata KG,,2026-11-27T18:22:25-0300
+2026-11-27,nagumo,P089,C25,12.98,kg,sim,Maça Gala,,2026-11-27T18:22:37-0300
+2026-11-27,nagumo,P090,C25,2.49,kg,sim,Laranja Pera,,2026-11-27T18:22:48-0300
+2026-11-27,nagumo,P091,C25,10.98,kg,sim,Limão Thaiti,,2026-11-27T18:23:05-0300
+2026-11-27,nagumo,P092,C25,14.98,kg,sim,Tomate Salada,,2026-11-27T18:23:15-0300
+2026-11-27,nagumo,P093,C25,8.98,kg,sim,Cebola,,2026-11-27T18:23:28-0300
+2026-11-27,nagumo,P094,C25,17.98,kg,sim,Alho,,2026-11-27T18:23:39-0300
+2026-11-27,nagumo,P095,C25,6.98,kg,sim,Batata Lavada,,2026-11-27T18:24:15-0300
+2026-11-27,nagumo,P096,C25,2.49,kg,sim,Cenoura,,2026-11-27T18:24:46-0300
+2026-11-27,nagumo,P097,C25,,,nao,Alface Crespa J.Watanabe Unidade,,2026-11-27T18:24:57-0300
+2026-11-27,nagumo,P098,C25,13.98,kg,sim,Mamão Formosa,,2026-11-27T18:25:10-0300
+2026-11-27,nagumo,P099,C25,2.98,kg,sim,Abóbora Italiana,,2026-11-27T18:25:43-0300
+2026-11-27,nagumo,P100,C25,15.98,kg,sim,Pimentão Verde,,2026-11-27T18:25:55-0300
 2026-11-27,pao-de-acucar,P001,,32.99,un,sim,Arroz Agulhinha Tipo 1 CAMIL Pacote 5kg,5kg,2026-11-27T02:23:44-0300
 2026-11-27,pao-de-acucar,P002,,36.99,un,sim,Arroz Agulhinha Tipo 1 TIO JOÃO Pacote 5kg,5kg,2026-11-27T02:23:50-0300
 2026-11-27,pao-de-acucar,P003,,10.49,un,sim,Feijão Carioca Tipo 1 CAMIL Pacote 1kg,1kg,2026-11-27T02:23:56-0300
