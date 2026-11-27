@@ -960,3 +960,7 @@ html.pronto .espera-tela{display:none}
 .cupom-itens li.trocado > div{animation:item-trocado 1.2s ease-out}
 @keyframes item-trocado{0%{background:rgba(242,106,15,.12)}100%{background:rgba(242,106,15,0)}}
 @media (prefers-reduced-motion:reduce){.cupom-itens li.trocado > div{animation:none}}
+
+/* aviso curto de preço (uma linha pequena e cinza) */
+.aviso-preco{margin:10px 0 0;font:400 13px/1.45 var(--corpo);color:var(--texto-3)}
+.pg-topo .aviso-preco{margin-top:12px}

@@ -8,6 +8,9 @@ let gatilhoRanking = null, ultimo = null, trocasAtuais = [];
 
 const [dados, geo, rotas] = await carregar('dados', 'geo', 'rotas');
 iniciar(dados);
+// aviso curto: de quando são os preços
+const diaLido = new Date(dados.datas.at(-1) + 'T12:00').toLocaleDateString('pt-BR', { day: '2-digit', month: '2-digit' });
+$('vAviso').textContent = `Preços lidos no site dos mercados em ${diaLido}. Na loja podem mudar.`;
 
 const lista = criarLista(dados);
 // link recebido (lista.html?l=id,id,...): os itens entram na lista da pessoa, sem apagar o que ela já tinha
