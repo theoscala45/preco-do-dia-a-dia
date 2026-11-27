@@ -1,5 +1,5 @@
 // Lista de compras e as contas do comparador. A lista fica guardada no navegador e vale para todas as páginas.
-// Regras: mais barato numa loja só e, se compensar, dividido em duas. Nunca mais que duas.
+// Regras: a lista inteira no mercado mais barato do bairro (uma loja só).
 import { guarda, semAcento, PREVIA } from './base.js?v=20261126a';
 
 export const BASICA = ['P001', 'P003', 'P005', 'P007', 'P009', 'P011', 'P013', 'P017', 'P040', 'P024', 'P051', 'P023'];

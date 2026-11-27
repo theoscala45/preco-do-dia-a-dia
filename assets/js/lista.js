@@ -3,7 +3,7 @@ import { $, gsap, ScrollTrigger, calmo, reais, curto, rolar, carregar, guarda, l
 import { caixasDoCep } from './cep-caixas.js?v=20261124z';
 import { criarLista, calcular, ligarBusca, ligarItens, trocas } from './cesta.js?v=20261127a';
 import { aoAparecer } from './aparecer.js';
-import { compartilhar, salvarFoto, desenharLista, toast, SITE } from './compartilhar.js?v=20261124xa';
+import { compartilhar, salvarFoto, desenharLista, toast, SITE } from './compartilhar.js?v=20261127c';
 let gatilhoRanking = null, ultimo = null, trocasAtuais = [];
 
 const [dados, geo, rotas] = await carregar('dados', 'geo', 'rotas');

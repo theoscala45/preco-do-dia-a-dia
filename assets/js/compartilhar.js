@@ -126,7 +126,7 @@ export async function desenharLista(dados) {
   // total na loja mais barata
   const ty = 342, th = 150;
   c.fillStyle = LARANJA; rr(c, L, ty, W - 2 * L, th, 22); c.fill();
-  c.fillStyle = 'rgba(255,255,255,.95)'; c.font = '600 32px "Red Hat Text"'; c.fillText('Mais barato em uma loja só', L + 44, ty + 62);
+  c.fillStyle = 'rgba(255,255,255,.95)'; c.font = '600 32px "Red Hat Text"'; c.fillText('Mercado mais barato', L + 44, ty + 62);
   c.font = '800 44px "Red Hat Display"'; c.fillText(dados.loja, L + 44, ty + 112);
   // o total fica no meio da faixa, na vertical (a altura dos números vem da própria fonte)
   c.fillStyle = '#fff'; c.font = '800 108px "Big Shoulders Display"';
