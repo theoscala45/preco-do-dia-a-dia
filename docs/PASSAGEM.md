@@ -352,3 +352,4 @@ O projeto passou de "O Preço do Dia a Dia" para **Preço Aberto** (escolha do T
 - Minha lista (27/11/2026): ao trocar, a linha esmaece e fecha devagar, e o cartão de trocas encolhe suave até a nova altura (também quando vira 'Não tem trocas'). O botão do CEP no painel passou de 'Trocar' para 'Usar este CEP'.
 - Avisos (27/11/2026, versão enxuta escolhida pelo Theo): uma linha pequena e cinza (.aviso-preco) no resultado do CEP e na Minha lista, 'Preços lidos no site dos mercados em DD/MM. Na loja podem mudar.' (data da última coleta), e na Inflação, 'Conta do Preço Aberto, não é o índice oficial.' Produto e rodapé ficaram como estavam. Prévias das versões em docs/avisos (fora do Git).
 - Rodapé de todas as páginas: frase nova de independência ('nenhuma rede paga, patrocina ou escolhe o que aparece aqui') e 'Antes de comprar, confira o preço na loja.'
+- Página de produto: a mesma linha curta de data dos preços (#prodDataAviso) embaixo dos preços em cada mercado.
