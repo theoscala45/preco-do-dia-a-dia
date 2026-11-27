@@ -950,10 +950,14 @@ html.pronto .espera-tela{display:none}
 
 /* Minha lista, cartão do mercado mais barato: o preço é o destaque; nome do mercado menor; R$ e centavos na mesma cor do número;
    espaços regulares entre rótulo, nome, preço e aviso; a coluna fica no meio da altura do cartão */
-.vencedor > div:first-child{align-self:center}
-.vencedor h2{font-size:clamp(28px,2.6vw,38px);line-height:1;margin:8px 0 16px}
+/* a coluna ocupa a altura toda do cartão: rótulo, nome e preço em cima, alinhados ao topo do quadro da direita; o aviso embaixo,
+   alinhado ao pé dele. Assim não sobra vão em cima nem embaixo. O rótulo é laranja escuro (o azul brigava com o fundo laranja). */
+.vencedor > div:first-child{align-self:stretch;display:flex;flex-direction:column;padding:4px 0}
+.vencedor .passo{color:#B44E08;margin-bottom:0}
+.vencedor h2{font-size:clamp(28px,2.6vw,38px);line-height:1;margin:10px 0 14px}
 .vencedor .preco.grande{color:var(--texto)}
 .vencedor .preco.grande small{font:600 18px/1 var(--corpo);color:var(--texto);margin:10px 6px 0 0}
 .vencedor .preco.grande b{font-size:clamp(64px,6vw,92px);line-height:.9}
 .vencedor .preco.grande sup{font-size:clamp(26px,2.4vw,34px);color:var(--texto);margin:6px 0 0 2px}
-.vencedor .aviso-preco{margin-top:18px;max-width:30em}
+.vencedor .aviso-preco{margin-top:auto;padding-top:18px;max-width:30em}
+@media (max-width:860px){.vencedor > div:first-child{padding:0}.vencedor .aviso-preco{margin-top:0}}
