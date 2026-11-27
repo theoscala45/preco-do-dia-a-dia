@@ -964,3 +964,13 @@ html.pronto .espera-tela{display:none}
 /* aviso curto de preço (uma linha pequena e cinza) */
 .aviso-preco{margin:10px 0 0;font:400 13px/1.45 var(--corpo);color:var(--texto-3)}
 .pg-topo .aviso-preco{margin-top:12px}
+
+/* Minha lista, cartão do mercado mais barato: o preço é o destaque; nome do mercado menor; R$ e centavos na mesma cor do número;
+   espaços regulares entre rótulo, nome, preço e aviso; a coluna fica no meio da altura do cartão */
+.vencedor > div:first-child{align-self:center}
+.vencedor h2{font-size:clamp(28px,2.6vw,38px);line-height:1;margin:8px 0 16px}
+.vencedor .preco.grande{color:var(--texto)}
+.vencedor .preco.grande small{font:600 18px/1 var(--corpo);color:var(--texto);margin:10px 6px 0 0}
+.vencedor .preco.grande b{font-size:clamp(64px,6vw,92px);line-height:.9}
+.vencedor .preco.grande sup{font-size:clamp(26px,2.4vw,34px);color:var(--texto);margin:6px 0 0 2px}
+.vencedor .aviso-preco{margin-top:18px;max-width:30em}
