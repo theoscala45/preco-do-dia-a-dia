@@ -960,5 +960,6 @@ html.pronto .espera-tela{display:none}
 .vencedor .preco.grande small{font:600 18px/1 var(--corpo);color:var(--texto);margin:10px 6px 0 0}
 .vencedor .preco.grande b{font-size:clamp(64px,6vw,92px);line-height:.9}
 .vencedor .preco.grande sup{font-size:clamp(26px,2.4vw,34px);color:var(--texto);margin:6px 0 0 2px}
-.vencedor .aviso-preco{margin-top:auto;padding-top:18px;max-width:30em}
+.vencedor .preco.grande{margin-bottom:18px}   /* o respiro entre o preço e o aviso fica fora da barra laranja */
+.vencedor .aviso-preco{margin-top:auto;max-width:30em}
 @media (max-width:860px){.vencedor > div:first-child{padding:0}.vencedor .aviso-preco{margin-top:0}}
