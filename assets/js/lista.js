@@ -1,7 +1,7 @@
 // Página "Minha lista": loja única mais barata, economia, trocas por produtos mais baratos, rota e tabela por produto.
 import { $, gsap, ScrollTrigger, calmo, reais, curto, rolar, carregar, guarda, ligarCep, iniciar, PREVIA, semAcento } from './base.js?v=20261126a';
 import { caixasDoCep } from './cep-caixas.js?v=20261124z';
-import { criarLista, calcular, ligarBusca, ligarItens, trocas } from './cesta.js?v=20261127a';
+import { criarLista, calcular, ligarBusca, ligarItens, trocas } from './cesta.js?v=20261127d';
 import { aoAparecer } from './aparecer.js';
 import { compartilhar, salvarFoto, desenharLista, toast, SITE } from './compartilhar.js?v=20261127c';
 let gatilhoRanking = null, ultimo = null, trocasAtuais = [];
@@ -131,11 +131,40 @@ function desenharTrocas(melhor) {
   $('tLista').hidden = !tem;
   $('tTodas').hidden = trocasAtuais.length < 2;
 }
+// Animação da troca: o botão vira "Trocado", o valor economizado sobe da linha, a linha fecha e só então a troca acontece;
+// na lista da esquerda, o produto novo entra no lugar do antigo e pisca em laranja. O total rola até o valor novo.
+function animarTroca(linhas, aoFim) {
+  if (calmo || !linhas.length) { aoFim(); return; }
+  linhas.forEach(li => li.querySelector('button')?.setAttribute('disabled', ''));
+  const tl = gsap.timeline({ onComplete: aoFim });
+  linhas.forEach((li, n) => {
+    const b = li.querySelector('button'), eco = li.querySelector('.t-eco'), t = n * 0.08;
+    tl.add(() => { b.textContent = 'Trocado'; b.classList.add('feito'); li.classList.add('saindo'); }, t)
+      .fromTo(b, { scale: 0.88 }, { scale: 1, duration: 0.45, ease: 'back.out(3)' }, t);
+    if (eco && /a menos/.test(eco.textContent)) {
+      const r = eco.getBoundingClientRect(), voa = document.createElement('span');
+      voa.className = 'eco-voa'; voa.textContent = '−' + eco.textContent.replace(' a menos', '');
+      voa.style.left = r.left + 'px'; voa.style.top = r.top + 'px';
+      tl.add(() => document.body.append(voa), t)
+        .fromTo(voa, { y: 0, autoAlpha: 1, scale: 1 }, { y: -46, autoAlpha: 0, scale: 1.15, duration: 0.9, ease: 'power2.out', onComplete: () => voa.remove() }, t + 0.05);
+    }
+    tl.to(li, { height: 0, paddingTop: 0, paddingBottom: 0, autoAlpha: 0, x: 18, duration: 0.38, ease: 'power3.in' }, t + 0.42);
+  });
+}
+function piscarNovos(js) {
+  if (calmo) return;
+  js.forEach(j => { const li = $('itens').querySelector(`li[data-i="${j}"]`); if (li) { li.classList.remove('trocado'); void li.offsetWidth; li.classList.add('trocado'); } });
+}
 $('tLista').addEventListener('click', e => {
   const b = e.target.closest('button[data-i]');
-  if (b) lista.trocar(+b.dataset.i, +b.dataset.j);
+  if (!b || b.disabled) return;
+  const i = +b.dataset.i, j = +b.dataset.j;
+  animarTroca([b.closest('li')], () => { lista.trocar(i, j); piscarNovos([j]); });
 });
-$('tTodas').addEventListener('click', () => trocasAtuais.slice().forEach(({ i, j }) => lista.trocar(i, j)));
+$('tTodas').addEventListener('click', () => {
+  const todas = trocasAtuais.slice();
+  animarTroca([...$('tLista').children], () => { todas.forEach(({ i, j }) => lista.trocar(i, j)); piscarNovos(todas.map(x => x.j)); });
+});
 
 // ---------- compartilhar a lista e salvar como foto
 $('vCompartilhar')?.addEventListener('click', () => {

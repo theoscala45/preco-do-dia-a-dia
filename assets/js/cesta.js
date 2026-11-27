@@ -96,7 +96,11 @@ export function ligarItens(dados, lista, ul, preencher = () => {}) {
         li = document.createElement('li');
         li.innerHTML = `<div><div class="item"><span class="nome" title="${p.nome}, ${p.marca}, ${p.tam}"><a class="nome-link" href="produto.html?p=${p.id}${PREVIA ? '&previa' : ''}">${p.nome}</a><small>${p.marca}, ${p.tam}</small></span><span class="preco-item"></span><button class="tirar" type="button" aria-label="Tirar ${p.nome} ${p.marca} da lista">×</button></div></div>`;
         li.querySelector('.tirar').onclick = () => lista.tirar(i);
-        ul.append(li); linhas.set(i, li);
+        li.dataset.i = i;
+        // entra no lugar certo da lista (uma troca põe o produto novo onde estava o antigo)
+        const prox = lista.itens.slice(n + 1).map(k => linhas.get(k)).find(Boolean);
+        if (prox) ul.insertBefore(li, prox); else ul.append(li);
+        linhas.set(i, li);
         requestAnimationFrame(() => requestAnimationFrame(() => li.classList.add('on')));
       }
       preencher(li, i, n);
