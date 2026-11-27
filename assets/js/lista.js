@@ -1,10 +1,10 @@
 // Página "Resultado da lista": loja única mais barata, economia, divisão em duas lojas, rota e tabela por produto.
 import { $, gsap, ScrollTrigger, calmo, reais, curto, rolar, carregar, guarda, ligarCep, iniciar, PREVIA, semAcento } from './base.js?v=20261126a';
 import { caixasDoCep } from './cep-caixas.js?v=20261124z';
-import { criarLista, calcular, ligarBusca, ligarItens, ECONOMIA_MINIMA } from './cesta.js?v=20261124wx';
+import { criarLista, calcular, ligarBusca, ligarItens, ECONOMIA_MINIMA, trocas } from './cesta.js?v=20261127a';
 import { aoAparecer } from './aparecer.js';
 import { compartilhar, salvarFoto, desenharLista, toast, SITE } from './compartilhar.js?v=20261124xa';
-let gatilhoRanking = null, ultimo = null;
+let gatilhoRanking = null, ultimo = null, trocasAtuais = [];
 
 const [dados, geo, rotas] = await carregar('dados', 'geo', 'rotas');
 iniciar(dados);
@@ -63,6 +63,9 @@ function desenhar() {
   const rota = rotaDe(melhor.k), loja = rota && rotas.lojas[rota.loja];
   $('vLoja').innerHTML = rota ? `<b>${rota.km.toLocaleString('pt-BR')} km de carro</b><span>${loja.end || loja.nome}</span>` : '<span>Sem loja no mapa</span>';
   $('vPonto').innerHTML = `<b>${curto(pt.bairro)}</b><span>${pt.rua}, ${pt.cep}</span>`;
+
+  // trocas que baixam a conta (na loja única mais barata)
+  desenharTrocas(melhor, pt);
 
   // divisão em duas lojas
   $('duas').classList.toggle('nao', !vale);
@@ -132,6 +135,29 @@ $('limpar').addEventListener('click', () => lista.limpar());
 ligarCep(geo, $('cepForm'), $('cep'), $('cepMsg'), i => { estado.ponto = i; estado.cepDado = true; desenhar(); });
 caixasDoCep({ form: $('cepForm'), campo: $('cep'), msg: $('cepMsg') });
 desenhar();
+
+// ---------- trocas que baixam a conta: um produto parecido da cesta, mais barato na mesma loja
+function desenharTrocas(melhor, pt) {
+  trocasAtuais = trocas(dados, lista.itens, melhor.k, estado.ponto);
+  $('trocas').hidden = !trocasAtuais.length;
+  if (!trocasAtuais.length) return;
+  const nome = nomes[melhor.k], soma = trocasAtuais.reduce((t, x) => t + (x.economia || 0), 0), faltas = trocasAtuais.filter(x => x.economia == null).length;
+  $('tTitulo').textContent = soma > 0 ? `${reais(soma)} a menos no ${nome}` : `${plural(faltas, 'item volta', 'itens voltam')} para a conta`;
+  $('tNota').textContent = `Produtos parecidos da cesta que custam menos no ${nome} do bairro ${curto(pt.bairro)}.`
+    + (faltas ? ` ${faltas === 1 ? 'Um deles troca' : 'Alguns trocam'} um item que o ${nome} não tem.` : '');
+  $('tLista').innerHTML = trocasAtuais.map(({ i, j, economia }) => {
+    const de = dados.produtos[i], para = dados.produtos[j];
+    return `<li><span class="t-nome"><b>${para.nome}</b><small>${para.marca}, ${para.tam}, no lugar de ${de.marca}${de.nome !== para.nome ? ` (${de.nome.toLowerCase()})` : ''}</small></span>`
+      + `<span class="t-eco">${economia == null ? `o ${nome} não tem ${de.marca}` : `${reais(economia)} a menos`}</span>`
+      + `<button type="button" class="quieto" data-i="${i}" data-j="${j}">Trocar</button></li>`;
+  }).join('');
+  $('tTodas').hidden = trocasAtuais.length < 2;
+}
+$('tLista').addEventListener('click', e => {
+  const b = e.target.closest('button[data-i]');
+  if (b) lista.trocar(+b.dataset.i, +b.dataset.j);
+});
+$('tTodas').addEventListener('click', () => trocasAtuais.slice().forEach(({ i, j }) => lista.trocar(i, j)));
 
 // ---------- compartilhar a lista e salvar como foto
 $('vCompartilhar')?.addEventListener('click', () => {

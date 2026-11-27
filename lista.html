@@ -24,7 +24,7 @@
 <link rel="apple-touch-icon" href="assets/logo/apple-touch-icon.png">
 <link rel="stylesheet" href="assets/vendor/maplibre-gl.css">
 <link rel="stylesheet" href="assets/css/estilo.css?v=20261124w6">
-<link rel="stylesheet" href="assets/css/etiqueta.css?v=20261126f">
+<link rel="stylesheet" href="assets/css/etiqueta.css?v=20261127a">
 <link rel="stylesheet" href="assets/css/celular.css?v=20261126e" media="(max-width:860px)">
 <script>if(!matchMedia('(prefers-reduced-motion: reduce)').matches){document.documentElement.classList.add('anima');setTimeout(function(){document.documentElement.classList.add('mostra')},5000)}</script>
 </head>
@@ -105,6 +105,14 @@
           </div>
         </section>
 
+        <section class="cartao trocas" id="trocas" data-surge hidden>
+          <p class="passo">Trocas que baixam a conta</p>
+          <h2 id="tTitulo"></h2>
+          <p class="nota" id="tNota"></p>
+          <ul class="trocas-lista" id="tLista"></ul>
+          <button type="button" class="quieto" id="tTodas">Trocar todas</button>
+        </section>
+
         <section class="cartao duas" id="duas" data-surge>
           <p class="passo">Dividindo em duas lojas</p>
           <h2 id="dTitulo"></h2>
@@ -155,6 +163,6 @@
 <script src="assets/vendor/SplitText.min.js" defer></script>
 <script src="assets/vendor/lenis.min.js" defer></script>
 <script src="assets/vendor/maplibre-gl.js" defer></script>
-<script type="module" src="assets/js/lista.js?v=20261126g"></script>
+<script type="module" src="assets/js/lista.js?v=20261127a"></script>
 </body>
 </html>

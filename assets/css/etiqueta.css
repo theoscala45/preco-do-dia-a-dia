@@ -941,3 +941,18 @@ html.pronto .espera-tela{display:none}
 }
 .espera-selo.a-direita{left:73%}   /* página inicial no computador: o mapa fica à direita do texto */
 @media (max-width:860px){.espera-selo.a-direita{left:50%}.espera-selo.no-bairro{top:19svh}}   /* celular: no meio da faixa de mapa acima da lista */
+
+/* ---------- Minha lista: trocas que baixam a conta ---------- */
+.trocas h2{font-size:clamp(24px,2.3vw,32px);margin-bottom:6px}
+.trocas-lista{list-style:none;margin:16px 0 14px;padding:0;border-top:1px solid var(--linha)}
+.trocas-lista li{display:flex;align-items:center;gap:14px;padding:12px 0;border-bottom:1px solid var(--linha)}
+.trocas-lista .t-nome{flex:1;min-width:0}
+.trocas-lista .t-nome b{display:block;font-weight:600;line-height:1.3}
+.trocas-lista .t-nome small{display:block;margin-top:2px;font-size:13px;line-height:1.35;color:var(--texto-2)}
+.trocas-lista .t-eco{font-weight:700;font-size:15px;color:var(--laranja);white-space:nowrap}
+.trocas-lista button{flex:none}
+@media (max-width:560px){
+  .trocas-lista li{flex-wrap:wrap;gap:8px 12px}
+  .trocas-lista .t-nome{flex:1 1 100%}
+  .trocas-lista .t-eco{flex:1}
+}

@@ -3,7 +3,22 @@
 import { guarda, semAcento, PREVIA } from './base.js?v=20261126a';
 
 export const BASICA = ['P001', 'P003', 'P005', 'P007', 'P009', 'P011', 'P013', 'P017', 'P040', 'P024', 'P051', 'P023'];
-export const ECONOMIA_MINIMA = 2;   // dividir em duas lojas só aparece se economizar pelo menos isso, em reais
+export const ECONOMIA_MINIMA = 2;
+// Produtos da cesta que fazem o mesmo papel (o mesmo item de outra marca, ou a variação comum dele). Usados pelas
+// "trocas que baixam a conta" da Minha lista. Só entra aqui o que uma pessoa trocaria sem pensar duas vezes.
+export const PARECIDOS = [
+  ['P001', 'P002'],   // arroz branco tipo 1, 5 kg
+  ['P003', 'P004'],   // feijão carioca e preto, 1 kg
+  ['P007', 'P008'],   // açúcar refinado e cristal, 1 kg
+  ['P009', 'P010'],   // café torrado e moído, 500 g
+  ['P013', 'P014'],   // macarrão, 500 g
+  ['P039', 'P040'],   // leite integral UHT, 1 L
+  ['P044', 'P045'],   // queijo fatiado, 150 g
+  ['P051', 'P052'],   // ovos grandes, 20 unidades
+  ['P053', 'P054'],   // papel higiênico folha dupla, 12 rolos
+  ['P055', 'P056'],   // sabonete em barra
+  ['P057', 'P058'],   // creme dental Colgate, 90 g
+];   // dividir em duas lojas só aparece se economizar pelo menos isso, em reais
 
 export function criarLista(dados) {
   const idx = Object.fromEntries(dados.produtos.map((p, i) => [p.id, i]));
@@ -16,6 +31,8 @@ export function criarLista(dados) {
     adicionar(i) { if (!itens.includes(i)) { itens.push(i); avisar(); } },
     tirar(i) { const k = itens.indexOf(i); if (k >= 0) { itens.splice(k, 1); avisar(); } },
     limpar() { itens.length = 0; avisar(); },
+    // troca um produto por outro no mesmo lugar da lista
+    trocar(i, j) { const k = itens.indexOf(i); if (k >= 0 && !itens.includes(j)) { itens[k] = j; avisar(); } },
     // soma à lista os produtos de um link recebido (só ids que existem); devolve quantos entraram
     somar(ids) { let n = 0; ids.forEach(id => { const i = idx[id]; if (i != null && !itens.includes(i)) { itens.push(i); n++; } }); if (n) avisar(); return n; },
     ids: () => itens.map(i => dados.produtos[i].id),
@@ -100,4 +117,41 @@ export function precosDoProduto(dados, k, ponto = -1) {
     else v = t[k];
     return { j, nome: r.nome.replace(' Atacado', ''), v, variaPorBairro: !!r.por_cep };
   });
+}
+
+// quantidade de um tamanho ("5 kg", "900 ml", "1,5 L", "20 unidades", "12 rolos") na unidade base: g, ml ou unidade
+export function quantidade(tam) {
+  const m = String(tam).toLowerCase().replace(',', '.').match(/([\d.]+)\s*(kg|g|ml|l|unidades?|rolos?)\b/);
+  if (!m) return null;
+  const n = parseFloat(m[1]), u = m[2];
+  if (u === 'kg') return { n: n * 1000, u: 'g' };
+  if (u === 'l') return { n: n * 1000, u: 'ml' };
+  if (u === 'g' || u === 'ml') return { n, u };
+  return { n, u: 'un' };
+}
+
+// Trocas que baixam a conta numa rede (k) e num ponto de coleta: para cada item da lista, o parecido mais barato.
+// Vale a troca quando o parecido custa menos e também não é mais caro por kg, litro ou unidade (um pacote menor não conta
+// como economia). Se o item não tem preço nessa rede e o parecido tem, a troca resolve a falta.
+export function trocas(dados, itens, k, ponto) {
+  const idx = Object.fromEntries(dados.produtos.map((p, i) => [p.id, i]));
+  const r = dados.redes[k], tabela = dados.precos[r.id];
+  const preco = i => (r.por_cep ? tabela[ponto][i] : tabela[i]);
+  const saida = [];
+  itens.forEach(i => {
+    const grupo = PARECIDOS.find(g => g.includes(dados.produtos[i].id));
+    if (!grupo) return;
+    let melhor = null;
+    grupo.map(id => idx[id]).filter(j => j != null && j !== i && !itens.includes(j)).forEach(j => {
+      const pi = preco(i), pj = preco(j);
+      if (pj == null) return;
+      if (pi == null) { if (!melhor || melhor.economia != null) melhor = { i, j, economia: null }; return; }
+      const qi = quantidade(dados.produtos[i].tam), qj = quantidade(dados.produtos[j].tam);
+      const porUnidadeOk = !qi || !qj || qi.u !== qj.u || pj / qj.n <= pi / qi.n;
+      const economia = Math.round((pi - pj) * 100) / 100;
+      if (economia >= 0.1 && porUnidadeOk && (!melhor || (melhor.economia != null && economia > melhor.economia))) melhor = { i, j, economia };
+    });
+    if (melhor) saida.push(melhor);
+  });
+  return saida.sort((a, b) => (a.economia == null ? -1 : b.economia == null ? 1 : b.economia - a.economia));
 }
