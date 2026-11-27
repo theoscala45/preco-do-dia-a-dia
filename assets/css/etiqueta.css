@@ -944,8 +944,9 @@ html.pronto .espera-tela{display:none}
 @keyframes item-trocado{0%{background:rgba(242,106,15,.12)}100%{background:rgba(242,106,15,0)}}
 @media (prefers-reduced-motion:reduce){.cupom-itens li.trocado > div{animation:none}}
 
-/* aviso curto de preço (uma linha pequena e cinza) */
-.aviso-preco{margin:10px 0 0;font:400 13px/1.45 var(--corpo);color:var(--texto-3)}
+/* avisos (escolha do Theo em 27/11/2026): barra laranja do lado e a palavra "Aviso" em cima do texto */
+.aviso-preco{margin:14px 0 0;border-left:3px solid var(--laranja);padding:2px 0 2px 12px;font:400 13.5px/1.45 var(--corpo);color:var(--texto-2);max-width:40em}
+.aviso-preco::before{content:"Aviso";display:block;font:600 11px/1.3 var(--mono);letter-spacing:.06em;color:#B44E08;margin-bottom:3px}
 .pg-topo .aviso-preco{margin-top:12px}
 
 /* Minha lista, cartão do mercado mais barato: o preço é o destaque; nome do mercado menor; R$ e centavos na mesma cor do número;
