@@ -16,7 +16,7 @@ const [dados, geo, rotas] = await carregar('dados', 'geo', 'rotas');
 iniciar(dados);
 // aviso curto: de quando são os preços
 const diaLido = new Date(dados.datas.at(-1) + 'T12:00').toLocaleDateString('pt-BR', { day: '2-digit', month: '2-digit' });
-$('resAviso').textContent = `Preços lidos no site dos mercados em ${diaLido}. Na loja podem mudar.`;
+$('resAviso').textContent = `Preços lidos no site de cada mercado em ${diaLido}. Na loja o preço pode ser diferente: confira antes de comprar.`;
 
 const estado = { ponto: 0, cepDado: false };
 const nomes = dados.redes.map(r => r.nome.replace(' Atacado', ''));

@@ -93,4 +93,4 @@ ligarBusca();
 // as animações comuns só começam depois que a página tem o texto do produto (o título sobe linha por linha)
 iniciar(dados);
 // aviso curto: de quando são os preços
-$('prodDataAviso').textContent = `Preços lidos no site dos mercados em ${new Date(dados.datas.at(-1) + 'T12:00').toLocaleDateString('pt-BR', { day: '2-digit', month: '2-digit' })}. Na loja podem mudar.`;
+$('prodDataAviso').textContent = `Preços lidos no site de cada mercado em ${new Date(dados.datas.at(-1) + 'T12:00').toLocaleDateString('pt-BR', { day: '2-digit', month: '2-digit' })}. Na loja o preço pode ser diferente: confira antes de comprar.`;
