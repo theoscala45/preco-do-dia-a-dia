@@ -967,7 +967,7 @@ data,rede_id,cep_id,produtos_tentados,produtos_lidos,resultado,erro,loja
 2026-11-27,atacadao,C23,81,81,ok,mesma loja do C22: precos repetidos,Vila Maria
 2026-11-27,atacadao,C24,81,81,ok,,Taipas
 2026-11-27,atacadao,C25,81,81,ok,mesma loja do C24: precos repetidos,Taipas
-2026-11-27,carrefour,,88,78,parcial,P051: HTTP Error 404: Not Found; P052: HTTP Error 404: Not Found; P059: HTTP Error 404: Not Found; P077: HTTP Error 404: Not Found; P081: HTTP Error 404: Not Found; P084: HTTP Error 404: Not Found; e mais 4,preco unico do site
+2026-11-27,carrefour,,88,76,parcial,P051: HTTP Error 404: Not Found; P052: HTTP Error 404: Not Found; P059: HTTP Error 404: Not Found; P077: HTTP Error 404: Not Found; P081: HTTP Error 404: Not Found; P084: HTTP Error 404: Not Found; e mais 6,preco unico do site
 2026-11-27,hirota,C01,70,70,ok,,Santa Cecília (Av. Gen. Olímpio da Silveira; 39)
 2026-11-27,hirota,C02,70,70,ok,mesma loja do C01: precos repetidos,Santa Cecília (Av. Gen. Olímpio da Silveira; 39)
 2026-11-27,hirota,C03,70,70,ok,mesma loja do C01: precos repetidos,Santa Cecília (Av. Gen. Olímpio da Silveira; 39)
@@ -1015,7 +1015,7 @@ data,rede_id,cep_id,produtos_tentados,produtos_lidos,resultado,erro,loja
 2026-11-27,nagumo,C19,97,97,ok,mesma loja do C18: precos repetidos,017-PIRES RIO (Avenida Pires Do Rio; 4342; Sao Paulo)
 2026-11-27,nagumo,C20,97,97,ok,mesma loja do C17: precos repetidos,050-CAMILOPO (Rua Leonilda; 265; Santo Andre)
 2026-11-27,nagumo,C21,97,97,ok,,051-PQ CONTI (Avenida Joao Palma Aleman; 715; Guarulhos)
-2026-11-27,nagumo,C22,97,0,falha,a primeira pagina falhou: P001: Locator.wait_for: Timeout 20000ms exceeded.,
+2026-11-27,nagumo,C22,97,97,ok,,057-ANELVIAR (Av Pres Humberto De A. Castelo Bran; 3413; Guarulhos)
 2026-11-27,nagumo,C23,97,97,ok,mesma loja do C21: precos repetidos,051-PQ CONTI (Avenida Joao Palma Aleman; 715; Guarulhos)
 2026-11-27,nagumo,C24,97,97,ok,,046-OSASCO (Rua Avestruz; 688; Osasco)
 2026-11-27,nagumo,C25,97,97,ok,,046-OSASCO (Rua Avestruz; 688; Osasco)
