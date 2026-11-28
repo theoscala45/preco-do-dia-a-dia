@@ -1073,7 +1073,7 @@ data,rede_id,cep_id,produtos_tentados,produtos_lidos,resultado,erro,loja
 2026-11-28,atacadao,C23,81,81,ok,mesma loja do C22: precos repetidos,Vila Maria
 2026-11-28,atacadao,C24,81,81,ok,,Taipas
 2026-11-28,atacadao,C25,81,81,ok,mesma loja do C24: precos repetidos,Taipas
-2026-11-28,carrefour,,88,79,parcial,P036: HTTP Error 404: Not Found; P051: HTTP Error 404: Not Found; P052: HTTP Error 404: Not Found; P059: HTTP Error 404: Not Found; P077: HTTP Error 404: Not Found; P081: HTTP Error 404: Not Found; e mais 3,preco unico do site
+2026-11-28,carrefour,,88,78,parcial,P036: HTTP Error 404: Not Found; P051: HTTP Error 404: Not Found; P052: HTTP Error 404: Not Found; P059: HTTP Error 404: Not Found; P077: HTTP Error 404: Not Found; P081: HTTP Error 404: Not Found; e mais 4,preco unico do site
 2026-11-28,hirota,C01,70,70,ok,,Santa Cecília (Av. Gen. Olímpio da Silveira; 39)
 2026-11-28,hirota,C02,70,70,ok,mesma loja do C01: precos repetidos,Santa Cecília (Av. Gen. Olímpio da Silveira; 39)
 2026-11-28,hirota,C03,70,70,ok,mesma loja do C01: precos repetidos,Santa Cecília (Av. Gen. Olímpio da Silveira; 39)
